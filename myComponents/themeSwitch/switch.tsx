@@ -4,7 +4,6 @@ import * as React from "react";
 import { Switch as SwitchPrimitive } from "radix-ui";
 
 import { cn } from "@/lib/utils";
-import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { ThemeSwitchIcon } from "./ThemeSwitchIcon";
 import {
@@ -23,7 +22,7 @@ function Switch({
   const { theme, setTheme } = useTheme();
 
   return (
-    <Tooltip>
+    <Tooltip delayDuration={0}>
       <TooltipTrigger asChild className="bg-pink-700">
         <SwitchPrimitive.Root
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
