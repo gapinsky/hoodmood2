@@ -21,19 +21,19 @@ export default function NavMenuDesktop() {
                 asChild
                 className={navigationMenuTriggerStyle()}
               >
-                <Link href="/docs">Koszalin</Link>
+                <Link href="/oferta">Koszalin</Link>
               </NavigationMenuLink>{" "}
               <NavigationMenuLink
                 asChild
                 className={navigationMenuTriggerStyle()}
               >
-                <Link href="/docs">Polanów</Link>
+                <Link href="/oferta">Polanów</Link>
               </NavigationMenuLink>{" "}
               <NavigationMenuLink
                 asChild
                 className={navigationMenuTriggerStyle()}
               >
-                <Link href="/docs">Biały Bór</Link>
+                <Link href="/oferta">Biały Bór</Link>
               </NavigationMenuLink>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -44,7 +44,7 @@ export default function NavMenuDesktop() {
                 asChild
                 className={navigationMenuTriggerStyle()}
               >
-                <Link href="/docs">Koszalin</Link>
+                <Link href="/oferta">Koszalin</Link>
               </NavigationMenuLink>{" "}
               <NavigationMenuLink
                 asChild

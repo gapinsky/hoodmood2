@@ -10,7 +10,7 @@ import ButtonPrimary from "../common/ButtonPrimary";
 
 export default function NavMenuMobile() {
   return (
-    <div className="absolute top-full left-0 right-0 bg-black md:hidden px-5">
+    <div className="absolute top-full left-0 right-0  md:hidden bg-background)">
       <Accordion type="single" collapsible className=" uppercase">
         <AccordionItem value="shipping">
           <AccordionTrigger>Oferta</AccordionTrigger>
@@ -18,7 +18,7 @@ export default function NavMenuMobile() {
             <ul>
               <li>
                 {" "}
-                <Link href="/docs">Koszalin</Link>
+                <Link href="/oferta">Koszalin</Link>
               </li>
               <li>
                 {" "}
@@ -64,14 +64,19 @@ export default function NavMenuMobile() {
               </li>
               <li>
                 {" "}
-                <Link href="/docs">Biały Bór</Link>
+                <Link href="/docs" className="bg-red-500">
+                  Biały Bór
+                </Link>
               </li>
             </ul>
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="kadra">
           <AccordionTrigger hideChevron={true}>
-            <Link href="/docs">kadra</Link>
+            <Link href="/docs" className="bg-red-500 w-full">
+              {" "}
+              kadra
+            </Link>
           </AccordionTrigger>
         </AccordionItem>
         <AccordionItem value="kolonie">
@@ -81,7 +86,7 @@ export default function NavMenuMobile() {
           <AccordionTrigger hideChevron={true}>Aktualności</AccordionTrigger>
         </AccordionItem>
       </Accordion>
-      <div className="bg-blue-500 flex justify-end gap-2">
+      <div className="bg-blue-500 flex justify-end gap-2 px-4">
         <ButtonSecondary />
         <ButtonPrimary />
       </div>
