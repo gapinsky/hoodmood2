@@ -1,3 +1,3 @@
-export default function Offer() {
+export default function OfferPage() {
   return <div>page</div>;
 }

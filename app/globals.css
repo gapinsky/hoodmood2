@@ -50,6 +50,9 @@
 }
 
 :root {
+  --brand-700: rgb(172, 73, 103);
+  --brand-200: rgb(255, 222, 231);
+  --brand-900: rgb(131, 57, 79);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
