@@ -12,10 +12,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 w-full ">
+    <nav className="sticky top-0  ">
       <div className="flex w-full items-center ">
         {/* LEFT */}
-        <div className=" w-full ">hej</div>
+        <div className=" w-full bg-red-500">hej</div>
 
         {/* CENTER */}
         <div className="flex flex-1 justify-center border border-blue-500">
@@ -23,10 +23,10 @@ export default function Navbar() {
         </div>
 
         {/* RIGHT */}
-        <div className="flex w-full items-center gap-3 justify-end border border-green-500 ">
-          <Switch className="md:hidden" />
+        <div className="flex w-full items-center gap-3 justify-end border bg-blue-500 ">
+          <Switch className="xl:hidden" />
           <MenuButton menuState={isOpen} menuHandler={setIsOpen} />
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden xl:flex items-center gap-3">
             <Switch />
             <ButtonSecondary />
             <ButtonPrimary />

@@ -8,7 +8,7 @@ interface Props {
 const MenuButton = ({ menuState, menuHandler }: Props) => {
   return (
     <button
-      className=" border border-red-500 p-3 hover:cursor-pointer focus-visible:border-ring focus-visible:ring-ring/50 outline-none focus-visible:ring-[3px] md:hidden"
+      className=" border p-3 hover:cursor-pointer focus-visible:border-ring focus-visible:ring-ring/50 outline-none focus-visible:ring-[3px] xl:hidden"
       onClick={() => menuHandler((prev) => !prev)}
     >
       {menuState ? <X /> : <Menu />}

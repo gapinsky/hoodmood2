@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/myComponents/themeProvider/ThemeProvider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/myComponents/navbar/Navbar";
+import Footer from "@/myComponents/footer/Footer";
 
 const fontAnton = Anton({
   variable: "--anton",
@@ -30,9 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl" suppressHydrationWarning>
-      <body
-        className={`${fontAnton.variable} ${fontRoboto.variable} max-w-480 m-auto`}
-      >
+      <body className={`${fontAnton.variable} ${fontRoboto.variable} w-full `}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -42,6 +41,7 @@ export default function RootLayout({
           <TooltipProvider>
             <Navbar />
             {children}
+            <Footer />
           </TooltipProvider>
         </ThemeProvider>
       </body>

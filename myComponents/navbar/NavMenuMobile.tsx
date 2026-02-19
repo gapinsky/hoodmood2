@@ -10,7 +10,7 @@ import ButtonPrimary from "../common/ButtonPrimary";
 
 export default function NavMenuMobile() {
   return (
-    <div className="absolute top-full left-0 right-0 bg-black md:hidden px-5">
+    <div className="absolute top-full left-0 right-0 bg-black xl:hidden px-5">
       <Accordion type="single" collapsible className=" uppercase">
         <AccordionItem value="shipping">
           <AccordionTrigger>Oferta</AccordionTrigger>
