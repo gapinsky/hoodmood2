@@ -7,86 +7,64 @@ import {
 import Link from "next/link";
 import ButtonSecondary from "../common/ButtonSecondary";
 import ButtonPrimary from "../common/ButtonPrimary";
+import { Dispatch, SetStateAction } from "react";
+import { NAV as navLinks } from "../navbar/data";
 
-export default function NavMenuMobile() {
+type Props = {
+  isOpen: boolean;
+  handleOpenNav: Dispatch<SetStateAction<boolean>>;
+};
+
+export default function NavMenuMobile({ isOpen, handleOpenNav }: Props) {
+  const closeNavOnClick = () => {
+    handleOpenNav((prev: boolean) => !prev);
+  };
+
   return (
-    <div className="absolute top-full left-0 right-0  md:hidden bg-background)">
-      <Accordion type="single" collapsible className=" uppercase">
-        <AccordionItem value="shipping">
-          <AccordionTrigger>Oferta</AccordionTrigger>
-          <AccordionContent>
-            <ul>
-              <li>
-                {" "}
-                <Link href="/oferta">Koszalin</Link>
-              </li>
-              <li>
-                {" "}
-                <Link href="/docs">Polanów</Link>
-              </li>
-              <li>
-                {" "}
-                <Link href="/docs">Biały Bór</Link>
-              </li>
-            </ul>
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="returns">
-          <AccordionTrigger>grafik</AccordionTrigger>
-          <AccordionContent>
-            <ul>
-              <li>
-                {" "}
-                <Link href="/docs">Koszalin</Link>
-              </li>
-              <li>
-                {" "}
-                <Link href="/docs">Polanów</Link>
-              </li>
-              <li>
-                {" "}
-                <Link href="/docs">Biały Bór</Link>
-              </li>
-            </ul>
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="support">
-          <AccordionTrigger>cennik</AccordionTrigger>
-          <AccordionContent>
-            <ul>
-              <li>
-                {" "}
-                <Link href="/docs">Koszalin</Link>
-              </li>
-              <li>
-                {" "}
-                <Link href="/docs">Polanów</Link>
-              </li>
-              <li>
-                {" "}
-                <Link href="/docs" className="bg-red-500">
-                  Biały Bór
+    <div
+      data-state={isOpen ? "open" : "closed"}
+      className={[
+        "absolute top-full left-0 right-0 md:hidden bg-background overflow-hidden data-[state=open]:animate-(--animate-mobile-nav-in) transition-[max-height] duration-300 data-[state=closed]:animate-(--animate-mobile-nav-out)",
+        isOpen
+          ? "max-h-[80vh] pointer-events-auto"
+          : "max-h-0 pointer-events-none",
+      ].join(" ")}
+    >
+      <Accordion type="single" collapsible>
+        {navLinks.map(
+          (item) =>
+            item.dropdown && (
+              <AccordionItem value={item.label} key={item.label}>
+                <AccordionTrigger>{item.label}</AccordionTrigger>
+                <AccordionContent>
+                  <ul>
+                    {item.items.map((link) => (
+                      <li key={link.label}>
+                        <Link href={link.href}>{link.label}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            ),
+        )}
+      </Accordion>
+      <ul className="flex flex-col ">
+        {navLinks.map(
+          (item) =>
+            !item.dropdown && (
+              <li key={item.label} className="px-4 border-b last:border-b-0">
+                <Link
+                  href={item.href}
+                  className=" flex flex-1 font-roboto focus-visible:border-ring uppercase  focus-visible:ring-ring/50  gap-4 rounded-md py-4 text-left text-sm font-medium transition-all outline-none focus-visible:ring-[3px] "
+                >
+                  {item.label}
                 </Link>
               </li>
-            </ul>
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="kadra">
-          <AccordionTrigger hideChevron={true}>
-            <Link href="/docs" className="bg-red-500 w-full">
-              {" "}
-              kadra
-            </Link>
-          </AccordionTrigger>
-        </AccordionItem>
-        <AccordionItem value="kolonie">
-          <AccordionTrigger hideChevron={true}>kolonie</AccordionTrigger>
-        </AccordionItem>
-        <AccordionItem value="kolonie">
-          <AccordionTrigger hideChevron={true}>Aktualności</AccordionTrigger>
-        </AccordionItem>
-      </Accordion>
-      <div className="bg-blue-500 flex justify-end gap-2 px-4">
+            ),
+        )}
+      </ul>
+      <div className=" flex justify-end gap-2 p-2">
         <ButtonSecondary />
         <ButtonPrimary />
       </div>

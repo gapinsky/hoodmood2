@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../public/logo.svg";
+import logo from "../../public/assets/svg/mainLogo/logo.svg";
 import Link from "next/link";
 const icons = ["facebook", "spotify", "instagram", "tiktok", "youtube"];
 import { a11y } from "@/public/styles";

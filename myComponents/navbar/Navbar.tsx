@@ -7,24 +7,20 @@ import NavMenuMobile from "./NavMenuMobile";
 import ButtonSecondary from "../common/ButtonSecondary";
 import ButtonPrimary from "../common/ButtonPrimary";
 import { Switch } from "../themeSwitch/switch";
-import Image from "next/image";
-import logo from "../../public/assets/svg/mainLogo/logo.svg";
 import Link from "next/link";
 import Container from "../common/Container";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 w-full border-b border-black dark:border-white p-4 ">
+    <nav className="sticky top-0 w-full border-b border-black dark:border-white p-4 bg-background">
       <Container>
         <div className="flex  items-center w-full">
           {/* LEFT */}
           <div className=" w-full ">
-            <Link
-              href="/"
-              className="w-fit  flex font-anton tracking-widest text-xl"
-            >
-              HOODMOOD
+            <Link href="/">
+              <img src="/assets/svg/mainLogo/logo.svg" className="max-h-12" />
             </Link>
           </div>
 
@@ -45,7 +41,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {isOpen && <NavMenuMobile />}
+        <NavMenuMobile handleOpenNav={setIsOpen} isOpen={isOpen} />
       </Container>
     </nav>
   );
