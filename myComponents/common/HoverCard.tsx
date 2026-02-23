@@ -3,8 +3,8 @@
 import Image from "next/image";
 
 type HoverCardProps = {
-  img: string; // np. "/assets/images/a.png" (w public/)
-  hoverImg: string; // np. "/assets/images/a-hover.png"
+  img: string; 
+  hoverImg: string; 
   title: string;
   description?: string;
 };
@@ -16,7 +16,7 @@ export function HoverCard({
   description,
 }: HoverCardProps) {
   return (
-    <div className="group relative aspect-square w-full overflow-hidden rounded-xl shadow-xl max-w-80">
+    <div className="group relative aspect-square w-full overflow-hidden rounded-xl shadow-xl max-w-90">
       {/* base */}
       <Image
         quality={95}

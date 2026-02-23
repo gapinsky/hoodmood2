@@ -3,8 +3,8 @@ import Offer from "../myComponents/sections/offer/Offer";
 
 export default function Home() {
   return (
-    <main className="flex flex-col  ">
-      {/* <Offer /> */}
+    <main className="space-y-12">
+      <Offer />
       <Localizations />
     </main>
   );

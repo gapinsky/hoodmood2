@@ -11,7 +11,7 @@ export default function Localizations() {
         title={data.title}
         description={data.description}
       />
-      <div className="flex flex-col overflow-hidden gap-4 md:flex-row md:items-center">
+      <div className="flex flex-col overflow-hidden gap-4 md:flex-row md:items-center  md:justify-between">
         {localizations.map((item) => (
           <HoverCard
             key={item.title}
