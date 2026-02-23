@@ -1,5 +1,3 @@
-import Title from "./Title";
-import Description from "./Description";
 import { Badge } from "@/components/ui/badge";
 
 type Props = {
@@ -10,12 +8,12 @@ type Props = {
 
 export default function SectionContent({ badge, title, description }: Props) {
   return (
-    <div>
+    <div className="max-w-2xl  flex flex-col items-start xl:gap-2">
       <Badge className="bg-(--brand-700) text-(--brand-200) uppercase">
         {badge}
       </Badge>
-      <Title>{title}</Title>
-      <Description>{description}</Description>
+      <h2 className="xl:text-5xl">{title}</h2>
+      <p className="xl:text-xl">{description}</p>
     </div>
   );
 }

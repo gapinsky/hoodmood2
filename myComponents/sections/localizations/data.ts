@@ -8,19 +8,19 @@ export const localizations = [
   {
     title: "Polanów",
     description: "ul. Grabowe Wzgórze 15",
-    img: "/assets/images/localizations/polanowMainImg.png",
-    hoverImg: "/assets/images/localizations/polanowMainImg.png",
+    img: "/assets/images/localizations/polanowMain.png",
+    hoverImg: "/assets/images/localizations/koszalinMain.png",
   },
   {
     title: "Koszalin",
     description: "ul. Zwycięstwa 115",
-    img: "/assets/images/localizations/koszalinMainImg.png",
-    hoverImg: "/assets/images/localizations/polanowMainImg.png",
+    img: "/assets/images/localizations/koszalinMain.png",
+    hoverImg: "/assets/images/localizations/polanowMain.png",
   },
   {
     title: "Biały Bór",
     description: "ul. Tamka 3",
-    img: "/assets/images/localizations/bialyBorMainImg.png",
-    hoverImg: "/assets/images/localizations/polanowMainImg.png",
+    img: "/assets/images/localizations/bialyBorMain.png",
+    hoverImg: "/assets/images/localizations/polanowMain.png",
   },
 ];
