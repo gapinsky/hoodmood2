@@ -3,5 +3,5 @@ type Props = {
   children: React.ReactNode;
 };
 export default function Container({ children }: Props) {
-  return <div className="w-95% md:w-90% xl:max-w-425 mx-auto ">{children}</div>;
+  return <div className="px-4 md:px-8 lg:px-12 xl:px-16">{children}</div>;
 }

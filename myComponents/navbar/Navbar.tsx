@@ -14,13 +14,16 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 w-full  p-4 bg-background">
+    <nav className="sticky top-0 w-full  py-4 xl:py-0 bg-background  ">
       <Container>
         <div className="flex  items-center w-full">
           {/* LEFT */}
           <div className=" w-full ">
             <Link href="/">
-              <img src="/assets/svg/mainLogo/logo.svg" className="max-h-12" />
+              <img
+                src="/assets/svg/mainLogo/logo.svg"
+                className="max-h-12 xl:max-h-18"
+              />
             </Link>
           </div>
 
