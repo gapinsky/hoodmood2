@@ -9,10 +9,47 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
+import { NAV as navLinks } from "../navbar/data";
+
 export default function NavMenuDesktop() {
   return (
-    <div className="hidden  xl:flex justify-center  ">
+    <div className="hidden  lg:flex justify-center  ">
       <NavigationMenu>
+        <NavigationMenuList>
+          {navLinks.map((item) =>
+            item.dropdown ? (
+              <NavigationMenuItem key={item.label}>
+                <NavigationMenuTrigger>{item.label}</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  {item.items.map((link) => (
+                    <NavigationMenuLink
+                      key={link.label}
+                      asChild
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      <Link href={link.href}>{link.label}</Link>
+                    </NavigationMenuLink>
+                  ))}
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            ) : (
+              <NavigationMenuItem key={item.label}>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}>
+                  <Link href={item.href}>{item.label}</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            ),
+          )}
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
+  );
+}
+
+{
+  /* <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Oferta</NavigationMenuTrigger>
@@ -108,7 +145,5 @@ export default function NavMenuDesktop() {
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
-      </NavigationMenu>
-    </div>
-  );
+      </NavigationMenu> */
 }

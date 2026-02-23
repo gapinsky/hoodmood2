@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 w-full border-b border-black dark:border-white p-4 bg-background">
+    <nav className="sticky top-0 w-full  p-4 bg-background">
       <Container>
         <div className="flex  items-center w-full">
           {/* LEFT */}
@@ -31,9 +31,9 @@ export default function Navbar() {
 
           {/* RIGHT */}
           <div className="flex w-full items-center gap-3 justify-end ">
-            <Switch className="md:hidden" />
+            <Switch className="lg:hidden" />
             <MenuButton menuState={isOpen} menuHandler={setIsOpen} />
-            <div className="hidden md:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-3">
               <Switch />
               <ButtonSecondary />
               <ButtonPrimary />

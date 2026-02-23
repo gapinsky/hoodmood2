@@ -24,7 +24,7 @@ export default function NavMenuMobile({ isOpen, handleOpenNav }: Props) {
     <div
       data-state={isOpen ? "open" : "closed"}
       className={[
-        "absolute top-full left-0 right-0 md:hidden bg-background overflow-hidden data-[state=open]:animate-(--animate-mobile-nav-in) transition-[max-height] duration-300 data-[state=closed]:animate-(--animate-mobile-nav-out)",
+        "absolute top-full left-0 right-0 xl:hidden bg-background overflow-hidden data-[state=open]:animate-(--animate-mobile-nav-in) transition-[max-height] duration-300 data-[state=closed]:animate-(--animate-mobile-nav-out)",
         isOpen
           ? "max-h-[80vh] pointer-events-auto"
           : "max-h-0 pointer-events-none",
