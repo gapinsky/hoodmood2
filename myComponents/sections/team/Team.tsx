@@ -10,7 +10,8 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay"
+import Autoplay from "embla-carousel-autoplay";
+import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 export default function Team() {
   return (
     <SectionContainer>
@@ -20,7 +21,7 @@ export default function Team() {
         description={data.description}
       />
       {/* <div className="flex flex-col overflow-hidden gap-4 md:flex-row md:items-center  md:justify-between"> */}
-      <Carousel opts={{ loop: true }} plugins={[Autoplay({delay: 2000,})]}>
+      <Carousel opts={{ loop: true }} plugins={[Autoplay({ delay: 2000 })]}>
         <CarouselContent>
           {instructors.map((item) => (
             <CarouselItem className="basis-1/4" key={item.title}>
@@ -35,7 +36,7 @@ export default function Team() {
         </CarouselContent>
       </Carousel>
       {/* </div> */}
-      <Link href="/oferta/koszalin">Sprawdź grafik</Link>
+      <ButtonPrimary href="/grafik/koszalin">Sprawdź grafik</ButtonPrimary>
     </SectionContainer>
   );
 }

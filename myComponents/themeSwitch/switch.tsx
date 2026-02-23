@@ -23,7 +23,7 @@ function Switch({
 
   return (
     <Tooltip delayDuration={0}>
-      <TooltipTrigger asChild className="bg-pink-700">
+      <TooltipTrigger asChild className="bg-(--brand-700)">
         <SwitchPrimitive.Root
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           data-slot="switch"

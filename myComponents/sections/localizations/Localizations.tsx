@@ -3,6 +3,7 @@ import { data, localizations } from "./data";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import { HoverCard } from "@/myComponents/common/HoverCard";
 import Link from "next/link";
+import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 export default function Localizations() {
   return (
     <SectionContainer>
@@ -22,7 +23,7 @@ export default function Localizations() {
           />
         ))}
       </div>
-      <Link href="/oferta/koszalin">Sprawdź grafik</Link>
+      <ButtonPrimary href="/oferta/koszalin">Sprawdź grafik</ButtonPrimary>
     </SectionContainer>
   );
 }

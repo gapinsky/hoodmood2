@@ -38,8 +38,8 @@ export default function Navbar() {
             <MenuButton menuState={isOpen} menuHandler={setIsOpen} />
             <div className="hidden lg:flex items-center gap-3">
               <Switch />
-              <ButtonSecondary />
-              <ButtonPrimary />
+              <ButtonSecondary href="/kontakt">kontakt</ButtonSecondary>
+              <ButtonPrimary href="/zapisz-sie">Zapisz się</ButtonPrimary>
             </div>
           </div>
         </div>
