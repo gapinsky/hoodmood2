@@ -33,7 +33,7 @@ export default function Opinions() {
           Autoplay({
             delay: 2000,
             stopOnInteraction: false,
-            stopOnMouseEnter: true,
+            stopOnMouseEnter: false,
           }),
         ]}
       >
