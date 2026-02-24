@@ -4,3 +4,18 @@ export const data = {
   description:
     "Wiemy, że przed pierwszymi zajęciami w głowie pojawia się milion pytań. Zebraliśmy te najczęstsze - zanim do nas napiszesz sprawdź, czy nie ma tu odpowiedzi.",
 };
+
+export const questions = [
+  {
+    question: "lorem",
+    answer: "ipsum",
+  },
+  {
+    question: "lorem2",
+    answer: "ipsum",
+  },
+  {
+    question: "lorem3",
+    answer: "ipsum",
+  },
+];
