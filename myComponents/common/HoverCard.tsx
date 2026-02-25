@@ -18,7 +18,7 @@ export function HoverCard({
   headerStyles = "",
 }: HoverCardProps) {
   return (
-    <div className="group relative aspect-square w-full overflow-hidden rounded-xl shadow-xl max-w-90">
+    <div className="group relative aspect-square w-full overflow-hidden rounded-xl shadow-xl  ">
       {/* base */}
       <Image
         quality={75}

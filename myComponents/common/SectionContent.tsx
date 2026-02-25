@@ -8,12 +8,14 @@ type Props = {
 
 export default function SectionContent({ badge, title, description }: Props) {
   return (
-    <div className="max-w-2xl  flex flex-col items-start xl:gap-2">
-      <Badge className="bg-(--brand-700) text-(--brand-200) uppercase">
-        {badge}
-      </Badge>
-      <h2 className="xl:text-4xl">{title}</h2>
-      <p className="">{description}</p>
+    <div className="max-w-140  flex flex-col items-start gap-4 xl:gap-2">
+      <div className="space-y-2">
+        <Badge className="bg-(--brand-700) text-(--brand-200) uppercase">
+          {badge}
+        </Badge>
+        <h2 className="text-2xl xl:text-4xl">{title}</h2>
+      </div>
+      <p className="leading-6">{description}</p>
     </div>
   );
 }

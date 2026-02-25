@@ -8,7 +8,7 @@ import Faq from "@/myComponents/sections/faq/Faq";
 
 export default function Home() {
   return (
-    <main className="space-y-12">
+    <main className=" space-y-36 my-36">
       <Offer />
       <Localizations />
       <Team />

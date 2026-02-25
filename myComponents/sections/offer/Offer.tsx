@@ -11,7 +11,7 @@ const Offer = () => {
         title={data.title}
         description={data.description}
       />
-      <div className="flex flex-col overflow-hidden gap-4 md:flex-row md:items-center  md:justify-between">
+      <div className="grid rid-cols-1 overflow-hidden gap-8 md:grid-cols-2 lg:grid-cols-4 ">
         {offer.map((item) => (
           <HoverCard
             key={item.title}
