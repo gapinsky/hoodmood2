@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Star } from "lucide-react";
+import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 export default function Opinions() {
   return (
     <SectionContainer>
@@ -28,7 +29,7 @@ export default function Opinions() {
         description={data.description}
       />
       <Carousel
-        opts={{ loop: true }}
+        opts={{ align: "start", loop: true }}
         plugins={[
           Autoplay({
             delay: 2000,
@@ -39,7 +40,10 @@ export default function Opinions() {
       >
         <CarouselContent>
           {testimonials.map((testimonial) => (
-            <CarouselItem className="basis-1/3" key={testimonial.id}>
+            <CarouselItem
+              className="basis-1/1 md:basis-1/2 lg:basis-1/3 "
+              key={testimonial.id}
+            >
               <Card>
                 <CardHeader>
                   <div className="flex text-transparent">
@@ -71,7 +75,7 @@ export default function Opinions() {
           ))}
         </CarouselContent>
       </Carousel>
-      <Link href="/oferta/koszalin">Zobacz pełną ofertę</Link>
+      <ButtonPrimary href="/oferta/koszalin">Zobacz pełną ofertę</ButtonPrimary>
     </SectionContainer>
   );
 }

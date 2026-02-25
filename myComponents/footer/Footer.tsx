@@ -3,13 +3,12 @@ import logo from "../../public/assets/svg/mainLogo/logo.svg";
 import Link from "next/link";
 const icons = ["facebook", "spotify", "instagram", "tiktok", "youtube"];
 import { a11y } from "@/public/styles";
-import SectionContainer from "../common/SectionContainer";
 export default function Footer() {
   const date = new Date();
   return (
     <footer className="border  px-4  w-full">
-      <SectionContainer>
-        <div className="flex flex-col gap-8  xl:flex-row xl:justify-between xl:items-center border-b py-4  ">
+      <div className="max-w-380 mx-auto">
+        <div className="flex flex-col gap-8  xl:flex-row xl:justify-between xl:items-center border-b py-4 ">
           {/* LEFT COL */}
           <div className="space-y-2">
             <Image src={logo} alt="logo" width={120} height={60} />
@@ -74,7 +73,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col-reverse xl:flex xl:flex-row xl:justify-between xl:items-center py-4">
           <p>Hoodmood&copy; {date.getFullYear()}</p>
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 xl:flex-row xl:gap-8">
             <Link href="/polityka-prywatnosci" className={a11y}>
               Polityka prywatności
             </Link>{" "}
@@ -83,7 +82,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-      </SectionContainer>
+      </div>
     </footer>
   );
 }

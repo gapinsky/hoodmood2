@@ -3,6 +3,7 @@ import SectionContent from "@/myComponents/common/SectionContent";
 import Link from "next/link";
 import { data } from "./data";
 import Timeline from "./Timeline";
+import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 export default function HowToJoin() {
   return (
     <SectionContainer>
@@ -12,7 +13,7 @@ export default function HowToJoin() {
         description={data.description}
       />
       <Timeline />
-      <Link href="/oferta/koszalin">Zobacz pełną ofertę</Link>
+      <ButtonPrimary href="/oferta/koszalin">Zobacz pełną ofertę</ButtonPrimary>
     </SectionContainer>
   );
 }
