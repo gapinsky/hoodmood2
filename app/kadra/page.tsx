@@ -1,47 +1,30 @@
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import SectionContent from "@/myComponents/common/SectionContent";
 import { data, instructors } from "./data";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
+import TeamCard from "@/myComponents/pages/team/TeamCard";
+
 export default function Team() {
   return (
-    <main>
+    <main className="">
       <SectionContainer>
         <SectionContent
           badge={data.badge}
           title={data.title}
           description={data.description}
         ></SectionContent>
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {instructors.map((instructor) => (
-            <Card
+            <TeamCard
               key={instructor.id}
-              className="w-full  relative overflow-hidden"
-            >
-              <div className="w-full relative aspect-square">
-                <Image
-                  src={instructor.img}
-                  aspect-video
-                  fill
-                  alt="img"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
-                  className="object-cover"
-                />
-              </div>
-              <CardHeader>
-                <div className="inline-flex items-center justify-between">
-                  <CardTitle>{instructor.name}</CardTitle>
-                  <Badge variant={"secondary"}>Instagram</Badge>
-                </div>
-                <CardDescription>{instructor.description}</CardDescription>
-              </CardHeader>
-            </Card>
+              name={instructor.name}
+              shortBio={instructor.shortBio}
+              description={instructor.description}
+              img={instructor.img}
+              role={instructor.role}
+              hoverImg={instructor.hoverImg}
+              localizations={instructor.localizations}
+              styles={instructor.styles}
+            />
           ))}
         </div>
       </SectionContainer>

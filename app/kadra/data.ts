@@ -6,7 +6,7 @@ export const data = {
 };
 
 export type Trainer = {
-  id: string;
+  id?: string;
   name: string;
   role: string;
   styles: string[];
