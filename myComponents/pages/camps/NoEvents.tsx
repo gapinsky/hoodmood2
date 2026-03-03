@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NoEvents() {
   return (
-    <section className="mx-auto text-center space-y-2">
+    <section className="mx-auto text-center space-y-2 my-36">
       <h6 className="text-xl">
         Aktualnie nie mamy aktywynych obozów, kolonii ani wydarzeń specjalnych
       </h6>
