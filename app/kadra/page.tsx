@@ -6,7 +6,7 @@ import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 
 export default function Team() {
   return (
-    <main className="space-y-36 my-36">
+    <main className="">
       <SectionContainer>
         <SectionContent
           badge={data.badge}

@@ -6,7 +6,7 @@ import { a11y } from "@/public/styles";
 export default function Footer() {
   const date = new Date();
   return (
-    <footer className="border    w-full mt-32">
+    <footer className="border    w-full ">
       <div className="max-w-380 mx-auto px-8 md:px-12 lg:px-16">
         <div className="flex flex-col gap-8  lg:flex-row lg:justify-between lg:items-center border-b py-4 ">
           {/* LEFT COL */}

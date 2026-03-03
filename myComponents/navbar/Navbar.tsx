@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 w-full  py-4 xl:py-0 bg-background z-1000 ">
       <Container>
-        <div className="flex  items-center w-full">
+        <div className="flex  items-center w-full ">
           {/* LEFT */}
           <div className=" w-full ">
             <Link href="/">
