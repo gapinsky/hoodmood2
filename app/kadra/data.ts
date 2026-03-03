@@ -42,7 +42,7 @@ export const instructors: Trainer[] = [
       "Wiktoria Butwicka to tancerka i trenerka specjalizująca się w breakdance. Taniec towarzyszy jej od 2009 roku. Szkoliła się m.in. u instruktorów takich jak Klesia, Nikita czy Pumba. Brała udział w licznych turniejach w Polsce i za granicą (m.in. 2. miejsce w Wielkiej Brytanii, Top 8 breakdance na Tancbudzie). Korzystała też z prywatnych lekcji i warsztatów w różnych stylach. Jako trenerka uczy od trzech lat – prowadzi zajęcia breakdance dla dzieci 3–6 lat, grupy hip-hopowe oraz warsztaty dla młodzieży i dorosłych.",
     img: "/assets/images/localizations/polanowMain.png",
     hoverImg: "/assets/images/localizations/koszalinMain.png",
-    localizations: ["Koszalin", "Polanów", "Biały Bór"],
+    localizations: ["Koszalin"],
   },
   {
     id: "paulina-walikowska",
@@ -55,7 +55,7 @@ export const instructors: Trainer[] = [
       "Paulina Walikowska rozpoczęła swoją przygodę z tańcem w klasie baletowej, gdzie zdobyła solidne podstawy techniczne. Przez 8 lat rozwijała się artystycznie w zespole Quality Crew, doskonaląc się jako tancerka sceniczna i instruktorka. Ma doświadczenie warsztatowe u uznanych trenerów, współtworzyła projekty filmowe (w tym produkcję nominowaną na International Cyprus Dance Film Festival) oraz występowała w spektaklach „Halucynacje” i „Gen Z”. Obecnie prowadzi w studiu zajęcia baletu.",
     img: "/assets/images/localizations/polanowMain.png",
     hoverImg: "/assets/images/localizations/koszalinMain.png",
-    localizations: ["Koszalin", "Polanów", "Biały Bór"],
+    localizations: ["Koszalin"],
   },
   {
     id: "alina-lemanska",
@@ -68,7 +68,7 @@ export const instructors: Trainer[] = [
       "Na stronie sekcja Aliny Lemańskiej opisuje start zajęć KPOP — dynamiczne choreografie, energetyczną muzykę i przyjazną atmosferę. Zajęcia są skierowane do osób w różnym wieku i na różnym poziomie zaawansowania, z naciskiem na naukę kroków i choreografii do hitów KPOP oraz dobrą zabawę.",
     img: "/assets/images/localizations/polanowMain.png",
     hoverImg: "/assets/images/localizations/koszalinMain.png",
-    localizations: ["Koszalin", "Polanów", "Biały Bór"],
+    localizations: ["Koszalin"],
   },
   {
     id: "magdalena-sokolowska-japona",
@@ -81,7 +81,7 @@ export const instructors: Trainer[] = [
       "Pseudonim artystyczny Japona, czyli Magdalena Sokołowska. Z tańcem związana od 14. roku życia. Jest dyplomowanym instruktorem tańca o specjalizacji Hip-hop. Style, w których najlepiej się czuje, to Hip-hop i House. Dla siebie tańczy również waacking i high heels. Na co dzień lubi pracę z młodzieżą.",
     img: "/assets/images/localizations/polanowMain.png",
     hoverImg: "/assets/images/localizations/koszalinMain.png",
-    localizations: ["Koszalin", "Polanów", "Biały Bór"],
+    localizations: ["Koszalin"],
   },
   {
     id: "maria-kober",
@@ -94,7 +94,7 @@ export const instructors: Trainer[] = [
       "Maria Kober to instruktorka i tancerka z dużym doświadczeniem scenicznym i warsztatowym. Od 8 lat trenuje w ekipie Quality Crew, z którą wielokrotnie stawała na podium zawodów w Polsce i za granicą. Ma na koncie warsztaty z wieloma instruktorami, treningi w londyńskich studiach Playground i Base oraz udział w projektach wideo (w tym produkcji nominowanej na International Cyprus Dance Film Festival). Prowadzi treningi dla grupy THE BEAT HUNTERS oraz zajęcia CHOREO.",
     img: "/assets/images/localizations/polanowMain.png",
     hoverImg: "/assets/images/localizations/koszalinMain.png",
-    localizations: ["Koszalin", "Polanów", "Biały Bór"],
+    localizations: ["Koszalin"],
   },
   {
     id: "oliwia-piec",
@@ -107,6 +107,6 @@ export const instructors: Trainer[] = [
       "Oliwia Piec od lat rozwija się tanecznie w ekipie Quality Crew, gdzie zdobywa doświadczenie jako tancerka sceniczna i instruktorka. Ma doświadczenie warsztatowe u wielu trenerów, współtworzyła projekty filmowe (w tym produkcję nominowaną na International Cyprus Dance Film Festival) oraz występowała w spektaklach „Halucynacje” i „Gen Z”. W studiu prowadzi formację dla dorosłych oraz zajęcia dla dzieci w wieku 4–6 lat.",
     img: "/assets/images/localizations/polanowMain.png",
     hoverImg: "/assets/images/localizations/koszalinMain.png",
-    localizations: ["Koszalin", "Polanów", "Biały Bór"],
+    localizations: ["Koszalin"],
   },
 ];

@@ -1,15 +1,16 @@
-"use client";
 import {
   Card,
+  CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 
 import Image from "next/image";
-import { useState } from "react";
 import { Trainer } from "@/app/kadra/data";
 import { Badge } from "@/components/ui/badge";
+import ExpandableCardDescription from "./ExpandableCardDescription";
 
 export default function TeamCard({
   name,
@@ -21,9 +22,8 @@ export default function TeamCard({
   hoverImg,
   localizations,
 }: Trainer) {
-  const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <Card className=" overflow-hidden">
+    <Card className=" overflow-hidden h-fit">
       <div className="w-full relative aspect-video">
         <Image
           src={img}
@@ -34,18 +34,33 @@ export default function TeamCard({
         />
       </div>
       <CardHeader>
-        <div className="inline-flex items-center justify-between">
+        {/* <Badge variant={"secondary"} className="w-fit ">
+          {role}
+        </Badge> */}
+        <div className="inline-flex items-center gap-4">
           <CardTitle>{name}</CardTitle>
-          <Badge variant={"secondary"}>Instagram</Badge>
+          <a
+            className="bg-(--brand-700) p-1 rounded-lg"
+            href=""
+            target="_blank"
+          >
+            <img src="/icons/instagram.svg" className="w-4 " />
+          </a>
         </div>
-        <p>{role}</p>
-        <CardDescription>
-          {isExpanded ? description : shortBio}
-          <button onClick={() => setIsExpanded((prev) => !prev)}>
-            {isExpanded ? "zwiń" : "rozwiń"}
-          </button>
+        <CardDescription className="space-x-2">
+          {localizations.map((localization) => (
+            <span key={localization}>{localization}</span>
+          ))}
         </CardDescription>
       </CardHeader>
+      <CardContent>
+        <p>
+          <ExpandableCardDescription
+            shortBio={shortBio}
+            description={description}
+          />
+        </p>
+      </CardContent>
     </Card>
   );
 }
