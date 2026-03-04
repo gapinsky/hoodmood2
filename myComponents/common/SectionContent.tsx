@@ -13,9 +13,9 @@ export default function SectionContent({ badge, title, description }: Props) {
         <Badge className="bg-(--brand-700) text-(--brand-200) uppercase">
           {badge}
         </Badge>
-        <h2 className="text-2xl xl:text-4xl">{title}</h2>
+        <h2 className="text-2xl xl:text-3xl">{title}</h2>
       </div>
-      <p className="leading-6">{description}</p>
+      <p className="leading-6 text-(--muted-foreground)">{description}</p>
     </div>
   );
 }

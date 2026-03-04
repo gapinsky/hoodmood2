@@ -10,28 +10,28 @@ export const offer = [
     title: "Dzieci",
     description:
       "Akrobatyka, Taniec Towarzyski, Street Dance, Video Clip, Cheerleading",
-    img: "/assets/images/localizations/polanowMain.png",
-    hoverImg: "/assets/images/localizations/koszalinMain.png",
+    img: "/assets/images/landingOffer/kids1.jpg",
+    hoverImg: "/assets/images/landingOffer/kids2.jpg",
   },
   {
     title: "Młodzież",
     description:
       "Akrobatyka, Taniec Towarzyski, Street Dance, Video Clip, Cheerleading",
-    img: "/assets/images/localizations/koszalinMain.png",
-    hoverImg: "/assets/images/localizations/polanowMain.png",
+    img: "/assets/images/landingOffer/teens1.jpg",
+    hoverImg: "/assets/images/landingOffer/teens2.jpg",
   },
   {
     title: "Dorośli",
     description:
       "Akrobatyka, Taniec Towarzyski, Street Dance, Video Clip, Cheerleading",
-    img: "/assets/images/localizations/bialyBorMain.png",
-    hoverImg: "/assets/images/localizations/polanowMain.png",
+    img: "/assets/images/landingOffer/adults2.jpg",
+    hoverImg: "/assets/images/landingOffer/adults1.jpg",
   },
   {
     title: "Obozy, kolonie, pokazy",
     description:
       "Akrobatyka, Taniec Towarzyski, Street Dance, Video Clip, Cheerleading",
-    img: "/assets/images/localizations/bialyBorMain.png",
-    hoverImg: "/assets/images/localizations/polanowMain.png",
+    img: "/assets/images/landingOffer/camp1.jpg",
+    hoverImg: "/assets/images/landingOffer/camp2.jpg",
   },
 ];

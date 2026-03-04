@@ -6,7 +6,7 @@ import { Youtube } from "lucide-react";
 export default function Player() {
   return (
     <SectionContainer>
-      <div className="flex flex-col md:flex-row w-full shadow-xl gap-8">
+      <div className="flex flex-col md:flex-row w-full items-center gap-8">
         <div className=" flex flex-col gap-8 xl:w-full">
           <SectionContent
             badge={data.badge}
@@ -26,10 +26,10 @@ export default function Player() {
             </ButtonSecondary>
           </div>
         </div>
-        <div className="relative w-full aspect-video overflow-hidden rounded-xl  ">
+        <div className="relative w-full aspect-video overflow-hidden rounded-xl shadow-xl ">
           <iframe
             className="absolute inset-0 h-full w-full  "
-            src={`https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ`}
+            src={`https://www.youtube.com/embed/cRFh3wTlvas?si=8hGkj0z5HXb9CL3K`}
             title="Trailer"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
