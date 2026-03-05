@@ -11,6 +11,8 @@ import Image from "next/image";
 import { Trainer } from "@/app/kadra/data";
 import { Badge } from "@/components/ui/badge";
 import ExpandableCardDescription from "./ExpandableCardDescription";
+import { cn } from "@/lib/utils";
+import { a11y } from "@/public/styles";
 
 export default function TeamCard({
   name,
@@ -33,7 +35,10 @@ export default function TeamCard({
           className="object-cover"
         />
         <a
-          className="p-3 rounded-full absolute right-4 bottom-4 bg-(--brand-700) shadow-xl hover:bg-(--brand-900)"
+          className={cn(
+            "p-3 rounded-full absolute right-4 bottom-4 bg-(--brand-700) shadow-xl hover:bg-(--brand-900)",
+            a11y,
+          )}
           href=""
           target="_blank"
         >

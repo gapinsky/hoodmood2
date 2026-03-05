@@ -45,7 +45,7 @@ export default function OfferCard({
         </span>
         <Link
           href={`/grafik/${localization}`}
-          className="inline-flex gap-2 items-end text-sm hover:underline"
+          className="inline-flex gap-2 items-end text-sm hover:underline focus-visible:border-ring focus-visible:ring-ring/50 outline-none focus-visible:ring-[3px] rounded-sm"
         >
           <CalendarDays className="w-5 text-black dark:text-white " /> Sprawdź
           grafik
@@ -59,7 +59,7 @@ export default function OfferCard({
         <div className="w-full">
           <button
             type="button"
-            className="font-semibold leading-none text-sm hover:underline underline-offset-1 hover:cursor-pointer"
+            className="font-semibold leading-none text-sm hover:underline underline-offset-1 hover:cursor-pointer focus-visible:border-ring focus-visible:ring-ring/50 outline-none focus-visible:ring-[3px] rounded-sm "
           >
             {instructor}
           </button>

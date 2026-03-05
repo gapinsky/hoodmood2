@@ -3,6 +3,7 @@ import logo from "../../public/assets/svg/mainLogo/logo.svg";
 import Link from "next/link";
 const icons = ["facebook", "spotify", "instagram", "tiktok", "youtube"];
 import { a11y } from "@/public/styles";
+import { cn } from "@/lib/utils";
 export default function Footer() {
   const date = new Date();
   return (
@@ -29,7 +30,7 @@ export default function Footer() {
                     height={24}
                     alt={`${icon} logo`}
                     src={`/icons/${icon}.svg`}
-                    className="dark:invert"
+                    className={cn("dark:invert", a11y)}
                   />
                 </Link>
               ))}
@@ -42,32 +43,60 @@ export default function Footer() {
               <p className="font-semibold mb-2">Nawigacja:</p>
               <ul className="space-y-1">
                 <li>
-                  <Link href="/kadra">Oferta</Link>
+                  <Link href="/kadra" className={a11y}>
+                    Oferta
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/kadra">Grafik</Link>
+                  <Link href="/kadra" className={a11y}>
+                    Grafik
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/kadra">Cennik</Link>
+                  <Link href="/kadra" className={a11y}>
+                    Cennik
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/kadra">Kadra</Link>
+                  <Link href="/kadra" className={a11y}>
+                    Kadra
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/kadra">Kolonie</Link>
+                  <Link href="/kadra" className={a11y}>
+                    Kolonie
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/kadra">Aktualności</Link>
+                  <Link href="/kadra" className={a11y}>
+                    Aktualności
+                  </Link>
                 </li>
               </ul>
             </div>
             <div>
               <p className="font-semibold mb-2">Dokumenty do pobrania:</p>
               <ul className="space-y-1">
-                <li>Standardy ochrony dzieci przed krzywdzeniem</li>
-                <li>Potwierdzenie uczestnictwa w zajęciach</li>
-                <li>Regulamin</li>
-                <li>Umowa uczestnictwa</li>
+                <li>
+                  <a href="" className={a11y}>
+                    Standardy ochrony dzieci przed krzywdzeniem
+                  </a>
+                </li>
+                <li>
+                  <a href="" className={a11y}>
+                    Potwierdzenie uczestnictwa w zajęciach
+                  </a>
+                </li>
+                <li>
+                  <a href="" className={a11y}>
+                    Regulamin
+                  </a>
+                </li>
+                <li>
+                  <a href="" className={a11y}>
+                    Umowa uczestnictwa
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
