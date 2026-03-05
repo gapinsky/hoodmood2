@@ -1,8 +1,8 @@
 export const data = {
-  badge: "grafik",
-  title: "Grafik zajęć - Biały Bór",
+  badge: "Cennik",
+  title: "Cennik - Biały Bór",
   description:
-    "Sprawdź aktualny grafik zajęć i wybierz termin, który Ci pasuje. Kliknij w wybrane zajęcia, żeby zobaczyć poziom, prowadzącego i dostępne miejsca.",
+    "Sprawdź, ile kosztują zajęcia grupowe, lekcje indywidualne oraz zajęcia w naszych filiach. Płatności rozliczamy w systemie miesięcznym za wyjątkiem lekcji indywidualnych. Chcesz chodzić na więcej niż jedne zajęcia? Sprawdź pakiety promocyjne - zestawy kilku zajęć w promocyjnych cenach!",
 };
 
 type ClassItem = {

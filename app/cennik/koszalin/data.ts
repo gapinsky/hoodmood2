@@ -1,196 +1,182 @@
 export const data = {
-  badge: "grafik",
-  title: "Grafik zajęć - Koszalin",
+  badge: "Cennik",
+  title: "Cennik - Koszalin",
   description:
-    "Sprawdź aktualny grafik zajęć i wybierz termin, który Ci pasuje. Kliknij w wybrane zajęcia, żeby zobaczyć poziom, prowadzącego i dostępne miejsca.",
+    "Sprawdź, ile kosztują zajęcia grupowe, lekcje indywidualne oraz zajęcia w naszych filiach. Płatności rozliczamy w systemie miesięcznym za wyjątkiem lekcji indywidualnych. Chcesz chodzić na więcej niż jedne zajęcia? Sprawdź pakiety promocyjne - zestawy kilku zajęć w promocyjnych cenach!",
 };
 
-type ClassItem = {
+type PriceItem = {
   name: string;
-  time: string;
-  instructor: string;
-  info: string;
-  age: string;
+  price: string; 
+  frequency: string; 
+  trending: boolean;
+  age: string; 
+  category:
+    | "kidsDance"
+    | "ballet"
+    | "acrobatics"
+    | "breakdance"
+    | "partnerAcro"
+    | "modernDance"
+    | "kpop"
+    | "hiphop"
+    | "individual"
+    | "wedding";
 };
 
-export const classesByDay: Record<
-  "monday" | "tuesday" | "wednesday" | "thursday" | "friday",
-  ClassItem[]
-> = {
-  monday: [
-    {
-      name: "Balet",
-      time: "16:00–17:00",
-      instructor: "Anna Kowalska",
-      age: "brak",
-      info: "Podstawy baletu: postawa, praca stóp, koordynacja i lekkość ruchu. Ćwiczenia przy drążku i na środku dopasowane do poziomu.",
-    },
-    {
-      name: "Young Generation (hip-hop)",
-      time: "17:00–18:00",
-      instructor: "Anna Kowalska",
-      age: "7–9",
-      info: "Hip-hop dla dzieci: rytmika, podstawowe kroki, proste choreografie i praca w grupie. Budowanie pewności siebie i muzykalności.",
-    },
-    {
-      name: "The Beat Hunters (hip-hop)",
-      time: "18:00–19:00",
-      instructor: "Anna Kowalska",
-      age: "10–12",
-      info: "Hip-hop: technika, izolacje, dynamika i krótkie układy. Nacisk na czystość ruchu i groove.",
-    },
-    {
-      name: "Quality Crew (grupa zaawansowana hip-hop)",
-      time: "19:00–20:30",
-      instructor: "Anna Kowalska",
-      age: "brak",
-      info: "Zaawansowany trening: trudniejsze choreografie, performance i praca nad stylem. Przygotowanie do pokazów i występów.",
-    },
-  ],
+export const priceList: PriceItem[] = [
+  {
+    name: "Taniec dla 4–6 latków",
+    price: "170 zł",
+    frequency: "miesięcznie",
+    trending: false,
+    age: "4–6 lat",
+    category: "kidsDance",
+  },
+  {
+    name: "Taniec dla 4–6 latków + balet",
+    price: "230 zł",
+    frequency: "miesięcznie (1x/tyg)",
+    trending: false,
+    age: "4–6 lat",
+    category: "kidsDance",
+  },
+  {
+    name: "Taniec dla 4–6 latków + akrobatyka",
+    price: "240 zł",
+    frequency: "miesięcznie (1x/tyg)",
+    trending: false,
+    age: "4–6 lat",
+    category: "kidsDance",
+  },
+  {
+    name: "Break Dance",
+    price: "170 zł",
+    frequency: "miesięcznie",
+    trending: false,
+    age: "6–8 lat",
+    category: "breakdance",
+  },
+  {
+    name: "Balet",
+    price: "170 zł",
+    frequency: "miesięcznie (1x/tyg)",
+    trending: false,
+    age: "",
+    category: "ballet",
+  },
+  {
+    name: "Akrobatyka",
+    price: "180 zł",
+    frequency: "miesięcznie",
+    trending: false,
+    age: "4–6 lat",
+    category: "acrobatics",
+  },
+  {
+    name: "Akrobatyka",
+    price: "180 zł",
+    frequency: "miesięcznie",
+    trending: false,
+    age: "7–9 lat",
+    category: "acrobatics",
+  },
+  {
+    name: "Akrobatyka",
+    price: "180 zł",
+    frequency: "miesięcznie",
+    trending: false,
+    age: "10–14 lat",
+    category: "acrobatics",
+  },
+  {
+    name: "Partnerowanie akro",
+    price: "230 zł",
+    frequency: "miesięcznie",
+    trending: false,
+    age: "",
+    category: "partnerAcro",
+  },
+  {
+    name: "Taniec współczesny",
+    price: "210 zł",
+    frequency: "miesięcznie",
+    trending: false,
+    age: "8–12 lat",
+    category: "modernDance",
+  },
+  {
+    name: "K-POP",
+    price: "230 zł",
+    frequency: "miesięcznie (2x/tyg)",
+    trending: false,
+    age: "",
+    category: "kpop",
+  },
 
-  tuesday: [
-    {
-      name: "Taniec dla 4–6 latków",
-      time: "16:15–17:00",
-      instructor: "Anna Kowalska",
-      age: "4–6",
-      info: "Zajęcia ogólnorozwojowe z tańcem: rytm, koordynacja, proste kroki i zabawy ruchowe. Nauka pracy w grupie.",
-    },
-    {
-      name: "Young Generation (hip-hop)",
-      time: "17:00–18:00",
-      instructor: "Anna Kowalska",
-      age: "7–9",
-      info: "Hip-hop dla dzieci: podstawy techniki, groove, kombinacje i choreografie. Rozwój muzykalności i swobody ruchu.",
-    },
-    {
-      name: "The Beat Hunters (hip-hop)",
-      time: "18:00–19:00",
-      instructor: "Anna Kowalska",
-      age: "10–12",
-      info: "Hip-hop: izolacje, praca nad dynamiką i koordynacją. Układy dopasowane do wieku i poziomu.",
-    },
-    {
-      name: "Quality Crew (grupa zaawansowana hip-hop)",
-      time: "19:00–20:00",
-      instructor: "Anna Kowalska",
-      age: "brak",
-      info: "Grupa zaawansowana: intensywniejszy trening, detal i sceniczność. Praca nad jakością i pewnością w choreografiach.",
-    },
-    {
-      name: "Taniec współczesny",
-      time: "20:00–21:00",
-      instructor: "Anna Kowalska",
-      age: "13–18",
-      info: "Taniec współczesny: płynność, praca z ciężarem ciała, podstawy floorwork i ekspresja. Technika + choreografia.",
-    },
-  ],
-
-  wednesday: [
-    {
-      name: "Akrobatyka 4–6 latki",
-      time: "16:00–17:00",
-      instructor: "Anna Kowalska",
-      age: "4–6",
-      info: "Podstawy akrobatyki dla najmłodszych: mobilność, siła, równowaga i bezpieczne przewroty. Ćwiczenia w formie zabawowej.",
-    },
-    {
-      name: "Akrobatyka",
-      time: "17:00–18:00",
-      instructor: "Anna Kowalska",
-      age: "7–9",
-      info: "Akrobatyka: przewroty, stanie na rękach (podstawy), skoki i wzmacnianie. Nauka techniki i kontroli ciała.",
-    },
-    {
-      name: "Akrobatyka",
-      time: "18:00–19:00",
-      instructor: "Anna Kowalska",
-      age: "10–14",
-      info: "Akrobatyka dla starszych: trudniejsze elementy, siła i stabilizacja, łączenie ruchów w sekwencje. Nacisk na technikę i bezpieczeństwo.",
-    },
-    {
-      name: "Partnerowanie Akro",
-      time: "19:00–20:00",
-      instructor: "Anna Kowalska",
-      age: "brak",
-      info: "Ćwiczenia w parach: podnoszenia, stabilizacja, zaufanie i komunikacja. Progresje od podstaw z bezpiecznymi wejściami/zejściami.",
-    },
-    {
-      name: "Formacja dla dorosłych",
-      time: "20:00–21:30",
-      instructor: "Anna Kowalska",
-      age: "brak",
-      info: "Zespół/formacja: praca nad choreografią, synchronem i scenicznością. Regularny trening w grupie, opcjonalnie pod występy.",
-    },
-  ],
-
-  thursday: [
-    {
-      name: "KPOP",
-      time: "16:30–17:30",
-      instructor: "Anna Kowalska",
-      age: "brak",
-      info: "Choreografie inspirowane K-popem: precyzja, energia, praca rąk i synchron. Nauka układów i szlifowanie detali.",
-    },
-    {
-      name: "Taniec współczesny",
-      time: "17:30–18:30",
-      instructor: "Anna Kowalska",
-      age: "8–12",
-      info: "Taniec współczesny dla dzieci: koordynacja, płynność, podstawy pracy z podłogą i proste choreografie. Rozwijanie ekspresji.",
-    },
-    {
-      name: "Taniec współczesny",
-      time: "18:30–19:30",
-      instructor: "Anna Kowalska",
-      age: "13–18",
-      info: "Taniec współczesny dla młodzieży: technika, floorwork, dynamika i interpretacja muzyki. Praca nad jakością ruchu.",
-    },
-  ],
-
-  friday: [
-    {
-      name: "Lekcje indywidualne",
-      time: "16:00–17:00",
-      instructor: "Anna Kowalska",
-      age: "brak",
-      info: "Trening 1:1 dopasowany do celu: technika, choreografia, przygotowanie do występu lub poprawa konkretnych elementów.",
-    },
-    {
-      name: "Feminine Flow 18+",
-      time: "17:00–18:00",
-      instructor: "Anna Kowalska",
-      age: "18+",
-      info: "Zajęcia dla dorosłych: płynny, kobiecy styl, świadomość ciała i pewność siebie. Praca z choreografią w komfortowej atmosferze.",
-    },
-    {
-      name: "Lekcje indywidualne",
-      time: "18:00–19:00",
-      instructor: "Anna Kowalska",
-      age: "brak",
-      info: "Trening 1:1: plan pod Twoje potrzeby (technika, układ, mobilność, rozciąganie lub kondycja). Tempo dopasowane do Ciebie.",
-    },
-    {
-      name: "KPOP",
-      time: "19:00–20:00",
-      instructor: "Anna Kowalska",
-      age: "brak",
-      info: "K-pop dance: nauka choreografii, synchronizacja, czyste linie i energia. Szlifowanie detali i performance’u.",
-    },
-    {
-      name: "Lekcje indywidualne",
-      time: "20:00–21:00",
-      instructor: "Anna Kowalska",
-      age: "brak",
-      info: "Trening 1:1: szlifowanie techniki i choreografii, przygotowanie pod nagrania lub występy. Konkretne feedbacki i progres.",
-    },
-  ],
-};
-
-export const dayLabelsPl: Record<keyof typeof classesByDay, string> = {
-  monday: "Poniedziałek",
-  tuesday: "Wtorek",
-  wednesday: "Środa",
-  thursday: "Czwartek",
-  friday: "Piątek",
-};
+  // --- Indywidualne / godzinowe ---
+  {
+    name: "Taniec współczesny solo",
+    price: "160 zł/h",
+    frequency: "za godzinę",
+    trending: false,
+    age: "",
+    category: "individual",
+  },
+  {
+    name: "Taniec współczesny duet",
+    price: "100 zł/h od osoby",
+    frequency: "za godzinę",
+    trending: false,
+    age: "",
+    category: "individual",
+  },
+  {
+    name: "Hip-hop solo",
+    price: "140 zł/h",
+    frequency: "za godzinę",
+    trending: false,
+    age: "",
+    category: "individual",
+  },
+  {
+    name: "Hip-hop duet",
+    price: "90 zł/h od osoby",
+    frequency: "za godzinę",
+    trending: false,
+    age: "",
+    category: "individual",
+  },
+  {
+    name: "Hip-hop trio",
+    price: "80 zł/h od osoby",
+    frequency: "za godzinę",
+    trending: false,
+    age: "",
+    category: "individual",
+  },
+  {
+    name: "K-pop solo",
+    price: "130 zł/h",
+    frequency: "za godzinę",
+    trending: false,
+    age: "",
+    category: "individual",
+  },
+  {
+    name: "Akrobatyka",
+    price: "160 zł/h",
+    frequency: "za godzinę",
+    trending: false,
+    age: "",
+    category: "individual",
+  },
+  {
+    name: "Pierwszy taniec",
+    price: "150 zł/h",
+    frequency: "za godzinę",
+    trending: false,
+    age: "",
+    category: "wedding",
+  },
+];
