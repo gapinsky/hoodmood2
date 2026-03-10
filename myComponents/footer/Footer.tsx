@@ -44,17 +44,26 @@ export default function Footer() {
                 <p className="font-semibold mb-2">Nawigacja:</p>
                 <ul className="space-y-2">
                   <li>
-                    <Link href="/kadra" className={cn(a11y, "hover:underline")}>
+                    <Link
+                      href="/oferta/koszalin"
+                      className={cn(a11y, "hover:underline")}
+                    >
                       Oferta
                     </Link>
                   </li>
                   <li>
-                    <Link href="/kadra" className={cn(a11y, "hover:underline")}>
+                    <Link
+                      href="/grafik/koszalin"
+                      className={cn(a11y, "hover:underline")}
+                    >
                       Grafik
                     </Link>
                   </li>
                   <li>
-                    <Link href="/kadra" className={cn(a11y, "hover:underline")}>
+                    <Link
+                      href="/cennik/koszalin"
+                      className={cn(a11y, "hover:underline")}
+                    >
                       Cennik
                     </Link>
                   </li>
@@ -64,12 +73,18 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/kadra" className={cn(a11y, "hover:underline")}>
+                    <Link
+                      href="/kolonie"
+                      className={cn(a11y, "hover:underline")}
+                    >
                       Kolonie
                     </Link>
                   </li>
                   <li>
-                    <Link href="/kadra" className={cn(a11y, "hover:underline")}>
+                    <Link
+                      href="/aktualnosci"
+                      className={cn(a11y, "hover:underline")}
+                    >
                       Aktualności
                     </Link>
                   </li>
@@ -79,18 +94,39 @@ export default function Footer() {
                 <p className="font-semibold mb-2">Dokumenty do pobrania:</p>
                 <ul className="space-y-2">
                   <li>
-                    <a href="" className={cn(a11y, "hover:underline")}>
+                    <a
+                      href="/assets/pdf/standardy-ochrony-dzieci-przed-krzywdzeniem.pdf"
+                      download={true}
+                      className={cn(a11y, "hover:underline")}
+                    >
                       Standardy ochrony dzieci przed krzywdzeniem
                     </a>
                   </li>
                   <li>
-                    <a href="" className={cn(a11y, "hover:underline")}>
+                    <a
+                      href="/assets/pdf/potwierdzenie-uczestnictwa-w-zajeciach.pdf"
+                      className={cn(a11y, "hover:underline")}
+                      download={true}
+                    >
                       Potwierdzenie uczestnictwa w zajęciach
                     </a>
                   </li>
                   <li>
-                    <a href="" className={cn(a11y, "hover:underline")}>
+                    <a
+                      href="/assets/pdf/umowa-uczestnictwa.pdf"
+                      className={cn(a11y, "hover:underline")}
+                      download={true}
+                    >
                       Umowa uczestnictwa
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/assets/pdf/regulamin-studia-tanca-hoodmood.pdf"
+                      className={cn(a11y, "hover:underline")}
+                      download={true}
+                    >
+                      Regulamin studia tańca Hoodmood
                     </a>
                   </li>
                 </ul>
