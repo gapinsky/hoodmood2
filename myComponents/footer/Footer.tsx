@@ -7,17 +7,17 @@ import { cn } from "@/lib/utils";
 export default function Footer() {
   const date = new Date();
   return (
-    <footer className="border    w-full ">
+    <footer className="border    w-full text-sm">
       <div className="max-w-380 mx-auto px-8 md:px-12 lg:px-16">
         <div className="flex flex-col gap-8 md:flex-row  md:justify-between lg:items-center border-b py-4 ">
           {/* LEFT COL */}
-          <div className="space-y-2">
+          <div className="space-y-4">
             <Image src={logo} alt="logo" width={120} height={60} />
-            <div className="">
+            <div className="space-y-1">
               <p className="font-semibold">Adres siedziby:</p>
               <p>Zwycięstwa 115, 75-211 Koszalin</p>
             </div>
-            <div>
+            <div className="space-y-1">
               <p className="font-semibold">Kontakt:</p>
               <p>+48 577 198 599</p>
               <p>hoodmood.recepcja@gmail.com</p>
@@ -41,34 +41,34 @@ export default function Footer() {
           <div className="flex flex-col gap-8 md:flex-row">
             <div>
               <p className="font-semibold mb-2">Nawigacja:</p>
-              <ul className="space-y-1">
+              <ul className="space-y-2">
                 <li>
-                  <Link href="/kadra" className={a11y}>
+                  <Link href="/kadra" className={cn(a11y, "hover:underline")}>
                     Oferta
                   </Link>
                 </li>
                 <li>
-                  <Link href="/kadra" className={a11y}>
+                  <Link href="/kadra" className={cn(a11y, "hover:underline")}>
                     Grafik
                   </Link>
                 </li>
                 <li>
-                  <Link href="/kadra" className={a11y}>
+                  <Link href="/kadra" className={cn(a11y, "hover:underline")}>
                     Cennik
                   </Link>
                 </li>
                 <li>
-                  <Link href="/kadra" className={a11y}>
+                  <Link href="/kadra" className={cn(a11y, "hover:underline")}>
                     Kadra
                   </Link>
                 </li>
                 <li>
-                  <Link href="/kadra" className={a11y}>
+                  <Link href="/kadra" className={cn(a11y, "hover:underline")}>
                     Kolonie
                   </Link>
                 </li>
                 <li>
-                  <Link href="/kadra" className={a11y}>
+                  <Link href="/kadra" className={cn(a11y, "hover:underline")}>
                     Aktualności
                   </Link>
                 </li>
@@ -76,24 +76,19 @@ export default function Footer() {
             </div>
             <div>
               <p className="font-semibold mb-2">Dokumenty do pobrania:</p>
-              <ul className="space-y-1">
+              <ul className="space-y-2">
                 <li>
-                  <a href="" className={a11y}>
+                  <a href="" className={cn(a11y, "hover:underline")}>
                     Standardy ochrony dzieci przed krzywdzeniem
                   </a>
                 </li>
                 <li>
-                  <a href="" className={a11y}>
+                  <a href="" className={cn(a11y, "hover:underline")}>
                     Potwierdzenie uczestnictwa w zajęciach
                   </a>
                 </li>
                 <li>
-                  <a href="" className={a11y}>
-                    Regulamin
-                  </a>
-                </li>
-                <li>
-                  <a href="" className={a11y}>
+                  <a href="" className={cn(a11y, "hover:underline")}>
                     Umowa uczestnictwa
                   </a>
                 </li>
@@ -101,13 +96,22 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col-reverse md:flex md:flex-row  md:justify-between lg:items-center py-4 lg:py-8">
+        <div className="flex flex-col-reverse md:flex md:flex-row  md:justify-between lg:items-center py-4 lg:py-8 ">
           <p>Hoodmood&copy; {date.getFullYear()}</p>
           <div className="flex flex-col gap-1 xl:flex-row xl:gap-8">
-            <Link href="/polityka-prywatnosci" className={a11y}>
+            <Link href={"/regulamin"} className={cn(a11y, "hover:underline")}>
+              Regulamin
+            </Link>
+            <Link
+              href="/polityka-prywatnosci"
+              className={cn(a11y, "hover:underline")}
+            >
               Polityka prywatności
             </Link>{" "}
-            <Link href={"/dofinansowanie"} className={a11y}>
+            <Link
+              href={"/dofinansowanie"}
+              className={cn(a11y, "hover:underline")}
+            >
               Dofinansowano ze środków Funduszu rozwoju Kultury fizycznej
             </Link>
           </div>
