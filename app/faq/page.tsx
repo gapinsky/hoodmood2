@@ -13,10 +13,9 @@ export default function FAQ() {
           title={data.title}
           description={data.description}
         ></SectionContent>
-        <div>
+        <div className="space-y-4">
           <FaqFilter faq={faq} />
         </div>
-        <AnyQuestionsContact />
       </SectionContainer>
     </main>
   );

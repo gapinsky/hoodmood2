@@ -13,6 +13,7 @@ import {
   InputGroupInput,
 } from "@/components/ui/input-group";
 import { CircleX } from "lucide-react";
+import NoQuestion from "./noQuestion";
 const normalize = (text: string) =>
   text
     .toLowerCase()
@@ -47,17 +48,17 @@ export default function FaqFilter({ faq }: Props) {
         <InputGroupInput
           id="input-field-question"
           type="text"
-          placeholder="Wyszukaj pytanie"
+          placeholder="Zacznij wpisywać pytanie"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
         <InputGroupAddon align={"inline-end"}>
           {search !== "" && (
             <button
-              className="  py-1 px-2 hover:cursor-pointer text-black"
+              className="   px-2 hover:cursor-pointer text-black dark:invert dark:opacity-50 inline-flex items-center gap-1 text-xs hover:text-black/70 dark:hover:opacity-100"
               onClick={clearSearchBar}
             >
-              <CircleX />
+              <CircleX className="max-w-4" /> Wyczyść
             </button>
           )}
         </InputGroupAddon>
@@ -66,7 +67,7 @@ export default function FaqFilter({ faq }: Props) {
       <Accordion type="single" collapsible>
         {filteredFaq.map((item, id) => (
           <AccordionItem key={id} value={`${id}`}>
-            <AccordionTrigger className="text-xs md:text-md lg:text-lg py-6">
+            <AccordionTrigger className="text-xs md:text-md xl:text-lg py-6">
               {item.question}
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground pb-12">
@@ -75,6 +76,7 @@ export default function FaqFilter({ faq }: Props) {
           </AccordionItem>
         ))}
       </Accordion>
+      {filteredFaq.length === 0 && <NoQuestion />}
     </>
   );
 }

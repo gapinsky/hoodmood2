@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 export default function Footer() {
   const date = new Date();
   return (
-    <footer className="border    w-full text-sm">
+    <footer className=" border-t   w-full text-sm">
       <div className="max-w-380 mx-auto px-8 md:px-12 lg:px-16">
-        <div className="flex flex-col gap-8 md:flex-row  md:justify-between lg:items-center border-b py-4 ">
+        <div className="flex flex-col gap-8 md:flex-row  md:justify-between lg:items-stretch border-b py-4 lg:py-8 ">
           {/* LEFT COL */}
           <div className="space-y-4">
             <Image src={logo} alt="logo" width={120} height={60} />
@@ -38,67 +38,75 @@ export default function Footer() {
           </div>
 
           {/* RIGHT COL */}
-          <div className="flex flex-col gap-8 md:flex-row">
-            <div>
-              <p className="font-semibold mb-2">Nawigacja:</p>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/kadra" className={cn(a11y, "hover:underline")}>
-                    Oferta
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/kadra" className={cn(a11y, "hover:underline")}>
-                    Grafik
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/kadra" className={cn(a11y, "hover:underline")}>
-                    Cennik
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/kadra" className={cn(a11y, "hover:underline")}>
-                    Kadra
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/kadra" className={cn(a11y, "hover:underline")}>
-                    Kolonie
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/kadra" className={cn(a11y, "hover:underline")}>
-                    Aktualności
-                  </Link>
-                </li>
-              </ul>
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-8 md:flex-row h-full">
+              <div className="">
+                <p className="font-semibold mb-2">Nawigacja:</p>
+                <ul className="space-y-2">
+                  <li>
+                    <Link href="/kadra" className={cn(a11y, "hover:underline")}>
+                      Oferta
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/kadra" className={cn(a11y, "hover:underline")}>
+                      Grafik
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/kadra" className={cn(a11y, "hover:underline")}>
+                      Cennik
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/kadra" className={cn(a11y, "hover:underline")}>
+                      Kadra
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/kadra" className={cn(a11y, "hover:underline")}>
+                      Kolonie
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/kadra" className={cn(a11y, "hover:underline")}>
+                      Aktualności
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="">
+                <p className="font-semibold mb-2">Dokumenty do pobrania:</p>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="" className={cn(a11y, "hover:underline")}>
+                      Standardy ochrony dzieci przed krzywdzeniem
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" className={cn(a11y, "hover:underline")}>
+                      Potwierdzenie uczestnictwa w zajęciach
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" className={cn(a11y, "hover:underline")}>
+                      Umowa uczestnictwa
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <p className="font-semibold mb-2">Dokumenty do pobrania:</p>
-              <ul className="space-y-2">
-                <li>
-                  <a href="" className={cn(a11y, "hover:underline")}>
-                    Standardy ochrony dzieci przed krzywdzeniem
-                  </a>
-                </li>
-                <li>
-                  <a href="" className={cn(a11y, "hover:underline")}>
-                    Potwierdzenie uczestnictwa w zajęciach
-                  </a>
-                </li>
-                <li>
-                  <a href="" className={cn(a11y, "hover:underline")}>
-                    Umowa uczestnictwa
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <Link
+              href={"/dofinansowanie"}
+              className={cn(a11y, "hover:underline text-xs")}
+            >
+              Dofinansowano ze środków Funduszu rozwoju Kultury fizycznej
+            </Link>
           </div>
         </div>
-        <div className="flex flex-col-reverse md:flex md:flex-row  md:justify-between lg:items-center py-4 lg:py-8 ">
+        <div className="flex  justify-between  md:justify-between lg:items-center py-4 lg:py-8 text-xs">
           <p>Hoodmood&copy; {date.getFullYear()}</p>
-          <div className="flex flex-col gap-1 xl:flex-row xl:gap-8">
+          <div className="flex  md:flex-row gap-4 xl:flex-row xl:gap-8">
             <Link href={"/regulamin"} className={cn(a11y, "hover:underline")}>
               Regulamin
             </Link>
@@ -107,12 +115,6 @@ export default function Footer() {
               className={cn(a11y, "hover:underline")}
             >
               Polityka prywatności
-            </Link>{" "}
-            <Link
-              href={"/dofinansowanie"}
-              className={cn(a11y, "hover:underline")}
-            >
-              Dofinansowano ze środków Funduszu rozwoju Kultury fizycznej
             </Link>
           </div>
         </div>

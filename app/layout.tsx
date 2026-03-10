@@ -40,7 +40,7 @@ export default function RootLayout({
         >
           <TooltipProvider>
             <Navbar />
-            {children}
+            <div className="my-16">{children}</div>
             <Footer />
           </TooltipProvider>
         </ThemeProvider>
