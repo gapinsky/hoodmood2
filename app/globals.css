@@ -168,3 +168,7 @@ h6 {
     transform: translateY(-8px);
   }
 }
+
+html {
+  scrollbar-gutter: stable;
+}

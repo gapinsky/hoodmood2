@@ -36,12 +36,9 @@ export default function PackageTable({
   ctaHref = "/kontakt",
 }: PackageTableProps) {
   return (
-    <section className="w-full">
       <div className="space-y-4">
         <div className="flex items-center justify-between gap-4">
-          <h2 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
-            {title}
-          </h2>
+          <h2 className="text-xl  text-white sm:text-2xl">{title}</h2>
         </div>
 
         <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
@@ -120,6 +117,5 @@ export default function PackageTable({
           </div>
         </div>
       </div>
-    </section>
   );
 }

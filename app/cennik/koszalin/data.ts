@@ -11,7 +11,7 @@ export type PricingTableProps = {
   ctaHref?: string;
 };
 
-type PriceItem = {
+export type PriceItem = {
   name: string;
   price: string;
   frequency: string;
@@ -19,6 +19,7 @@ type PriceItem = {
   age: string;
   category:
     | "kidsDance"
+    | "youngGeneration"
     | "ballet"
     | "acrobatics"
     | "breakdance"
@@ -26,11 +27,14 @@ type PriceItem = {
     | "modernDance"
     | "kpop"
     | "hiphop"
+    | "adults"
+    | "foundation"
     | "individual"
     | "wedding";
 };
 
 export const priceList: PriceItem[] = [
+  // Dzieci / podstawy
   {
     name: "Taniec dla 4–6 latków",
     price: "170 zł",
@@ -56,10 +60,10 @@ export const priceList: PriceItem[] = [
     category: "kidsDance",
   },
   {
-    name: "Breakdance",
+    name: "Break Dance",
     price: "170 zł",
     frequency: "1x/tyg",
-    trending: true,
+    trending: false,
     age: "6–8 lat",
     category: "breakdance",
   },
@@ -71,6 +75,90 @@ export const priceList: PriceItem[] = [
     age: "",
     category: "ballet",
   },
+  {
+    name: "Balet + akrobatyka",
+    price: "240 zł",
+    frequency: "1x/tyg",
+    trending: false,
+    age: "",
+    category: "ballet",
+  },
+  {
+    name: "Young Generation",
+    price: "230 zł",
+    frequency: "2x/tyg",
+    trending: false,
+    age: "7–9 lat",
+    category: "youngGeneration",
+  },
+  {
+    name: "Young Generation + akrobatyka",
+    price: "270 zł",
+    frequency: "1x/tyg",
+    trending: false,
+    age: "7–9 lat",
+    category: "youngGeneration",
+  },
+
+  // Pakiety / podstawa / hip-hop
+  {
+    name: "Pakiet podstawowy",
+    price: "280 zł",
+    frequency: "-",
+    trending: false,
+    age: "",
+    category: "foundation",
+  },
+  {
+    name: "Podstawa + KPOP/akrobatyka",
+    price: "320 zł",
+    frequency: "1x/tyg",
+    trending: false,
+    age: "",
+    category: "foundation",
+  },
+  {
+    name: "Podstawa + choreo",
+    price: "320 zł",
+    frequency: "-",
+    trending: false,
+    age: "",
+    category: "foundation",
+  },
+  {
+    name: "Podstawa + choreo + taniec współczesny",
+    price: "380 zł",
+    frequency: "-",
+    trending: false,
+    age: "",
+    category: "foundation",
+  },
+  {
+    name: "Podstawa + taniec współczesny + KPOP + akrobatyka",
+    price: "420 zł",
+    frequency: "1x/tyg",
+    trending: false,
+    age: "",
+    category: "foundation",
+  },
+  {
+    name: "Podstawa - treningi hip-hop",
+    price: "290 zł",
+    frequency: "2x/tyg",
+    trending: false,
+    age: "",
+    category: "hiphop",
+  },
+  {
+    name: "Podstawa + KPOP / akrobatyka / choreo open",
+    price: "330 zł",
+    frequency: "1x/tyg",
+    trending: false,
+    age: "",
+    category: "hiphop",
+  },
+
+  // Akrobatyka
   {
     name: "Akrobatyka",
     price: "180 zł",
@@ -103,6 +191,26 @@ export const priceList: PriceItem[] = [
     age: "",
     category: "partnerAcro",
   },
+
+  // Dorośli
+  {
+    name: "Formacja dla dorosłych (HIP-HOP/HOUSE)",
+    price: "200 zł",
+    frequency: "1x/tyg",
+    trending: false,
+    age: "dorośli",
+    category: "adults",
+  },
+  {
+    name: "FEMININE FLOW",
+    price: "180 zł",
+    frequency: "1x/tyg",
+    trending: false,
+    age: "dorośli",
+    category: "adults",
+  },
+
+  // Taniec współczesny
   {
     name: "Taniec współczesny",
     price: "210 zł",
@@ -112,15 +220,57 @@ export const priceList: PriceItem[] = [
     category: "modernDance",
   },
   {
-    name: "K-POP",
+    name: "Taniec współczesny + partnerowanie akro",
+    price: "300 zł",
+    frequency: "1x/tyg",
+    trending: false,
+    age: "8–12 lat",
+    category: "modernDance",
+  },
+  {
+    name: "Taniec współczesny",
+    price: "220 zł",
+    frequency: "1x/tyg",
+    trending: false,
+    age: "13–18 lat",
+    category: "modernDance",
+  },
+  {
+    name: "Taniec współczesny",
+    price: "310 zł",
+    frequency: "2x/tyg",
+    trending: false,
+    age: "13–18 lat",
+    category: "modernDance",
+  },
+  {
+    name: "Taniec współczesny + partnerowanie akro",
+    price: "380 zł",
+    frequency: "2x/tyg + 1x/tyg",
+    trending: false,
+    age: "13–18 lat",
+    category: "modernDance",
+  },
+  {
+    name: "Partnerowanie akro",
     price: "230 zł",
     frequency: "1x/tyg",
+    trending: false,
+    age: "",
+    category: "partnerAcro",
+  },
+
+  // K-POP
+  {
+    name: "K-POP",
+    price: "230 zł",
+    frequency: "2x/tyg",
     trending: false,
     age: "",
     category: "kpop",
   },
 
-  // --- Indywidualne / godzinowe ---
+  // Indywidualne / godzinowe
   {
     name: "Taniec współczesny solo",
     price: "160 zł/h",
@@ -186,7 +336,6 @@ export const priceList: PriceItem[] = [
     category: "wedding",
   },
 ];
-
 
 type PackageEntry = {
   name: string;

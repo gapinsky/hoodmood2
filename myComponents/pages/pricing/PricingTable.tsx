@@ -10,6 +10,7 @@ type PriceItem = {
   age: string;
   category:
     | "kidsDance"
+    | "youngGeneration"
     | "ballet"
     | "acrobatics"
     | "breakdance"
@@ -17,6 +18,8 @@ type PriceItem = {
     | "modernDance"
     | "kpop"
     | "hiphop"
+    | "adults"
+    | "foundation"
     | "individual"
     | "wedding";
 };
@@ -30,7 +33,7 @@ type PricingTableProps = {
 const desktopGrid = "md:grid-cols-[minmax(0,1.8fr)_140px_180px_140px_140px]";
 
 export default function PricingTable({
-  title = "Zajęcia dla dzieci i młodzieży",
+  title,
   items,
   ctaHref = "/kontakt",
 }: PricingTableProps) {
