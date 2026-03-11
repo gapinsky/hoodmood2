@@ -1,6 +1,8 @@
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import SectionContent from "@/myComponents/common/SectionContent";
 import { data, items } from "./data";
+import Image from "next/image";
+import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 
 export default function Subsidy() {
   return (
@@ -11,31 +13,45 @@ export default function Subsidy() {
           title={data.title}
           description={data.description}
         ></SectionContent>
-        <div className="">
-          <dl className="grid gap-4 sm:gap-5">
-            {items.map((item) => (
-              <div
-                key={item.label}
-                className={`rounded-2xl border p-4 transition-all sm:p-5 ${
-                  item.highlight
-                    ? "border-rose-200 bg-gradient-to-br from-rose-50 to-white"
-                    : "border-neutral-200 bg-neutral-50/70"
-                }`}
-              >
-                <dt className="text-sm font-semibold text-neutral-500 sm:text-[15px]">
-                  {item.label}
-                </dt>
-                <dd
-                  className={`mt-2 text-sm leading-7 text-neutral-900 sm:text-base ${
-                    item.highlight ? "font-bold text-rose-700" : "font-medium"
-                  } ${item.full ? "max-w-4xl font-normal text-neutral-700" : ""}`}
-                >
-                  {item.value}
-                </dd>
+        <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:gap-10">
+          <div>
+            <div className=" flex flex-col gap-4   pb-6">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] ">
+                  Dofinansowanie 2025
+                </p>
+                <h2 className="mt-3 text-2xl tracking-tight  sm:text-3xl">
+                  Informacje o zadaniu
+                </h2>
+                <p className="mt-3 max-w-2xl text-sm leading-6  sm:text-base">
+                  Najważniejsze informacje o programie, zakresie realizacji i
+                  finansowaniu w czytelnym układzie.
+                </p>
               </div>
-            ))}
-          </dl>
+            </div>
+
+            <dl className="grid gap-4 sm:gap-5">
+              {items.map((item) => (
+                <div key={item.label} className="py-4">
+                  <dt className="text-md font-semibold">{item.label}</dt>
+                  <dd className={`mt-2 text-sm leading-7`}>{item.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+
+          <div className="relative  aspect-4/5 h-fit rounded-lg overflow-hidden">
+            <Image
+              src="/assets/images/subsidy/dofinansowanie.jfif"
+              alt="Podgląd zadania lub programu"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              priority
+            />
+          </div>
         </div>
+        <AnyQuestionsContact />
       </SectionContainer>
     </main>
   );
