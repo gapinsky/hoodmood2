@@ -36,7 +36,8 @@ export type PricingTableProps = {
   ctaHref?: string;
 };
 
-const desktopGrid = "md:grid-cols-[minmax(0,1.8fr)_140px_180px_140px_140px]";
+const desktopGrid =
+  "md:grid-cols-[minmax(0,1.6fr)_90px_120px_100px_120px] lg:grid-cols-[minmax(0,1.8fr)_140px_180px_140px_140px]";
 
 export default function PricingTable({
   title,
@@ -82,9 +83,42 @@ export default function PricingTable({
                     )}
                   </div>
 
-                  <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm md:hidden ">
+                  <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-md md:hidden text-muted-foreground">
                     <span className="">{item.age || "Bez limitu wieku"}</span>
-                    <span className="">{item.frequency}</span>
+                    <span className="inline-flex items-center ">
+                      {item.frequency}{" "}
+                      {item.name.includes("+") ? (
+                        <HoverCard key="bottom" openDelay={20} closeDelay={20}>
+                          <HoverCardTrigger>
+                            <button type="button" className="px-1">
+                              <Info className="w-4 text-muted-foreground" />
+                            </button>
+                          </HoverCardTrigger>
+                          <HoverCardContent
+                            className=" text-sm "
+                            align="center"
+                          >
+                            Na każde zajęcia z pakietu można wejść maksymalnie{" "}
+                            {item.frequency.replace(/\D/g, "")} raz(y) w
+                            tygodniu.
+                          </HoverCardContent>
+                        </HoverCard>
+                      ) : item.frequency !== "-" ? (
+                        <HoverCard key="bottom" openDelay={20} closeDelay={20}>
+                          <HoverCardTrigger>
+                            <button type="button" className="px-1">
+                              <Info className="w-4 text-muted-foreground" />
+                            </button>
+                          </HoverCardTrigger>
+
+                          <HoverCardContent className="text-sm" align="center">
+                            Na wybrane zajęcia można wejść maksymalnie{" "}
+                            {item.frequency.replace(/\D/g, "")} raz(y) w
+                            tygodniu.
+                          </HoverCardContent>
+                        </HoverCard>
+                      ) : null}
+                    </span>
                     <span className="font-semibold ">{item.price}</span>
                   </div>
                 </div>
@@ -126,7 +160,7 @@ export default function PricingTable({
                       </HoverCardTrigger>
 
                       <HoverCardContent className="text-sm md:hidden">
-                            Na wybrane zajęcia można wejść maksymalnie{" "}
+                        Na wybrane zajęcia można wejść maksymalnie{" "}
                         {item.frequency.replace(/\D/g, "")} raz(y) w tygodniu.
                       </HoverCardContent>
 
@@ -145,7 +179,7 @@ export default function PricingTable({
                   {item.price}
                 </div>
 
-                <div className="flex md:justify-self-center  ">
+                <div className="flex justify-self-end md:justify-self-center  ">
                   <Button asChild size="sm" variant={"secondary"}>
                     <Link href={ctaHref}>Zapisz się</Link>
                   </Button>

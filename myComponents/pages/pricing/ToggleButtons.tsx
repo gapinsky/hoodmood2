@@ -25,7 +25,7 @@ export default function TabsNav() {
   const activeSegment = useSelectedLayoutSegment();
 
   return (
-    <div className="flex gap-4 w-fit mx-auto">
+    <div className="flex gap-4 w-fit mx-auto flex-wrap">
       {tabs.map((tab) => {
         const isActive = activeSegment === tab.segment;
 
