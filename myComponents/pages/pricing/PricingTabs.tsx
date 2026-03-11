@@ -9,9 +9,9 @@ type Props = {
 
 const PricingTabs = ({ data }: Props) => {
   return (
-    <div>
+    <div className="">
       <ToggleButtons />
-      <PricingTable items={data} />
+      {/* <PricingTable items={data} /> */}
     </div>
   );
 };
