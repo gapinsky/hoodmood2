@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-type PriceItem = {
+export type PriceItem = {
   name: string;
   price: string;
   frequency: string;
@@ -24,7 +24,7 @@ type PriceItem = {
     | "wedding";
 };
 
-type PricingTableProps = {
+export type PricingTableProps = {
   title?: string;
   items: PriceItem[];
   ctaHref?: string;
