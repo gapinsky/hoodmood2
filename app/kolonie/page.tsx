@@ -15,7 +15,7 @@ export default function Camps() {
           description={data.description}
         ></SectionContent>
         <NoEvents />
-        <h2 className="text-xl lg:text-3xl">
+        <h2 className="text-xl ">
           Zobacz, jak bawiliśmy się na poprzednich wydarzeniach!
         </h2>
         <div className="space-y-16 xl:space-y-32">

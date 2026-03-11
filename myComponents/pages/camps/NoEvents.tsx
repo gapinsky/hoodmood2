@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function NoEvents() {
   return (
-    <section className="mx-auto text-center space-y-2 my-36">
+    <section className="mx-auto text-center space-y-2 my-16">
       <p className="text-lg">
         Aktualnie nie mamy aktywynych obozów, kolonii ani wydarzeń specjalnych
       </p>
-      <p className="text-sm ">
+      <p>
         Ale spokojnie! Takie akcje pojawiają się u nas regularnie. Obserwuj nas,
         żeby być na bieżąco.
       </p>
