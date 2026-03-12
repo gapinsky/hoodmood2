@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/input-group";
 import { CircleX } from "lucide-react";
 import NoQuestion from "./noQuestion";
-const normalize = (text: string) =>
+export const normalize = (text: string) =>
   text
     .toLowerCase()
     .normalize("NFD")
@@ -52,16 +52,16 @@ export default function FaqFilter({ faq }: Props) {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <InputGroupAddon align={"inline-end"}>
-          {search !== "" && (
+        {search !== "" && (
+          <InputGroupAddon align={"inline-end"}>
             <button
               className="   px-2 hover:cursor-pointer text-black dark:invert dark:opacity-50 inline-flex items-center gap-1 text-xs hover:text-black/70 dark:hover:opacity-100"
               onClick={clearSearchBar}
             >
-              <CircleX className="max-w-4" /> Wyczyść
+              <CircleX className="max-w-4" />
             </button>
-          )}
-        </InputGroupAddon>
+          </InputGroupAddon>
+        )}
       </InputGroup>
 
       <Accordion type="single" collapsible>

@@ -63,6 +63,11 @@ export default function PricingTable({
           </div>
 
           <div className="divide-y divide-white/10">
+            {items.length === 0 && (
+              <p className="text-center py-4 max-w-md mx-auto leading-relaxed text-balance">
+                Nie znaleziono zajęć pasujących do wprowadzonego hasła.
+              </p>
+            )}
             {items.map((item, index) => (
               <article
                 key={`${item.name}-${item.age}-${index}`}
