@@ -10,6 +10,14 @@ import {
 import { CircleX, SearchIcon, User } from "lucide-react";
 import { normalize } from "@/myComponents/pages/faq/faqFilter";
 import { Field, FieldLabel } from "@/components/ui/field";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectTrigger,
+  SelectValue,
+  SelectItem,
+} from "@/components/ui/select";
 
 export default function page() {
   const [searchInput, setSearchInput] = useState("");
@@ -86,6 +94,22 @@ export default function page() {
               </InputGroupAddon>
             )}
           </InputGroup>
+        </Field>
+        <Field>
+          <FieldLabel>Sortowanie</FieldLabel>
+          <Select defaultValue="default">
+            <SelectTrigger>
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectItem value="default">Sortowanie domyślne</SelectItem>
+                <SelectItem value="ascending">Cena: rosnąco</SelectItem>
+                <SelectItem value="descending">Cena: malejąco</SelectItem>
+                <SelectItem value="alphabetical">Alfabetycznie</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
         </Field>
       </div>
       <PricingTable items={filteredData} />
