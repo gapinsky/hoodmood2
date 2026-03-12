@@ -1,155 +1,17 @@
 "use client";
+
+import { useMemo } from "react";
 import PricingTable from "@/myComponents/pages/pricing/PricingTable";
 import { data } from "./data";
-import { useMemo, useState } from "react";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/components/ui/input-group";
-import { CircleX, SearchIcon, User } from "lucide-react";
-import { normalize } from "@/myComponents/pages/faq/faqFilter";
-import { Field, FieldLabel } from "@/components/ui/field";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectTrigger,
-  SelectValue,
-  SelectItem,
-} from "@/components/ui/select";
+import { usePricingFilters } from "../../components/PricingFiltersProvider";
+import { filterAndSortPricingData } from "../../components/filterHelper";
 
-export default function page() {
-  const [searchInput, setSearchInput] = useState("");
-  const [searchAge, setSearchAge] = useState("");
-  const [sorting, setSorting] = useState("default");
+export default function Page() {
+  const { searchInput, searchAge, sorting } = usePricingFilters();
 
   const filteredData = useMemo(() => {
-    const words = normalize(searchInput).trim().split(/\s+/).filter(Boolean);
-    const age = Number(searchAge);
-    const hasValidAge = searchAge.trim() !== "" && !Number.isNaN(age);
+    return filterAndSortPricingData(data, searchInput, searchAge, sorting);
+  }, [searchInput, searchAge, sorting]);
 
-    const filtered = data.filter((item) => {
-      const normalizedName = normalize(item.name);
-
-      const matchesText =
-        words.length === 0 ||
-        words.every((word) => normalizedName.includes(word));
-
-      const min = item.minAge ? Number(item.minAge) : null;
-      const max = item.maxAge ? Number(item.maxAge) : null;
-
-      const matchesAge =
-        !hasValidAge ||
-        (min === null && max === null) ||
-        (min !== null && max === null && age >= min) ||
-        (min === null && max !== null && age <= max) ||
-        (min !== null && max !== null && age >= min && age <= max);
-
-      return matchesText && matchesAge;
-    });
-
-    if (sorting === "default") {
-      return filtered;
-    }
-
-    return [...filtered].sort((a, b) => {
-      if (sorting === "alphabetical") {
-        return a.name.localeCompare(b.name, "pl");
-      }
-
-      if (sorting === "ascending") {
-        return +a.price - +b.price;
-      }
-
-      if (sorting === "descending") {
-        return +b.price - +a.price;
-      }
-
-      return 0;
-    });
-  }, [searchInput, searchAge, sorting, data]);
-
-  const clearInput = () => {
-    setSearchInput("");
-  };
-  const clearAge = () => {
-    setSearchAge("");
-  };
-  return (
-    <>
-      <div className="flex gap-4">
-        <Field>
-          <FieldLabel htmlFor="searchInput">Wyszukaj zajęć</FieldLabel>
-          <InputGroup>
-            <InputGroupInput
-              id="searchInput"
-              placeholder="Wprowadź nazwę szukanych zajęć"
-              value={searchInput}
-              onChange={(e) => setSearchInput(e.currentTarget.value)}
-            />
-            <InputGroupAddon>
-              <SearchIcon className="text-muted-foreground" />
-            </InputGroupAddon>
-            {searchInput !== "" && (
-              <InputGroupAddon align={"inline-end"}>
-                <button
-                  onClick={clearInput}
-                  className=" px-2 hover:cursor-pointer text-black dark:invert dark:opacity-50 inline-flex items-center gap-1 text-xs hover:text-black/70 dark:hover:opacity-100"
-                >
-                  <CircleX className="w-4" />
-                </button>
-              </InputGroupAddon>
-            )}
-          </InputGroup>
-        </Field>
-        <Field>
-          <FieldLabel htmlFor="age">Wiek uczestnika</FieldLabel>
-          <InputGroup>
-            <InputGroupInput
-              id="age"
-              placeholder="Wprowadź wiek uczestnika"
-              type="text"
-              inputMode="numeric"
-              value={searchAge}
-              onChange={(e) => {
-                const value = e.target.value.replace(/\D/g, "").slice(0, 2);
-                setSearchAge(value);
-              }}
-            />
-            <InputGroupAddon>
-              <User className="text-muted-foreground" />
-            </InputGroupAddon>
-            {searchAge !== "" && (
-              <InputGroupAddon align={"inline-end"}>
-                <button
-                  onClick={clearAge}
-                  className=" px-2 hover:cursor-pointer text-black dark:invert dark:opacity-50 inline-flex items-center gap-1 text-xs hover:text-black/70 dark:hover:opacity-100"
-                >
-                  <CircleX className="w-4" />
-                </button>
-              </InputGroupAddon>
-            )}
-          </InputGroup>
-        </Field>
-        <Field>
-          <FieldLabel>Sortowanie</FieldLabel>
-          <Select defaultValue={sorting} onValueChange={setSorting}>
-            <SelectTrigger>
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                <SelectItem value="default">Sortowanie domyślne</SelectItem>
-                <SelectItem value="ascending">Cena: rosnąco</SelectItem>
-                <SelectItem value="descending">Cena: malejąco</SelectItem>
-                <SelectItem value="alphabetical">Alfabetycznie</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-        </Field>
-      </div>
-      <PricingTable items={filteredData} />
-    </>
-  );
+  return <PricingTable items={filteredData} />;
 }

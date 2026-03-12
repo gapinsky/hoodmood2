@@ -7,29 +7,9 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { Info } from "lucide-react";
+import { PriceItem } from "@/app/cennik/types";
 
-export type PriceItem = {
-  name: string;
-  price: string;
-  frequency: string;
-  trending: boolean;
-  minAge: string;
-  maxAge: string;
-  category:
-    | "kidsDance"
-    | "youngGeneration"
-    | "ballet"
-    | "acrobatics"
-    | "breakdance"
-    | "partnerAcro"
-    | "modernDance"
-    | "kpop"
-    | "hiphop"
-    | "adults"
-    | "foundation"
-    | "individual"
-    | "wedding";
-};
+
 
 export type PricingTableProps = {
   title?: string;
