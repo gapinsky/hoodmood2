@@ -37,7 +37,7 @@ export type PricingTableProps = {
 };
 
 const desktopGrid =
-  "md:grid-cols-[minmax(0,1.6fr)_90px_120px_100px_120px] lg:grid-cols-[minmax(0,1.8fr)_140px_180px_140px_140px]";
+  "md:grid-cols-[minmax(0,1.6fr)_90px_120px_100px_120px] lg:grid-cols-[minmax(0,1.8fr)_140px_180px_140px_140px_140px]";
 
 export default function PricingTable({
   title,
@@ -56,10 +56,10 @@ export default function PricingTable({
             className={`hidden ${desktopGrid} items-center gap-4 border-b  px-5 py-3 text-xs font-medium uppercase tracking-[0.18em]  md:grid text-muted-foreground`}
           >
             <span className=" ">Rodzaj zajęć</span>
+            <span className=" text-center">Zaawansowanie</span>
             <span className=" text-center">Wiek</span>
             <span className=" text-center">Częstotliwość</span>
             <span className=" text-center">Cena</span>
-            <span className=" text-center">Akcja</span>
           </div>
 
           <div className="divide-y divide-white/10">
@@ -89,6 +89,7 @@ export default function PricingTable({
                   </div>
 
                   <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-md md:hidden text-muted-foreground">
+                    <span className="">{item.age || "Bez limitu wieku"}</span>
                     <span className="">{item.age || "Bez limitu wieku"}</span>
                     <span className="inline-flex items-center ">
                       {item.frequency}{" "}
@@ -128,6 +129,9 @@ export default function PricingTable({
                   </div>
                 </div>
 
+                <div className="hidden text-sm  md:block  text-center">
+                  {item.age || "—"}
+                </div>
                 <div className="hidden text-sm  md:block  text-center">
                   {item.age || "—"}
                 </div>
@@ -184,7 +188,7 @@ export default function PricingTable({
                   {item.price}
                 </div>
 
-                <div className="flex justify-self-end md:justify-self-center  ">
+                <div className="flex justify-self-end md:justify-self-end  ">
                   <Button asChild size="sm" variant={"secondary"}>
                     <Link href={ctaHref}>Zapisz się</Link>
                   </Button>
