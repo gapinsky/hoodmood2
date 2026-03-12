@@ -22,13 +22,14 @@ import {
 export default function page() {
   const [searchInput, setSearchInput] = useState("");
   const [searchAge, setSearchAge] = useState("");
+  const [sorting, setSorting] = useState("default");
 
   const filteredData = useMemo(() => {
     const words = normalize(searchInput).trim().split(/\s+/).filter(Boolean);
     const age = Number(searchAge);
     const hasValidAge = searchAge.trim() !== "" && !Number.isNaN(age);
 
-    return data.filter((item) => {
+    const filtered = data.filter((item) => {
       const normalizedName = normalize(item.name);
 
       const matchesText =
@@ -47,7 +48,27 @@ export default function page() {
 
       return matchesText && matchesAge;
     });
-  }, [searchInput, data, searchAge]);
+
+    if (sorting === "default") {
+      return filtered;
+    }
+
+    return [...filtered].sort((a, b) => {
+      if (sorting === "alphabetical") {
+        return a.name.localeCompare(b.name, "pl");
+      }
+
+      if (sorting === "ascending") {
+        return +a.price - +b.price;
+      }
+
+      if (sorting === "descending") {
+        return +b.price - +a.price;
+      }
+
+      return 0;
+    });
+  }, [searchInput, searchAge, sorting, data]);
 
   const clearInput = () => {
     setSearchInput("");
@@ -113,7 +134,7 @@ export default function page() {
         </Field>
         <Field>
           <FieldLabel>Sortowanie</FieldLabel>
-          <Select defaultValue="default">
+          <Select defaultValue={sorting} onValueChange={setSorting}>
             <SelectTrigger>
               <SelectValue />
             </SelectTrigger>

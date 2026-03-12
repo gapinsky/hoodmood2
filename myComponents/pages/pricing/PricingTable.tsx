@@ -126,7 +126,7 @@ export default function PricingTable({
                         </HoverCard>
                       ) : null}
                     </span>
-                    <span className="font-semibold ">{item.price}</span>
+                    <span className="font-semibold ">{item.price} zł</span>
                   </div>
                 </div>
 
@@ -185,7 +185,7 @@ export default function PricingTable({
                 </div>
 
                 <div className="hidden text-sm font-semibold  md:block  text-center">
-                  {item.price}
+                  {item.price} zł
                 </div>
 
                 <div className="flex justify-self-end md:justify-self-end  ">
