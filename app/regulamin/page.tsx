@@ -2,6 +2,7 @@ import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import SectionContent from "@/myComponents/common/SectionContent";
 import { data } from "./data";
+import Regulations from "./Regulations";
 export default function TermsAndConditions() {
   return (
     <main className="">
@@ -12,7 +13,7 @@ export default function TermsAndConditions() {
           description={data.description}
         ></SectionContent>
 
-        <div className="space-y-16 xl:space-y-32"></div>
+        <Regulations />
         <AnyQuestionsContact />
       </SectionContainer>
     </main>
