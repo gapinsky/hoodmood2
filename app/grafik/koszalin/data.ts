@@ -5,14 +5,14 @@ export const data = {
     "Sprawdź aktualny grafik zajęć i wybierz termin, który Ci pasuje. Kliknij w wybrane zajęcia, żeby zobaczyć poziom, prowadzącego i dostępne miejsca.",
 };
 
-type ClassItem = {
+export type ClassItem = {
   name: string;
   time: string;
   instructor: string;
   info: string;
   age: string;
 };
-
+export type DayKey = "monday" | "tuesday" | "wednesday" | "thursday" | "friday";
 export const classesByDay: Record<
   "monday" | "tuesday" | "wednesday" | "thursday" | "friday",
   ClassItem[]
