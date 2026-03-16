@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 w-full  py-4 xl:py-0 bg-background z-1000 ">
+    <nav className="fixed top-0 w-full  py-4 xl:py-0 bg-background z-1000 ">
       <Container>
         <div className="flex  items-center w-full ">
           {/* LEFT */}

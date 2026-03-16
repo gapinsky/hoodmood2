@@ -25,6 +25,7 @@ export default function Offer() {
               age={item.age}
               description={item.description}
               localization={"polanow"}
+              experience={item.experience}
             />
           ))}
         </div>
