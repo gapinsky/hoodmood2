@@ -1,6 +1,6 @@
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import SectionContent from "@/myComponents/common/SectionContent";
-import { data, questions } from "./data";
+import { data } from "./data";
 import {
   Accordion,
   AccordionContent,
@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
+import { faq } from "@/app/faq/data";
 export default function Faq() {
   return (
     <SectionContainer>
@@ -17,7 +18,7 @@ export default function Faq() {
         description={data.description}
       />
       <Accordion type="single" collapsible>
-        {questions.map((question) => (
+        {faq.splice(0,3).map((question) => (
           <AccordionItem value={question.question} key={question.question}>
             <AccordionTrigger>{question.question}</AccordionTrigger>
             <AccordionContent>{question.answer}</AccordionContent>
