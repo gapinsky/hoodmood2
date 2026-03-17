@@ -3,10 +3,11 @@ import SectionContainer from "@/myComponents/common/SectionContainer";
 import SectionContent from "@/myComponents/common/SectionContent";
 import { data, faq } from "./data";
 import FaqFilter from "@/myComponents/pages/faq/faqFilter";
+import MainWrapper from "@/myComponents/common/MainWrapper";
 
 export default function FAQ() {
   return (
-    <main className="">
+  <MainWrapper>
       <SectionContainer>
         <SectionContent
           badge={data.badge}
@@ -17,6 +18,6 @@ export default function FAQ() {
           <FaqFilter faq={faq} />
         </div>
       </SectionContainer>
-    </main>
+    </MainWrapper>
   );
 }

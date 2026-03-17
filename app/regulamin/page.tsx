@@ -3,9 +3,10 @@ import SectionContainer from "@/myComponents/common/SectionContainer";
 import SectionContent from "@/myComponents/common/SectionContent";
 import { data } from "./data";
 import Regulations from "./Regulations";
+import MainWrapper from "@/myComponents/common/MainWrapper";
 export default function TermsAndConditions() {
   return (
-    <main className="">
+  <MainWrapper>
       <SectionContainer>
         <SectionContent
           badge={data.badge}
@@ -16,6 +17,6 @@ export default function TermsAndConditions() {
         <Regulations />
         <AnyQuestionsContact />
       </SectionContainer>
-    </main>
+    </MainWrapper>
   );
 }

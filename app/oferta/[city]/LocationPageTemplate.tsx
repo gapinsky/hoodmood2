@@ -1,6 +1,7 @@
 import { ClassesOfferType } from "@/data/ofertaData";
 import { offerTabs } from "@/data/tabs";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
+import MainWrapper from "@/myComponents/common/MainWrapper";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import SectionContent from "@/myComponents/common/SectionContent";
 import TabsNav from "@/myComponents/common/ToggleButtons";
@@ -16,7 +17,7 @@ export function LocationPageTemplate({
   offerContent,
 }: LocationPageProps) {
   return (
-    <main className="my-36">
+    <MainWrapper>
       <SectionContainer>
         <SectionContent
           badge="Oferta"
@@ -27,6 +28,6 @@ export function LocationPageTemplate({
         <OfferFiltersSection offerContent={offerContent} />
         <AnyQuestionsContact />
       </SectionContainer>
-    </main>
+    </MainWrapper>
   );
 }

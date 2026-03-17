@@ -6,6 +6,7 @@ import SectionContent from "@/myComponents/common/SectionContent";
 import TabsNav from "@/myComponents/common/ToggleButtons";
 import ScheduleGrid from "@/myComponents/pages/schedule/ScheduleGrid";
 import DownloadSchedule from "./DownloadSchedule";
+import MainWrapper from "@/myComponents/common/MainWrapper";
 
 type SchedulePageProps = {
   header: { title: string; description: string };
@@ -17,7 +18,7 @@ export default function SchedulePageTemplate({
   scheduleContent,
 }: SchedulePageProps) {
   return (
-    <main className="my-36">
+    <MainWrapper>
       <SectionContainer>
         <SectionContent
           title={header.title}
@@ -32,6 +33,6 @@ export default function SchedulePageTemplate({
         />
         <AnyQuestionsContact />
       </SectionContainer>
-    </main>
+    </MainWrapper>
   );
 }

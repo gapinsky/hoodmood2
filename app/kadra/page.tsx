@@ -3,10 +3,11 @@ import SectionContent from "@/myComponents/common/SectionContent";
 import { data, instructors } from "./data";
 import TeamCard from "@/myComponents/pages/team/TeamCard";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
+import MainWrapper from "@/myComponents/common/MainWrapper";
 
 export default function Team() {
   return (
-    <main className="">
+<MainWrapper>
       <SectionContainer>
         <SectionContent
           badge={data.badge}
@@ -27,6 +28,6 @@ export default function Team() {
         </div>
         <AnyQuestionsContact />
       </SectionContainer>
-    </main>
+    </MainWrapper>
   );
 }

@@ -4,10 +4,11 @@ import { data, camps } from "./data";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import NoEvents from "@/myComponents/pages/camps/NoEvents";
 import PreviousEvents from "@/myComponents/pages/camps/PreviousEvents";
+import MainWrapper from "@/myComponents/common/MainWrapper";
 
 export default function Camps() {
   return (
-    <main className="">
+ <MainWrapper>
       <SectionContainer>
         <SectionContent
           badge={data.badge}
@@ -30,6 +31,6 @@ export default function Camps() {
         </div>
         <AnyQuestionsContact />
       </SectionContainer>
-    </main>
+    </MainWrapper>
   );
 }

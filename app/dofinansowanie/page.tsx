@@ -3,10 +3,11 @@ import SectionContent from "@/myComponents/common/SectionContent";
 import { data, items } from "./data";
 import Image from "next/image";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
+import MainWrapper from "@/myComponents/common/MainWrapper";
 
 export default function Subsidy() {
   return (
-    <main className="">
+   <MainWrapper>
       <SectionContainer>
         <SectionContent
           badge={data.badge}
@@ -53,6 +54,6 @@ export default function Subsidy() {
         </div>
         <AnyQuestionsContact />
       </SectionContainer>
-    </main>
+    </MainWrapper>
   );
 }

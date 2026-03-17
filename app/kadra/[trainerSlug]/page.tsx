@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/carousel";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
+import MainWrapper from "@/myComponents/common/MainWrapper";
 
 type PageProps = {
   params: Promise<{
@@ -53,7 +54,7 @@ export default async function TrainerPage({ params }: PageProps) {
   }
 
   return (
-    <main className="">
+    <MainWrapper>
       <SectionContainer>
         <Link
           href="/kadra"
@@ -126,6 +127,6 @@ export default async function TrainerPage({ params }: PageProps) {
         </div>
         <AnyQuestionsContact />
       </SectionContainer>
-    </main>
+    </MainWrapper>
   );
 }

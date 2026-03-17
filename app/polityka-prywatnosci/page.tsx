@@ -3,10 +3,11 @@ import SectionContent from "@/myComponents/common/SectionContent";
 import { data, sections, personalData } from "./data";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import InfoRow from "@/myComponents/pages/privacy/InfoRow";
+import MainWrapper from "@/myComponents/common/MainWrapper";
 
 export default function Privacy() {
   return (
-    <main className="">
+  <MainWrapper>
       <SectionContainer>
         <SectionContent
           badge={data.badge}
@@ -58,6 +59,6 @@ export default function Privacy() {
         </div>
         <AnyQuestionsContact />
       </SectionContainer>
-    </main>
+    </MainWrapper>
   );
 }
