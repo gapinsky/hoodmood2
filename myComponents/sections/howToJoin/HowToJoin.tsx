@@ -13,7 +13,7 @@ export default function HowToJoin() {
         description={data.description}
       />
       <Timeline />
-      <ButtonPrimary href="/oferta/koszalin">Zobacz pełną ofertę</ButtonPrimary>
+      <ButtonPrimary href="/zapisz-sie">Dołącz do nas</ButtonPrimary>
     </SectionContainer>
   );
 }

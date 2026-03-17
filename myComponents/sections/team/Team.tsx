@@ -13,7 +13,7 @@ export default function Team() {
         description={data.description}
       />
       <TeamCarousel instructors={instructors} />
-      <ButtonPrimary href="/grafik/koszalin">Sprawdź grafik</ButtonPrimary>
+      <ButtonPrimary href="/kadra">Kadra trenerska</ButtonPrimary>
     </SectionContainer>
   );
 }

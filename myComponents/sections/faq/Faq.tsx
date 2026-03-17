@@ -25,7 +25,7 @@ export default function Faq() {
           </AccordionItem>
         ))}
       </Accordion>
-      <ButtonPrimary href="/oferta/koszalin">Zobacz pełną ofertę</ButtonPrimary>
+      <ButtonPrimary href="/faq">Wszystkie pytania</ButtonPrimary>
     </SectionContainer>
   );
 }

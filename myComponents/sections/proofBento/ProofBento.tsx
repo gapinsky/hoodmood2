@@ -54,7 +54,6 @@ export default function ProofBento() {
           </div>
         ))}
       </div>
-      <ButtonPrimary href="/oferta/koszalin">Zobacz pełną ofertę</ButtonPrimary>
     </SectionContainer>
   );
 }

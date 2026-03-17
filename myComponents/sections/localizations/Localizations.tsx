@@ -26,7 +26,7 @@ export default function Localizations() {
         ))}
       </div>
 
-      <ButtonPrimary href="/oferta/koszalin">Sprawdź grafik</ButtonPrimary>
+      <ButtonPrimary href="/grafik/koszalin">Sprawdź grafik</ButtonPrimary>
     </SectionContainer>
   );
 }

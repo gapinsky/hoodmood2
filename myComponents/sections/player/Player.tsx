@@ -17,7 +17,7 @@ export default function Player() {
             <ButtonSecondary href="/spotify">
               <img
                 src="/icons/spotify.svg"
-                className="w-4 invert brightness-0 block"
+                className="w-4 dark:invert brightness-0 block"
               />{" "}
               Spotify
             </ButtonSecondary>
