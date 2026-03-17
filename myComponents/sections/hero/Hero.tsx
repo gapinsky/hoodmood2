@@ -19,7 +19,7 @@ export default function Hero({
   description = "Zajęcia taneczne i akrobatyczne dla dzieci, młodzieży i dorosłych. Street dance, high heels, pierwszy taniec i akrobatyka — grupy dopasowane do wieku i poziomu.",
 }: HeroProps) {
   return (
-    <div className="min-h-screen   isolate  overflow-hidden  text-white">
+    <div className="min-h-screen   isolate  overflow-hidden  text-white bg-blue-900">
       <video
         className="absolute inset-0 h-full w-full object-cover -z-20"
         autoPlay
