@@ -1,4 +1,5 @@
 import { ClassesOfferType } from "@/data/ofertaData";
+import { offerTabs } from "@/data/tabs";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import SectionContent from "@/myComponents/common/SectionContent";
@@ -22,7 +23,7 @@ export function LocationPageTemplate({
           title={header.title}
           description={header.description}
         ></SectionContent>
-        <TabsNav />
+        <TabsNav tabs={offerTabs} />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {offerContent.map((item, id) => (
             <OfferCard

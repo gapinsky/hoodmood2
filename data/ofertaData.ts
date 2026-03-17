@@ -1,4 +1,5 @@
-export type CitySlug = "bialy-bor" | "koszalin" | "polanow";
+import { CitySlug } from "./citySlug";
+
 export const offerHeaderData = {
   "bialy-bor": {
     title: "Oferta - Biały Bór",

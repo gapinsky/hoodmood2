@@ -8,25 +8,11 @@ type Item = {
   segment: string;
 };
 
-const tabs = [
-  {
-    label: "Koszalin",
-    href: "/oferta/koszalin",
-    segment: "/oferta/koszalin",
-  },
-  {
-    label: "Polanów",
-    href: "/oferta/polanow",
-    segment: "/oferta/polanow",
-  },
-  {
-    label: "Biały Bór",
-    href: "/oferta/bialy-bor",
-    segment: "/oferta/bialy-bor",
-  },
-];
 
-export default function TabsNav() {
+type Props = {
+  tabs: Item[];
+}
+export default function TabsNav({tabs}: Props) {
   const activeSegment = usePathname();
 
   return (

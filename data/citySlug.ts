@@ -1,0 +1,1 @@
+export type CitySlug = "bialy-bor" | "koszalin" | "polanow";

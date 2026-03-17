@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
-import { offerHeaderData, classesOffer, CitySlug } from "@/data/ofertaData";
+import { offerHeaderData, classesOffer } from "@/data/ofertaData";
 import { LocationPageTemplate } from "./LocationPageTemplate";
+import { CitySlug } from "@/data/citySlug";
 
 type Props = {
   params: Promise<{
