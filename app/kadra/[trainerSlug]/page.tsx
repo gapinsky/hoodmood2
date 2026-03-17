@@ -14,6 +14,8 @@ import {
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import MainWrapper from "@/myComponents/common/MainWrapper";
+import { Badge } from "@/components/ui/badge";
+import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
 
 type PageProps = {
   params: Promise<{
@@ -58,19 +60,25 @@ export default async function TrainerPage({ params }: PageProps) {
       <SectionContainer>
         <Link
           href="/kadra"
-          className="inline-flex items-center text-sm text-neutral-400 transition hover:text-white"
+          className="inline-flex items-center w-fit text-sm text-muted-foreground transition hover:text-black dark:hover:text-white"
         >
           ← Wróć do kadry
         </Link>
 
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-18 ">
           <div className="relative">
-            <div className="overflow-hidden rounded-lg">
-              <Carousel className="w-full">
+            <div className="">
+              <Carousel
+                className="w-full"
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+              >
                 <CarouselContent>
                   {trainer.images.map((image, index) => (
                     <CarouselItem key={index}>
-                      <div className="relative aspect-square  overflow-hidden">
+                      <div className="relative aspect-square  rounded-lg overflow-hidden">
                         <Image
                           src={image}
                           alt={`${trainer.name} zdjęcie ${index + 1}`}
@@ -83,29 +91,51 @@ export default async function TrainerPage({ params }: PageProps) {
                   ))}
                 </CarouselContent>
 
-                <CarouselPrevious className="left-4 border-white/10 bg-black/40 text-white backdrop-blur hover:bg-black/60" />
-                <CarouselNext className="right-4 border-white/10 bg-black/40 text-white backdrop-blur hover:bg-black/60" />
+                <CarouselPrevious className="left-4 bg-black/20 text-white hover:text-white hover:cursor-pointer  dark:bg-black/20   backdrop-blur-md hover:bg-black/30 dark:hover:bg-black/30" />
+                <CarouselNext className="right-4 bg-black/20 text-white hover:text-white hover:cursor-pointer  dark:bg-black/20  backdrop-blur-md hover:bg-black/30 dark:hover:bg-black/30" />
               </Carousel>
             </div>
           </div>
 
-          <div className="flex flex-col justify-start ">
-            <h1 className=" text-3xl ">{trainer.name}</h1>
+          <div className="flex flex-col justify-between ">
+            <div>
+              <h1 className=" text-3xl ">{trainer.name}</h1>
 
-            <p className="mt-3 text-base text-neutral-400 sm:text-lg">
-              {trainer.role}
-            </p>
+              <p className="mt-3 text-base text-neutral-400 sm:text-lg">
+                {trainer.role}
+              </p>
 
-            <p className="mt-2 text-sm text-neutral-500">
-              {trainer.localizations}
-            </p>
+              <div className="flex gap-2">
+                {trainer.localizations.map((localization, id) => (
+                  <p className="mt-2 text-sm text-neutral-500" key={id}>
+                    {localization}
+                  </p>
+                ))}
+              </div>
 
-            <p className="mt-8 max-w-2xl text-base leading-8 text-neutral-200 sm:text-lg">
-              {trainer.description}
-            </p>
+              <p className="mt-8 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
+                {trainer.description}
+              </p>
+            </div>
 
-            <div className="mt-10 flex flex-wrap gap-3">
-              {trainer.name && (
+            {trainer.styles?.length > 0 && (
+              <div className="mt-8">
+                <h2 className="text-sm  uppercase tracking-wide text-muted-foreground">
+                  Prowadzone zajęcia
+                </h2>
+
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {trainer.styles.map((item) => (
+                    <Badge key={item} variant={"secondary"}>
+                      {item}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div className="mt-10 flex flex-wrap gap-3 place-self-end ">
+              {/* {trainer.name && (
                 <a
                   href={"www.youtube.com"}
                   target="_blank"
@@ -114,14 +144,9 @@ export default async function TrainerPage({ params }: PageProps) {
                 >
                   Instagram
                 </a>
-              )}
+              )} */}
 
-              <Link
-                href="/kadra"
-                className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-medium text-white transition hover:bg-white/[0.08]"
-              >
-                Zobacz całą kadrę
-              </Link>
+              <ButtonSecondary href="/kadra">Zobacz całą kadrę</ButtonSecondary>
             </div>
           </div>
         </div>

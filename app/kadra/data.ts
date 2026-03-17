@@ -21,7 +21,7 @@ export const instructors: Trainer[] = [
     id: "talita-jarzecka",
     name: "Talita Jarzęcka",
     role: "CEO",
-    styles: ["CEO"],
+    styles:  ["Heels", "Commercial", "High Heels Basic", "Stretching"],
 
     description:
       "Talita to doświadczona choreografka, trenerka i artystka sceniczna, której fundamentem jest solidne wykształcenie muzyczno-taneczne. Ukończyła studia licencjackie na kierunku Taniec Nowoczesny na Wydziale Sztuk Scenicznych Akademii Muzycznej w Łodzi. Wcześniej kształciła się w Szkole Muzycznej im. Grażyny Bacewicz w Koszalinie na Wydziale Rytmiki. Brała udział w spektaklu „Projektowanie człowieka” (chor. Maciej Mołdoch / Sheva), stworzyła autorskie spektakle „Halucynacje” i „Gen Z”. Uczestniczyła w licznych warsztatach i programach artystycznych w Polsce i za granicą (m.in. Ateny, Mediolan, Paryż, Londyn). Od ośmiu lat prowadzi grupę Quality Crew, która zdobywa miejsca na turniejach. Jej misją jest przygotowywanie młodych tancerzy do profesjonalnego wejścia na scenę.",
@@ -51,7 +51,7 @@ export const instructors: Trainer[] = [
     id: "paulina-walikowska",
     name: "Paulina Walikowska",
     role: "Balet",
-    styles: ["Balet"],
+    styles: ["Heels", "Commercial", "High Heels Basic", "Stretching"],
 
     description:
       "Paulina Walikowska rozpoczęła swoją przygodę z tańcem w klasie baletowej, gdzie zdobyła solidne podstawy techniczne. Przez 8 lat rozwijała się artystycznie w zespole Quality Crew, doskonaląc się jako tancerka sceniczna i instruktorka. Ma doświadczenie warsztatowe u uznanych trenerów, współtworzyła projekty filmowe (w tym produkcję nominowaną na International Cyprus Dance Film Festival) oraz występowała w spektaklach „Halucynacje” i „Gen Z”. Obecnie prowadzi w studiu zajęcia baletu.",
@@ -66,7 +66,7 @@ export const instructors: Trainer[] = [
     id: "alina-lemanska",
     name: "Alina Lemańska",
     role: "KPOP",
-    styles: ["KPOP"],
+    styles: ["Heels", "Commercial", "High Heels Basic", "Stretching"],
 
     description:
       "Na stronie sekcja Aliny Lemańskiej opisuje start zajęć KPOP — dynamiczne choreografie, energetyczną muzykę i przyjazną atmosferę. Zajęcia są skierowane do osób w różnym wieku i na różnym poziomie zaawansowania, z naciskiem na naukę kroków i choreografii do hitów KPOP oraz dobrą zabawę.",

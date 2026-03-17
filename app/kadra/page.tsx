@@ -7,7 +7,7 @@ import MainWrapper from "@/myComponents/common/MainWrapper";
 
 export default function Team() {
   return (
-<MainWrapper>
+    <MainWrapper>
       <SectionContainer>
         <SectionContent
           badge={data.badge}
