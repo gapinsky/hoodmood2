@@ -8,7 +8,7 @@ import MainWrapper from "@/myComponents/common/MainWrapper";
 
 export default function Camps() {
   return (
- <MainWrapper>
+    <MainWrapper>
       <SectionContainer>
         <SectionContent
           badge={data.badge}
@@ -16,18 +16,18 @@ export default function Camps() {
           description={data.description}
         ></SectionContent>
         <NoEvents />
-        <h2 className="text-xl ">
-          Zobacz, jak bawiliśmy się na poprzednich wydarzeniach!
-        </h2>
-        <div className="space-y-16 xl:space-y-32">
-          {camps.map((camp, id) => (
-            <PreviousEvents
-              key={id}
-              title={camp.title}
-              description={camp.description}
-              video={camp.video}
-            />
-          ))}
+        <div>
+          <h2 className="text-lg  mb-6">Zakończone eventy:</h2>
+          <div className="space-y-16 xl:space-y-32">
+            {camps.map((camp, id) => (
+              <PreviousEvents
+                key={id}
+                title={camp.title}
+                description={camp.description}
+                video={camp.video}
+              />
+            ))}
+          </div>
         </div>
         <AnyQuestionsContact />
       </SectionContainer>

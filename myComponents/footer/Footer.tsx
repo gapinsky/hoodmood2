@@ -143,6 +143,9 @@ export default function Footer() {
         <div className="flex  justify-between  md:justify-between lg:items-center py-4 lg:py-8 text-xs">
           <p>Hoodmood&copy; {date.getFullYear()}</p>
           <div className="flex  md:flex-row gap-4 xl:flex-row xl:gap-8">
+            <Link href={"/faq"} className={cn(a11y, "hover:underline")}>
+              F.A.Q.
+            </Link>
             <Link href={"/regulamin"} className={cn(a11y, "hover:underline")}>
               Regulamin
             </Link>
