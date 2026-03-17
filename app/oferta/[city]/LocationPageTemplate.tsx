@@ -4,7 +4,7 @@ import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import SectionContent from "@/myComponents/common/SectionContent";
 import TabsNav from "@/myComponents/common/ToggleButtons";
-import OfferCard from "@/myComponents/pages/offer/OfferCard";
+import OfferFiltersSection from "@/myComponents/pages/offer/OfferFiltersSection";
 
 type LocationPageProps = {
   header: { title: string; description: string };
@@ -24,21 +24,7 @@ export function LocationPageTemplate({
           description={header.description}
         ></SectionContent>
         <TabsNav tabs={offerTabs} />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {offerContent.map((item, id) => (
-            <OfferCard
-              key={id}
-              name={item.name}
-              instructor={item.instructor}
-              img={item.img}
-              instructorAvatar={item.instructorAvatar}
-              age={item.age}
-              description={item.description}
-              experience={item.experience}
-              localization={item.localizations[0]}
-            />
-          ))}
-        </div>
+        <OfferFiltersSection offerContent={offerContent} />
         <AnyQuestionsContact />
       </SectionContainer>
     </main>

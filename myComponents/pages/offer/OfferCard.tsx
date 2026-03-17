@@ -17,7 +17,8 @@ type Props = {
   description: string;
   instructor: string;
   experience: string;
-  age: string;
+  minAge: string;
+  maxAge: string;
   instructorAvatar: string;
   localization: string;
 };
@@ -29,7 +30,8 @@ export default function OfferCard({
   instructor,
   instructorAvatar,
   experience,
-  age,
+  minAge,
+  maxAge,
   localization,
 }: Props) {
   return (
@@ -50,7 +52,7 @@ export default function OfferCard({
           grafik
         </Link>
         <span className="inline-flex gap-2 items-end text-sm">
-          <User className="w-5 text-black dark:text-white" /> {age}
+          <User className="w-5 text-black dark:text-white" /> {minAge}-{maxAge}
         </span>
         <span className="inline-flex gap-2 items-end text-sm">
           <ChartNoAxesColumnIncreasing className="w-5 text-black dark:text-white" />{" "}
