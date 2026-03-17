@@ -87,12 +87,12 @@ export default function OfferFiltersSection({ offerContent }: Props) {
         onClearFilters={handleClearFilters}
       />
 
-      <div className="mb-6 text-sm text-muted-foreground">
+      <div className="text-sm text-muted-foreground">
         Znaleziono: {filteredOffers.length}
       </div>
 
       {filteredOffers.length > 0 ? (
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
           {filteredOffers.map((item, id) => (
             <OfferCard
               key={`${item.name}-${id}`}
@@ -104,7 +104,7 @@ export default function OfferFiltersSection({ offerContent }: Props) {
               maxAge={item.maxAge}
               description={item.description}
               experience={item.experience}
-              localization={item.localizations[0]}
+              scheduleSrc={item.scheduleSrc}
             />
           ))}
         </div>

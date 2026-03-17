@@ -58,7 +58,7 @@ export default function OfferFilterBar({
     experience !== "all";
 
   return (
-    <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5">
+    <div className=" grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-4 lg:grid-cols-[5fr_3fr_4fr_3fr_3fr] xl:gap-8 xl:grid-cols-[8fr_4fr_4fr_3fr_3fr]">
       <Field className="flex-1">
         <FieldLabel htmlFor="searchName">Wyszukaj zajęcia</FieldLabel>
         <InputGroup>
@@ -86,7 +86,7 @@ export default function OfferFilterBar({
         </InputGroup>
       </Field>
 
-      <Field className="flex-1">
+      <Field className="flex-1 ">
         <FieldLabel htmlFor="searchAge">Wiek uczestnika</FieldLabel>
         <InputGroup>
           <InputGroupInput
@@ -162,13 +162,13 @@ export default function OfferFilterBar({
         </Select>
       </Field>
 
-      <Field className="flex-1">
-        <FieldLabel className="opacity-0">Wyczyść</FieldLabel>
+      <Field className="flex-1 ">
+        <FieldLabel className="opacity-0 hidden lg:block">Wyczyść</FieldLabel>
         <button
           type="button"
           onClick={onClearFilters}
           disabled={!hasActiveFilters}
-          className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-md border px-4 text-sm font-medium transition hover:bg-accent disabled:pointer-events-none disabled:opacity-50"
+          className="inline-flex h-10 w-full items-center justify-center  rounded-md border px-4 text-sm font-medium transition hover:bg-accent disabled:pointer-events-none disabled:opacity-50"
         >
           <RotateCcw className="w-4" />
           Wyczyść filtry

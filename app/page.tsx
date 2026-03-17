@@ -10,7 +10,7 @@ import Hero from "@/myComponents/sections/hero/Hero";
 
 export default function Home() {
   return (
-    <main className="space-y-36 ">
+    <main className="space-y-36 mb-36">
       <Hero />
       <Offer />
       <Localizations />

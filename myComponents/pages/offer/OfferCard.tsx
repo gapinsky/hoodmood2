@@ -10,18 +10,7 @@ import { CalendarDays, ChartNoAxesColumnIncreasing, User } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 import Link from "next/link";
-
-type Props = {
-  name: string;
-  img: string;
-  description: string;
-  instructor: string;
-  experience: string;
-  minAge: string;
-  maxAge: string;
-  instructorAvatar: string;
-  localization: string;
-};
+import { ClassesOfferType } from "@/data/ofertaData";
 
 export default function OfferCard({
   name,
@@ -32,8 +21,8 @@ export default function OfferCard({
   experience,
   minAge,
   maxAge,
-  localization,
-}: Props) {
+  scheduleSrc,
+}: ClassesOfferType) {
   return (
     <Card key={name} className="overflow-hidden h-full">
       <div className="aspect-video relative ">
@@ -43,16 +32,17 @@ export default function OfferCard({
         <CardTitle className="text-lg">{name}</CardTitle>
         <CardDescription className="">{description}</CardDescription>
       </CardHeader>
-      <div className="flex  gap-8 text-muted-foreground p-6 mb-2">
+      <div className="flex flex-col  gap-4 text-muted-foreground p-6 mb-2 lg:flex-row lg:gap-6">
         <Link
-          href={`/grafik/${localization}`}
+          href={scheduleSrc}
           className="inline-flex gap-2 items-end text-sm hover:underline focus-visible:border-ring focus-visible:ring-ring/50 outline-none focus-visible:ring-[3px] rounded-sm"
         >
           <CalendarDays className="w-5 text-black dark:text-white " /> Sprawdź
           grafik
         </Link>
         <span className="inline-flex gap-2 items-end text-sm">
-          <User className="w-5 text-black dark:text-white" /> {minAge}-{maxAge}
+          <User className="w-5 text-black dark:text-white" /> {minAge}-{maxAge}{" "}
+          lat
         </span>
         <span className="inline-flex gap-2 items-end text-sm">
           <ChartNoAxesColumnIncreasing className="w-5 text-black dark:text-white" />{" "}
@@ -67,7 +57,7 @@ export default function OfferCard({
         <div className="w-full">
           <button
             type="button"
-            className="font-semibold leading-none text-sm hover:underline underline-offset-1 hover:cursor-pointer focus-visible:border-ring focus-visible:ring-ring/50 outline-none focus-visible:ring-[3px] rounded-sm "
+            className="font-semibold text-start leading-none text-sm hover:underline underline-offset-1 hover:cursor-pointer focus-visible:border-ring focus-visible:ring-ring/50 outline-none focus-visible:ring-[3px] rounded-sm "
           >
             {instructor}
           </button>
