@@ -1,9 +1,9 @@
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import SectionContent from "@/myComponents/common/SectionContent";
 import { data, instructors } from "./data";
-import TeamCard from "@/myComponents/pages/team/TeamCard";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import MainWrapper from "@/myComponents/common/MainWrapper";
+import TeamCard from "@/myComponents/sections/team/TeamCard";
 
 export default function Team() {
   return (
@@ -20,9 +20,8 @@ export default function Team() {
               key={instructor.id}
               name={instructor.name}
               images={instructor.images}
-              role={instructor.role}
-              localizations={instructor.localizations}
               id={instructor.id}
+              role={instructor.role}
             />
           ))}
         </div>

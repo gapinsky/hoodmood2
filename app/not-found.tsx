@@ -13,8 +13,8 @@ export default function error() {
             dużo się dzieję, wróć na stronę główna i złap odpowiedni rytm!
           </p>
           <div className="space-x-8 mt-4">
-            <ButtonSecondary href="/oferta">oferta</ButtonSecondary>
-            <ButtonSecondary href="/grafik">grafik</ButtonSecondary>
+            <ButtonSecondary href="/oferta/koszalin">oferta</ButtonSecondary>
+            <ButtonSecondary href="/grafik/koszalin">grafik</ButtonSecondary>
             <ButtonSecondary href="/">Strona główna</ButtonSecondary>
           </div>
         </div>
