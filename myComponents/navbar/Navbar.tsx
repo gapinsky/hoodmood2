@@ -22,7 +22,7 @@ export default function Navbar() {
             <Link href="/">
               <img
                 src="/assets/svg/mainLogo/logo.svg"
-                className="max-h-12 lg:max-h-18"
+                className="max-h-12 lg:max-h-18 hover:scale-95 transition-transform ease-in-out duration-100"
               />
             </Link>
           </div>
