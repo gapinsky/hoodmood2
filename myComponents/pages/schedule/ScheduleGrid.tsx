@@ -32,7 +32,7 @@ const dayOrder: DayKey[] = [
 export default function ScheduleGrid({ classesByDay }: Props) {
   return (
     <div className="w-full">
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-5">
         {dayOrder.map((dayKey) => {
           const items = classesByDay[dayKey];
           const headingId = `day-${dayKey}-heading`;
@@ -41,7 +41,7 @@ export default function ScheduleGrid({ classesByDay }: Props) {
             <section
               key={dayKey}
               aria-labelledby={headingId}
-              className="h-fit rounded-lg border p-4 dark:bg-white/5"
+              className="h-fit rounded-lg border p-4 bg-black/2 backdrop-blur-2xl dark:bg-white/5"
             >
               <header className="mb-4">
                 <h3 id={headingId} className="text-lg  capitalize">
@@ -49,10 +49,10 @@ export default function ScheduleGrid({ classesByDay }: Props) {
                 </h3>
               </header>
 
-              <ul className="space-y-2">
+              <ul className="space-y-2 grid grid-cols-1 gap-4">
                 {items.map((c, idx) => (
                   <li key={`${dayKey}-${c.name}-${c.time}-${idx}`}>
-                    <article className="group w-full rounded-lg border p-3 text-left transition hover:border-white/20 hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60">
+                    <article className="group w-full rounded-lg border p-3 text-left transition bg-white/90 hover:border-white/20 hover:bg-black/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60">
                       <div className="flex items-start justify-between gap-3">
                         <div className="min-w-0">
                           <div className="text-sm font-semibold">{c.name}</div>
