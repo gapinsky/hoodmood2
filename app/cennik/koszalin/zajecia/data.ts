@@ -4,7 +4,7 @@ export const data: PriceItem[] = [
   {
     name: "Taniec dla 4–6 latków",
     price: "170",
-    frequency: "1x/tyg",
+    frequency: "1",
     trending: false,
     minAge: "4",
     maxAge: "6",
@@ -13,7 +13,7 @@ export const data: PriceItem[] = [
   {
     name: "Break Dance",
     price: "170",
-    frequency: "1x/tyg",
+    frequency: "1",
     trending: false,
     minAge: "6",
     maxAge: "8",
@@ -22,7 +22,7 @@ export const data: PriceItem[] = [
   {
     name: "Balet",
     price: "170",
-    frequency: "1x/tyg",
+    frequency: "1",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -31,7 +31,7 @@ export const data: PriceItem[] = [
   {
     name: "Young Generation",
     price: "230",
-    frequency: "2x/tyg",
+    frequency: "2",
     trending: false,
     minAge: "7",
     maxAge: "9",
@@ -40,7 +40,7 @@ export const data: PriceItem[] = [
   {
     name: "Pakiet podstawowy",
     price: "280",
-    frequency: "-",
+    frequency: "1",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -49,7 +49,7 @@ export const data: PriceItem[] = [
   {
     name: "Podstawa - treningi hip-hop",
     price: "290",
-    frequency: "2x/tyg",
+    frequency: "2",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -58,7 +58,7 @@ export const data: PriceItem[] = [
   {
     name: "Akrobatyka",
     price: "180",
-    frequency: "1x/tyg",
+    frequency: "1",
     trending: false,
     minAge: "4",
     maxAge: "6",
@@ -67,7 +67,7 @@ export const data: PriceItem[] = [
   {
     name: "Akrobatyka",
     price: "180",
-    frequency: "1x/tyg",
+    frequency: "1",
     trending: false,
     minAge: "7",
     maxAge: "9",
@@ -76,7 +76,7 @@ export const data: PriceItem[] = [
   {
     name: "Akrobatyka",
     price: "180",
-    frequency: "1x/tyg",
+    frequency: "1",
     trending: false,
     minAge: "10",
     maxAge: "14",
@@ -85,7 +85,7 @@ export const data: PriceItem[] = [
   {
     name: "Partnerowanie akro",
     price: "230",
-    frequency: "1x/tyg",
+    frequency: "1",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -94,7 +94,7 @@ export const data: PriceItem[] = [
   {
     name: "Formacja dla dorosłych (HIP-HOP/HOUSE)",
     price: "200",
-    frequency: "1x/tyg",
+    frequency: "1",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -103,7 +103,7 @@ export const data: PriceItem[] = [
   {
     name: "FEMININE FLOW",
     price: "180",
-    frequency: "1x/tyg",
+    frequency: "1",
     trending: false,
     minAge: "18",
     maxAge: "99",
@@ -112,7 +112,7 @@ export const data: PriceItem[] = [
   {
     name: "Taniec współczesny",
     price: "210",
-    frequency: "1x/tyg",
+    frequency: "1",
     trending: false,
     minAge: "8",
     maxAge: "12",
@@ -121,7 +121,7 @@ export const data: PriceItem[] = [
   {
     name: "Taniec współczesny",
     price: "220",
-    frequency: "1x/tyg",
+    frequency: "1",
     trending: false,
     minAge: "13",
     maxAge: "18",
@@ -130,7 +130,7 @@ export const data: PriceItem[] = [
   {
     name: "Taniec współczesny",
     price: "310",
-    frequency: "2x/tyg",
+    frequency: "2",
     trending: false,
     minAge: "13",
     maxAge: "18",
@@ -139,7 +139,7 @@ export const data: PriceItem[] = [
   {
     name: "Partnerowanie akro",
     price: "230",
-    frequency: "1x/tyg",
+    frequency: "1",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -148,7 +148,7 @@ export const data: PriceItem[] = [
   {
     name: "K-POP",
     price: "230",
-    frequency: "2x/tyg",
+    frequency: "2",
     trending: false,
     minAge: "",
     maxAge: "",

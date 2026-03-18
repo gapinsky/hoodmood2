@@ -3,9 +3,10 @@ import SectionContent from "@/myComponents/common/SectionContent";
 import { data, pricingData } from "./data";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import PricingTable from "@/myComponents/pages/pricing/PricingTable";
+import MainWrapper from "@/myComponents/common/MainWrapper";
 export default function PricingBialyBor() {
   return (
-    <main>
+    <MainWrapper>
       <SectionContainer>
         <SectionContent
           badge={data.badge}
@@ -15,6 +16,6 @@ export default function PricingBialyBor() {
         <PricingTable items={pricingData} />
         <AnyQuestionsContact />
       </SectionContainer>
-    </main>
+    </MainWrapper>
   );
 }

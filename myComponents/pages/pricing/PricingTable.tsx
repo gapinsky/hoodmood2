@@ -71,7 +71,7 @@ export default function PricingTable({
                       {item.minAge + "-" + item.maxAge || "Bez limitu wieku"}
                     </span>
                     <span className="inline-flex items-center ">
-                      {item.frequency}{" "}
+                      {item.frequency}x/tyg
                       {item.name.includes("+") ? (
                         <HoverCard key="bottom" openDelay={20} closeDelay={20}>
                           <HoverCardTrigger>
@@ -83,9 +83,7 @@ export default function PricingTable({
                             className=" text-sm "
                             align="center"
                           >
-                            Na każde zajęcia z pakietu można wejść maksymalnie{" "}
-                            {item.frequency.replace(/\D/g, "")} raz(y) w
-                            tygodniu.
+                            {item.frequencyDescription}
                           </HoverCardContent>
                         </HoverCard>
                       ) : item.frequency !== "—" ? (
@@ -98,8 +96,7 @@ export default function PricingTable({
 
                           <HoverCardContent className="text-sm" align="center">
                             Na wybrane zajęcia można wejść maksymalnie{" "}
-                            {item.frequency.replace(/\D/g, "")} raz(y) w
-                            tygodniu.
+                            {item.frequency} raz(y) w tygodniu.
                           </HoverCardContent>
                         </HoverCard>
                       ) : null}
@@ -115,8 +112,7 @@ export default function PricingTable({
                 </div>
 
                 <div className="hidden text-sm  md:block  text-center">
-                  {item.frequency}
-
+                  {item.frequency}x/tyg
                   {item.name.includes("+") ? (
                     <HoverCard key="bottom" openDelay={20} closeDelay={20}>
                       <HoverCardTrigger>
@@ -126,16 +122,14 @@ export default function PricingTable({
                       </HoverCardTrigger>
 
                       <HoverCardContent className="text-sm md:hidden">
-                        Na każde zajęcia z pakietu można wejść maksymalnie{" "}
-                        {item.frequency} raz(y) w tygodniu.
+                        {item.frequencyDescription}
                       </HoverCardContent>
 
                       <HoverCardContent
                         className="hidden text-sm md:block"
                         align="center"
                       >
-                        Na każde zajęcia z pakietu można wejść maksymalnie{" "}
-                        {item.frequency.replace(/\D/g, "")} raz(y) w tygodniu.
+                        {item.frequencyDescription}
                       </HoverCardContent>
                     </HoverCard>
                   ) : item.frequency !== "-" ? (
@@ -148,7 +142,7 @@ export default function PricingTable({
 
                       <HoverCardContent className="text-sm md:hidden">
                         Na wybrane zajęcia można wejść maksymalnie{" "}
-                        {item.frequency.replace(/\D/g, "")} raz(y) w tygodniu.
+                        {item.frequency} raz(y) w tygodniu.
                       </HoverCardContent>
 
                       <HoverCardContent
@@ -156,7 +150,7 @@ export default function PricingTable({
                         align="center"
                       >
                         Na wybrane zajęcia można wejść maksymalnie{" "}
-                        {item.frequency.replace(/\D/g, "")} raz(y) w tygodniu.
+                        {item.frequency} raz(y) w tygodniu.
                       </HoverCardContent>
                     </HoverCard>
                   ) : null}

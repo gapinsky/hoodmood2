@@ -41,8 +41,10 @@ export default function OfferCard({
           grafik
         </Link>
         <span className="inline-flex gap-2 items-end text-sm">
-          <User className="w-5 text-black dark:text-white" /> {minAge}-{maxAge}{" "}
-          lat
+          <User className="w-5 text-black dark:text-white" />{" "}
+          {minAge !== "" && maxAge !== ""
+            ? `${minAge}-${maxAge} lat`
+            : "bez limitu"}
         </span>
         <span className="inline-flex gap-2 items-end text-sm">
           <ChartNoAxesColumnIncreasing className="w-5 text-black dark:text-white" />{" "}

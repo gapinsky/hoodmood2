@@ -3,8 +3,10 @@ import { PriceItem } from "../data";
 export const data: PriceItem[] = [
   {
     name: "Taniec dla 4–6 latków + balet",
-    price: "230 zł",
-    frequency: "1x/tyg",
+    price: "230 ",
+    frequency: "2",
+    frequencyDescription:
+      "Taniec dla 4-6 latków: 1 raz w tygodniu. Balet: 1 raz w tygodniu.",
     trending: false,
     minAge: "4",
     maxAge: "6",
@@ -12,8 +14,10 @@ export const data: PriceItem[] = [
   },
   {
     name: "Taniec dla 4–6 latków + akrobatyka",
-    price: "240 zł",
-    frequency: "1x/tyg",
+    price: "240 ",
+    frequency: "2",
+    frequencyDescription:
+      "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
     trending: false,
     minAge: "4",
     maxAge: "6",
@@ -21,8 +25,10 @@ export const data: PriceItem[] = [
   },
   {
     name: "Balet + akrobatyka",
-    price: "240 zł",
-    frequency: "1x/tyg",
+    price: "240 ",
+    frequency: "1",
+    frequencyDescription:
+      "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -30,8 +36,10 @@ export const data: PriceItem[] = [
   },
   {
     name: "Young Generation + akrobatyka",
-    price: "270 zł",
-    frequency: "1x/tyg",
+    price: "270 ",
+    frequency: "1",
+    frequencyDescription:
+      "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
     trending: false,
     minAge: "7",
     maxAge: "9",
@@ -39,8 +47,10 @@ export const data: PriceItem[] = [
   },
   {
     name: "Podstawa + KPOP/akrobatyka",
-    price: "320 zł",
-    frequency: "1x/tyg",
+    price: "320 ",
+    frequency: "1",
+    frequencyDescription:
+      "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -48,8 +58,10 @@ export const data: PriceItem[] = [
   },
   {
     name: "Podstawa + choreo",
-    price: "320 zł",
-    frequency: "-",
+    price: "320 ",
+    frequency: "1",
+    frequencyDescription:
+      "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -57,8 +69,10 @@ export const data: PriceItem[] = [
   },
   {
     name: "Podstawa + choreo + taniec współczesny",
-    price: "380 zł",
-    frequency: "-",
+    price: "380 ",
+    frequency: "1",
+    frequencyDescription:
+      "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -66,8 +80,10 @@ export const data: PriceItem[] = [
   },
   {
     name: "Podstawa + taniec współczesny + KPOP + akrobatyka",
-    price: "420 zł",
-    frequency: "1x/tyg",
+    price: "420 ",
+    frequency: "1",
+    frequencyDescription:
+      "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -75,8 +91,10 @@ export const data: PriceItem[] = [
   },
   {
     name: "Podstawa + KPOP / akrobatyka / choreo open",
-    price: "330 zł",
-    frequency: "1x/tyg",
+    price: "330 ",
+    frequency: "1",
+    frequencyDescription:
+      "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -84,8 +102,10 @@ export const data: PriceItem[] = [
   },
   {
     name: "Taniec współczesny + partnerowanie akro",
-    price: "300 zł",
-    frequency: "1x/tyg",
+    price: "300",
+    frequency: "1",
+    frequencyDescription:
+      "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
     trending: false,
     minAge: "8",
     maxAge: "12",
@@ -93,8 +113,10 @@ export const data: PriceItem[] = [
   },
   {
     name: "Taniec współczesny + partnerowanie akro",
-    price: "380 zł",
-    frequency: "2x/tyg + 1x/tyg",
+    price: "380",
+    frequency: "2",
+    frequencyDescription:
+      "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
     trending: false,
     minAge: "13",
     maxAge: "18",

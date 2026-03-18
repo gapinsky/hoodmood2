@@ -35,6 +35,7 @@ export type PriceItem = {
   frequency: string;
   trending: boolean;
   minAge: string;
+  frequencyDescription?: string;
   maxAge: string;
   category:
     | "kidsDance"
