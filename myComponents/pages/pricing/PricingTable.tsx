@@ -53,9 +53,7 @@ export default function PricingTable({
               >
                 <div className="min-w-0">
                   <div className="flex flex-wrap items-center gap-2">
-                    <p className="text-sm font-medium  sm:text-[15px]">
-                      {item.name}
-                    </p>
+                    <p className=" font-medium  text-md">{item.name}</p>
                     {item.trending && (
                       <Badge
                         variant="secondary"
@@ -68,7 +66,9 @@ export default function PricingTable({
 
                   <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-md md:hidden text-muted-foreground">
                     <span className="">
-                      {item.minAge + "-" + item.maxAge || "Bez limitu wieku"}
+                      {item.minAge !== "" && item.maxAge !== ""
+                        ? `${item.minAge}-${item.maxAge} lat`
+                        : "Bez limitu wieku"}
                     </span>
                     <span className="inline-flex items-center ">
                       {item.frequency}x/tyg
@@ -108,11 +108,13 @@ export default function PricingTable({
                 <div className="hidden text-sm  md:block  text-center">
                   {item.minAge !== "" && item.maxAge !== ""
                     ? `${item.minAge}-${item.maxAge} lat`
-                    : "bez limitu"}
+                    : "Bez limitu wieku"}
                 </div>
 
                 <div className="hidden text-sm  md:block  text-center">
-                  {item.frequency}x/tyg
+                  {!item.frequency.includes("wejście")
+                    ? `${item.frequency}x/tyg`
+                    : item.frequency}
                   {item.name.includes("+") ? (
                     <HoverCard key="bottom" openDelay={20} closeDelay={20}>
                       <HoverCardTrigger>
@@ -157,7 +159,9 @@ export default function PricingTable({
                 </div>
 
                 <div className="hidden text-sm font-semibold  md:block  text-center">
-                  {item.price} zł
+                  {item.price.includes("zł")
+                    ? `${item.price}`
+                    : `${item.price} zł`}
                 </div>
 
                 <div className="flex justify-self-end md:justify-self-end  ">

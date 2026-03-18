@@ -6,9 +6,10 @@ import { ReactNode } from "react";
 import ToggleButtons from "@/myComponents/common/ToggleButtons";
 import { PricingFiltersProvider } from "../../../myComponents/pages/pricing/PricingFiltersProvider";
 import PricingFilterBar from "../../../myComponents/pages/pricing/PricingFilterBar";
+import MainWrapper from "@/myComponents/common/MainWrapper";
 export default function Schedule({ children }: { children: ReactNode }) {
   return (
-    <main className="mt-24">
+    <MainWrapper>
       <PricingFiltersProvider>
         <SectionContainer>
           <SectionContent
@@ -22,6 +23,6 @@ export default function Schedule({ children }: { children: ReactNode }) {
           <AnyQuestionsContact />
         </SectionContainer>
       </PricingFiltersProvider>
-    </main>
+    </MainWrapper>
   );
 }

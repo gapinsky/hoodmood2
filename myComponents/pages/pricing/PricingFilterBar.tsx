@@ -28,7 +28,7 @@ export default function PricingFilterBar() {
   } = usePricingFilters();
 
   return (
-    <div className="flex gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-[7fr_2fr_4fr] gap-8">
       <Field className="flex-1">
         <FieldLabel htmlFor="searchInput">Wyszukaj zajęć</FieldLabel>
         <InputGroup>
@@ -61,7 +61,7 @@ export default function PricingFilterBar() {
         <InputGroup>
           <InputGroupInput
             id="age"
-            placeholder="Wprowadź wiek uczestnika"
+            placeholder="Np. 7"
             type="text"
             inputMode="numeric"
             value={searchAge}
@@ -94,7 +94,7 @@ export default function PricingFilterBar() {
           value={sorting}
           onValueChange={(value) =>
             setSorting(
-              value as "default" | "ascending" | "descending" | "alphabetical"
+              value as "default" | "ascending" | "descending" | "alphabetical",
             )
           }
         >
@@ -106,7 +106,7 @@ export default function PricingFilterBar() {
               <SelectItem value="default">Sortowanie domyślne</SelectItem>
               <SelectItem value="ascending">Cena: rosnąco</SelectItem>
               <SelectItem value="descending">Cena: malejąco</SelectItem>
-              <SelectItem value="alphabetical">Alfabetycznie</SelectItem>
+              <SelectItem value="alphabetical">Nazwa: A-Z</SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>

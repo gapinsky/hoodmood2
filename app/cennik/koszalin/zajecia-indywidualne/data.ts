@@ -4,7 +4,8 @@ export const data: PriceItem[] = [
   {
     name: "Taniec współczesny solo",
     price: "160 zł/h",
-    frequency: "-",
+    frequency: "1 wejście",
+    frequencyDescription: "Jednorazowe uczestnictwo w zajęciach.",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -13,7 +14,8 @@ export const data: PriceItem[] = [
   {
     name: "Taniec współczesny duet",
     price: "100 zł/h od osoby",
-    frequency: "-",
+    frequency: "1 wejście",
+    frequencyDescription: "Jednorazowe uczestnictwo w zajęciach.",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -22,7 +24,8 @@ export const data: PriceItem[] = [
   {
     name: "Hip-hop solo",
     price: "140 zł/h",
-    frequency: "-",
+    frequency: "1 wejście",
+    frequencyDescription: "Jednorazowe uczestnictwo w zajęciach.",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -31,7 +34,8 @@ export const data: PriceItem[] = [
   {
     name: "Hip-hop duet",
     price: "90 zł/h od osoby",
-    frequency: "-",
+    frequency: "1 wejście",
+    frequencyDescription: "Jednorazowe uczestnictwo w zajęciach.",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -40,7 +44,8 @@ export const data: PriceItem[] = [
   {
     name: "Hip-hop trio",
     price: "80 zł/h od osoby",
-    frequency: "-",
+    frequency: "1 wejście",
+    frequencyDescription: "Jednorazowe uczestnictwo w zajęciach.",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -49,7 +54,8 @@ export const data: PriceItem[] = [
   {
     name: "K-pop solo",
     price: "130 zł/h",
-    frequency: "-",
+    frequency: "1 wejście",
+    frequencyDescription: "Jednorazowe uczestnictwo w zajęciach.",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -58,7 +64,8 @@ export const data: PriceItem[] = [
   {
     name: "Akrobatyka",
     price: "160 zł/h",
-    frequency: "-",
+    frequency: "1 wejście",
+    frequencyDescription: "Jednorazowe uczestnictwo w zajęciach.",
     trending: false,
     minAge: "",
     maxAge: "",
@@ -67,7 +74,8 @@ export const data: PriceItem[] = [
   {
     name: "Pierwszy taniec",
     price: "150 zł/h",
-    frequency: "-",
+    frequency: "1 wejście",
+    frequencyDescription: "Jednorazowe uczestnictwo w zajęciach.",
     trending: false,
     minAge: "",
     maxAge: "",

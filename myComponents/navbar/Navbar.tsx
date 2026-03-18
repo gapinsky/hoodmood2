@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full  py-4 xl:py-0 bg-background z-1000 ">
+    <nav className="fixed top-0 w-full  py-4 xl:py-2 bg-background z-1000 ">
       <Container>
         <div className="flex  items-center w-full ">
           {/* LEFT */}
@@ -22,7 +22,7 @@ export default function Navbar() {
             <Link href="/">
               <img
                 src="/assets/svg/mainLogo/logo.svg"
-                className="max-h-12 xl:max-h-18"
+                className="max-h-12 lg:max-h-18"
               />
             </Link>
           </div>
@@ -34,9 +34,9 @@ export default function Navbar() {
 
           {/* RIGHT */}
           <div className="flex w-full items-center gap-3 justify-end ">
-            <Switch className="lg:hidden" />
+            <Switch className="xl:hidden" />
             <MenuButton menuState={isOpen} menuHandler={setIsOpen} />
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden xl:flex items-center gap-3">
               <Switch />
               <ButtonSecondary href="/kontakt">kontakt</ButtonSecondary>
               <ButtonPrimary href="/zapisz-sie">Zapisz się</ButtonPrimary>

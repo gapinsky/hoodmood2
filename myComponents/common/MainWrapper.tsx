@@ -5,5 +5,5 @@ export default function MainWrapper({
 }: {
   children: React.ReactNode;
 }) {
-  return <main className="my-24 ">{children}</main>;
+  return <main className="my-24 md:my-36">{children}</main>;
 }

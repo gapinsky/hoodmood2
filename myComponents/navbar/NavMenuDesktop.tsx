@@ -13,7 +13,7 @@ import { NAV as navLinks } from "../navbar/data";
 
 export default function NavMenuDesktop() {
   return (
-    <div className="hidden  lg:flex justify-center  ">
+    <div className="hidden  xl:flex justify-center  ">
       <NavigationMenu>
         <NavigationMenuList>
           {navLinks.map((item) =>
@@ -36,7 +36,8 @@ export default function NavMenuDesktop() {
               <NavigationMenuItem key={item.label}>
                 <NavigationMenuLink
                   asChild
-                  className={navigationMenuTriggerStyle()}>
+                  className={navigationMenuTriggerStyle()}
+                >
                   <Link href={item.href}>{item.label}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>

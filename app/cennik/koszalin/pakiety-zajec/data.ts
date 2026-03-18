@@ -112,7 +112,7 @@ export const data: PriceItem[] = [
     category: "modernDance",
   },
   {
-    name: "Taniec współczesny + partnerowanie akro",
+    name: "Taniec współczesny + partnerowanie akro + taniec współczesny + partnerowanie akro",
     price: "380",
     frequency: "2",
     frequencyDescription:
