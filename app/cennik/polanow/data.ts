@@ -1,4 +1,4 @@
-import { PriceItem } from "../koszalin/data";
+import { PricingItem } from "../koszalin/[category]/data";
 
 export const data = {
   badge: "Cennik",
@@ -7,7 +7,7 @@ export const data = {
     "Sprawdź, ile kosztują zajęcia grupowe, lekcje indywidualne oraz zajęcia w naszych filiach. Płatności rozliczamy w systemie miesięcznym za wyjątkiem lekcji indywidualnych. Chcesz chodzić na więcej niż jedne zajęcia? Sprawdź pakiety promocyjne - zestawy kilku zajęć w promocyjnych cenach!",
 };
 
-export const pricingData: PriceItem[] = [
+export const pricingData: PricingItem[] = [
   {
     name: "Taniec dla 4–6 latków",
     price: "120",

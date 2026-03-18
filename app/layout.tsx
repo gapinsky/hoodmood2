@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/myComponents/themeProvider/ThemeProvider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/myComponents/navbar/Navbar";
 import Footer from "@/myComponents/footer/Footer";
+import { PricingFiltersProvider } from "@/myComponents/pages/pricing/PricingFiltersProvider";
 
 const fontAnton = Anton({
   variable: "--anton",
@@ -39,9 +40,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider>
-            <Navbar />
-            {children}
-            <Footer />
+            <PricingFiltersProvider>
+              <Navbar />
+              {children}
+              <Footer />
+            </PricingFiltersProvider>
           </TooltipProvider>
         </ThemeProvider>
       </body>
