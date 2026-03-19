@@ -1,4 +1,3 @@
-
 import { ChevronsDown } from "lucide-react";
 import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
 import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
@@ -55,7 +54,7 @@ export default function Hero({
               Sprawdź grafik
             </ButtonSecondary>
 
-            <ButtonPrimary href="#oferta">Poznaj ofertę</ButtonPrimary>
+            <ButtonPrimary href="/oferta/koszalin">Poznaj ofertę</ButtonPrimary>
           </div>
         </div>
 
