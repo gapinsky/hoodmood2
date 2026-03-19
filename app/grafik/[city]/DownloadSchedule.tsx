@@ -1,5 +1,10 @@
 "use client";
-import DownloadSchedulePdfButton from "@/myComponents/pages/schedule/DownloadSchedulePdf";
+import dynamic from "next/dynamic";
+
+const DownloadSchedulePdfButton = dynamic(
+  () => import("@/myComponents/pages/schedule/DownloadSchedulePdf"),
+  { ssr: false },
+);
 import SchedulePdfTable, {
   ClassesByDay,
 } from "@/myComponents/pages/schedule/SchedulePdfTable";

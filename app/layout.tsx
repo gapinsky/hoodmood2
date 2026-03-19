@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/myComponents/navbar/Navbar";
 import Footer from "@/myComponents/footer/Footer";
 import { PricingFiltersProvider } from "@/myComponents/pages/pricing/PricingFiltersProvider";
+import NextTopLoader from "nextjs-toploader";
 
 const fontAnton = Anton({
   variable: "--anton",
@@ -33,6 +34,15 @@ export default function RootLayout({
   return (
     <html lang="pl" suppressHydrationWarning>
       <body className={`${fontAnton.variable} ${fontRoboto.variable} w-full `}>
+        <NextTopLoader
+          color="#ac4967"
+          height={3}
+          easing="ease"
+          initialPosition={0.08}
+          crawlSpeed={200}
+          crawl={true}
+          speed={200}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

@@ -53,7 +53,7 @@
 }
 
 :root {
-  --brand-700: rgb(172, 73, 103);
+  --brand-700: #ac4967;
   --brand-200: rgb(255, 222, 231);
   --brand-900: rgb(131, 57, 79);
   --radius: 0.625rem;
