@@ -1,6 +1,5 @@
-import SectionContainer from "@/myComponents/common/SectionContainer";
-import Link from "next/link";
-import { ChevronsDown, MapPin } from "lucide-react";
+
+import { ChevronsDown } from "lucide-react";
 import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
 import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 import LocationBadge from "./LocationBadge";
@@ -13,24 +12,30 @@ type HeroProps = {
 };
 
 export default function Hero({
-  videoSrc = "/videos/hero-bg.mp4",
-  posterSrc = "/images/hero-poster.jpg",
-  location = "Koszalin",
+  videoSrc = "/assets/videos/lightHeroVid.mp4",
+  posterSrc = "/assets/videos/vidPoster.png",
   title = "Hoodmood",
   description = "Zajęcia taneczne i akrobatyczne dla dzieci, młodzieży i dorosłych. Street dance, high heels, pierwszy taniec i akrobatyka — grupy dopasowane do wieku i poziomu.",
 }: HeroProps) {
   return (
-    <div className="min-h-screen   isolate  overflow-hidden  text-white bg-blue-900">
+    <div className="relative min-h-screen   isolate  overflow-hidden  text-white ">
+      <div className="absolute inset-0 bg-black/10 -z-10 "></div>
       <video
         className="absolute inset-0 h-full w-full object-cover -z-20"
         autoPlay
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
         poster={posterSrc}
+        controls={false}
       >
         <source src={videoSrc} type="video/mp4" />
+        <img
+          src={posterSrc}
+          alt="Video poster"
+          className="absolute inset-0 h-full w-full object-cover -z-20"
+        />
       </video>
 
       <div className="max-w-380  mx-auto min-h-screen flex items-center">
