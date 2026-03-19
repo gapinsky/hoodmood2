@@ -33,7 +33,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl" suppressHydrationWarning>
-      <body className={`${fontAnton.variable} ${fontRoboto.variable} w-full `}>
+      <body
+        className={`${fontAnton.variable} ${fontRoboto.variable} w-full relative bg-transparent`}
+      >
+        <div className="inset-0 fixed -z-40 bg-[url('/assets/images/background.jpg')] bg-cover bg-center bg-no-repeat">
+          <div className="bg-black/30 inset-0 fixed"></div>
+        </div>
         <NextTopLoader
           color="#ac4967"
           height={3}
