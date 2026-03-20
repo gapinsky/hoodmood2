@@ -19,7 +19,7 @@ export default function PreviousEvents({ title, description, video }: Props) {
       </div>
       <div>
         <h3 className="text-xl mb-2 lg:text-3xl">{title}</h3>
-        <p className="">{description}</p>
+        <p className="text-muted-foreground">{description}</p>
       </div>
     </div>
   );

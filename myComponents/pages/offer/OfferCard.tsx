@@ -25,7 +25,10 @@ export default function OfferCard({
   scheduleSrc,
 }: ClassesOfferType) {
   return (
-    <Card key={name} className="overflow-hidden h-full">
+    <Card
+      key={name}
+      className="overflow-hidden h-full flex flex-col justify-between"
+    >
       <div className="aspect-video relative ">
         <Image src={img} fill alt={name} className="object-cover" />
       </div>
