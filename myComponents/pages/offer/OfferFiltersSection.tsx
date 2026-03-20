@@ -105,6 +105,7 @@ export default function OfferFiltersSection({ offerContent }: Props) {
                 description={item.description}
                 experience={item.experience}
                 scheduleSrc={item.scheduleSrc}
+                instructorSlug={item.instructorSlug}
               />
             ))}
           </div>

@@ -14,16 +14,6 @@ const Offer = () => {
           description={data.description}
         />
         <div className="grid grid-cols-1  gap-8 md:grid-cols-2 lg:grid-cols-4 items-stretch ">
-          {/* {offer.map((item) => (
-            <HoverCard
-              key={item.title}
-              title={item.title}
-              description={item.description}
-              img={item.img}
-              hoverImg={item.hoverImg}
-              headerStyles="text-2xl"
-            />
-          ))} */}
           {offer.map((item, id) => (
             <Card key={id} className="h-full flex flex-col justify-start ">
               <HoverCard

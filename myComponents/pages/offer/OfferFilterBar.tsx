@@ -15,6 +15,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  clearButtonStyles,
+  inputStyles,
+  selectContentStyles,
+  selectItemStyles,
+  selectTriggerStyles,
+} from "../pricing/PricingFilterBar";
 
 export type OfferSortingValue =
   | "default"
@@ -40,6 +47,14 @@ type Props = {
   onClearFilters: () => void;
 };
 
+const fieldLabelStyles =
+  "pl-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55";
+
+const inputAddonStyles = "text-black/35 dark:text-white/35";
+
+const toolbarWrapperStyles =
+  "grid grid-cols-1 gap-4    md:grid-cols-2 lg:grid-cols-[5fr_3fr_4fr_3fr_3fr] lg:gap-4 xl:grid-cols-[8fr_4fr_4fr_3fr_3fr] xl:gap-8";
+
 export default function OfferFilterBar({
   searchName,
   setSearchName,
@@ -58,18 +73,22 @@ export default function OfferFilterBar({
     experience !== "all";
 
   return (
-    <div className=" grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-4 lg:grid-cols-[5fr_3fr_4fr_3fr_3fr] xl:gap-8 xl:grid-cols-[8fr_4fr_4fr_3fr_3fr]">
-      <Field className="flex-1">
-        <FieldLabel htmlFor="searchName">Wyszukaj zajęcia</FieldLabel>
-        <InputGroup>
+    <div className={toolbarWrapperStyles}>
+      <Field className="flex flex-col gap-2.5">
+        <FieldLabel htmlFor="searchName" className={fieldLabelStyles}>
+          Wyszukaj zajęcia
+        </FieldLabel>
+
+        <InputGroup className={inputStyles}>
           <InputGroupInput
             id="searchName"
             placeholder="Wpisz nazwę zajęć"
             value={searchName}
             onChange={(e) => setSearchName(e.currentTarget.value)}
           />
-          <InputGroupAddon>
-            <SearchIcon className="text-muted-foreground" />
+
+          <InputGroupAddon className={inputAddonStyles}>
+            <SearchIcon className="size-4" />
           </InputGroupAddon>
 
           {searchName !== "" && (
@@ -77,18 +96,22 @@ export default function OfferFilterBar({
               <button
                 type="button"
                 onClick={() => setSearchName("")}
-                className="inline-flex items-center px-2 text-xs text-black hover:cursor-pointer hover:text-black/70 dark:invert dark:opacity-50 dark:hover:opacity-100"
+                className="px-2 hover:cursor-pointer   inline-flex items-center gap-1 text-xs hover:text-black/15 dark:hover:text-white/60"
+                aria-label="Wyczyść wyszukiwanie zajęć"
               >
-                <CircleX className="w-4" />
+                <CircleX className="size-4" />
               </button>
             </InputGroupAddon>
           )}
         </InputGroup>
       </Field>
 
-      <Field className="flex-1 ">
-        <FieldLabel htmlFor="searchAge">Wiek uczestnika</FieldLabel>
-        <InputGroup>
+      <Field className="flex flex-col gap-2.5">
+        <FieldLabel htmlFor="searchAge" className={fieldLabelStyles}>
+          Wiek uczestnika
+        </FieldLabel>
+
+        <InputGroup className={inputStyles}>
           <InputGroupInput
             id="searchAge"
             placeholder="Np. 7"
@@ -100,8 +123,9 @@ export default function OfferFilterBar({
               setSearchAge(value);
             }}
           />
-          <InputGroupAddon>
-            <User className="text-muted-foreground" />
+
+          <InputGroupAddon className={inputAddonStyles}>
+            <User className="size-4" />
           </InputGroupAddon>
 
           {searchAge !== "" && (
@@ -109,68 +133,98 @@ export default function OfferFilterBar({
               <button
                 type="button"
                 onClick={() => setSearchAge("")}
-                className="inline-flex items-center px-2 text-xs text-black hover:cursor-pointer hover:text-black/70 dark:invert dark:opacity-50 dark:hover:opacity-100"
+                className="px-2 hover:cursor-pointer   inline-flex items-center gap-1 text-xs hover:text-black/15 dark:hover:text-white/60"
+                aria-label="Wyczyść wiek uczestnika"
               >
-                <CircleX className="w-4" />
+                <CircleX className="size-4" />
               </button>
             </InputGroupAddon>
           )}
         </InputGroup>
       </Field>
 
-      <Field className="flex-1">
-        <FieldLabel>Poziom zaawansowania</FieldLabel>
+      <Field className="flex flex-col gap-2.5">
+        <FieldLabel className={fieldLabelStyles}>
+          Poziom zaawansowania
+        </FieldLabel>
+
         <Select
           value={experience}
           onValueChange={(value) =>
             setExperience(value as ExperienceFilterValue)
           }
         >
-          <SelectTrigger>
+          <SelectTrigger className={selectTriggerStyles}>
             <SelectValue />
           </SelectTrigger>
-          <SelectContent>
+
+          <SelectContent className={selectContentStyles}>
             <SelectGroup>
-              <SelectItem value="all">Wszystkie poziomy</SelectItem>
-              <SelectItem value="Początkujący">Początkujący</SelectItem>
-              <SelectItem value="Średniozaawansowani">
+              <SelectItem className={selectItemStyles} value="all">
+                Wszystkie poziomy
+              </SelectItem>
+              <SelectItem className={selectItemStyles} value="Początkujący">
+                Początkujący
+              </SelectItem>
+              <SelectItem
+                className={selectItemStyles}
+                value="Średniozaawansowani"
+              >
                 Średniozaawansowani
               </SelectItem>
-              <SelectItem value="Zaawansowani">Zaawansowani</SelectItem>
+              <SelectItem className={selectItemStyles} value="Zaawansowani">
+                Zaawansowani
+              </SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>
       </Field>
 
-      <Field className="flex-1">
-        <FieldLabel>Sortowanie</FieldLabel>
+      <Field className="flex flex-col gap-2.5">
+        <FieldLabel className={fieldLabelStyles}>Sortowanie</FieldLabel>
+
         <Select
           value={sorting}
           onValueChange={(value) => setSorting(value as OfferSortingValue)}
         >
-          <SelectTrigger>
+          <SelectTrigger className={selectTriggerStyles}>
             <SelectValue />
           </SelectTrigger>
-          <SelectContent>
+
+          <SelectContent className={selectContentStyles}>
             <SelectGroup>
-              <SelectItem value="default">Domyślne</SelectItem>
-              <SelectItem value="alphabetical-asc">Nazwa: A–Z</SelectItem>
-              <SelectItem value="alphabetical-desc">Nazwa: Z–A</SelectItem>
-              <SelectItem value="age-asc">Wiek: rosnąco</SelectItem>
+              <SelectItem className={selectItemStyles} value="default">
+                Domyślne
+              </SelectItem>
+              <SelectItem className={selectItemStyles} value="alphabetical-asc">
+                Nazwa: A–Z
+              </SelectItem>
+              <SelectItem
+                className={selectItemStyles}
+                value="alphabetical-desc"
+              >
+                Nazwa: Z–A
+              </SelectItem>
+              <SelectItem className={selectItemStyles} value="age-asc">
+                Wiek: rosnąco
+              </SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>
       </Field>
 
-      <Field className="flex-1 ">
-        <FieldLabel className="opacity-0 hidden lg:block">Wyczyść</FieldLabel>
+      <Field className="flex flex-col gap-2.5">
+        <FieldLabel className={`opacity-0  ${fieldLabelStyles}`}>
+          Wyczyść
+        </FieldLabel>
+
         <button
           type="button"
           onClick={onClearFilters}
           disabled={!hasActiveFilters}
-          className="inline-flex h-10 w-full items-center justify-center  rounded-md border px-4 text-sm font-medium transition hover:bg-accent disabled:pointer-events-none disabled:opacity-50"
+          className={clearButtonStyles}
         >
-          <RotateCcw className="w-4" />
+          <RotateCcw className="size-4" />
           Wyczyść filtry
         </button>
       </Field>

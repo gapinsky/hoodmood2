@@ -18,6 +18,7 @@ export default function OfferCard({
   description,
   instructor,
   instructorAvatar,
+  instructorSlug,
   experience,
   minAge,
   maxAge,
@@ -57,12 +58,12 @@ export default function OfferCard({
           <AvatarFallback>{instructor[0]}</AvatarFallback>
         </Avatar>
         <div className="w-full">
-          <button
-            type="button"
+          <Link
+            href={instructorSlug}
             className="font-semibold text-start leading-none text-sm hover:underline underline-offset-1 hover:cursor-pointer focus-visible:border-ring focus-visible:ring-ring/50 outline-none focus-visible:ring-[3px] rounded-sm "
           >
             {instructor}
-          </button>
+          </Link>
 
           <p className="text-sm text-muted-foreground">Instruktor zajęć</p>
         </div>
