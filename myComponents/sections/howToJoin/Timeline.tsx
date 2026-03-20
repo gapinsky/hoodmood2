@@ -30,7 +30,7 @@ export default function Timeline() {
                         <p className="text-sm font-semibold ">
                           {step.id}. {step.title}
                         </p>
-                        <p className="mt-1 text-xs leading-5 ">
+                        <p className="mt-1 text-xs leading-5 text-muted-foreground ">
                           {step.description}
                         </p>
                       </div>
@@ -45,7 +45,7 @@ export default function Timeline() {
                         <p className="text-sm font-semibold text-white">
                           {step.id}. {step.title}
                         </p>
-                        <p className="mt-1 text-xs leading-5 text-white/70">
+                        <p className="mt-1 text-xs leading-5 text-muted-foreground ">
                           {step.description}
                         </p>
                       </div>
@@ -73,7 +73,7 @@ export default function Timeline() {
                     <p className="text-base font-semibold ">
                       {step.id}. {step.title}
                     </p>
-                    <p className="mt-2 text-sm leading-6 opacity-90">
+                    <p className="mt-2 text-sm leading-6 opacity-90 text-muted-foreground ">
                       {step.description}
                     </p>
                   </div>

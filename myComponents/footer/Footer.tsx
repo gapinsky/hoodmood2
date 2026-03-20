@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export default function Footer() {
   const date = new Date();
   return (
-    <footer className="  w-full text-sm bg-neutral-50 dark:bg-neutral-800 shadow-inner">
+    <footer className="  w-full text-sm border border-t-2">
       <div className="max-w-380 mx-auto px-8 md:px-12 lg:px-16">
         <div className="flex flex-col gap-8 md:flex-row  md:justify-between lg:items-stretch border-b py-4 lg:py-8 ">
           {/* LEFT COL */}

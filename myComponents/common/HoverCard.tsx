@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 type HoverCardProps = {
@@ -15,16 +16,16 @@ export function HoverCard({
   img,
   hoverImg,
   title,
-  description,
-  headerStyles = "",
+  // description,
+  // headerStyles = "",
   customStyles = "",
 }: HoverCardProps) {
   return (
     <div
-      className={
-        "group relative aspect-square w-full overflow-hidden rounded-xl shadow-xl " +
-        customStyles
-      }
+      className={cn(
+        "group relative aspect-square w-full overflow-hidden  ",
+        customStyles,
+      )}
     >
       <Image
         quality={75}
@@ -32,7 +33,7 @@ export function HoverCard({
         alt={title}
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
-        className="object-cover transition-opacity duration-500 group-hover:opacity-0 aspect-square"
+        className="object-cover   transition-opacity duration-500 group-hover:opacity-0 "
         priority={false}
       />
 
@@ -42,16 +43,16 @@ export function HoverCard({
         alt=""
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
-        className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100 aspect-square"
+        className="object-cover   opacity-0 transition-opacity duration-500 group-hover:opacity-100 "
         priority={false}
       />
 
-      <div className="absolute inset-0 bg-black/30 transition-colors duration-500 " />
-
+      {/* <div className="absolute inset-0 bg-black/30 transition-colors duration-500 " /> */}
+      {/* 
       <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
         <h3 className={headerStyles}>{title}</h3>
         <p className="mt-2 text-sm opacity-90">{description}</p>
-      </div>
+      </div> */}
     </div>
   );
 }

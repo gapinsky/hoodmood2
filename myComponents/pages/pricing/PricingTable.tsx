@@ -31,7 +31,7 @@ export default function PricingTable({
           <h2 className=" text-white text-lg">{title}</h2>
         </div>
 
-        <div className=" rounded-2xl border  backdrop-blur-2xl bg-black/2 dark:bg-white/5">
+        <div className=" rounded-xl border  backdrop-blur-md  dark:bg-white/5 overflow-hidden">
           <div
             className={`hidden ${desktopGrid} items-center gap-4 border-b  px-5 py-3 text-xs font-medium uppercase tracking-[0.18em]  md:grid text-muted-foreground`}
           >
@@ -50,7 +50,7 @@ export default function PricingTable({
             {items.map((item, index) => (
               <article
                 key={`${item.name}-${item.minAge}-${index}`}
-                className={`group grid gap-4 px-4 py-4 transition-colors md:px-5 ${desktopGrid} md:items-center bg-white/90   hover:bg-black/0.5 dark:bg-background/50 dark:hover:bg-white/0.5`}
+                className={`group grid gap-4 px-4 py-4 transition-colors md:px-5 ${desktopGrid} md:items-center    hover:bg-black/2 dark:bg-background/50 dark:hover:bg-white/0.5`}
               >
                 <div className="min-w-0">
                   <div className="flex flex-wrap items-center gap-2">

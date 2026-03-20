@@ -7,7 +7,7 @@ export default function NoEvents() {
       <p className="text-lg">
         Aktualnie nie mamy aktywynych obozów, kolonii ani wydarzeń specjalnych
       </p>
-      <p>
+      <p className="text-muted-foreground ">
         Ale spokojnie! Takie akcje pojawiają się u nas regularnie. Obserwuj nas,
         żeby być na bieżąco.
       </p>

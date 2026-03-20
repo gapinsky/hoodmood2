@@ -21,7 +21,9 @@ export default function Faq() {
         {faq.splice(0, 3).map((question) => (
           <AccordionItem value={question.question} key={question.question}>
             <AccordionTrigger>{question.question}</AccordionTrigger>
-            <AccordionContent>{question.answer}</AccordionContent>
+            <AccordionContent className="text-muted-foreground text-md">
+              {question.answer}
+            </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
