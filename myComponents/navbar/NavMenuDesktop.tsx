@@ -14,16 +14,16 @@ import { NAV as navLinks } from "../navbar/data";
 const desktopNavListStyles = "flex items-center gap-1";
 
 const desktopNavTriggerStyles =
-  "group inline-flex py-2 items-center text-[14px] justify-center  rounded-lg px-4  font-bold uppercase tracking-[0.14em] text-[#21191d]/98 transition-all duration-200 hover:bg-black/[0.04] hover:text-[#21191d] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#21191d]/20 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:text-white/78 dark:hover:bg-white/[0.06] dark:hover:text-white dark:focus-visible:ring-white/80 dark:focus-visible:ring-offset-[#21191d] data-[state=open]:bg-black/[0.05] data-[state=open]:text-[#21191d] dark:data-[state=open]:bg-white/[0.08] dark:data-[state=open]:text-white";
+  "group inline-flex py-2 items-center text-[14px] justify-center  rounded-lg px-4  font-bold uppercase tracking-[0.14em] text-[#1c1c1c]/98 transition-all duration-200 hover:bg-black/[0.04] hover:text-[#1c1c1c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1c1c1c]/20 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:text-white/78 dark:hover:bg-white/[0.06] dark:hover:text-white dark:focus-visible:ring-white/80 dark:focus-visible:ring-offset-[#1c1c1c] data-[state=open]:bg-black/[0.05] data-[state=open]:text-[#1c1c1c] dark:data-[state=open]:bg-white/[0.08] dark:data-[state=open]:text-white";
 
 const desktopNavLinkStyles =
-  "inline-flex py-2 items-center justify-center rounded-full px-4  text-[14px] font-semibold uppercase tracking-[0.14em] text-[#21191d]/98 transition-all duration-200 hover:bg-black/[0.04] hover:text-[#21191d] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#21191d]/20 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:text-white/78 dark:hover:bg-white/[0.06] dark:hover:text-white dark:focus-visible:ring-white/80 dark:focus-visible:ring-offset-[#21191d]";
+  "inline-flex py-2 items-center justify-center rounded-full px-4  text-[14px] font-semibold uppercase tracking-[0.14em] text-[#1c1c1c]/98 transition-all duration-200 hover:bg-black/[0.04] hover:text-[#1c1c1c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1c1c1c]/20 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:text-white/78 dark:hover:bg-white/[0.06] dark:hover:text-white dark:focus-visible:ring-white/80 dark:focus-visible:ring-offset-[#1c1c1c]";
 
 const desktopDropdownContentStyles =
-  "min-w-[220px] rounded-xs  border border-black/[0.08] bg-white/92 p-2  shadow-[0_18px_48px_rgba(0,0,0,0.16)] backdrop-blur-xl dark:border-white/[0.10] dark:bg-[#21191d]/92 dark:shadow-[0_18px_48px_rgba(0,0,0,0.32)]";
+  "min-w-[220px] rounded-xs  border border-black/[0.08] bg-white/92 p-2 dark:bg-[#1c1c1c]/98  shadow-[0_18px_48px_rgba(0,0,0,0.16)] backdrop-blur-xl dark:border-white/[0.10]  dark:shadow-[0_18px_48px_rgba(0,0,0,0.32)]";
 
 const desktopDropdownItemStyles =
-  "flex w-full items-center rounded-2xl px-4 py-3  font-semibold text-[12px] uppercase tracking-[0.12em] text-[#21191d]/98 transition-colors duration-200 hover:bg-black/[0.04] hover:text-[#21191d] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#21191d]/20 dark:text-white/82 dark:hover:bg-white/[0.08] dark:hover:text-white dark:focus-visible:ring-white/80";
+  "flex w-full items-center rounded-2xl px-4 py-3  font-semibold text-[12px] uppercase tracking-[0.12em] text-[#1c1c1c]/98 transition-colors duration-200 hover:bg-black/[0.04] hover:text-[#1c1c1c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1c1c1c]/20 dark:text-white/82 dark:hover:bg-white/[0.08] dark:hover:text-white dark:focus-visible:ring-white/80";
 
 export default function NavMenuDesktop() {
   return (

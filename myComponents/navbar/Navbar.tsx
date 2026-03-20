@@ -9,23 +9,22 @@ import ButtonSecondary from "../common/ButtonSecondary";
 import ButtonPrimary from "../common/ButtonPrimary";
 import { Switch } from "../themeSwitch/switch";
 import Container from "../common/Container";
+import { cn } from "@/lib/utils";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav
-      className="
-        fixed inset-x-0 top-0 z-50
-        border-b border-black/[0.06] dark:border-white/[0.08]
-        bg-white/[0.72] dark:bg-black/42
-        backdrop-blur-xl
-        shadow-[0_8px_30px_rgba(0,0,0,0.06)]
-        dark:shadow-[0_8px_30px_rgba(0,0,0,0.20)]
-      "
+      className={cn(
+        isOpen
+          ? "bg-white dark:bg-[#1c1c1c] "
+          : "bg-white/0.72 dark:bg-black/42 shadow-[0_8px_30px_rgba(0,0,0,0.06)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.20)] ",
+        "fixed inset-x-0 top-0 z-50   backdrop-blur-xl  ",
+      )}
     >
       <Container>
-        <div className="flex min-h-18 items-center gap-4 xl:min-h-19">
+        <div className="flex min-h-18 items-center gap-4 xl:min-h-19 ">
           {/* LEFT */}
           <div className="flex min-w-0 flex-1 items-center">
             <Link
