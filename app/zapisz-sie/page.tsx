@@ -3,6 +3,7 @@ import SectionContainer from "@/myComponents/common/SectionContainer";
 import SectionContent from "@/myComponents/common/SectionContent";
 import { data } from "./data";
 import MainWrapper from "@/myComponents/common/MainWrapper";
+import EnrollmentForm from "./_components/enrollmentForm/EnrollmentForm";
 
 export default function TermsAndConditions() {
   return (
@@ -13,7 +14,7 @@ export default function TermsAndConditions() {
           title={data.title}
           description={data.description}
         ></SectionContent>
-
+        <EnrollmentForm />
       
         <AnyQuestionsContact />
       </SectionContainer>
