@@ -29,13 +29,13 @@ export default function FormTextareaField({
   disabled = false,
   textareaClassName = "min-h-[200px]",
 }: FormTextareaFieldProps) {
-  const errorId = error ? `${id}-error` : undefined;
+  const errorId = `${id}-error`;
 
   return (
     <Field className="flex flex-col gap-2.5">
       <FieldLabel
         htmlFor={id}
-        className="pl-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
+        className="pl-1 text-xs font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
       >
         {label}
       </FieldLabel>
@@ -47,7 +47,7 @@ export default function FormTextareaField({
           className={textareaClassName}
           disabled={disabled}
           aria-invalid={!!error}
-          aria-describedby={errorId}
+          aria-describedby={error ? errorId : undefined}
           {...registration}
         />
         <InputGroupAddon align="block-start" className="border-b">
@@ -60,7 +60,8 @@ export default function FormTextareaField({
           id={errorId}
           className="pl-1 text-xs text-red-600 dark:text-red-400"
         >
-          {error.message}
+          {" "}
+          {error.message}{" "}
         </span>
       )}
     </Field>

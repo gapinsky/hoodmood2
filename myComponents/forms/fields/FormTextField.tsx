@@ -37,7 +37,7 @@ export default function FormTextField({
     <Field className={wrapperClassName}>
       <FieldLabel
         htmlFor={id}
-        className="pl-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
+        className="pl-1 text-xs font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
       >
         {label}
       </FieldLabel>

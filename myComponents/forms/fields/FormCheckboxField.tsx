@@ -1,4 +1,10 @@
-import { Controller, type Control, type FieldError, type FieldValues, type Path } from "react-hook-form";
+import {
+  Controller,
+  type Control,
+  type FieldError,
+  type FieldValues,
+  type Path,
+} from "react-hook-form";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 
@@ -43,7 +49,6 @@ export default function FormCheckboxField<T extends FieldValues>({
           {label}
         </FieldLabel>
       </Field>
-
       {error && (
         <span
           id={errorId}
