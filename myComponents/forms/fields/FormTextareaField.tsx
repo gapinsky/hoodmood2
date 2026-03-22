@@ -2,39 +2,37 @@ import { Field, FieldLabel } from "@/components/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
-  InputGroupInput,
+  InputGroupTextarea,
 } from "@/components/ui/input-group";
 import { inputStyles } from "@/myComponents/pages/pricing/PricingFilterBar";
 import type { FieldError, UseFormRegisterReturn } from "react-hook-form";
 import type { LucideIcon } from "lucide-react";
 
-type FormTextFieldProps = {
+type FormTextareaFieldProps = {
   id: string;
   label: string;
-  type?: React.HTMLInputTypeAttribute;
   placeholder: string;
   icon: LucideIcon;
   registration: UseFormRegisterReturn;
   error?: FieldError;
   disabled?: boolean;
-  wrapperClassName?: string;
+  textareaClassName?: string;
 };
 
-export default function FormTextField({
+export default function FormTextareaField({
   id,
   label,
-  type = "text",
   placeholder,
   icon: Icon,
   registration,
   error,
   disabled = false,
-  wrapperClassName = "flex flex-col gap-2.5",
-}: FormTextFieldProps) {
+  textareaClassName = "min-h-[200px]",
+}: FormTextareaFieldProps) {
   const errorId = error ? `${id}-error` : undefined;
 
   return (
-    <Field className={wrapperClassName}>
+    <Field className="flex flex-col gap-2.5">
       <FieldLabel
         htmlFor={id}
         className="pl-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
@@ -43,16 +41,16 @@ export default function FormTextField({
       </FieldLabel>
 
       <InputGroup className={inputStyles}>
-        <InputGroupInput
+        <InputGroupTextarea
           id={id}
-          type={type}
           placeholder={placeholder}
+          className={textareaClassName}
           disabled={disabled}
           aria-invalid={!!error}
           aria-describedby={errorId}
           {...registration}
         />
-        <InputGroupAddon>
+        <InputGroupAddon align="block-start" className="border-b">
           <Icon className="text-black/35 dark:text-white/35" />
         </InputGroupAddon>
       </InputGroup>

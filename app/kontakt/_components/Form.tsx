@@ -2,24 +2,18 @@
 
 import { useState } from "react";
 import { z } from "zod";
-import { Controller, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-
-import { Checkbox } from "@/components/ui/checkbox";
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-  InputGroupTextarea,
-} from "@/components/ui/input-group";
-import { buttonPrimaryStyes } from "@/myComponents/common/ButtonPrimary";
-import { inputStyles } from "@/myComponents/pages/pricing/PricingFilterBar";
 import { Mail, MessageSquareText, Phone, User } from "lucide-react";
 
+import { buttonPrimaryStyes } from "@/myComponents/common/ButtonPrimary";
 import { contactFormSchema } from "@/lib/schemas/contactSchema";
 import type { ContactFormData } from "@/lib/schemas/contactSchema";
 import { submitContactForm } from "../actions";
+import FormStatusMessage from "@/myComponents/forms/shared/FormStatusMessage";
+import FormTextField from "@/myComponents/forms/fields/FormTextField";
+import FormCheckboxField from "@/myComponents/forms/fields/FormCheckboxField";
+import FormTextareaField from "@/myComponents/forms/fields/FormTextareaField";
 
 type SubmitStatus = {
   type: "success" | "error" | null;
@@ -34,7 +28,7 @@ const defaultValues: ContactFormData = {
   termsAccepted: false,
 };
 
-export default function Form() {
+export default function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>({
     type: null,
     message: "",
@@ -45,15 +39,12 @@ export default function Form() {
     control,
     handleSubmit,
     reset,
-    watch,
     formState: { errors, isSubmitting },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
     defaultValues,
     mode: "onSubmit",
   });
-
-  const watchedValues = watch();
 
   const clearSubmitStatus = () => {
     if (submitStatus.type) {
@@ -101,212 +92,101 @@ export default function Form() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-8" noValidate>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col gap-8"
+      noValidate
+    >
       {submitStatus.type && (
-        <div
-          className={`rounded-lg border p-4 ${
-            submitStatus.type === "success"
-              ? "border-green-200 bg-green-50 text-green-900"
-              : "border-red-200 bg-red-50 text-red-900"
-          }`}
-          aria-live="polite"
-        >
-          {submitStatus.message}
-        </div>
+        <FormStatusMessage
+          type={submitStatus.type}
+          message={submitStatus.message}
+        />
       )}
 
-      <Field className="flex flex-col gap-2.5">
-        <FieldLabel
-          htmlFor="input-field-fullname"
-          className="pl-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
-        >
-          Imię i nazwisko
-        </FieldLabel>
-        <InputGroup className={inputStyles}>
-          <InputGroupInput
-            id="input-field-fullname"
-            type="text"
-            placeholder="Wprowadź imię i nazwisko"
-            disabled={isSubmitting}
-            aria-invalid={!!errors.fullName}
-            aria-describedby={errors.fullName ? "fullName-error" : undefined}
-            {...register("fullName", {
-              onChange: () => clearSubmitStatus(),
-            })}
-          />
-          <InputGroupAddon>
-            <User className="text-black/35 dark:text-white/35" />
-          </InputGroupAddon>
-        </InputGroup>
-        {errors.fullName && (
-          <span
-            id="fullName-error"
-            className="pl-1 text-xs text-red-600 dark:text-red-400"
-          >
-            {errors.fullName.message}
-          </span>
-        )}
-      </Field>
+      <FormTextField
+        id="input-field-fullname"
+        label="Imię i nazwisko"
+        placeholder="Wprowadź imię i nazwisko"
+        icon={User}
+        disabled={isSubmitting}
+        error={errors.fullName}
+        registration={register("fullName", {
+          onChange: clearSubmitStatus,
+        })}
+      />
 
       <div className="flex flex-col gap-8 md:flex-row">
-        <Field className="flex flex-1 flex-col gap-2.5">
-          <FieldLabel
-            htmlFor="input-field-email"
-            className="pl-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
-          >
-            Adres e-mail
-          </FieldLabel>
-          <InputGroup className={inputStyles}>
-            <InputGroupInput
-              id="input-field-email"
-              type="email"
-              placeholder="Wpisz swój adres e-mail"
-              disabled={isSubmitting}
-              aria-invalid={!!errors.email}
-              aria-describedby={errors.email ? "email-error" : undefined}
-              {...register("email", {
-                onChange: () => clearSubmitStatus(),
-              })}
-            />
-            <InputGroupAddon>
-              <Mail className="text-black/35 dark:text-white/35" />
-            </InputGroupAddon>
-          </InputGroup>
-          {errors.email && (
-            <span
-              id="email-error"
-              className="pl-1 text-xs text-red-600 dark:text-red-400"
-            >
-              {errors.email.message}
-            </span>
-          )}
-        </Field>
+        <FormTextField
+          id="input-field-email"
+          label="Adres e-mail"
+          type="email"
+          placeholder="Wpisz swój adres e-mail"
+          icon={Mail}
+          disabled={isSubmitting}
+          error={errors.email}
+          wrapperClassName="flex flex-1 flex-col gap-2.5"
+          registration={register("email", {
+            onChange: clearSubmitStatus,
+          })}
+        />
 
-        <Field className="flex flex-1 flex-col gap-2.5">
-          <FieldLabel
-            htmlFor="input-field-phone"
-            className="pl-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
-          >
-            Numer telefonu
-          </FieldLabel>
-          <InputGroup className={inputStyles}>
-            <InputGroupInput
-              id="input-field-phone"
-              type="tel"
-              placeholder="Wpisz numer telefonu"
-              disabled={isSubmitting}
-              aria-invalid={!!errors.phone}
-              aria-describedby={errors.phone ? "phone-error" : undefined}
-              {...register("phone", {
-                onChange: () => clearSubmitStatus(),
-              })}
-            />
-            <InputGroupAddon>
-              <Phone className="text-black/35 dark:text-white/35" />
-            </InputGroupAddon>
-          </InputGroup>
-          {errors.phone && (
-            <span
-              id="phone-error"
-              className="pl-1 text-xs text-red-600 dark:text-red-400"
-            >
-              {errors.phone.message}
-            </span>
-          )}
-        </Field>
+        <FormTextField
+          id="input-field-phone"
+          label="Numer telefonu"
+          type="tel"
+          placeholder="Wpisz numer telefonu"
+          icon={Phone}
+          disabled={isSubmitting}
+          error={errors.phone}
+          wrapperClassName="flex flex-1 flex-col gap-2.5"
+          registration={register("phone", {
+            onChange: clearSubmitStatus,
+          })}
+        />
       </div>
 
-      <Field className="flex flex-col gap-2.5">
-        <FieldLabel
-          htmlFor="input-field-textarea"
-          className="pl-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
-        >
-          Wiadomość
-        </FieldLabel>
-        <InputGroup className={inputStyles}>
-          <InputGroupTextarea
-            id="input-field-textarea"
-            placeholder="Treść wiadomości"
-            className="min-h-[200px]"
-            disabled={isSubmitting}
-            aria-invalid={!!errors.message}
-            aria-describedby={errors.message ? "message-error" : undefined}
-            {...register("message", {
-              onChange: () => clearSubmitStatus(),
-            })}
-          />
-          <InputGroupAddon align="block-start" className="border-b">
-            <MessageSquareText className="text-black/35 dark:text-white/35" />
-          </InputGroupAddon>
-        </InputGroup>
-        {errors.message && (
-          <span
-            id="message-error"
-            className="pl-1 text-xs text-red-600 dark:text-red-400"
-          >
-            {errors.message.message}
-          </span>
-        )}
-      </Field>
+      <FormTextareaField
+        id="input-field-textarea"
+        label="Wiadomość"
+        placeholder="Treść wiadomości"
+        icon={MessageSquareText}
+        disabled={isSubmitting}
+        error={errors.message}
+        registration={register("message", {
+          onChange: clearSubmitStatus,
+        })}
+      />
 
-      <FieldGroup>
-        <Field orientation="horizontal">
-          <Controller
-            name="termsAccepted"
-            control={control}
-            render={({ field }) => (
-              <Checkbox
-                id="terms-checkbox"
-                checked={field.value}
-                onCheckedChange={(checked) => {
-                  clearSubmitStatus();
-                  field.onChange(checked === true);
-                }}
-                disabled={isSubmitting}
-                aria-invalid={!!errors.termsAccepted}
-                aria-describedby={
-                  errors.termsAccepted ? "termsAccepted-error" : undefined
-                }
-              />
-            )}
-          />
-
-          <FieldLabel
-            htmlFor="terms-checkbox"
-            className="inline-flex max-w-full text-wrap"
-          >
-            <p>
-              Zapoznałem się z{" "}
-              <a
-                href="/regulamin"
-                className="underline"
-                target="_blank"
-                rel="noopener"
-              >
-                regulaminem
-              </a>{" "}
-              i akceptuję{" "}
-              <a
-                className="underline"
-                href="/polityka-prywatnosci"
-                target="_blank"
-                rel="noopener"
-              >
-                politykę prywatności
-              </a>
-            </p>
-          </FieldLabel>
-        </Field>
-
-        {errors.termsAccepted && (
-          <span
-            id="termsAccepted-error"
-            className="pl-1 text-xs text-red-600 dark:text-red-400"
-          >
-            {errors.termsAccepted.message}
-          </span>
-        )}
-      </FieldGroup>
+      <FormCheckboxField<ContactFormData>
+        control={control}
+        name="termsAccepted"
+        id="terms-checkbox"
+        disabled={isSubmitting}
+        error={errors.termsAccepted}
+        label={
+          <p>
+            Zapoznałem się z{" "}
+            <a
+              href="/regulamin"
+              className="underline"
+              target="_blank"
+              rel="noopener"
+            >
+              regulaminem
+            </a>{" "}
+            i akceptuję{" "}
+            <a
+              className="underline"
+              href="/polityka-prywatnosci"
+              target="_blank"
+              rel="noopener"
+            >
+              politykę prywatności
+            </a>
+          </p>
+        }
+      />
 
       <button
         type="submit"
