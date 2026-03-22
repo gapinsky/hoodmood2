@@ -37,7 +37,7 @@ export default function RootLayout({
         className={`${fontAnton.variable} ${fontRoboto.variable} w-full relative bg-transparent`}
       >
         <div className="fixed inset-0 -z-40 overflow-hidden">
-          <div className="absolute inset-0 bg-[url(/assets/images/background-white.jpg)] bg-cover bg-center bg-no-repeat dark:bg-[url(/assets/images/blue.jpg)]" />
+          <div className="absolute inset-0  bg-cover bg-center bg-no-repeat " />
 
           <video
             src="/assets/images/bgVideo.mp4"
@@ -49,7 +49,7 @@ export default function RootLayout({
             preload="auto"
           />
 
-          <div className="absolute inset-0 bg-white/70 dark:bg-black/30" />
+          {/* <div className="absolute inset-0 bg-white/70 dark:bg-black/30" /> */}
         </div>
         <NextTopLoader
           color="#ac4967"
