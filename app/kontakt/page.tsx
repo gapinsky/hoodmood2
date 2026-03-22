@@ -4,8 +4,8 @@ import SectionContent from "@/myComponents/common/SectionContent";
 import { data } from "./data";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 
-import LocalizationsMapTabs from "./LocalizationsMapTabs";
-import Form from "./Form";
+import LocalizationsMapTabs from "./_components/LocalizationsMapTabs";
+import Form from "./_components/Form";
 export default function TermsAndConditions() {
   return (
     <MainWrapper>

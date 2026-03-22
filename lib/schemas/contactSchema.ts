@@ -1,4 +1,4 @@
-import {z} from "zod";
+import { z } from "zod";
 
 export const contactFormSchema = z.object({
   fullName: z.string().min(2, "Imię i nazwisko musi zawierać minimum 2 znaki"),
