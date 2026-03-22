@@ -14,7 +14,7 @@ export default function AnyQuestionsContact() {
         , gdzie znajdziesz najczęściej zadawane pytania. Jeżeli nie znajdziesz
         tam odpowiedzi, napisz do nas, albo zadzwoń pod podany poniżej numer.
       </p>
-      <div className="space-x-4 mt-4">
+      <div className="space-x-4 mt-4 space-y-4">
         <ButtonSecondary href="/kontakt">
           <Mail /> Napisz do nas
         </ButtonSecondary>
