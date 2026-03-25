@@ -18,7 +18,7 @@ export default function EnrollmentStepNavigation({
   isLastStep = false,
 }: EnrollmentStepNavigationProps) {
   return (
-    <div className="mt-8 flex items-center justify-between gap-4">
+    <div className="mt-auto flex items-center justify-between gap-4 pt-8">
       <button
         type="button"
         onClick={onPrev}

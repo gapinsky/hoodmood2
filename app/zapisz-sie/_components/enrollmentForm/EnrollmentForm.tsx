@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -8,16 +9,15 @@ import {
   enrollmentSchema,
   type EnrollmentFormData,
 } from "@/lib/schemas/enrollmentSchema";
+import FormStatusMessage from "@/myComponents/forms/shared/FormStatusMessage";
 
 import EnrollmentStepHeader from "./EnrollmentStepHeader";
 import EnrollmentStepLayout from "./EnrollmentStepLayout";
 import EnrollmentStepNavigation from "./EnrollmentStepNavigation";
-
-import StepParticipant from "./steps/StepParticipant";
 import StepClassesSelection from "./steps/StepClassesSelection";
-import StepContactDetails from "./steps/StepContactDetails";
 import StepConsents from "./steps/StepConsents";
-import FormStatusMessage from "@/myComponents/forms/shared/FormStatusMessage";
+import StepContactDetails from "./steps/StepContactDetails";
+import StepParticipant from "./steps/StepParticipant";
 import StepSummary from "./steps/StepsSummary";
 
 type SubmitStatus = {
@@ -27,8 +27,8 @@ type SubmitStatus = {
 
 const defaultValues: EnrollmentFormData = {
   participantFullName: "",
+  participantType: "youth",
   participantAge: "",
-  participantLevel: "",
   selectedClasses: [],
   parentFullName: "",
   email: "",
@@ -40,34 +40,43 @@ const defaultValues: EnrollmentFormData = {
 
 const steps = [
   {
-    badge: "Krok 1",
+    navLabel: "Start",
     title: "Kogo chcesz zapisać?",
     description:
-      "Podaj podstawowe informacje o uczestniku, abyśmy mogli dopasować odpowiednią grupę.",
+      "Podaj podstawowe informacje o uczestniku, abyśmy mogli przejść do kolejnych kroków zapisu.",
+    imageSrc: "/assets/images/enrollmentForm/people.svg",
+    imageAlt: "Uczestnicy zajęć podczas rozgrzewki",
   },
   {
-    badge: "Krok 2",
+    navLabel: "Zajęcia",
     title: "Wybierz lokalizację i zajęcia",
     description:
       "Dodaj jedne lub kilka zajęć. Po prawej stronie zobaczysz aktualne podsumowanie i ceny.",
+    imageSrc: "/assets/images/enrollmentForm/target.svg",
+    imageAlt: "Ilustracja wyboru zajęć",
   },
   {
-    badge: "Krok 3",
+    navLabel: "Kontakt",
     title: "Dane kontaktowe",
     description:
       "Podaj dane opiekuna, abyśmy mogli potwierdzić zgłoszenie i przekazać szczegóły organizacyjne.",
+    imageSrc: "/assets/images/enrollmentForm/calendar.svg",
+    imageAlt: "Ilustracja danych kontaktowych",
   },
   {
-    badge: "Krok 4",
+    navLabel: "Podsumowanie",
     title: "Sprawdź, czy wszystko się zgadza",
     description:
       "Na tym etapie możesz jeszcze raz sprawdzić wybrane zajęcia, terminy i łączny koszt.",
+    imageSrc: "/assets/images/enrollmentForm/checking.svg",
+    imageAlt: "Ilustracja podsumowania zgłoszenia",
   },
   {
-    badge: "Krok 5",
+    navLabel: "Zgody",
     title: "Zgody i wysyłka",
-    description:
-      "Zaakceptuj wymagane zgody i wyślij formularz zgłoszeniowy.",
+    description: "Zaakceptuj wymagane zgody i wyślij formularz zgłoszeniowy.",
+    imageSrc: "/assets/images/enrollmentForm/confirmed.svg",
+    imageAlt: "Ilustracja potwierdzenia zapisu",
   },
 ];
 
@@ -96,8 +105,8 @@ export default function EnrollmentForm() {
       case 0:
         return trigger([
           "participantFullName",
+          "participantType",
           "participantAge",
-          "participantLevel",
         ]);
       case 1:
         return trigger(["selectedClasses"]);
@@ -131,9 +140,6 @@ export default function EnrollmentForm() {
     try {
       console.log("FORM DATA", data);
 
-      // tutaj podepniesz server action / resend
-      // const response = await submitEnrollmentForm(data);
-
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       setSubmitStatus({
@@ -157,15 +163,28 @@ export default function EnrollmentForm() {
 
   return (
     <FormProvider {...methods}>
-      <div className="flex flex-col gap-8">
-        <EnrollmentStepHeader
-          badge={step.badge}
-          title={step.title}
-          description={step.description}
-        />
+      <EnrollmentStepLayout
+        illustration={
+          <div className="relative mx-auto aspect-[1.05] w-full">
+            <Image
+              alt={step.imageAlt}
+              src={step.imageSrc}
+              fill
+              className="object-contain"
+              sizes="(max-width: 1279px) 70vw, 35vw"
+              priority
+            />
+          </div>
+        }
+      >
+        <div className="flex h-full flex-col gap-6">
+          <EnrollmentStepHeader currentStep={currentStep} steps={steps} />
 
-        <EnrollmentStepLayout>
-          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6" noValidate>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex flex-1 flex-col gap-6"
+            noValidate
+          >
             {submitStatus.type && (
               <FormStatusMessage
                 type={submitStatus.type}
@@ -188,8 +207,8 @@ export default function EnrollmentForm() {
               isLastStep={isLastStep}
             />
           </form>
-        </EnrollmentStepLayout>
-      </div>
+        </div>
+      </EnrollmentStepLayout>
     </FormProvider>
   );
 }

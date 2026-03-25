@@ -1,4 +1,5 @@
 import { useFormContext } from "react-hook-form";
+
 import type { EnrollmentFormData } from "@/lib/schemas/enrollmentSchema";
 
 export default function StepSummary() {
@@ -6,6 +7,8 @@ export default function StepSummary() {
   const values = getValues();
 
   const total = values.selectedClasses.reduce((sum, item) => sum + item.price, 0);
+  const participantTypeLabel =
+    values.participantType === "adult" ? "Dorośli" : "Dzieci i młodzież";
 
   return (
     <div className="space-y-6">
@@ -17,10 +20,11 @@ export default function StepSummary() {
             {values.participantFullName}
           </div>
           <div>
-            <span className="text-white/45">Wiek:</span> {values.participantAge}
+            <span className="text-white/45">Grupa:</span> {participantTypeLabel}
           </div>
           <div>
-            <span className="text-white/45">Poziom:</span> {values.participantLevel}
+            <span className="text-white/45">Wiek:</span>{" "}
+            {values.participantType === "adult" ? "Nie dotyczy" : values.participantAge}
           </div>
         </div>
       </section>
@@ -58,12 +62,12 @@ export default function StepSummary() {
               <div>
                 <div className="font-medium text-white">{item.classTypeName}</div>
                 <div className="text-sm text-white/55">
-                  {item.locationName} · {item.dayLabel}, {item.timeLabel}
+                  {item.locationName} • {item.timeLabel}
                 </div>
               </div>
 
               <div className="font-semibold text-[#f07ea4]">
-                {item.price} zł
+                {item.price.toFixed(2).replace(".", ",")} zł
               </div>
             </div>
           ))}
@@ -71,7 +75,9 @@ export default function StepSummary() {
 
         <div className="mt-5 flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.04] p-4">
           <span className="text-sm text-white/60">Razem</span>
-          <span className="font-semibold text-white">{total} zł / mies.</span>
+          <span className="font-semibold text-white">
+            {total.toFixed(2).replace(".", ",")} zł / mies.
+          </span>
         </div>
       </section>
     </div>
