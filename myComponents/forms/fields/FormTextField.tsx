@@ -29,7 +29,7 @@ export default function FormTextField({
   registration,
   error,
   disabled = false,
-  wrapperClassName = "flex flex-col gap-2.5",
+  wrapperClassName = "flex flex-col gap-2.5 ",
 }: FormTextFieldProps) {
   const errorId = error ? `${id}-error` : undefined;
 
@@ -57,14 +57,14 @@ export default function FormTextField({
         </InputGroupAddon>
       </InputGroup>
 
-      {error && (
-        <span
-          id={errorId}
-          className="pl-1 text-xs text-red-600 dark:text-red-400"
-        >
-          {error.message}
-        </span>
-      )}
+      <span
+        id={errorId}
+        className={`min-h-5 pl-1 text-xs text-red-600 dark:text-red-400 ${
+          error ? "visible" : "invisible"
+        }`}
+      >
+        {error?.message || "\u00A0"}
+      </span>
     </Field>
   );
 }

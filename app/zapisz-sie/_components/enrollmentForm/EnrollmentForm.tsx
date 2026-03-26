@@ -12,10 +12,10 @@ import {
 import FormStatusMessage from "@/myComponents/forms/shared/FormStatusMessage";
 
 import EnrollmentStepHeader from "./EnrollmentStepHeader";
+import EnrollmentStepContent from "./EnrollmentStepContent";
 import EnrollmentStepLayout from "./EnrollmentStepLayout";
 import EnrollmentStepNavigation from "./EnrollmentStepNavigation";
 import StepClassesSelection from "./steps/StepClassesSelection";
-import StepConsents from "./steps/StepConsents";
 import StepContactDetails from "./steps/StepContactDetails";
 import StepParticipant from "./steps/StepParticipant";
 import StepSummary from "./steps/StepsSummary";
@@ -29,13 +29,13 @@ const defaultValues: EnrollmentFormData = {
   participantFullName: "",
   participantType: "youth",
   participantAge: "",
+  selectedLocationId: "koszalin",
   selectedClasses: [],
   parentFullName: "",
   email: "",
   phone: "",
   notes: "",
-  termsAccepted: false,
-  privacyAccepted: false,
+  consentsAccepted: false,
 };
 
 const steps = [
@@ -65,18 +65,11 @@ const steps = [
   },
   {
     navLabel: "Podsumowanie",
-    title: "Sprawdź, czy wszystko się zgadza",
+    title: "Sprawdź dane, zgody i wyślij",
     description:
-      "Na tym etapie możesz jeszcze raz sprawdzić wybrane zajęcia, terminy i łączny koszt.",
+      "Na tym etapie możesz jeszcze raz sprawdzić wybrane zajęcia, dane kontaktowe oraz zaakceptować wymagane zgody.",
     imageSrc: "/assets/images/enrollmentForm/checking.svg",
     imageAlt: "Ilustracja podsumowania zgłoszenia",
-  },
-  {
-    navLabel: "Zgody",
-    title: "Zgody i wysyłka",
-    description: "Zaakceptuj wymagane zgody i wyślij formularz zgłoszeniowy.",
-    imageSrc: "/assets/images/enrollmentForm/confirmed.svg",
-    imageAlt: "Ilustracja potwierdzenia zapisu",
   },
 ];
 
@@ -107,15 +100,14 @@ export default function EnrollmentForm() {
           "participantFullName",
           "participantType",
           "participantAge",
+          "selectedLocationId",
         ]);
       case 1:
         return trigger(["selectedClasses"]);
       case 2:
         return trigger(["parentFullName", "email", "phone", "notes"]);
       case 3:
-        return true;
-      case 4:
-        return trigger(["termsAccepted", "privacyAccepted"]);
+        return trigger(["consentsAccepted"]);
       default:
         return true;
     }
@@ -160,7 +152,6 @@ export default function EnrollmentForm() {
 
   const step = steps[currentStep];
   const isLastStep = currentStep === steps.length - 1;
-  const shouldShowIllustration = currentStep !== 1;
   const isClassesStep = currentStep === 1;
 
   return (
@@ -169,8 +160,8 @@ export default function EnrollmentForm() {
         illustration={
           isClassesStep ? (
             <StepClassesSelection mode="configurator" />
-          ) : shouldShowIllustration ? (
-            <div className="relative mx-auto aspect-[1.05] w-full">
+          ) : (
+            <div className="relative mx-auto hidden aspect-[1.5] w-full lg:block">
               <Image
                 alt={step.imageAlt}
                 src={step.imageSrc}
@@ -180,44 +171,45 @@ export default function EnrollmentForm() {
                 priority
               />
             </div>
-          ) : undefined
+          )
         }
         illustrationContainerClassName={
           isClassesStep ? "items-start justify-stretch p-5 md:p-6" : undefined
         }
         illustrationContentClassName={isClassesStep ? "max-w-none" : undefined}
       >
-        <div className="flex h-full flex-col gap-6">
-          <EnrollmentStepHeader currentStep={currentStep} steps={steps} />
+        <EnrollmentStepContent>
+          <div className="flex h-full flex-col justify-between border-2 border-yellow  ">
+            <EnrollmentStepHeader currentStep={currentStep} steps={steps} />
 
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-1 flex-col gap-6"
-            noValidate
-          >
-            {submitStatus.type && (
-              <FormStatusMessage
-                type={submitStatus.type}
-                message={submitStatus.message}
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="flex  flex-1 flex-col "
+              noValidate
+            >
+              {submitStatus.type && (
+                <FormStatusMessage
+                  type={submitStatus.type}
+                  message={submitStatus.message}
+                />
+              )}
+
+              {currentStep === 0 && <StepParticipant />}
+              {currentStep === 1 && <StepClassesSelection mode="summary" />}
+              {currentStep === 2 && <StepContactDetails />}
+              {currentStep === 3 && <StepSummary showConsents />}
+
+              <EnrollmentStepNavigation
+                currentStep={currentStep}
+                totalSteps={steps.length}
+                isSubmitting={isSubmitting}
+                onPrev={handlePrev}
+                onNext={handleNext}
+                isLastStep={isLastStep}
               />
-            )}
-
-            {currentStep === 0 && <StepParticipant />}
-            {currentStep === 1 && <StepClassesSelection mode="summary" />}
-            {currentStep === 2 && <StepContactDetails />}
-            {currentStep === 3 && <StepSummary />}
-            {currentStep === 4 && <StepConsents />}
-
-            <EnrollmentStepNavigation
-              currentStep={currentStep}
-              totalSteps={steps.length}
-              isSubmitting={isSubmitting}
-              onPrev={handlePrev}
-              onNext={handleNext}
-              isLastStep={isLastStep}
-            />
-          </form>
-        </div>
+            </form>
+          </div>
+        </EnrollmentStepContent>
       </EnrollmentStepLayout>
     </FormProvider>
   );

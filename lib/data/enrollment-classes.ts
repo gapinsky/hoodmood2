@@ -19,12 +19,13 @@ export type EnrollmentClassItem = {
 type EnrollmentLocationOption = {
   id: EnrollmentLocationId;
   label: string;
+  locativeLabel: string;
 };
 
 export const enrollmentLocationOptions: EnrollmentLocationOption[] = [
-  { id: "koszalin", label: "Koszalin" },
-  { id: "polanow", label: "Polanów" },
-  { id: "bialy-bor", label: "Biały Bór" },
+  { id: "koszalin", label: "Koszalin", locativeLabel: "Koszalinie" },
+  { id: "polanow", label: "Polanów", locativeLabel: "Polanowie" },
+  { id: "bialy-bor", label: "Biały Bór", locativeLabel: "Białym Borze" },
 ];
 
 const parseAge = (value: string) => {

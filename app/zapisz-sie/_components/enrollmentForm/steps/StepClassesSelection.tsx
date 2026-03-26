@@ -1,5 +1,6 @@
 import { useFieldArray, useFormContext } from "react-hook-form";
 
+import { enrollmentLocationOptions } from "@/lib/data/enrollment-classes";
 import type {
   EnrollmentFormData,
   SelectedClassItem,
@@ -29,13 +30,34 @@ export default function StepClassesSelection({
   const items = (watch("selectedClasses") as SelectedClassItem[]) ?? [];
   const participantType = watch("participantType");
   const participantAge = watch("participantAge");
+  const selectedLocationId = watch("selectedLocationId");
+
+  const selectedLocation =
+    enrollmentLocationOptions.find(
+      (location) => location.id === selectedLocationId,
+    ) ?? null;
+
+  const selectedLocationLocativeLabel =
+    selectedLocation?.locativeLabel ?? "wybranej lokalizacji";
+
+  const availabilityLabel =
+    participantType === "adult"
+      ? `Zajęcia w ${selectedLocationLocativeLabel} dla dorosłych.`
+      : `Zajęcia w ${selectedLocationLocativeLabel} dla ${
+          participantAge ? `${participantAge} latków.` : "wybranego wieku."
+        }`;
 
   const configuratorContent = (
     <div className="space-y-4">
+      <div className="text-md font-anton tracking-wide">
+        {availabilityLabel}
+      </div>
+
       <ClassConfigurator
         items={items}
         participantType={participantType}
         participantAge={participantAge}
+        selectedLocationId={selectedLocationId}
         onAdd={(item) => append(item)}
       />
 
@@ -58,7 +80,7 @@ export default function StepClassesSelection({
   }
 
   return (
-    <div className="grid grid-cols-1 gap-6 xl:grid-cols-[minmax(320px,0.9fr)_minmax(360px,1fr)] xl:items-start">
+    <div className="grid grid-cols-1 gap-6 xl:grid-cols-[minmax(320px,0.9fr)_minmax(360px,1fr)] xl:items-start ">
       {configuratorContent}
 
       <SelectedClassesPanel items={items} onRemove={remove} />

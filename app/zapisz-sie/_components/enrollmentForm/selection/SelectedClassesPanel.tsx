@@ -12,9 +12,9 @@ export default function SelectedClassesPanel({
   const total = items.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <aside className="flex min-w-0 flex-col rounded-[24px] border border-white/20 bg-white/[0.05] p-5 shadow-[0_20px_50px_rgba(0,0,0,0.24)] backdrop-blur-xl">
+    <aside className="flex min-w-0 flex-col rounded-[24px] border border-white/20 bg-white/[0.05] p-5 shadow-[0_20px_50px_rgba(0,0,0,0.24)] backdrop-blur-xl h-full">
       <div className="mb-6 flex items-center justify-between gap-4">
-        <h3 className="font-[var(--anton)] text-2xl leading-none text-white md:text-3xl">
+        <h3 className="font-[var(--anton)] text-lg  tracking-wide text-white md:text-xl">
           Moje zajęcia
         </h3>
         <span className="text-xs uppercase tracking-[0.14em] text-white/45">
@@ -23,15 +23,18 @@ export default function SelectedClassesPanel({
       </div>
 
       {items.length === 0 ? (
-        <div className="rounded-2xl border border-dashed border-white/10 px-4 py-6 text-sm leading-7 text-white/50">
-          Nie dodano jeszcze żadnych zajęć. Wybierz lokalizację i dodaj pozycje
-          z listy po lewej stronie.
+        <div className="rounded-2xl border border-dashed border-white/10 px-4 py-6 text-sm leading-7 text-white/50 text-center">
+          Nie wybrałeś żadnych zajęć. Wybierz z listy zajęcia, które Cię
+          interesują, aby przejść dalej.
         </div>
       ) : (
-        <div className="space-y-3">
+        <div className="space-y-3  max-h-[250px] overflow-y-scroll ">
           {items.map((item, index) => (
-            <div key={item.clientId} className="border-b border-white/15 pb-3">
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <div
+              key={item.clientId}
+              className="border-b border-white/15 pb-3 last:border-0"
+            >
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between pr-4">
                 <button
                   type="button"
                   onClick={() => onRemove(index)}
@@ -56,17 +59,15 @@ export default function SelectedClassesPanel({
         </div>
       )}
 
-      <div className="mt-auto pt-6">
+      <div className="mt-auto ">
         <div className="flex flex-col gap-2 border-t border-white/20 pt-4 sm:flex-row sm:items-end sm:justify-between">
-          <p className="text-xl font-semibold text-white sm:text-2xl">
-            Do zapłaty
-          </p>
+          <p className="text-lg font-semibold  md:text-xl">Razem:</p>
 
           <div className="sm:text-right">
-            <p className="text-2xl font-semibold text-white sm:text-3xl">
-              {total.toFixed(2).replace(".", ",")} zł
+            <p className="text-lg font-semibold  md:text-xl">
+              {total.toFixed(2).replace(".", ",")} zł{" "}
+              <span className="opacity-50 text-sm"> /miesięcznie</span>
             </p>
-            <p className="text-sm text-white/45">/miesiąc</p>
           </div>
         </div>
       </div>

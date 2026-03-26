@@ -12,7 +12,7 @@ type FormTextareaFieldProps = {
   id: string;
   label: string;
   placeholder: string;
-  icon: LucideIcon;
+  icon?: LucideIcon;
   registration: UseFormRegisterReturn;
   error?: FieldError;
   disabled?: boolean;
@@ -50,20 +50,21 @@ export default function FormTextareaField({
           aria-describedby={error ? errorId : undefined}
           {...registration}
         />
-        <InputGroupAddon align="block-start" className="border-b">
-          <Icon className="text-black/35 dark:text-white/35" />
-        </InputGroupAddon>
+        {Icon ? (
+          <InputGroupAddon align="block-start" className="border-b">
+            <Icon className="text-black/35 dark:text-white/35" />
+          </InputGroupAddon>
+        ) : null}
       </InputGroup>
 
-      {error && (
-        <span
-          id={errorId}
-          className="pl-1 text-xs text-red-600 dark:text-red-400"
-        >
-          {" "}
-          {error.message}{" "}
-        </span>
-      )}
+      <span
+        id={error ? errorId : undefined}
+        className={`min-h-5 pl-1 text-xs text-red-600 dark:text-red-400 ${
+          error ? "visible" : "invisible"
+        }`}
+      >
+        {error?.message || "\u00A0"}
+      </span>
     </Field>
   );
 }

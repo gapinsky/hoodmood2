@@ -49,14 +49,14 @@ export default function FormCheckboxField<T extends FieldValues>({
           {label}
         </FieldLabel>
       </Field>
-      {error && (
-        <span
-          id={errorId}
-          className="pl-1 text-xs text-red-600 dark:text-red-400"
-        >
-          {error.message}
-        </span>
-      )}
+      <span
+        id={errorId}
+        className={`min-h-5 pl-1 text-xs text-red-600 dark:text-red-400 ${
+          error ? "visible" : "invisible"
+        }`}
+      >
+        {error?.message || "\u00A0"}
+      </span>
     </FieldGroup>
   );
 }

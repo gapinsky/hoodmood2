@@ -12,9 +12,9 @@ export default function EnrollmentStepLayout({
   children,
 }: EnrollmentStepLayoutProps) {
   return (
-    <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] shadow-[0_20px_60px_rgba(0,0,0,0.24)] backdrop-blur-xl">
+    <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] shadow-[0_20px_60px_rgba(0,0,0,0.24)] backdrop-blur-xl ">
       <div
-        className={`grid grid-cols-1 gap-8 p-5 md:p-8 xl:items-stretch ${
+        className={`grid grid-cols-1 gap-8 p-5 md:p-8 xl:items-stretch  ${
           illustration
             ? "xl:grid-cols-[minmax(280px,0.95fr)_minmax(0,1.05fr)]"
             : "xl:grid-cols-1"
@@ -22,7 +22,7 @@ export default function EnrollmentStepLayout({
       >
         {illustration ? (
           <div
-            className={`relative flex min-h-[260px] items-center justify-center rounded-[24px] bg-white/[0.03] p-6 ${
+            className={`order-2 relative flex min-h-[260px] items-center justify-center rounded-[24px] bg-white/[0.03] p-6 lg:order-1 ${
               illustrationContainerClassName ?? ""
             }`}
           >
@@ -37,7 +37,9 @@ export default function EnrollmentStepLayout({
           </div>
         ) : null}
 
-        <div className="flex min-h-full flex-col">{children}</div>
+        <div className="order-1 flex min-h-full flex-col lg:order-2  ">
+          {children}
+        </div>
       </div>
     </div>
   );

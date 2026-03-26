@@ -28,6 +28,9 @@ export const enrollmentSchema = z
       message: "Wybierz grupę wiekową uczestnika.",
     }),
     participantAge: z.string(),
+    selectedLocationId: z.enum(["koszalin", "polanow", "bialy-bor"], {
+      message: "Wybierz lokalizację.",
+    }),
     selectedClasses: z
       .array(selectedClassSchema)
       .min(1, "Wybierz co najmniej jedne zajęcia."),
@@ -41,8 +44,7 @@ export const enrollmentSchema = z
     email: z.string().email("Podaj poprawny adres e-mail."),
     phone: z.string().min(9, "Podaj poprawny numer telefonu."),
     notes: z.string().optional(),
-    termsAccepted: z.boolean(),
-    privacyAccepted: z.boolean(),
+    consentsAccepted: z.boolean(),
   })
   .superRefine((data, ctx) => {
     if (data.participantType === "youth") {
@@ -71,19 +73,11 @@ export const enrollmentSchema = z
       }
     }
 
-    if (!data.termsAccepted) {
+    if (!data.consentsAccepted) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "Musisz zaakceptować regulamin.",
-        path: ["termsAccepted"],
-      });
-    }
-
-    if (!data.privacyAccepted) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        message: "Musisz zaakceptować politykę prywatności.",
-        path: ["privacyAccepted"],
+        message: "Musisz zaakceptować regulamin i politykę prywatności.",
+        path: ["consentsAccepted"],
       });
     }
   });

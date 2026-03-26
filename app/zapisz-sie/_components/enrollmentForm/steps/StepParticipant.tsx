@@ -7,9 +7,24 @@ import {
   InputGroupAddon,
   InputGroupInput,
 } from "@/components/ui/input-group";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { enrollmentLocationOptions } from "@/lib/data/enrollment-classes";
 import type { EnrollmentFormData } from "@/lib/schemas/enrollmentSchema";
 import FormTextField from "@/myComponents/forms/fields/FormTextField";
-import { inputStyles } from "@/myComponents/pages/pricing/PricingFilterBar";
+import {
+  inputStyles,
+  selectContentStyles,
+  selectItemStyles,
+  selectTriggerStyles,
+} from "@/myComponents/pages/pricing/PricingFilterBar";
+
 import { sanitizeNameInput } from "../utils";
 
 const participantTypeOptions = [
@@ -19,7 +34,7 @@ const participantTypeOptions = [
   },
   {
     value: "adult" as const,
-    label: "Dorosły",
+    label: "Dorośli",
   },
 ];
 
@@ -33,11 +48,23 @@ export default function StepParticipant() {
 
   const participantType = watch("participantType");
   const participantAge = watch("participantAge");
+  const selectedLocationId = watch("selectedLocationId");
   const isYouthParticipant = participantType === "youth";
   const ageErrorId = errors.participantAge ? "participant-age-error" : undefined;
+  const locationErrorId = errors.selectedLocationId
+    ? "participant-location-error"
+    : undefined;
+
+  const handleClassesReset = () => {
+    setValue("selectedClasses", [], {
+      shouldDirty: true,
+      shouldTouch: true,
+      shouldValidate: false,
+    });
+  };
 
   return (
-    <div className="grid grid-cols-1 gap-6">
+    <div className="grid grid-cols-1 gap-4">
       <FormTextField
         id="participant-full-name"
         label="Imię i nazwisko uczestnika"
@@ -52,12 +79,12 @@ export default function StepParticipant() {
         disabled={isSubmitting}
       />
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2.5">
         <span className="pl-1 text-xs font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55">
-          Wiek uczestnika
+          Grupa uczestnika
         </span>
 
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-8">
           {participantTypeOptions.map((option) => {
             const isActive = participantType === option.value;
 
@@ -71,6 +98,7 @@ export default function StepParticipant() {
                     shouldTouch: true,
                     shouldValidate: true,
                   });
+                  handleClassesReset();
 
                   if (option.value === "adult") {
                     setValue("participantAge", "", {
@@ -100,57 +128,117 @@ export default function StepParticipant() {
           })}
         </div>
 
-        {errors.participantType && (
-          <span className="pl-1 text-xs text-red-600 dark:text-red-400">
-            {errors.participantType.message}
-          </span>
-        )}
+        <span
+          className={`min-h-5 pl-1 text-xs text-red-600 dark:text-red-400 ${
+            errors.participantType ? "visible" : "invisible"
+          }`}
+        >
+          {errors.participantType?.message || "\u00A0"}
+        </span>
       </div>
 
-      <Field className={`flex flex-col gap-2.5 ${!isYouthParticipant ? "opacity-50" : ""}`}>
-        <FieldLabel
-          htmlFor="participant-age"
-          className="pl-1 text-xs font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
+        <Field
+          className={`flex flex-col gap-2.5 ${!isYouthParticipant ? "opacity-50" : ""}`}
         >
-          Wiek uczestnika
-        </FieldLabel>
+          <FieldLabel
+            htmlFor="participant-age"
+            className="pl-1 text-xs font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
+          >
+            Wiek uczestnika
+          </FieldLabel>
 
-        <InputGroup className={inputStyles}>
-          <InputGroupInput
-            id="participant-age"
-            type="text"
-            inputMode="numeric"
-            pattern="[0-9]*"
-            placeholder={isYouthParticipant ? "Np. 8" : "Tylko dla dzieci i młodzieży"}
-            disabled={isSubmitting || !isYouthParticipant}
-            aria-invalid={!!errors.participantAge}
-            aria-describedby={ageErrorId}
-            value={participantAge}
-            {...register("participantAge", {
-              onChange: (event) => {
-                const value = event.target.value.replace(/\D/g, "").slice(0, 2);
-                setValue("participantAge", value, {
-                  shouldDirty: true,
-                  shouldTouch: true,
-                  shouldValidate: true,
-                });
-              },
-            })}
-          />
-          <InputGroupAddon>
-            <User className="text-black/35 dark:text-white/35" />
-          </InputGroupAddon>
-        </InputGroup>
+          <InputGroup className={inputStyles}>
+            <InputGroupInput
+              id="participant-age"
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9]*"
+              placeholder={isYouthParticipant ? "Np. 8" : "Tylko dla dzieci i młodzieży"}
+              disabled={isSubmitting || !isYouthParticipant}
+              aria-invalid={!!errors.participantAge}
+              aria-describedby={ageErrorId}
+              value={participantAge}
+              {...register("participantAge", {
+                onChange: (event) => {
+                  const value = event.target.value.replace(/\D/g, "").slice(0, 2);
+                  setValue("participantAge", value, {
+                    shouldDirty: true,
+                    shouldTouch: true,
+                    shouldValidate: true,
+                  });
+                  handleClassesReset();
+                },
+              })}
+            />
+            <InputGroupAddon>
+              <User className="text-black/35 dark:text-white/35" />
+            </InputGroupAddon>
+          </InputGroup>
 
-        {errors.participantAge && (
           <span
             id={ageErrorId}
-            className="pl-1 text-xs text-red-600 dark:text-red-400"
+            className={`min-h-5 pl-1 text-xs text-red-600 dark:text-red-400 ${
+              errors.participantAge ? "visible" : "invisible"
+            }`}
           >
-            {errors.participantAge.message}
+            {errors.participantAge?.message || "\u00A0"}
           </span>
-        )}
-      </Field>
+        </Field>
+
+        <Field className="flex flex-col gap-2.5">
+          <FieldLabel
+            htmlFor="participant-location"
+            className="pl-1 text-xs font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
+          >
+            Lokalizacja
+          </FieldLabel>
+
+          <Select
+            value={selectedLocationId}
+            onValueChange={(value) => {
+              setValue("selectedLocationId", value as EnrollmentFormData["selectedLocationId"], {
+                shouldDirty: true,
+                shouldTouch: true,
+                shouldValidate: true,
+              });
+              handleClassesReset();
+            }}
+            disabled={isSubmitting}
+          >
+            <SelectTrigger
+              id="participant-location"
+              aria-invalid={!!errors.selectedLocationId}
+              aria-describedby={locationErrorId}
+              className={`${selectTriggerStyles} w-full rounded-2xl border-white/10 bg-white/[0.06] text-white`}
+            >
+              <SelectValue placeholder="Wybierz lokalizację" />
+            </SelectTrigger>
+            <SelectContent className={selectContentStyles}>
+              <SelectGroup>
+                {enrollmentLocationOptions.map((location) => (
+                  <SelectItem
+                    key={location.id}
+                    value={location.id}
+                    className={selectItemStyles}
+                  >
+                    {location.label}
+                  </SelectItem>
+                ))}
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+
+          <span
+            id={locationErrorId}
+            className={`min-h-5 pl-1 text-xs text-red-600 dark:text-red-400 ${
+              errors.selectedLocationId ? "visible" : "invisible"
+            }`}
+          >
+            {errors.selectedLocationId?.message || "\u00A0"}
+          </span>
+        </Field>
+      </div>
     </div>
   );
 }

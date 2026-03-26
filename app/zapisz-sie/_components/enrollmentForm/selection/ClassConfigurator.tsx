@@ -1,4 +1,4 @@
-import { SearchIcon } from "lucide-react";
+import { Calendar, SearchIcon, User } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Field, FieldLabel } from "@/components/ui/field";
 import {
@@ -9,20 +9,17 @@ import {
 
 import {
   enrollmentClasses,
-  enrollmentLocationOptions,
   getClassAgeLabel,
   isAdultClass,
 } from "@/lib/data/enrollment-classes";
 import type { SelectedClassItem } from "@/lib/schemas/enrollmentSchema";
-import {
-  inputStyles,
-  selectTriggerStyles,
-} from "@/myComponents/pages/pricing/PricingFilterBar";
+import { inputStyles } from "@/myComponents/pages/pricing/PricingFilterBar";
 
 type ClassConfiguratorProps = {
   items: SelectedClassItem[];
   participantType: "youth" | "adult";
   participantAge: string;
+  selectedLocationId: "koszalin" | "polanow" | "bialy-bor";
   onAdd: (item: SelectedClassItem) => void;
 };
 
@@ -36,11 +33,9 @@ export default function ClassConfigurator({
   items,
   participantType,
   participantAge,
+  selectedLocationId,
   onAdd,
 }: ClassConfiguratorProps) {
-  const [locationId, setLocationId] = useState<"koszalin" | "polanow" | "bialy-bor">(
-    "koszalin",
-  );
   const [searchValue, setSearchValue] = useState("");
 
   const numericAge = Number.parseInt(participantAge, 10);
@@ -48,7 +43,7 @@ export default function ClassConfigurator({
 
   const filteredClasses = useMemo(() => {
     return enrollmentClasses.filter((item) => {
-      if (item.locationId !== locationId) {
+      if (item.locationId !== selectedLocationId) {
         return false;
       }
 
@@ -81,37 +76,17 @@ export default function ClassConfigurator({
 
       return true;
     });
-  }, [locationId, normalizedSearch, numericAge, participantType]);
+  }, [selectedLocationId, normalizedSearch, numericAge, participantType]);
 
   return (
     <div className="space-y-5">
       <div className="grid grid-cols-1 gap-4">
         <Field className="flex flex-col gap-2.5">
-          <FieldLabel className="pl-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55">
-            Lokalizacja
-          </FieldLabel>
-
-          <select
-            value={locationId}
-            onChange={(event) =>
-              setLocationId(event.target.value as "koszalin" | "polanow" | "bialy-bor")
-            }
-            className={`${selectTriggerStyles} w-full rounded-2xl border-white/10 bg-white/[0.06] px-4 text-white`}
-          >
-            {enrollmentLocationOptions.map((location) => (
-              <option key={location.id} value={location.id}>
-                {location.label}
-              </option>
-            ))}
-          </select>
-        </Field>
-
-        <Field className="flex flex-col gap-2.5">
           <FieldLabel
             htmlFor="enrollment-class-search"
             className="pl-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
           >
-            Wyszukaj zajęć
+            Wyszukaj zajęcia
           </FieldLabel>
 
           <InputGroup className={inputStyles}>
@@ -146,22 +121,28 @@ export default function ClassConfigurator({
             return (
               <article
                 key={item.id}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] p-5"
+                className="rounded-xl border border-white/10 bg-white/[0.03] p-5"
               >
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-                  <div className="min-w-0 space-y-3">
-                    <h3 className="text-lg font-semibold leading-7 text-white md:text-xl">
+                  <div className="min-w-0 ">
+                    <p className="text-md  leading-7 text-white font-semibold">
                       {item.name}
-                    </h3>
-                    <div className="space-y-1 text-sm text-white/55">
-                      <p>{ageLabel}</p>
-                      <p>{item.frequency}/miesiąc</p>
+                    </p>
+                    <div className="inline-flex items-center gap-4 text-xs text-white/55">
+                      <p className="inline-flex items-center gap-1">
+                        <User className="w-4" />
+                        {ageLabel}
+                      </p>
+                      <p className="inline-flex items-center gap-1">
+                        <Calendar className="w-4" />
+                        {item.frequency}x/tydzień
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex items-end justify-between gap-3 sm:min-w-[190px] sm:justify-end">
                     <div className="sm:text-right">
-                      <p className="text-lg font-semibold text-white">
+                      <p className="text-md font-semibold text-white">
                         {item.price.toFixed(2).replace(".", ",")} zł
                       </p>
                       <p className="text-xs text-white/45">miesięcznie</p>

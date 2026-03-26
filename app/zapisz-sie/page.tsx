@@ -14,8 +14,7 @@ export default function TermsAndConditions() {
           title={data.title}
           description={data.description}
         ></SectionContent>
-        <div className="grid grid-cols-1 border-2">
-          {/* <div className="relative w-full aspect-square h-fit ">
+        {/* <div className="relative w-full aspect-square h-fit ">
             <Image
               alt="image"
               src="/assets/images/enrollmentForm/target.svg"
@@ -23,8 +22,7 @@ export default function TermsAndConditions() {
               className="aspect-square max-w-[60%]   object-contain "
             />
           </div> */}
-          <EnrollmentForm />
-        </div>
+        <EnrollmentForm />
 
         <AnyQuestionsContact />
       </SectionContainer>
