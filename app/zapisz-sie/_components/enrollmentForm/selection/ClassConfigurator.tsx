@@ -1,12 +1,12 @@
 import { Calendar, SearchIcon, User } from "lucide-react";
 import { useMemo, useState } from "react";
+
 import { Field, FieldLabel } from "@/components/ui/field";
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
 } from "@/components/ui/input-group";
-
 import {
   enrollmentClasses,
   getClassAgeLabel,
@@ -79,33 +79,31 @@ export default function ClassConfigurator({
   }, [selectedLocationId, normalizedSearch, numericAge, participantType]);
 
   return (
-    <div className="space-y-5">
-      <div className="grid grid-cols-1 gap-4">
-        <Field className="flex flex-col gap-2.5">
-          <FieldLabel
-            htmlFor="enrollment-class-search"
-            className="pl-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
-          >
-            Wyszukaj zajęcia
-          </FieldLabel>
+    <div className="space-y-4 max-h-full">
+      <Field className="flex flex-col gap-2.5">
+        <FieldLabel
+          htmlFor="enrollment-class-search"
+          className="pl-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
+        >
+          Wyszukaj zajęcia
+        </FieldLabel>
 
-          <InputGroup className={inputStyles}>
-            <InputGroupInput
-              id="enrollment-class-search"
-              placeholder="Wpisz nazwę zajęć"
-              value={searchValue}
-              onChange={(event) => setSearchValue(event.currentTarget.value)}
-            />
-            <InputGroupAddon>
-              <SearchIcon className="text-black/35 dark:text-white/35" />
-            </InputGroupAddon>
-          </InputGroup>
-        </Field>
-      </div>
+        <InputGroup className={inputStyles}>
+          <InputGroupInput
+            id="enrollment-class-search"
+            placeholder="Wpisz nazwę zajęć"
+            value={searchValue}
+            onChange={(event) => setSearchValue(event.currentTarget.value)}
+          />
+          <InputGroupAddon>
+            <SearchIcon className="text-black/35 dark:text-white/35" />
+          </InputGroupAddon>
+        </InputGroup>
+      </Field>
 
-      <div className="max-h-[28rem] space-y-4 overflow-y-auto pr-1 sm:pr-2">
+      <div className="space-y-3 pr-1 md:max-h-[28rem] md:overflow-y-auto md:pr-2">
         {filteredClasses.length === 0 ? (
-          <div className="rounded-2xl border border-dashed border-white/10 bg-white/[0.03] px-5 py-8 text-sm leading-7 text-white/55">
+          <div className="rounded-2xl border border-dashed border-white/10 bg-white/[0.03] px-5 py-7 text-sm leading-7 text-white/55">
             Brak zajęć dla wybranej lokalizacji i filtrów. Zmień miasto, nazwę
             zajęć albo grupę wiekową uczestnika.
           </div>
@@ -121,28 +119,28 @@ export default function ClassConfigurator({
             return (
               <article
                 key={item.id}
-                className="rounded-xl border border-white/10 bg-white/[0.03] p-5"
+                className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 md:p-5"
               >
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-                  <div className="min-w-0 ">
-                    <p className="text-md  leading-7 text-white font-semibold">
+                  <div className="min-w-0 space-y-2">
+                    <p className="text-base font-semibold leading-6 text-white md:text-lg">
                       {item.name}
                     </p>
-                    <div className="inline-flex items-center gap-4 text-xs text-white/55">
+                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-white/55">
                       <p className="inline-flex items-center gap-1">
                         <User className="w-4" />
                         {ageLabel}
                       </p>
                       <p className="inline-flex items-center gap-1">
                         <Calendar className="w-4" />
-                        {item.frequency}x/tydzień
+                        {item.frequency}
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-end justify-between gap-3 sm:min-w-[190px] sm:justify-end">
                     <div className="sm:text-right">
-                      <p className="text-md font-semibold text-white">
+                      <p className="text-base font-semibold text-white md:text-lg">
                         {item.price.toFixed(2).replace(".", ",")} zł
                       </p>
                       <p className="text-xs text-white/45">miesięcznie</p>
@@ -165,7 +163,7 @@ export default function ClassConfigurator({
                         })
                       }
                       disabled={isAdded}
-                      className={`rounded-lg px-4 py-2 text-sm font-semibold transition ${
+                      className={`inline-flex min-h-10 items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold transition ${
                         isAdded
                           ? "cursor-not-allowed bg-white/10 text-white/45"
                           : "bg-[#ac4967] text-white hover:opacity-90"

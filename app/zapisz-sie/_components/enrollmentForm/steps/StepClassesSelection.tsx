@@ -49,9 +49,9 @@ export default function StepClassesSelection({
 
   const configuratorContent = (
     <div className="space-y-4">
-      <div className="text-md font-anton tracking-wide">
+      <p className="font-[var(--anton)] text-lg tracking-[0.02em] text-white md:text-xl">
         {availabilityLabel}
-      </div>
+      </p>
 
       <ClassConfigurator
         items={items}
@@ -80,9 +80,8 @@ export default function StepClassesSelection({
   }
 
   return (
-    <div className="grid grid-cols-1 gap-6 xl:grid-cols-[minmax(320px,0.9fr)_minmax(360px,1fr)] xl:items-start ">
+    <div className="grid grid-cols-1 gap-5 xl:grid-cols-[minmax(320px,0.92fr)_minmax(340px,1fr)] xl:items-start ">
       {configuratorContent}
-
       <SelectedClassesPanel items={items} onRemove={remove} />
     </div>
   );

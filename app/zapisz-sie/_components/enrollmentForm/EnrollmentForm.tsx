@@ -11,8 +11,8 @@ import {
 } from "@/lib/schemas/enrollmentSchema";
 import FormStatusMessage from "@/myComponents/forms/shared/FormStatusMessage";
 
-import EnrollmentStepHeader from "./EnrollmentStepHeader";
 import EnrollmentStepContent from "./EnrollmentStepContent";
+import EnrollmentStepHeader from "./EnrollmentStepHeader";
 import EnrollmentStepLayout from "./EnrollmentStepLayout";
 import EnrollmentStepNavigation from "./EnrollmentStepNavigation";
 import StepClassesSelection from "./steps/StepClassesSelection";
@@ -161,7 +161,7 @@ export default function EnrollmentForm() {
           isClassesStep ? (
             <StepClassesSelection mode="configurator" />
           ) : (
-            <div className="relative mx-auto hidden aspect-[1.5] w-full lg:block">
+            <div className="relative mx-auto hidden aspect-[1.2] w-full lg:block">
               <Image
                 alt={step.imageAlt}
                 src={step.imageSrc}
@@ -174,17 +174,19 @@ export default function EnrollmentForm() {
           )
         }
         illustrationContainerClassName={
-          isClassesStep ? "items-start justify-stretch p-5 md:p-6" : undefined
+          isClassesStep
+            ? "items-start justify-stretch p-4 md:p-5 lg:p-6"
+            : "p-4 md:p-5 lg:p-6"
         }
         illustrationContentClassName={isClassesStep ? "max-w-none" : undefined}
       >
         <EnrollmentStepContent>
-          <div className="flex h-full flex-col justify-between border-2 border-yellow  ">
+          <div className="flex h-full flex-col gap-5 md:gap-6">
             <EnrollmentStepHeader currentStep={currentStep} steps={steps} />
 
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="flex  flex-1 flex-col "
+              className="flex flex-1 flex-col gap-4 md:gap-5"
               noValidate
             >
               {submitStatus.type && (
@@ -194,10 +196,12 @@ export default function EnrollmentForm() {
                 />
               )}
 
-              {currentStep === 0 && <StepParticipant />}
-              {currentStep === 1 && <StepClassesSelection mode="summary" />}
-              {currentStep === 2 && <StepContactDetails />}
-              {currentStep === 3 && <StepSummary showConsents />}
+              <div className="flex-1">
+                {currentStep === 0 && <StepParticipant />}
+                {currentStep === 1 && <StepClassesSelection mode="summary" />}
+                {currentStep === 2 && <StepContactDetails />}
+                {currentStep === 3 && <StepSummary showConsents />}
+              </div>
 
               <EnrollmentStepNavigation
                 currentStep={currentStep}

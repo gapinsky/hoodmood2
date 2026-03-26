@@ -64,7 +64,7 @@ export default function StepParticipant() {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-4">
+    <div className="grid grid-cols-1 gap-4 md:gap-5">
       <FormTextField
         id="participant-full-name"
         label="Imię i nazwisko uczestnika"
@@ -84,7 +84,7 @@ export default function StepParticipant() {
           Grupa uczestnika
         </span>
 
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-8">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
           {participantTypeOptions.map((option) => {
             const isActive = participantType === option.value;
 
@@ -115,9 +115,9 @@ export default function StepParticipant() {
                     : "border-white/10 bg-white/[0.04] text-white/75 hover:border-white/25"
                 }`}
               >
-                <span>{option.label}</span>
+                <span className="font-medium">{option.label}</span>
                 <span
-                  className={`flex h-4 w-4 rounded-full border ${
+                  className={`flex h-4 w-4 rounded-full border transition ${
                     isActive
                       ? "border-[#f07ea4] bg-[#f07ea4]"
                       : "border-white/30 bg-transparent"
@@ -137,9 +137,11 @@ export default function StepParticipant() {
         </span>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <Field
-          className={`flex flex-col gap-2.5 ${!isYouthParticipant ? "opacity-50" : ""}`}
+          className={`flex flex-col gap-2.5 transition ${
+            !isYouthParticipant ? "opacity-55" : ""
+          }`}
         >
           <FieldLabel
             htmlFor="participant-age"
@@ -210,7 +212,7 @@ export default function StepParticipant() {
               id="participant-location"
               aria-invalid={!!errors.selectedLocationId}
               aria-describedby={locationErrorId}
-              className={`${selectTriggerStyles} w-full rounded-2xl border-white/10 bg-white/[0.06] text-white`}
+              className={`${selectTriggerStyles} min-h-10 w-full rounded-2xl border-white/10 bg-white/[0.06] px-4 text-white`}
             >
               <SelectValue placeholder="Wybierz lokalizację" />
             </SelectTrigger>

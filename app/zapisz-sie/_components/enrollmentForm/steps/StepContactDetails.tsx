@@ -1,8 +1,10 @@
 import { Mail, Phone, User } from "lucide-react";
 import { useFormContext } from "react-hook-form";
+
 import type { EnrollmentFormData } from "@/lib/schemas/enrollmentSchema";
 import FormTextField from "@/myComponents/forms/fields/FormTextField";
 import FormTextareaField from "@/myComponents/forms/fields/FormTextareaField";
+
 import { sanitizeNameInput } from "../utils";
 
 export default function StepContactDetails() {
@@ -12,8 +14,8 @@ export default function StepContactDetails() {
   } = useFormContext<EnrollmentFormData>();
 
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-      <div className="grid grid-cols-1 gap-0 md:grid-cols-2 md:gap-8 md:col-span-2 ">
+    <div className="grid grid-cols-1  ">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 ">
         <FormTextField
           id="parent-full-name"
           label="Imię i nazwisko opiekuna"
@@ -49,20 +51,17 @@ export default function StepContactDetails() {
         registration={register("phone")}
         error={errors.phone}
         disabled={isSubmitting}
-        wrapperClassName="flex flex-col gap-2.5 md:col-span-2"
       />
 
-      <div className="md:col-span-2 ">
-        <FormTextareaField
-          id="notes"
-          label="Dodatkowe informacje"
-          placeholder="Np. informacje zdrowotne, uwagi organizacyjne"
-          registration={register("notes")}
-          error={errors.notes}
-          disabled={isSubmitting}
-          textareaClassName="min-h-[100px]"
-        />
-      </div>
+      <FormTextareaField
+        id="notes"
+        label="Dodatkowe informacje"
+        placeholder="Np. informacje zdrowotne, uwagi organizacyjne"
+        registration={register("notes")}
+        error={errors.notes}
+        disabled={isSubmitting}
+        textareaClassName="min-h-[120px]"
+      />
     </div>
   );
 }
