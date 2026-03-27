@@ -45,7 +45,8 @@ export default function StepClassesSelection({
     <div className="space-y-4 h-150">
       <div className=" flex  gap-4">
         <p className="font-anton  opacity-95 md:text-lg tracking-wider inline-flex text-sm items-end gap-1 rounded-xl border border-white/10 bg-white/3 px-4 py-3 w-full justify-center md:items-center">
-          <User className="w-4 md:w-8 opacity-60" /> {participantAge} lat
+          <User className="w-4 md:w-8 opacity-60" />{" "}
+          {participantAge !== "" ? `${participantAge} lat` : "Dorosły"}
         </p>
         <p className="font-anton  opacity-95 md:text-lg tracking-wider inline-flex text-sm items-end gap-1 rounded-xl border border-white/10 bg-white/3 px-4 py-3 w-full justify-center md:items-center">
           <MapPin className="w-4 md:w-8 opacity-60" />

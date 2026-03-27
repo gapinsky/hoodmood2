@@ -44,7 +44,7 @@ const steps = [
     title: "Kogo chcesz zapisać?",
     description:
       "Podaj podstawowe informacje o uczestniku, abyśmy mogli przejść do kolejnych kroków zapisu.",
-    imageSrc: "/assets/images/enrollmentForm/people.svg",
+    imageSrc: "/assets/images/enrollmentForm/target.svg",
     imageAlt: "Uczestnicy zajęć podczas rozgrzewki",
   },
   {
@@ -60,7 +60,7 @@ const steps = [
     title: "Dane kontaktowe",
     description:
       "Podaj dane kontaktowe, abyśmy mogli potwierdzić zgłoszenie i przekazać szczegóły organizacyjne.",
-    imageSrc: "/assets/images/enrollmentForm/calendar.svg",
+    imageSrc: "/assets/images/enrollmentForm/contact_details.svg",
     imageAlt: "Ilustracja danych kontaktowych",
   },
   {
@@ -68,7 +68,7 @@ const steps = [
     title: "Sprawdź czy wszystko się zgadza",
     description:
       "Upewnij się, że wszystkie dane są poprawne. Jeśli wszystko jest w porządku, zaakceptuj regulamin i wyślij zgłoszenie. Czekamy na ciebie w studio!",
-    imageSrc: "/assets/images/enrollmentForm/checking.svg",
+    imageSrc: "/assets/images/enrollmentForm/summary.svg",
     imageAlt: "Ilustracja podsumowania zgłoszenia",
   },
 ];

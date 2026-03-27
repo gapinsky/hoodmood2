@@ -18,7 +18,7 @@ export default function StepContactDetails() {
       <div className="grid grid-cols-1  md:grid-cols-2 md:gap-8">
         <FormTextField
           id="parent-full-name"
-          label="Imię i nazwisko opiekuna"
+          label="Imię i nazwisko "
           placeholder="Wprowadź imię i nazwisko"
           icon={User}
           registration={register("parentFullName", {
