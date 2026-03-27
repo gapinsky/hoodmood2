@@ -28,7 +28,7 @@ export default function EnrollmentStepNavigation({
         Wstecz
       </button>
 
-      <div className="order-first text-center text-xs font-medium uppercase tracking-[0.14em] text-white/45 sm:order-none sm:text-sm sm:tracking-normal">
+      <div className="order-first text-center text-xs font-medium uppercase tracking-[0.14em] text-white/45 sm:order-0 sm:text-sm sm:tracking-normal">
         Krok {currentStep + 1} z {totalSteps}
       </div>
 

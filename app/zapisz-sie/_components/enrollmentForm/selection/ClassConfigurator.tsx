@@ -101,9 +101,9 @@ export default function ClassConfigurator({
         </InputGroup>
       </Field>
 
-      <div className="space-y-3 pr-1 md:max-h-[28rem] md:overflow-y-auto md:pr-2">
+      <div className="space-y-3 pr-1 md:max-h-112 md:overflow-y-auto md:pr-2">
         {filteredClasses.length === 0 ? (
-          <div className="rounded-2xl border border-dashed border-white/10 bg-white/[0.03] px-5 py-7 text-sm leading-7 text-white/55">
+          <div className="rounded-2xl border border-dashed border-white/10 bg-white/3 px-5 py-7 text-sm leading-7 text-white/55">
             Brak zajęć dla wybranej lokalizacji i filtrów. Zmień miasto, nazwę
             zajęć albo grupę wiekową uczestnika.
           </div>
@@ -119,7 +119,7 @@ export default function ClassConfigurator({
             return (
               <article
                 key={item.id}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 md:p-5"
+                className="rounded-2xl border border-white/10 bg-white/3 p-4 md:p-5"
               >
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                   <div className="min-w-0 space-y-2">
@@ -138,7 +138,7 @@ export default function ClassConfigurator({
                     </div>
                   </div>
 
-                  <div className="flex items-end justify-between gap-3 sm:min-w-[190px] sm:justify-end">
+                  <div className="flex items-end justify-between gap-3 sm:min-w-47.5 sm:justify-end">
                     <div className="sm:text-right">
                       <p className="text-base font-semibold text-white md:text-lg">
                         {item.price.toFixed(2).replace(".", ",")} zł

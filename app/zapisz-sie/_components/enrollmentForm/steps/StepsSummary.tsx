@@ -23,7 +23,7 @@ export default function StepSummary({
 
   return (
     <div className="flex h-full flex-col gap-4 md:gap-5 ">
-      <section className="rounded-xl border border-white/10 bg-white/[0.04] p-4 ">
+      <section className="rounded-xl border border-white/10 bg-white/4 p-4 ">
         {/* <h3 className="mb-3 text-base font-semibold text-white/95 xl:mb-0">
           Uczestnik
         </h3> */}

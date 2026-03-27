@@ -12,11 +12,9 @@ export default function SelectedClassesPanel({
   const total = items.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <aside className="flex min-w-0 flex-col rounded-[24px] border border-white/20 bg-white/[0.05]  p-4 shadow-[0_20px_50px_rgba(0,0,0,0.24)] backdrop-blur-xl md:p-5">
+    <aside className="flex min-w-0 flex-col rounded-[24px] border border-white/20 bg-white/5  p-4 shadow-[0_20px_50px_rgba(0,0,0,0.24)] backdrop-blur-xl ">
       <div className="mb-5 flex items-center justify-between gap-4">
-        <h3 className="font-[var(--anton)] text-lg font-semibold text-white ">
-          Wybrane zajęcia
-        </h3>
+        <h3 className="font-semibold opacity-85 text-lg  ">Wybrane zajęcia</h3>
         <span className="text-xs uppercase tracking-[0.14em] text-white/45">
           {items.length} wybrane
         </span>
