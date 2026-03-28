@@ -26,7 +26,7 @@ export type PricingPageContent = {
   tableData: PricingItem[];
 };
 
-export const tabs: TabItem[] = [
+export const koszalinPricingTabs: TabItem[] = [
   { label: "Zajęcia", href: "/cennik/koszalin/zajecia" },
   { label: "Pakiety zajęć", href: "/cennik/koszalin/pakiety-zajec" },
   {
@@ -34,7 +34,11 @@ export const tabs: TabItem[] = [
     href: "/cennik/koszalin/zajecia-indywidualne",
   },
 ];
-export const pricingContent: Record<PricingCategory, PricingPageContent> = {
+
+export const koszalinPricingContent: Record<
+  PricingCategory,
+  PricingPageContent
+> = {
   zajecia: {
     badge: "Cennik",
     title: "Cennik zajęć - Hoodmood Koszalin",
@@ -141,7 +145,7 @@ export const pricingContent: Record<PricingCategory, PricingPageContent> = {
         category: "adults",
       },
       {
-        name: "FEMININE FLOW",
+        name: "Feminine Flow",
         price: "180",
         frequency: "1",
         trending: false,
@@ -204,10 +208,10 @@ export const pricingContent: Record<PricingCategory, PricingPageContent> = {
     tableData: [
       {
         name: "Taniec dla 4–6 latków + balet",
-        price: "230 ",
+        price: "230",
         frequency: "2",
         frequencyDescription:
-          "Taniec dla 4-6 latków: 1 raz w tygodniu. Balet: 1 raz w tygodniu.",
+          "Taniec dla 4–6 latków: 1 raz w tygodniu. Balet: 1 raz w tygodniu.",
         trending: false,
         minAge: "4",
         maxAge: "6",
@@ -215,10 +219,10 @@ export const pricingContent: Record<PricingCategory, PricingPageContent> = {
       },
       {
         name: "Taniec dla 4–6 latków + akrobatyka",
-        price: "240 ",
+        price: "240",
         frequency: "2",
         frequencyDescription:
-          "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
+          "Taniec dla 4–6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
         trending: false,
         minAge: "4",
         maxAge: "6",
@@ -226,10 +230,10 @@ export const pricingContent: Record<PricingCategory, PricingPageContent> = {
       },
       {
         name: "Balet + akrobatyka",
-        price: "240 ",
+        price: "240",
         frequency: "1",
         frequencyDescription:
-          "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
+          "Balet: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
         trending: false,
         minAge: "",
         maxAge: "",
@@ -237,21 +241,21 @@ export const pricingContent: Record<PricingCategory, PricingPageContent> = {
       },
       {
         name: "Young Generation + akrobatyka",
-        price: "270 ",
+        price: "270",
         frequency: "1",
         frequencyDescription:
-          "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
+          "Young Generation: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
         trending: false,
         minAge: "7",
         maxAge: "9",
         category: "youngGeneration",
       },
       {
-        name: "Podstawa + KPOP/akrobatyka",
-        price: "320 ",
+        name: "Podstawa + K-POP/akrobatyka",
+        price: "320",
         frequency: "1",
         frequencyDescription:
-          "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
+          "Podstawa: 1 raz w tygodniu. K-POP lub akrobatyka: 1 raz w tygodniu.",
         trending: false,
         minAge: "",
         maxAge: "",
@@ -259,10 +263,10 @@ export const pricingContent: Record<PricingCategory, PricingPageContent> = {
       },
       {
         name: "Podstawa + choreo",
-        price: "320 ",
+        price: "320",
         frequency: "1",
         frequencyDescription:
-          "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
+          "Podstawa: 1 raz w tygodniu. Choreo: 1 raz w tygodniu.",
         trending: false,
         minAge: "",
         maxAge: "",
@@ -270,32 +274,32 @@ export const pricingContent: Record<PricingCategory, PricingPageContent> = {
       },
       {
         name: "Podstawa + choreo + taniec współczesny",
-        price: "380 ",
+        price: "380",
         frequency: "1",
         frequencyDescription:
-          "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
+          "Podstawa: 1 raz w tygodniu. Choreo: 1 raz w tygodniu. Taniec współczesny: 1 raz w tygodniu.",
         trending: false,
         minAge: "",
         maxAge: "",
         category: "foundation",
       },
       {
-        name: "Podstawa + taniec współczesny + KPOP + akrobatyka",
-        price: "420 ",
+        name: "Podstawa + taniec współczesny + K-POP + akrobatyka",
+        price: "420",
         frequency: "1",
         frequencyDescription:
-          "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
+          "Pakiet obejmuje podstawę, taniec współczesny, K-POP i akrobatykę zgodnie z grafikiem grupy.",
         trending: false,
         minAge: "",
         maxAge: "",
         category: "foundation",
       },
       {
-        name: "Podstawa + KPOP / akrobatyka / choreo open",
-        price: "330 ",
+        name: "Podstawa + K-POP / akrobatyka / choreo open",
+        price: "330",
         frequency: "1",
         frequencyDescription:
-          "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
+          "Podstawa: 1 raz w tygodniu + wybrane dodatkowe zajęcia zgodnie z grafikiem.",
         trending: false,
         minAge: "",
         maxAge: "",
@@ -306,7 +310,7 @@ export const pricingContent: Record<PricingCategory, PricingPageContent> = {
         price: "300",
         frequency: "1",
         frequencyDescription:
-          "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
+          "Taniec współczesny: 1 raz w tygodniu. Partnerowanie akro: 1 raz w tygodniu.",
         trending: false,
         minAge: "8",
         maxAge: "12",
@@ -317,7 +321,7 @@ export const pricingContent: Record<PricingCategory, PricingPageContent> = {
         price: "380",
         frequency: "2",
         frequencyDescription:
-          "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
+          "Pakiet obejmuje zajęcia tańca współczesnego i partnerowania akro zgodnie z grafikiem grupy.",
         trending: false,
         minAge: "13",
         maxAge: "18",
@@ -414,3 +418,59 @@ export const pricingContent: Record<PricingCategory, PricingPageContent> = {
     ],
   },
 };
+
+export const bialyBorPricingPageContent = {
+  badge: "Cennik",
+  title: "Cennik zajęć - Hoodmood Biały Bór",
+  description:
+    "Sprawdź aktualny cennik zajęć Hoodmood w Białym Borze. Prowadzimy regularne zajęcia taneczne dla dzieci oraz hip-hop dla dzieci i młodzieży. Opłaty rozliczane są miesięcznie.",
+};
+
+export const bialyBorPricingTableData: PricingItem[] = [
+  {
+    name: "Zajęcia taneczne",
+    price: "80",
+    frequency: "1x/tyg",
+    trending: false,
+    minAge: "4",
+    maxAge: "7",
+    category: "kidsDance",
+  },
+  {
+    name: "Hip-hop",
+    price: "80",
+    frequency: "1x/tyg",
+    trending: false,
+    minAge: "8",
+    maxAge: "13",
+    category: "hiphop",
+  },
+];
+
+export const polanowPricingPageContent = {
+  badge: "Cennik",
+  title: "Cennik zajęć - Hoodmood Polanów",
+  description:
+    "Sprawdź aktualny cennik zajęć Hoodmood w Polanowie. Prowadzimy zajęcia taneczne dla najmłodszych oraz hip-hop dla dzieci i młodzieży. Opłaty rozliczane są miesięcznie.",
+};
+
+export const polanowPricingTableData: PricingItem[] = [
+  {
+    name: "Taniec dla 4–6 latków",
+    price: "120",
+    frequency: "1x/tyg",
+    trending: false,
+    minAge: "4",
+    maxAge: "6",
+    category: "kidsDance",
+  },
+  {
+    name: "Hip-hop",
+    price: "150",
+    frequency: "1x/tyg",
+    trending: false,
+    minAge: "7",
+    maxAge: "14",
+    category: "hiphop",
+  },
+];

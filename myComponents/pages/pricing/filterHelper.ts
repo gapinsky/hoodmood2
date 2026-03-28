@@ -1,4 +1,4 @@
-import { PricingItem } from "@/app/cennik/koszalin/[category]/data";
+import type { PricingItem } from "@/data/pricingData";
 import { normalize } from "@/myComponents/pages/faq/faqFilter";
 
 type SortingValue = "default" | "ascending" | "descending" | "alphabetical";

@@ -1,6 +1,8 @@
-import { pricingContent } from "@/app/cennik/koszalin/[category]/data";
-import { pricingData as bialyBorPricingData } from "@/app/cennik/bialy-bor/data";
-import { pricingData as polanowPricingData } from "@/app/cennik/polanow/data";
+import {
+  bialyBorPricingTableData,
+  koszalinPricingContent,
+  polanowPricingTableData,
+} from "@/data/pricingData";
 
 type EnrollmentLocationId = "koszalin" | "polanow" | "bialy-bor";
 
@@ -8,6 +10,7 @@ export type EnrollmentClassItem = {
   id: string;
   locationId: EnrollmentLocationId;
   locationName: string;
+  type: "class" | "package";
   name: string;
   price: number;
   frequency: string;
@@ -39,21 +42,40 @@ const parsePrice = (value: string) => {
   return Number.isFinite(parsed) ? parsed : 0;
 };
 
-const koszalinClasses = pricingContent.zajecia.tableData.map((item, index) => ({
-  id: `koszalin-${item.category}-${index}`,
-  locationId: "koszalin" as const,
-  locationName: "Koszalin",
-  name: item.name,
-  price: parsePrice(item.price),
-  frequency: item.frequency,
-  minAge: parseAge(item.minAge),
-  maxAge: parseAge(item.maxAge),
-  category: item.category,
-}));
+const koszalinClasses = koszalinPricingContent.zajecia.tableData.map(
+  (item, index) => ({
+    id: `koszalin-${item.category}-${index}`,
+    locationId: "koszalin" as const,
+    locationName: "Koszalin",
+    type: "class" as const,
+    name: item.name,
+    price: parsePrice(item.price),
+    frequency: item.frequency,
+    minAge: parseAge(item.minAge),
+    maxAge: parseAge(item.maxAge),
+    category: item.category,
+  }),
+);
 
-const polanowClasses = polanowPricingData.map((item, index) => ({
+const koszalinPackages = koszalinPricingContent["pakiety-zajec"].tableData.map(
+  (item, index) => ({
+    id: `koszalin-package-${item.category}-${index}`,
+    locationId: "koszalin" as const,
+    locationName: "Koszalin",
+    type: "package" as const,
+    name: item.name,
+    price: parsePrice(item.price),
+    frequency: item.frequency,
+    minAge: parseAge(item.minAge),
+    maxAge: parseAge(item.maxAge),
+    category: item.category,
+  }),
+);
+
+const polanowClasses = polanowPricingTableData.map((item, index) => ({
   id: `polanow-${item.category}-${index}`,
   locationId: "polanow" as const,
+  type: "class" as const,
   locationName: "Polanów",
   name: item.name,
   price: parsePrice(item.price),
@@ -63,9 +85,10 @@ const polanowClasses = polanowPricingData.map((item, index) => ({
   category: item.category,
 }));
 
-const bialyBorClasses = bialyBorPricingData.map((item, index) => ({
+const bialyBorClasses = bialyBorPricingTableData.map((item, index) => ({
   id: `bialy-bor-${item.category}-${index}`,
   locationId: "bialy-bor" as const,
+  type: "class" as const,
   locationName: "Biały Bór",
   name: item.name,
   price: parsePrice(item.price),
@@ -77,6 +100,7 @@ const bialyBorClasses = bialyBorPricingData.map((item, index) => ({
 
 export const enrollmentClasses: EnrollmentClassItem[] = [
   ...koszalinClasses,
+  ...koszalinPackages,
   ...polanowClasses,
   ...bialyBorClasses,
 ];

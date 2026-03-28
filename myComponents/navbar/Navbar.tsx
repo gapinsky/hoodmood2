@@ -19,7 +19,7 @@ export default function Navbar() {
       className={cn(
         isOpen
           ? "bg-white dark:bg-[#1c1c1c] "
-          : "bg-white/80 dark:bg-black/42 shadow-[0_8px_30px_rgba(0,0,0,0.06)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.20)] ",
+          : "bg-white/50 dark:bg-black/42 shadow-[0_8px_30px_rgba(0,0,0,0.06)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.20)] ",
         "fixed inset-x-0 top-0 z-50   backdrop-blur-xl   ",
       )}
     >

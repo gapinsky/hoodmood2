@@ -1,6 +1,9 @@
 import { notFound } from "next/navigation";
+import {
+  koszalinPricingContent,
+  type PricingCategory,
+} from "@/data/pricingData";
 import PricingPage from "./PricingPage";
-import { pricingContent, type PricingCategory } from "./data";
 
 type Props = {
   params: Promise<{
@@ -9,7 +12,7 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  return Object.keys(pricingContent).map((category) => ({
+  return Object.keys(koszalinPricingContent).map((category) => ({
     category,
   }));
 }
@@ -17,7 +20,7 @@ export function generateStaticParams() {
 export default async function Page({ params }: Props) {
   const { category } = await params;
 
-  const content = pricingContent[category as PricingCategory];
+  const content = koszalinPricingContent[category as PricingCategory];
 
   if (!content) {
     notFound();

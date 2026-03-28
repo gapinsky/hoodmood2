@@ -7,7 +7,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { Info } from "lucide-react";
-import { PricingItem } from "@/app/cennik/koszalin/[category]/data";
+import type { PricingItem } from "@/data/pricingData";
 import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
 
 export type PricingTableProps = {

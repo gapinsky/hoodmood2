@@ -14,7 +14,7 @@ export default function Localizations() {
         title={data.title}
         description={data.description}
       />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-3">
         {localizations.map((item, id) => (
           <Card key={id}>
             <HoverCard

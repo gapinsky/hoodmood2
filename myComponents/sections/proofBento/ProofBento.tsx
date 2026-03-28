@@ -18,7 +18,7 @@ export default function ProofBento() {
         title={data.title}
         description={data.description}
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start pb-3">
         {featureCards.map((group, groupId) => (
           <div className="flex flex-col  gap-8  " key={groupId}>
             {group.map((featureCard) => (

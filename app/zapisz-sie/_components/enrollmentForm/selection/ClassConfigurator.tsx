@@ -1,5 +1,5 @@
 import { Calendar, SearchIcon, User } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { Field, FieldLabel } from "@/components/ui/field";
 import {
@@ -37,13 +37,27 @@ export default function ClassConfigurator({
   onAdd,
 }: ClassConfiguratorProps) {
   const [searchValue, setSearchValue] = useState("");
+  const [selectionMode, setSelectionMode] = useState<"class" | "package">(
+    "class",
+  );
 
   const numericAge = Number.parseInt(participantAge, 10);
   const normalizedSearch = normalizeText(searchValue.trim());
+  const packageModeAvailable = selectedLocationId === "koszalin";
+
+  useEffect(() => {
+    if (!packageModeAvailable && selectionMode === "package") {
+      setSelectionMode("class");
+    }
+  }, [packageModeAvailable, selectionMode]);
 
   const filteredClasses = useMemo(() => {
     return enrollmentClasses.filter((item) => {
       if (item.locationId !== selectedLocationId) {
+        return false;
+      }
+
+      if (item.type !== selectionMode) {
         return false;
       }
 
@@ -76,22 +90,60 @@ export default function ClassConfigurator({
 
       return true;
     });
-  }, [selectedLocationId, normalizedSearch, numericAge, participantType]);
+  }, [
+    selectedLocationId,
+    selectionMode,
+    normalizedSearch,
+    numericAge,
+    participantType,
+  ]);
 
   return (
     <div className="space-y-4 max-h-full">
+      <div className="grid grid-cols-2 gap-4">
+        <button
+          type="button"
+          onClick={() => setSelectionMode("class")}
+          className={` rounded-xl border px-4 py-2 text-sm font-semibold transition ${
+            selectionMode === "class"
+              ? "border-[#ac4967] bg-[#ac4967] text-white"
+              : "border-white/10 bg-white/3 text-white/70 hover:bg-white/6"
+          }`}
+        >
+          Zajęcia
+        </button>
+        <button
+          type="button"
+          onClick={() => packageModeAvailable && setSelectionMode("package")}
+          disabled={!packageModeAvailable}
+          className={` rounded-xl border px-4  py-2 text-sm font-semibold transition ${
+            selectionMode === "package"
+              ? "border-[#ac4967] bg-[#ac4967] text-white"
+              : "border-white/10 bg-white/3 text-white/70 hover:bg-white/6"
+          } ${!packageModeAvailable ? "cursor-not-allowed opacity-45" : ""}`}
+        >
+          Pakiety
+        </button>
+      </div>
+
       <Field className="flex flex-col gap-2.5">
         <FieldLabel
           htmlFor="enrollment-class-search"
           className="pl-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55"
         >
-          Wyszukaj zajęcia
+          {selectionMode === "package"
+            ? "Wyszukaj pakiety"
+            : "Wyszukaj zajęcia"}
         </FieldLabel>
 
         <InputGroup className={inputStyles}>
           <InputGroupInput
             id="enrollment-class-search"
-            placeholder="Wpisz nazwę zajęć"
+            placeholder={
+              selectionMode === "package"
+                ? "Wpisz nazwę pakietu"
+                : "Wpisz nazwę zajęć"
+            }
             value={searchValue}
             onChange={(event) => setSearchValue(event.currentTarget.value)}
           />
@@ -101,11 +153,12 @@ export default function ClassConfigurator({
         </InputGroup>
       </Field>
 
-      <div className="space-y-3 pr-1 md:max-h-112 md:overflow-y-auto md:pr-2">
+      <div className="space-y-3 pr-1 md:max-h-123 md:overflow-y-auto md:pr-2">
         {filteredClasses.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-white/10 bg-white/3 px-5 py-7 text-sm leading-7 text-white/55">
-            Brak zajęć dla wybranej lokalizacji i filtrów. Zmień miasto, nazwę
-            zajęć albo grupę wiekową uczestnika.
+            Brak {selectionMode === "package" ? "pakietów" : "zajęć"} dla
+            wybranej lokalizacji i filtrów. Zmień miasto, nazwę zajęć albo grupę
+            wiekową uczestnika.
           </div>
         ) : (
           filteredClasses.map((item) => {

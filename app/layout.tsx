@@ -21,7 +21,6 @@ const fontRoboto = Roboto_Condensed({
   fallback: ["system-ui", "Segoe UI", "Arial"],
 });
 
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://hoodmood.vercel.app"),
   title: {
@@ -69,7 +68,16 @@ export default function RootLayout({
 
           <video
             src="/assets/images/bgVideo.mp4"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover hidden dark:block"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+          />
+          <video
+            src="/assets/images/bgVideoWhite.mp4"
+            className="absolute inset-0 h-full w-full object-cover dark:hidden"
             autoPlay
             muted
             loop
@@ -77,7 +85,7 @@ export default function RootLayout({
             preload="auto"
           />
 
-          {/* <div className="absolute inset-0 bg-white/70 dark:bg-black/30" /> */}
+          <div className="absolute inset-0 bg-white/50 dark:bg-black/30" />
         </div>
         <NextTopLoader
           color="#ac4967"

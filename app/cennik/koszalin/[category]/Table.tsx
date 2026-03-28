@@ -1,11 +1,11 @@
 "use client";
 
 import { useMemo } from "react";
+import type { PricingItem } from "@/data/pricingData";
 import { filterAndSortPricingData } from "@/myComponents/pages/pricing/filterHelper";
 import PricingFilterBar from "@/myComponents/pages/pricing/PricingFilterBar";
 import { usePricingFilters } from "@/myComponents/pages/pricing/PricingFiltersProvider";
 import PricingTable from "@/myComponents/pages/pricing/PricingTable";
-import type { PricingItem } from "./data";
 
 type TableProps = {
   data: PricingItem[];

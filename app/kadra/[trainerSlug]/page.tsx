@@ -112,7 +112,7 @@ export default async function TrainerPage({ params }: PageProps) {
 
             <div className="flex flex-col justify-between ">
               <div>
-                <h1 className=" text-3xl ">{trainer.name}</h1>
+                <h1 className=" text-3xl font-anton">{trainer.name}</h1>
 
                 <p className="mt-3 text-base text-neutral-400 sm:text-lg">
                   {trainer.role}
