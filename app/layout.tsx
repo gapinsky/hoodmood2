@@ -21,6 +21,7 @@ const fontRoboto = Roboto_Condensed({
   fallback: ["system-ui", "Segoe UI", "Arial"],
 });
 
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://hoodmood.vercel.app"),
   title: {
@@ -28,17 +29,24 @@ export const metadata: Metadata = {
     template: "%s | Hoodmood",
   },
   description:
-    "Hoodmood to szkoła tańca i akrobatyki dla dzieci, młodzieży i dorosłych.",
+    "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    siteName: "Hoodmood",
-    locale: "pl_PL",
     type: "website",
+    locale: "pl_PL",
+    siteName: "Hoodmood",
+    title: "Hoodmood | Szkoła tańca i akrobatyki",
+    description:
+      "Szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze.",
+    url: "/",
   },
   twitter: {
     card: "summary_large_image",
+    title: "Hoodmood | Szkoła tańca i akrobatyki",
+    description:
+      "Szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze.",
   },
   robots: {
     index: true,
