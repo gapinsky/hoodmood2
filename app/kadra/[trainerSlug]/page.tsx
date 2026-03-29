@@ -105,8 +105,8 @@ export default async function TrainerPage({ params }: PageProps) {
                   ))}
                 </CarouselContent>
 
-                <CarouselPrevious className="left-4 bg-black/20 text-white hover:text-white hover:cursor-pointer  dark:bg-black/20   backdrop-blur-md hover:bg-black/30 dark:hover:bg-black/30" />
-                <CarouselNext className="right-4 bg-black/20 text-white hover:text-white hover:cursor-pointer  dark:bg-black/20  backdrop-blur-md hover:bg-black/30 dark:hover:bg-black/30" />
+                <CarouselPrevious className="left-4 hover:cursor-pointer" />
+                <CarouselNext className="right-4 hover:cursor-pointer" />
               </Carousel>
             </div>
 
@@ -114,26 +114,24 @@ export default async function TrainerPage({ params }: PageProps) {
               <div>
                 <h1 className=" text-3xl font-anton">{trainer.name}</h1>
 
-                <p className="mt-3 text-base text-neutral-400 sm:text-lg">
-                  {trainer.role}
-                </p>
+                <p className="mt-3 text-base  sm:text-lg">{trainer.role}</p>
 
-                <div className="flex gap-2">
+                <div className="flex gap-2 ">
                   {trainer.localizations.map((localization, id) => (
-                    <p className="mt-2 text-sm text-neutral-500" key={id}>
+                    <p className="mt-2 text-sm " key={id}>
                       {localization}
                     </p>
                   ))}
                 </div>
 
-                <p className="mt-8 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
+                <p className="mt-8 max-w-2xl text-base leading-8 opacity-70 sm:text-lg">
                   {trainer.description}
                 </p>
               </div>
 
               {trainer.styles?.length > 0 && (
                 <div className="mt-8">
-                  <h2 className="text-sm  uppercase tracking-wide text-muted-foreground">
+                  <h2 className="text-sm  uppercase tracking-wide ">
                     Prowadzone zajęcia
                   </h2>
 

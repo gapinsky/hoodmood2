@@ -115,7 +115,7 @@ export default function EnrollmentForm() {
 
     const timeout = window.setTimeout(() => {
       setShowConfetti(false);
-    }, 3000);
+    }, 5000);
 
     return () => window.clearTimeout(timeout);
   }, [showConfetti]);
@@ -187,7 +187,7 @@ export default function EnrollmentForm() {
       ) : null}
 
       <Dialog open={isSuccessDialogOpen} onOpenChange={setIsSuccessDialogOpen}>
-        <DialogContent className="relative max-w-md overflow-hidden text-foreground ring-1 ring-black/8 [&>button]:hidden dark:text-white dark:ring-white/10">
+        <DialogContent className="relative  max-w-md overflow-hidden text-foreground ring-1 ring-black/8 [&>button]:hidden dark:text-white dark:ring-white/10">
           <div className="relative z-10 flex flex-col items-center gap-5 px-2 py-4 text-center">
             <div className="relative h-36 w-full max-w-56">
               <Image
@@ -199,13 +199,14 @@ export default function EnrollmentForm() {
               />
             </div>
 
-            <DialogTitle className="text-2xl font-semibold leading-none text-foreground dark:text-white">
+            <DialogTitle className="text-2xl font-normal leading-none text-foreground dark:text-white">
               Sukces!
             </DialogTitle>
 
             <DialogDescription className="max-w-sm text-base leading-7 text-muted-foreground dark:text-white/85">
-              Dziękujemy za zapis na zajęcia. Wysłaliśmy Ci mail z
-              potwierdzeniem i najważniejszymi informacjami. Do zobaczenia
+              Dziękujemy za zapisanie na zajęcia. Wysłaliśmy Ci e-mail z
+              potwierdzeniem i najważniejszymi informacjami. Do zobaczenia na
+              sali!
             </DialogDescription>
 
             <Button

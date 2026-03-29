@@ -49,7 +49,7 @@ export default function EnrollmentStepHeader({
                 >
                   {index + 1}
                 </span>
-                <span className="truncate text-[11px] leading-none sm:text-xs hidden md:block">
+                <span className="truncate text-[11px] leading-none sm:text-xs hidden md:block lg:text-sm font-semibold">
                   {item.navLabel}
                 </span>
               </div>

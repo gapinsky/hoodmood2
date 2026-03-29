@@ -1,6 +1,6 @@
 export const data = {
-  badge: "aktualności",
-  title: "Najczęściej zadawane pytania",
+  badge: "aktualnosci",
+  title: "Najnowsze aktualnosci i social highlights",
   description:
-    "Sprawdź najnowsze aktualności szkoły tańca, informacje o zajęciach, wydarzeniach i warsztatach. Zobacz, co dzieje się na co dzień w naszej szkole tańca.",
+    "Sprawdz najnowsze aktualnosci szkoly tanca, zapowiedzi wydarzen i migawki z codziennego zycia studia. To miejsce jest przygotowane pod przyszle podlaczenie realnych postow i newsow.",
 };

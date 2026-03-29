@@ -24,20 +24,20 @@ const icons = [
 export default function Footer() {
   const date = new Date();
   return (
-    <footer className="  w-full text-sm border border-t-2">
+    <footer className="  w-full text-sm border-black/10 dark:border-white/20 border-t-2">
       <div className="max-w-380 mx-auto px-8 md:px-12 lg:px-16">
-        <div className="flex flex-col gap-8 md:flex-row  md:justify-between lg:items-stretch border-b py-4 lg:py-8 ">
+        <div className="flex flex-col gap-8 md:flex-row  md:justify-between lg:items-stretch border-b-2 border-black/10 dark:border-white/20 py-4 lg:py-8 ">
           {/* LEFT COL */}
           <div className="space-y-4">
             <Image src={logo} alt="logo" width={120} height={60} />
             <div className="space-y-1">
               <p className="font-semibold">Adres siedziby:</p>
-              <p>Zwycięstwa 115, 75-211 Koszalin</p>
+              <p className="opacity-80">Zwycięstwa 115, 75-211 Koszalin</p>
             </div>
             <div className="space-y-1">
               <p className="font-semibold">Kontakt:</p>
-              <p>+48 577 198 599</p>
-              <p>hoodmood.recepcja@gmail.com</p>
+              <p className="opacity-80">+48 577 198 599</p>
+              <p className="opacity-80">hoodmood.recepcja@gmail.com</p>
             </div>
             <div className="flex gap-4 pt-2">
               {icons.map((icon) => (
@@ -68,7 +68,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/oferta/koszalin"
-                      className={cn(a11y, "hover:underline")}
+                      className={cn(a11y, "hover:underline opacity-80")}
                     >
                       Oferta
                     </Link>
@@ -76,7 +76,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/grafik/koszalin"
-                      className={cn(a11y, "hover:underline")}
+                      className={cn(a11y, "hover:underline opacity-80")}
                     >
                       Grafik
                     </Link>
@@ -84,20 +84,23 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/cennik/koszalin"
-                      className={cn(a11y, "hover:underline")}
+                      className={cn(a11y, "hover:underline opacity-80")}
                     >
                       Cennik
                     </Link>
                   </li>
                   <li>
-                    <Link href="/kadra" className={cn(a11y, "hover:underline")}>
+                    <Link
+                      href="/kadra"
+                      className={cn(a11y, "hover:underline opacity-80")}
+                    >
                       Kadra
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/kolonie"
-                      className={cn(a11y, "hover:underline")}
+                      className={cn(a11y, "hover:underline opacity-80")}
                     >
                       Kolonie
                     </Link>
@@ -105,7 +108,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/aktualnosci"
-                      className={cn(a11y, "hover:underline")}
+                      className={cn(a11y, "hover:underline opacity-80")}
                     >
                       Aktualności
                     </Link>
@@ -119,7 +122,7 @@ export default function Footer() {
                     <a
                       href="/assets/pdf/standardy-ochrony-dzieci-przed-krzywdzeniem.pdf"
                       download={true}
-                      className={cn(a11y, "hover:underline")}
+                      className={cn(a11y, "hover:underline opacity-80")}
                     >
                       Standardy ochrony dzieci przed krzywdzeniem
                     </a>
@@ -127,7 +130,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="/assets/pdf/potwierdzenie-uczestnictwa-w-zajeciach.pdf"
-                      className={cn(a11y, "hover:underline")}
+                      className={cn(a11y, "hover:underline opacity-80")}
                       download={true}
                     >
                       Potwierdzenie uczestnictwa w zajęciach
@@ -136,7 +139,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="/assets/pdf/umowa-uczestnictwa.pdf"
-                      className={cn(a11y, "hover:underline")}
+                      className={cn(a11y, "hover:underline opacity-80")}
                       download={true}
                     >
                       Umowa uczestnictwa
@@ -145,7 +148,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="/assets/pdf/regulamin-studia-tanca-hoodmood.pdf"
-                      className={cn(a11y, "hover:underline")}
+                      className={cn(a11y, "hover:underline opacity-80")}
                       download={true}
                     >
                       Regulamin studia tańca Hoodmood

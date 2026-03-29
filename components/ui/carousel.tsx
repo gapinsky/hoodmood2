@@ -194,6 +194,9 @@ const CarouselItem = React.forwardRef<
 });
 CarouselItem.displayName = "CarouselItem";
 
+const carouselControlStyles =
+  "ui-focus-ring ui-surface-soft ui-outline z-10 border border-black/[0.08] bg-[linear-gradient(180deg,rgba(255,255,255,0.82),rgba(245,241,243,0.94))] text-[#21191d]/82 shadow-[0_8px_20px_rgba(0,0,0,0.12)] backdrop-blur-xl transition-colors duration-200 hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.94),rgba(241,236,239,0.98))] hover:text-[#21191d] disabled:opacity-55 dark:border-white/[0.10] dark:bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.06))] dark:text-white/82 dark:shadow-[0_8px_22px_rgba(0,0,0,0.28)] dark:hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.16),rgba(255,255,255,0.08))] dark:hover:text-white";
+
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
@@ -206,10 +209,11 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute  h-10 w-10 rounded-full",
+        "absolute h-10 w-10 rounded-full",
+        carouselControlStyles,
         orientation === "horizontal"
-          ? "-left-12 top-1/2 -translate-y-1/2"
-          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+          ? "-left-12 top-1/2 -translate-y-1/2 hover:-translate-y-1/2 active:-translate-y-1/2"
+          : "-top-12 left-1/2 -translate-x-1/2 rotate-90 hover:-translate-x-1/2 active:-translate-x-1/2",
         className,
       )}
       disabled={!canScrollPrev}
@@ -236,9 +240,10 @@ const CarouselNext = React.forwardRef<
       size={size}
       className={cn(
         "absolute h-10 w-10 rounded-full",
+        carouselControlStyles,
         orientation === "horizontal"
-          ? "-right-12 top-1/2 -translate-y-1/2"
-          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+          ? "-right-12 top-1/2 -translate-y-1/2 hover:-translate-y-1/2 active:-translate-y-1/2"
+          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90 hover:-translate-x-1/2 active:-translate-x-1/2",
         className,
       )}
       disabled={!canScrollNext}
