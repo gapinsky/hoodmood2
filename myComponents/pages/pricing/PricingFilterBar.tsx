@@ -154,13 +154,13 @@ export default function PricingFilterBar() {
 }
 
 export const inputStyles =
-  "  h-10 rounded-lg  border border-black/[0.08] dark:border-white/[0.10]   bg-white/80 dark:bg-white/[0.06]  text-[#21191d] dark:text-white/92  placeholder:text-black/35 dark:placeholder:text-white/32  shadow-[0_8px_20px_rgba(0,0,0,0.06),inset_0_1px_0_rgba(255,255,255,0.65)]  dark:shadow-[0_8px_20px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.08)]  backdrop-blur-lg  ring-1 ring-inset ring-black/[0.03] dark:ring-white/[0.05]  transition-all duration-300  focus-visible:outline-none  focus-visible:ring-4  focus-visible:ring-[#21191d]/20 dark:focus-visible:ring-white/85  focus-visible:ring-offset-2  focus-visible:ring-offset-white dark:focus-visible:ring-offset-[#21191d]";
+  "ui-field ui-outline h-10 rounded-lg text-foreground";
 export const selectTriggerStyles =
-  "    h-10 rounded-lg    border border-black/[0.08] dark:border-white/[0.10]    bg-white/80 dark:bg-white/[0.06]    text-[#21191d] dark:text-white/92    shadow-[0_8px_20px_rgba(0,0,0,0.06),inset_0_1px_0_rgba(255,255,255,0.65)]    dark:shadow-[0_8px_20px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.08)]    backdrop-blur-lg    ring-1 ring-inset ring-black/[0.03] dark:ring-white/[0.05]    transition-all duration-300    focus-visible:outline-none    focus-visible:ring-4    focus-visible:ring-[#21191d]/20 dark:focus-visible:ring-white/85    focus-visible:ring-offset-2    focus-visible:ring-offset-white dark:focus-visible:ring-offset-[#21191d]    px-5  ";
+  "ui-field ui-outline h-10 rounded-lg px-5 text-foreground";
 export const selectContentStyles =
-  "rounded-lg    border border-black/[0.08] dark:border-white/[0.10]    bg-white/92 dark:bg-[#21191d]/92    backdrop-blur-xl    shadow-[0_16px_40px_rgba(0,0,0,0.16)]    dark:shadow-[0_16px_40px_rgba(0,0,0,0.35)] p-2";
+  "ui-floating rounded-lg p-2";
 export const selectItemStyles =
-  "rounded-md    text-[#21191d] dark:text-white/92    focus:bg-black/[0.04] dark:focus:bg-white/[0.08]";
+  "rounded-md text-foreground focus:bg-accent";
 
 export const clearButtonStyles =
-  "inline-flex items-center justify-center size-8 h-10 rounded-md border border-black/[0.08] dark:border-white/[0.10] bg-white/80 dark:bg-white/[0.06] text-black/40 dark:text-white/80 hover:text-black/65 dark:hover:text-white/90 hover:bg-black/[0.05] dark:hover:bg-white/[0.08] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#21191d]/25 dark:focus-visible:ring-white/80 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-60 disabled:border-black/[0.05] dark:disabled:border-white/[0.06] disabled:bg-black/[0.03] dark:disabled:bg-white/[0.03] disabled:text-black/30 dark:disabled:text-white/30";
+  "ui-field ui-outline inline-flex size-8 h-10 items-center justify-center rounded-md text-black/40 transition-colors duration-200 hover:bg-accent hover:text-black/65 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/35 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-60 dark:text-white/80 dark:hover:text-white/90";

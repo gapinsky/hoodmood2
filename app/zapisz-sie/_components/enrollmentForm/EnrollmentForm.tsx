@@ -162,8 +162,8 @@ export default function EnrollmentForm() {
 
       reset(defaultValues);
       setCurrentStep(0);
-      setIsSuccessDialogOpen(true);
       setShowConfetti(true);
+      window.setTimeout(() => setIsSuccessDialogOpen(true), 0);
     } catch {
       toast.error("Nie udało się wysłać zgłoszenia. Spróbuj ponownie.");
     }
@@ -187,19 +187,7 @@ export default function EnrollmentForm() {
       ) : null}
 
       <Dialog open={isSuccessDialogOpen} onOpenChange={setIsSuccessDialogOpen}>
-        <DialogContent
-          className="
-      relative max-w-md overflow-hidden rounded-lg
-      border border-white/8
-      bg-white/4
-      text-white
-      shadow-md
-      backdrop-blur-sm
-      before:pointer-events-none before:absolute before:inset-0 before:rounded-lg
-      before:bg-linear-to-br before:from-white/10 before:via-white/4 before:to-transparent
-      [&>button]:hidden
-    "
-        >
+        <DialogContent className="relative max-w-md overflow-hidden text-white [&>button]:hidden">
           <div className="relative z-10 flex flex-col items-center gap-5 px-2 py-4 text-center">
             <div className="relative h-36 w-full max-w-56">
               <Image
@@ -216,19 +204,14 @@ export default function EnrollmentForm() {
             </DialogTitle>
 
             <DialogDescription className="max-w-sm text-base leading-7 text-white/85">
-              Dziękujemy za zaufanie. Wysłaliśmy Ci mail z potwierdzeniem i
-              najważniejszymi informacjami. Do zobaczenia na sali!
+              Dziękujemy za zapis na zajęcia. Wysłaliśmy Ci mail z
+              potwierdzeniem i najważniejszymi informacjami. Do zobaczenia
             </DialogDescription>
 
             <Button
               type="button"
               onClick={() => setIsSuccessDialogOpen(false)}
-              className="
-          min-w-32 border border-white/10
-          bg-white/10 text-white
-          backdrop-blur-sm
-          hover:bg-white/15
-        "
+              className="min-w-32 border border-white/10 bg-white/10 text-white backdrop-blur-sm hover:bg-white/15"
             >
               Zamknij
             </Button>
