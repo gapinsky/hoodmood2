@@ -182,7 +182,7 @@ export default function EnrollmentForm() {
           recycle={false}
           numberOfPieces={260}
           gravity={0.28}
-          className="pointer-events-none fixed inset-0 z-[100]"
+          className="pointer-events-none fixed inset-0 z-100"
         />
       ) : null}
 

@@ -1,9 +1,26 @@
 import Image from "next/image";
 import logo from "../../public/assets/svg/mainLogo/logo.svg";
 import Link from "next/link";
-const icons = ["facebook", "spotify", "instagram", "tiktok", "youtube"];
 import { a11y } from "@/public/styles";
 import { cn } from "@/lib/utils";
+
+const icons = [
+  {
+    name: "facebook",
+    href: "https://www.facebook.com/profile.php?id=100070445546249",
+  },
+  {
+    name: "spotify",
+    href: "https://open.spotify.com/show/4N6jAzHxOv5S8bAmo9v2dE",
+  },
+  {
+    name: "instagram",
+    href: "https://www.instagram.com/hoodmood_dancestudio/",
+  },
+  { name: "tiktok", href: "https://www.tiktok.com/@hoodmood_dancestudio" },
+  { name: "youtube", href: "https://www.youtube.com/@hoodmooddancestudio9404" },
+];
+
 export default function Footer() {
   const date = new Date();
   return (
@@ -24,12 +41,17 @@ export default function Footer() {
             </div>
             <div className="flex gap-4 pt-2">
               {icons.map((icon) => (
-                <Link href={"/hello"} key={icon}>
+                <Link
+                  href={icon.href}
+                  key={icon.name}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     width={24}
                     height={24}
-                    alt={`${icon} logo`}
-                    src={`/icons/${icon}.svg`}
+                    alt={`${icon.name} logo`}
+                    src={`/icons/${icon.name}.svg`}
                     className={cn("dark:invert", a11y)}
                   />
                 </Link>

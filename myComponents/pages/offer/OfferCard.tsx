@@ -30,7 +30,13 @@ export default function OfferCard({
       className="overflow-hidden h-full flex flex-col justify-between"
     >
       <div className="aspect-video relative ">
-        <Image src={img} fill alt={name} className="object-cover" />
+        <Image
+          src={img}
+          fill
+          alt={name}
+          className="object-cover"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
+        />
       </div>
       <CardHeader className="">
         <CardTitle className="text-lg">{name}</CardTitle>
@@ -70,7 +76,7 @@ export default function OfferCard({
 
           <p className="text-sm text-muted-foreground">Instruktor zajęć</p>
         </div>
-        <ButtonPrimary href="/zapisy">Zapisz się</ButtonPrimary>
+        <ButtonPrimary href="/zapisz-sie">Zapisz się</ButtonPrimary>
       </CardFooter>
     </Card>
   );
