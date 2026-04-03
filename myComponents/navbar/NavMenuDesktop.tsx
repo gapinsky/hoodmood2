@@ -37,14 +37,14 @@ export default function NavMenuDesktop() {
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent
-                  className={`${desktopDropdownContentStyles} left-0 w-full min-w-0`}
+                  className={`${desktopDropdownContentStyles} left-0 w-full min-w-0 font-semibold `}
                 >
                   <div className="flex w-full flex-col gap-1">
                     {item.items.map((link) => (
                       <NavigationMenuLink key={link.label} asChild>
                         <Link
                           href={link.href}
-                          className="hover:bg-black/3 dark:hover:bg-white/8"
+                          className="hover:bg-black/3 dark:hover:bg-white/8 py-1"
                         >
                           {link.label}
                         </Link>

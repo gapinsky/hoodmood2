@@ -59,7 +59,7 @@ function NavigationMenuItem({
 }
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex h-fit items-center justify-center rounded-full px-4 py-2 text-sm font-medium uppercase text-foreground/80 transition-[color,box-shadow,background-color]  hover:text-accent-foreground focus:text-accent-foreground disabled:pointer-events-none disabled:opacity-50  data-[state=open]:text-accent-foreground  focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/35",
+  "group inline-flex h-fit items-center justify-center  px-4 py-2 text-sm font-medium uppercase text-foreground/80 transition-[color,box-shadow,background-color]  hover:text-accent-foreground focus:text-accent-foreground disabled:pointer-events-none disabled:opacity-50  data-[state=open]:text-accent-foreground  focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/35",
 );
 
 function NavigationMenuTrigger({
@@ -132,7 +132,7 @@ function NavigationMenuLink({
       data-slot="navigation-menu-link"
       className={cn(
         "text-nowrap  w-full   ",
-        "   data-[active=true]:text-accent-foreground  hover:text-accent-foreground  focus:text-accent-foreground [&_svg:not([class*='text-'])]:text-muted-foreground flex flex-col gap-1 rounded-lg px-4 text-sm transition-all outline-none focus-visible:ring-[3px] focus-visible:ring-ring/35 [&_svg:not([class*='size-'])]:size-4",
+        "   data-[active=true]:text-accent-foreground  hover:text-accent-foreground  focus:text-accent-foreground [&_svg:not([class*='text-'])]:text-muted-foreground flex flex-col gap-1 rounded-sm px-4 text-sm transition-all outline-none focus-visible:ring-[3px] focus-visible:ring-ring/35 [&_svg:not([class*='size-'])]:size-4",
         className,
       )}
       {...props}

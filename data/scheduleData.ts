@@ -231,14 +231,14 @@ export const scheduleContentData = {
       {
         name: "Zajęcia taneczne 4–7 lat",
         time: "16:15–17:00",
-        instructor: "brak",
+        instructor: "Talita Jarzęcka",
         age: "4–7",
         info: "Zajęcia ogólnorozwojowe z tańcem: rytm, koordynacja, proste kroki i zabawy ruchowe. Nauka pracy w grupie.",
       },
       {
         name: "Hiphop 8–13 lat",
         time: "17:00–18:00",
-        instructor: "brak",
+        instructor: "Talita Jarzęcka",
         age: "8–13",
         info: "Hip-hop dla dzieci: groove, podstawowe kroki i technika, krótkie choreografie oraz praca w grupie. Rozwój muzykalności i pewności siebie.",
       },
