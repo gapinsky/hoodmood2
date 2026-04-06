@@ -5,7 +5,6 @@ import { ThemeProvider } from "@/myComponents/themeProvider/ThemeProvider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/myComponents/navbar/Navbar";
 import Footer from "@/myComponents/footer/Footer";
-import { PricingFiltersProvider } from "@/myComponents/pages/pricing/PricingFiltersProvider";
 import NextTopLoader from "nextjs-toploader";
 import Toaster from "@/components/ui/sonner";
 
@@ -19,6 +18,7 @@ const fontAnton = Anton({
 const fontRoboto = Roboto_Condensed({
   variable: "--roboto-condensed",
   subsets: ["latin-ext"],
+  weight: ["400", "700"],
   fallback: ["system-ui", "Segoe UI", "Arial"],
 });
 
@@ -86,13 +86,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider>
-            <PricingFiltersProvider>
-              <Navbar />
-              {children}
-              <Footer />
-              <Toaster />
-            </PricingFiltersProvider>
+            <Navbar />
           </TooltipProvider>
+          {children}
+          <Footer />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

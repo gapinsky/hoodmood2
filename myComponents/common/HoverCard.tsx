@@ -1,5 +1,3 @@
-"use client";
-
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -7,8 +5,6 @@ type HoverCardProps = {
   img: string;
   hoverImg: string;
   title: string;
-  description?: string;
-  headerStyles?: string;
   customStyles?: string;
 };
 
@@ -32,7 +28,6 @@ export function HoverCard({
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
         className="object-cover   transition-opacity duration-500 group-hover:opacity-0 "
-        priority={false}
       />
 
       <Image
@@ -42,9 +37,7 @@ export function HoverCard({
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
         className="object-cover   opacity-0 transition-opacity duration-500 group-hover:opacity-100 "
-        priority={false}
       />
-
     </div>
   );
 }

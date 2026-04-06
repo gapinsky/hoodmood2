@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Localizations from "@/myComponents/sections/localizations/Localizations";
 import Offer from "../myComponents/sections/offer/Offer";
-import Team from "@/myComponents/sections/team/Team";
-import ProofBento from "@/myComponents/sections/proofBento/ProofBento";
-import HowToJoin from "@/myComponents/sections/howToJoin/HowToJoin";
-import Opinions from "@/myComponents/sections/opinions/Opinions";
-import Faq from "@/myComponents/sections/faq/Faq";
-import Player from "@/myComponents/sections/player/Player";
 import Hero from "@/myComponents/sections/hero/Hero";
+
+const Player = dynamic(() => import("@/myComponents/sections/player/Player"));
+const Team = dynamic(() => import("@/myComponents/sections/team/Team"));
+const ProofBento = dynamic(
+  () => import("@/myComponents/sections/proofBento/ProofBento"),
+);
+const HowToJoin = dynamic(
+  () => import("@/myComponents/sections/howToJoin/HowToJoin"),
+);
+const Opinions = dynamic(
+  () => import("@/myComponents/sections/opinions/Opinions"),
+);
+const Faq = dynamic(() => import("@/myComponents/sections/faq/Faq"));
 
 export const metadata: Metadata = {
   title: "Szkoła tańca i akrobatyki | Koszalin, Polanów, Biały Bór",

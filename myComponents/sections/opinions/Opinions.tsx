@@ -4,6 +4,7 @@ import { data, testimonials } from "./data";
 
 import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 import OpinionsCarousel from "./OpinionsCarousel";
+
 export default function Opinions() {
   return (
     <SectionContainer>
