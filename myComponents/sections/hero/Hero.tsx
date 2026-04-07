@@ -24,7 +24,7 @@ export default function Hero({
   return (
     <div className="relative min-h-screen isolate overflow-hidden text-white">
       <div className="absolute inset-0 -z-10 bg-black/10" />
-      <Image
+      {/* <Image
         src={posterSrc}
         alt="Hoodmood - szkoła tańca i akrobatyki"
         fill
@@ -32,7 +32,7 @@ export default function Hero({
         fetchPriority="high"
         sizes="100vw"
         className="absolute inset-0 -z-20 h-full w-full object-cover"
-      />
+      /> */}
       <HeroVideo
         videoSrc={videoSrc}
         mobileVideoSrc={mobileVideoSrc}
