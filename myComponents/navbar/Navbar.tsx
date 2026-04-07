@@ -1,8 +1,10 @@
 "use client";
 
+import type { MouseEvent } from "react";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import MenuButton from "./MenuButton";
 import NavMenuDesktop from "./NavMenuDesktop";
 import NavMenuMobile from "./NavMenuMobile";
@@ -14,6 +16,16 @@ import { cn } from "@/lib/utils";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  function handleLogoClick(event: MouseEvent<HTMLAnchorElement>) {
+    if (pathname !== "/") {
+      return;
+    }
+
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
   return (
     <nav
@@ -30,6 +42,7 @@ export default function Navbar() {
           <div className="flex min-w-0 flex-1 items-center">
             <Link
               href="/"
+              onClick={handleLogoClick}
               className="
                 ui-focus-ring ui-interactive inline-flex items-center rounded-2xl
                 motion-safe:hover:scale-[0.985] motion-safe:hover:opacity-92
