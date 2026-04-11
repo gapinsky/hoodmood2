@@ -24,17 +24,17 @@ export function HoverCard({
       )}
     >
       <Image
-        quality={60}
+        quality={75}
         src={img}
         alt={title}
         fill
         sizes={sizes}
-        className="object-cover   transition-opacity duration-500 group-hover:opacity-0 "
+        className="object-cover  transition-opacity duration-500 group-hover:opacity-0 "
       />
 
       <Image
         src={hoverImg}
-        quality={55}
+        quality={75}
         alt=""
         fill
         sizes={sizes}

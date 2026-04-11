@@ -22,8 +22,8 @@ export const localizations = [
   {
     title: "Biały Bór",
     description: "ul. Tamka 3",
-    img: "/assets/images/localizations/bialyBorMain.png",
-    hoverImg: "/assets/images/localizations/polanowMain.png",
+    img: "/assets/images/localizations/BialyBorMain.png",
+    hoverImg: "/assets/images/localizations/BialyBorMain.png",
     slug: "bialy-bor",
   },
 ];

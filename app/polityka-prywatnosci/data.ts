@@ -63,8 +63,6 @@ export const sections = [
     title: "6. Odbiorcy danych",
     content: [
       "Dane nie są sprzedawane ani przekazywane innym podmiotom w celach marketingowych.",
-      "Jeżeli w praktyce korzystasz z usług takich jak hosting strony, poczta e-mail, formularz online lub wsparcie IT, te podmioty mogą mieć dostęp do danych jako dostawcy usług technicznych. W takim przypadku należy uwzględnić je w polityce jako odbiorców lub podmioty przetwarzające.",
-      "Jeżeli rzeczywiście żaden zewnętrzny dostawca nie ma dostępu do danych poza Administratorem, można wskazać, że dane nie są udostępniane innym odbiorcom, z wyjątkiem sytuacji wynikających z przepisów prawa.",
     ],
   },
   {
@@ -80,7 +78,6 @@ export const sections = [
     title: "8. Pliki cookies",
     content: [
       "Strona nie wykorzystuje plików cookies do celów analitycznych, marketingowych ani profilowania użytkowników.",
-      "Jeżeli serwis korzysta wyłącznie z technicznie niezbędnych mechanizmów potrzebnych do prawidłowego działania strony, należy to opisać odrębnie. Jeśli nie stosujesz żadnych cookies poza absolutnie niezbędnymi funkcjami technicznymi, nie twórz mylących zapisów o analityce lub reklamach.",
     ],
   },
   {
