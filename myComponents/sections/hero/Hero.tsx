@@ -65,7 +65,7 @@ export default function Hero({
 
         <a
           href="#offer"
-          className="absolute bottom-16 left-1/2 flex -translate-x-1/2 flex-col items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/75 hover:cursor-pointer hover:text-white"
+          className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/75 hover:cursor-pointer hover:text-white"
         >
           <span>Zobacz więcej</span>
           <ChevronsDown className="animate-bounce" />

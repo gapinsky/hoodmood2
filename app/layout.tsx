@@ -61,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="pl" suppressHydrationWarning>
       <body
-        className={`${fontAnton.variable} ${fontRoboto.variable} w-full relative bg-transparent`}
+        className={`${fontAnton.variable} ${fontRoboto.variable} w-full relative bg-transparent h-svh`}
       >
         <div className="fixed inset-0 -z-40 overflow-hidden ">
           <div className="absolute inset-0 bg-[url('/assets/optimized/home/static-bg.webp')] dark:bg-[url('/assets/optimized/home/static-bg-dark.webp')] bg-cover bg-center bg-no-repeat " />
