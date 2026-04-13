@@ -21,7 +21,12 @@ export const instructors: Trainer[] = [
     id: "talita-jarzecka",
     name: "Talita Jarzęcka",
     role: "CEO",
-    styles: ["Heels", "Commercial", "High Heels Basic", "Stretching"],
+    styles: [
+      "Quality Crew (grupa zaawansowana hip-hop)",
+      "Taniec dla 4–6 latków",
+      "Hip-hop ",
+      "Zajęcia taneczne 4–7 lat",
+    ],
 
     description:
       "Talita to doświadczona choreografka, trenerka i artystka sceniczna, której fundamentem jest solidne wykształcenie muzyczno-taneczne. Ukończyła studia licencjackie na kierunku Taniec Nowoczesny na Wydziale Sztuk Scenicznych Akademii Muzycznej w Łodzi. Wcześniej kształciła się w Szkole Muzycznej im. Grażyny Bacewicz w Koszalinie na Wydziale Rytmiki. Brała udział w spektaklu „Projektowanie człowieka” (chor. Maciej Mołdoch / Sheva), stworzyła autorskie spektakle „Halucynacje” i „Gen Z”. Uczestniczyła w licznych warsztatach i programach artystycznych w Polsce i za granicą (m.in. Ateny, Mediolan, Paryż, Londyn). Od ośmiu lat prowadzi grupę Quality Crew, która zdobywa miejsca na turniejach. Jej misją jest przygotowywanie młodych tancerzy do profesjonalnego wejścia na scenę.",
@@ -38,9 +43,9 @@ export const instructors: Trainer[] = [
     name: "Wiktoria Butwicka",
     role: "Breakdance",
     styles: [
-      "Taniec dla 4-6 latków",
-      "Feminine flow",
+      "Taniec dla 4–6 latków",
       "Formacja dla dorosłych",
+      "Feminine flow",
     ],
 
     description:
@@ -58,7 +63,7 @@ export const instructors: Trainer[] = [
     id: "paulina-walikowska",
     name: "Paulina Walikowska",
     role: "Balet",
-    styles: ["Heels", "Commercial", "High Heels Basic", "Stretching"],
+    styles: ["Balet"],
 
     description:
       "Paulina Walikowska rozpoczęła swoją przygodę z tańcem w klasie baletowej, gdzie zdobyła solidne podstawy techniczne. Przez 8 lat rozwijała się artystycznie w zespole Quality Crew, doskonaląc się jako tancerka sceniczna i instruktorka. Ma doświadczenie warsztatowe u uznanych trenerów, współtworzyła projekty filmowe (w tym produkcję nominowaną na International Cyprus Dance Film Festival) oraz występowała w spektaklach „Halucynacje” i „Gen Z”. Obecnie prowadzi w studiu zajęcia baletu.",
@@ -75,7 +80,7 @@ export const instructors: Trainer[] = [
     id: "alina-lemanska",
     name: "Alina Lemańska",
     role: "KPOP",
-    styles: ["Heels", "Commercial", "High Heels Basic", "Stretching"],
+    styles: ["KPOP"],
 
     description:
       "Na stronie sekcja Aliny Lemańskiej opisuje start zajęć KPOP — dynamiczne choreografie, energetyczną muzykę i przyjazną atmosferę. Zajęcia są skierowane do osób w różnym wieku i na różnym poziomie zaawansowania, z naciskiem na naukę kroków i choreografii do hitów KPOP oraz dobrą zabawę.",
@@ -92,7 +97,11 @@ export const instructors: Trainer[] = [
     id: "magdalena-sokolowska-japona",
     name: "Magdalena Sokołowska",
     role: "Hip-hop/House",
-    styles: ["Hip-hop", "House", "Waacking", "High Heels"],
+    styles: [
+      "Young Generation (hip-hop)",
+      "The Beat Hunters (hip-hop)",
+      "Quality Crew (grupa zaawansowana hip-hop)",
+    ],
 
     description:
       "Pseudonim artystyczny Japona, czyli Magdalena Sokołowska. Z tańcem związana od 14. roku życia. Jest dyplomowanym instruktorem tańca o specjalizacji Hip-hop. Style, w których najlepiej się czuje, to Hip-hop i House. Dla siebie tańczy również waacking i high heels. Na co dzień lubi pracę z młodzieżą.",
@@ -109,7 +118,7 @@ export const instructors: Trainer[] = [
     id: "maria-kober",
     name: "Maria Kober",
     role: "The Beat Hunters/Choreo",
-    styles: ["The Beat Hunters", "Choreo"],
+    styles: ["The Beat Hunters (hip-hop)"],
 
     description:
       "Maria Kober to instruktorka i tancerka z dużym doświadczeniem scenicznym i warsztatowym. Od 8 lat trenuje w ekipie Quality Crew, z którą wielokrotnie stawała na podium zawodów w Polsce i za granicą. Ma na koncie warsztaty z wieloma instruktorami, treningi w londyńskich studiach Playground i Base oraz udział w projektach wideo (w tym produkcji nominowanej na International Cyprus Dance Film Festival). Prowadzi treningi dla grupy THE BEAT HUNTERS oraz zajęcia CHOREO.",
@@ -125,7 +134,7 @@ export const instructors: Trainer[] = [
     id: "oliwia-piec",
     name: "Oliwia Piec",
     role: "Formacja dla dorosłych",
-    styles: ["Formacja dla dorosłych"],
+    styles: ["Young Generation (hip-hop)", "Formacja dla dorosłych"],
 
     description:
       "Oliwia Piec od lat rozwija się tanecznie w ekipie Quality Crew, gdzie zdobywa doświadczenie jako tancerka sceniczna i instruktorka. Ma doświadczenie warsztatowe u wielu trenerów, współtworzyła projekty filmowe (w tym produkcję nominowaną na International Cyprus Dance Film Festival) oraz występowała w spektaklach „Halucynacje” i „Gen Z”. W studiu prowadzi formację dla dorosłych oraz zajęcia dla dzieci w wieku 4–6 lat.",
@@ -141,8 +150,8 @@ export const instructors: Trainer[] = [
   {
     id: "aleks-kultys",
     name: "Aleks Kultys",
-    role: "Formacje dla dorosłych",
-    styles: ["Formacje dla dorosłych", "Zajęcia dla dzieci 4–6"],
+    role: "Akrobatyka",
+    styles: ["Akrobatyka 4–6 latki", "Akrobatyka"],
 
     description:
       "Poznajcie naszego trenera,akrobatyka to jego pasja i ogromna część naszych treningów. Aleks ukończył dwuczęściowe szkolenie z zakresu metodyki nauczania oraz techniki wykonywania elementów w skokach na ścieżce. Szczególną uwagę poświęca również bezpieczeństwu, posiada wiedzę i umiejętności z zakresu prawidłowego asekurowania oraz podtrzymywania dzieci podczas nauki nowych elementów, dzięki czemu treningi są nie tylko efektywne, ale przede wszystkim bezpieczne i dostosowane do poziomu każdego uczestnika. Swoje doświadczenie zdobywał, pracując z dziećmi na półkoloniach, w playparku oraz prowadząc regularne zajęcia z akrobatyki dla dzieci i młodzieży.",

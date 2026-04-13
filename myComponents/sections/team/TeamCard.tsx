@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardDescription,
@@ -5,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
 import { User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,13 +14,13 @@ import Link from "next/link";
 type Props = {
   id: string;
   name: string;
-  role: string;
+  styles: string[];
   images: string[];
 };
 
-export default function TeamCard({ id, name, role, images }: Props) {
+export default function TeamCard({ id, name, styles, images }: Props) {
   return (
-    <Card className="group/card overflow-hidden">
+    <Card className="group/card overflow-hidden ">
       <div className="relative aspect-square w-full overflow-hidden">
         <Image
           quality={60}
@@ -29,25 +31,26 @@ export default function TeamCard({ id, name, role, images }: Props) {
           className="object-cover transition-transform duration-500 ease-out group-hover/card:scale-[1.035]"
           priority={false}
         />
-        <Link
-          scroll
-          href={`/kadra/${id}`}
-          className="ui-focus-ring ui-pressable absolute bottom-4 right-4 inline-flex w-fit items-center justify-center gap-2 whitespace-nowrap rounded-full border border-white/10 bg-zinc-800/70 px-4 py-2 text-xs font-medium uppercase text-white backdrop-blur-md focus-visible:ring-[3px] focus-visible:ring-ring/50"
-        >
-          <User />
-          Profil trenera
-        </Link>
       </div>
 
       <CardHeader className="pointer-events-none">
         <div className="flex w-full items-start justify-between">
           <CardTitle className="font-anton font-normal">{name}</CardTitle>
         </div>
-        <CardDescription className="flex gap-2">
-          <p className="text-sm">{role}</p>
-        </CardDescription>
+        <CardDescription />
+        {/* <CardDescription className="flex gap-2 flex-wrap mt-2">
+          {styles.map((style) => (
+            <Badge key={style} variant={"secondary"} className="text-nowrap">
+              {style}
+            </Badge>
+          ))}
+        </CardDescription> */}
       </CardHeader>
-      <CardFooter />
+      <CardFooter className="flex justify-end text-xs mt-4">
+        <ButtonSecondary href={`/kadra/${id}`} blank={false}>
+          <User className="max-w-4 " /> Zobacz profil
+        </ButtonSecondary>
+      </CardFooter>
     </Card>
   );
 }

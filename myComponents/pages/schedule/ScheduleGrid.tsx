@@ -5,7 +5,7 @@ import {
   HoverCardTrigger,
   HoverCardContent,
 } from "@/components/ui/hover-card";
-import { Info } from "lucide-react";
+import { Clock, Info, User } from "lucide-react";
 
 type ClassItem = {
   name: string;
@@ -75,12 +75,13 @@ export default function ScheduleGrid({ classesByDay }: Props) {
                             {c.name}
                           </div>
 
-                          <div className="mt-1 text-xs text-black/55 dark:text-white/55">
-                            {c.time}
+                          <div className="mt-1 text-xs text-black/55 dark:text-white/55 flex items-center gap-1">
+                            <Clock className="w-4" /> {c.time}
                           </div>
 
-                          <div className="mt-1 text-xs text-black/55 dark:text-white/55">
-                            Wiek: {c.age}
+                          <div className="mt-1 text-xs text-black/55 dark:text-white/55 flex items-center gap-1">
+                            <User className="w-4" />{" "}
+                            {c.age.length > 10 ? c.age : `${c.age} lat`}
                           </div>
                         </div>
 
@@ -115,7 +116,7 @@ export default function ScheduleGrid({ classesByDay }: Props) {
                       </div>
 
                       <div className="mt-4 text-xs text-black/65 dark:text-white/65">
-                        Prowadzący: {c.instructor}
+                        Instruktor: {c.instructor}
                       </div>
                     </article>
                   </li>

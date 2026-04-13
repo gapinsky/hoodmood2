@@ -9,14 +9,14 @@ export const offer = [
   {
     title: "Dzieci",
     description:
-      "Balet, Taniec, Breakdance, Akrobatyka, Formacje taneczne, Zajęcia indywidualne, Partnerowanie akrobatyczne ",
+      "Balet, Taniec, Breakdance, Akrobatyka, Formacje taneczne, Zajęcia indywidualne ",
     img: "/assets/images/landingOffer/kids1.jpg",
     hoverImg: "/assets/images/landingOffer/kids2.jpg",
   },
   {
     title: "Młodzież",
     description:
-      "Akrobatyka, Formacje taneczne, Hip-Hop, Taniec współczesny, Zajęcia indywidualne, K-POP, Partnerowanie akrobatyczne",
+      "Akrobatyka, Formacje taneczne, Hip-Hop, Taniec współczesny, Zajęcia indywidualne, K-POP",
     img: "/assets/images/landingOffer/teens1.jpg",
     hoverImg: "/assets/images/landingOffer/teens2.jpg",
   },
@@ -29,7 +29,7 @@ export const offer = [
   {
     title: "Obozy, kolonie, pokazy",
     description:
-      "Półkolonie, kolonie, pokazy oraz aktywny czas pełen tańca, sportu, integracji i dodatkowych atrakcji, takich jak paintball czy park linowy",
+      "Półkolonie, kolonie, pokazy oraz aktywny czas pełen tańca, sportu, integracji i dodatkowych atrakcji",
     img: "/assets/images/landingOffer/camp1.jpg",
     hoverImg: "/assets/images/landingOffer/camp2.jpg",
   },

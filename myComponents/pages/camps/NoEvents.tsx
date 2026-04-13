@@ -11,16 +11,40 @@ export default function NoEvents() {
         żeby być na bieżąco.
       </p>
       <div className="flex gap-8 mx-auto w-fit mt-4">
-        <ButtonSecondary href="/tiktok">
-          <img src={"/icons/tiktok.svg"} className="w-4 dark:invert" />
+        <ButtonSecondary
+          href="https://www.tiktok.com/@hoodmood_dancestudio"
+          blank
+        >
+          <img
+            src={"/icons/tiktok.svg"}
+            alt=""
+            aria-hidden="true"
+            className="w-4 dark:invert"
+          />
           tiktok
         </ButtonSecondary>
-        <ButtonSecondary href={"/facebook"}>
-          <img src={"/icons/facebook.svg"} className="w-4 dark:invert" />
+        <ButtonSecondary
+          href="https://www.facebook.com/profile.php?id=100070445546249"
+          blank
+        >
+          <img
+            src={"/icons/facebook.svg"}
+            alt=""
+            aria-hidden="true"
+            className="w-4 dark:invert"
+          />
           facebook
         </ButtonSecondary>
-        <ButtonSecondary href={"/instagram"}>
-          <img src={"/icons/instagram.svg"} className="w-4 dark:invert" />
+        <ButtonSecondary
+          href="https://www.instagram.com/hoodmood_dancestudio/"
+          blank
+        >
+          <img
+            src={"/icons/instagram.svg"}
+            alt=""
+            aria-hidden="true"
+            className="w-4 dark:invert"
+          />
           instagram
         </ButtonSecondary>
       </div>

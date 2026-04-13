@@ -21,7 +21,7 @@ export default function Team() {
               name={instructor.name}
               images={instructor.images}
               id={instructor.id}
-              role={instructor.role}
+              styles={instructor.styles}
             />
           ))}
         </div>

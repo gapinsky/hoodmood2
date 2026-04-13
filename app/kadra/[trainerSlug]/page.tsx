@@ -110,40 +110,54 @@ export default async function TrainerPage({ params }: PageProps) {
               </Carousel>
             </div>
 
-            <div className="flex flex-col justify-between ">
+            <div className="flex flex-col  gap-6 xl:relative">
               <div>
                 <h1 className=" text-3xl font-anton">{trainer.name}</h1>
 
-                <div className="flex gap-2 ">
-                  {trainer.localizations.map((localization, id) => (
-                    <p className="mt-2 text-lg " key={id}>
-                      {localization}
-                    </p>
-                  ))}
-                </div>
-
-                <p className="mt-4 max-w-2xl text-base leading-8 opacity-70 sm:text-lg">
+                <p className="mt-4 max-w-2xl text-base leading-8 opacity-80 sm:text-lg ">
                   {trainer.description}
                 </p>
               </div>
+              <div>
+                <h2 className="text-sm  uppercase tracking-wide xl:text-base opacity-80">
+                  Lokalizacja zajęć:
+                </h2>
+                <ul className=" flex flex-wrap gap-3 mt-2">
+                  {trainer.localizations.map((localization, id) => (
+                    <li key={id}>
+                      <Badge
+                        variant={"secondary"}
+                        className="text-black dark:text-white/95"
+                      >
+                        {localization}
+                      </Badge>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
               {trainer.styles?.length > 0 && (
-                <div className="mt-8">
-                  <h2 className="text-sm  uppercase tracking-wide ">
-                    Prowadzone zajęcia
+                <div>
+                  <h2 className="text-sm  uppercase tracking-wide xl:text-base opacity-80">
+                    Prowadzone zajęcia:
                   </h2>
 
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    {trainer.styles.map((item) => (
-                      <Badge key={item} variant={"secondary"}>
-                        {item}
-                      </Badge>
+                  <ul className=" flex flex-wrap gap-3 mt-2">
+                    {trainer.styles.map((item, id) => (
+                      <li key={id}>
+                        <Badge
+                          variant={"secondary"}
+                          className="text-black dark:text-white/95"
+                        >
+                          {item}
+                        </Badge>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               )}
 
-              <div className=" flex flex-wrap gap-3 place-self-start mt-8 xl:place-self-end">
+              <div className=" flex gap-2 place-self-start md:place-self-end xl:place-self-end xl:absolute xl:bottom-0">
                 {trainer.instagram && (
                   <ButtonSecondary href={trainer.instagram} blank={true}>
                     <img

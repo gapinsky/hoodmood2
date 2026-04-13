@@ -49,7 +49,9 @@ export default function OfferFiltersSection({ offerContent }: Props) {
       const ageMatches = matchesAge(+item.minAge, +item.maxAge, searchAge);
 
       const experienceMatches =
-        experience === "all" || item.experience === experience;
+        experience === "all" ||
+        item.experience === experience ||
+        item.experience === "Dla każdego";
 
       return matchesName && ageMatches && experienceMatches;
     });
@@ -97,15 +99,14 @@ export default function OfferFiltersSection({ offerContent }: Props) {
               <OfferCard
                 key={`${item.name}-${id}`}
                 name={item.name}
-                instructor={item.instructor}
+                instructors={item.instructors}
                 img={item.img}
-                instructorAvatar={item.instructorAvatar}
                 minAge={item.minAge}
                 maxAge={item.maxAge}
                 description={item.description}
                 experience={item.experience}
                 scheduleSrc={item.scheduleSrc}
-                instructorSlug={item.instructorSlug}
+                pricingSrc={item.pricingSrc}
               />
             ))}
           </div>

@@ -6,8 +6,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
-import { CalendarDays, ChartNoAxesColumnIncreasing, User } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  CalendarDays,
+  ChartNoAxesColumnIncreasing,
+  User,
+  Wallet,
+} from "lucide-react";
 import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 import Link from "next/link";
 import { ClassesOfferType } from "@/data/ofertaData";
@@ -16,13 +20,12 @@ export default function OfferCard({
   name,
   img,
   description,
-  instructor,
-  instructorAvatar,
-  instructorSlug,
+  instructors,
   experience,
   minAge,
   maxAge,
   scheduleSrc,
+  pricingSrc,
 }: ClassesOfferType) {
   return (
     <Card
@@ -43,37 +46,53 @@ export default function OfferCard({
         <CardTitle className="text-lg">{name}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <div className="mb-2 flex flex-col gap-4 p-6 text-muted-foreground lg:flex-row lg:gap-6">
-        <Link
-          href={scheduleSrc}
-          className="group/link ui-focus-ring ui-link-subtle rounded-sm text-sm focus-visible:ring-[3px] focus-visible:ring-ring/50"
-        >
-          <CalendarDays className="ui-link-subtle-icon w-5 text-black/78 dark:text-white/78" />
-          Sprawdź grafik
-        </Link>
+      <div className="mb-2 grid grid-cols-3  gap-4 p-6 text-muted-foreground  ">
+        <div className="flex flex-row  gap-1 text-sm col-span-3 mb-2">
+          <p className="font-semibold text-black dark:text-white">
+            Stopień zaawansowania:
+          </p>
+          <span>{experience}</span>
+        </div>
         <span className="inline-flex items-end gap-2 text-sm">
           <User className="w-5 text-black dark:text-white" />
-          {minAge !== "" && maxAge !== "" ? `${minAge}-${maxAge} lat` : "bez limitu"}
+          {minAge !== "" && maxAge !== ""
+            ? `${minAge}-${maxAge} lat`
+            : "bez limitu"}
         </span>
-        <span className="inline-flex items-end gap-2 text-sm">
-          <ChartNoAxesColumnIncreasing className="w-5 text-black dark:text-white" />
-          {experience}
-        </span>
+
+        <Link
+          href={scheduleSrc}
+          className="group/link ui-focus-ring ui-link-subtle inline-flex items-end  rounded-sm text-sm focus-visible:ring-[3px] focus-visible:ring-ring/50"
+        >
+          <CalendarDays className="ui-link-subtle-icon w-5 text-black/78 dark:text-white/78" />
+          Grafik
+        </Link>
+        <Link
+          href={pricingSrc}
+          className="group/link ui-focus-ring ui-link-subtle inline-flex items-end  rounded-sm text-sm focus-visible:ring-[3px] focus-visible:ring-ring/50"
+        >
+          <Wallet className="ui-link-subtle-icon w-5 text-black/78 dark:text-white/78" />
+          Cennik
+        </Link>
       </div>
       <CardFooter className="flex-row items-center gap-2">
-        <Avatar>
-          <AvatarImage src={instructorAvatar} />
-          <AvatarFallback>{instructor[0]}</AvatarFallback>
-        </Avatar>
         <div className="w-full">
-          <Link
-            href={instructorSlug}
-            className="group/link ui-focus-ring ui-link-subtle rounded-sm text-start text-sm font-semibold leading-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
-          >
-            {instructor}
-          </Link>
-
-          <p className="text-sm text-muted-foreground">Instruktor zajęć</p>
+          <p className="text-sm   font-semibold leading-none mb-1">
+            {instructors.length === 1 ? "Instruktor:" : "Instruktorzy:"}
+          </p>
+          <div>
+            {instructors.map((instructor, index) => (
+              <span key={instructor.slug}>
+                <Link
+                  href={instructor.slug}
+                  className="group/link ui-focus-ring ui-link-subtle text-sm rounded-sm text-start  focus-visible:ring-[3px] focus-visible:ring-ring/50"
+                >
+                  {instructor.name}
+                </Link>
+                {index < instructors.length - 1 ? ", " : null}
+              </span>
+            ))}
+          </div>
         </div>
         <ButtonPrimary href="/zapisz-sie">Zapisz się</ButtonPrimary>
       </CardFooter>

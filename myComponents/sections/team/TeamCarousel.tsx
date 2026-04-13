@@ -40,7 +40,7 @@ export default function TeamCarousel({ instructors }: Props) {
               id={item.id}
               images={item.images}
               name={item.name}
-              role={item.role}
+              styles={item.styles}
             />
           </CarouselItem>
         ))}

@@ -1,5 +1,6 @@
 "use client";
 
+import { Clock, User } from "lucide-react";
 import type { RefObject } from "react";
 
 type ClassItem = {
@@ -86,16 +87,18 @@ export default function SchedulePdfTable({
                             {item.name}
                           </p>
 
-                          <p className="mb-0 mt-2 text-sm text-zinc-700">
-                            {item.time}
+                          <p className="mb-0 mt-2 text-sm text-zinc-700 flex items-center gap-1">
+                            <Clock className="w-4" /> {item.time}
                           </p>
 
+                          <p className="mb-0 mt-1.5 text-[13px] leading-[1.4] text-zinc-600 flex items-center gap-1">
+                            <User className="w-4" />{" "}
+                            {item.age.length > 10
+                              ? item.age
+                              : `${item.age} lat`}
+                          </p>
                           <p className="mb-0 mt-2 text-[13px] leading-[1.4] text-zinc-600">
-                            Prowadzący: {item.instructor}
-                          </p>
-
-                          <p className="mb-0 mt-1.5 text-[13px] leading-[1.4] text-zinc-600">
-                            Wiek: {item.age}
+                            Instruktor: {item.instructor}
                           </p>
                         </div>
                       ) : null}
