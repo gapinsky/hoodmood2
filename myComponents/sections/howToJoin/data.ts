@@ -33,6 +33,6 @@ export const steps: Step[] = [
     id: 4,
     title: "Potwierdź zapis",
     description:
-      "Odewiemy się z potwierdzeniem, szczegółami organizacyjnymi i informacją o pierwszych zajęciach.",
+      "Odezwiemy się z potwierdzeniem, szczegółami organizacyjnymi i informacją o pierwszych zajęciach.",
   },
 ];
