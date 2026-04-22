@@ -7,6 +7,9 @@ import type {
 
 const accountName = "Hood Mood Studio";
 const handle = "@hoodmood_dancestudio";
+const baseFields =
+  "id,caption,media_type,media_url,thumbnail_url,timestamp,permalink,children{id,media_type,media_url,thumbnail_url}";
+const fieldsWithCounts = `${baseFields},like_count,comments_count`;
 
 function formatPostDate(timestamp?: string) {
   if (!timestamp) {
@@ -46,6 +49,32 @@ function mapPostMedia(post: InstagramApiPost) {
   return media ? [media] : [];
 }
 
+function getFeedUrl(userId: string, accessToken: string, fields: string) {
+  const url = new URL(`https://graph.instagram.com/${userId}/media`);
+  url.searchParams.set("fields", fields);
+  url.searchParams.set("limit", "8");
+  url.searchParams.set("access_token", accessToken);
+
+  return url;
+}
+
+async function fetchInstagramMedia(
+  userId: string,
+  accessToken: string,
+): Promise<Response> {
+  const response = await fetch(getFeedUrl(userId, accessToken, fieldsWithCounts), {
+    cache: "no-store",
+  });
+
+  if (response.ok) {
+    return response;
+  }
+
+  return fetch(getFeedUrl(userId, accessToken, baseFields), {
+    cache: "no-store",
+  });
+}
+
 export async function getLatestInstagramPosts(): Promise<InstagramPost[]> {
   const userId = process.env.INSTAGRAM_USER_ID;
   const accessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
@@ -54,16 +83,8 @@ export async function getLatestInstagramPosts(): Promise<InstagramPost[]> {
     return [];
   }
 
-  const url = new URL(`https://graph.instagram.com/${userId}/media`);
-  url.searchParams.set(
-    "fields",
-    "id,caption,media_type,media_url,thumbnail_url,timestamp,children{id,media_type,media_url,thumbnail_url}",
-  );
-  url.searchParams.set("limit", "8");
-  url.searchParams.set("access_token", accessToken);
-
   try {
-    const response = await fetch(url, { cache: "no-store" });
+    const response = await fetchInstagramMedia(userId, accessToken);
 
     if (!response.ok) {
       console.error(`Instagram posts fetch failed: ${response.status}`);
@@ -83,6 +104,9 @@ export async function getLatestInstagramPosts(): Promise<InstagramPost[]> {
           handle,
           caption: post.caption ?? "Post Instagram Hood Mood Studio",
           date: formatPostDate(post.timestamp),
+          likeCount: post.like_count,
+          commentsCount: post.comments_count,
+          permalink: post.permalink,
         };
       })
       .filter((post) => post.media.length > 0);

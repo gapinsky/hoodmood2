@@ -14,6 +14,9 @@ export type InstagramPost = {
   handle: string;
   caption: string;
   date: string;
+  likeCount?: number;
+  commentsCount?: number;
+  permalink?: string;
 };
 
 export type InstagramApiPost = {
@@ -23,6 +26,9 @@ export type InstagramApiPost = {
   media_url?: string;
   thumbnail_url?: string;
   timestamp?: string;
+  like_count?: number;
+  comments_count?: number;
+  permalink?: string;
   children?: InstagramApiResponse;
 };
 
