@@ -14,14 +14,13 @@ export default async function LatestInstagramPosts() {
 
   return (
     <section className="mt-12 space-y-8 md:mt-14 lg:mt-16">
-      <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+      <InstagramFeed posts={posts} />
+      <div className="flex flex-col gap-5 place-self-end mt-16">
         <ButtonSecondary href={profileUrl} blank>
           <Instagram className="size-4" />
-          Zobacz profil
+          Zobacz więcej na Instagramie
         </ButtonSecondary>
       </div>
-
-      <InstagramFeed posts={posts} />
     </section>
   );
 }
