@@ -159,7 +159,7 @@ export default function StepParticipant() {
               inputMode="numeric"
               pattern="[0-9]*"
               placeholder={
-                isYouthParticipant ? "Np. 8" : "Tylko dla dzieci i mĹ‚odzieĹĽy"
+                isYouthParticipant ? "Np. 8" : "Tylko dla dzieci i młodzieży"
               }
               disabled={isSubmitting || !isYouthParticipant}
               aria-invalid={!!errors.participantAge}
