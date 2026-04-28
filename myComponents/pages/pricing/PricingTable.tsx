@@ -73,7 +73,7 @@ export default function PricingTable({
                       {item.frequency}x/tyg
                       {item.name.includes("+") ? (
                         <HoverCard key="bottom" openDelay={20} closeDelay={20}>
-                          <HoverCardTrigger>
+                          <HoverCardTrigger asChild>
                             <button type="button" className="px-1">
                               <Info className="w-4 text-muted-foreground" />
                             </button>
@@ -87,7 +87,7 @@ export default function PricingTable({
                         </HoverCard>
                       ) : item.frequency !== "—" ? (
                         <HoverCard key="bottom" openDelay={20} closeDelay={20}>
-                          <HoverCardTrigger>
+                          <HoverCardTrigger asChild>
                             <button type="button" className="px-1">
                               <Info className="w-4 text-muted-foreground" />
                             </button>
@@ -116,7 +116,7 @@ export default function PricingTable({
                     : item.frequency}
                   {item.name.includes("+") ? (
                     <HoverCard key="bottom" openDelay={20} closeDelay={20}>
-                      <HoverCardTrigger>
+                      <HoverCardTrigger asChild>
                         <button type="button" className="px-2">
                           <Info className="w-4 text-muted-foreground" />
                         </button>
@@ -135,7 +135,7 @@ export default function PricingTable({
                     </HoverCard>
                   ) : item.frequency !== "-" ? (
                     <HoverCard key="bottom" openDelay={20} closeDelay={20}>
-                      <HoverCardTrigger>
+                      <HoverCardTrigger asChild>
                         <button type="button" className="px-2">
                           <Info className="w-4 text-muted-foreground" />
                         </button>
