@@ -126,7 +126,7 @@ export const koszalinPricingContent: Record<
         maxAge: "14",
         category: "acrobatics",
       },
-    
+
       {
         name: "Formacja dla dorosłych (HIP-HOP/HOUSE)",
         price: "200",
@@ -292,7 +292,18 @@ export const koszalinPricingContent: Record<
       },
       {
         name: "Taniec współczesny + partnerowanie akro + taniec współczesny + partnerowanie akro",
-        price: "380",
+        price: "220",
+        frequency: "1",
+        frequencyDescription:
+          "Pakiet obejmuje zajęcia tańca współczesnego i partnerowania akro zgodnie z grafikiem grupy.",
+        trending: false,
+        minAge: "13",
+        maxAge: "18",
+        category: "modernDance",
+      },
+      {
+        name: "Taniec współczesny + partnerowanie akro + taniec współczesny + partnerowanie akro",
+        price: "310",
         frequency: "2",
         frequencyDescription:
           "Pakiet obejmuje zajęcia tańca współczesnego i partnerowania akro zgodnie z grafikiem grupy.",
