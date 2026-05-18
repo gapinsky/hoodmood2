@@ -137,7 +137,7 @@ export const scheduleContentData = {
         name: "Taniec współczesny",
         time: "17:30–18:30",
         instructor: "Milena Jasińska",
-        age: "8–12",
+        age: "6–9",
         info: "Taniec współczesny dla dzieci: koordynacja, płynność, podstawy pracy z podłogą i proste choreografie. Rozwijanie ekspresji.",
       },
       {
