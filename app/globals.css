@@ -248,7 +248,7 @@ h2 {
   }
 
   .ui-pressable {
-    @apply motion-safe:transition-[transform,box-shadow,background-color,border-color,color,opacity,filter] motion-safe:duration-250 motion-safe:ease-out will-change-transform motion-safe:hover:-translate-y-[1px] motion-safe:hover:shadow-[0_14px_30px_rgba(0,0,0,0.12)] motion-safe:hover:brightness-[1.02] active:translate-y-0 active:scale-[0.985];
+    @apply motion-safe:transition-[transform,box-shadow,background-color,border-color,color,opacity,filter] motion-safe:duration-250 motion-safe:ease-out will-change-transform motion-safe:hover:shadow-[0_14px_30px_rgba(0,0,0,0.12)] motion-safe:hover:brightness-[1.02] active:translate-y-0 active:scale-[0.985];
   }
 
   .dark .ui-pressable {
@@ -256,7 +256,7 @@ h2 {
   }
 
   .ui-card-interactive {
-    @apply motion-safe:transition-[transform,box-shadow,background-color,border-color,color,opacity,filter] motion-safe:duration-250 motion-safe:ease-out will-change-transform motion-safe:hover:-translate-y-1 motion-safe:hover:border-black/[0.12] motion-safe:hover:shadow-[0_22px_56px_rgba(0,0,0,0.12)] motion-safe:hover:before:opacity-100 dark:motion-safe:hover:border-white/[0.14] dark:motion-safe:hover:shadow-[0_24px_60px_rgba(0,0,0,0.3)];
+    @apply motion-safe:transition-[transform,box-shadow,background-color,border-color,color,opacity,filter] motion-safe:duration-250 motion-safe:ease-out will-change-transform motion-safe:hover:border-black/[0.12] motion-safe:hover:shadow-[0_22px_56px_rgba(0,0,0,0.12)] motion-safe:hover:before:opacity-100 dark:motion-safe:hover:border-white/[0.14] dark:motion-safe:hover:shadow-[0_24px_60px_rgba(0,0,0,0.3)];
   }
 
   .ui-link-subtle {
@@ -278,7 +278,7 @@ h2 {
   }
 
   .ui-nav-link {
-    @apply relative inline-flex  overflow-hidden  py-2 text-[14px] font-semibold uppercase tracking-[0.14em] text-[#1c1c1c]/92 hover:text-[#1c1c1c] motion-safe:transition-[transform,box-shadow,background-color,border-color,color,opacity,filter] motion-safe:duration-250 motion-safe:ease-out will-change-transform motion-safe:hover:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1c1c1c]/20 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:text-white dark:hover:text-white dark:focus-visible:ring-white/80 dark:focus-visible:ring-offset-[#1c1c1c];
+    @apply relative inline-flex  overflow-hidden  py-2 text-[14px] font-semibold uppercase tracking-[0.14em] text-[#1c1c1c]/92 hover:text-[#1c1c1c] motion-safe:transition-[transform,box-shadow,background-color,border-color,color,opacity,filter] motion-safe:duration-250 motion-safe:ease-out will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1c1c1c]/20 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:text-white dark:hover:text-white dark:focus-visible:ring-white/80 dark:focus-visible:ring-offset-[#1c1c1c];
   }
 
   .ui-nav-link::after {
@@ -300,7 +300,7 @@ h2 {
   }
 
   .ui-icon-button {
-    @apply inline-flex items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring/35 motion-safe:transition-[transform,box-shadow,background-color,border-color,color,opacity,filter] motion-safe:duration-250 motion-safe:ease-out will-change-transform motion-safe:hover:-translate-y-[1px] motion-safe:hover:shadow-[0_14px_30px_rgba(0,0,0,0.12)] motion-safe:hover:brightness-[1.02] active:translate-y-0 active:scale-[0.985];
+    @apply inline-flex items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring/35 motion-safe:transition-[transform,box-shadow,background-color,border-color,color,opacity,filter] motion-safe:duration-250 motion-safe:ease-out will-change-transform motion-safe:hover:shadow-[0_14px_30px_rgba(0,0,0,0.12)] motion-safe:hover:brightness-[1.02] active:translate-y-0 active:scale-[0.985];
   }
 
   .ui-muted-label {

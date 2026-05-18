@@ -1,6 +1,6 @@
 export const data = {
   badge: "aktualnosci",
-  title: "Najnowsze aktualnosci i social highlights",
+  title: "Aktualności, wydarzenia i życie szkoły tańca Hoodmood",
   description:
-    "Sprawdz najnowsze aktualnosci szkoly tanca, zapowiedzi wydarzen i migawki z codziennego zycia studia.",
+    "Bądź na bieżąco z tym, co dzieje się w naszej szkole tańca. Sprawdź najnowsze informacje, zapowiedzi warsztatów, wydarzeń i pokazów oraz zobacz kulisy codziennych zajęć, treningów i projektów tanecznych.",
 };

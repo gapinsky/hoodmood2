@@ -16,11 +16,11 @@ export default function Localizations() {
         {localizations.map((item, id) => (
           <Card key={id}>
             <HoverCard
-              customStyles="aspect-3/2"
+              customStyles="aspect-5/4"
               img={item.img}
               hoverImg={item.hoverImg}
               title={item.title}
-              sizes="(max-width: 767px) calc(100vw - 4rem), (max-width: 1279px) calc(33vw - 3rem), 360px"
+              sizes="(max-width: 767px) calc(100vw - 4rem), (max-width: 1279px) calc(33vw - 3rem), 400px"
             />
             <CardHeader>
               <CardTitle className="font-anton font-light text-xl">
