@@ -167,7 +167,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       instructors: [
         { name: "Milena Jasińska", slug: "/kadra/milena-jasinska" },
       ],
-      img: "/assets/images/offer/taniecWspolczesny13-18.jpg",
+      img: "/assets/images/offer/taniecWspolczesny12-18.png",
       experience: "Dla każdego",
       scheduleSrc: "/grafik/koszalin",
       pricingSrc: "/cennik/koszalin/zajecia",
@@ -242,7 +242,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       instructors: [
         { name: "Talita Jarzęcka", slug: "/kadra/talita-jarzecka" },
       ],
-      img: "/assets/images/offer/taniec4-6.jpg",
+      img: "/assets/images/offer/zajeciaTaneczneBialyBor.png",
       experience: "Początkujący",
       scheduleSrc: "/grafik/bialy-bor",
       pricingSrc: "/cennik/bialy-bor",
@@ -256,7 +256,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       instructors: [
         { name: "Talita Jarzęcka", slug: "/kadra/talita-jarzecka" },
       ],
-      img: "/assets/images/offer/qualityCrew.jpg",
+      img: "/assets/images/offer/hipHopBialyBor.png",
       experience: "Dla każdego",
       scheduleSrc: "/grafik/bialy-bor",
       pricingSrc: "/cennik/bialy-bor",
