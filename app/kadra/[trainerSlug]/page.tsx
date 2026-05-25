@@ -98,6 +98,7 @@ export default async function TrainerPage({ params }: PageProps) {
                           alt={`${trainer.name} zdjęcie ${index + 1}`}
                           fill
                           priority={index === 0}
+                          sizes="(max-width: 767px) calc(100vw - 4rem), (max-width: 1279px) calc(33vw - 3rem), 480px"
                           className="object-cover"
                         />
                       </div>
