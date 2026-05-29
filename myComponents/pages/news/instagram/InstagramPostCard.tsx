@@ -47,7 +47,7 @@ function PostMetric({
 export default function InstagramPostCard({ post }: { post: InstagramPost }) {
   return (
     <Card className={cardBaseStyles}>
-      <div className="relative order-2 aspect-[4/5] overflow-hidden border-y border-black/[0.06] lg:order-1 lg:min-h-[560px] lg:border-y-0 lg:border-r dark:border-white/[0.08]">
+      <div className="relative order-2 aspect-square overflow-hidden border-y border-black/[0.06] lg:order-1 lg:min-h-[560px] lg:border-y-0 lg:border-r dark:border-white/[0.08]">
         <InstagramMedia post={post} />
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(12,8,10,0)_35%,rgba(12,8,10,0.12)_72%,rgba(12,8,10,0.28)_100%)]" />
       </div>
@@ -74,7 +74,7 @@ export default function InstagramPostCard({ post }: { post: InstagramPost }) {
             </p>
           </div>
 
-          <Instagram className="ml-auto size-4 text-[var(--brand-700)] dark:text-[var(--brand-300)]" />
+          {/* <Instagram className="ml-auto size-4 text-[var(--brand-700)] dark:text-[var(--brand-300)]" /> */}
         </div>
 
         <p className="order-3 min-h-[4.5rem] overflow-hidden px-5 pb-5 pt-3 text-sm leading-6 text-foreground/88 lg:order-2 lg:min-h-0 lg:max-h-[18rem] lg:p-0 dark:text-white/86">

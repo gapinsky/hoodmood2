@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import InstagramVideo from "./InstagramVideo";
 import type { InstagramMediaItem } from "./types";
@@ -15,7 +15,7 @@ export default function InstagramCarousel({
   caption: string;
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const activeItem = items[activeIndex];
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
 
   function showPrevious() {
     setActiveIndex((current) =>
@@ -29,20 +29,64 @@ export default function InstagramCarousel({
     );
   }
 
+  function handleTouchStart(event: React.TouchEvent<HTMLDivElement>) {
+    const touch = event.touches[0];
+
+    touchStartRef.current = { x: touch.clientX, y: touch.clientY };
+  }
+
+  function handleTouchEnd(event: React.TouchEvent<HTMLDivElement>) {
+    const touchStart = touchStartRef.current;
+    const touch = event.changedTouches[0];
+
+    touchStartRef.current = null;
+
+    if (!touchStart) {
+      return;
+    }
+
+    const deltaX = touch.clientX - touchStart.x;
+    const deltaY = touch.clientY - touchStart.y;
+
+    if (Math.abs(deltaX) < 45 || Math.abs(deltaX) < Math.abs(deltaY)) {
+      return;
+    }
+
+    if (deltaX > 0) {
+      showPrevious();
+      return;
+    }
+
+    showNext();
+  }
+
   return (
-    <>
-      {activeItem.type === "VIDEO" ? (
-        <InstagramVideo item={activeItem} caption={caption} />
-      ) : (
-        <Image
-          src={activeItem.url}
-          alt={caption}
-          fill
-          unoptimized
-          className="object-cover"
-          sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, (max-width: 1279px) 33vw, 25vw"
-        />
-      )}
+    <div
+      className="relative h-full w-full overflow-hidden touch-pan-y"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
+      <div
+        className="flex h-full w-full transition-transform duration-300 ease-out"
+        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+      >
+        {items.map((item) => (
+          <div key={item.id} className="relative h-full w-full shrink-0">
+            {item.type === "VIDEO" ? (
+              <InstagramVideo item={item} caption={caption} />
+            ) : (
+              <Image
+                src={item.url}
+                alt={caption}
+                fill
+                unoptimized
+                className="object-cover"
+                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, (max-width: 1279px) 33vw, 25vw"
+              />
+            )}
+          </div>
+        ))}
+      </div>
 
       <button
         type="button"
@@ -71,6 +115,6 @@ export default function InstagramCarousel({
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }

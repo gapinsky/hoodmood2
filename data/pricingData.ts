@@ -46,7 +46,7 @@ export const koszalinPricingContent: Record<
       "Sprawdź ofertę regularnych zajęć tanecznych i akrobatycznych w naszej filii w Koszalinie. Ceny rozliczane są miesięcznie i zależą od liczby treningów w tygodniu oraz rodzaju grupy. Wybierz styl, dopasuj wiek uczestnika i znajdź zajęcia najlepiej dopasowane do poziomu oraz zainteresowań.",
     tableData: [
       {
-        name: "Taniec dla 4–6 latków",
+        name: "Taniec dla najmłodszych",
         price: "170",
         frequency: "1",
         trending: false,
@@ -181,22 +181,22 @@ export const koszalinPricingContent: Record<
       "Chcesz uczęszczać na więcej niż jedne zajęcia? Sprawdź dostępne pakiety, które łączą kilka treningów w korzystniejszej cenie. To dobre rozwiązanie dla osób, które chcą rozwijać się wszechstronnie, łącząc różne style tańca, akrobatykę lub dodatkowe treningi uzupełniające.",
     tableData: [
       {
-        name: "Taniec dla 4–6 latków + balet",
+        name: "Taniec dla najmłodszych + balet",
         price: "230",
         frequency: "2",
         frequencyDescription:
-          "Taniec dla 4–6 latków: 1 raz w tygodniu. Balet: 1 raz w tygodniu.",
+          "Taniec dla najmłodszych: 1 raz w tygodniu. Balet: 1 raz w tygodniu.",
         trending: false,
         minAge: "4",
         maxAge: "6",
         category: "kidsDance",
       },
       {
-        name: "Taniec dla 4–6 latków + akrobatyka",
+        name: "Taniec dla najmłodszych + akrobatyka",
         price: "240",
         frequency: "2",
         frequencyDescription:
-          "Taniec dla 4–6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
+          "Taniec dla najmłodszych: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
         trending: false,
         minAge: "4",
         maxAge: "6",

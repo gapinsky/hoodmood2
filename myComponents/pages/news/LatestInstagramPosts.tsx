@@ -13,7 +13,7 @@ export default async function LatestInstagramPosts() {
   const posts = await getLatestInstagramPosts();
 
   return (
-    <section className="mt-12 space-y-8 md:mt-14 lg:mt-16">
+    <section className="mt-12 space-y-8 md:mt-14  lg:mt-16">
       <InstagramFeed posts={posts} />
       <div className="flex flex-col gap-5 place-self-end mt-16">
         <ButtonSecondary href={profileUrl} blank>

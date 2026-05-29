@@ -1,6 +1,6 @@
 "use client";
 
-import { Pause, Play } from "lucide-react";
+import { Pause, Play, Volume2, VolumeX } from "lucide-react";
 import { useRef, useState } from "react";
 
 import type { InstagramMediaItem } from "./types";
@@ -14,6 +14,7 @@ export default function InstagramVideo({
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
 
   function togglePlayback() {
     const video = videoRef.current;
@@ -30,6 +31,10 @@ export default function InstagramVideo({
     video.pause();
   }
 
+  function toggleSound() {
+    setIsMuted((current) => !current);
+  }
+
   return (
     <div className="group/video relative h-full w-full">
       <video
@@ -37,7 +42,7 @@ export default function InstagramVideo({
         src={item.url}
         poster={item.thumbnailUrl}
         aria-label={caption}
-        muted
+        muted={isMuted}
         playsInline
         preload="metadata"
         onPlay={() => setIsPlaying(true)}
@@ -57,6 +62,19 @@ export default function InstagramVideo({
         }`}
       >
         {isPlaying ? <Pause className="size-6" /> : <Play className="size-6" />}
+      </button>
+
+      <button
+        type="button"
+        aria-label={isMuted ? "Wlacz dzwiek" : "Wycisz"}
+        onClick={toggleSound}
+        className="absolute bottom-4 right-4 z-10 grid size-9 place-items-center rounded-full bg-black/55 text-white shadow-[0_8px_24px_rgba(0,0,0,0.22)] transition hover:bg-black/70"
+      >
+        {isMuted ? (
+          <VolumeX className="size-4" />
+        ) : (
+          <Volume2 className="size-4" />
+        )}
       </button>
     </div>
   );

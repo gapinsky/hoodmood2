@@ -199,7 +199,7 @@ export const scheduleContentData = {
     wtorek: [],
     środa: [
       {
-        name: "Taniec dla 4–6 latków",
+        name: "Taniec dla najmłodszych",
         time: "16:00–16:45",
         instructor: "Talita Jarzęcka",
         age: "4–6",
