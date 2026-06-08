@@ -17,6 +17,7 @@ import AutoScroll from "embla-carousel-auto-scroll";
 import { Star } from "lucide-react";
 import React from "react";
 import { Testimonial } from "./data";
+import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
 
 type Props = {
   testimonials: Testimonial[];
@@ -43,7 +44,7 @@ export default function OpinionsCarousel({ testimonials }: Props) {
             className="basis-1/1 md:basis-1/2 lg:basis-1/3 pointer-events-none"
             key={testimonial.id}
           >
-            <Card>
+            <Card className={`pointer-events-auto ${cardLiftHoverStyles}`}>
               <CardHeader>
                 <div className="flex text-transparent">
                   <Star className="fill-(--brand-700)" />

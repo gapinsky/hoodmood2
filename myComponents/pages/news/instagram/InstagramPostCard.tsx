@@ -8,7 +8,7 @@ import type { InstagramPost } from "./types";
 
 const studioAvatar = "/assets/svg/mainLogo/logo.svg";
 
-const cardBaseStyles =
+export const cardBaseStyles =
   "group flex h-fit w-full flex-col overflow-hidden border-black/[0.06] bg-white/[0.26] shadow-[0_16px_40px_rgba(0,0,0,0.08)] lg:grid lg:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.9fr)] dark:border-white/[0.08] dark:bg-white/[0.05] dark:shadow-[0_18px_44px_rgba(0,0,0,0.22)]";
 
 function formatCount(count?: number) {

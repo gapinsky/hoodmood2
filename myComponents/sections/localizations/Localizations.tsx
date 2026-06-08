@@ -4,6 +4,7 @@ import SectionContainer from "@/myComponents/common/SectionContainer";
 import { HoverCard } from "@/myComponents/common/HoverCard";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
+import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
 export default function Localizations() {
   return (
     <SectionContainer>
@@ -14,7 +15,10 @@ export default function Localizations() {
       />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-3 ">
         {localizations.map((item, id) => (
-          <Card key={id}>
+          <Card
+            key={id}
+            className={`focus-within:ring-2 focus-within:ring-[var(--brand-500)] focus-within:ring-offset-2 ${cardLiftHoverStyles}`}
+          >
             <HoverCard
               customStyles="aspect-5/4"
               img={item.img}

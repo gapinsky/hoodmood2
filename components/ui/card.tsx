@@ -35,7 +35,7 @@ const Card = React.forwardRef<
       ref={setRefs}
       data-reveal={revealed ? "visible" : "hidden"}
       className={cn(
-        "reveal-base reveal-item ui-surface ui-outline ui-card-interactive relative flex flex-col items-stretch justify-evenly overflow-hidden rounded-2xl text-card-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:bg-linear-to-br before:from-white/20 before:via-white/4 before:to-transparent before:opacity-80 motion-safe:before:transition-opacity motion-safe:before:duration-300 dark:before:from-white/10 dark:before:via-white/3",
+        "reveal-base reveal-item ui-surface ui-outline ui-card-interactive relative flex flex-col items-stretch justify-evenly overflow-hidden rounded-xl text-card-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:bg-linear-to-br before:from-white/20 before:via-white/4 before:to-transparent before:opacity-80 motion-safe:before:transition-opacity motion-safe:before:duration-300 dark:before:from-white/10 dark:before:via-white/3",
         className,
       )}
       {...props}

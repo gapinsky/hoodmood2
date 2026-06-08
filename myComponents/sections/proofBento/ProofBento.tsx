@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
 export default function ProofBento() {
   return (
     <SectionContainer>
@@ -23,7 +24,7 @@ export default function ProofBento() {
             {group.map((featureCard) => (
               <Card
                 key={featureCard.id}
-                className="w-full   overflow-hidden  mx-auto max-w-none "
+                className={`w-full   overflow-hidden  mx-auto max-w-none ${cardLiftHoverStyles}`}
               >
                 {featureCard.img !== null && (
                   <div className={cn("relative", featureCard.imgClass)}>

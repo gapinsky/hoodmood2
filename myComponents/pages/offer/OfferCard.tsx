@@ -15,6 +15,7 @@ import {
 import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 import Link from "next/link";
 import { ClassesOfferType } from "@/data/ofertaData";
+import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
 
 export default function OfferCard({
   name,
@@ -30,7 +31,7 @@ export default function OfferCard({
   return (
     <Card
       key={name}
-      className="group/card h-full overflow-hidden flex flex-col justify-between"
+      className={`group/card h-full overflow-hidden flex flex-col justify-between focus-within:ring-2 focus-within:ring-[var(--brand-500)] focus-within:ring-offset-2 ${cardLiftHoverStyles}`}
     >
       <div className="relative aspect-video overflow-hidden">
         <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-black/18 via-transparent to-white/12 opacity-80 transition-opacity duration-300 group-hover/card:opacity-100" />

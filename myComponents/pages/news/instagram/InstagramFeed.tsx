@@ -124,7 +124,7 @@ function DesktopPostTile({ post }: { post: InstagramPost }) {
     <DialogTrigger asChild>
       <button
         type="button"
-        className="group relative hidden aspect-square w-full overflow-hidden rounded-lg border border-black/[0.06] bg-white/[0.18] text-left shadow-[0_10px_28px_rgba(0,0,0,0.06)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_rgba(0,0,0,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-500)] focus-visible:ring-offset-2 md:block dark:border-white/[0.08] dark:bg-white/[0.05] dark:shadow-[0_14px_38px_rgba(0,0,0,0.2)]"
+        className="group relative hidden aspect-square w-full overflow-hidden rounded-lg border border-black/6 bg-white/18 text-left shadow-[0_10px_28px_rgba(0,0,0,0.06)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_rgba(0,0,0,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-500)] focus-visible:ring-offset-2 md:block dark:border-white/[0.08] dark:bg-white/[0.05] dark:shadow-[0_14px_38px_rgba(0,0,0,0.2)]"
         aria-label={`Otworz post Instagram: ${post.caption}`}
       >
         <InstagramPreviewMedia

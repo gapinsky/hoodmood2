@@ -5,6 +5,7 @@ import { HoverCard } from "@/myComponents/common/HoverCard";
 import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
 const Offer = () => {
   return (
     <div id="offer" className=" scroll-mt-36 ">
@@ -16,7 +17,10 @@ const Offer = () => {
         />
         <section className="grid grid-cols-1  gap-8 md:grid-cols-2 lg:grid-cols-4 items-stretch ">
           {offer.map((item, id) => (
-            <Card key={id} className="h-full flex flex-col justify-start ">
+            <Card
+              key={id}
+              className={`h-full flex flex-col justify-start ${cardLiftHoverStyles}`}
+            >
               {/* <HoverCard
                 img={item.img}
                 hoverImg={item.hoverImg}
