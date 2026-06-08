@@ -278,16 +278,44 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/polanow",
     },
     {
-      name: "Hip-hop | 7-14 lat",
+      name: "Hip-hop | 4-6 lat",
       description:
-        "Zajęcia hip-hop dla dzieci i młodzieży w wieku 7–14 lat. Uczestnicy uczą się podstaw techniki, groove’u i pracy z muzyką oraz choreografii dopasowanych do wieku i poziomu grupy. Ćwiczymy koordynację, dynamikę, musicality i pamięć ruchową, a także elementy sceniczne i współpracę w zespole. Koszt: 150 zł/miesiąc.",
-      minAge: "7",
-      maxAge: "14",
+        "Energetyczne zajęcia dla najmłodszych, które łączą naukę podstaw hip-hopu z zabawą i ruchem przy muzyce. Dzieci poznają proste kroki, ćwiczą rytmikę, koordynację oraz swobodę ruchu. Zajęcia rozwijają pewność siebie, kreatywność i umiejętność współpracy w grupie.",
+      minAge: "4",
+      maxAge: "6",
       instructors: [
         { name: "Talita Jarzęcka", slug: "/kadra/talita-jarzecka" },
       ],
       img: "/assets/images/offer/theBeatHunters10-12.jpg",
-      experience: "Dla każdego",
+      experience: "Początkujący",
+      scheduleSrc: "/grafik/polanow",
+      pricingSrc: "/cennik/polanow",
+    },
+    {
+      name: "Hip-hop | 7-9 lat",
+      description:
+        "Zajęcia dla dzieci, które chcą rozwijać taneczną pasję i poznawać coraz bardziej złożone elementy hip-hopu. Uczestnicy pracują nad techniką, dynamiką, pamięcią ruchową i interpretacją muzyki, ucząc się krótkich choreografii dopasowanych do wieku i poziomu grupy.",
+      minAge: "7",
+      maxAge: "9",
+      instructors: [
+        { name: "Talita Jarzęcka", slug: "/kadra/talita-jarzecka" },
+      ],
+      img: "/assets/images/offer/hipHop7-9Polanow.jpg",
+      experience: "Początkujący",
+      scheduleSrc: "/grafik/polanow",
+      pricingSrc: "/cennik/polanow",
+    },
+    {
+      name: "Hip-hop | 10-15 lat",
+      description:
+        "Treningi skierowane do starszych dzieci i młodzieży, nastawione na rozwój stylu, świadomości ciała i scenicznej ekspresji. Uczestnicy doskonalą technikę, groove, musicality oraz pracę zespołową, a także uczą się bardziej rozbudowanych choreografii i świadomego poruszania się w rytmie muzyki.",
+      minAge: "10",
+      maxAge: "15",
+      instructors: [
+        { name: "Talita Jarzęcka", slug: "/kadra/talita-jarzecka" },
+      ],
+      img: "/assets/images/offer/hipHop10-15Polanow.jpg",
+      experience: "Średniozaawansowany",
       scheduleSrc: "/grafik/polanow",
       pricingSrc: "/cennik/polanow",
     },

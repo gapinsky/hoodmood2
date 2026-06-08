@@ -52,7 +52,7 @@ function mapPostMedia(post: InstagramApiPost) {
 function getFeedUrl(userId: string, accessToken: string, fields: string) {
   const url = new URL(`https://graph.instagram.com/${userId}/media`);
   url.searchParams.set("fields", fields);
-  url.searchParams.set("limit", "8");
+  url.searchParams.set("limit", "9");
   url.searchParams.set("access_token", accessToken);
 
   return url;
@@ -62,9 +62,12 @@ async function fetchInstagramMedia(
   userId: string,
   accessToken: string,
 ): Promise<Response> {
-  const response = await fetch(getFeedUrl(userId, accessToken, fieldsWithCounts), {
-    cache: "no-store",
-  });
+  const response = await fetch(
+    getFeedUrl(userId, accessToken, fieldsWithCounts),
+    {
+      cache: "no-store",
+    },
+  );
 
   if (response.ok) {
     return response;
