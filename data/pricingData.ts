@@ -147,11 +147,11 @@ export const koszalinPricingContent: Record<
       },
       {
         name: "Taniec współczesny",
-        price: "210",
+        price: "220",
         frequency: "1",
         trending: false,
-        minAge: "",
-        maxAge: "",
+        minAge: "13",
+        maxAge: "18",
         category: "modernDance",
       },
       {
@@ -161,6 +161,15 @@ export const koszalinPricingContent: Record<
         trending: false,
         minAge: "6",
         maxAge: "8",
+        category: "modernDance",
+      },
+      {
+        name: "Taniec współczesny",
+        price: "310",
+        frequency: "2",
+        trending: false,
+        minAge: "13",
+        maxAge: "18",
         category: "modernDance",
       },
       {
