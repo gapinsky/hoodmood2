@@ -26,6 +26,7 @@ export const instructors: Trainer[] = [
       "Taniec dla 4–6 latków",
       "Hip-hop ",
       "Zajęcia taneczne 4–7 lat",
+      "Taniec współczesny - starsza grupa"
     ],
 
     description:
@@ -46,6 +47,7 @@ export const instructors: Trainer[] = [
       "Taniec dla 4–6 latków",
       "Formacja dla dorosłych",
       "Feminine flow",
+      "Young Generation (hip-hop)"
     ],
 
     description:
@@ -133,8 +135,8 @@ export const instructors: Trainer[] = [
   {
     id: "oliwia-piec",
     name: "Oliwia Piec",
-    role: "Formacja dla dorosłych",
-    styles: ["Young Generation (hip-hop)", "Formacja dla dorosłych"],
+    role: "",
+    styles: [],
 
     description:
       "Oliwia Piec od lat rozwija się tanecznie w ekipie Quality Crew, gdzie zdobywa doświadczenie jako tancerka sceniczna i instruktorka. Ma doświadczenie warsztatowe u wielu trenerów, współtworzyła projekty filmowe (w tym produkcję nominowaną na International Cyprus Dance Film Festival) oraz występowała w spektaklach „Halucynacje” i „Gen Z”. W studiu prowadzi formację dla dorosłych oraz zajęcia dla dzieci w wieku 4–6 lat.",
@@ -167,8 +169,8 @@ export const instructors: Trainer[] = [
   {
     id: "milena-jasinska",
     name: "Milena Jasińska",
-    role: "Taniec współczesny",
-    styles: ["Taniec współczesny"],
+    role: 'Lekcje indywidualne',
+    styles: ["Lekcje indywidualne - taniec współczesny"],
 
     description:
       "Milena jest absolwentką szkoły muzycznej na wydziale rytmiki, gdzie przez 12 lat zdobywała solidne wykształcenie muzyczno-ruchowe. Doskonałe wyczucie rytmu, świadomość ciała oraz umiejętność łączenia ruchu z muzyką stanowią fundament jej pracy. Dodatkowo gra na fortepianie, co przekłada się na wyjątkową muzykalność i wrażliwość artystyczną. Przez lata rozwijała się w różnych stylach tanecznych, a obecnie specjalizuje się w tańcu współczesnym oraz pole dance. Regularnie uczestniczy w warsztatach tanecznych, nieustannie podnosząc swoje kwalifikacje i poszerzając warsztat instruktorski. Jej doświadczenie, wykształcenie muzyczno-taneczne oraz wszechstronne podejście do pracy z ruchem doskonale wpisują się w kierunek, w którym chcemy się rozwijać. Jesteśmy przekonani, że wniesie do naszych zajęć nową jakość, świeżą energię i profesjonalizm.",
@@ -179,5 +181,37 @@ export const instructors: Trainer[] = [
     ],
     localizations: ["Koszalin"],
     instagram: "https://www.instagram.com/_m_jasinska?igsh=dDNxamd3N3kyYjN6",
+  },
+  {
+    id: "kamila-maik",
+    name: "Kamila Maik",
+    role: 'Taniec współczesny',
+    styles: ["Taniec współczesny - starsza grupa"],
+
+    description:
+      "TBA",
+    images: [
+      "/assets/images/team/milenaJasinska.jpg",
+      "/assets/images/team/milenaJasinska2.jpg",
+      "/assets/images/team/milenaJasinska.jpg",
+    ],
+    localizations: ["Koszalin"],
+    instagram: "TBA",
+  },
+  {
+    id: "joanna-jedynak",
+    name: "Joanna Jedynak",
+    role: 'Taniec współczesny',
+    styles: ["Taniec współczesny - starsza grupa"],
+
+    description:
+      "TBA",
+    images: [
+      "/assets/images/team/milenaJasinska.jpg",
+      "/assets/images/team/milenaJasinska2.jpg",
+      "/assets/images/team/milenaJasinska.jpg",
+    ],
+    localizations: ["Koszalin"],
+    instagram: "TBA",
   },
 ];

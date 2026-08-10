@@ -47,11 +47,23 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "KPOP | 7-9 lat",
+      name: "KPOP | 10-12 lat",
       description:
         "Na zajęciach KPOP dzieci uczą się choreografii inspirowanych popularnymi utworami i teledyskami. Pracujemy nad rytmiką, pamięcią ruchową i dynamiką tańca. Ćwiczymy elementy sceniczne, pewność siebie oraz pracę w grupie. Zajęcia są energiczne i prowadzone w sposób angażujący młodszych uczestników. Zajęcia są przeznaczone dla dzieci.",
-      minAge: "7",
-      maxAge: "9",
+      minAge: "10",
+      maxAge: "12",
+      instructors: [{ name: "Alina Lemańska", slug: "/kadra/alina-lemanska" }],
+      img: "/assets/images/offer/kpop.jpg",
+      experience: "Dla każdego",
+      scheduleSrc: "/grafik/koszalin",
+      pricingSrc: "/cennik/koszalin/zajecia",
+    },
+    {
+      name: "KPOP | 13-18 lat",
+      description:
+        "Na zajęciach KPOP dzieci uczą się choreografii inspirowanych popularnymi utworami i teledyskami. Pracujemy nad rytmiką, pamięcią ruchową i dynamiką tańca. Ćwiczymy elementy sceniczne, pewność siebie oraz pracę w grupie. Zajęcia są energiczne i prowadzone w sposób angażujący młodszych uczestników. Zajęcia są przeznaczone dla dzieci.",
+      minAge: "13",
+      maxAge: "18",
       instructors: [{ name: "Alina Lemańska", slug: "/kadra/alina-lemanska" }],
       img: "/assets/images/offer/kpop.jpg",
       experience: "Dla każdego",
@@ -91,7 +103,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       minAge: "7",
       maxAge: "9",
       instructors: [
-        { name: "Oliwia Piec", slug: "/kadra/oliwia-piec" },
+        { name: "Wiktoria Butwicka", slug: "/kadra/wiktoria-butwicka" },
         {
           name: "Magdalena Sokołowska",
           slug: "/kadra/magdalena-sokolowska-japona",
@@ -151,7 +163,8 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       minAge: "6",
       maxAge: "9",
       instructors: [
-        { name: "Milena Jasińska", slug: "/kadra/milena-jasinska" },
+        { name: "Klara Walach", slug: "/kadra/klara-walach" },
+        { name: "Nel Głowacka", slug: "/kadra/nel-glowacka" },
       ],
       img: "/assets/images/offer/taniecWspolczesny8-12.jpg",
       experience: "Dla każdego",
@@ -159,13 +172,28 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "Taniec Współczesny | 12-18 lat",
+      name: "Taniec Współczesny | 10-12 lat",
       description:
-        "To zajęcia dla młodzieży, które rozwijają technikę tańca współczesnego oraz świadomą pracę z ciałem. Ćwiczymy sekwencje ruchowe, dynamikę, jakość ruchu i ekspresję sceniczną. Pojawiają się także elementy improwizacji i interpretacji muzyki. Zajęcia pomagają budować własny styl i pewność w tańcu. Zajęcia są przeznaczone dla młodzieży w wieku 12–18 lat.",
-      minAge: "12",
+        "Na zajęciach tańca współczesnego dzieci poznają podstawy pracy z ruchem, przestrzenią i muzyką. Ćwiczymy płynność, koordynację oraz ekspresję poprzez krótkie kombinacje i choreografie. Zajęcia rozwijają świadomość ciała, kreatywność i wrażliwość artystyczną. Wprowadzamy elementy techniki i improwizacji w przyjaznej atmosferze. Zajęcia są przeznaczone dla dzieci w wieku 10–12 lat.",
+      minAge: "10",
+      maxAge: "12",
+      instructors: [
+        { name: "Klara Walach", slug: "/kadra/klara-walach" },
+        { name: "Marianna Stanisławska", slug: "/kadra/marianna-stanislawska" },
+      ],
+      img: "/assets/images/offer/taniecWspolczesny8-12.jpg",
+      experience: "Dla każdego",
+      scheduleSrc: "/grafik/koszalin",
+      pricingSrc: "/cennik/koszalin/zajecia",
+    },
+    {
+      name: "Taniec Współczesny | 13-18 lat",
+      description:
+        "To zajęcia dla młodzieży, które rozwijają technikę tańca współczesnego oraz świadomą pracę z ciałem. Ćwiczymy sekwencje ruchowe, dynamikę, jakość ruchu i ekspresję sceniczną. Pojawiają się także elementy improwizacji i interpretacji muzyki. Zajęcia pomagają budować własny styl i pewność w tańcu. Zajęcia są przeznaczone dla młodzieży w wieku 13–18 lat.",
+      minAge: "13",
       maxAge: "18",
       instructors: [
-        { name: "Milena Jasińska", slug: "/kadra/milena-jasinska" },
+        { name: "Talita Jarzęcka", slug: "/kadra/talita-jarzecka" },
       ],
       img: "/assets/images/offer/taniecWspolczesny12-18.png",
       experience: "Dla każdego",
@@ -173,20 +201,20 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "Quality Crew | 7-9 lat",
+      name: "Hype Crew",
       description:
-        "To grupa zaawansowana dla osób, które mają doświadczenie w hip-hopie i chcą rozwijać się intensywniej. Pracujemy nad techniką, choreografią, dokładnością wykonania i jakością ruchu. Ćwiczymy także musicality, pracę formacji oraz przygotowanie do pokazów. Zajęcia są dynamiczne i wymagają regularności oraz zaangażowania. Grupa jest przeznaczona głównie dla dzieci i młodzieży z doświadczeniem.",
+        "To średniozaawansowana grupa dla osób, które mają doświadczenie w hip-hopie i chcą rozwijać się intensywniej. Pracujemy nad techniką, choreografią, dokładnością wykonania i jakością ruchu. Ćwiczymy także musicality, pracę formacji oraz przygotowanie do pokazów. Zajęcia są dynamiczne i wymagają regularności oraz zaangażowania. Grupa jest przeznaczona głównie dla dzieci i młodzieży z doświadczeniem.",
       minAge: "7",
       maxAge: "9",
       instructors: [
         { name: "Talita Jarzęcka", slug: "/kadra/talita-jarzecka" },
         {
-          name: "Magdalena Sokołowska",
-          slug: "/kadra/magdalena-sokolowska-japona",
+          name: "Maria Kober",
+          slug: "/kadra/maria-kober",
         },
       ],
-      img: "/assets/images/offer/qualityCrew.jpg",
-      experience: "Zaawansowani",
+      img: "/assets/images/offer/hypeCrew.jpg",
+      experience: "Średniozaawansowani",
       scheduleSrc: "/grafik/koszalin",
       pricingSrc: "/cennik/koszalin/zajecia",
     },
@@ -217,15 +245,51 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "Formacja dla Dorosłych | 18+ lat",
+      name: "Hip-Hop | 30+ lat",
       description:
         "Na zajęciach uczestnicy uczą się choreografii grupowych i pracy w zespole. Ćwiczymy synchronizację, ustawienia sceniczne oraz dokładność wykonania ruchu. Zajęcia rozwijają kondycję, koordynację i pamięć ruchową. To dobra opcja dla osób, które lubią regularny trening i wspólne przygotowanie układów. Zajęcia są przeznaczone dla dorosłych.",
-      minAge: "18",
+      minAge: "30",
       maxAge: "99",
       instructors: [
         { name: "Oliwia Piec", slug: "/kadra/oliwia-piec" },
         { name: "Wiktoria Butwicka", slug: "/kadra/wiktoria-butwicka" },
       ],
+      img: "/assets/images/offer/dorosliFormacja.jpg",
+      experience: "Dla każdego",
+      scheduleSrc: "/grafik/koszalin",
+      pricingSrc: "/cennik/koszalin/zajecia",
+    },
+    {
+      name: "Master Trainers | Bez ograniczeń wiekowych",
+      description:
+        "To stała współpraca z wybranym trenerem, który regularnie pojawia się w naszym grafiku. Dzięki temu możesz trenować z nim przez cały sezon i rozwijać się pod jego okiem.",
+      minAge: "4",
+      maxAge: "99",
+      instructors: [],
+      img: "/assets/images/offer/dorosliFormacja.jpg",
+      experience: "Dla każdego",
+      scheduleSrc: "/grafik/koszalin",
+      pricingSrc: "/cennik/koszalin/zajecia",
+    },
+    {
+      name: "Masterclass | Bez ograniczeń wiekowych",
+      description:
+        "Jednorazowe warsztaty z zaproszonymi choreografami, tancerzami i instruktorami. Różne nazwiska, różne style, różne doświadczenia.",
+      minAge: "4",
+      maxAge: "99",
+      instructors: [],
+      img: "/assets/images/offer/dorosliFormacja.jpg",
+      experience: "Dla każdego",
+      scheduleSrc: "/grafik/koszalin",
+      pricingSrc: "/cennik/koszalin/zajecia",
+    },
+    {
+      name: "Hoodmood Master Pass | Bez ograniczeń wiekowych",
+      description:
+        "Pakiet zawierający 3 godzinny Master Trainer i 1,5 godzinny Masterclass w miesiącu. Dzięki temu możesz trenować z wybranym trenerem i uczestniczyć w warsztatach z zaproszonymi instruktorami.",
+      minAge: "4",
+      maxAge: "99",
+      instructors: [],
       img: "/assets/images/offer/dorosliFormacja.jpg",
       experience: "Dla każdego",
       scheduleSrc: "/grafik/koszalin",
