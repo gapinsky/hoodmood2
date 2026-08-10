@@ -47,31 +47,49 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "KPOP | 10-12 lat",
+      name: "KPOP Kids | 10-12 lat",
       description:
         "Na zajęciach KPOP dzieci uczą się choreografii inspirowanych popularnymi utworami i teledyskami. Pracujemy nad rytmiką, pamięcią ruchową i dynamiką tańca. Ćwiczymy elementy sceniczne, pewność siebie oraz pracę w grupie. Zajęcia są energiczne i prowadzone w sposób angażujący młodszych uczestników. Zajęcia są przeznaczone dla dzieci.",
       minAge: "10",
       maxAge: "12",
-      instructors: [{ name: "Alina Lemańska", slug: "/kadra/alina-lemanska" }],
+      instructors: [
+        { name: "Alina Lemańska", slug: "/kadra/alina-lemanska" },
+      ],
       img: "/assets/images/offer/kpop.jpg",
       experience: "Dla każdego",
       scheduleSrc: "/grafik/koszalin",
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "KPOP | 13-18 lat",
+      name: "KPOP Teens | 13+",
       description:
         "Na zajęciach KPOP dzieci uczą się choreografii inspirowanych popularnymi utworami i teledyskami. Pracujemy nad rytmiką, pamięcią ruchową i dynamiką tańca. Ćwiczymy elementy sceniczne, pewność siebie oraz pracę w grupie. Zajęcia są energiczne i prowadzone w sposób angażujący młodszych uczestników. Zajęcia są przeznaczone dla dzieci.",
       minAge: "13",
-      maxAge: "18",
-      instructors: [{ name: "Alina Lemańska", slug: "/kadra/alina-lemanska" }],
+      maxAge: "",
+      instructors: [
+        { name: "Alina Lemańska", slug: "/kadra/alina-lemanska" },
+      ],
       img: "/assets/images/offer/kpop.jpg",
       experience: "Dla każdego",
       scheduleSrc: "/grafik/koszalin",
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "Taniec dla najmłodszych | 4-6 lat",
+      name: "KPOP dla dorosłych | 30+",
+      description:
+        "Na zajęciach KPOP uczestnicy uczą się choreografii inspirowanych popularnymi utworami i teledyskami. Pracujemy nad rytmiką, pamięcią ruchową, dynamiką tańca, elementami scenicznymi i pewnością siebie.",
+      minAge: "30",
+      maxAge: "",
+      instructors: [
+        { name: "Alina Lemańska", slug: "/kadra/alina-lemanska" },
+      ],
+      img: "/assets/images/offer/kpop.jpg",
+      experience: "Dla każdego",
+      scheduleSrc: "/grafik/koszalin",
+      pricingSrc: "/cennik/koszalin/zajecia",
+    },
+    {
+      name: "Taniec dla 4-6 latków",
       description:
         "To zajęcia ruchowo-taneczne dla najmłodszych, które wprowadzają dzieci w świat tańca przez zabawę. Ćwiczymy podstawowe kroki, rytm i prostą koordynację ruchową. Wykorzystujemy muzykę, gry ruchowe i krótkie układy taneczne. Zajęcia wspierają rozwój motoryczny, samodzielność i oswajanie pracy w grupie. Zajęcia są przeznaczone dla dzieci w wieku 4–6 lat.",
       minAge: "4",
@@ -145,11 +163,11 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "Akrobatyka | 10-14 lat",
+      name: "Akrobatyka | 10-13 lat",
       description:
-        "Na zajęciach uczestnicy rozwijają sprawność ogólną, siłę i elastyczność potrzebną w akrobatyce. Ćwiczymy technikę elementów akrobatycznych na materacach oraz kontrolę ciała w ruchu. Wprowadzamy stopniowo trudniejsze ćwiczenia, dostosowując poziom do możliwości grupy. Ważna jest dla nas poprawność wykonania i bezpieczeństwo. Zajęcia są przeznaczone dla dzieci i młodzieży w wieku 10–14 lat.",
+        "Na zajęciach uczestnicy rozwijają sprawność ogólną, siłę i elastyczność potrzebną w akrobatyce. Ćwiczymy technikę elementów akrobatycznych na materacach oraz kontrolę ciała w ruchu. Wprowadzamy stopniowo trudniejsze ćwiczenia, dostosowując poziom do możliwości grupy. Ważna jest dla nas poprawność wykonania i bezpieczeństwo. Zajęcia są przeznaczone dla dzieci i młodzieży w wieku 10–13 lat.",
       minAge: "10",
-      maxAge: "14",
+      maxAge: "13",
       instructors: [{ name: "Aleks Kultys", slug: "/kadra/aleks-kultys" }],
       img: "/assets/images/offer/akrobatyka10-14.jpg",
       experience: "Średniozaawansowany",
@@ -157,7 +175,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "Taniec Współczesny | 6-9 lat",
+      name: "Taniec współczesny | 6-9 lat",
       description:
         "Na zajęciach tańca współczesnego dzieci poznają podstawy pracy z ruchem, przestrzenią i muzyką. Ćwiczymy płynność, koordynację oraz ekspresję poprzez krótkie kombinacje i choreografie. Zajęcia rozwijają świadomość ciała, kreatywność i wrażliwość artystyczną. Wprowadzamy elementy techniki i improwizacji w przyjaznej atmosferze. Zajęcia są przeznaczone dla dzieci w wieku 6–9 lat.",
       minAge: "6",
@@ -172,7 +190,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "Taniec Współczesny | 10-12 lat",
+      name: "Taniec współczesny | 10-12 lat",
       description:
         "Na zajęciach tańca współczesnego dzieci poznają podstawy pracy z ruchem, przestrzenią i muzyką. Ćwiczymy płynność, koordynację oraz ekspresję poprzez krótkie kombinacje i choreografie. Zajęcia rozwijają świadomość ciała, kreatywność i wrażliwość artystyczną. Wprowadzamy elementy techniki i improwizacji w przyjaznej atmosferze. Zajęcia są przeznaczone dla dzieci w wieku 10–12 lat.",
       minAge: "10",
@@ -187,7 +205,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "Taniec Współczesny | 13-18 lat",
+      name: "Taniec współczesny | 13-18 lat",
       description:
         "To zajęcia dla młodzieży, które rozwijają technikę tańca współczesnego oraz świadomą pracę z ciałem. Ćwiczymy sekwencje ruchowe, dynamikę, jakość ruchu i ekspresję sceniczną. Pojawiają się także elementy improwizacji i interpretacji muzyki. Zajęcia pomagają budować własny styl i pewność w tańcu. Zajęcia są przeznaczone dla młodzieży w wieku 13–18 lat.",
       minAge: "13",
@@ -201,11 +219,11 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "Hype Crew",
+      name: "HYPE CREW",
       description:
         "To średniozaawansowana grupa dla osób, które mają doświadczenie w hip-hopie i chcą rozwijać się intensywniej. Pracujemy nad techniką, choreografią, dokładnością wykonania i jakością ruchu. Ćwiczymy także musicality, pracę formacji oraz przygotowanie do pokazów. Zajęcia są dynamiczne i wymagają regularności oraz zaangażowania. Grupa jest przeznaczona głównie dla dzieci i młodzieży z doświadczeniem.",
-      minAge: "7",
-      maxAge: "9",
+      minAge: "",
+      maxAge: "",
       instructors: [
         { name: "Talita Jarzęcka", slug: "/kadra/talita-jarzecka" },
         {
@@ -214,12 +232,12 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
         },
       ],
       img: "/assets/images/offer/hypeCrew.jpg",
-      experience: "Średniozaawansowani",
+      experience: "grupa średniozaawansowana",
       scheduleSrc: "/grafik/koszalin",
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "Lekcje Indywidualne | 5-99 lat",
+      name: "Lekcje Indywidualne | Bez ograniczeń wiekowych",
       description:
         "To zajęcia 1:1 dopasowane do potrzeb uczestnika i jego poziomu zaawansowania. Możemy pracować nad techniką taneczną, akrobatyką, przygotowaniem choreografii lub rozwojem konkretnych umiejętności. Plan zajęć ustalamy indywidualnie w zależności od celu i wieku uczestnika. Zajęcia pozwalają na szybszy progres dzięki pełnej uwadze instruktora. Lekcje są przeznaczone dla dzieci, młodzieży i dorosłych.",
       minAge: "5",
@@ -245,13 +263,12 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "Hip-Hop | 30+ lat",
+      name: "HIP-HOP | 30+",
       description:
         "Na zajęciach uczestnicy uczą się choreografii grupowych i pracy w zespole. Ćwiczymy synchronizację, ustawienia sceniczne oraz dokładność wykonania ruchu. Zajęcia rozwijają kondycję, koordynację i pamięć ruchową. To dobra opcja dla osób, które lubią regularny trening i wspólne przygotowanie układów. Zajęcia są przeznaczone dla dorosłych.",
       minAge: "30",
-      maxAge: "99",
+      maxAge: "",
       instructors: [
-        { name: "Oliwia Piec", slug: "/kadra/oliwia-piec" },
         { name: "Wiktoria Butwicka", slug: "/kadra/wiktoria-butwicka" },
       ],
       img: "/assets/images/offer/dorosliFormacja.jpg",
@@ -260,11 +277,11 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "Master Trainers | Bez ograniczeń wiekowych",
+      name: "MASTER TRAINERS",
       description:
-        "To stała współpraca z wybranym trenerem, który regularnie pojawia się w naszym grafiku. Dzięki temu możesz trenować z nim przez cały sezon i rozwijać się pod jego okiem.",
-      minAge: "4",
-      maxAge: "99",
+        "3 godziny | regularnie, 1x w miesiącu. To stała współpraca z wybranym trenerem, który regularnie pojawia się w naszym grafiku. Dzięki temu możesz trenować z nim przez cały sezon i rozwijać się pod jego okiem.",
+      minAge: "",
+      maxAge: "",
       instructors: [],
       img: "/assets/images/offer/dorosliFormacja.jpg",
       experience: "Dla każdego",
@@ -272,11 +289,11 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "Masterclass | Bez ograniczeń wiekowych",
+      name: "MASTERCLASS",
       description:
-        "Jednorazowe warsztaty z zaproszonymi choreografami, tancerzami i instruktorami. Różne nazwiska, różne style, różne doświadczenia.",
-      minAge: "4",
-      maxAge: "99",
+        "1,5 godziny | specjalne wydarzenia. Jednorazowe warsztaty z zaproszonymi choreografami, tancerzami i instruktorami. Różne nazwiska, różne style, różne doświadczenia.",
+      minAge: "",
+      maxAge: "",
       instructors: [],
       img: "/assets/images/offer/dorosliFormacja.jpg",
       experience: "Dla każdego",
@@ -284,11 +301,11 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "Hoodmood Master Pass | Bez ograniczeń wiekowych",
+      name: "HOODMOOD MASTER PASS",
       description:
-        "Pakiet zawierający 3 godzinny Master Trainer i 1,5 godzinny Masterclass w miesiącu. Dzięki temu możesz trenować z wybranym trenerem i uczestniczyć w warsztatach z zaproszonymi instruktorami.",
-      minAge: "4",
-      maxAge: "99",
+        "Pakiet obejmuje 3-godzinny MASTER TRAINER oraz 1,5-godzinny MASTERCLASS.",
+      minAge: "",
+      maxAge: "",
       instructors: [],
       img: "/assets/images/offer/dorosliFormacja.jpg",
       experience: "Dla każdego",
@@ -328,7 +345,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
   ],
   polanow: [
     {
-      name: "Taniec dla najmłodszych | 4-6 lat",
+      name: "Taniec dla 4-6 latków",
       description:
         "To zajęcia ruchowo-taneczne dla najmłodszych, które wprowadzają dzieci w świat tańca przez zabawę. Ćwiczymy podstawowe kroki, rytm i prostą koordynację ruchową. Wykorzystujemy muzykę, gry ruchowe i krótkie układy taneczne. Zajęcia wspierają rozwój motoryczny, samodzielność i oswajanie pracy w grupie. Koszt: 120 zł/miesiąc.",
       minAge: "4",

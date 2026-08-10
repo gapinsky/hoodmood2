@@ -32,13 +32,8 @@ export const enrollmentLocationOptions: EnrollmentLocationOption[] = [
   { id: "bialy-bor", label: "Biały Bór", locativeLabel: "Biały Bór" },
 ];
 
-const parseAge = (value: string) => {
-  const parsed = Number.parseInt(value.trim(), 10);
-  return Number.isFinite(parsed) ? parsed : null;
-};
-
 const parsePrice = (value: string) => {
-  const normalized = value.replace(",", ".").replace(/[^\d.]/g, "");
+  const normalized = value.replace(",", ".").match(/\d+(?:\.\d+)?/)?.[0] ?? "";
   const parsed = Number.parseFloat(normalized);
   return Number.isFinite(parsed) ? parsed : 0;
 };
@@ -53,8 +48,8 @@ const koszalinClasses = koszalinPricingContent.zajecia.tableData.map(
     price: parsePrice(item.price),
     frequency: item.frequency,
     frequencyDescription: item.frequencyDescription,
-    minAge: parseAge(item.minAge),
-    maxAge: parseAge(item.maxAge),
+    minAge: item.minAge,
+    maxAge: item.maxAge,
     category: item.category,
   }),
 );
@@ -69,8 +64,8 @@ const koszalinPackages = koszalinPricingContent["pakiety-zajec"].tableData.map(
     price: parsePrice(item.price),
     frequency: item.frequency,
     frequencyDescription: item.frequencyDescription,
-    minAge: parseAge(item.minAge),
-    maxAge: parseAge(item.maxAge),
+    minAge: item.minAge,
+    maxAge: item.maxAge,
     category: item.category,
   }),
 );
@@ -84,8 +79,8 @@ const polanowClasses = polanowPricingTableData.map((item, index) => ({
   price: parsePrice(item.price),
   frequency: item.frequency,
   frequencyDescription: item.frequencyDescription,
-  minAge: parseAge(item.minAge),
-  maxAge: parseAge(item.maxAge),
+  minAge: item.minAge,
+  maxAge: item.maxAge,
   category: item.category,
 }));
 
@@ -98,8 +93,8 @@ const bialyBorClasses = bialyBorPricingTableData.map((item, index) => ({
   price: parsePrice(item.price),
   frequency: item.frequency,
   frequencyDescription: item.frequencyDescription,
-  minAge: parseAge(item.minAge),
-  maxAge: parseAge(item.maxAge),
+  minAge: item.minAge,
+  maxAge: item.maxAge,
   category: item.category,
 }));
 

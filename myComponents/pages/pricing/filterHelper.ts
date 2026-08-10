@@ -5,14 +5,6 @@ type SortingValue = "default" | "ascending" | "descending" | "alphabetical";
 
 const parsePrice = (price: string) => Number(price.replace(/\D/g, ""));
 
-const parseAgeValue = (value: string) => {
-  const normalized = value.trim().toLowerCase();
-  if (!normalized || normalized === "bez limitu") return null;
-
-  const num = Number(normalized);
-  return Number.isNaN(num) ? null : num;
-};
-
 export function filterAndSortPricingData(
   data: PricingItem[],
   searchInput: string,
@@ -30,15 +22,12 @@ export function filterAndSortPricingData(
       words.length === 0 ||
       words.every((word) => normalizedName.includes(word));
 
-    const min = parseAgeValue(item.minAge);
-    const max = parseAgeValue(item.maxAge);
+    const min = item.minAge;
+    const max = item.maxAge;
 
     const matchesAge =
       !hasValidAge ||
-      (min === null && max === null) ||
-      (min !== null && max === null && age >= min) ||
-      (min === null && max !== null && age <= max) ||
-      (min !== null && max !== null && age >= min && age <= max);
+      (age >= min && age <= max);
 
     return matchesText && matchesAge;
   });

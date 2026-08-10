@@ -22,7 +22,7 @@ export const instructors: Trainer[] = [
     name: "Talita Jarzęcka",
     role: "CEO",
     styles: [
-      "Quality Crew (grupa zaawansowana hip-hop)",
+      "HYPE CREW (grupa średniozaawansowana hip-hop)",
       "Taniec dla 4–6 latków",
       "Hip-hop ",
       "Zajęcia taneczne 4–7 lat",
@@ -30,7 +30,7 @@ export const instructors: Trainer[] = [
     ],
 
     description:
-      "Talita to doświadczona choreografka, trenerka i artystka sceniczna, której fundamentem jest solidne wykształcenie muzyczno-taneczne. Ukończyła studia licencjackie na kierunku Taniec Nowoczesny na Wydziale Sztuk Scenicznych Akademii Muzycznej w Łodzi. Wcześniej kształciła się w Szkole Muzycznej im. Grażyny Bacewicz w Koszalinie na Wydziale Rytmiki. Brała udział w spektaklu „Projektowanie człowieka” (chor. Maciej Mołdoch / Sheva), stworzyła autorskie spektakle „Halucynacje” i „Gen Z”. Uczestniczyła w licznych warsztatach i programach artystycznych w Polsce i za granicą (m.in. Ateny, Mediolan, Paryż, Londyn). Od ośmiu lat prowadzi grupę Quality Crew, która zdobywa miejsca na turniejach. Jej misją jest przygotowywanie młodych tancerzy do profesjonalnego wejścia na scenę.",
+      "Talita to doświadczona choreografka, trenerka i artystka sceniczna, której fundamentem jest solidne wykształcenie muzyczno-taneczne. Ukończyła studia licencjackie na kierunku Taniec Nowoczesny na Wydziale Sztuk Scenicznych Akademii Muzycznej w Łodzi. Wcześniej kształciła się w Szkole Muzycznej im. Grażyny Bacewicz w Koszalinie na Wydziale Rytmiki. Brała udział w spektaklu „Projektowanie człowieka” (chor. Maciej Mołdoch / Sheva), stworzyła autorskie spektakle „Halucynacje” i „Gen Z”. Uczestniczyła w licznych warsztatach i programach artystycznych w Polsce i za granicą (m.in. Ateny, Mediolan, Paryż, Londyn). Od ośmiu lat prowadzi grupę HYPE CREW, która zdobywa miejsca na turniejach. Jej misją jest przygotowywanie młodych tancerzy do profesjonalnego wejścia na scenę.",
     images: [
       "/assets/images/team/talitaJarzecka.jpg",
       "/assets/images/team/talitaJarzecka.jpg",
@@ -42,16 +42,16 @@ export const instructors: Trainer[] = [
   {
     id: "wiktoria-butwicka",
     name: "Wiktoria Butwicka",
-    role: "Breakdance",
+    role: "Hip-hop",
     styles: [
       "Taniec dla 4–6 latków",
-      "Formacja dla dorosłych",
+      "HIP-HOP 30+",
       "Feminine flow",
       "Young Generation (hip-hop)"
     ],
 
     description:
-      "Wiktoria Butwicka to tancerka i trenerka specjalizująca się w breakdance. Taniec towarzyszy jej od 2009 roku. Szkoliła się m.in. u instruktorów takich jak Klesia, Nikita czy Pumba. Brała udział w licznych turniejach w Polsce i za granicą (m.in. 2. miejsce w Wielkiej Brytanii, Top 8 breakdance na Tancbudzie). Korzystała też z prywatnych lekcji i warsztatów w różnych stylach. Jako trenerka uczy od trzech lat – prowadzi zajęcia breakdance dla dzieci 3–6 lat, grupy hip-hopowe oraz warsztaty dla młodzieży i dorosłych.",
+      "Wiktoria Butwicka to tancerka i trenerka. Taniec towarzyszy jej od 2009 roku. Szkoliła się m.in. u instruktorów takich jak Klesia, Nikita czy Pumba. Brała udział w licznych turniejach w Polsce i za granicą (m.in. 2. miejsce w Wielkiej Brytanii i Top 8 na Tancbudzie). Korzystała też z prywatnych lekcji i warsztatów w różnych stylach. Jako trenerka uczy od trzech lat – prowadzi grupy hip-hopowe oraz warsztaty dla młodzieży i dorosłych.",
     images: [
       "/assets/images/team/wiktoriaButwicka.jpg",
       "/assets/images/team/wiktoriaButwicka.jpg",
@@ -68,7 +68,7 @@ export const instructors: Trainer[] = [
     styles: ["Balet"],
 
     description:
-      "Paulina Walikowska rozpoczęła swoją przygodę z tańcem w klasie baletowej, gdzie zdobyła solidne podstawy techniczne. Przez 8 lat rozwijała się artystycznie w zespole Quality Crew, doskonaląc się jako tancerka sceniczna i instruktorka. Ma doświadczenie warsztatowe u uznanych trenerów, współtworzyła projekty filmowe (w tym produkcję nominowaną na International Cyprus Dance Film Festival) oraz występowała w spektaklach „Halucynacje” i „Gen Z”. Obecnie prowadzi w studiu zajęcia baletu.",
+      "Paulina Walikowska rozpoczęła swoją przygodę z tańcem w klasie baletowej, gdzie zdobyła solidne podstawy techniczne. Przez 8 lat rozwijała się artystycznie w zespole HYPE CREW, doskonaląc się jako tancerka sceniczna i instruktorka. Ma doświadczenie warsztatowe u uznanych trenerów, współtworzyła projekty filmowe (w tym produkcję nominowaną na International Cyprus Dance Film Festival) oraz występowała w spektaklach „Halucynacje” i „Gen Z”. Obecnie prowadzi w studiu zajęcia baletu.",
     images: [
       "/assets/images/team/paulinaWalikowska.jpg",
       "/assets/images/team/paulinaWalikowska.jpg",
@@ -102,11 +102,10 @@ export const instructors: Trainer[] = [
     styles: [
       "Young Generation (hip-hop)",
       "The Beat Hunters (hip-hop)",
-      "Quality Crew (grupa zaawansowana hip-hop)",
     ],
 
     description:
-      "Pseudonim artystyczny Japona, czyli Magdalena Sokołowska. Z tańcem związana od 14. roku życia. Jest dyplomowanym instruktorem tańca o specjalizacji Hip-hop. Style, w których najlepiej się czuje, to Hip-hop i House. Dla siebie tańczy również waacking i high heels. Na co dzień lubi pracę z młodzieżą.",
+      "Magdalena Sokołowska jest związana z tańcem od 14. roku życia. Jest dyplomowaną instruktorką tańca o specjalizacji hip-hop. Style, w których najlepiej się czuje, to hip-hop i house. Dla siebie tańczy również waacking i high heels. Na co dzień lubi pracę z młodzieżą.",
     images: [
       "/assets/images/team/magdalenaSokolowska.jpg",
       "/assets/images/team/magdalenaSokolowska.jpg",
@@ -120,10 +119,10 @@ export const instructors: Trainer[] = [
     id: "maria-kober",
     name: "Maria Kober",
     role: "The Beat Hunters/Choreo",
-    styles: ["The Beat Hunters (hip-hop)"],
+    styles: ["The Beat Hunters (hip-hop)", "HYPE CREW (grupa średniozaawansowana hip-hop)"],
 
     description:
-      "Maria Kober to instruktorka i tancerka z dużym doświadczeniem scenicznym i warsztatowym. Od 8 lat trenuje w ekipie Quality Crew, z którą wielokrotnie stawała na podium zawodów w Polsce i za granicą. Ma na koncie warsztaty z wieloma instruktorami, treningi w londyńskich studiach Playground i Base oraz udział w projektach wideo (w tym produkcji nominowanej na International Cyprus Dance Film Festival). Prowadzi treningi dla grupy THE BEAT HUNTERS oraz zajęcia CHOREO.",
+      "Maria Kober to instruktorka i tancerka z dużym doświadczeniem scenicznym i warsztatowym. Od 8 lat trenuje w ekipie HYPE CREW, z którą wielokrotnie stawała na podium zawodów w Polsce i za granicą. Ma na koncie warsztaty z wieloma instruktorami, treningi w londyńskich studiach Playground i Base oraz udział w projektach wideo (w tym produkcji nominowanej na International Cyprus Dance Film Festival). Prowadzi treningi dla grup THE BEAT HUNTERS i HYPE CREW oraz zajęcia CHOREO.",
     images: [
       "/assets/images/team/mariaKober.jpg",
       "/assets/images/team/mariaKober.jpg",
@@ -139,7 +138,7 @@ export const instructors: Trainer[] = [
     styles: [],
 
     description:
-      "Oliwia Piec od lat rozwija się tanecznie w ekipie Quality Crew, gdzie zdobywa doświadczenie jako tancerka sceniczna i instruktorka. Ma doświadczenie warsztatowe u wielu trenerów, współtworzyła projekty filmowe (w tym produkcję nominowaną na International Cyprus Dance Film Festival) oraz występowała w spektaklach „Halucynacje” i „Gen Z”. W studiu prowadzi formację dla dorosłych oraz zajęcia dla dzieci w wieku 4–6 lat.",
+      "Oliwia Piec od lat rozwija się tanecznie w ekipie HYPE CREW, gdzie zdobywa doświadczenie jako tancerka sceniczna i instruktorka. Ma doświadczenie warsztatowe u wielu trenerów, współtworzyła projekty filmowe (w tym produkcję nominowaną na International Cyprus Dance Film Festival) oraz występowała w spektaklach „Halucynacje” i „Gen Z”.",
     images: [
       "/assets/images/team/oliwiaPiec.jpg",
       "/assets/images/team/oliwiaPiec.jpg",
@@ -169,8 +168,8 @@ export const instructors: Trainer[] = [
   {
     id: "milena-jasinska",
     name: "Milena Jasińska",
-    role: 'Lekcje indywidualne',
-    styles: ["Lekcje indywidualne - taniec współczesny"],
+    role: "Lekcje indywidualne, taniec współczesny",
+    styles: ["Lekcje indywidualne, taniec współczesny"],
 
     description:
       "Milena jest absolwentką szkoły muzycznej na wydziale rytmiki, gdzie przez 12 lat zdobywała solidne wykształcenie muzyczno-ruchowe. Doskonałe wyczucie rytmu, świadomość ciała oraz umiejętność łączenia ruchu z muzyką stanowią fundament jej pracy. Dodatkowo gra na fortepianie, co przekłada się na wyjątkową muzykalność i wrażliwość artystyczną. Przez lata rozwijała się w różnych stylach tanecznych, a obecnie specjalizuje się w tańcu współczesnym oraz pole dance. Regularnie uczestniczy w warsztatach tanecznych, nieustannie podnosząc swoje kwalifikacje i poszerzając warsztat instruktorski. Jej doświadczenie, wykształcenie muzyczno-taneczne oraz wszechstronne podejście do pracy z ruchem doskonale wpisują się w kierunek, w którym chcemy się rozwijać. Jesteśmy przekonani, że wniesie do naszych zajęć nową jakość, świeżą energię i profesjonalizm.",

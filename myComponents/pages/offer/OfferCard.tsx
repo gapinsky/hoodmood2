@@ -58,7 +58,11 @@ export default function OfferCard({
           <User className="w-5 text-black dark:text-white" />
           {minAge !== "" && maxAge !== ""
             ? `${minAge}-${maxAge} lat`
-            : "bez limitu"}
+            : minAge !== ""
+              ? `${minAge}+ lat`
+              : maxAge !== ""
+                ? `do ${maxAge} lat`
+                : "bez limitu"}
         </span>
 
         <Link
@@ -77,7 +81,7 @@ export default function OfferCard({
         </Link>
       </div>
       <CardFooter className="flex-row items-center gap-2">
-        <div className="w-full">
+        {instructors.length > 0 && <div className="w-full">
           <p className="text-sm   font-semibold leading-none mb-1">
             {instructors.length === 1 ? "Instruktor:" : "Instruktorzy:"}
           </p>
@@ -94,7 +98,7 @@ export default function OfferCard({
               </span>
             ))}
           </div>
-        </div>
+        </div>}
         <ButtonPrimary href="/zapisz-sie">Zapisz się</ButtonPrimary>
       </CardFooter>
     </Card>

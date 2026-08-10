@@ -17,6 +17,15 @@ export type PricingTableProps = {
 const desktopGrid =
   "md:grid-cols-[minmax(0,1.6fr)_90px_120px_100px_120px] lg:grid-cols-[minmax(0,1.8fr)_140px_180px_140px_140px]";
 
+const formatAge = (item: PricingItem) => {
+  if (item.minAge === 5 && item.maxAge === 99) return "Bez limitu wieku";
+  if (item.maxAge === 99) return `${item.minAge}+ lat`;
+  return `${item.minAge}-${item.maxAge} lat`;
+};
+
+const formatFrequency = (frequency: string) =>
+  /^\d+(?:[,.]\d+)?$/.test(frequency) ? `${frequency}x/tyg` : frequency;
+
 export default function PricingTable({
   title,
   items,
@@ -65,13 +74,11 @@ export default function PricingTable({
 
                   <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-md md:hidden text-muted-foreground">
                     <span className="">
-                      {item.minAge !== "" && item.maxAge !== ""
-                        ? `${item.minAge}-${item.maxAge} lat`
-                        : "Bez limitu wieku"}
+                      {formatAge(item)}
                     </span>
                     <span className="inline-flex items-center ">
-                      {item.frequency}x/tyg
-                      {item.name.includes("+") ? (
+                      {formatFrequency(item.frequency)}
+                      {item.frequencyDescription ? (
                         <HoverCard key="bottom" openDelay={20} closeDelay={20}>
                           <HoverCardTrigger asChild>
                             <button type="button" className="px-1">
@@ -85,7 +92,7 @@ export default function PricingTable({
                             {item.frequencyDescription}
                           </HoverCardContent>
                         </HoverCard>
-                      ) : item.frequency !== "—" ? (
+                      ) : /^\d+(?:[,.]\d+)?$/.test(item.frequency) ? (
                         <HoverCard key="bottom" openDelay={20} closeDelay={20}>
                           <HoverCardTrigger asChild>
                             <button type="button" className="px-1">
@@ -100,21 +107,19 @@ export default function PricingTable({
                         </HoverCard>
                       ) : null}
                     </span>
-                    <span className="font-semibold ">{item.price} zł</span>
+                    <span className="font-semibold ">
+                      {item.price.includes("zł") ? item.price : `${item.price} zł`}
+                    </span>
                   </div>
                 </div>
 
                 <div className="hidden text-sm  md:block  text-center">
-                  {item.minAge !== "" && item.maxAge !== ""
-                    ? `${item.minAge}-${item.maxAge} lat`
-                    : "Bez limitu wieku"}
+                  {formatAge(item)}
                 </div>
 
                 <div className="hidden text-sm  md:block  text-center">
-                  {!item.frequency.includes("wejście")
-                    ? `${item.frequency}x/tyg`
-                    : item.frequency}
-                  {item.name.includes("+") ? (
+                  {formatFrequency(item.frequency)}
+                  {item.frequencyDescription ? (
                     <HoverCard key="bottom" openDelay={20} closeDelay={20}>
                       <HoverCardTrigger asChild>
                         <button type="button" className="px-2">
@@ -133,7 +138,7 @@ export default function PricingTable({
                         {item.frequencyDescription}
                       </HoverCardContent>
                     </HoverCard>
-                  ) : item.frequency !== "-" ? (
+                  ) : /^\d+(?:[,.]\d+)?$/.test(item.frequency) ? (
                     <HoverCard key="bottom" openDelay={20} closeDelay={20}>
                       <HoverCardTrigger asChild>
                         <button type="button" className="px-2">

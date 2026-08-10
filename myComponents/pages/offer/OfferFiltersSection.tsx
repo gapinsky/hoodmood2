@@ -12,7 +12,7 @@ type Props = {
   offerContent: ClassesOfferType[];
 };
 
-function matchesAge(minAge: number, maxAge: number, searchedAge: string) {
+function matchesAge(minAge: number | null, maxAge: number | null, searchedAge: string) {
   if (!searchedAge) return true;
 
   const ageNumber = Number(searchedAge);
@@ -22,7 +22,9 @@ function matchesAge(minAge: number, maxAge: number, searchedAge: string) {
   if (minAge != null && maxAge == null) return ageNumber >= minAge;
   if (minAge == null && maxAge != null) return ageNumber <= maxAge;
 
-  return ageNumber >= minAge && ageNumber <= maxAge;
+  return minAge !== null && maxAge !== null
+    ? ageNumber >= minAge && ageNumber <= maxAge
+    : false;
 }
 
 export default function OfferFiltersSection({ offerContent }: Props) {
@@ -46,11 +48,17 @@ export default function OfferFiltersSection({ offerContent }: Props) {
         normalizedSearch === "" ||
         item.name.toLowerCase().includes(normalizedSearch);
 
-      const ageMatches = matchesAge(+item.minAge, +item.maxAge, searchAge);
+      const ageMatches = matchesAge(
+        item.minAge === "" ? null : Number(item.minAge),
+        item.maxAge === "" ? null : Number(item.maxAge),
+        searchAge,
+      );
 
       const experienceMatches =
         experience === "all" ||
         item.experience === experience ||
+        (experience === "Średniozaawansowani" &&
+          item.experience === "grupa średniozaawansowana") ||
         item.experience === "Dla każdego";
 
       return matchesName && ageMatches && experienceMatches;
@@ -66,8 +74,8 @@ export default function OfferFiltersSection({ offerContent }: Props) {
 
     if (sorting === "age-asc") {
       result = [...result].sort((a, b) => {
-        const ageA = +a.minAge;
-        const ageB = +b.minAge;
+        const ageA = a.minAge === "" ? Number.POSITIVE_INFINITY : Number(a.minAge);
+        const ageB = b.minAge === "" ? Number.POSITIVE_INFINITY : Number(b.minAge);
         return ageA - ageB;
       });
     }

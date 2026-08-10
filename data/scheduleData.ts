@@ -1,3 +1,11 @@
+import { classesOffer } from "./ofertaData";
+
+const koszalinInstructor = (offerName: string) =>
+  classesOffer.koszalin
+    .find((item) => item.name === offerName)
+    ?.instructors.map((instructor) => instructor.name)
+    .join(" / ") ?? "";
+
 export const scheduleHeaderData = {
   "bialy-bor": {
     title: "Grafik - Biały Bór",
@@ -37,11 +45,11 @@ export const scheduleContentData = {
         name: "HYPE CREW",
         time: "18:00–19:30",
         instructor: "Talita Jarzęcka",
-        age: "Bez limitu wieku",
+        age: "7–9",
         info: "Trening grupowy z naciskiem na choreografię, technikę i performance.",
       },
       {
-        name: "Taniec współczesny 13-18",
+        name: "Taniec współczesny",
         time: "19:30–20:30",
         instructor: "Talita Jarzęcka",
         age: "13-18",
@@ -61,7 +69,7 @@ export const scheduleContentData = {
         name: "Balet",
         time: "16:00–17:00",
         instructor: "Paulina Walikowska",
-        age: "Bez limitu wieku",
+        age: "7-9",
         info: "Podstawy baletu: postawa, praca stóp, koordynacja i lekkość ruchu.",
       },
       {
@@ -79,14 +87,14 @@ export const scheduleContentData = {
         info: "Hip-hop: izolacje, dynamika, koordynacja i choreografie dopasowane do poziomu.",
       },
       {
-        name: "Taniec współczesny 10–12 lat",
+        name: "Taniec współczesny",
         time: "19:00–20:00",
-        instructor: "Klara Walach + Marianna Stanisławska",
+        instructor: "Klara Walach / Marianna Stanisławska",
         age: "10–12",
         info: "Taniec współczesny: technika, płynność, praca z podłogą i ekspresja ruchowa.",
       },
       {
-        name: "Taniec współczesny 13-18",
+        name: "Taniec współczesny",
         time: "20:00–21:00",
         instructor: "Talita Jarzęcka",
         age: "13-18",
@@ -98,33 +106,33 @@ export const scheduleContentData = {
       {
         name: "KPOP Kids",
         time: "16:00–17:00",
-        instructor: "",
-        age: "Dzieci",
+        instructor: koszalinInstructor("KPOP Kids | 10-12 lat"),
+        age: "10-12",
         info: "Choreografie inspirowane K-popem: precyzja, energia, synchron i performance.",
       },
       {
         name: "KPOP Teens",
         time: "17:00–18:00",
-        instructor: "",
-        age: "Młodzież",
+        instructor: koszalinInstructor("KPOP Teens | 13+"),
+        age: "13+",
         info: "Choreografie inspirowane K-popem: precyzja, energia, synchron i performance.",
       },
       {
-        name: "Akrobatyka 7–9 lat",
+        name: "Akrobatyka",
         time: "18:00–19:00",
         instructor: "Aleks Kultys",
         age: "7–9",
         info: "Akrobatyka: mobilność, siła, równowaga i bezpieczna nauka elementów.",
       },
       {
-        name: "Akrobatyka 10–13 lat",
+        name: "Akrobatyka",
         time: "19:00–20:00",
         instructor: "Aleks Kultys",
         age: "10–13",
         info: "Akrobatyka: technika, siła, stabilizacja i łączenie elementów w sekwencje.",
       },
       {
-        name: "Hip-Hop",
+        name: "HIP-HOP",
         time: "20:00–21:30",
         instructor: "Wiktoria Butwicka",
         age: "30+",
@@ -144,58 +152,58 @@ export const scheduleContentData = {
         name: "HYPE CREW",
         time: "17:30–18:30",
         instructor: "Maria Kober",
-        age: "Bez limitu wieku",
+        age: "7–9",
         info: "Trening grupowy z naciskiem na choreografię, technikę i performance.",
       },
       {
         name: "KPOP Kids",
         time: "18:30–19:30",
-        instructor: "",
-        age: "Dzieci",
+        instructor: koszalinInstructor("KPOP Kids | 10-12 lat"),
+        age: "10-12",
         info: "Choreografie inspirowane K-popem: precyzja, energia, synchron i performance.",
       },
       {
         name: "KPOP Teens",
-        time: "18:30–19:30",
-        instructor: "",
-        age: "Młodzież",
+        time: "19:30–20:30",
+        instructor: koszalinInstructor("KPOP Teens | 13+"),
+        age: "13+",
         info: "Choreografie inspirowane K-popem: precyzja, energia, synchron i performance.",
       },
       {
         name: "KPOP dla dorosłych",
-        time: "19:30–20:30",
-        instructor: "",
-        age: "18+",
+        time: "20:30–21:30",
+        instructor: koszalinInstructor("KPOP dla dorosłych | 30+"),
+        age: "30+",
         info: "Choreografie inspirowane K-popem dla dorosłych: technika, synchron i performance.",
       },
     ],
 
     piątek: [
       {
-        name: "Taniec współczesny 6–9 lat",
+        name: "Taniec współczesny",
         time: "16:00–17:00",
-        instructor: "Klara Walach + Nel Głowacka",
+        instructor: "Klara Walach / Nel Głowacka",
         age: "6–9",
         info: "Taniec współczesny: koordynacja, płynność, praca z podłogą i ekspresja ruchowa.",
       },
       {
-        name: "Akrobatyka 4–6 lat",
+        name: "Akrobatyka",
         time: "17:00–18:00",
-        instructor: "",
+        instructor: koszalinInstructor("Akrobatyka | 4-6 lat"),
         age: "4–6",
         info: "Akrobatyka dla najmłodszych: mobilność, siła, równowaga i bezpieczna nauka elementów.",
       },
       {
-        name: "Akrobatyka 7–9 lat",
+        name: "Akrobatyka",
         time: "18:00–19:00",
-        instructor: "",
+        instructor: koszalinInstructor("Akrobatyka | 7-9 lat"),
         age: "7–9",
         info: "Akrobatyka: mobilność, siła, równowaga i bezpieczna nauka elementów.",
       },
       {
-        name: "Akrobatyka 10–13 lat",
+        name: "Akrobatyka",
         time: "19:00–20:00",
-        instructor: "",
+        instructor: koszalinInstructor("Akrobatyka | 10-13 lat"),
         age: "10–13",
         info: "Akrobatyka: technika, siła, stabilizacja i łączenie elementów w sekwencje.",
       },
@@ -203,7 +211,9 @@ export const scheduleContentData = {
         name: "MASTERCLASS",
         time: "19:00–20:00",
         instructor: "",
-        age: "Bez limitu wieku",
+        age: "5–99",
+        minAge: 5,
+        maxAge: 99,
         info: "Intensywne zajęcia rozwijające technikę, choreografię i performance.",
       },
     ],
@@ -213,7 +223,7 @@ export const scheduleContentData = {
     wtorek: [],
     środa: [
       {
-        name: "Taniec dla najmłodszych",
+        name: "TANIEC DLA 4-6 LATKÓW",
         time: "16:00–16:45",
         instructor: "Talita Jarzęcka",
         age: "4–6",
