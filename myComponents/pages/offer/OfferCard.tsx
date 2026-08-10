@@ -31,7 +31,7 @@ export default function OfferCard({
   return (
     <Card
       key={name}
-      className={`group/card h-full overflow-hidden flex flex-col justify-between focus-within:ring-2 focus-within:ring-[var(--brand-500)] focus-within:ring-offset-2 ${cardLiftHoverStyles}`}
+      className={`group/card grid h-full grid-rows-[auto_1fr_auto_auto] overflow-hidden focus-within:ring-2 focus-within:ring-[var(--brand-500)] focus-within:ring-offset-2 ${cardLiftHoverStyles}`}
     >
       <div className="relative aspect-video overflow-hidden">
         <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-black/18 via-transparent to-white/12 opacity-80 transition-opacity duration-300 group-hover/card:opacity-100" />
@@ -43,8 +43,10 @@ export default function OfferCard({
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
         />
       </div>
-      <CardHeader>
-        <CardTitle className="text-lg">{name}</CardTitle>
+      <CardHeader className="flex h-full flex-col">
+        <CardTitle className="flex min-h-14 items-start text-lg">
+          {name}
+        </CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <div className="mb-2 grid grid-cols-3  gap-4 p-6 text-muted-foreground  ">
@@ -80,25 +82,29 @@ export default function OfferCard({
           Cennik
         </Link>
       </div>
-      <CardFooter className="flex-row items-center gap-2">
-        {instructors.length > 0 && <div className="w-full">
+      <CardFooter className="flex-row items-end gap-2">
+        <div className="min-h-12 w-full">
           <p className="text-sm   font-semibold leading-none mb-1">
-            {instructors.length === 1 ? "Instruktor:" : "Instruktorzy:"}
+            {instructors.length <= 1 ? "Instruktor:" : "Instruktorzy:"}
           </p>
           <div>
-            {instructors.map((instructor, index) => (
-              <span key={instructor.slug}>
-                <Link
-                  href={instructor.slug}
-                  className="group/link ui-focus-ring ui-link-subtle text-sm rounded-sm text-start  focus-visible:ring-[3px] focus-visible:ring-ring/50"
-                >
-                  {instructor.name}
-                </Link>
-                {index < instructors.length - 1 ? ", " : null}
-              </span>
-            ))}
+            {instructors.length === 0 ? (
+              <span className="text-sm">TBA</span>
+            ) : (
+              instructors.map((instructor, index) => (
+                <span key={instructor.slug}>
+                  <Link
+                    href={instructor.slug}
+                    className="group/link ui-focus-ring ui-link-subtle text-sm rounded-sm text-start  focus-visible:ring-[3px] focus-visible:ring-ring/50"
+                  >
+                    {instructor.name}
+                  </Link>
+                  {index < instructors.length - 1 ? ", " : null}
+                </span>
+              ))
+            )}
           </div>
-        </div>}
+        </div>
         <ButtonPrimary href="/zapisz-sie">Zapisz się</ButtonPrimary>
       </CardFooter>
     </Card>
