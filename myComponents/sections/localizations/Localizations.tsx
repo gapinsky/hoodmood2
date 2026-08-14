@@ -15,10 +15,8 @@ export default function Localizations() {
       />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-3 ">
         {localizations.map((item, id) => (
-          <Card
-            key={id}
-            className={`focus-within:ring-2 focus-within:ring-[var(--brand-500)] focus-within:ring-offset-2 ${cardLiftHoverStyles}`}
-          >
+          <div key={id} className={cardLiftHoverStyles}>
+          <Card className="h-full focus-within:ring-2 focus-within:ring-[var(--brand-500)] focus-within:ring-offset-2">
             <HoverCard
               customStyles="aspect-5/4"
               img={item.img}
@@ -34,12 +32,13 @@ export default function Localizations() {
             <CardContent className="pt-2 text-muted-foreground">
               <p>{item.description}</p>
               <div className="w-full flex justify-end mt-4">
-                <ButtonSecondary href={`/grafik/${item.slug}`}>
-                  Sprawdź grafik
+                <ButtonSecondary href={item.mapsUrl} blank>
+                  Jak dojechać
                 </ButtonSecondary>
               </div>
             </CardContent>
           </Card>
+          </div>
         ))}
       </div>
     </SectionContainer>

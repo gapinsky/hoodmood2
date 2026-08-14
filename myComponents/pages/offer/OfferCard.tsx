@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Card,
   CardDescription,
@@ -16,6 +18,7 @@ import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 import Link from "next/link";
 import { ClassesOfferType } from "@/data/ofertaData";
 import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
+import { useState } from "react";
 
 export default function OfferCard({
   name,
@@ -28,18 +31,27 @@ export default function OfferCard({
   scheduleSrc,
   pricingSrc,
 }: ClassesOfferType) {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
-    <Card
-      key={name}
-      className={`group/card flex h-full flex-col overflow-hidden focus-within:ring-2 focus-within:ring-[var(--brand-500)] focus-within:ring-offset-2 ${cardLiftHoverStyles}`}
-    >
+    <div className={`group/card h-full ${cardLiftHoverStyles}`}>
+    <Card className="flex h-full flex-col overflow-hidden border-0 focus-within:ring-2 focus-within:ring-[var(--brand-500)] focus-within:ring-offset-2">
       <div className="relative aspect-video overflow-hidden">
+        <div
+          aria-hidden="true"
+          className={`absolute inset-0 bg-black/[0.08] transition-opacity duration-500 dark:bg-white/[0.08] ${
+            imageLoaded ? "pointer-events-none opacity-0" : "animate-pulse opacity-100"
+          }`}
+        />
         <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-black/18 via-transparent to-white/12 opacity-80 transition-opacity duration-300 group-hover/card:opacity-100" />
         <Image
           src={img}
           fill
           alt={name}
-          className="object-cover transition-transform duration-500 ease-out group-hover/card:scale-[1.03]"
+          className={`transform-gpu object-cover will-change-transform transition-[transform,opacity] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/card:scale-[1.03] ${
+            imageLoaded ? "opacity-100" : "opacity-0"
+          }`}
+          onLoad={() => setImageLoaded(true)}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
         />
       </div>
@@ -108,5 +120,6 @@ export default function OfferCard({
         </CardFooter>
       </div>
     </Card>
+    </div>
   );
 }

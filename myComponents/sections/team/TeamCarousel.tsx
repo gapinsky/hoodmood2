@@ -21,7 +21,7 @@ export default function TeamCarousel({ instructors }: Props) {
       startDelay: 0,
       stopOnInteraction: false,
       stopOnMouseEnter: true,
-      stopOnFocusIn: true,
+      stopOnFocusIn: false,
     }),
   );
   return (

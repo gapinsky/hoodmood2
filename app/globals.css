@@ -163,6 +163,10 @@ h2 {
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
@@ -184,15 +188,13 @@ h2 {
 
 @layer components {
   .ui-surface {
-    border: 1px solid var(--surface-border);
+    border: 0;
     background: linear-gradient(
       180deg,
       var(--surface-glass-strong),
       var(--surface-glass)
     );
-    box-shadow:
-      var(--surface-shadow),
-      inset 0 0 0 1px var(--surface-ring);
+    box-shadow: none;
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     position: relative;
@@ -256,7 +258,7 @@ h2 {
   }
 
   .ui-card-interactive {
-    @apply motion-safe:transition-[transform,box-shadow,background-color,border-color,color,opacity,filter] motion-safe:duration-250 motion-safe:ease-out will-change-transform motion-safe:hover:border-black/[0.12] motion-safe:hover:shadow-[0_22px_56px_rgba(0,0,0,0.12)] motion-safe:hover:before:opacity-100 dark:motion-safe:hover:border-white/[0.14] dark:motion-safe:hover:shadow-[0_24px_60px_rgba(0,0,0,0.3)];
+    @apply motion-safe:transition-[transform,background-color,border-color,color,opacity,filter] motion-safe:duration-250 motion-safe:ease-out will-change-transform motion-safe:hover:border-black/[0.12] motion-safe:hover:before:opacity-100 dark:motion-safe:hover:border-white/[0.14];
   }
 
   .ui-link-subtle {
@@ -364,6 +366,7 @@ h2 {
   .reveal-base[data-reveal="visible"] {
     @apply translate-y-0 opacity-100;
   }
+
 }
 
 @keyframes mobile-nav-in {

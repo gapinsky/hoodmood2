@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/myComponents/navbar/Navbar";
 import Footer from "@/myComponents/footer/Footer";
 import NextTopLoader from "nextjs-toploader";
+import AwayTabTitle from "@/myComponents/common/AwayTabTitle";
+import SeasonLaunchDialog from "@/myComponents/common/SeasonLaunchDialog";
 
 const fontAnton = Anton({
   variable: "--anton",
@@ -63,6 +65,8 @@ export default function RootLayout({
       <body
         className={`${fontAnton.variable} ${fontRoboto.variable} w-full relative bg-transparent h-svh`}
       >
+        <AwayTabTitle />
+        <SeasonLaunchDialog />
         <div className="fixed inset-0 -z-40 overflow-hidden ">
           <div className="absolute inset-0 bg-[url('/assets/optimized/home/static-bg.webp')] dark:bg-[url('/assets/optimized/home/static-bg-dark.webp')] bg-cover bg-center bg-no-repeat " />
 
@@ -86,9 +90,9 @@ export default function RootLayout({
         >
           <TooltipProvider>
             <Navbar />
+            {children}
+            <Footer />
           </TooltipProvider>
-          {children}
-          <Footer />
         </ThemeProvider>
       </body>
     </html>

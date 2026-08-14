@@ -44,7 +44,8 @@ export default function OpinionsCarousel({ testimonials }: Props) {
             className="basis-1/1 md:basis-1/2 lg:basis-1/3 pointer-events-none"
             key={testimonial.id}
           >
-            <Card className={`pointer-events-auto ${cardLiftHoverStyles}`}>
+            <div className={`pointer-events-auto ${cardLiftHoverStyles}`}>
+            <Card>
               <CardHeader>
                 <div className="flex text-transparent">
                   <Star className="fill-(--brand-700)" />
@@ -71,6 +72,7 @@ export default function OpinionsCarousel({ testimonials }: Props) {
                 </CardTitle>
               </CardFooter>
             </Card>
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>

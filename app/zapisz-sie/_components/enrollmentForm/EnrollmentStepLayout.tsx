@@ -12,7 +12,7 @@ export default function EnrollmentStepLayout({
   children,
 }: EnrollmentStepLayoutProps) {
   return (
-    <div className="overflow-hidden rounded-[28px] border p-2 border-white/10 bg-white/4 shadow-[0_20px_60px_rgba(0,0,0,0.24)] backdrop-blur-xl ">
+    <div className="overflow-hidden rounded-[28px] p-2 bg-white/4 backdrop-blur-xl ">
       <div
         className={`grid grid-cols-1 gap-8  md:p-8 xl:items-stretch  ${
           illustration

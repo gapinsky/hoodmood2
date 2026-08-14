@@ -4,6 +4,7 @@ import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
 import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 import LocationBadge from "./LocationBadge";
 import HeroVideo from "./HeroVideo";
+import SmoothScrollLink from "./SmoothScrollLink";
 
 type HeroProps = {
   videoSrc?: string;
@@ -63,13 +64,13 @@ export default function Hero({
           </div>
         </div>
 
-        <a
+        <SmoothScrollLink
           href="#offer"
           className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/75 hover:cursor-pointer hover:text-white"
         >
           <span>Zobacz więcej</span>
           <ChevronsDown className="animate-bounce" />
-        </a>
+        </SmoothScrollLink>
       </div>
     </div>
   );

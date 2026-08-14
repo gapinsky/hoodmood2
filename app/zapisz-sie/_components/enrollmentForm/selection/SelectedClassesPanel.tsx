@@ -12,7 +12,7 @@ export default function SelectedClassesPanel({
   const total = items.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <aside className="flex min-w-0 flex-col rounded-[24px] border border-black/10 bg-black/1 p-4 shadow-[0_20px_50px_rgba(0,0,0,0.24)] backdrop-blur-xl dark:border-white/20 dark:bg-white/5">
+    <aside className="flex min-w-0 flex-col rounded-[24px] bg-black/1 p-4 backdrop-blur-xl dark:bg-white/5">
       <div className="mb-5 flex items-center justify-between gap-4">
         <h3 className="text-lg font-semibold opacity-85">Wybrane zajęcia</h3>
         <span className="ui-muted-label text-xs font-semibold uppercase tracking-[0.14em] text-black/75 dark:text-white/45">

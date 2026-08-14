@@ -110,8 +110,8 @@ export const instructors: Trainer[] = [
   {
     id: "oliwia-piec",
     name: "Oliwia Piec",
-    role: "",
-    styles: [],
+    role: "Hip-hop",
+    styles: ["HYPE CREW (hip-hop)"],
 
     description:
       "Oliwia Piec od lat rozwija się tanecznie w ekipie HYPE CREW, gdzie zdobywa doświadczenie jako tancerka sceniczna i instruktorka. Ma doświadczenie warsztatowe u wielu trenerów, współtworzyła projekty filmowe (w tym produkcję nominowaną na International Cyprus Dance Film Festival) oraz występowała w spektaklach „Halucynacje” i „Gen Z”.",
@@ -191,7 +191,15 @@ W 2023 roku została wyróżniona tytułem Trener Roku przez Dziennik Bałtycki,
     name: "Nikola Suchocka",
     role: "MASTER TRAINER",
     styles: ["MASTER TRAINER"],
-    description: "Nikola Suchocka jest instruktorką programu MASTER TRAINER w Hoodmood.",
+    description: `Nikola Suchocka to jedna z czołowych tancerek polskiej sceny hip-hopowej. Tancerka, choreografka, instruktorka tańca i trenerka specjalizująca się w hip-hopie. Aktywnie działa również jako sędzia zawodów tanecznych, łącząc doświadczenie zdobywane na parkiecie z pracą artystyczną i rozwojem innych tancerzy.
+
+Jest członkinią zespołu tanecznego SÓL, z którym regularnie rywalizuje na zawodach w całej Polsce, wielokrotnie stając na podium. Zespół SÓL miał również okazję otwierać finały Red Bull Dance Your Style w Teatrze Szekspirowskim w Gdańsku.
+
+Na swoim koncie ma liczne sukcesy na zawodach tanecznych. W tym sezonie zwyciężyła 🥇 Tancbuda Challenge oraz 🥇 Infinite Force w kategorii Hip-Hop 1 vs 1 18+.
+
+Jej doświadczenie wykracza poza scenę zawodów,obejmuje projekty komercyjne, produkcje reklamowe, teledyski, choreografię, pracę zespołową oraz sędziowanie zawodów tanecznych. Dzięki temu swobodnie porusza się zarówno w świecie rywalizacji tanecznej, jak i profesjonalnych realizacji scenicznych, medialnych i komercyjnych.
+
+W tańcu łączy sportową determinację, wyjątkową muzykalność, mocny charakter i indywidualny styl. Jako trenerka i instruktorka przekazuje swoje doświadczenie kolejnym pokoleniom tancerzy, jednocześnie nieustannie rozwijając własny język ruchu i artystyczną tożsamość.`,
     images: ["/assets/images/team/nikolaSuchocka.jpg"],
     localizations: ["Koszalin"],
     instagram: "https://www.instagram.com/nikolasuchocka",

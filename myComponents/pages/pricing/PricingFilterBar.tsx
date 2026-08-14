@@ -16,8 +16,17 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { usePricingFilters } from "./PricingFiltersProvider";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function PricingFilterBar() {
+  const pathname = usePathname();
+  const router = useRouter();
+  const currentCategory = pathname.split("/").at(-1);
+  const selectedCategory =
+    currentCategory === "pakiety-zajec" ||
+    currentCategory === "zajecia-indywidualne"
+      ? currentCategory
+      : "zajecia";
   const {
     searchInput,
     setSearchInput,
@@ -28,7 +37,37 @@ export default function PricingFilterBar() {
   } = usePricingFilters();
 
   return (
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-[7fr_2fr_4fr]">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[3fr_7fr_2fr_4fr]">
+      <Field className="flex flex-col gap-2.5">
+        <FieldLabel className="ui-muted-label pl-1 text-[11px] font-semibold uppercase tracking-[0.16em]">
+          Kategoria
+        </FieldLabel>
+        <Select
+          value={selectedCategory}
+          onValueChange={(value) => router.push(`/cennik/koszalin/${value}`)}
+        >
+          <SelectTrigger className={selectTriggerStyles}>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent className={selectContentStyles}>
+            <SelectGroup>
+              <SelectItem className={selectItemStyles} value="zajecia">
+                Zajęcia
+              </SelectItem>
+              <SelectItem className={selectItemStyles} value="pakiety-zajec">
+                Pakiety zajęć
+              </SelectItem>
+              <SelectItem
+                className={selectItemStyles}
+                value="zajecia-indywidualne"
+              >
+                Zajęcia indywidualne
+              </SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      </Field>
+
       <Field className="flex flex-col gap-2.5">
         <FieldLabel
           htmlFor="searchInput"
@@ -142,7 +181,7 @@ export const inputStyles =
   "ui-field ui-outline ui-interactive h-10 rounded-lg text-foreground";
 export const selectTriggerStyles =
   "ui-field ui-outline ui-interactive h-10 rounded-lg px-5 text-foreground";
-export const selectContentStyles = "ui-floating rounded-lg p-2";
+export const selectContentStyles = "rounded-lg p-2";
 export const selectItemStyles =
   "ui-interactive rounded-md text-foreground focus:bg-accent motion-safe:hover:bg-accent/80";
 

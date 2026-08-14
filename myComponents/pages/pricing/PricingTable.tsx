@@ -29,7 +29,7 @@ const formatFrequency = (frequency: string) =>
 export default function PricingTable({
   title,
   items,
-  ctaHref = "/kontakt",
+  ctaHref = "/zapisz-sie",
 }: PricingTableProps) {
   return (
     <section className="w-full ">

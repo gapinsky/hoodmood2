@@ -15,10 +15,12 @@ import SectionContainer from "@/myComponents/common/SectionContainer";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import { Badge } from "@/components/ui/badge";
-import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
 import { ChevronRight } from "lucide-react";
-import { a11y } from "@/public/styles";
-import { cn } from "@/lib/utils";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 type PageProps = {
   params: Promise<{
@@ -113,7 +115,40 @@ export default async function TrainerPage({ params }: PageProps) {
 
             <div className="flex flex-col  gap-6 xl:relative">
               <div>
-                <h1 className=" text-3xl font-anton">{trainer.name}</h1>
+                <div className="flex items-center gap-3">
+                  {trainer.instagram && trainer.instagram !== "TBA" && (
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Link
+                          href={trainer.instagram}
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label={`Przejdź na Instagram: ${trainer.name}`}
+                          className="ui-focus-ring inline-flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-md transition-transform duration-200 hover:scale-110 focus-visible:scale-110 focus-visible:outline-none motion-reduce:transition-none"
+                        >
+                          <span
+                            aria-hidden="true"
+                            className="size-6 bg-[var(--brand-600)] dark:bg-[var(--brand-400)]"
+                            style={{
+                              WebkitMaskImage: "url('/icons/instagram.svg')",
+                              maskImage: "url('/icons/instagram.svg')",
+                              WebkitMaskPosition: "center",
+                              maskPosition: "center",
+                              WebkitMaskRepeat: "no-repeat",
+                              maskRepeat: "no-repeat",
+                              WebkitMaskSize: "contain",
+                              maskSize: "contain",
+                            }}
+                          />
+                        </Link>
+                      </TooltipTrigger>
+                      <TooltipContent side="top" sideOffset={8}>
+                        Przejdź na Instagram
+                      </TooltipContent>
+                    </Tooltip>
+                  )}
+                  <h1 className="text-3xl font-anton">{trainer.name}</h1>
+                </div>
 
                 <p className="mt-4 max-w-2xl text-base leading-8 opacity-80 sm:text-lg ">
                   {trainer.description}
@@ -158,24 +193,6 @@ export default async function TrainerPage({ params }: PageProps) {
                 </div>
               )}
 
-              <div className=" flex gap-2 place-self-start md:place-self-end xl:place-self-end xl:absolute xl:bottom-0">
-                {trainer.instagram && (
-                  <ButtonSecondary href={trainer.instagram} blank={true}>
-                    <img
-                      width={14}
-                      height={14}
-                      alt={`instagram logo`}
-                      src={`/icons/instagram.svg`}
-                      className={cn("dark:invert", a11y)}
-                    />{" "}
-                    Instagram
-                  </ButtonSecondary>
-                )}
-
-                <ButtonSecondary href="/kadra">
-                  Zobacz całą kadrę
-                </ButtonSecondary>
-              </div>
             </div>
           </div>
         </div>

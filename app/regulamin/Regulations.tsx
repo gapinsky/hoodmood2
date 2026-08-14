@@ -6,7 +6,7 @@ export default function Regulations() {
       {regulations.map((section) => (
         <article
           key={section.title}
-          className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-900"
+          className="rounded-2xl bg-white p-6 dark:bg-neutral-900"
         >
           <h2 className="text-lg">{section.title}</h2>
 

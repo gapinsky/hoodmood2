@@ -15,6 +15,25 @@ export const scheduleTabs = [
     segment: "/grafik/bialy-bor",
   },
 ];
+
+export const pricingTabs = [
+  {
+    label: "Koszalin",
+    href: "/cennik/koszalin/zajecia",
+    segment: "/cennik/koszalin",
+  },
+  {
+    label: "Polanów",
+    href: "/cennik/polanow",
+    segment: "/cennik/polanow",
+  },
+  {
+    label: "Biały Bór",
+    href: "/cennik/bialy-bor",
+    segment: "/cennik/bialy-bor",
+  },
+];
+
 export const offerTabs = [
   {
     label: "Koszalin",

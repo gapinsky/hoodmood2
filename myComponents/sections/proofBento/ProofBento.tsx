@@ -22,10 +22,8 @@ export default function ProofBento() {
         {featureCards.map((group, groupId) => (
           <div className="flex flex-col  gap-8  " key={groupId}>
             {group.map((featureCard) => (
-              <Card
-                key={featureCard.id}
-                className={`w-full   overflow-hidden  mx-auto max-w-none ${cardLiftHoverStyles}`}
-              >
+              <div key={featureCard.id} className={cardLiftHoverStyles}>
+              <Card className="w-full overflow-hidden mx-auto max-w-none">
                 {featureCard.img !== null && (
                   <div className={cn("relative", featureCard.imgClass)}>
                     <Image
@@ -48,6 +46,7 @@ export default function ProofBento() {
                   </CardDescription>
                 </CardHeader>
               </Card>
+              </div>
             ))}
           </div>
         ))}

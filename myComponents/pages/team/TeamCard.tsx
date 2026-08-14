@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
+import { useState } from "react";
 
 type Props = {
   name: string;
@@ -21,6 +24,7 @@ export default function TeamCard({
   id,
   variant = "grid",
 }: Props) {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const specialization = role || styles[0];
   const isCarousel = variant === "carousel";
 
@@ -29,9 +33,15 @@ export default function TeamCard({
       scroll
       href={`/kadra/${id}`}
       aria-label={`Zobacz profil trenera: ${name}`}
-      className={`group relative block aspect-square w-full overflow-hidden rounded-lg border border-black/6 bg-white/18 text-left shadow-[0_10px_28px_rgba(0,0,0,0.06)] transition duration-300 hover:cursor-pointer hover:shadow-[0_18px_44px_rgba(0,0,0,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-500)] focus-visible:ring-offset-2 dark:border-white/[0.08] dark:bg-white/[0.05] dark:shadow-[0_14px_38px_rgba(0,0,0,0.2)] ${cardLiftHoverStyles}`}
+      className={`group relative block aspect-square w-full overflow-hidden rounded-lg bg-white/18 text-left transition duration-300 hover:cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-500)] focus-visible:ring-offset-2 dark:bg-white/[0.05] ${cardLiftHoverStyles}`}
     >
       <div className="relative h-full w-full overflow-hidden">
+        <div
+          aria-hidden="true"
+          className={`absolute inset-0 bg-black/[0.08] transition-opacity duration-500 dark:bg-white/[0.08] ${
+            imageLoaded ? "pointer-events-none opacity-0" : "animate-pulse opacity-100"
+          }`}
+        />
         <Image
           src={images[0]}
           fill
@@ -41,7 +51,10 @@ export default function TeamCard({
               ? "(max-width: 767px) calc(100vw - 4rem), (max-width: 1279px) calc(33vw - 3rem), 280px"
               : "(max-width: 767px) calc(100vw - 4rem), (max-width: 1023px) 33vw, 25vw"
           }
-          className="object-cover"
+          className={`object-cover transition-opacity duration-500 ${
+            imageLoaded ? "opacity-100" : "opacity-0"
+          }`}
+          onLoad={() => setImageLoaded(true)}
           quality={isCarousel ? 60 : undefined}
           priority={false}
         />

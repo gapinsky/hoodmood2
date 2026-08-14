@@ -7,6 +7,8 @@ import {
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import PricingTable from "@/myComponents/pages/pricing/PricingTable";
 import MainWrapper from "@/myComponents/common/MainWrapper";
+import ToggleButtons from "@/myComponents/common/ToggleButtons";
+import { pricingTabs } from "@/data/tabs";
 export default function PricingBialyBor() {
   return (
     <MainWrapper>
@@ -16,6 +18,7 @@ export default function PricingBialyBor() {
           title={bialyBorPricingPageContent.title}
           description={bialyBorPricingPageContent.description}
         ></SectionContent>
+        <ToggleButtons tabs={pricingTabs} />
         <PricingTable items={bialyBorPricingTableData} />
         <AnyQuestionsContact />
       </SectionContainer>

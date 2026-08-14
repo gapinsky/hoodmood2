@@ -284,7 +284,7 @@ const HoverCardContent = React.forwardRef<
       align={align}
       sideOffset={sideOffset}
       className={cn(
-        "ui-floating z-50 w-56 rounded-lg p-4 text-popover-foreground outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-hover-card-content-transform-origin]",
+        "z-50 w-56 rounded-lg border border-black/[0.08] bg-white/92 p-4 text-[#21191d] shadow-[0_18px_48px_rgba(0,0,0,0.16)] backdrop-blur-xl outline-none dark:border-white/[0.10] dark:bg-[#1c1c1c]/98 dark:text-white/92 dark:shadow-[0_18px_48px_rgba(0,0,0,0.32)] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-hover-card-content-transform-origin]",
         className,
       )}
       {...props}

@@ -124,7 +124,7 @@ function DesktopPostTile({ post }: { post: InstagramPost }) {
     <DialogTrigger asChild>
       <button
         type="button"
-        className="group relative hidden aspect-square w-full overflow-hidden rounded-lg border border-black/6 bg-white/18 text-left shadow-[0_10px_28px_rgba(0,0,0,0.06)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_rgba(0,0,0,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-500)] focus-visible:ring-offset-2 md:block dark:border-white/[0.08] dark:bg-white/[0.05] dark:shadow-[0_14px_38px_rgba(0,0,0,0.2)]"
+        className="group relative hidden aspect-square w-full overflow-hidden rounded-lg bg-white/18 text-left transition duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-500)] focus-visible:ring-offset-2 md:block dark:bg-white/[0.05]"
         aria-label={`Otworz post Instagram: ${post.caption}`}
       >
         <InstagramPreviewMedia
@@ -154,7 +154,7 @@ function MobilePostCard({ post }: { post: InstagramPost }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <article className="block w-full overflow-hidden rounded-xl border border-black/[0.06] bg-white/[0.34] text-left shadow-[0_14px_34px_rgba(0,0,0,0.08)] md:hidden dark:border-white/[0.08] dark:bg-white/[0.06] dark:shadow-[0_18px_40px_rgba(0,0,0,0.22)]">
+    <article className="block w-full overflow-hidden rounded-xl bg-white/[0.34] text-left md:hidden dark:bg-white/[0.06]">
       <div className="flex items-center gap-3 px-4 py-3">
         <Avatar className="size-9 border border-black/[0.08] dark:border-white/[0.1]">
           <AvatarImage
