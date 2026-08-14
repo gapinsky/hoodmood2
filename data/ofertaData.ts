@@ -52,9 +52,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
         "Na zajęciach KPOP dzieci uczą się choreografii inspirowanych popularnymi utworami i teledyskami. Pracujemy nad rytmiką, pamięcią ruchową i dynamiką tańca. Ćwiczymy elementy sceniczne, pewność siebie oraz pracę w grupie. Zajęcia są energiczne i prowadzone w sposób angażujący młodszych uczestników. Zajęcia są przeznaczone dla dzieci.",
       minAge: "10",
       maxAge: "12",
-      instructors: [
-        { name: "Alina Lemańska", slug: "/kadra/alina-lemanska" },
-      ],
+      instructors: [{ name: "Alina Lemańska", slug: "/kadra/alina-lemanska" }],
       img: "/assets/images/offer/kpop.jpg",
       experience: "Dla każdego",
       scheduleSrc: "/grafik/koszalin",
@@ -66,9 +64,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
         "Na zajęciach KPOP dzieci uczą się choreografii inspirowanych popularnymi utworami i teledyskami. Pracujemy nad rytmiką, pamięcią ruchową i dynamiką tańca. Ćwiczymy elementy sceniczne, pewność siebie oraz pracę w grupie. Zajęcia są energiczne i prowadzone w sposób angażujący młodszych uczestników. Zajęcia są przeznaczone dla dzieci.",
       minAge: "13",
       maxAge: "",
-      instructors: [
-        { name: "Alina Lemańska", slug: "/kadra/alina-lemanska" },
-      ],
+      instructors: [{ name: "Alina Lemańska", slug: "/kadra/alina-lemanska" }],
       img: "/assets/images/offer/kpop.jpg",
       experience: "Dla każdego",
       scheduleSrc: "/grafik/koszalin",
@@ -80,9 +76,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
         "Na zajęciach KPOP uczestnicy uczą się choreografii inspirowanych popularnymi utworami i teledyskami. Pracujemy nad rytmiką, pamięcią ruchową, dynamiką tańca, elementami scenicznymi i pewnością siebie.",
       minAge: "30",
       maxAge: "",
-      instructors: [
-        { name: "Alina Lemańska", slug: "/kadra/alina-lemanska" },
-      ],
+      instructors: [{ name: "Alina Lemańska", slug: "/kadra/alina-lemanska" }],
       img: "/assets/images/offer/kpop.jpg",
       experience: "Dla każdego",
       scheduleSrc: "/grafik/koszalin",
@@ -263,7 +257,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/koszalin/zajecia",
     },
     {
-      name: "HIP-HOP | 30+",
+      name: "Formacja dla dorosłych (Hip-Hop) | 30+",
       description:
         "Na zajęciach uczestnicy uczą się choreografii grupowych i pracy w zespole. Ćwiczymy synchronizację, ustawienia sceniczne oraz dokładność wykonania ruchu. Zajęcia rozwijają kondycję, koordynację i pamięć ruchową. To dobra opcja dla osób, które lubią regularny trening i wspólne przygotowanie układów. Zajęcia są przeznaczone dla dorosłych.",
       minAge: "30",
@@ -282,7 +276,9 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
         "3 godziny | regularnie, 1x w miesiącu. To stała współpraca z wybranym trenerem, który regularnie pojawia się w naszym grafiku. Dzięki temu możesz trenować z nim przez cały sezon i rozwijać się pod jego okiem.",
       minAge: "",
       maxAge: "",
-      instructors: [],
+      instructors: [
+        { name: "Nikola Suchocka", slug: "/kadra/nikola-suchocka" },
+      ],
       img: "/assets/images/offer/dorosliFormacja.jpg",
       experience: "Dla każdego",
       scheduleSrc: "/grafik/koszalin",
@@ -347,7 +343,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     {
       name: "Taniec dla 4-6 latków",
       description:
-        "To zajęcia ruchowo-taneczne dla najmłodszych, które wprowadzają dzieci w świat tańca przez zabawę. Ćwiczymy podstawowe kroki, rytm i prostą koordynację ruchową. Wykorzystujemy muzykę, gry ruchowe i krótkie układy taneczne. Zajęcia wspierają rozwój motoryczny, samodzielność i oswajanie pracy w grupie. Koszt: 120 zł/miesiąc.",
+        "To zajęcia ruchowo-taneczne dla najmłodszych, które wprowadzają dzieci w świat tańca przez zabawę. Ćwiczymy podstawowe kroki, rytm i prostą koordynację ruchową. Wykorzystujemy muzykę, gry ruchowe i krótkie układy taneczne. Zajęcia wspierają rozwój motoryczny, samodzielność i oswajanie pracy w grupie. Koszt: 140 zł/miesiąc.",
       minAge: "4",
       maxAge: "6",
       instructors: [
@@ -387,11 +383,11 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/polanow",
     },
     {
-      name: "Hip-hop | 10-15 lat",
+      name: "Hip-hop | 10-14 lat",
       description:
         "Treningi skierowane do starszych dzieci i młodzieży, nastawione na rozwój stylu, świadomości ciała i scenicznej ekspresji. Uczestnicy doskonalą technikę, groove, musicality oraz pracę zespołową, a także uczą się bardziej rozbudowanych choreografii i świadomego poruszania się w rytmie muzyki.",
       minAge: "10",
-      maxAge: "15",
+      maxAge: "14",
       instructors: [
         { name: "Talita Jarzęcka", slug: "/kadra/talita-jarzecka" },
       ],

@@ -75,7 +75,7 @@ export const koszalinPricingContent: Record<
       {
         name: "The Beat Hunters",
         price: "290",
-        frequency: "1",
+        frequency: "2",
         trending: false,
         minAge: 5,
         maxAge: 99,
@@ -110,7 +110,7 @@ export const koszalinPricingContent: Record<
       },
 
       {
-        name: "HIP-HOP",
+        name: "Formacja dla dorosłych (Hip-Hop)",
         price: "210",
         frequency: "1",
         trending: false,
@@ -187,8 +187,8 @@ export const koszalinPricingContent: Record<
         frequency: "2",
         frequencyDescription: "grupa średniozaawansowana",
         trending: false,
-        minAge: 7,
-        maxAge: 9,
+        minAge: 12,
+        maxAge: 99,
         category: "hypeCrew",
       },
       {
@@ -213,7 +213,7 @@ export const koszalinPricingContent: Record<
       },
       {
         name: "HOODMOOD MASTER PASS",
-        price: "140 zł / miesiąc",
+        price: "140 zł / miesiąc – aktywni kursanci HOODMOOD / 290 zł / miesiąc – osoby spoza HOODMOOD",
         frequency: "3-godzinny MASTER TRAINER + 1,5-godzinny MASTERCLASS",
         trending: false,
         minAge: 5,
@@ -252,9 +252,9 @@ export const koszalinPricingContent: Record<
       {
         name: "The Beat HUNTERS + KPOP 1x w tygodniu",
         price: "370",
-        frequency: "2",
+        frequency: "3",
         frequencyDescription:
-          "The Beat HUNTERS: 1 raz w tygodniu. KPOP: 1 raz w tygodniu.",
+          "The Beat HUNTERS: 2 razy w tygodniu. KPOP: 1 raz w tygodniu.",
         trending: false,
         minAge: 5,
         maxAge: 99,
@@ -263,9 +263,9 @@ export const koszalinPricingContent: Record<
       {
         name: "The Beat HUNTERS + Akrobatyka 1x w tygodniu",
         price: "455",
-        frequency: "2",
+        frequency: "3",
         frequencyDescription:
-          "The Beat HUNTERS: 1 raz w tygodniu. Akrobatyka 1x w tygodniu.",
+          "The Beat HUNTERS: 2 razy w tygodniu. Akrobatyka: 1 raz w tygodniu.",
         trending: false,
         minAge: 5,
         maxAge: 99,
@@ -274,22 +274,22 @@ export const koszalinPricingContent: Record<
       {
         name: "HYPE CREW + KPOP 1x w tygodniu",
         price: "380",
-        frequency: "2",
+        frequency: "3",
         frequencyDescription:
-          "HYPE CREW: 1 raz w tygodniu. KPOP: 1 raz w tygodniu.",
+          "HYPE CREW: 2 razy w tygodniu. KPOP: 1 raz w tygodniu.",
         trending: false,
-        minAge: 5,
+        minAge: 12,
         maxAge: 99,
         category: "hypeCrew",
       },
       {
         name: "HYPE CREW + Akrobatyka 1x w tygodniu",
         price: "465",
-        frequency: "2",
+        frequency: "3",
         frequencyDescription:
-          "HYPE CREW: 1 raz w tygodniu. Akrobatyka 1x w tygodniu.",
+          "HYPE CREW: 2 razy w tygodniu. Akrobatyka: 1 raz w tygodniu.",
         trending: false,
-        minAge: 5,
+        minAge: 12,
         maxAge: 99,
         category: "hypeCrew",
       },
@@ -433,7 +433,7 @@ export const polanowPricingPageContent = {
 export const polanowPricingTableData: PricingItem[] = [
   {
     name: "Taniec dla 4–6 latków",
-    price: "130",
+    price: "140",
     frequency: "1x/tyg",
     trending: false,
     minAge: 4,
@@ -442,7 +442,7 @@ export const polanowPricingTableData: PricingItem[] = [
   },
   {
     name: "Hip-hop",
-    price: "140",
+    price: "150",
     frequency: "1x/tyg",
     trending: false,
     minAge: 7,
@@ -451,11 +451,20 @@ export const polanowPricingTableData: PricingItem[] = [
   },
   {
     name: "Hip-hop",
-    price: "170",
+    price: "180",
     frequency: "1x/tyg",
     trending: false,
     minAge: 10,
-    maxAge: 15,
+    maxAge: 14,
     category: "hiphop",
+  },
+  {
+    name: "Taniec współczesny",
+    price: "150",
+    frequency: "1x/tyg",
+    trending: false,
+    minAge: 7,
+    maxAge: 11,
+    category: "contemporary",
   },
 ];
