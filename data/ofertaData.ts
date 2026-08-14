@@ -225,7 +225,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
           slug: "/kadra/maria-kober",
         },
       ],
-      img: "/assets/images/offer/HypeCrew.jpg",
+      img: "/assets/images/offer/hype.jpg",
       experience: "grupa średniozaawansowana",
       scheduleSrc: "/grafik/koszalin",
       pricingSrc: "/cennik/koszalin/zajecia",
