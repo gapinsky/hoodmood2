@@ -29,7 +29,13 @@ export default function Footer() {
         <div className="flex flex-col gap-8 md:flex-row  md:justify-between lg:items-stretch border-b-2 border-black/10 dark:border-white/20 py-4 lg:py-8 ">
           {/* LEFT COL */}
           <div className="space-y-4">
-            <Image src={logo} alt="logo" width={120} height={60} />
+            <Image
+              src={logo}
+              alt="Hoodmood"
+              width={120}
+              height={97}
+              className="h-auto w-[120px]"
+            />
             <div className="space-y-1">
               <p className="font-semibold">Adres siedziby:</p>
               <p className="opacity-80">Zwycięstwa 115, 75-211 Koszalin</p>

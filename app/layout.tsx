@@ -61,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl" suppressHydrationWarning>
+    <html lang="pl" suppressHydrationWarning data-scroll-behavior="smooth">
       <body
         className={`${fontAnton.variable} ${fontRoboto.variable} w-full relative bg-transparent h-svh`}
       >
