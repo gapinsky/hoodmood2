@@ -48,7 +48,7 @@ export default function OfferCard({
           src={img}
           fill
           alt={name}
-          className={`transform-gpu object-cover will-change-transform transition-[transform,opacity] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/card:scale-[1.03] ${
+          className={`transform-gpu object-cover object-center will-change-transform transition-[transform,opacity] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/card:scale-[1.03] ${
             imageLoaded ? "opacity-100" : "opacity-0"
           }`}
           onLoad={() => setImageLoaded(true)}

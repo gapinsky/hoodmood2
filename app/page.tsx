@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
+import Script from "next/script";
 import Localizations from "@/myComponents/sections/localizations/Localizations";
 import Offer from "../myComponents/sections/offer/Offer";
 import Hero from "@/myComponents/sections/hero/Hero";
@@ -167,7 +168,8 @@ const jsonLd = {
 export default function Home() {
   return (
     <>
-      <script
+      <Script
+        id="hoodmood-dance-school-json-ld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />

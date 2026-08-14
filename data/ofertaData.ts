@@ -216,8 +216,8 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       name: "HYPE CREW",
       description:
         "To średniozaawansowana grupa dla osób, które mają doświadczenie w hip-hopie i chcą rozwijać się intensywniej. Pracujemy nad techniką, choreografią, dokładnością wykonania i jakością ruchu. Ćwiczymy także musicality, pracę formacji oraz przygotowanie do pokazów. Zajęcia są dynamiczne i wymagają regularności oraz zaangażowania. Grupa jest przeznaczona głównie dla dzieci i młodzieży z doświadczeniem.",
-      minAge: "",
-      maxAge: "",
+      minAge: "12",
+      maxAge: "99",
       instructors: [
         { name: "Talita Jarzęcka", slug: "/kadra/talita-jarzecka" },
         {
@@ -225,7 +225,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
           slug: "/kadra/maria-kober",
         },
       ],
-      img: "/assets/images/offer/hypeCrew.jpg",
+      img: "/assets/images/offer/HypeCrew.jpg",
       experience: "grupa średniozaawansowana",
       scheduleSrc: "/grafik/koszalin",
       pricingSrc: "/cennik/koszalin/zajecia",
@@ -274,12 +274,12 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       name: "MASTER TRAINERS",
       description:
         "3 godziny | regularnie, 1x w miesiącu. To stała współpraca z wybranym trenerem, który regularnie pojawia się w naszym grafiku. Dzięki temu możesz trenować z nim przez cały sezon i rozwijać się pod jego okiem.",
-      minAge: "",
-      maxAge: "",
+      minAge: "7",
+      maxAge: "99",
       instructors: [
         { name: "Nikola Suchocka", slug: "/kadra/nikola-suchocka" },
       ],
-      img: "/assets/images/offer/dorosliFormacja.jpg",
+      img: "/assets/images/offer/masterTrainer.jpg",
       experience: "Dla każdego",
       scheduleSrc: "/grafik/koszalin",
       pricingSrc: "/cennik/koszalin/zajecia",
@@ -288,10 +288,12 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       name: "MASTERCLASS",
       description:
         "1,5 godziny | specjalne wydarzenia. Jednorazowe warsztaty z zaproszonymi choreografami, tancerzami i instruktorami. Różne nazwiska, różne style, różne doświadczenia.",
-      minAge: "",
-      maxAge: "",
-      instructors: [],
-      img: "/assets/images/offer/dorosliFormacja.jpg",
+      minAge: "7",
+      maxAge: "99",
+      instructors: [
+        { name: "Nikola Suchocka", slug: "/kadra/nikola-suchocka" },
+      ],
+      img: "/assets/images/offer/masterClass.jpg",
       experience: "Dla każdego",
       scheduleSrc: "/grafik/koszalin",
       pricingSrc: "/cennik/koszalin/zajecia",
@@ -300,10 +302,12 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       name: "HOODMOOD MASTER PASS",
       description:
         "Pakiet obejmuje 3-godzinny MASTER TRAINER oraz 1,5-godzinny MASTERCLASS.",
-      minAge: "",
-      maxAge: "",
-      instructors: [],
-      img: "/assets/images/offer/dorosliFormacja.jpg",
+      minAge: "7",
+      maxAge: "99",
+      instructors: [
+        { name: "Nikola Suchocka", slug: "/kadra/nikola-suchocka" },
+      ],
+      img: "/assets/images/offer/masterPass.jpg",
       experience: "Dla każdego",
       scheduleSrc: "/grafik/koszalin",
       pricingSrc: "/cennik/koszalin/zajecia",

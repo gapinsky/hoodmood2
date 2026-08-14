@@ -45,7 +45,7 @@ export const scheduleContentData = {
         name: "HYPE CREW",
         time: "18:00–19:30",
         instructor: "Talita Jarzęcka / Paulina Kapuścińska",
-        age: "7–9",
+        age: "12+",
         info: "Trening grupowy z naciskiem na choreografię, technikę i performance.",
       },
       {
@@ -152,7 +152,7 @@ export const scheduleContentData = {
         name: "HYPE CREW",
         time: "17:30–18:30",
         instructor: "Maria Kober / Paulina Kapuścińska",
-        age: "7–9",
+        age: "12+",
         info: "Trening grupowy z naciskiem na choreografię, technikę i performance.",
       },
       {
@@ -210,7 +210,7 @@ export const scheduleContentData = {
       {
         name: "MASTERCLASS",
         time: "20:00–21:30",
-        instructor: "",
+        instructor: "Nikola Suchocka",
         age: "7–99",
         minAge: 7,
         maxAge: 99,
