@@ -96,7 +96,11 @@ export default function OfferCard({
         <CardFooter className="flex-row items-end gap-2">
           <div className="min-h-12 w-full">
             <p className="text-sm   font-semibold leading-none mb-1">
-              {instructors.length <= 1 ? "Instruktor:" : "Instruktorzy:"}
+              {name === "MASTER TRAINERS"
+                ? "Master trenerzy:"
+                : instructors.length <= 1
+                  ? "Instruktor:"
+                  : "Instruktorzy:"}
             </p>
             <div>
               {instructors.length === 0 ? (
@@ -110,7 +114,10 @@ export default function OfferCard({
                     >
                       {instructor.name}
                     </Link>
-                    {index < instructors.length - 1 ? ", " : null}
+                    {instructor.suffix}
+                    {index < instructors.length - 1
+                      ? (instructor.separatorAfter ?? ", ")
+                      : null}
                   </span>
                 ))
               )}

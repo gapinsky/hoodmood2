@@ -23,7 +23,12 @@ export type ClassesOfferType = {
   description: string;
   minAge: string;
   maxAge: string;
-  instructors: { name: string; slug: string }[];
+  instructors: {
+    name: string;
+    slug: string;
+    suffix?: string;
+    separatorAfter?: string;
+  }[];
   img: string;
   experience: string;
   scheduleSrc: string;
@@ -224,6 +229,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
           name: "Maria Kober",
           slug: "/kadra/maria-kober",
         },
+        { name: "Paulina Kapuścińska", slug: "/kadra" },
       ],
       img: "/assets/images/offer/hype.jpg",
       experience: "grupa średniozaawansowana",
@@ -265,7 +271,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       instructors: [
         { name: "Wiktoria Butwicka", slug: "/kadra/wiktoria-butwicka" },
       ],
-      img: "/assets/images/offer/dorosliFormacja.jpg",
+      img: "/assets/images/offer/formacjaDladoroslych.jpg",
       experience: "Dla każdego",
       scheduleSrc: "/grafik/koszalin",
       pricingSrc: "/cennik/koszalin/zajecia",
@@ -277,7 +283,22 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       minAge: "7",
       maxAge: "99",
       instructors: [
-        { name: "Nikola Suchocka", slug: "/kadra/nikola-suchocka" },
+        {
+          name: "Nikola Suchocka",
+          slug: "/kadra/nikola-suchocka",
+          suffix: " (hip-hop)",
+          separatorAfter: ", ",
+        },
+        {
+          name: "Kamila Maik",
+          slug: "/kadra/kamila-maik",
+          separatorAfter: " / ",
+        },
+        {
+          name: "Joanna Jedynak",
+          slug: "/kadra/joanna-jedynak",
+          suffix: " (taniec współczesny)",
+        },
       ],
       img: "/assets/images/offer/masterTrainer.jpg",
       experience: "Dla każdego",
@@ -290,9 +311,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
         "1,5 godziny | specjalne wydarzenia. Jednorazowe warsztaty z zaproszonymi choreografami, tancerzami i instruktorami. Różne nazwiska, różne style, różne doświadczenia.",
       minAge: "7",
       maxAge: "99",
-      instructors: [
-        { name: "Nikola Suchocka", slug: "/kadra/nikola-suchocka" },
-      ],
+      instructors: [{ name: "Gość specjalny", slug: "/kadra" }],
       img: "/assets/images/offer/masterClass.jpg",
       experience: "Dla każdego",
       scheduleSrc: "/grafik/koszalin",
@@ -304,9 +323,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
         "Pakiet obejmuje 3-godzinny MASTER TRAINER oraz 1,5-godzinny MASTERCLASS.",
       minAge: "7",
       maxAge: "99",
-      instructors: [
-        { name: "Nikola Suchocka", slug: "/kadra/nikola-suchocka" },
-      ],
+      instructors: [{ name: "Gość specjalny", slug: "/kadra" }],
       img: "/assets/images/offer/masterPass.jpg",
       experience: "Dla każdego",
       scheduleSrc: "/grafik/koszalin",
@@ -359,20 +376,6 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       pricingSrc: "/cennik/polanow",
     },
     {
-      name: "Hip-hop | 4-6 lat",
-      description:
-        "Energetyczne zajęcia dla najmłodszych, które łączą naukę podstaw hip-hopu z zabawą i ruchem przy muzyce. Dzieci poznają proste kroki, ćwiczą rytmikę, koordynację oraz swobodę ruchu. Zajęcia rozwijają pewność siebie, kreatywność i umiejętność współpracy w grupie.",
-      minAge: "4",
-      maxAge: "6",
-      instructors: [
-        { name: "Talita Jarzęcka", slug: "/kadra/talita-jarzecka" },
-      ],
-      img: "/assets/images/offer/theBeatHunters10-12.jpg",
-      experience: "Początkujący",
-      scheduleSrc: "/grafik/polanow",
-      pricingSrc: "/cennik/polanow",
-    },
-    {
       name: "Hip-hop | 7-9 lat",
       description:
         "Zajęcia dla dzieci, które chcą rozwijać taneczną pasję i poznawać coraz bardziej złożone elementy hip-hopu. Uczestnicy pracują nad techniką, dynamiką, pamięcią ruchową i interpretacją muzyki, ucząc się krótkich choreografii dopasowanych do wieku i poziomu grupy.",
@@ -397,6 +400,20 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       ],
       img: "/assets/images/offer/hipHop10-15Polanow.jpg",
       experience: "Średniozaawansowany",
+      scheduleSrc: "/grafik/polanow",
+      pricingSrc: "/cennik/polanow",
+    },
+    {
+      name: "Taniec współczesny | 7-11 lat",
+      description:
+        "Na zajęciach tańca współczesnego dzieci poznają podstawy pracy z ruchem, przestrzenią i muzyką. Ćwiczymy płynność, koordynację oraz ekspresję poprzez krótkie kombinacje i choreografie. Zajęcia rozwijają świadomość ciała, kreatywność i wrażliwość artystyczną. Wprowadzamy elementy techniki i improwizacji w przyjaznej atmosferze.",
+      minAge: "7",
+      maxAge: "11",
+      instructors: [
+        { name: "Talita Jarzęcka", slug: "/kadra/talita-jarzecka" },
+      ],
+      img: "/assets/images/offer/taniecWspolczesny8-12.jpg",
+      experience: "Dla każdego",
       scheduleSrc: "/grafik/polanow",
       pricingSrc: "/cennik/polanow",
     },

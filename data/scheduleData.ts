@@ -51,7 +51,7 @@ export const scheduleContentData = {
       {
         name: "Taniec współczesny",
         time: "19:30–20:30",
-        instructor: "Kamila Maik / Joanna Jedynak",
+        instructor: "Talita Jarzęcka (Kamila Maik / Joanna Jedynak 1x/msc)",
         age: "13-18",
         info: "Taniec współczesny: technika, płynność, praca z podłogą i ekspresja ruchowa.",
       },
@@ -96,7 +96,7 @@ export const scheduleContentData = {
       {
         name: "Taniec współczesny",
         time: "20:00–21:00",
-        instructor: "Kamila Maik / Joanna Jedynak",
+        instructor: "Talita Jarzęcka (Kamila Maik / Joanna Jedynak 1x/msc)",
         age: "13-18",
         info: "Taniec współczesny: technika, płynność, praca z podłogą i ekspresja ruchowa.",
       },
@@ -210,7 +210,7 @@ export const scheduleContentData = {
       {
         name: "MASTERCLASS",
         time: "20:00–21:30",
-        instructor: "Nikola Suchocka",
+        instructor: "Gość specjalny",
         age: "7–99",
         minAge: 7,
         maxAge: 99,

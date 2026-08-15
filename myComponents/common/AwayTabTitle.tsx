@@ -3,11 +3,13 @@
 import { useEffect } from "react";
 
 const awayMessage = "• HOODMOOD • Wróć do nas! 💃    ";
+const titleScrollInterval = 220;
 
 export default function AwayTabTitle() {
   useEffect(() => {
     let originalTitle = document.title;
-    let animatedTitle = awayMessage;
+    const titleCharacters = Array.from(awayMessage);
+    let titleOffset = 0;
     let intervalId: number | undefined;
 
     const reducedMotion = window.matchMedia(
@@ -23,15 +25,18 @@ export default function AwayTabTitle() {
 
     function startAnimation() {
       stopAnimation();
-      animatedTitle = awayMessage;
-      document.title = animatedTitle;
+      titleOffset = 0;
+      document.title = awayMessage;
 
       if (reducedMotion.matches) return;
 
       intervalId = window.setInterval(() => {
-        animatedTitle = `${animatedTitle.slice(1)}${animatedTitle[0]}`;
-        document.title = animatedTitle;
-      }, 1);
+        titleOffset = (titleOffset + 1) % titleCharacters.length;
+        document.title = [
+          ...titleCharacters.slice(titleOffset),
+          ...titleCharacters.slice(0, titleOffset),
+        ].join("");
+      }, titleScrollInterval);
     }
 
     function handleVisibilityChange() {

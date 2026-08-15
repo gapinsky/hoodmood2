@@ -17,7 +17,12 @@ export type PricingTableProps = {
 const desktopGrid =
   "md:grid-cols-[minmax(0,1.6fr)_90px_120px_100px_120px] lg:grid-cols-[minmax(0,1.8fr)_140px_180px_140px_140px]";
 
+const masterCategories = new Set(["masterProgram", "masterclass", "masterPass"]);
+
 const formatAge = (item: PricingItem) => {
+  if (masterCategories.has(item.category)) {
+    return `${item.minAge}-${item.maxAge} lat`;
+  }
   if (item.minAge === 5 && item.maxAge === 99) return "Bez limitu wieku";
   if (item.maxAge === 99) return `${item.minAge}+ lat`;
   return `${item.minAge}-${item.maxAge} lat`;

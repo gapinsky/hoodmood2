@@ -95,7 +95,7 @@ export const instructors: Trainer[] = [
   {
     id: "maria-kober",
     name: "Maria Kober",
-    role: "The Beat Hunters/Choreo",
+    role: "The Beat Hunters",
     styles: [
       "The Beat Hunters (hip-hop)",
       "HYPE CREW (grupa średniozaawansowana hip-hop)",
@@ -106,19 +106,6 @@ export const instructors: Trainer[] = [
     images: ["/assets/images/team/mariaKober.jpg"],
     localizations: ["Koszalin"],
     instagram: "https://www.instagram.com/marysiakober",
-  },
-  {
-    id: "oliwia-piec",
-    name: "Oliwia Piec",
-    role: "Hip-hop",
-    styles: ["HYPE CREW (hip-hop)"],
-
-    description:
-      "Oliwia Piec od lat rozwija się tanecznie w ekipie HYPE CREW, gdzie zdobywa doświadczenie jako tancerka sceniczna i instruktorka. Ma doświadczenie warsztatowe u wielu trenerów, współtworzyła projekty filmowe (w tym produkcję nominowaną na International Cyprus Dance Film Festival) oraz występowała w spektaklach „Halucynacje” i „Gen Z”.",
-    images: ["/assets/images/team/oliwiaPiec.jpg"],
-    localizations: ["Koszalin"],
-    instagram:
-      "https://www.instagram.com/liwkaaa._?igsh=MWY2MndtN3psMXd5ZQ%3D%3D",
   },
   {
     id: "aleks-kultys",
@@ -151,8 +138,8 @@ export const instructors: Trainer[] = [
   {
     id: "kamila-maik",
     name: "Kamila Maik",
-    role: "Taniec współczesny",
-    styles: ["Taniec współczesny - starsza grupa"],
+    role: "Master Trainer",
+    styles: ["Master Trainer"],
 
     description: `Instruktorka tańca współczesnego, choreografka i założycielka Takiego Studia Tańca
 Założycielka i serce Takiego Studia.
@@ -174,8 +161,8 @@ W 2023 roku została wyróżniona tytułem Trener Roku przez Dziennik Bałtycki,
   {
     id: "joanna-jedynak",
     name: "Joanna Jedynak",
-    role: "Taniec współczesny",
-    styles: ["Taniec współczesny - starsza grupa"],
+    role: "Master Trainer",
+    styles: ["Master Trainer"],
 
     description: `Joanna jest instruktorką tańca, trenerką i choreografką w Studio Tańca Joy Dance Szczecin, specjalizującą się w stylach jazz, modern & contemporary, ballet oraz commercial. Jest finalistką, medalistką i stypendystką Global Dance Open oraz finalistką Dance World Cup. Wielokrotnie zdobywała medale i miejsca finałowe Mistrzostw Polski oraz Europy IDO, w tym tytuł Mistrzyni Polski w kategorii show duety oraz II Wicemistrzyni Polski w solo ballet repertoire. Nieustannie rozwija swoje umiejętności pod okiem czołowych choreografów z Polski i świata, a podczas zajęć stawia na technikę, świadomość ciała, muzykalność i rozwój artystyczny każdego tancerza.`,
     images: [
