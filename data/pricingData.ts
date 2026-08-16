@@ -129,7 +129,7 @@ export const koszalinPricingContent: Record<
       },
       {
         name: "Taniec współczesny",
-        price: "230",
+        price: "180",
         frequency: "1",
         trending: false,
         minAge: 6,
@@ -138,7 +138,7 @@ export const koszalinPricingContent: Record<
       },
       {
         name: "Taniec współczesny",
-        price: "230",
+        price: "210",
         frequency: "1",
         trending: false,
         minAge: 10,
@@ -147,7 +147,7 @@ export const koszalinPricingContent: Record<
       },
       {
         name: "Taniec współczesny",
-        price: "320",
+        price: "300",
         frequency: "2",
         trending: false,
         minAge: 13,
@@ -229,11 +229,11 @@ export const koszalinPricingContent: Record<
       "Chcesz uczęszczać na więcej niż jedne zajęcia? Sprawdź dostępne pakiety, które łączą kilka treningów w korzystniejszej cenie. To dobre rozwiązanie dla osób, które chcą rozwijać się wszechstronnie, łącząc różne style tańca, akrobatykę lub dodatkowe treningi uzupełniające.",
     tableData: [
       {
-        name: "Taniec dla 4-6 latków + Taniec współczesny",
-        price: "240",
+        name: "Taniec dla 4-6 latków + Taniec współczesny 6-9 lat",
+        price: "320",
         frequency: "2",
         frequencyDescription:
-          "Taniec dla 4-6 latków: 1 raz w tygodniu. Taniec współczesny: 1 raz w tygodniu.",
+          "Taniec dla 4-6 latków: 1 raz w tygodniu. Taniec współczesny 6-9 lat: 1 raz w tygodniu.",
         trending: false,
         minAge: 4,
         maxAge: 6,
@@ -241,7 +241,7 @@ export const koszalinPricingContent: Record<
       },
       {
         name: "Balet + Taniec współczesny 6-9 lat",
-        price: "375",
+        price: "320",
         frequency: "2",
         frequencyDescription: "Balet: 1 raz w tygodniu. Taniec współczesny 6-9 lat: 1 raz w tygodniu.",
         trending: false,
@@ -250,19 +250,29 @@ export const koszalinPricingContent: Record<
         category: "ballet",
       },
       {
+        name: "Taniec dla 4-6 latków + Akrobatyka",
+        price: "330",
+        frequency: "2",
+        frequencyDescription: "Taniec dla 4-6 latków: 1 raz w tygodniu. Akrobatyka: 1 raz w tygodniu.",
+        trending: false,
+        minAge: 4,
+        maxAge: 6,
+        category: "kidsDance",
+      },
+      {
         name: "The Beat HUNTERS + KPOP 1x w tygodniu",
-        price: "370",
+        price: "450",
         frequency: "3",
         frequencyDescription:
           "The Beat HUNTERS: 2 razy w tygodniu. KPOP: 1 raz w tygodniu.",
         trending: false,
         minAge: 5,
         maxAge: 99,
-        category: "kidsDance",
+        category: "theBeatHunters",
       },
       {
         name: "The Beat HUNTERS + Akrobatyka 1x w tygodniu",
-        price: "455",
+        price: "440",
         frequency: "3",
         frequencyDescription:
           "The Beat HUNTERS: 2 razy w tygodniu. Akrobatyka: 1 raz w tygodniu.",
@@ -273,7 +283,7 @@ export const koszalinPricingContent: Record<
       },
       {
         name: "HYPE CREW + KPOP 1x w tygodniu",
-        price: "380",
+        price: "460",
         frequency: "3",
         frequencyDescription:
           "HYPE CREW: 2 razy w tygodniu. KPOP: 1 raz w tygodniu.",
@@ -284,7 +294,7 @@ export const koszalinPricingContent: Record<
       },
       {
         name: "HYPE CREW + Akrobatyka 1x w tygodniu",
-        price: "465",
+        price: "450",
         frequency: "3",
         frequencyDescription:
           "HYPE CREW: 2 razy w tygodniu. Akrobatyka: 1 raz w tygodniu.",
@@ -295,7 +305,7 @@ export const koszalinPricingContent: Record<
       },
       {
         name: "Taniec współczesny 6-9 lat + Akrobatyka 1x w tygodniu",
-        price: "395",
+        price: "330",
         frequency: "2",
         frequencyDescription: "Taniec współczesny 6-9 lat: 1 raz w tygodniu. Akrobatyka 1x w tygodniu.",
         trending: false,

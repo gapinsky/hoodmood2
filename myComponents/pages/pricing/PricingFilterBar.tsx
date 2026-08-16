@@ -148,7 +148,7 @@ export default function PricingFilterBar() {
           value={sorting}
           onValueChange={(value) =>
             setSorting(
-              value as "default" | "ascending" | "descending" | "alphabetical",
+              value as "ascending" | "descending" | "alphabetical",
             )
           }
         >
@@ -157,9 +157,6 @@ export default function PricingFilterBar() {
           </SelectTrigger>
           <SelectContent className={selectContentStyles}>
             <SelectGroup>
-              <SelectItem className={selectItemStyles} value="default">
-                Sortowanie domyślne
-              </SelectItem>
               <SelectItem className={selectItemStyles} value="ascending">
                 Cena: rosnąco
               </SelectItem>

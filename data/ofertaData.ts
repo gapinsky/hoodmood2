@@ -180,8 +180,8 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       minAge: "6",
       maxAge: "9",
       instructors: [
-        { name: "Klara Walach", slug: "/kadra/klara-walach" },
-        { name: "Nel Głowacka", slug: "/kadra/nel-glowacka" },
+        { name: "Klara Walach", slug: "/kadra" },
+        { name: "Nel Głowacka", slug: "/kadra" },
       ],
       img: "/assets/images/offer/taniecWspolczesny8-12.jpg",
       experience: "Dla każdego",
@@ -195,8 +195,8 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       minAge: "10",
       maxAge: "12",
       instructors: [
-        { name: "Klara Walach", slug: "/kadra/klara-walach" },
-        { name: "Marianna Stanisławska", slug: "/kadra/marianna-stanislawska" },
+        { name: "Klara Walach", slug: "/kadra" },
+        { name: "Marianna Stanisławska", slug: "/kadra" },
       ],
       img: "/assets/images/offer/taniecWspolczesny8-12.jpg",
       experience: "Dla każdego",
@@ -410,7 +410,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       minAge: "7",
       maxAge: "11",
       instructors: [
-        { name: "Talita Jarzęcka", slug: "/kadra/talita-jarzecka" },
+        { name: "Marianna Stanisławska", slug: "/kadra" },
       ],
       img: "/assets/images/offer/taniecWspolczesny8-12.jpg",
       experience: "Dla każdego",

@@ -107,7 +107,7 @@ export default function OfferCard({
                 <span className="text-sm">TBA</span>
               ) : (
                 instructors.map((instructor, index) => (
-                  <span key={instructor.slug}>
+                  <span key={`${instructor.name}-${index}`}>
                     <Link
                       href={instructor.slug}
                       className="group/link ui-focus-ring ui-link-subtle text-sm rounded-sm text-start  focus-visible:ring-[3px] focus-visible:ring-ring/50"

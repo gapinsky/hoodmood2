@@ -3,7 +3,6 @@
 import { createContext, useContext, useState } from "react";
 
 export type SortingValue =
-  | "default"
   | "ascending"
   | "descending"
   | "alphabetical";
@@ -28,7 +27,7 @@ export function PricingFiltersProvider({
 }) {
   const [searchInput, setSearchInput] = useState("");
   const [searchAge, setSearchAge] = useState("");
-  const [sorting, setSorting] = useState<SortingValue>("default");
+  const [sorting, setSorting] = useState<SortingValue>("ascending");
 
   return (
     <PricingFiltersContext.Provider

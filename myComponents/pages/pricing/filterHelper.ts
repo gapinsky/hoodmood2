@@ -1,9 +1,12 @@
 import type { PricingItem } from "@/data/pricingData";
 import { normalize } from "@/myComponents/pages/faq/faqFilter";
 
-type SortingValue = "default" | "ascending" | "descending" | "alphabetical";
+type SortingValue = "ascending" | "descending" | "alphabetical";
 
-const parsePrice = (price: string) => Number(price.replace(/\D/g, ""));
+const parsePrice = (price: string) => {
+  const firstPrice = price.match(/\d+(?:[,.]\d+)?/)?.[0];
+  return firstPrice ? Number(firstPrice.replace(",", ".")) : 0;
+};
 
 export function filterAndSortPricingData(
   data: PricingItem[],
@@ -43,8 +46,9 @@ export function filterAndSortPricingData(
       return [...filtered].sort(
         (a, b) => parsePrice(b.price) - parsePrice(a.price),
       );
-    case "default":
     default:
-      return filtered;
+      return [...filtered].sort(
+        (a, b) => parsePrice(a.price) - parsePrice(b.price),
+      );
   }
 }

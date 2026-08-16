@@ -90,7 +90,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="/cennik/koszalin"
+                      href="/cennik/koszalin/zajecia"
                       className={cn(a11y, "ui-link-subtle opacity-80")}
                     >
                       Cennik

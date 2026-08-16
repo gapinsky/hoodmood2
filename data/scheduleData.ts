@@ -44,7 +44,7 @@ export const scheduleContentData = {
       {
         name: "HYPE CREW",
         time: "18:00–19:30",
-        instructor: "Talita Jarzęcka / Paulina Kapuścińska",
+        instructor: "Talita Jarzęcka",
         age: "12+",
         info: "Trening grupowy z naciskiem na choreografię, technikę i performance.",
       },
