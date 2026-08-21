@@ -14,7 +14,7 @@ export default function Team() {
           title={data.title}
           description={data.description}
         ></SectionContent>
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-2 lg:gap-3">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-2 lg:gap-3 lg:grid-cols-4">
           {instructors.map((instructor) => (
             <TeamCard
               key={instructor.id}

@@ -34,4 +34,15 @@ export type InstagramApiPost = {
 
 export type InstagramApiResponse = {
   data?: InstagramApiPost[];
+  paging?: {
+    cursors?: {
+      after?: string;
+    };
+    next?: string;
+  };
+};
+
+export type InstagramPostsPage = {
+  posts: InstagramPost[];
+  nextCursor: string | null;
 };

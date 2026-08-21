@@ -100,7 +100,8 @@ export default async function TrainerPage({ params }: PageProps) {
                           alt={`${trainer.name} zdjęcie ${index + 1}`}
                           fill
                           priority={index === 0}
-                          sizes="(max-width: 767px) calc(100vw - 4rem), (max-width: 1279px) calc(33vw - 3rem), 480px"
+                          quality={100}
+                          sizes="(max-width: 1023px) calc(100vw - 2rem), (max-width: 1535px) 60vw, 960px"
                           className="object-cover"
                         />
                       </div>
@@ -192,7 +193,6 @@ export default async function TrainerPage({ params }: PageProps) {
                   </ul>
                 </div>
               )}
-
             </div>
           </div>
         </div>

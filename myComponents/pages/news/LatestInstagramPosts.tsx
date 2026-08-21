@@ -3,18 +3,18 @@ import { Instagram } from "lucide-react";
 
 import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
 import InstagramFeed from "./instagram/InstagramFeed";
-import { getLatestInstagramPosts } from "./instagram/instagramApi";
+import { getInstagramPostsPage } from "./instagram/instagramApi";
 
 const profileUrl = "https://www.instagram.com/hoodmood_dancestudio/";
 
 export default async function LatestInstagramPosts() {
   await connection();
 
-  const posts = await getLatestInstagramPosts();
+  const { posts, nextCursor } = await getInstagramPostsPage();
 
   return (
     <section className="mt-12 space-y-8 md:mt-14  lg:mt-16">
-      <InstagramFeed posts={posts} />
+      <InstagramFeed posts={posts} initialCursor={nextCursor} />
       <div className="flex flex-col gap-5 place-self-end mt-16">
         <ButtonSecondary href={profileUrl} blank>
           <Instagram className="size-4" />

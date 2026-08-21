@@ -1,7 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useState, type ReactNode } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 import { Heart, Images, Instagram, MessageCircle, Play } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -15,7 +21,7 @@ import {
 
 import InstagramPostCard from "./InstagramPostCard";
 import InstagramMedia from "./InstagramMedia";
-import type { InstagramPost } from "./types";
+import type { InstagramPost, InstagramPostsPage } from "./types";
 
 const studioAvatar = "/assets/svg/mainLogo/logo.svg";
 
@@ -232,7 +238,64 @@ function InstagramPostDialog({ post }: { post: InstagramPost }) {
   );
 }
 
-export default function InstagramFeed({ posts }: { posts: InstagramPost[] }) {
+export default function InstagramFeed({
+  posts: initialPosts,
+  initialCursor,
+}: {
+  posts: InstagramPost[];
+  initialCursor: string | null;
+}) {
+  const [posts, setPosts] = useState(initialPosts);
+  const [cursor, setCursor] = useState(initialCursor);
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
+  const loadingRef = useRef(false);
+
+  const loadMore = useCallback(async () => {
+    if (!cursor || loadingRef.current) return;
+
+    loadingRef.current = true;
+    setIsLoading(true);
+    setHasError(false);
+
+    try {
+      const response = await fetch(
+        `/api/instagram?after=${encodeURIComponent(cursor)}`,
+      );
+
+      if (!response.ok) throw new Error("Nie udało się pobrać postów");
+
+      const page = (await response.json()) as InstagramPostsPage;
+      setPosts((currentPosts) => {
+        const knownIds = new Set(currentPosts.map((post) => post.id));
+        const newPosts = page.posts.filter((post) => !knownIds.has(post.id));
+        return [...currentPosts, ...newPosts];
+      });
+      setCursor(page.nextCursor);
+    } catch {
+      setHasError(true);
+    } finally {
+      loadingRef.current = false;
+      setIsLoading(false);
+    }
+  }, [cursor]);
+
+  useEffect(() => {
+    const sentinel = sentinelRef.current;
+    if (!sentinel || !cursor || hasError) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) void loadMore();
+      },
+      { rootMargin: "600px 0px" },
+    );
+
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [cursor, hasError, loadMore]);
+
   if (posts.length === 0) {
     return (
       <p className="w-full rounded-xl border border-black/[0.06] bg-white/[0.26] p-5 text-sm ui-muted-copy dark:border-white/[0.08] dark:bg-white/[0.05]">
@@ -248,6 +311,31 @@ export default function InstagramFeed({ posts }: { posts: InstagramPost[] }) {
           <InstagramPostDialog key={post.id} post={post} />
         ))}
       </div>
+      {(cursor || isLoading) && (
+        <div ref={sentinelRef} className="mt-8" aria-hidden="true">
+          {isLoading && (
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-2 lg:gap-3">
+              {Array.from({ length: 3 }, (_, index) => (
+                <div
+                  key={index}
+                  className="aspect-square animate-pulse rounded-lg bg-black/[0.06] dark:bg-white/[0.07]"
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+      {hasError && (
+        <div className="mt-8 flex justify-center">
+          <button
+            type="button"
+            onClick={() => void loadMore()}
+            className="ui-focus-ring ui-field ui-pressable rounded-lg px-5 py-2.5 text-sm font-medium"
+          >
+            Spróbuj wczytać kolejne posty ponownie
+          </button>
+        </div>
+      )}
     </div>
   );
 }

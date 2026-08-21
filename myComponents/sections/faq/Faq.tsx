@@ -12,16 +12,12 @@ import { faq } from "@/app/faq/data";
 export default function Faq() {
   return (
     <SectionContainer>
-      <SectionContent
-        badge={data.badge}
-        title={data.title}
-        description={data.description}
-      />
+      <SectionContent title={data.title} description={data.description} />
       <Accordion type="single" collapsible>
         {faq.slice(0, 3).map((question) => (
           <AccordionItem value={question.question} key={question.question}>
             <AccordionTrigger>{question.question}</AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-md">
+            <AccordionContent className="text-muted-foreground text-md md:text-lg">
               {question.answer}
             </AccordionContent>
           </AccordionItem>

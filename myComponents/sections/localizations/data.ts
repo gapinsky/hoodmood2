@@ -1,8 +1,8 @@
 export const data = {
   badge: "lokalizacje",
-  title: "Nasze lokalizacje – Koszalin, Polanów i Biały Bór",
+  title: "Hoodmood jest bliżej, niż myślisz",
   description:
-    "Prowadzimy zajęcia taneczne i akrobatyczne w Koszalinie, Polanowie i Białym Borze. Sprawdź, gdzie odbywają się treningi i wybierz lokalizację najwygodniejszą dla siebie.",
+    "Prowadzimy zajęcia w Koszalinie, Polanowie i Białym Borze. Niezależnie od tego, którą lokalizację wybierzesz, czeka na Ciebie ta sama energia, dobra zabawa i ludzie z zajawką. Znajdź swoje miejsce i wpadaj na salę.",
 };
 export const localizations = [
   {

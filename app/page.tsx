@@ -4,6 +4,7 @@ import Script from "next/script";
 import Localizations from "@/myComponents/sections/localizations/Localizations";
 import Offer from "../myComponents/sections/offer/Offer";
 import Hero from "@/myComponents/sections/hero/Hero";
+import AboutUs from "@/myComponents/sections/aboutUs/AboutUs";
 
 const Player = dynamic(() => import("@/myComponents/sections/player/Player"));
 const Team = dynamic(() => import("@/myComponents/sections/team/Team"));
@@ -175,6 +176,7 @@ export default function Home() {
       />
       <main className="space-y-36 mb-36">
         <Hero />
+        {/* <AboutUs /> */}
         <Offer />
         <Localizations />
         <Player />

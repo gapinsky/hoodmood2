@@ -3,6 +3,7 @@ import type {
   InstagramApiResponse,
   InstagramMediaItem,
   InstagramPost,
+  InstagramPostsPage,
 } from "./types";
 
 const accountName = "Hood Mood Studio";
@@ -49,11 +50,17 @@ function mapPostMedia(post: InstagramApiPost) {
   return media ? [media] : [];
 }
 
-function getFeedUrl(userId: string, accessToken: string, fields: string) {
+function getFeedUrl(
+  userId: string,
+  accessToken: string,
+  fields: string,
+  after?: string,
+) {
   const url = new URL(`https://graph.instagram.com/${userId}/media`);
   url.searchParams.set("fields", fields);
   url.searchParams.set("limit", "9");
   url.searchParams.set("access_token", accessToken);
+  if (after) url.searchParams.set("after", after);
 
   return url;
 }
@@ -61,9 +68,10 @@ function getFeedUrl(userId: string, accessToken: string, fields: string) {
 async function fetchInstagramMedia(
   userId: string,
   accessToken: string,
+  after?: string,
 ): Promise<Response> {
   const response = await fetch(
-    getFeedUrl(userId, accessToken, fieldsWithCounts),
+    getFeedUrl(userId, accessToken, fieldsWithCounts, after),
     {
       cache: "no-store",
     },
@@ -73,30 +81,32 @@ async function fetchInstagramMedia(
     return response;
   }
 
-  return fetch(getFeedUrl(userId, accessToken, baseFields), {
+  return fetch(getFeedUrl(userId, accessToken, baseFields, after), {
     cache: "no-store",
   });
 }
 
-export async function getLatestInstagramPosts(): Promise<InstagramPost[]> {
+export async function getInstagramPostsPage(
+  after?: string,
+): Promise<InstagramPostsPage> {
   const userId = process.env.INSTAGRAM_USER_ID;
   const accessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
 
   if (!userId || !accessToken) {
-    return [];
+    return { posts: [], nextCursor: null };
   }
 
   try {
-    const response = await fetchInstagramMedia(userId, accessToken);
+    const response = await fetchInstagramMedia(userId, accessToken, after);
 
     if (!response.ok) {
       console.error(`Instagram posts fetch failed: ${response.status}`);
-      return [];
+      return { posts: [], nextCursor: null };
     }
 
     const result = (await response.json()) as InstagramApiResponse;
 
-    return (result.data ?? [])
+    const posts = (result.data ?? [])
       .map((post) => {
         const media = mapPostMedia(post);
 
@@ -113,8 +123,19 @@ export async function getLatestInstagramPosts(): Promise<InstagramPost[]> {
         };
       })
       .filter((post) => post.media.length > 0);
+
+    return {
+      posts,
+      nextCursor: result.paging?.next
+        ? (result.paging.cursors?.after ?? null)
+        : null,
+    };
   } catch {
     console.error("Instagram posts fetch failed");
-    return [];
+    return { posts: [], nextCursor: null };
   }
+}
+
+export async function getLatestInstagramPosts(): Promise<InstagramPost[]> {
+  return (await getInstagramPostsPage()).posts;
 }

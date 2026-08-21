@@ -180,8 +180,8 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       minAge: "6",
       maxAge: "9",
       instructors: [
-        { name: "Klara Walach", slug: "/kadra" },
-        { name: "Nel Głowacka", slug: "/kadra" },
+        { name: "Klara Walach", slug: "/kadra/klara-walach" },
+        { name: "Nel Głowacka", slug: "/kadra/nel-glowacka" },
       ],
       img: "/assets/images/offer/taniecWspolczesny8-12.jpg",
       experience: "Dla każdego",
@@ -195,8 +195,11 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       minAge: "10",
       maxAge: "12",
       instructors: [
-        { name: "Klara Walach", slug: "/kadra" },
-        { name: "Marianna Stanisławska", slug: "/kadra" },
+        { name: "Klara Walach", slug: "/kadra/klara-walach" },
+        {
+          name: "Marianna Stanisławska",
+          slug: "/kadra/marianna-stanislawska",
+        },
       ],
       img: "/assets/images/offer/taniecWspolczesny8-12.jpg",
       experience: "Dla każdego",
@@ -229,7 +232,10 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
           name: "Maria Kober",
           slug: "/kadra/maria-kober",
         },
-        { name: "Paulina Kapuścińska", slug: "/kadra" },
+        {
+          name: "Paulina Kapuścińska",
+          slug: "/kadra/paulina-kapuscinska",
+        },
       ],
       img: "/assets/images/offer/hype.jpg",
       experience: "grupa średniozaawansowana",
@@ -410,7 +416,10 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
       minAge: "7",
       maxAge: "11",
       instructors: [
-        { name: "Marianna Stanisławska", slug: "/kadra" },
+        {
+          name: "Marianna Stanisławska",
+          slug: "/kadra/marianna-stanislawska",
+        },
       ],
       img: "/assets/images/offer/taniecWspolczesny8-12.jpg",
       experience: "Dla każdego",

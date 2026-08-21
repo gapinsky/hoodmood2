@@ -246,7 +246,7 @@ export const scheduleContentData = {
       {
         name: "Taniec współczesny",
         time: "19:15–20:15",
-        instructor: "Talita Jarzęcka",
+        instructor: "Marianna Stanisławska",
         age: "7–11",
         info: "Taniec współczesny: technika, płynność, praca z podłogą i ekspresja ruchowa.",
       },
