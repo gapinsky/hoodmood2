@@ -174,7 +174,7 @@ export const koszalinPricingContent: Record<
       },
       {
         name: "KPOP dla dorosłych",
-        price: "240",
+        price: "190",
         frequency: "1",
         trending: false,
         minAge: 30,
