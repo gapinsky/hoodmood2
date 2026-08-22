@@ -62,8 +62,22 @@ export default async function TrainerPage({ params }: PageProps) {
 
   return (
     <MainWrapper>
-      <SectionContainer>
-        <div className="space-y-4">
+      <SectionContainer className="relative isolate">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-20 -right-32 z-0 size-[min(90vw,900px)] opacity-[0.035] dark:opacity-[0.055] sm:-bottom-36 sm:-right-44"
+        >
+          <Image
+            src="/assets/optimized/home/hoodmood-logo-transparent.webp"
+            alt=""
+            fill
+            sizes="(max-width: 639px) 90vw, 900px"
+            className="object-contain object-right-bottom"
+          />
+        </div>
+
+        <div className="relative z-10 flex flex-col gap-16">
+          <div className="space-y-4">
           <span className="inline-flex items-start">
             <Link
               href="/"
@@ -195,8 +209,9 @@ export default async function TrainerPage({ params }: PageProps) {
               )}
             </div>
           </div>
+          </div>
+          <AnyQuestionsContact />
         </div>
-        <AnyQuestionsContact />
       </SectionContainer>
     </MainWrapper>
   );

@@ -9,7 +9,12 @@ export default function SelectedClassesPanel({
   items,
   onRemove,
 }: SelectedClassesPanelProps) {
-  const total = items.reduce((sum, item) => sum + item.price, 0);
+  const monthlyTotal = items
+    .filter((item) => item.billingPeriod === "monthly")
+    .reduce((sum, item) => sum + item.price, 0);
+  const oneTimeTotal = items
+    .filter((item) => item.billingPeriod === "one-time")
+    .reduce((sum, item) => sum + item.price, 0);
 
   return (
     <aside className="flex min-w-0 flex-col rounded-[24px] bg-black/1 p-4 backdrop-blur-xl dark:bg-white/5">
@@ -48,6 +53,9 @@ export default function SelectedClassesPanel({
                 </div>
                 <div className="text-sm font-semibold text-foreground dark:text-white">
                   {item.price.toFixed(2).replace(".", ",")} zł
+                  <span className="ui-muted-label ml-1 text-[11px] font-normal dark:text-white/45">
+                    / {item.billingPeriod === "one-time" ? "jednorazowo" : "miesięcznie"}
+                  </span>
                 </div>
               </div>
             </div>
@@ -61,13 +69,25 @@ export default function SelectedClassesPanel({
             Razem
           </p>
 
-          <div className="text-right">
-            <p className="text-lg font-semibold text-foreground dark:text-white md:text-xl">
-              {total.toFixed(2).replace(".", ",")} zł
-            </p>
-            <p className="ui-muted-label text-xs dark:text-white/45">
-              miesięcznie
-            </p>
+          <div className="flex items-start gap-4 text-right">
+            {oneTimeTotal > 0 ? (
+              <div>
+                <p className="text-lg font-semibold text-foreground dark:text-white md:text-xl">
+                  {oneTimeTotal.toFixed(2).replace(".", ",")} zł
+                </p>
+                <p className="ui-muted-label text-xs dark:text-white/45">
+                  jednorazowo
+                </p>
+              </div>
+            ) : null}
+            <div>
+              <p className="text-lg font-semibold text-foreground dark:text-white md:text-xl">
+                {monthlyTotal.toFixed(2).replace(".", ",")} zł
+              </p>
+              <p className="ui-muted-label text-xs dark:text-white/45">
+                miesięcznie
+              </p>
+            </div>
           </div>
         </div>
       </div>

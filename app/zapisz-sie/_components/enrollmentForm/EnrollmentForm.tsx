@@ -6,13 +6,6 @@ import { useEffect, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 
 import { submitEnrollmentForm } from "@/app/zapisz-sie/actions";
 import {
@@ -79,7 +72,6 @@ const steps = [
 
 export default function EnrollmentForm() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [isSuccessDialogOpen, setIsSuccessDialogOpen] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const [viewport, setViewport] = useState({ width: 0, height: 0 });
 
@@ -99,8 +91,8 @@ export default function EnrollmentForm() {
   useEffect(() => {
     const updateViewport = () => {
       setViewport({
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: document.documentElement.clientWidth,
+        height: document.documentElement.clientHeight,
       });
     };
 
@@ -109,16 +101,6 @@ export default function EnrollmentForm() {
 
     return () => window.removeEventListener("resize", updateViewport);
   }, []);
-
-  useEffect(() => {
-    if (!showConfetti) return;
-
-    const timeout = window.setTimeout(() => {
-      setShowConfetti(false);
-    }, 5000);
-
-    return () => window.clearTimeout(timeout);
-  }, [showConfetti]);
 
   const validateCurrentStep = async () => {
     switch (currentStep) {
@@ -163,7 +145,9 @@ export default function EnrollmentForm() {
       reset(defaultValues);
       setCurrentStep(0);
       setShowConfetti(true);
-      setIsSuccessDialogOpen(true);
+      toast.success(
+        "Zgłoszenie zostało wysłane! Nasza recepcja wkrótce skontaktuje się z Tobą i przekaże szczegóły zajęć.",
+      );
     } catch {
       toast.error("Nie udało się wysłać zgłoszenia. Spróbuj ponownie.");
     }
@@ -181,45 +165,12 @@ export default function EnrollmentForm() {
           height={viewport.height}
           recycle={false}
           numberOfPieces={260}
-          gravity={0.28}
-          className="pointer-events-none fixed inset-0 z-100"
+          gravity={0.2}
+          tweenDuration={6000}
+          onConfettiComplete={() => setShowConfetti(false)}
+          className="pointer-events-none fixed left-0 top-0 z-100 max-w-full overflow-hidden"
         />
       ) : null}
-
-      <Dialog open={isSuccessDialogOpen} onOpenChange={setIsSuccessDialogOpen}>
-        <DialogContent className="relative  max-w-md overflow-hidden text-foreground ring-1 ring-black/8 [&>button]:hidden dark:text-white dark:ring-white/10">
-          <div className="relative z-10 flex flex-col items-center gap-5 px-2 py-4 text-center">
-            <div className="relative h-36 w-full max-w-56">
-              <Image
-                src="/assets/images/enrollmentForm/celebrate.svg"
-                alt="Sukces zapisu"
-                fill
-                className="object-contain"
-                sizes="224px"
-              />
-            </div>
-
-            <DialogTitle className="text-2xl font-normal leading-none text-foreground dark:text-white">
-              Sukces!
-            </DialogTitle>
-
-            <DialogDescription className="max-w-sm text-base leading-7 text-muted-foreground dark:text-white/85">
-              Dziękujemy za zapisanie na zajęcia. Wysłaliśmy Ci e-mail z
-              potwierdzeniem i najważniejszymi informacjami. Do zobaczenia na
-              sali!
-            </DialogDescription>
-
-            <Button
-              type="button"
-              onClick={() => setIsSuccessDialogOpen(false)}
-              variant="outline"
-              className="min-w-32"
-            >
-              Zamknij
-            </Button>
-          </div>
-        </DialogContent>
-      </Dialog>
 
       <EnrollmentStepLayout
         illustration={

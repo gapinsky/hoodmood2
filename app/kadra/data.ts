@@ -64,8 +64,12 @@ export const instructors: Trainer[] = [
     name: "Paulina Walikowska",
     role: "Balet",
     styles: ["Balet"],
-    description:
-      "Paulina Walikowska rozpoczęła swoją przygodę z tańcem w klasie baletowej, gdzie zdobyła solidne podstawy techniczne. Przez 8 lat rozwijała się artystycznie w zespole HYPE CREW, doskonaląc się jako tancerka sceniczna i instruktorka. Ma doświadczenie warsztatowe u uznanych trenerów, współtworzyła projekty filmowe (w tym produkcję nominowaną na International Cyprus Dance Film Festival) oraz występowała w spektaklach „Halucynacje” i „Gen Z”. Obecnie prowadzi w studiu zajęcia baletu.",
+    description: `Paulina Walikowska swoją przygodę z tańcem rozpoczęła w klasie baletowej, gdzie zdobyła solidne podstawy techniczne. 8 lat rozwijała się artystycznie w zespole Quality Crew, w którym doskonaliła się zarówno jako tancerka sceniczna, jak i instruktorka. Wraz z ekipą wielokrotnie sięgała po najwyższe miejsca na prestiżowych turniejach tanecznych w Polsce i za granicą.
+ Do jej doświadczeń należą m.in.:
+• udział w wielu warsztatach z uznanymi trenerami z kraju takimi jak Zosia Kędziora, Darek Bujnowski, Marta Pasta, Ola Goździk, Łukasz Ludwiczak, Jessica Ali, Mania Rogowska i inni,
+• współtworzenie projektów filmowych, w tym produkcji prezentowanej w teatrze Rialto i nominowanej na International Cyprus Dance Film Festival,
+• występy w spektaklach „Halucynacje” (Akademia Muzyczna w Łodzi) oraz „Gen Z” (Teatr Muzyczny Adria).
+Obecnie Paulina dzieli się swoją pasją i wiedzą, prowadząc w naszym studiu zajęcia baletu.`,
     images: [
       "/assets/images/team/paulinaWalikowska/paulinaWalikowskaProfile.jpg",
     ],
@@ -109,8 +113,16 @@ export const instructors: Trainer[] = [
       "The Beat Hunters (hip-hop)",
       "HYPE CREW (grupa średniozaawansowana hip-hop)",
     ],
-    description:
-      "Maria Kober to instruktorka i tancerka z dużym doświadczeniem scenicznym i warsztatowym. Od 8 lat trenuje w ekipie HYPE CREW, z którą wielokrotnie stawała na podium zawodów w Polsce i za granicą. Ma na koncie warsztaty z wieloma instruktorami, treningi w londyńskich studiach Playground i Base oraz udział w projektach wideo (w tym produkcji nominowanej na International Cyprus Dance Film Festival). Prowadzi treningi dla grup THE BEAT HUNTERS i HYPE CREW oraz zajęcia CHOREO.",
+    description: `Maria Kober 
+ to nie tylko instruktorka to tancerka z ogromnym doświadczeniem scenicznym i warsztatowym.
+Od 8 lat trenuje w ekipie Quality Crew, z którą wielokrotnie stawała na podium prestiżowych zawodów w Polsce i za granicą.
+ Na swoim tanecznym koncie ma m.in.:
+udział w warsztatach i zajęciach u takich instruktorów, jak Zosia Kędziora, Darek Bujnowski, Marta Pasta, Ola Goździk, Łukasz Ludwiczak, Jessica Ali , Mania Rogowska, Ida Kurowska i wiele więcej. 
+-wyjazd do Londynu, gdzie trenowała w legendarnych studiach Playground i Base, biorąc lekcje m.in. u Kelly Sweeney (LA) i Tyresse Hare
+– udział w projektach wideo, w tym w produkcji nominowanej na International Cyprus Dance Film Festival, której pokaz odbył się w teatrze Rialto.
+Maria prowadzi treningi dla grupy THE BEAT HUNTERS.  
+Co Cię czeka na jej zajęciach? 
+Wszechstronny rozwój taneczny i świetna atmosfera, bo Marysia łączy wymagający trening z ogromną dawką fanu.`,
     images: ["/assets/images/team/mariaKober/mariaKoberProfile.jpg"],
     localizations: ["Koszalin"],
     instagram: "https://www.instagram.com/marysiakober",
@@ -120,8 +132,9 @@ export const instructors: Trainer[] = [
     name: "Nel Głowacka",
     role: "Taniec współczesny",
     styles: ["Taniec współczesny (6–9 lat)"],
-    description:
-      "Nel Głowacka to instruktorka i tancerka z dużym doświadczeniem scenicznym i warsztatowym. Od 8 lat trenuje w ekipie HYPE CREW, z którą wielokrotnie stawała na podium zawodów w Polsce i za granicą. Ma na koncie warsztaty z wieloma instruktorami, treningi w londyńskich studiach Playground i Base oraz udział w projektach wideo (w tym produkcji nominowanej na International Cyprus Dance Film Festival). Prowadzi treningi dla grup THE BEAT HUNTERS i HYPE CREW oraz zajęcia CHOREO.",
+    description: `Tańczę od 13 lat, nieustannie rozwijając się w różnych stylach i poszerzając swój warsztat. Swoją przygodę z tańcem rozpoczęłam jako dziecko od baletu, który do dziś jest ważną częścią mojego tanecznego fundamentu. Przez wiele lat trenowałam również taniec towarzyski, a obecnie skupiam się przede wszystkim na tańcu współczesnym i jazzie.
+Jednym z moich największych osiągnięć było zdobycie 3. miejsca na Mistrzostwach WADF, dzięki czemu zostałam II Wicemistrzynią Polski. Na przestrzeni lat brałam udział w licznych zawodach i turniejach tanecznych, a także miałam okazję występować na deskach teatru.
+Taniec jest dla mnie nie tylko techniką i ruchem, ale przede wszystkim sposobem wyrażania emocji. Dlatego rozwijam się również w aktorstwie, które pomaga mi jeszcze lepiej budować sceniczne historie i przekazywać emocje poprzez ruch. Mam za sobą liczne występy i przedstawienia, a każde z tych doświadczeń pozwala mi spojrzeć na taniec z nowej perspektywy.`,
     images: ["/assets/images/team/nelGlowacka/nelGlowackaProfile.jpg"],
     localizations: ["Koszalin"],
     instagram: "https://www.instagram.com/_nelglowacka/",

@@ -14,10 +14,12 @@ export default function StepSummary({
   const { getValues } = useFormContext<EnrollmentFormData>();
   const values = getValues();
 
-  const total = values.selectedClasses.reduce(
-    (sum, item) => sum + item.price,
-    0,
-  );
+  const monthlyTotal = values.selectedClasses
+    .filter((item) => item.billingPeriod === "monthly")
+    .reduce((sum, item) => sum + item.price, 0);
+  const oneTimeTotal = values.selectedClasses
+    .filter((item) => item.billingPeriod === "one-time")
+    .reduce((sum, item) => sum + item.price, 0);
   const participantTypeLabel =
     values.participantType === "adult" ? "Dorośli" : "Dzieci i młodzież";
 
@@ -60,7 +62,7 @@ export default function StepSummary({
             <span className="ui-muted-label text-wrap text-xs dark:text-white/45">
               Osoba kontaktowa:
             </span>{" "}
-            {values.parentFullName} lorem32
+            {values.parentFullName}
           </div>
           <div className="flex flex-col">
             <span className="ui-muted-label text-xs dark:text-white/45">
@@ -108,6 +110,9 @@ export default function StepSummary({
 
               <div className="text-sm font-semibold text-[#83394f] dark:text-[#c4587b]">
                 {item.price.toFixed(2).replace(".", ",")} zł
+                <span className="ml-1 text-xs font-normal">
+                  / {item.billingPeriod === "one-time" ? "jednorazowo" : "miesięcznie"}
+                </span>
               </div>
             </div>
           ))}
@@ -117,12 +122,26 @@ export default function StepSummary({
           <span className="ui-muted-label text-sm dark:text-white/60">
             Razem:
           </span>
-          <span className="text-base font-semibold text-foreground dark:text-white">
-            {total.toFixed(2).replace(".", ",")} zł{" "}
-            <span className="ui-muted-label text-xs font-normal text-black/55 dark:text-white/45">
-              / miesięcznie
-            </span>
-          </span>
+          <div className="flex items-start gap-4 text-right">
+            {oneTimeTotal > 0 ? (
+              <div>
+                <div className="text-base font-semibold text-foreground dark:text-white">
+                  {oneTimeTotal.toFixed(2).replace(".", ",")} zł
+                </div>
+                <div className="ui-muted-label text-xs font-normal text-black/55 dark:text-white/45">
+                  jednorazowo
+                </div>
+              </div>
+            ) : null}
+            <div>
+              <div className="text-base font-semibold text-foreground dark:text-white">
+                {monthlyTotal.toFixed(2).replace(".", ",")} zł
+              </div>
+              <div className="ui-muted-label text-xs font-normal text-black/55 dark:text-white/45">
+                miesięcznie
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

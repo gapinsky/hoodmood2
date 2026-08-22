@@ -5,6 +5,7 @@ import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 import LocationBadge from "./LocationBadge";
 import HeroVideo from "./HeroVideo";
 import SmoothScrollLink from "./SmoothScrollLink";
+import HeroContent from "./HeroContent";
 
 type HeroProps = {
   videoSrc?: string;
@@ -41,28 +42,30 @@ export default function Hero({
       />
 
       <div className="mx-auto flex min-h-screen max-w-380 items-center">
-        <div className="px-8 lg:px-12 xl:px-16">
-          <LocationBadge />
+        <HeroContent>
+          <div className="hero-enter">
+            <LocationBadge />
+          </div>
 
-          <div className="max-w-[10ch] font-anton text-5xl font-black uppercase leading-[0.9] tracking-wider text-white sm:text-6xl md:text-7xl xl:text-[7rem]">
+          <div className="hero-enter hero-enter-delay-1 max-w-[10ch] font-anton text-5xl font-black uppercase leading-[0.9] tracking-wider text-white sm:text-6xl md:text-7xl xl:text-[7rem]">
             {title}
           </div>
 
-          <h1 className="mt-6 max-w-xl text-sm font-bold leading-7 text-white/90 sm:text-lg">
+          <h1 className="hero-enter hero-enter-delay-2 mt-6 max-w-xl text-sm font-bold leading-7 text-white/90 sm:text-lg">
             Szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze
           </h1>
-          <p className="max-w-xl text-sm leading-7 text-white/60 sm:text-base">
+          <p className="hero-enter hero-enter-delay-2 max-w-xl text-sm leading-7 text-white/60 sm:text-base">
             {description}
           </p>
 
-          <div className="mt-8 flex gap-3">
+          <div className="hero-enter hero-enter-delay-3 mt-8 flex gap-3">
             <ButtonSecondary href="/grafik/koszalin">
               Sprawdź grafik
             </ButtonSecondary>
 
             <ButtonPrimary href="/oferta/koszalin">Zobacz ofertę</ButtonPrimary>
           </div>
-        </div>
+        </HeroContent>
 
         <SmoothScrollLink
           href="#offer"

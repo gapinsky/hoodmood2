@@ -11,6 +11,7 @@ export type EnrollmentClassItem = {
   locationId: EnrollmentLocationId;
   locationName: string;
   type: "class" | "package";
+  billingPeriod: "monthly" | "one-time";
   name: string;
   price: number;
   frequency: string;
@@ -44,6 +45,7 @@ const koszalinClasses = koszalinPricingContent.zajecia.tableData.map(
     locationId: "koszalin" as const,
     locationName: "Koszalin",
     type: "class" as const,
+    billingPeriod: "monthly" as const,
     name: item.name,
     price: parsePrice(item.price),
     frequency: item.frequency,
@@ -60,6 +62,7 @@ const koszalinPackages = koszalinPricingContent["pakiety-zajec"].tableData.map(
     locationId: "koszalin" as const,
     locationName: "Koszalin",
     type: "package" as const,
+    billingPeriod: "monthly" as const,
     name: item.name,
     price: parsePrice(item.price),
     frequency: item.frequency,
@@ -74,6 +77,7 @@ const polanowClasses = polanowPricingTableData.map((item, index) => ({
   id: `polanow-${item.category}-${index}`,
   locationId: "polanow" as const,
   type: "class" as const,
+  billingPeriod: "monthly" as const,
   locationName: "Polanów",
   name: item.name,
   price: parsePrice(item.price),
@@ -88,6 +92,7 @@ const bialyBorClasses = bialyBorPricingTableData.map((item, index) => ({
   id: `bialy-bor-${item.category}-${index}`,
   locationId: "bialy-bor" as const,
   type: "class" as const,
+  billingPeriod: "monthly" as const,
   locationName: "Biały Bór",
   name: item.name,
   price: parsePrice(item.price),
@@ -101,6 +106,22 @@ const bialyBorClasses = bialyBorPricingTableData.map((item, index) => ({
 export const enrollmentClasses: EnrollmentClassItem[] = [
   ...koszalinClasses,
   ...koszalinPackages,
+  ...koszalinPricingContent["zajecia-indywidualne"].tableData.map(
+    (item, index) => ({
+      id: `koszalin-individual-${item.category}-${index}`,
+      locationId: "koszalin" as const,
+      locationName: "Koszalin",
+      type: "class" as const,
+      billingPeriod: "one-time" as const,
+      name: item.name,
+      price: parsePrice(item.price),
+      frequency: item.frequency,
+      frequencyDescription: item.frequencyDescription,
+      minAge: item.minAge,
+      maxAge: item.maxAge,
+      category: item.category,
+    }),
+  ),
   ...polanowClasses,
   ...bialyBorClasses,
 ];

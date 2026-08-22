@@ -211,7 +211,9 @@ export default function ClassConfigurator({
                         /
                       </span>
                       <p className="ui-muted-label text-xs text-black/50 dark:text-white/45 md:mt-1">
-                        miesięcznie
+                        {item.billingPeriod === "one-time"
+                          ? "jednorazowo"
+                          : "miesięcznie"}
                       </p>
                     </div>
                     <button
@@ -223,6 +225,7 @@ export default function ClassConfigurator({
                           locationName: item.locationName,
                           classTypeId: item.id,
                           classTypeName: item.name,
+                          billingPeriod: item.billingPeriod,
                           scheduleId: item.id,
                           dayLabel: item.frequency,
                           timeLabel: ageLabel,

@@ -8,6 +8,7 @@ import Footer from "@/myComponents/footer/Footer";
 import NextTopLoader from "nextjs-toploader";
 import AwayTabTitle from "@/myComponents/common/AwayTabTitle";
 import SeasonLaunchDialog from "@/myComponents/common/SeasonLaunchDialog";
+import TrialClassBanner from "@/myComponents/common/TrialClassBanner";
 
 const fontAnton = Anton({
   variable: "--anton",
@@ -90,6 +91,7 @@ export default function RootLayout({
         >
           <TooltipProvider>
             <Navbar />
+            <TrialClassBanner />
             {children}
             <Footer />
           </TooltipProvider>

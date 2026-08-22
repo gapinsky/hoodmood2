@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 type HeroVideoProps = {
@@ -14,6 +15,7 @@ export default function HeroVideo({
   posterSrc,
 }: HeroVideoProps) {
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+  const [isVideoReady, setIsVideoReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
@@ -68,28 +70,48 @@ export default function HeroVideo({
     }
   }, [shouldLoadVideo]);
 
-  if (!shouldLoadVideo) {
-    return null;
-  }
-
   return (
-    <video
-      ref={videoRef}
-      className="absolute inset-0 -z-20 h-full w-full object-cover"
-      autoPlay
-      muted
-      loop
-      playsInline
-      webkit-playsinline=""
-      preload="none"
-      poster={posterSrc}
-      controls={false}
-      disablePictureInPicture
-      controlsList="nodownload nofullscreen noremoteplayback"
-      aria-hidden="true"
-    >
-      <source media="(max-width: 768px)" src={mobileVideoSrc} type="video/mp4" />
-      <source src={videoSrc} type="video/mp4" />
-    </video>
+    <>
+      <Image
+        src={posterSrc}
+        alt=""
+        fill
+        priority
+        fetchPriority="high"
+        sizes="100vw"
+        aria-hidden="true"
+        className={`absolute inset-0 -z-20 h-full w-full object-cover transition-opacity duration-700 motion-reduce:transition-none ${
+          isVideoReady ? "opacity-0" : "opacity-100"
+        }`}
+      />
+
+      {shouldLoadVideo ? (
+        <video
+          ref={videoRef}
+          className={`absolute inset-0 -z-20 h-full w-full object-cover transition-opacity duration-700 motion-reduce:transition-none ${
+            isVideoReady ? "opacity-100" : "opacity-0"
+          }`}
+          autoPlay
+          muted
+          loop
+          playsInline
+          webkit-playsinline=""
+          preload="metadata"
+          poster={posterSrc}
+          onCanPlay={() => setIsVideoReady(true)}
+          controls={false}
+          disablePictureInPicture
+          controlsList="nodownload nofullscreen noremoteplayback"
+          aria-hidden="true"
+        >
+          <source
+            media="(max-width: 768px)"
+            src={mobileVideoSrc}
+            type="video/mp4"
+          />
+          <source src={videoSrc} type="video/mp4" />
+        </video>
+      ) : null}
+    </>
   );
 }

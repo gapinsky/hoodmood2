@@ -5,6 +5,10 @@ import {
   contactFormSchema,
 } from "@/lib/schemas/contactSchema";
 import { Resend } from "resend";
+import {
+  contactConfirmationEmail,
+  escapeHtml,
+} from "@/lib/email/autoresponders";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -38,6 +42,22 @@ export async function submitContactForm(data: ContactFormData) {
       };
     }
 
+    try {
+      const confirmation = await resend.emails.send({
+        from: "formularz@kontakt.hoodmood.pl",
+        to: validatedData.email,
+        replyTo: "hoodmood.recepcja@gmail.com",
+        subject: "Dzięki za wiadomość! 💗",
+        html: contactConfirmationEmail(validatedData),
+      });
+
+      if (confirmation.error) {
+        console.error("Contact autoresponder delivery failed");
+      }
+    } catch {
+      console.error("Contact autoresponder delivery failed");
+    }
+
     return {
       success: true,
       message: "Wiadomość wysłana pomyślnie!",
@@ -49,15 +69,4 @@ export async function submitContactForm(data: ContactFormData) {
       message: "Coś poszło nie tak. Spróbuj ponownie.",
     };
   }
-}
-
-function escapeHtml(text: string): string {
-  const map: Record<string, string> = {
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#039;",
-  };
-  return text.replace(/[&<>"']/g, (m) => map[m]);
 }

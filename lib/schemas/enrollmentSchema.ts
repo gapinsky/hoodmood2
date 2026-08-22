@@ -6,6 +6,7 @@ export const selectedClassSchema = z.object({
   locationName: z.string(),
   classTypeId: z.string(),
   classTypeName: z.string(),
+  billingPeriod: z.enum(["monthly", "one-time"]),
   scheduleId: z.string(),
   dayLabel: z.string(),
   timeLabel: z.string(),
