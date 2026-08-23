@@ -82,8 +82,8 @@ export default function TeamCard({
             <h2
               className={`leading-tight ${
                 isCarousel
-                  ? "text-sm sm:text-lg md:text-xl"
-                  : "text-sm sm:text-base lg:text-4xl"
+                  ? "text-xl md:text-xl"
+                  : "text-xl md:text-2xl lg:text-4xl"
               }`}
             >
               {name}

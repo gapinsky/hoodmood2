@@ -3,23 +3,7 @@ import logo from "../../public/assets/svg/mainLogo/logo.svg";
 import Link from "next/link";
 import { a11y } from "@/public/styles";
 import { cn } from "@/lib/utils";
-
-const icons = [
-  {
-    name: "facebook",
-    href: "https://www.facebook.com/profile.php?id=100070445546249",
-  },
-  {
-    name: "spotify",
-    href: "https://open.spotify.com/show/4N6jAzHxOv5S8bAmo9v2dE",
-  },
-  {
-    name: "instagram",
-    href: "https://www.instagram.com/hoodmood_dancestudio/",
-  },
-  { name: "tiktok", href: "https://www.tiktok.com/@hoodmood_dancestudio" },
-  { name: "youtube", href: "https://www.youtube.com/@hoodmooddancestudio9404" },
-];
+import SocialLinks from "@/myComponents/common/SocialLinks";
 
 export default function Footer() {
   const date = new Date();
@@ -45,25 +29,7 @@ export default function Footer() {
               <p className="opacity-80">+48 577 198 599</p>
               <p className="opacity-80">hoodmood.recepcja@gmail.com</p>
             </div>
-            <div className="flex gap-4 pt-2">
-              {icons.map((icon) => (
-                <Link
-                  href={icon.href}
-                  key={icon.name}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group ui-icon-button size-10 border border-black/8 bg-white/50 shadow-[0_8px_20px_rgba(0,0,0,0.06)] backdrop-blur-sm dark:border-white/10 dark:bg-white/[0.05]"
-                >
-                  <img
-                    width={24}
-                    height={24}
-                    alt={`${icon.name} logo`}
-                    src={`/icons/${icon.name}.svg`}
-                    className={cn("dark:invert transition-transform duration-300 ease-out group-hover:scale-105", a11y)}
-                  />
-                </Link>
-              ))}
-            </div>
+            <SocialLinks className="pt-2" />
           </div>
 
           {/* RIGHT COL */}
