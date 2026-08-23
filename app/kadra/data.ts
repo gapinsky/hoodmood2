@@ -30,7 +30,7 @@ export const instructors: Trainer[] = [
       "Taniec współczesny - starsza grupa",
     ],
     description:
-      "Talita to doświadczona choreografka, trenerka i artystka sceniczna, której fundamentem jest solidne wykształcenie muzyczno-taneczne. Ukończyła studia licencjackie na kierunku Taniec Nowoczesny na Wydziale Sztuk Scenicznych Akademii Muzycznej w Łodzi. Wcześniej kształciła się w Szkole Muzycznej im. Grażyny Bacewicz w Koszalinie na Wydziale Rytmiki. Brała udział w spektaklu „Projektowanie człowieka” (chor. Maciej Mołdoch / Sheva), stworzyła autorskie spektakle „Halucynacje” i „Gen Z”. Uczestniczyła w licznych warsztatach i programach artystycznych w Polsce i za granicą (m.in. Ateny, Mediolan, Paryż, Londyn). Od ośmiu lat prowadzi grupę HYPE CREW, która zdobywa miejsca na turniejach. Jej misją jest przygotowywanie młodych tancerzy do profesjonalnego wejścia na scenę.",
+      "Talita to doświadczona choreografka, trenerka i artystka sceniczna, której fundamentem jest solidne wykształcenie muzyczno-taneczne. Ukończyła studia licencjackie na kierunku Taniec Nowoczesny na Wydziale Sztuk Scenicznych Akademii Muzycznej w Łodzi. Wcześniej kształciła się w Szkole Muzycznej im. Grażyny Bacewicz w Koszalinie na Wydziale Rytmiki. Brała udział w spektaklu „Projektowanie człowieka” (chor. Maciej Mołdoch / Sheva), stworzyła autorskie spektakle „Halucynacje” i „Gen Z”. Uczestniczyła w licznych warsztatach i programach artystycznych w Polsce i za granicą (m.in. Ateny, Mediolan, Paryż, Londyn). Przez 9 lat prowadziła grupę Quality CREW, przygotowując tancerzy do licznych zawodów i projektów artystycznych w Polsce i za granicą. Pod jej opieką zawodnicy reprezentowali studio na międzynarodowych scenach i turniejach, a grupa wzięła również udział w produkcji nominowanej na International Cyprus Dance Film Festival, której pokaz odbył się w teatrze Rialto. Talita przygotowywała również zawodniczki do startów w Mistrzostwach Świata WDA International Championships w Budapeszcie w kategorii Street Dance Solo, osiągając miejsca na podium oraz w ścisłej czołówce międzynarodowej rywalizacji. W 2026 roku wystąpiła w kampanii reklamowej Apple Music, zdobywając doświadczenie również na planie międzynarodowej produkcji komercyjnej.",
     images: [
       "/assets/images/team/talitaJarzecka/talitaJarzeckaProfile.jpg",
       "/assets/images/team/talitaJarzecka/talitaJarzecka.jpg",
@@ -173,8 +173,10 @@ Marianna ma również doświadczenie w pracy z dziećmi,była opiekunką na kolo
     name: "Paulina Kapuścińska",
     role: "Hip-hop",
     styles: ["HYPE CREW (grupa średniozaawansowana hip-hop)"],
-    description:
-      "Paulina Kapuścińska to instruktorka i tancerka z dużym doświadczeniem scenicznym i warsztatowym. Od 8 lat trenuje w ekipie HYPE CREW, z którą wielokrotnie stawała na podium zawodów w Polsce i za granicą. Ma na koncie warsztaty z wieloma instruktorami, treningi w londyńskich studiach Playground i Base oraz udział w projektach wideo (w tym produkcji nominowanej na International Cyprus Dance Film Festival). Prowadzi treningi dla grup THE BEAT HUNTERS i HYPE CREW oraz zajęcia CHOREO.",
+    description: `Paulina Kapuścińska to tancerka i instruktorka, która swoją przygodę z tańcem rozpoczęła około 13 lat temu. Przez 9 lat była częścią formacji Quality Crew, z którą brała udział w licznych zawodach tanecznych, wielokrotnie stając na podium. To właśnie lata spędzone w Quality Crew dały jej ogromne doświadczenie zarówno w rywalizacji, jak i pracy zespołowej oraz występach na scenie.
+Przez cały ten czas nieustannie rozwijała swoje umiejętności, biorąc udział w licznych warsztatach prowadzonych przez czołowych tancerzy z Polski i zagranicy. Ma również na swoim koncie udział w projektach wideo i teledyskach. Obecnie tańczy także w Teatrze Muzycznym Adria.
+Paulina ma doświadczenie również jako instruktorka. Przez rok prowadziła grupę dzieci w wieku 7–11 lat, pracując z nimi nad formacjami, duetami oraz solówkami. Jej podopieczne wielokrotnie zdobywały miejsca na podium.
+W tym sezonie Paulina dołącza do kadry HoodMood, gdzie poprowadzi grupę Hype Crew. Na jej zajęciach możecie spodziewać się dużej dawki energii, charakteru, muzykalności i przede wszystkim dobrej zajawki na taniec`,
     images: [
       "/assets/images/team/paulinaKapuscinska/paulinaKapuscinskaProfile.jpg",
     ],

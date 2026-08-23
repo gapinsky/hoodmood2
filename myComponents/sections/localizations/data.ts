@@ -7,12 +7,12 @@ export const data = {
 export const localizations = [
   {
     title: "Polanów",
-    description: "ul. Grabowe Wzgórze 5",
+    description: "ul. Gradowe Wzgórze 5",
     hoverImg: "/assets/images/localizations/polanowMain.png",
     img: "/assets/images/localizations/polanowMain.png",
     slug: "polanow",
     mapsUrl:
-      "https://www.google.com/maps/dir/?api=1&destination=Grabowe%20Wzg%C3%B3rze%205%2C%2076-010%20Polan%C3%B3w",
+      "https://www.google.com/maps/dir/?api=1&destination=Gradowe%20Wzg%C3%B3rze%205%2C%2076-010%20Polan%C3%B3w",
   },
   {
     title: "Koszalin",
