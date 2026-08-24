@@ -8,7 +8,7 @@ import Footer from "@/myComponents/footer/Footer";
 import NextTopLoader from "nextjs-toploader";
 import AwayTabTitle from "@/myComponents/common/AwayTabTitle";
 import SeasonLaunchDialog from "@/myComponents/common/SeasonLaunchDialog";
-import TrialClassBanner from "@/myComponents/common/TrialClassBanner";
+import TrialClassMessage from "@/myComponents/common/TrialClassMessage";
 
 const fontAnton = Anton({
   variable: "--anton",
@@ -64,11 +64,11 @@ export default function RootLayout({
   return (
     <html lang="pl" suppressHydrationWarning data-scroll-behavior="smooth">
       <body
-        className={`${fontAnton.variable} ${fontRoboto.variable} w-full relative bg-transparent h-svh`}
+        className={`${fontAnton.variable} ${fontRoboto.variable} relative min-h-svh w-full bg-transparent`}
       >
         <AwayTabTitle />
         <SeasonLaunchDialog />
-        <div className="fixed inset-0 -z-40 overflow-hidden ">
+        <div className="fixed inset-0 -z-40 min-h-dvh overflow-hidden">
           <div className="absolute inset-0 bg-[url('/assets/optimized/home/static-bg.webp')] dark:bg-[url('/assets/optimized/home/static-bg-dark.webp')] bg-cover bg-center bg-no-repeat " />
 
           <div className="absolute inset-0 bg-white/50 dark:bg-black/80" />
@@ -91,7 +91,7 @@ export default function RootLayout({
         >
           <TooltipProvider>
             <Navbar />
-            <TrialClassBanner />
+            <TrialClassMessage />
             {children}
             <Footer />
           </TooltipProvider>

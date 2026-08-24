@@ -2,7 +2,7 @@
 
 import Confetti from "react-confetti";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
@@ -74,6 +74,8 @@ export default function EnrollmentForm() {
   const [currentStep, setCurrentStep] = useState(0);
   const [showConfetti, setShowConfetti] = useState(false);
   const [viewport, setViewport] = useState({ width: 0, height: 0 });
+  const formTopRef = useRef<HTMLDivElement | null>(null);
+  const previousStepRef = useRef(currentStep);
 
   const methods = useForm<EnrollmentFormData>({
     resolver: zodResolver(enrollmentSchema),
@@ -101,6 +103,28 @@ export default function EnrollmentForm() {
 
     return () => window.removeEventListener("resize", updateViewport);
   }, []);
+
+  useEffect(() => {
+    if (previousStepRef.current === currentStep) return;
+    previousStepRef.current = currentStep;
+
+    const frame = window.requestAnimationFrame(() => {
+      const formTop = formTopRef.current;
+      if (!formTop) return;
+
+      const navbarHeight =
+        document.querySelector("nav")?.getBoundingClientRect().height ?? 0;
+      const top =
+        formTop.getBoundingClientRect().top +
+        window.scrollY -
+        navbarHeight -
+        16;
+
+      window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [currentStep]);
 
   const validateCurrentStep = async () => {
     switch (currentStep) {
@@ -172,7 +196,8 @@ export default function EnrollmentForm() {
         />
       ) : null}
 
-      <EnrollmentStepLayout
+      <div ref={formTopRef}>
+        <EnrollmentStepLayout
         illustration={
           isClassesStep ? (
             <StepClassesSelection mode="configurator" />
@@ -195,8 +220,8 @@ export default function EnrollmentForm() {
             : "p-4 md:p-5 lg:p-6"
         }
         illustrationContentClassName={isClassesStep ? "max-w-none" : undefined}
-      >
-        <EnrollmentStepContent>
+        >
+          <EnrollmentStepContent>
           <div className="flex h-full flex-col gap-5 md:gap-6">
             <EnrollmentStepHeader currentStep={currentStep} steps={steps} />
 
@@ -222,8 +247,9 @@ export default function EnrollmentForm() {
               />
             </form>
           </div>
-        </EnrollmentStepContent>
-      </EnrollmentStepLayout>
+          </EnrollmentStepContent>
+        </EnrollmentStepLayout>
+      </div>
     </FormProvider>
   );
 }

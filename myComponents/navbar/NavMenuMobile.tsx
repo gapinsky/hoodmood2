@@ -105,8 +105,12 @@ export default function NavMenuMobile({ isOpen, handleOpenNav }: Props) {
           </ul>
 
           <div className="mt-4 flex  gap-3  pt-4 pb-6 justify-end">
-            <ButtonSecondary href="/kontakt">Kontakt</ButtonSecondary>
-            <ButtonPrimary href="/zapisz-sie">Zapisz się</ButtonPrimary>
+            <ButtonSecondary href="/kontakt" onClick={closeNavOnClick}>
+              Kontakt
+            </ButtonSecondary>
+            <ButtonPrimary href="/zapisz-sie" onClick={closeNavOnClick}>
+              Zapisz się
+            </ButtonPrimary>
           </div>
         </div>
       </Container>

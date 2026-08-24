@@ -19,13 +19,6 @@ export default function HeroVideo({
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
-    if (isMobile) {
-      setShouldLoadVideo(true);
-      return;
-    }
-
     const idleCallback = window.requestIdleCallback?.(
       () => setShouldLoadVideo(true),
       { timeout: 2000 },
@@ -77,17 +70,6 @@ export default function HeroVideo({
     }
   }, [shouldLoadVideo]);
 
-  const handleVideoReady = () => {
-    const video = videoRef.current;
-    setIsVideoReady(true);
-
-    if (video?.paused) {
-      video.play().catch(() => {
-        // Poster remains a visual fallback when the browser blocks autoplay.
-      });
-    }
-  };
-
   return (
     <>
       <Image
@@ -114,9 +96,9 @@ export default function HeroVideo({
           loop
           playsInline
           webkit-playsinline=""
-          preload="auto"
+          preload="metadata"
           poster={posterSrc}
-          onCanPlay={handleVideoReady}
+          onCanPlay={() => setIsVideoReady(true)}
           controls={false}
           disablePictureInPicture
           controlsList="nodownload nofullscreen noremoteplayback"
