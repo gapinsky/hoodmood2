@@ -132,9 +132,9 @@ Wszechstronny rozwój taneczny i świetna atmosfera, bo Marysia łączy wymagaj�
     name: "Nel Głowacka",
     role: "Taniec współczesny",
     styles: ["Taniec współczesny (6–9 lat)"],
-    description: `Tańczę od 13 lat, nieustannie rozwijając się w różnych stylach i poszerzając swój warsztat. Swoją przygodę z tańcem rozpoczęłam jako dziecko od baletu, który do dziś jest ważną częścią mojego tanecznego fundamentu. Przez wiele lat trenowałam również taniec towarzyski, a obecnie skupiam się przede wszystkim na tańcu współczesnym i jazzie.
-Jednym z moich największych osiągnięć było zdobycie 3. miejsca na Mistrzostwach WADF, dzięki czemu zostałam II Wicemistrzynią Polski. Na przestrzeni lat brałam udział w licznych zawodach i turniejach tanecznych, a także miałam okazję występować na deskach teatru.
-Taniec jest dla mnie nie tylko techniką i ruchem, ale przede wszystkim sposobem wyrażania emocji. Dlatego rozwijam się również w aktorstwie, które pomaga mi jeszcze lepiej budować sceniczne historie i przekazywać emocje poprzez ruch. Mam za sobą liczne występy i przedstawienia, a każde z tych doświadczeń pozwala mi spojrzeć na taniec z nowej perspektywy.`,
+    description: `Tańczy od 13 lat, nieustannie rozwijając się w różnych stylach i poszerzając swój warsztat. Swoją przygodę z tańcem rozpoczęła jako dziecko od baletu, który do dziś pozostaje ważną częścią jej tanecznego fundamentu. Przez wiele lat trenowała również taniec towarzyski, a obecnie skupia się przede wszystkim na tańcu współczesnym i jazzie.
+Jednym z jej największych osiągnięć było zdobycie 3. miejsca na Mistrzostwach WADF, dzięki czemu została II Wicemistrzynią Polski. Na przestrzeni lat brała udział w licznych zawodach i turniejach tanecznych, a także miała okazję występować na deskach teatru.
+Taniec jest dla niej nie tylko techniką i ruchem, ale przede wszystkim sposobem wyrażania emocji. Dlatego rozwija się również w aktorstwie, które pomaga jej jeszcze lepiej budować sceniczne historie i przekazywać emocje poprzez ruch. Ma za sobą liczne występy i przedstawienia, a każde z tych doświadczeń pozwala jej spojrzeć na taniec z nowej perspektywy.`,
     images: ["/assets/images/team/nelGlowacka/nelGlowackaProfile.jpg"],
     localizations: ["Koszalin"],
     instagram: "https://www.instagram.com/_nelglowacka/",
