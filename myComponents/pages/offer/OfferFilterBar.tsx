@@ -21,7 +21,7 @@ import {
   selectContentStyles,
   selectItemStyles,
   selectTriggerStyles,
-} from "../pricing/PricingFilterBar";
+} from "@/myComponents/forms/filterStyles";
 
 export type OfferSortingValue =
   | "default"
@@ -53,7 +53,7 @@ const fieldLabelStyles =
 const inputAddonStyles = "text-black/35 dark:text-white/35";
 
 const toolbarWrapperStyles =
-  "grid grid-cols-1 gap-4    md:grid-cols-2 lg:grid-cols-[5fr_3fr_4fr_3fr_3fr] lg:gap-4 xl:grid-cols-[8fr_4fr_4fr_3fr_3fr] xl:gap-8";
+  "grid grid-cols-1 gap-5 rounded-md border border-foreground/10 bg-foreground/2.5 p-5 sm:p-6 md:grid-cols-2 xl:grid-cols-[2fr_1fr_1.4fr_1.4fr_auto]";
 
 export default function OfferFilterBar({
   searchName,
@@ -225,7 +225,7 @@ export default function OfferFilterBar({
           className={clearButtonStyles}
         >
           <RotateCcw className="size-4" />
-          Wyczyść filtry
+          Wyczyść
         </button>
       </Field>
     </div>

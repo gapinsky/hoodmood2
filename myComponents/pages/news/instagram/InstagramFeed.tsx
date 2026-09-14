@@ -70,7 +70,7 @@ function InstagramPreviewMedia({
   if (!firstItem) {
     return (
       <div className="flex h-full w-full items-center justify-center bg-black/5 text-sm ui-muted-copy dark:bg-white/5">
-        Brak podgladu
+        Brak podglądu
       </div>
     );
   }
@@ -130,12 +130,13 @@ function DesktopPostTile({ post }: { post: InstagramPost }) {
     <DialogTrigger asChild>
       <button
         type="button"
-        className="group relative hidden aspect-square w-full overflow-hidden rounded-lg bg-white/18 text-left transition duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-500)] focus-visible:ring-offset-2 md:block dark:bg-white/[0.05]"
-        aria-label={`Otworz post Instagram: ${post.caption}`}
+        className="ui-focus-ring group hidden w-full min-w-0 rounded-md text-left md:block"
+        aria-label={`Otwórz post Instagram: ${post.caption}`}
       >
+        <div className="relative aspect-square overflow-hidden rounded-md bg-muted [&_img]:transition-transform [&_img]:duration-700 motion-safe:group-hover:[&_img]:scale-[1.035] motion-safe:group-focus-visible:[&_img]:scale-[1.035]">
         <InstagramPreviewMedia
           post={post}
-          sizes="(max-width: 1023px) 33vw, 25vw"
+          sizes="(max-width: 1519px) 30vw, 440px"
         />
         <PostTypeIndicator post={post} />
         <div className="absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/42 group-focus-visible:bg-black/42" />
@@ -151,6 +152,12 @@ function DesktopPostTile({ post }: { post: InstagramPost }) {
             count={post.commentsCount}
           />
         </div>
+        </div>
+        <div className="border-b border-foreground/10 pb-5 pt-4">
+          <p className="mb-2 text-xs uppercase tracking-[0.14em] text-(--brand-700) dark:text-(--brand-400)">{post.date}</p>
+          <p className="line-clamp-2 text-base leading-7 text-foreground">{post.caption || "Z życia Hoodmood"}</p>
+          <span className="mt-3 inline-block text-xs text-muted-foreground">Zobacz wpis ↗</span>
+        </div>
       </button>
     </DialogTrigger>
   );
@@ -160,9 +167,9 @@ function MobilePostCard({ post }: { post: InstagramPost }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <article className="block w-full overflow-hidden rounded-xl bg-white/[0.34] text-left md:hidden dark:bg-white/[0.06]">
+    <article className="block w-full overflow-hidden rounded-md border border-foreground/10 bg-foreground/2.5 text-left md:hidden">
       <div className="flex items-center gap-3 px-4 py-3">
-        <Avatar className="size-9 border border-black/[0.08] dark:border-white/[0.1]">
+        <Avatar className="size-9 border border-black/8 dark:border-white/10">
           <AvatarImage
             src={studioAvatar}
             alt={post.accountName}
@@ -178,10 +185,10 @@ function MobilePostCard({ post }: { post: InstagramPost }) {
           <p className="truncate text-xs ui-muted-copy">{post.date}</p>
         </div>
 
-        <Instagram className="ml-auto size-4 text-[var(--brand-700)] dark:text-[var(--brand-300)]" />
+        <Instagram className="ml-auto size-4 text-(--brand-700) dark:text-(--brand-300)" />
       </div>
 
-      <div className="relative aspect-square w-full overflow-hidden border-y border-black/[0.06] dark:border-white/[0.08]">
+      <div className="relative aspect-square w-full overflow-hidden border-y border-black/6 dark:border-white/8">
         <InstagramMedia post={post} />
         <PostTypeIndicator post={post} />
       </div>
@@ -210,9 +217,9 @@ function MobilePostCard({ post }: { post: InstagramPost }) {
         <button
           type="button"
           onClick={() => setIsExpanded((current) => !current)}
-          className="text-sm font-medium ui-muted-copy transition hover:text-foreground"
+          className="ui-link text-sm font-medium transition"
         >
-          {isExpanded ? "Zobacz mniej" : "Zobacz wiecej"}
+          {isExpanded ? "Zobacz mniej" : "Zobacz więcej"}
         </button>
       </div>
     </article>
@@ -225,7 +232,7 @@ function InstagramPostDialog({ post }: { post: InstagramPost }) {
       <DesktopPostTile post={post} />
       <MobilePostCard post={post} />
 
-      <DialogContent className="max-h-[calc(100dvh-2rem)] max-w-[1080px]  overflow-y-auto rounded-2xl border-black/[0.08]  p-0 shadow-[0_30px_90px_rgba(0,0,0,0.3)] [&>button]:z-20 dark:border-white/[0.1] dark:bg-neutral-950/95">
+      <DialogContent className="max-h-[calc(100dvh-2rem)] max-w-270  overflow-y-auto rounded-2xl border-black/8  p-0 shadow-[0_30px_90px_rgba(0,0,0,0.3)] [&>button]:z-20 dark:border-white/10 dark:bg-neutral-950/95">
         <DialogTitle className="sr-only ">
           Post Instagram {post.accountName}
         </DialogTitle>
@@ -298,15 +305,15 @@ export default function InstagramFeed({
 
   if (posts.length === 0) {
     return (
-      <p className="w-full rounded-xl border border-black/[0.06] bg-white/[0.26] p-5 text-sm ui-muted-copy dark:border-white/[0.08] dark:bg-white/[0.05]">
-        Brak dostepnych postow z Instagrama.
+      <p className="w-full rounded-md border border-black/6 bg-white/26 p-5 text-sm ui-muted-copy dark:border-white/8 dark:bg-white/5">
+        Nie ma teraz dostępnych wpisów. Zajrzyj bezpośrednio na nasz Instagram.
       </p>
     );
   }
 
   return (
     <div className="mx-auto w-full ">
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-2 lg:gap-3">
+      <div className="grid grid-cols-1 gap-x-5 gap-y-8 md:grid-cols-3 lg:gap-x-8 lg:gap-y-10">
         {posts.map((post) => (
           <InstagramPostDialog key={post.id} post={post} />
         ))}
@@ -314,11 +321,11 @@ export default function InstagramFeed({
       {(cursor || isLoading) && (
         <div ref={sentinelRef} className="mt-8" aria-hidden="true">
           {isLoading && (
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-2 lg:gap-3">
+            <div className="grid grid-cols-1 gap-x-5 gap-y-8 md:grid-cols-3 lg:gap-x-8 lg:gap-y-10">
               {Array.from({ length: 3 }, (_, index) => (
                 <div
                   key={index}
-                  className="aspect-square animate-pulse rounded-lg bg-black/[0.06] dark:bg-white/[0.07]"
+                  className="aspect-square animate-pulse motion-reduce:animate-none rounded-md bg-black/6 dark:bg-white/[0.07]"
                 />
               ))}
             </div>

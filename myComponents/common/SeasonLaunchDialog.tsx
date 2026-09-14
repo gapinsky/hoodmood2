@@ -11,9 +11,19 @@ import {
 } from "@/components/ui/dialog";
 
 export default function SeasonLaunchDialog() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [viewport, setViewport] = useState({ width: 0, height: 0 });
   const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    const dismissed =
+      typeof window !== "undefined" &&
+      window.sessionStorage.getItem("hoodmood-season-launch-dismissed") === "true";
+
+    if (!dismissed) {
+      setOpen(true);
+    }
+  }, []);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -37,22 +47,10 @@ export default function SeasonLaunchDialog() {
     };
   }, []);
 
-  useEffect(() => {
-    if (!open) return;
-
-    function closeOnAnyClick() {
-      setOpen(false);
-    }
-
-    document.addEventListener("pointerdown", closeOnAnyClick, {
-      capture: true,
-      once: true,
-    });
-
-    return () => {
-      document.removeEventListener("pointerdown", closeOnAnyClick, true);
-    };
-  }, [open]);
+  const closeDialog = () => {
+    setOpen(false);
+    window.sessionStorage.setItem("hoodmood-season-launch-dismissed", "true");
+  };
 
   return (
     <>
@@ -75,8 +73,16 @@ export default function SeasonLaunchDialog() {
         />
       ) : null}
 
-      <Dialog open={open} onOpenChange={setOpen}>
+      <Dialog open={open} onOpenChange={(nextOpen) => {
+        if (!nextOpen) {
+          closeDialog();
+          return;
+        }
+        setOpen(true);
+      }}>
         <DialogContent
+          onInteractOutside={(event) => event.preventDefault()}
+          onEscapeKeyDown={(event) => event.preventDefault()}
           className="max-w-5xl cursor-pointer overflow-hidden px-6 py-16 text-center duration-300 data-[state=open]:slide-in-from-bottom-4 sm:px-10 sm:py-20 lg:px-16 lg:py-24"
         >
           <div className="relative z-10 flex flex-col items-center gap-6">

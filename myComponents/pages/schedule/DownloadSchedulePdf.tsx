@@ -1,6 +1,6 @@
 "use client";
 
-import { buttonPrimaryStyes } from "@/myComponents/common/ButtonPrimary";
+import { buttonSecondaryStyles } from "@/myComponents/common/ButtonSecondary";
 import html2canvas from "html2canvas-pro";
 import type { RefObject } from "react";
 
@@ -62,7 +62,7 @@ export default function DownloadSchedulePdfButton({ pdfRef, name }: Props) {
   };
 
   return (
-    <button onClick={handleDownloadPdf} className={buttonPrimaryStyes}>
+    <button onClick={handleDownloadPdf} className={buttonSecondaryStyles}>
       Pobierz grafik w PDF
     </button>
   );

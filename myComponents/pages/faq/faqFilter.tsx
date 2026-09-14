@@ -14,11 +14,7 @@ import {
 } from "@/components/ui/input-group";
 import { CircleX } from "lucide-react";
 import NoQuestion from "./noQuestion";
-export const normalize = (text: string) =>
-  text
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
+import { normalizeText as normalize } from "@/lib/normalizeText";
 
 type Props = {
   faq: FaqItem[];

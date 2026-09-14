@@ -1,14 +1,12 @@
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import SectionContent from "@/myComponents/common/SectionContent";
-import ToggleButtons from "@/myComponents/common/ToggleButtons";
+import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
+import { pricingTabs } from "@/data/tabs";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import { type PricingPageContent } from "@/data/pricingData";
 import Table from "./Table";
-import { pricingTabs } from "@/data/tabs";
 
 export default function PricingPage({
-  badge,
   title,
   description,
   tableData,
@@ -16,12 +14,13 @@ export default function PricingPage({
   return (
     <MainWrapper>
       <SectionContainer>
-        <SectionContent
-          badge={badge}
+        <LocationPageHeader
+          tabs={pricingTabs}
+          eyebrow="Twój ruch / Hoodmood"
+          navigationLabel="Lokalizacja cennika"
           title={title}
           description={description}
         />
-        <ToggleButtons tabs={pricingTabs} />
         <Table data={tableData} />
         <AnyQuestionsContact />
       </SectionContainer>

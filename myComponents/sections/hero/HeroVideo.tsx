@@ -65,7 +65,7 @@ export default function HeroVideo({
 
     if (playPromise !== undefined) {
       playPromise.catch(() => {
-        // Safari can reject autoplay during transient page states; keep quiet.
+
       });
     }
   }, [shouldLoadVideo]);
@@ -80,7 +80,7 @@ export default function HeroVideo({
         fetchPriority="high"
         sizes="100vw"
         aria-hidden="true"
-        className={`absolute inset-0 -z-20 h-full w-full object-cover transition-opacity duration-700 motion-reduce:transition-none ${
+        className={`absolute inset-0 -z-20 h-full w-full object-cover object-[center_10%] transition-opacity duration-700 motion-reduce:transition-none ${
           isVideoReady ? "opacity-0" : "opacity-100"
         }`}
       />
@@ -88,7 +88,7 @@ export default function HeroVideo({
       {shouldLoadVideo ? (
         <video
           ref={videoRef}
-          className={`absolute inset-0 -z-20 h-full w-full object-cover transition-opacity duration-700 motion-reduce:transition-none ${
+          className={`absolute inset-0 -z-20 h-full w-full object-cover object-[center_10%] transition-opacity duration-700 motion-reduce:transition-none ${
             isVideoReady ? "opacity-100" : "opacity-0"
           }`}
           autoPlay

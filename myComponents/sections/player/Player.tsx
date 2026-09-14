@@ -1,6 +1,6 @@
 import Image from "next/image";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import SectionContent from "@/myComponents/common/SectionContent";
+import SectionContent from "@/myComponents/common/headers/SectionContent";
 import { data } from "./data";
 import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
 import { Youtube } from "lucide-react";
@@ -12,7 +12,8 @@ export default function Player() {
       <div className="flex flex-col md:flex-row w-full items-center gap-8">
         <div className=" flex flex-col gap-8 xl:w-full">
           <SectionContent
-            styles="max-w-full md:max-w-none"
+            align="left"
+            styles="max-w-full md:max-w-md"
             title={data.title}
             description={data.description}
           />

@@ -7,10 +7,9 @@ import { Mail, MessageSquareText, Phone, User } from "lucide-react";
 import { toast } from "sonner";
 import type { FieldError } from "react-hook-form";
 
-import { buttonPrimaryStyes } from "@/myComponents/common/ButtonPrimary";
+import { buttonPrimaryStyles } from "@/myComponents/common/ButtonPrimary";
 import { contactFormSchema } from "@/lib/schemas/contactSchema";
 import type { ContactFormInput } from "@/lib/schemas/contactSchema";
-import type { ContactFormData } from "@/lib/schemas/contactSchema";
 import { submitContactForm } from "../actions";
 import FormTextField from "@/myComponents/forms/fields/FormTextField";
 import FormCheckboxField from "@/myComponents/forms/fields/FormCheckboxField";
@@ -72,7 +71,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col gap-2"
+      className="flex flex-col gap-4"
       noValidate
     >
       <FormTextField
@@ -85,7 +84,7 @@ export default function ContactForm() {
         registration={register("fullName")}
       />
 
-      <div className="flex flex-col gap-8 md:flex-row">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <FormTextField
           id="input-field-email"
           label="Adres e-mail"
@@ -94,7 +93,7 @@ export default function ContactForm() {
           icon={Mail}
           disabled={isSubmitting}
           error={errors.email}
-          wrapperClassName="flex flex-1 flex-col gap-2.5"
+          wrapperClassName="flex min-w-0 flex-col gap-2.5"
           registration={register("email")}
         />
 
@@ -106,7 +105,7 @@ export default function ContactForm() {
           icon={Phone}
           disabled={isSubmitting}
           error={errors.phone as FieldError | undefined}
-          wrapperClassName="flex flex-1 flex-col gap-2.5"
+          wrapperClassName="flex min-w-0 flex-col gap-2.5"
           registration={phoneRegistration}
           inputMode="numeric"
           maxLength={9}
@@ -157,9 +156,9 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className={`${buttonPrimaryStyes} transition-opacity hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-50`}
+        className={`${buttonPrimaryStyles} transition-opacity hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-50`}
       >
-        {isSubmitting ? "Wysyłanie..." : "Wyślij"}
+        {isSubmitting ? "Wysyłanie..." : "Wyślij wiadomość"}
       </button>
     </form>
   );

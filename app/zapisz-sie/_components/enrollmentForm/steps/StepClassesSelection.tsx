@@ -8,13 +8,7 @@ import type {
 import ClassConfigurator from "../selection/ClassConfigurator";
 import SelectedClassesPanel from "../selection/SelectedClassesPanel";
 
-type StepClassesSelectionProps = {
-  mode?: "default" | "configurator" | "summary";
-};
-
-export default function StepClassesSelection({
-  mode = "default",
-}: StepClassesSelectionProps) {
+export default function StepClassesSelection() {
   const {
     control,
     watch,
@@ -32,8 +26,9 @@ export default function StepClassesSelection({
   const selectedLocationId = watch("selectedLocationId");
 
   const configuratorContent = (
-    <div className="space-y-4 h-150">
+    <div className="flex min-h-0 min-w-0 flex-col gap-2">
       <ClassConfigurator
+        isHoodmoodMember={watch("isHoodmoodMember")}
         items={items}
         participantType={participantType}
         participantAge={participantAge}
@@ -42,7 +37,7 @@ export default function StepClassesSelection({
       />
 
       <span
-        className={`block min-h-6 pl-1 text-sm text-red-400 ${
+        className={`block shrink-0 min-h-6 pl-1 text-sm text-red-400 ${
           errors.selectedClasses ? "visible" : "invisible"
         }`}
       >
@@ -51,16 +46,8 @@ export default function StepClassesSelection({
     </div>
   );
 
-  if (mode === "configurator") {
-    return configuratorContent;
-  }
-
-  if (mode === "summary") {
-    return <SelectedClassesPanel items={items} onRemove={remove} />;
-  }
-
   return (
-    <div className="grid grid-cols-1 gap-5 xl:grid-cols-[minmax(320px,0.92fr)_minmax(340px,1fr)] xl:items-start  ">
+    <div className="grid grid-cols-1 gap-5 lg:h-full lg:min-h-0 lg:grid-rows-[minmax(0,1fr)] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-stretch  ">
       {configuratorContent}
       <SelectedClassesPanel items={items} onRemove={remove} />
     </div>

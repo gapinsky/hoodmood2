@@ -9,6 +9,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { NAV as navLinks } from "../navbar/data";
 
 const desktopNavListStyles = "flex items-center gap-1";
@@ -19,11 +20,13 @@ const desktopNavTriggerStyles =
 const desktopNavLinkStyles = "ui-nav-link text-[#1c1c1c]/98 dark:text-white";
 
 const desktopDropdownContentStyles =
-  "min-w-[220px] rounded-xs  border border-black/[0.08] bg-white/92 p-2 dark:bg-[#1c1c1c]/98  shadow-[0_18px_48px_rgba(0,0,0,0.16)] backdrop-blur-xl dark:border-white/[0.10]  dark:shadow-[0_18px_48px_rgba(0,0,0,0.32)]";
+  "min-w-55 rounded-xs  border border-black/8 bg-white/92 p-2 dark:bg-[#1c1c1c]/98  shadow-[0_18px_48px_rgba(0,0,0,0.16)] backdrop-blur-xl dark:border-white/10  dark:shadow-[0_18px_48px_rgba(0,0,0,0.32)]";
 
 export default function NavMenuDesktop() {
+  const pathname = usePathname();
+
   return (
-    <div className="hidden xl:flex justify-center ">
+    <div className="hidden justify-center xl:flex">
       <NavigationMenu viewport={false}>
         <NavigationMenuList className={desktopNavListStyles}>
           {navLinks.map((item) =>
@@ -41,7 +44,8 @@ export default function NavMenuDesktop() {
                       <NavigationMenuLink key={link.label} asChild>
                         <Link
                           href={link.href}
-                          className="hover:bg-black/3 dark:hover:bg-white/8 py-1"
+                          className="flex justify-center py-2 text-center items-center hover:bg-black/3 dark:hover:bg-white/8 "
+                          aria-current={pathname === link.href ? "page" : undefined}
                         >
                           {link.label}
                         </Link>
@@ -53,7 +57,11 @@ export default function NavMenuDesktop() {
             ) : (
               <NavigationMenuItem key={item.label}>
                 <NavigationMenuLink asChild>
-                  <Link href={item.href} className={desktopNavLinkStyles}>
+                  <Link
+                    href={item.href}
+                    className={desktopNavLinkStyles}
+                    aria-current={pathname === item.href ? "page" : undefined}
+                  >
                     {item.label}
                   </Link>
                 </NavigationMenuLink>

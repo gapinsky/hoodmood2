@@ -1,12 +1,13 @@
 export const data = {
   badge: "kadra",
-  title: "Kadra trenerska Hoodmood",
+  title: "Trenerzy Hoodmood",
   description:
     "Za naszymi zajęciami stoją ludzie, którzy naprawdę żyją tańcem – od lat na scenie, na sali treningowej i w pracy z dziećmi, młodzieżą i dorosłymi. Sprawdź, kto tworzy ekipę Hoodmood w Koszalinie, Polanowie i Białym Borze.",
 };
 
 export type Trainer = {
   id: string;
+  specialGuest: boolean;
   name: string;
   role: string;
   styles: string[];
@@ -19,6 +20,7 @@ export type Trainer = {
 export const instructors: Trainer[] = [
   {
     id: "talita-jarzecka",
+    specialGuest: false,
     name: "Talita Jarzęcka",
     role: "CEO",
     styles: [
@@ -42,6 +44,7 @@ export const instructors: Trainer[] = [
   },
   {
     id: "wiktoria-butwicka",
+    specialGuest: false,
     name: "Wiktoria Butwicka",
     role: "Hip-hop",
     styles: [
@@ -61,6 +64,7 @@ export const instructors: Trainer[] = [
   },
   {
     id: "paulina-walikowska",
+    specialGuest: false,
     name: "Paulina Walikowska",
     role: "Balet",
     styles: ["Balet"],
@@ -78,6 +82,7 @@ Obecnie Paulina dzieli się swoją pasją i wiedzą, prowadząc w naszym studiu 
   },
   {
     id: "alina-lemanska",
+    specialGuest: false,
     name: "Alina Lemańska",
     role: "KPOP",
     styles: ["KPOP"],
@@ -93,6 +98,7 @@ Obecnie Paulina dzieli się swoją pasją i wiedzą, prowadząc w naszym studiu 
   },
   {
     id: "magdalena-sokolowska-japona",
+    specialGuest: false,
     name: "Magdalena Sokołowska",
     role: "Hip-hop/House",
     styles: ["Young Generation (hip-hop)", "The Beat Hunters (hip-hop)"],
@@ -107,6 +113,7 @@ Obecnie Paulina dzieli się swoją pasją i wiedzą, prowadząc w naszym studiu 
   },
   {
     id: "maria-kober",
+    specialGuest: false,
     name: "Maria Kober",
     role: "The Beat Hunters",
     styles: [
@@ -129,6 +136,7 @@ Wszechstronny rozwój taneczny i świetna atmosfera, bo Marysia łączy wymagaj�
   },
   {
     id: "nel-glowacka",
+    specialGuest: false,
     name: "Nel Głowacka",
     role: "Taniec współczesny",
     styles: ["Taniec współczesny (6–9 lat)"],
@@ -141,6 +149,7 @@ Taniec jest dla niej nie tylko techniką i ruchem, ale przede wszystkim sposobem
   },
   {
     id: "klara-walach",
+    specialGuest: false,
     name: "Klara Walach",
     role: "Taniec współczesny",
     styles: ["Taniec współczesny (6–9 lat)", "Taniec współczesny (10–12 lat)"],
@@ -153,6 +162,7 @@ Taniec nauczył ją systematyczności, wytrwałości i odpowiedzialności, a tak
   },
   {
     id: "marianna-stanislawska",
+    specialGuest: false,
     name: "Marianna Stanisławska",
     role: "Taniec współczesny",
     styles: [
@@ -170,6 +180,7 @@ Marianna ma również doświadczenie w pracy z dziećmi,była opiekunką na kolo
   },
   {
     id: "paulina-kapuscinska",
+    specialGuest: false,
     name: "Paulina Kapuścińska",
     role: "Hip-hop",
     styles: ["HYPE CREW (grupa średniozaawansowana hip-hop)"],
@@ -185,6 +196,7 @@ W tym sezonie Paulina dołącza do kadry HoodMood, gdzie poprowadzi grupę Hype 
   },
   {
     id: "aleks-kultys",
+    specialGuest: false,
     name: "Aleks Kultys",
     role: "Akrobatyka",
     styles: ["Akrobatyka 4–6 latki", "Akrobatyka"],
@@ -214,6 +226,7 @@ W tym sezonie Paulina dołącza do kadry HoodMood, gdzie poprowadzi grupę Hype 
   // },
   {
     id: "kamila-maik",
+    specialGuest: true,
     name: "Kamila Maik",
     role: "Master Trainer",
     styles: ["Master Trainer"],
@@ -236,6 +249,7 @@ W 2023 roku została wyróżniona tytułem Trener Roku przez Dziennik Bałtycki,
   },
   {
     id: "joanna-jedynak",
+    specialGuest: true,
     name: "Joanna Jedynak",
     role: "Master Trainer",
     styles: ["Master Trainer"],
@@ -250,6 +264,7 @@ W 2023 roku została wyróżniona tytułem Trener Roku przez Dziennik Bałtycki,
   },
   {
     id: "nikola-suchocka",
+    specialGuest: true,
     name: "Nikola Suchocka",
     role: "MASTER TRAINER",
     styles: ["MASTER TRAINER"],

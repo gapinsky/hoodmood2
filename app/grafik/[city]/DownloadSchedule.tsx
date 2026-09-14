@@ -17,7 +17,7 @@ export default function DownloadSchedule({ title, scheduleContent }: Props) {
   const ref = useRef(null);
   return (
     <>
-      <div className="absolute -left-[100000px]">
+      <div className="absolute left-[-100000px]">
         <SchedulePdfTable
           classesByDay={scheduleContent}
           pdfRef={ref}

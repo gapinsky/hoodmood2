@@ -50,6 +50,8 @@ export async function submitEnrollmentForm(data: EnrollmentFormData) {
         <p><strong>Wiek:</strong> ${validatedData.participantType === "adult" ? "Dorosły" : escapeHtml(validatedData.participantAge)}</p>
         <p><strong>Lokalizacja:</strong> ${escapeHtml(validatedData.selectedLocationId)}</p>
 
+        <p><strong>Uczestnik zajęć Hoodmood:</strong> ${validatedData.isHoodmoodMember ? "Tak" : "Nie"}</p>
+
         <h3>Dane kontaktowe</h3>
         <p><strong>Osoba kontaktowa:</strong> ${escapeHtml(validatedData.parentFullName)}</p>
         <p><strong>E-mail:</strong> ${escapeHtml(validatedData.email)}</p>

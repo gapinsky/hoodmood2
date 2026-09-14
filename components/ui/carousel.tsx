@@ -196,7 +196,7 @@ const CarouselItem = React.forwardRef<
 CarouselItem.displayName = "CarouselItem";
 
 const carouselControlStyles =
-  "ui-focus-ring ui-surface-soft ui-outline z-10 border border-black/[0.08] bg-[linear-gradient(180deg,rgba(255,255,255,0.82),rgba(245,241,243,0.94))] text-[#21191d]/82 shadow-[0_8px_20px_rgba(0,0,0,0.12)] backdrop-blur-xl transition-colors duration-200 hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.94),rgba(241,236,239,0.98))] hover:text-[#21191d] disabled:opacity-55 dark:border-white/[0.10] dark:bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.06))] dark:text-white/82 dark:shadow-[0_8px_22px_rgba(0,0,0,0.28)] dark:hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.16),rgba(255,255,255,0.08))] dark:hover:text-white";
+  "ui-focus-ring ui-surface-soft ui-outline z-10 border border-black/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.82),rgba(245,241,243,0.94))] text-[#21191d]/82 shadow-[0_8px_20px_rgba(0,0,0,0.12)] backdrop-blur-xl transition-colors duration-200 hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.94),rgba(241,236,239,0.98))] hover:text-[#21191d] disabled:opacity-55 dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.06))] dark:text-white/82 dark:shadow-[0_8px_22px_rgba(0,0,0,0.28)] dark:hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.16),rgba(255,255,255,0.08))] dark:hover:text-white";
 
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,

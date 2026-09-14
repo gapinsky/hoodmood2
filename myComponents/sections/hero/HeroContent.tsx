@@ -1,27 +1,16 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
+import { useRevealInView } from "@/lib/hooks/useRevealInView";
 
 export default function HeroContent({ children }: { children: ReactNode }) {
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    let secondFrame = 0;
-    const firstFrame = window.requestAnimationFrame(() => {
-      secondFrame = window.requestAnimationFrame(() => setIsReady(true));
-    });
-
-    return () => {
-      window.cancelAnimationFrame(firstFrame);
-      window.cancelAnimationFrame(secondFrame);
-    };
-  }, []);
+  const { ref, mounted, revealed } = useRevealInView<HTMLDivElement>();
 
   return (
     <div
-      className={`hero-stage px-8 lg:px-12 xl:px-16 ${
-        isReady ? "hero-content-ready" : ""
-      }`}
+      ref={ref}
+      data-reveal={mounted ? (revealed ? "visible" : "hidden") : undefined}
+      className="hero-stage px-4 sm:px-6 lg:px-12 xl:px-16"
     >
       {children}
     </div>

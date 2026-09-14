@@ -1,5 +1,5 @@
 import type { PricingItem } from "@/data/pricingData";
-import { normalize } from "@/myComponents/pages/faq/faqFilter";
+import { normalizeText as normalize } from "@/lib/normalizeText";
 
 type SortingValue = "ascending" | "descending" | "alphabetical";
 

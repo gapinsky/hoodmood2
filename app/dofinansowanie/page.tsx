@@ -1,5 +1,5 @@
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import SectionContent from "@/myComponents/common/SectionContent";
+import PageContent from "@/myComponents/common/headers/PageContent";
 import { data, items } from "./data";
 import Image from "next/image";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
@@ -9,11 +9,10 @@ export default function Subsidy() {
   return (
    <MainWrapper>
       <SectionContainer>
-        <SectionContent
-          badge={data.badge}
+        <PageContent
           title={data.title}
           description={data.description}
-        ></SectionContent>
+        ></PageContent>
         <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:gap-10">
           <div>
             <div className=" flex flex-col gap-4   pb-6">

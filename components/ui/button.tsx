@@ -10,13 +10,13 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "border border-white/[0.08] bg-[linear-gradient(180deg,var(--brand-600),var(--brand-800))] text-white ring-1 ring-inset ring-white/[0.10] shadow-md motion-safe:hover:bg-[linear-gradient(180deg,var(--brand-500),var(--brand-700))]",
+          "border border-white/8 bg-[linear-gradient(180deg,var(--brand-600),var(--brand-800))] text-white ring-1 ring-inset ring-white/10 shadow-md motion-safe:hover:bg-[linear-gradient(180deg,var(--brand-500),var(--brand-700))]",
         destructive:
           "border border-red-500/30 bg-[linear-gradient(180deg,rgba(220,38,38,0.95),rgba(153,27,27,0.95))] text-white shadow-md motion-safe:hover:brightness-105",
         outline:
-          "ui-surface-soft ui-outline border border-black/[0.08] bg-[linear-gradient(180deg,rgba(255,255,255,0.78),rgba(245,241,243,0.92))] text-[#21191d] motion-safe:hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(240,234,237,0.98))] dark:border-white/[0.10] dark:bg-[linear-gradient(180deg,rgba(255,255,255,0.10),rgba(255,255,255,0.05))] dark:text-white/92 dark:motion-safe:hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.07))]",
+          "ui-surface-soft ui-outline border border-black/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.78),rgba(245,241,243,0.92))] text-[#21191d] motion-safe:hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(240,234,237,0.98))] dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(255,255,255,0.10),rgba(255,255,255,0.05))] dark:text-white/92 dark:motion-safe:hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.07))]",
         secondary:
-          "ui-surface-soft ui-outline rounded-full border border-black/[0.08] bg-secondary text-secondary-foreground motion-safe:hover:bg-accent dark:border-white/[0.10]",
+          "ui-surface-soft ui-outline rounded-full border border-black/8 bg-secondary text-secondary-foreground motion-safe:hover:bg-accent dark:border-white/10",
         ghost:
           "text-foreground/80 motion-safe:hover:bg-accent motion-safe:hover:text-accent-foreground dark:motion-safe:hover:bg-accent/60",
         link: "ui-link ui-interactive text-sm tracking-[0.12em] underline-offset-4 motion-safe:hover:underline",

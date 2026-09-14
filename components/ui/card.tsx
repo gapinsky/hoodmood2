@@ -3,13 +3,13 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { useRevealInView } from "@/myComponents/common/ViewportReveal";
+import { useRevealInView } from "@/lib/hooks/useRevealInView";
 
 const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
-  const { ref: revealRef, revealed } = useRevealInView<HTMLDivElement>({
+  const { ref: revealRef, revealed, mounted } = useRevealInView<HTMLDivElement>({
     threshold: 0.1,
     rootMargin: "0px 0px -4% 0px",
   });
@@ -33,7 +33,7 @@ const Card = React.forwardRef<
   return (
     <div
       ref={setRefs}
-      data-reveal={revealed ? "visible" : "hidden"}
+      data-reveal={mounted ? (revealed ? "visible" : "hidden") : "visible"}
       className={cn(
         "reveal-base reveal-item ui-surface ui-card-interactive relative flex flex-col items-stretch justify-evenly overflow-hidden rounded-xl text-card-foreground before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:bg-linear-to-br before:from-white/20 before:via-white/4 before:to-transparent before:opacity-80 motion-safe:before:transition-opacity motion-safe:before:duration-300 dark:before:from-white/10 dark:before:via-white/3",
         className,

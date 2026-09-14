@@ -132,7 +132,7 @@
   --secondary: oklch(0.26 0.012 5);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.255 0.01 5);
-  --muted-foreground: oklch(0.78 0.01 5);
+  --muted-foreground: oklch(84.911% 0.00108 12.265);
   --accent: oklch(0.285 0.018 5);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
@@ -156,10 +156,32 @@
 
 body {
   font-family: var(--roboto-condensed), sans-serif;
+  font-size: clamp(1rem, 0.93rem + 0.22vw, 1.125rem);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
 }
 
-h2 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-anton {
   font-family: var(--anton), sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+p,
+li,
+span,
+small,
+label,
+button,
+a {
+  letter-spacing: 0.01em;
 }
 
 @layer base {
@@ -172,6 +194,25 @@ h2 {
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-balance;
+  }
+
+  p,
+  li,
+  span,
+  small,
+  label,
+  button,
+  a {
+    @apply text-pretty;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -353,18 +394,31 @@ h2 {
 }
 
 @layer utilities {
+  .team-grid:has(> a:hover) > a:not(:hover) .team-card-dim,
+  .team-grid:has(> a:focus-visible) > a:not(:focus-visible) .team-card-dim {
+    opacity: 1;
+  }
+
   .reveal-base {
-    @apply motion-safe:translate-y-2 motion-safe:opacity-0 motion-safe:transition-[opacity,transform] motion-safe:duration-500 motion-safe:ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none;
+    opacity: 1;
+    transform: none;
+    transition: opacity 500ms ease-out, transform 500ms ease-out;
     transition-delay: var(--reveal-delay, 0ms);
     will-change: opacity, transform;
   }
 
   .reveal-item {
-    @apply motion-safe:translate-y-2;
+    transform: none;
+  }
+
+  .reveal-base[data-reveal="hidden"] {
+    opacity: 0;
+    transform: translateY(10px);
   }
 
   .reveal-base[data-reveal="visible"] {
-    @apply translate-y-0 opacity-100;
+    opacity: 1;
+    transform: translateY(0);
   }
 
 }
@@ -416,41 +470,42 @@ html {
 .animate-location-slide {
   animation: location-slide 9s infinite ease-in-out;
 }
-@keyframes hero-content-in {
-  from {
-    opacity: 0;
-    transform: translateY(22px);
-    filter: blur(4px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) {
-  .hero-stage .hero-enter {
+  .hero-stage[data-reveal="hidden"] .hero-enter {
     opacity: 0;
-    transform: translateY(22px);
-    filter: blur(4px);
+    transform: translateY(var(--hero-enter-distance, 20px));
+    filter: blur(3px);
   }
 
-  .hero-stage.hero-content-ready .hero-enter {
-    animation: hero-content-in 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  .hero-stage[data-reveal="visible"] .hero-enter {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition:
+      opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+      filter 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--hero-enter-delay, 0ms);
+  }
+
+  .hero-enter-soft {
+    --hero-enter-distance: 12px;
   }
 
   .hero-enter-delay-1 {
-    animation-delay: 110ms;
+    --hero-enter-delay: 140ms;
   }
 
   .hero-enter-delay-2 {
-    animation-delay: 220ms;
+    --hero-enter-delay: 280ms;
   }
 
   .hero-enter-delay-3 {
-    animation-delay: 340ms;
+    --hero-enter-delay: 420ms;
+  }
+
+  .hero-enter-delay-4 {
+    --hero-enter-delay: 560ms;
   }
 }
 

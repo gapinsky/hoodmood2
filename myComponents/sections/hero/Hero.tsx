@@ -1,7 +1,5 @@
-import Image from "next/image";
 import { ChevronsDown } from "lucide-react";
 import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
-import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 import LocationBadge from "./LocationBadge";
 import HeroVideo from "./HeroVideo";
 import SmoothScrollLink from "./SmoothScrollLink";
@@ -17,59 +15,62 @@ type HeroProps = {
 };
 
 export default function Hero({
-  videoSrc = "/assets/videos/lightHeroVid.mp4",
-  mobileVideoSrc = "/assets/optimized/home/lightHeroVid-mobile.mp4",
-  posterSrc = "/assets/optimized/home/hero-poster.jpg",
+  videoSrc = "/assets/videos/chairRotate.mp4",
+  mobileVideoSrc = videoSrc,
+  posterSrc = "/assets/videos/chairRotate-poster.jpg",
   title = "Hoodmood",
   description = "Zajęcia dla dzieci, młodzieży i dorosłych, w tym hip-hop, balet, taniec współczesny, KPOP, akrobatyka i lekcje indywidualne.",
 }: HeroProps) {
   return (
-    <div className="relative min-h-screen isolate overflow-hidden text-white">
+    <div className="relative h-svh isolate overflow-hidden text-white">
       <div className="absolute inset-0 -z-10 bg-black/10" />
-      {/* <Image
-        src={posterSrc}
-        alt="Hoodmood - szkoła tańca i akrobatyki"
-        fill
-        priority
-        fetchPriority="high"
-        sizes="100vw"
-        className="absolute inset-0 -z-20 h-full w-full object-cover"
-      /> */}
       <HeroVideo
         videoSrc={videoSrc}
         mobileVideoSrc={mobileVideoSrc}
         posterSrc={posterSrc}
       />
 
-      <div className="mx-auto flex min-h-screen max-w-380 items-center">
+      <div className="mx-auto flex h-full max-w-380 items-center">
         <HeroContent>
           <div className="hero-enter">
             <LocationBadge />
           </div>
 
-          <div className="hero-enter hero-enter-delay-1 max-w-[10ch] font-anton text-5xl font-black uppercase leading-[0.9] tracking-wider text-white sm:text-6xl md:text-7xl xl:text-[7rem]">
-            {title}
+          <div className="hero-enter hero-enter-delay-1 mt-1 flex flex-col gap-3">
+            <h1 className="max-w-[7ch] font-anton text-[2.9rem] font-black uppercase leading-[0.94] tracking-tighter text-white drop-shadow-[0_18px_38px_rgba(0,0,0,0.32)] sm:text-[4.25rem] md:text-[5.5rem] xl:text-[7.2rem]">
+              <span className="inline-block ">
+                {title}
+              </span>
+            </h1>
           </div>
 
-          <h1 className="hero-enter hero-enter-delay-2 mt-6 max-w-xl text-sm font-bold leading-7 text-white/90 sm:text-lg">
+          <h2 className="hero-enter hero-enter-soft hero-enter-delay-2 mt-2  max-w-xl text-base font-bold leading-[1.7] tracking-[0.02em] text-white/85 sm:text-lg md:text-xl">
             Szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze
-          </h1>
-          <p className="hero-enter hero-enter-delay-2 max-w-xl text-sm leading-7 text-white/60 sm:text-base">
+          </h2>
+          <p className="hero-enter hero-enter-soft hero-enter-delay-3 mt-2  max-w-xl text-sm leading-[1.7] text-white/70 sm:text-[0.95rem] sm:leading-7">
             {description}
           </p>
 
-          <div className="hero-enter hero-enter-delay-3 mt-8 flex gap-3">
-            <ButtonSecondary href="/grafik/koszalin">
+          <div className="hero-enter hero-enter-soft hero-enter-delay-4 mt-6  flex flex-wrap gap-3">
+            <ButtonSecondary
+              href="/grafik/koszalin"
+              className="border-white/30 bg-black/15 text-white hover:border-white/60 hover:bg-white/10"
+            >
               Sprawdź grafik
             </ButtonSecondary>
 
-            <ButtonPrimary href="/oferta/koszalin">Zobacz ofertę</ButtonPrimary>
+            <ButtonSecondary
+              href="/oferta/koszalin"
+              className="border-white/30 bg-black/15 text-white hover:border-white/60 hover:bg-white/10"
+            >
+              Zobacz ofertę
+            </ButtonSecondary>
           </div>
         </HeroContent>
 
         <SmoothScrollLink
           href="#offer"
-          className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/75 hover:cursor-pointer hover:text-white"
+          className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-4 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-white/75 hover:cursor-pointer hover:text-white"
         >
           <span>Zobacz więcej</span>
           <ChevronsDown className="animate-bounce" />

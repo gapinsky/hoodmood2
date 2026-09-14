@@ -1,11 +1,4 @@
-"use client";
-
-import {
-  HoverCard,
-  HoverCardTrigger,
-  HoverCardContent,
-} from "@/components/ui/hover-card";
-import { Clock, Info, User } from "lucide-react";
+import { Clock, User, ChevronDown } from "lucide-react";
 
 type ClassItem = {
   name: string;
@@ -31,93 +24,59 @@ const dayOrder: DayKey[] = [
   "piątek",
 ];
 
-const daySectionStyles =
-  "h-fit rounded-xl bg-white/[0.22] p-4 backdrop-blur-xl dark:bg-white/[0.04]";
-const classCardStyles =
-  "group w-full rounded-lg bg-white/[0.10] p-4 text-left transition-colors duration-300 hover:bg-white/[0.8] dark:bg-white/[0.06] dark:hover:bg-white/[0.10]";
-
-const infoButtonStyles =
-  "inline-flex size-8 items-center justify-center rounded-full border border-black/[0.08] bg-white/80 text-black/45 shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-200 hover:bg-white hover:text-black/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#21191d]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/[0.10] dark:bg-white/[0.08] dark:text-white/45 dark:shadow-[0_4px_12px_rgba(0,0,0,0.16)] dark:hover:bg-white/[0.14] dark:hover:text-white/75 dark:focus-visible:ring-white/80 dark:focus-visible:ring-offset-[#21191d]";
-
-const hoverCardContentStyles =
-  "max-w-[260px] rounded-2xl border border-black/[0.08] bg-white/92 p-4 text-sm text-[#21191d] shadow-[0_16px_40px_rgba(0,0,0,0.16)] backdrop-blur-xl dark:border-white/[0.10] dark:bg-[#1c1c1c]/98 dark:text-white/92 dark:shadow-[0_16px_40px_rgba(0,0,0,0.35)]";
-
 export default function ScheduleGrid({ classesByDay }: Props) {
+
   return (
-    <div className="w-full">
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-5">
-        {dayOrder.map((dayKey) => {
+    <section aria-labelledby="schedule-title" className="w-full space-y-8">
+      <div className="flex items-end justify-between gap-4 border-b border-foreground/10 pb-5">
+        <div>
+          <p className="mb-3 text-xs uppercase tracking-[0.16em] text-muted-foreground">02 / Plan tygodnia</p>
+          <h2 id="schedule-title" className="font-anton text-3xl uppercase sm:text-4xl">Znajdź czas na swój ruch</h2>
+        </div>
+      </div>
+      <nav aria-label="Przejdź do dnia tygodnia" className="flex flex-wrap gap-2 xl:hidden">
+        {dayOrder.map((day) => (
+          <a key={day} href={`#day-${day}`} className="ui-focus-ring rounded-full border border-foreground/10 px-4 py-2 text-sm capitalize transition-colors hover:bg-foreground/5">{day}</a>
+        ))}
+      </nav>
+      <div className="grid grid-cols-1 items-start gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-4">
+        {dayOrder.map((dayKey, index) => {
           const items = classesByDay[dayKey];
           const headingId = `day-${dayKey}-heading`;
-
           return (
-            <section
-              key={dayKey}
-              aria-labelledby={headingId}
-              className={daySectionStyles}
-            >
-              <header className="mb-4 px-1">
-                <h3
-                  id={headingId}
-                  className="text-base font-semibold uppercase tracking-[0.12em] text-[#21191d] dark:text-white/92"
-                >
-                  {dayKey}
-                </h3>
+            <section key={dayKey} id={`day-${dayKey}`} aria-labelledby={headingId} className="min-w-0 scroll-mt-28 space-y-4">
+              <header className="flex items-center justify-between gap-2 border-b border-foreground/10 pb-4">
+                <h3 id={headingId} className="font-anton text-xl uppercase">{dayKey}</h3>
+                <span aria-hidden="true" className="text-xs tabular-nums text-muted-foreground">0{index + 1}</span>
               </header>
-
-              <ul className="grid grid-cols-1 gap-4">
+              {items.length === 0 && (
+                <p className="rounded-md border border-dashed border-foreground/10 px-4 py-6 text-sm text-muted-foreground">Brak zajęć w tym dniu.</p>
+              )}
+              <ul className="space-y-3">
                 {items.map((c, idx) => (
                   <li key={`${dayKey}-${c.name}-${c.time}-${idx}`}>
-                    <article className={classCardStyles}>
-                      <div className="flex items-start justify-between gap-3">
-                        <div className="min-w-0">
-                          <div className="text-sm font-bold text-[#21191d] dark:text-white/92">
-                            {c.name}
-                          </div>
-
-                          <div className="mt-1 text-xs text-black/55 dark:text-white/55 flex items-center gap-1">
-                            <Clock className="w-4" /> {c.time}
-                          </div>
-
-                          <div className="mt-1 text-xs text-black/55 dark:text-white/55 flex items-center gap-1">
-                            <User className="w-4" />{" "}
-                            {c.age.length > 10 ? c.age : `${c.age} lat`}
-                          </div>
-                        </div>
-
-                        <div className="flex shrink-0 flex-col items-end gap-2">
-                          <HoverCard openDelay={20} closeDelay={20}>
-                            <HoverCardTrigger asChild>
-                              <button
-                                type="button"
-                                className={infoButtonStyles}
-                                aria-label={`Pokaż informacje o zajęciach ${c.name}`}
-                              >
-                                <Info className="size-4" />
-                              </button>
-                            </HoverCardTrigger>
-
-                            <HoverCardContent
-                              className={`${hoverCardContentStyles} md:hidden`}
-                            >
-                              {c.info}
-                            </HoverCardContent>
-
-                            <HoverCardContent
-                              className={`${hoverCardContentStyles} hidden md:block`}
-                              side="bottom"
-                              align="end"
-                              sideOffset={8}
-                            >
-                              {c.info}
-                            </HoverCardContent>
-                          </HoverCard>
-                        </div>
+                    <article className="rounded-md border border-foreground/10 bg-foreground/2.5 p-4 text-left transition-colors hover:bg-foreground/5">
+                      <p className="mb-3 flex items-center gap-2 text-sm font-medium tabular-nums text-(--brand-700) dark:text-(--brand-400)">
+                        <Clock className="size-4 shrink-0" aria-hidden="true" />{c.time}
+                      </p>
+                      <p className="text-base font-medium leading-6 text-foreground">{c.name}</p>
+                      <p className="mt-2 flex items-center gap-2 text-sm text-muted-foreground">
+                        <User className="size-4 shrink-0" aria-hidden="true" />
+                        {c.age.length > 10 ? c.age : `${c.age} lat`}
+                      </p>
+                      <div className="mt-4 border-t border-foreground/10 pt-3">
+                        <p className="text-[11px] uppercase tracking-[0.12em] text-muted-foreground">Prowadzący</p>
+                        <p className="mt-1 text-sm leading-5 text-foreground">{c.instructor}</p>
                       </div>
-
-                      <div className="mt-4 text-xs text-black/65 dark:text-white/65">
-                        Instruktor: {c.instructor}
-                      </div>
+                      {c.info && (
+                        <details className="group mt-4">
+                          <summary className="ui-focus-ring flex cursor-pointer list-none items-center justify-between gap-2 rounded-sm py-1 text-xs text-muted-foreground transition-colors hover:text-foreground [&::-webkit-details-marker]:hidden">
+                            Szczegóły zajęć
+                            <ChevronDown className="size-4 transition-transform group-open:rotate-180 motion-reduce:transition-none" aria-hidden="true" />
+                          </summary>
+                          <p className="pt-3 text-sm leading-6 text-muted-foreground">{c.info}</p>
+                        </details>
+                      )}
                     </article>
                   </li>
                 ))}
@@ -126,6 +85,6 @@ export default function ScheduleGrid({ classesByDay }: Props) {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }

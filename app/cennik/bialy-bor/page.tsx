@@ -1,5 +1,6 @@
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import SectionContent from "@/myComponents/common/SectionContent";
+import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
+import { pricingTabs } from "@/data/tabs";
 import {
   bialyBorPricingPageContent,
   bialyBorPricingTableData,
@@ -7,18 +8,17 @@ import {
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import PricingTable from "@/myComponents/pages/pricing/PricingTable";
 import MainWrapper from "@/myComponents/common/MainWrapper";
-import ToggleButtons from "@/myComponents/common/ToggleButtons";
-import { pricingTabs } from "@/data/tabs";
 export default function PricingBialyBor() {
   return (
     <MainWrapper>
       <SectionContainer>
-        <SectionContent
-          badge={bialyBorPricingPageContent.badge}
+        <LocationPageHeader
+          tabs={pricingTabs}
+          eyebrow="Twój ruch / Hoodmood"
+          navigationLabel="Lokalizacja cennika"
           title={bialyBorPricingPageContent.title}
           description={bialyBorPricingPageContent.description}
-        ></SectionContent>
-        <ToggleButtons tabs={pricingTabs} />
+        ></LocationPageHeader>
         <PricingTable items={bialyBorPricingTableData} />
         <AnyQuestionsContact />
       </SectionContainer>

@@ -2,6 +2,8 @@
 
 import { CircleX, SearchIcon, User } from "lucide-react";
 import { Field, FieldLabel } from "@/components/ui/field";
+import { inputStyles, selectTriggerStyles, selectContentStyles, selectItemStyles } from "@/myComponents/forms/filterStyles";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   InputGroup,
   InputGroupAddon,
@@ -34,10 +36,12 @@ export default function PricingFilterBar() {
     setSearchAge,
     sorting,
     setSorting,
+    isHoodmoodMember,
+    setIsHoodmoodMember,
   } = usePricingFilters();
 
   return (
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[3fr_7fr_2fr_4fr]">
+    <div className="grid grid-cols-1 gap-5 rounded-md border border-foreground/10 bg-foreground/2.5 p-5 md:grid-cols-2 xl:grid-cols-[1.2fr_2fr_1fr_1.3fr] sm:p-6">
       <Field className="flex flex-col gap-2.5">
         <FieldLabel className="ui-muted-label pl-1 text-[11px] font-semibold uppercase tracking-[0.16em]">
           Kategoria
@@ -73,7 +77,7 @@ export default function PricingFilterBar() {
           htmlFor="searchInput"
           className="ui-muted-label pl-1 text-[11px] font-semibold uppercase tracking-[0.16em]"
         >
-          Wyszukaj zajęć
+          Wyszukaj zajęcia
         </FieldLabel>
         <InputGroup className={inputStyles}>
           <InputGroupInput
@@ -90,6 +94,7 @@ export default function PricingFilterBar() {
             <InputGroupAddon align="inline-end">
               <button
                 type="button"
+                aria-label="Wyczyść nazwę zajęć"
                 onClick={() => setSearchInput("")}
                 className="inline-flex items-center gap-1 px-2 text-xs text-black/68 hover:cursor-pointer hover:text-black/85 dark:invert dark:opacity-50 dark:hover:opacity-100"
               >
@@ -130,6 +135,7 @@ export default function PricingFilterBar() {
             >
               <button
                 type="button"
+                aria-label="Wyczyść wiek uczestnika"
                 onClick={() => setSearchAge("")}
                 className="inline-flex items-center gap-1 px-2 text-xs text-black/68 hover:cursor-pointer hover:text-black/85 dark:hover:text-white/60"
               >
@@ -170,17 +176,20 @@ export default function PricingFilterBar() {
           </SelectContent>
         </Select>
       </Field>
+      <div className="flex flex-col gap-2 border-t border-foreground/10 pt-4 md:col-span-2 xl:col-span-4">
+        <label htmlFor="hoodmood-member" className="flex min-h-10 w-fit cursor-pointer items-center gap-3 text-sm font-semibold">
+          <Checkbox
+            id="hoodmood-member"
+            checked={isHoodmoodMember}
+            onCheckedChange={(checked) => setIsHoodmoodMember(checked === true)}
+            aria-describedby="hoodmood-member-description"
+          />
+          Członek Hoodmood
+        </label>
+        <p id="hoodmood-member-description" className="text-sm text-muted-foreground">
+          Ceny Master Trainers, Masterclass i Master Pass dla {isHoodmoodMember ? "aktywnych kursantów Hoodmood" : "osób spoza Hoodmood"}.
+        </p>
+      </div>
     </div>
   );
 }
-
-export const inputStyles =
-  "ui-field ui-outline ui-interactive h-10 rounded-lg text-foreground";
-export const selectTriggerStyles =
-  "ui-field ui-outline ui-interactive h-10 rounded-lg px-5 text-foreground";
-export const selectContentStyles = "rounded-lg p-2";
-export const selectItemStyles =
-  "ui-interactive rounded-md text-foreground focus:bg-accent motion-safe:hover:bg-accent/80";
-
-export const clearButtonStyles =
-  "ui-focus-ring ui-pressable ui-field ui-outline inline-flex size-8 h-10 items-center justify-center rounded-md text-black/55 motion-safe:hover:bg-accent motion-safe:hover:text-black/75 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-60 dark:text-white/80 dark:motion-safe:hover:text-white/90";

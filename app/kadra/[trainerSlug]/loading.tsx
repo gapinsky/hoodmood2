@@ -5,15 +5,18 @@ export default function TrainerLoading() {
   return (
     <MainWrapper>
       <SectionContainer>
-        <div className="animate-pulse" aria-label="Ładowanie profilu trenera" role="status">
-          <div className="mb-4 h-5 w-36 rounded bg-black/10 dark:bg-white/10" />
+        <div className="animate-pulse motion-reduce:animate-none" aria-label="Ładowanie profilu trenera" role="status">
+          <div className="mb-12 h-10 w-full rounded border-b border-foreground/10 bg-black/5 dark:bg-white/5" />
 
-          <div className="grid gap-8 lg:grid-cols-2 lg:gap-18">
-            <div className="aspect-square rounded-lg bg-black/10 dark:bg-white/10" />
+          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14 xl:gap-20">
+            <div className="space-y-4">
+              <div className="aspect-square rounded-md bg-black/10 dark:bg-white/10" />
+              <div className="h-14 rounded-md bg-black/10 dark:bg-white/10" />
+            </div>
 
             <div className="space-y-7">
               <div className="space-y-4">
-                <div className="h-10 w-2/3 rounded-lg bg-black/10 dark:bg-white/10" />
+                <div className="h-28 w-4/5 rounded-md bg-black/10 dark:bg-white/10" />
                 <div className="h-5 w-full rounded bg-black/8 dark:bg-white/8" />
                 <div className="h-5 w-full rounded bg-black/8 dark:bg-white/8" />
                 <div className="h-5 w-4/5 rounded bg-black/8 dark:bg-white/8" />

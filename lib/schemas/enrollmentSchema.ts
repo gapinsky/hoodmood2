@@ -30,6 +30,7 @@ export const enrollmentSchema = z
       message: "Wybierz grupę wiekową uczestnika.",
     }),
     participantAge: z.string(),
+    isHoodmoodMember: z.boolean(),
     selectedLocationId: z.enum(["koszalin", "polanow", "bialy-bor"], {
       message: "Wybierz lokalizację.",
     }),

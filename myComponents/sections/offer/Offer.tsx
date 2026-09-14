@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-import SectionContent from "../../common/SectionContent";
+import SectionContent from "@/myComponents/common/headers/SectionContent";
 import { data, offer } from "./data";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
@@ -19,7 +19,6 @@ export default function Offer() {
     <div id="offer" className="scroll-mt-36">
       <SectionContainer>
         <SectionContent
-          badge={data.badge}
           title={data.title}
           description={data.description}
         />
@@ -30,7 +29,7 @@ export default function Offer() {
               key={item.title}
               href={item.href}
               aria-label={`Przejdź do: ${item.title}`}
-              className={`group relative isolate min-h-90 overflow-clip rounded-2xl bg-[#151215] transform-gpu [backface-visibility:hidden] [clip-path:inset(0_round_1rem)] [contain:paint] md:min-h-100 lg:min-h-50 ${desktopSpans[index]} ${cardLiftHoverStyles}`}
+              className={`group relative isolate min-h-90 overflow-clip rounded-2xl bg-[#151215] transform-gpu backface-hidden [clip-path:inset(0_round_1rem)] contain-[paint] md:min-h-100 lg:min-h-50 ${desktopSpans[index]} ${cardLiftHoverStyles}`}
             >
               <Image
                 src={item.img}
@@ -63,7 +62,7 @@ export default function Offer() {
 
               <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
                 <div className="flex items-end justify-between gap-4">
-                  <h4 className=" font-anton mb-4 text-4xl uppercase leading-[0.92] tracking-wide text-white sm:text-4xl">
+                  <h4 className=" mb-4 font-anton text-4xl uppercase leading-[1.08] tracking-wide text-white sm:text-4xl">
                     {item.title}
                   </h4>
                   <ArrowUpRight className="mb-1 size-7 shrink-0 text-white/65 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white" />

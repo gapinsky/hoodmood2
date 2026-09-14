@@ -11,6 +11,8 @@ export type TabItem = {
 export type PricingItem = {
   name: string;
   price: string;
+  memberPrice?: string;
+  nonMemberPrice?: string;
   frequency: string;
   frequencyDescription?: string;
   trending: boolean;
@@ -41,7 +43,7 @@ export const koszalinPricingContent: Record<
 > = {
   zajecia: {
     badge: "Cennik",
-    title: "Cennik zajęć - Hoodmood Koszalin",
+    title: "Hoodmood Koszalin - cennik",
     description:
       "Sprawdź ofertę regularnych zajęć tanecznych i akrobatycznych w naszej filii w Koszalinie. Ceny rozliczane są miesięcznie i zależą od liczby treningów w tygodniu oraz rodzaju grupy. Wybierz styl, dopasuj wiek uczestnika i znajdź zajęcia najlepiej dopasowane do poziomu oraz zainteresowań.",
     tableData: [
@@ -194,6 +196,8 @@ export const koszalinPricingContent: Record<
       {
         name: "MASTER TRAINERS",
         price: "60 zł – aktywni kursanci HOODMOOD / 180 zł – osoby spoza HOODMOOD",
+        memberPrice: "60 zł",
+        nonMemberPrice: "180 zł",
         frequency: "3 godziny | regularnie, 1x w miesiącu",
         frequencyDescription: "To stała współpraca z wybranym trenerem, który regularnie pojawia się w naszym grafiku. Dzięki temu możesz trenować z nim przez cały sezon i rozwijać się pod jego okiem.",
         trending: false,
@@ -204,6 +208,8 @@ export const koszalinPricingContent: Record<
       {
         name: "MASTERCLASS",
         price: "90 zł – aktywni kursanci HOODMOOD / 120 zł – osoby spoza HOODMOOD",
+        memberPrice: "90 zł",
+        nonMemberPrice: "120 zł",
         frequency: "1,5 godziny | specjalne wydarzenia",
         frequencyDescription: "Jednorazowe warsztaty z zaproszonymi choreografami, tancerzami i instruktorami. Różne nazwiska, różne style, różne doświadczenia.",
         trending: false,
@@ -214,6 +220,8 @@ export const koszalinPricingContent: Record<
       {
         name: "HOODMOOD MASTER PASS",
         price: "140 zł / miesiąc – aktywni kursanci HOODMOOD / 290 zł / miesiąc – osoby spoza HOODMOOD",
+        memberPrice: "140 zł / miesiąc",
+        nonMemberPrice: "290 zł / miesiąc",
         frequency: "3-godzinny MASTER TRAINER + 1,5-godzinny MASTERCLASS",
         trending: false,
         minAge: 7,
@@ -224,7 +232,7 @@ export const koszalinPricingContent: Record<
   },
   "pakiety-zajec": {
     badge: "Cennik",
-    title: "Cennik pakietów zajęć - Hoodmood Koszalin",
+    title: "Hoodmood Koszalin - Cennik pakietów zajęć ",
     description:
       "Chcesz uczęszczać na więcej niż jedne zajęcia? Sprawdź dostępne pakiety, które łączą kilka treningów w korzystniejszej cenie. To dobre rozwiązanie dla osób, które chcą rozwijać się wszechstronnie, łącząc różne style tańca, akrobatykę lub dodatkowe treningi uzupełniające.",
     tableData: [
@@ -317,7 +325,7 @@ export const koszalinPricingContent: Record<
   },
   "zajecia-indywidualne": {
     badge: "Cennik",
-    title: "Cennik zajęć indywidualnych - Hoodmood Koszalin",
+    title: "Hoodmood Koszalin - cennik zajęć indywidualnych",
     description:
       "Zajęcia indywidualne to opcja dla osób, które chcą pracować w pełni na własnych celach i w swoim tempie. To świetny wybór, jeśli zależy Ci na przygotowaniu choreografii, doskonaleniu techniki, pracy nad konkretnym stylem albo lekcjach solo, w duecie czy małej grupie.",
     tableData: [
@@ -407,7 +415,7 @@ export const koszalinPricingContent: Record<
 
 export const bialyBorPricingPageContent = {
   badge: "Cennik",
-  title: "Cennik zajęć - Hoodmood Biały Bór",
+  title: "Hoodmood Biały Bór - cennik",
   description:
     "Sprawdź aktualny cennik zajęć Hoodmood w Białym Borze. Prowadzimy regularne zajęcia taneczne dla dzieci oraz hip-hop dla dzieci i młodzieży. Opłaty rozliczane są miesięcznie.",
 };
@@ -435,7 +443,7 @@ export const bialyBorPricingTableData: PricingItem[] = [
 
 export const polanowPricingPageContent = {
   badge: "Cennik",
-  title: "Cennik zajęć - Hoodmood Polanów",
+  title: "Hoodmood Polanów - cennik",
   description:
     "Sprawdź aktualny cennik zajęć Hoodmood w Polanowie. Prowadzimy zajęcia taneczne dla najmłodszych oraz hip-hop dla dzieci i młodzieży. Opłaty rozliczane są miesięcznie.",
 };

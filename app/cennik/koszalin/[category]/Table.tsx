@@ -12,16 +12,20 @@ type TableProps = {
 };
 
 export default function Table({ data }: TableProps) {
-  const { searchInput, searchAge, sorting } = usePricingFilters();
+  const { searchInput, searchAge, sorting, isHoodmoodMember } = usePricingFilters();
 
   const filteredData = useMemo(() => {
-    return filterAndSortPricingData(data, searchInput, searchAge, sorting);
-  }, [data, searchInput, searchAge, sorting]);
+    const pricedData = data.map((item) => ({
+      ...item,
+      price: (isHoodmoodMember ? item.memberPrice : item.nonMemberPrice) ?? item.price,
+    }));
+    return filterAndSortPricingData(pricedData, searchInput, searchAge, sorting);
+  }, [data, searchInput, searchAge, sorting, isHoodmoodMember]);
 
   return (
-    <>
+    <div className="space-y-10">
       <PricingFilterBar />
       <PricingTable items={filteredData} />
-    </>
+    </div>
   );
 }

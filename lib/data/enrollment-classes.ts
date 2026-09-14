@@ -14,6 +14,8 @@ export type EnrollmentClassItem = {
   billingPeriod: "monthly" | "one-time";
   name: string;
   price: number;
+  memberPrice?: number;
+  nonMemberPrice?: number;
   frequency: string;
   frequencyDescription?: string;
   minAge: number | null;
@@ -48,6 +50,8 @@ const koszalinClasses = koszalinPricingContent.zajecia.tableData.map(
     billingPeriod: "monthly" as const,
     name: item.name,
     price: parsePrice(item.price),
+    memberPrice: item.memberPrice ? parsePrice(item.memberPrice) : undefined,
+    nonMemberPrice: item.nonMemberPrice ? parsePrice(item.nonMemberPrice) : undefined,
     frequency: item.frequency,
     frequencyDescription: item.frequencyDescription,
     minAge: item.minAge,
@@ -65,6 +69,8 @@ const koszalinPackages = koszalinPricingContent["pakiety-zajec"].tableData.map(
     billingPeriod: "monthly" as const,
     name: item.name,
     price: parsePrice(item.price),
+    memberPrice: item.memberPrice ? parsePrice(item.memberPrice) : undefined,
+    nonMemberPrice: item.nonMemberPrice ? parsePrice(item.nonMemberPrice) : undefined,
     frequency: item.frequency,
     frequencyDescription: item.frequencyDescription,
     minAge: item.minAge,
@@ -81,6 +87,8 @@ const polanowClasses = polanowPricingTableData.map((item, index) => ({
   locationName: "Polanów",
   name: item.name,
   price: parsePrice(item.price),
+    memberPrice: item.memberPrice ? parsePrice(item.memberPrice) : undefined,
+    nonMemberPrice: item.nonMemberPrice ? parsePrice(item.nonMemberPrice) : undefined,
   frequency: item.frequency,
   frequencyDescription: item.frequencyDescription,
   minAge: item.minAge,
@@ -96,6 +104,8 @@ const bialyBorClasses = bialyBorPricingTableData.map((item, index) => ({
   locationName: "Biały Bór",
   name: item.name,
   price: parsePrice(item.price),
+    memberPrice: item.memberPrice ? parsePrice(item.memberPrice) : undefined,
+    nonMemberPrice: item.nonMemberPrice ? parsePrice(item.nonMemberPrice) : undefined,
   frequency: item.frequency,
   frequencyDescription: item.frequencyDescription,
   minAge: item.minAge,
@@ -115,6 +125,8 @@ export const enrollmentClasses: EnrollmentClassItem[] = [
       billingPeriod: "one-time" as const,
       name: item.name,
       price: parsePrice(item.price),
+    memberPrice: item.memberPrice ? parsePrice(item.memberPrice) : undefined,
+    nonMemberPrice: item.nonMemberPrice ? parsePrice(item.nonMemberPrice) : undefined,
       frequency: item.frequency,
       frequencyDescription: item.frequencyDescription,
       minAge: item.minAge,
@@ -146,3 +158,6 @@ export const isAdultClass = (item: EnrollmentClassItem) =>
   item.category === "adults" ||
   item.name.toLowerCase().includes("doros") ||
   (item.minAge !== null && item.minAge >= 18);
+
+export const getEnrollmentClassPrice = (item: EnrollmentClassItem, isHoodmoodMember: boolean) =>
+  (isHoodmoodMember ? item.memberPrice : item.nonMemberPrice) ?? item.price;

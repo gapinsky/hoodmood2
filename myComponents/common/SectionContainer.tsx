@@ -9,7 +9,7 @@ export default function SectionContainer({ children, className }: Props) {
   return (
     <section
       className={cn(
-        "mx-auto flex max-w-380 flex-col gap-16 overflow-hidden px-8 lg:px-12 xl:px-16",
+        "mx-auto flex max-w-380 flex-col gap-[clamp(4rem,8vw,5rem)] overflow-hidden px-4 py-1 sm:px-6 lg:px-12 xl:px-16",
         className,
       )}
     >

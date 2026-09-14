@@ -1,5 +1,5 @@
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import SectionContent from "@/myComponents/common/SectionContent";
+import SectionContent from "@/myComponents/common/headers/SectionContent";
 import { data } from "./data";
 import {
   Accordion,
@@ -7,23 +7,36 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 import { faq } from "@/app/faq/data";
+import Link from "next/link";
+
 export default function Faq() {
   return (
     <SectionContainer>
-      <SectionContent title={data.title} description={data.description} />
+      <SectionContent
+        title={data.title}
+        description={
+          <>
+            {data.description}{" "}
+            <Link
+              href="/faq"
+              className="font-semibold text-(--brand-700) underline decoration-(--brand-500)/60 underline-offset-4 transition-colors hover:text-(--brand-500) dark:text-(--brand-300) dark:hover:text-(--brand-200)"
+            >
+              Zobacz więcej
+            </Link>
+          </>
+        }
+      />
       <Accordion type="single" collapsible>
         {faq.slice(0, 3).map((question) => (
           <AccordionItem value={question.question} key={question.question}>
             <AccordionTrigger>{question.question}</AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-md md:text-lg">
+            <AccordionContent className="text-muted-foreground text-sm md:text-base">
               {question.answer}
             </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
-      <ButtonPrimary href="/faq">Wszystkie pytania</ButtonPrimary>
     </SectionContainer>
   );
 }

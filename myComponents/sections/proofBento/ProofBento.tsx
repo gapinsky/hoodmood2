@@ -1,5 +1,5 @@
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import SectionContent from "@/myComponents/common/SectionContent";
+import SectionContent from "@/myComponents/common/headers/SectionContent";
 import { data, featureCards } from "./data";
 import {
   Card,
@@ -14,7 +14,6 @@ export default function ProofBento() {
   return (
     <SectionContainer>
       <SectionContent
-        badge={data.badge}
         title={data.title}
         description={data.description}
       />
@@ -38,7 +37,7 @@ export default function ProofBento() {
                 )}
 
                 <CardHeader className="h-fit  pb-6">
-                  <CardTitle className="text-lg leading-tight font-anton font-normal">
+                  <CardTitle className="font-anton text-lg font-normal leading-[1.08]">
                     {featureCard.title}
                   </CardTitle>
                   <CardDescription className="mt-2 text-sm leading-6 ">

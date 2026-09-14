@@ -4,7 +4,7 @@ import {
   InputGroupAddon,
   InputGroupInput,
 } from "@/components/ui/input-group";
-import { inputStyles } from "@/myComponents/pages/pricing/PricingFilterBar";
+import { inputStyles } from "@/myComponents/forms/filterStyles";
 import type { FieldError, UseFormRegisterReturn } from "react-hook-form";
 import type { LucideIcon } from "lucide-react";
 

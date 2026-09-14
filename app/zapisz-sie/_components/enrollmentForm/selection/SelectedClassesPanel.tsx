@@ -17,8 +17,8 @@ export default function SelectedClassesPanel({
     .reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <aside className="flex min-w-0 flex-col rounded-[24px] bg-black/1 p-4 backdrop-blur-xl dark:bg-white/5">
-      <div className="mb-5 flex items-center justify-between gap-4">
+    <aside className="flex min-h-0 min-w-0 flex-col rounded-md border border-foreground/10 bg-foreground/2.5 p-4 sm:p-5">
+      <div className="mb-5 flex shrink-0 items-center justify-between gap-4">
         <h3 className="text-lg font-semibold opacity-85">Wybrane zajęcia</h3>
         <span className="ui-muted-label text-xs font-semibold uppercase tracking-[0.14em] text-black/75 dark:text-white/45">
           {items.length} wybrane
@@ -26,22 +26,22 @@ export default function SelectedClassesPanel({
       </div>
 
       {items.length === 0 ? (
-        <div className="flex items-center justify-center rounded-2xl border border-dashed border-white/10 px-4 text-sm leading-7 text-black/58 dark:text-white/50 md:h-55">
+        <div className="flex items-center justify-center rounded-md border border-dashed border-foreground/10 px-4 text-sm leading-7 text-black/58 dark:text-white/50 py-6">
           Nie wybrałeś żadnych zajęć. Wybierz z listy zajęcia, które Cię
           interesują, aby przejść dalej.
         </div>
       ) : (
-        <div className="flex-1 space-y-3 pr-1 [scrollbar-gutter:stable] md:min-h-55 md:max-h-55 md:overflow-y-scroll">
+        <div tabIndex={0} role="region" aria-label="Lista wybranych zajęć" className="ui-focus-ring min-h-0 space-y-3 lg:overflow-y-auto lg:pr-2 lg:scrollbar-gutter-stable lg:flex-1">
           {items.map((item, index) => (
             <div
               key={item.clientId}
-              className="rounded-2xl border border-white/10 bg-black/3 p-3.5"
+              className="rounded-md border border-foreground/10 bg-black/3 p-3.5"
             >
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <button
                   type="button"
                   onClick={() => onRemove(index)}
-                  className="inline-flex w-fit min-h-8 items-center justify-center rounded-md border border-black/30 bg-black/5 px-2.5 py-1 text-[11px] font-semibold text-black/55 transition hover:bg-black/10 dark:bg-white/10 dark:text-white/65 dark:hover:bg-white/15"
+                  className="inline-flex w-fit min-h-11 items-center justify-center rounded-md border border-black/30 bg-black/5 px-2.5 py-1 text-[11px] font-semibold text-black/55 transition hover:bg-black/10 dark:bg-white/10 dark:text-white/65 dark:hover:bg-white/15"
                 >
                   Usuń
                 </button>
@@ -63,16 +63,16 @@ export default function SelectedClassesPanel({
         </div>
       )}
 
-      <div className="mt-5 border-t border-white/15 pt-4">
-        <div className="flex items-center justify-between gap-1.5">
+      <div className="mt-5 shrink-0 border-t border-foreground/10 pt-4">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <p className="ui-muted-label text-sm uppercase tracking-[0.12em] dark:text-white/45">
             Razem
           </p>
 
-          <div className="flex items-start gap-4 text-right">
+          <div className="flex flex-wrap items-start gap-4 text-right">
             {oneTimeTotal > 0 ? (
               <div>
-                <p className="text-lg font-semibold text-foreground dark:text-white md:text-xl">
+                <p className="text-sm font-semibold text-foreground dark:text-white">
                   {oneTimeTotal.toFixed(2).replace(".", ",")} zł
                 </p>
                 <p className="ui-muted-label text-xs dark:text-white/45">
@@ -81,7 +81,7 @@ export default function SelectedClassesPanel({
               </div>
             ) : null}
             <div>
-              <p className="text-lg font-semibold text-foreground dark:text-white md:text-xl">
+              <p className="text-sm font-semibold text-foreground dark:text-white">
                 {monthlyTotal.toFixed(2).replace(".", ",")} zł
               </p>
               <p className="ui-muted-label text-xs dark:text-white/45">

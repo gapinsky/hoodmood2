@@ -1,5 +1,5 @@
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import SectionContent from "@/myComponents/common/SectionContent";
+import PageContent from "@/myComponents/common/headers/PageContent";
 import { data, sections, personalData } from "./data";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import InfoRow from "@/myComponents/pages/privacy/InfoRow";
@@ -9,11 +9,10 @@ export default function Privacy() {
   return (
   <MainWrapper>
       <SectionContainer>
-        <SectionContent
-          badge={data.badge}
+        <PageContent
           title={data.title}
           description={data.description}
-        ></SectionContent>
+        ></PageContent>
         <div className="mx-auto ">
           <div>
             <div className="grid gap-4 0  py-6 sm:grid-cols-2  lg:grid-cols-4">

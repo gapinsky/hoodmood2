@@ -1,6 +1,5 @@
 "use client";
 
-import type { CSSProperties, ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 
 type RevealOptions = {
@@ -15,9 +14,18 @@ export function useRevealInView<T extends HTMLElement>({
   rootMargin = "0px 0px -6% 0px",
 }: RevealOptions = {}) {
   const ref = useRef<T | null>(null);
+  const [mounted, setMounted] = useState(false);
   const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) {
+      return;
+    }
+
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     if (mediaQuery.matches) {
@@ -52,32 +60,8 @@ export function useRevealInView<T extends HTMLElement>({
     observer.observe(node);
 
     return () => observer.disconnect();
-  }, [once, revealed, rootMargin, threshold]);
+  }, [mounted, once, revealed, rootMargin, threshold]);
 
-  return { ref, revealed };
+  return { ref, revealed, mounted };
 }
 
-type ViewportRevealProps = {
-  children: ReactNode;
-  className?: string;
-  delay?: number;
-};
-
-export default function ViewportReveal({
-  children,
-  className = "reveal-item",
-  delay = 0,
-}: ViewportRevealProps) {
-  const { ref, revealed } = useRevealInView<HTMLDivElement>();
-
-  return (
-    <div
-      ref={ref}
-      data-reveal={revealed ? "visible" : "hidden"}
-      className={`reveal-base ${className}`.trim()}
-      style={{ "--reveal-delay": `${delay}ms` } as CSSProperties}
-    >
-      {children}
-    </div>
-  );
-}

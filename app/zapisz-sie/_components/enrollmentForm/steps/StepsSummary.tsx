@@ -24,11 +24,14 @@ export default function StepSummary({
     values.participantType === "adult" ? "Dorośli" : "Dzieci i młodzież";
 
   return (
-    <div className="flex h-full flex-col gap-4 overflow-y-scroll xl:max-h-90 xl:pr-2">
-      <section className="rounded-xl border border-white/10 bg-white/4 p-4 ">
-        <h3 className="mb-3 text-base font-semibold text-foreground dark:text-white/95 ">
+    <div className="flex min-w-0 flex-col gap-4 wrap-anywhere">
+      <section className="rounded-md border border-foreground/10 bg-white/4 p-4 ">
+        <h3 className="mb-3 text-sm font-semibold text-foreground dark:text-white/95 ">
           Uczestnik
         </h3>
+        <p className="mb-3 text-sm text-muted-foreground">
+          Uczestnik zajęć Hoodmood: {values.isHoodmoodMember ? "Tak" : "Nie"}
+        </p>
         <div className="grid grid-cols-1 gap-3 text-sm leading-6 text-black/72 md:grid-cols-3 dark:text-white/75">
           <div className="flex flex-col">
             <span className="ui-muted-label text-xs dark:text-white/45">
@@ -47,14 +50,14 @@ export default function StepSummary({
               Wiek:
             </span>{" "}
             {values.participantType === "adult"
-              ? "DorosĹ‚y"
+              ? "Dorosły"
               : values.participantAge}
           </div>
         </div>
       </section>
 
-      <section className="rounded-xl border border-white/10 bg-white/4 p-4 ">
-        <h3 className="mb-3 text-base font-semibold text-foreground dark:text-white/95 ">
+      <section className="rounded-md border border-foreground/10 bg-white/4 p-4 ">
+        <h3 className="mb-3 text-sm font-semibold text-foreground dark:text-white/95 ">
           Dane kontaktowe
         </h3>
         <div className="grid grid-cols-1 gap-3 text-sm leading-6 text-black/72 md:grid-cols-3 dark:text-white/75">
@@ -88,8 +91,8 @@ export default function StepSummary({
         ) : null}
       </section>
 
-      <section className="rounded-xl border border-white/10 bg-white/4 p-4 md:p-5">
-        <h3 className="mb-3 text-base font-semibold text-foreground dark:text-white/95">
+      <section className="rounded-md border border-foreground/10 bg-white/4 p-4 md:p-5">
+        <h3 className="mb-3 text-sm font-semibold text-foreground dark:text-white/95">
           Wybrane zajęcia
         </h3>
 
@@ -108,7 +111,7 @@ export default function StepSummary({
                 </div>
               </div>
 
-              <div className="text-sm font-semibold text-[#83394f] dark:text-[#c4587b]">
+              <div className="text-sm font-semibold text-foreground">
                 {item.price.toFixed(2).replace(".", ",")} zł
                 <span className="ml-1 text-xs font-normal">
                   / {item.billingPeriod === "one-time" ? "jednorazowo" : "miesięcznie"}
@@ -118,14 +121,14 @@ export default function StepSummary({
           ))}
         </div>
 
-        <div className="mt-4 flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3">
+        <div className="mt-4 flex flex-wrap gap-3 items-center justify-between rounded-md border border-foreground/10 bg-white/4 px-4 py-3">
           <span className="ui-muted-label text-sm dark:text-white/60">
             Razem:
           </span>
-          <div className="flex items-start gap-4 text-right">
+          <div className="flex flex-wrap items-start gap-4 text-right">
             {oneTimeTotal > 0 ? (
               <div>
-                <div className="text-base font-semibold text-foreground dark:text-white">
+                <div className="text-sm font-semibold text-foreground dark:text-white">
                   {oneTimeTotal.toFixed(2).replace(".", ",")} zł
                 </div>
                 <div className="ui-muted-label text-xs font-normal text-black/55 dark:text-white/45">
@@ -134,7 +137,7 @@ export default function StepSummary({
               </div>
             ) : null}
             <div>
-              <div className="text-base font-semibold text-foreground dark:text-white">
+              <div className="text-sm font-semibold text-foreground dark:text-white">
                 {monthlyTotal.toFixed(2).replace(".", ",")} zł
               </div>
               <div className="ui-muted-label text-xs font-normal text-black/55 dark:text-white/45">

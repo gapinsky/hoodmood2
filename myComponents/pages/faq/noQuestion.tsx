@@ -1,4 +1,3 @@
-import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
 import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
 import { Phone } from "lucide-react";
 
@@ -10,7 +9,7 @@ export default function NoQuestion() {
         <ButtonSecondary href="/kontakt">
           <Phone /> 123 456 789
         </ButtonSecondary>
-        <ButtonPrimary href="/kontakt">Napisz do nas</ButtonPrimary>
+        <ButtonSecondary href="/kontakt">Napisz do nas</ButtonSecondary>
       </div>
     </div>
   );

@@ -1,10 +1,9 @@
 import { ClassesOfferType } from "@/data/ofertaData";
-import { offerTabs } from "@/data/tabs";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import SectionContent from "@/myComponents/common/SectionContent";
-import TabsNav from "@/myComponents/common/ToggleButtons";
+import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
+import { offerTabs } from "@/data/tabs";
 import OfferFiltersSection from "@/myComponents/pages/offer/OfferFiltersSection";
 
 type LocationPageProps = {
@@ -19,12 +18,13 @@ export function LocationPageTemplate({
   return (
     <MainWrapper>
       <SectionContainer>
-        <SectionContent
-          badge="Oferta"
+        <LocationPageHeader
+          tabs={offerTabs}
+          eyebrow="Znajdź swój styl / Hoodmood"
+          navigationLabel="Lokalizacja oferty"
           title={header.title}
           description={header.description}
-        ></SectionContent>
-        <TabsNav tabs={offerTabs} />
+        />
         <OfferFiltersSection offerContent={offerContent} />
         <AnyQuestionsContact />
       </SectionContainer>

@@ -15,7 +15,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { enrollmentLocationOptions } from "@/lib/data/enrollment-classes";
+import { Checkbox } from "@/components/ui/checkbox";
+import { enrollmentClasses, getEnrollmentClassPrice, enrollmentLocationOptions } from "@/lib/data/enrollment-classes";
 import type { EnrollmentFormData } from "@/lib/schemas/enrollmentSchema";
 import FormTextField from "@/myComponents/forms/fields/FormTextField";
 import {
@@ -23,7 +24,7 @@ import {
   selectContentStyles,
   selectItemStyles,
   selectTriggerStyles,
-} from "@/myComponents/pages/pricing/PricingFilterBar";
+} from "@/myComponents/forms/filterStyles";
 
 import { sanitizeNameInput } from "../utils";
 
@@ -46,6 +47,7 @@ export default function StepParticipant() {
     formState: { errors, isSubmitting },
   } = useFormContext<EnrollmentFormData>();
 
+  const isHoodmoodMember = watch("isHoodmoodMember");
   const participantType = watch("participantType");
   const participantAge = watch("participantAge");
   const selectedLocationId = watch("selectedLocationId");
@@ -66,7 +68,7 @@ export default function StepParticipant() {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-0 md:gap-5 ">
+    <div className="grid grid-cols-1 gap-3 ">
       <FormTextField
         id="participant-full-name"
         label="Imię i nazwisko "
@@ -86,7 +88,7 @@ export default function StepParticipant() {
           Grupa uczestnika
         </span>
 
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           {participantTypeOptions.map((option) => {
             const isActive = participantType === option.value;
 
@@ -111,10 +113,11 @@ export default function StepParticipant() {
                   }
                 }}
                 disabled={isSubmitting}
-                className={`ui-focus-ring flex min-h-12 items-center justify-between rounded-2xl border px-4 py-3 text-left text-sm transition ${
+                aria-pressed={isActive}
+                className={`ui-focus-ring flex min-h-12 items-center justify-between rounded-md border px-4 py-3 text-left text-sm transition ${
                   isActive
                     ? "border-[#ac4967] bg-[#ac4967]/14 text-foreground dark:text-white"
-                    : "border-white/10 bg-white/[0.04] text-black/78 hover:border-white/25 dark:text-white/75"
+                    : "border-foreground/10 bg-white/4 text-black/78 hover:border-white/25 dark:text-white/75"
                 }`}
               >
                 <span className="font-medium">{option.label}</span>
@@ -224,7 +227,7 @@ export default function StepParticipant() {
               aria-describedby={locationErrorId}
               className={`${selectTriggerStyles} w-full`}
             >
-              <SelectValue placeholder="Wybierz lokalizacjÄ™" />
+              <SelectValue placeholder="Wybierz lokalizację" />
             </SelectTrigger>
             <SelectContent className={selectContentStyles}>
               <SelectGroup>
@@ -250,6 +253,28 @@ export default function StepParticipant() {
             {errors.selectedLocationId?.message || "\u00A0"}
           </span>
         </Field>
+      </div>
+      <div className="space-y-2 border-t border-foreground/10 pt-5">
+        <label htmlFor="enrollment-hoodmood-member" className="flex min-h-11 cursor-pointer items-center gap-3 text-sm font-medium">
+          <Checkbox
+            id="enrollment-hoodmood-member"
+            checked={isHoodmoodMember}
+            disabled={isSubmitting}
+            aria-describedby="enrollment-member-description"
+            onCheckedChange={(checked) => {
+              const isMember = checked === true;
+              setValue("isHoodmoodMember", isMember, { shouldDirty: true });
+              setValue("selectedClasses", watch("selectedClasses").map((selected) => {
+                const item = enrollmentClasses.find((entry) => entry.id === selected.classTypeId);
+                return item ? { ...selected, price: getEnrollmentClassPrice(item, isMember) } : selected;
+              }), { shouldDirty: true });
+            }}
+          />
+          Uczestnik zajęć Hoodmood
+        </label>
+        <p id="enrollment-member-description" className="text-sm text-muted-foreground">
+          Zaznacz, jeśli już uczęszczasz na nasze zajęcia. Pokażemy ceny Master Programu i Master Passów dla uczestników Hoodmood.
+        </p>
       </div>
     </div>
   );

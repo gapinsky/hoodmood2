@@ -1,28 +1,43 @@
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import SectionContainer from "@/myComponents/common/SectionContainer";
+import { instructors } from "./data";
 
-const cards = Array.from({ length: 12 });
+const groups = [
+  instructors.filter((trainer) => !trainer.specialGuest),
+  instructors.filter((trainer) => trainer.specialGuest),
+];
 
 export default function TeamLoading() {
   return (
     <MainWrapper>
       <SectionContainer>
-        <div className="animate-pulse" aria-label="Ładowanie kadry" role="status">
-          <div className="mb-10 space-y-4">
-            <div className="h-5 w-20 rounded-full bg-black/10 dark:bg-white/10" />
-            <div className="h-10 w-full max-w-xl rounded-lg bg-black/10 dark:bg-white/10" />
-            <div className="h-5 w-full max-w-3xl rounded bg-black/8 dark:bg-white/8" />
-            <div className="h-5 w-3/4 max-w-2xl rounded bg-black/8 dark:bg-white/8" />
+        <div className="animate-pulse space-y-16 motion-reduce:animate-none" aria-label="Ładowanie kadry" role="status">
+          <div className="space-y-6 border-b border-foreground/10 pb-8">
+            <div className="h-4 w-48 rounded bg-foreground/10" />
+            <div className="h-28 w-full max-w-3xl rounded-md bg-foreground/10" />
+            <div className="h-20 w-full max-w-2xl rounded-md bg-foreground/5" />
+            <div className="flex gap-3">
+              <div className="h-12 w-32 rounded-full bg-foreground/5" />
+              <div className="h-12 w-44 rounded-full bg-foreground/5" />
+            </div>
           </div>
-
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-2 lg:grid-cols-4 lg:gap-3">
-            {cards.map((_, index) => (
-              <div
-                key={index}
-                className="aspect-square rounded-lg bg-black/10 dark:bg-white/10"
-              />
-            ))}
-          </div>
+          {groups.map((trainers, index) => (
+            <div key={index} className="space-y-8">
+              <div className="space-y-3 border-b border-foreground/10 pb-5">
+                <div className="h-4 w-28 rounded bg-foreground/5" />
+                <div className="h-10 w-56 rounded-md bg-foreground/10" />
+              </div>
+              <div className="grid grid-cols-1 gap-x-5 gap-y-9 sm:grid-cols-2 md:grid-cols-3 lg:gap-x-8 lg:gap-y-12">
+                {trainers.map((trainer) => (
+                  <div key={trainer.id} className="space-y-4 border-b border-foreground/10 pb-5">
+                    <div className="aspect-square rounded-md bg-foreground/10" />
+                    <div className="h-8 w-3/4 rounded bg-foreground/10" />
+                    <div className="h-4 w-1/2 rounded bg-foreground/5" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
           <span className="sr-only">Ładowanie…</span>
         </div>
       </SectionContainer>

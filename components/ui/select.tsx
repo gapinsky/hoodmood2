@@ -19,7 +19,7 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      "ui-focus-ring ui-field ui-interactive group flex h-10 w-full items-center justify-between whitespace-nowrap rounded-lg px-4 py-2 text-sm text-foreground data-[placeholder]:text-black/48 motion-safe:hover:border-black/[0.12] motion-safe:hover:bg-white/90 dark:motion-safe:hover:border-white/[0.16] dark:motion-safe:hover:bg-white/[0.09] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 dark:data-[placeholder]:text-white/32 [&>span]:line-clamp-1",
+      "ui-focus-ring ui-field ui-interactive group flex h-10 w-full items-center justify-between whitespace-nowrap rounded-lg px-4 py-2 text-sm text-foreground data-placeholder:text-black/48 motion-safe:hover:border-black/12 motion-safe:hover:bg-white/90 dark:focus-visible:border-ring dark:motion-safe:hover:border-white/16 dark:motion-safe:hover:bg-white/9 focus-visible:border-ring focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring/35 disabled:cursor-not-allowed disabled:opacity-50 dark:data-placeholder:text-white/32 [&>span]:line-clamp-1",
       className
     )}
     {...props}
@@ -75,7 +75,7 @@ const SelectContent = React.forwardRef<
     <SelectPrimitive.Content
       ref={ref}
       className={cn(
-        "relative z-50 max-h-[--radix-select-content-available-height] min-w-[8rem] overflow-y-auto overflow-x-hidden rounded-lg border border-black/[0.08] bg-white/92 text-[#21191d] shadow-[0_18px_48px_rgba(0,0,0,0.16)] backdrop-blur-xl dark:border-white/[0.10] dark:bg-[#1c1c1c]/98 dark:text-white/92 dark:shadow-[0_18px_48px_rgba(0,0,0,0.32)] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-select-content-transform-origin]",
+        "relative z-50 max-h-[--radix-select-content-available-height] min-w-32 overflow-y-auto overflow-x-hidden rounded-lg border border-black/8 bg-white/92 text-[#21191d] shadow-[0_18px_48px_rgba(0,0,0,0.16)] backdrop-blur-xl dark:border-white/10 dark:bg-[#1c1c1c]/98 dark:text-white/92 dark:shadow-[0_18px_48px_rgba(0,0,0,0.32)] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-[--radix-select-content-transform-origin]",
         position === "popper" &&
           "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
         className
@@ -88,7 +88,7 @@ const SelectContent = React.forwardRef<
         className={cn(
           "p-1",
           position === "popper" &&
-            "h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]"
+            "h-(--radix-select-trigger-height) w-full min-w-(--radix-select-trigger-width)"
         )}
       >
         {children}
@@ -118,7 +118,7 @@ const SelectItem = React.forwardRef<
   <SelectPrimitive.Item
     ref={ref}
       className={cn(
-      "ui-interactive relative flex w-full cursor-default select-none items-center rounded-md py-2 pl-3 pr-8 text-sm outline-none focus:bg-accent focus:text-accent-foreground motion-safe:hover:bg-accent/80 motion-safe:hover:pl-3.5 data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      "ui-interactive relative flex w-full cursor-default select-none items-center rounded-md py-2 pl-3 pr-8 text-sm outline-none focus:bg-accent focus:text-accent-foreground motion-safe:hover:bg-accent/80 motion-safe:hover:pl-3.5 data-disabled:pointer-events-none data-disabled:opacity-50",
       className
     )}
     {...props}

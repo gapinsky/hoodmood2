@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-import SectionContent from "@/myComponents/common/SectionContent";
+import SectionContent from "@/myComponents/common/headers/SectionContent";
 import { data, localizations } from "./data";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
@@ -10,13 +10,14 @@ import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
 export default function Localizations() {
   return (
     <SectionContainer>
+
       <SectionContent title={data.title} description={data.description} />
 
-      <div className="grid grid-cols-1 gap-8 pb-3 md:grid-cols-3 md:gap-16">
+      <div className="grid grid-cols-1 gap-6 pb-3 md:grid-cols-3 md:gap-8">
         {localizations.map((item) => (
           <article
-            key={item.slug}
-            className={`group relative isolate aspect-[5/6] overflow-clip rounded-2xl bg-[#151215] transform-gpu [backface-visibility:hidden] [clip-path:inset(0_round_1rem)] [contain:paint] ${cardLiftHoverStyles}`}
+          key={item.slug}
+          className={`group relative isolate aspect-square overflow-clip rounded-2xl bg-[#151215] transform-gpu backface-hidden [clip-path:inset(0_round_1rem)] contain-[paint] ${cardLiftHoverStyles}`}
           >
             <Image
               src={item.img}
@@ -25,7 +26,7 @@ export default function Localizations() {
               quality={75}
               sizes="(max-width: 767px) calc(100vw - 4rem), (max-width: 1279px) calc(33vw - 3rem), 400px"
               className="object-cover transition-[opacity,transform] duration-700 ease-out group-hover:scale-[1.035] group-hover:opacity-0 motion-reduce:transition-none"
-            />
+              />
             <Image
               src={item.hoverImg}
               alt=""
@@ -33,7 +34,7 @@ export default function Localizations() {
               quality={75}
               sizes="(max-width: 767px) calc(100vw - 4rem), (max-width: 1279px) calc(33vw - 3rem), 400px"
               className="scale-[1.035] object-cover opacity-0 transition-[opacity,transform] duration-700 ease-out group-hover:scale-100 group-hover:opacity-100 motion-reduce:transition-none"
-            />
+              />
 
             <div className="pointer-events-none absolute -inset-5 bg-[linear-gradient(180deg,rgba(10,8,10,0.02)_20%,rgba(10,8,10,0.20)_52%,rgba(10,8,10,0.94)_100%)]" />
 
@@ -44,16 +45,18 @@ export default function Localizations() {
                 fill
                 sizes="(max-width: 639px) 112px, 128px"
                 className="object-contain"
-              />
+                />
             </div>
 
-            <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-              <div className="flex items-end justify-between gap-4">
+            <div className="absolute inset-x-0 bottom-0 p-4 ">
+                  <p className="text-sm leading-6 text-white/80 sm:text-base mb-1">
+                    {item.description}
+                  </p>
+              <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="font-anton text-3xl font-normal leading-normal text-white">
+                  <h3 className="font-anton text-2xl uppercase leading-[1.08] tracking-[0.02em] text-white sm:text-3xl ">
                     {item.title}
                   </h3>
-                  <p className="text-lg text-white">{item.description}</p>
                 </div>
 
                 <Link
@@ -62,7 +65,7 @@ export default function Localizations() {
                   rel="noreferrer"
                   aria-label={`Wyznacz trasę do lokalizacji ${item.title}`}
                   className="group/link ui-focus-ring mb-1 inline-flex shrink-0 items-center gap-1.5 rounded-sm py-1 text-xs font-semibold uppercase tracking-[0.14em] text-white/70 transition-colors hover:text-white focus-visible:text-white"
-                >
+                  >
                   Trasa
                   <ArrowUpRight className="size-5 transition-transform duration-300 group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1" />
                 </Link>

@@ -79,7 +79,7 @@ export default function SchedulePdfTable({
                   return (
                     <td
                       key={`${day}-${rowIndex}`}
-                      className="h-[150px] align-top border-b border-r border-zinc-300 p-4 last:border-r-0"
+                      className="h-37.5 align-top border-b border-r border-zinc-300 p-4 last:border-r-0"
                     >
                       {item ? (
                         <div>

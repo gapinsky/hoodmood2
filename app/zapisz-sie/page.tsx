@@ -1,20 +1,20 @@
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import SectionContent from "@/myComponents/common/SectionContent";
+import PageIntro from "@/myComponents/common/headers/PageIntro";
 import { data } from "./data";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import EnrollmentForm from "./_components/enrollmentForm/EnrollmentForm";
 import Toaster from "@/components/ui/sonner";
 
-export default function TermsAndConditions() {
+export default function EnrollmentPage() {
   return (
     <MainWrapper>
       <SectionContainer>
-        <SectionContent
-          badge={data.badge}
+        <PageIntro
+          eyebrow="Dołącz do Hoodmood"
           title={data.title}
           description={data.description}
-        ></SectionContent>
+        ></PageIntro>
         <EnrollmentForm />
 
         <AnyQuestionsContact />

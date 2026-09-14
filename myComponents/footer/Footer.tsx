@@ -18,7 +18,7 @@ export default function Footer() {
               alt="Hoodmood"
               width={120}
               height={97}
-              className="h-auto w-[120px]"
+              className="h-auto w-30"
             />
             <div className="space-y-1">
               <p className="font-semibold">Adres siedziby:</p>

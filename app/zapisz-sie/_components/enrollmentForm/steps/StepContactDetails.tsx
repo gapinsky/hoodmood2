@@ -18,10 +18,10 @@ export default function StepContactDetails() {
 
   return (
     <div className="grid grid-cols-1  ">
-      <div className="grid grid-cols-1  md:grid-cols-2 md:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-5">
         <FormTextField
           id="parent-full-name"
-          label="Imię i nazwisko "
+          label="Osoba kontaktowa"
           placeholder="Wprowadź imię i nazwisko"
           icon={User}
           registration={register("parentFullName", {
@@ -75,7 +75,7 @@ export default function StepContactDetails() {
         registration={register("notes")}
         error={errors.notes}
         disabled={isSubmitting}
-        textareaClassName="min-h-[120px]"
+        textareaClassName="min-h-30"
       />
     </div>
   );

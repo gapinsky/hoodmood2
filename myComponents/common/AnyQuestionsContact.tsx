@@ -9,10 +9,10 @@ export default function AnyQuestionsContact() {
       <p className="leading-6">
         W pierwszej kolejności sprawdź stronę 
         <Link href={"/faq"} className="text-(--brand-700) underline">
-          FAQ
+          F.A.Q.
         </Link>
-        , gdzie znajdziesz najczęściej zadawane pytania. Jeżeli nie znajdziesz
-        tam odpowiedzi, napisz do nas, albo zadzwoń pod podany poniżej numer.
+        , gdzie znajdziesz najczęściej zadawane pytania. Jeżeli nie będzie
+        tam satysfakcjonującej odpowiedzi, napisz do nas, albo zadzwoń pod podany poniżej numer.
       </p>
       <div className="space-x-4 mt-4 space-y-4">
         <ButtonSecondary href="/kontakt">

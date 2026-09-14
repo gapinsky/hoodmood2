@@ -8,6 +8,8 @@ export type SortingValue =
   | "alphabetical";
 
 type PricingFiltersContextType = {
+  isHoodmoodMember: boolean;
+  setIsHoodmoodMember: React.Dispatch<React.SetStateAction<boolean>>;
   searchInput: string;
   setSearchInput: React.Dispatch<React.SetStateAction<string>>;
   searchAge: string;
@@ -28,10 +30,13 @@ export function PricingFiltersProvider({
   const [searchInput, setSearchInput] = useState("");
   const [searchAge, setSearchAge] = useState("");
   const [sorting, setSorting] = useState<SortingValue>("ascending");
+  const [isHoodmoodMember, setIsHoodmoodMember] = useState(true);
 
   return (
     <PricingFiltersContext.Provider
       value={{
+        isHoodmoodMember,
+        setIsHoodmoodMember,
         searchInput,
         setSearchInput,
         searchAge,

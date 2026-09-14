@@ -1,10 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
-import { Info } from "lucide-react";
+import PricingFrequency from "./PricingFrequency";
 import type { PricingItem } from "@/data/pricingData";
 import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
 
@@ -19,6 +14,14 @@ const desktopGrid =
 
 const masterCategories = new Set(["masterProgram", "masterclass", "masterPass"]);
 
+function Price({ value }: { value: string }) {
+  return (
+    <span className="text-sm font-semibold leading-5 tabular-nums text-foreground">
+      {value.includes("zł") ? value : `${value} zł`}
+    </span>
+  );
+}
+
 const formatAge = (item: PricingItem) => {
   if (masterCategories.has(item.category)) {
     return `${item.minAge}-${item.maxAge} lat`;
@@ -28,9 +31,6 @@ const formatAge = (item: PricingItem) => {
   return `${item.minAge}-${item.maxAge} lat`;
 };
 
-const formatFrequency = (frequency: string) =>
-  /^\d+(?:[,.]\d+)?$/.test(frequency) ? `${frequency}x/tyg` : frequency;
-
 export default function PricingTable({
   title,
   items,
@@ -39,81 +39,56 @@ export default function PricingTable({
   return (
     <section className="w-full ">
       <div className="space-y-4">
-        <div className="flex items-center justify-between gap-4">
-          <h2 className=" text-white text-lg">{title}</h2>
+        <div className="mb-8 flex items-end justify-between gap-4 border-b border-foreground/10 pb-5">
+          <div>
+            <p className="mb-3 text-xs uppercase tracking-[0.16em] text-muted-foreground">02 / Ceny i zajęcia</p>
+            {title && <h2 className="font-anton text-3xl uppercase sm:text-4xl">{title}</h2>}
+          </div>
+          <span aria-label={`Liczba dostępnych pozycji: ${items.length}`} className="font-anton text-4xl tabular-nums text-foreground/20 sm:text-5xl">{String(items.length).padStart(2, "0")}</span>
         </div>
 
-        <div className=" rounded-xl border  backdrop-blur-md  dark:bg-white/5 ">
+        <div className="overflow-hidden rounded-md border border-foreground/10 bg-foreground/1.5">
           <div
-            className={`hidden ${desktopGrid} items-center gap-4 border-b  px-5 py-3 text-xs font-medium uppercase tracking-[0.18em]  md:grid text-muted-foreground`}
+            className={`hidden ${desktopGrid} items-center gap-4 border-b border-foreground/10 bg-foreground/2.5 px-5 py-4 text-[11px] font-medium uppercase tracking-[0.16em] md:grid text-muted-foreground`}
           >
             <span className=" ">Rodzaj zajęć</span>
             <span className=" text-center">Wiek</span>
             <span className=" text-center">Częstotliwość</span>
             <span className=" text-center">Cena</span>
+            <span className="sr-only">Zapisy</span>
           </div>
 
-          <div className="divide-y divide-border-style ">
+          <div className="divide-y divide-foreground/10">
             {items.length === 0 && (
-              <p className="text-center py-4 max-w-md mx-auto leading-relaxed text-balance">
-                Nie znaleziono zajęć pasujących do wprowadzonego hasła.
+              <p className="px-5 py-12 max-w-lg mx-auto text-center leading-7 text-muted-foreground">
+                Brak pasujących zajęć. Zmień nazwę lub wiek uczestnika, aby zobaczyć inne propozycje.
               </p>
             )}
             {items.map((item, index) => (
               <article
                 key={`${item.name}-${item.minAge}-${index}`}
-                className={`group grid gap-4 px-4 py-4 transition-colors md:px-5 ${desktopGrid} md:items-center    hover:bg-black/2 dark:bg-background/50 dark:hover:bg-white/0.5 last:rounded-b-xl first:rounded-t-xl`}
+                className={`group grid gap-5 px-5 py-6 transition-colors ${desktopGrid} md:items-center md:gap-4 md:py-7 hover:bg-foreground/[0.035]`}
               >
                 <div className="min-w-0">
                   <div className="flex flex-wrap items-center gap-2">
-                    <p className=" font-medium  text-md">{item.name}</p>
+                    <p className="text-base font-medium leading-6 text-foreground">{item.name}</p>
                     {item.trending && (
                       <Badge
                         variant="secondary"
-                        className="rounded-full border-0 bg-pink-500/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-pink-300 hover:bg-pink-500/15"
+                        className="rounded-full border-0 bg-pink-500/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-(--brand-700) dark:text-(--brand-300) hover:bg-pink-500/15"
                       >
                         Najczęściej wybierane
                       </Badge>
                     )}
                   </div>
 
-                  <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-md md:hidden text-muted-foreground">
+                  <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-3 text-sm md:hidden text-muted-foreground">
                     <span className="">
                       {formatAge(item)}
                     </span>
-                    <span className="inline-flex items-center ">
-                      {formatFrequency(item.frequency)}
-                      {item.frequencyDescription ? (
-                        <HoverCard key="bottom" openDelay={20} closeDelay={20}>
-                          <HoverCardTrigger asChild>
-                            <button type="button" className="px-1">
-                              <Info className="w-4 text-muted-foreground" />
-                            </button>
-                          </HoverCardTrigger>
-                          <HoverCardContent
-                            className=" text-sm "
-                            align="center"
-                          >
-                            {item.frequencyDescription}
-                          </HoverCardContent>
-                        </HoverCard>
-                      ) : /^\d+(?:[,.]\d+)?$/.test(item.frequency) ? (
-                        <HoverCard key="bottom" openDelay={20} closeDelay={20}>
-                          <HoverCardTrigger asChild>
-                            <button type="button" className="px-1">
-                              <Info className="w-4 text-muted-foreground" />
-                            </button>
-                          </HoverCardTrigger>
-
-                          <HoverCardContent className="text-sm" align="center">
-                            Na wybrane zajęcia można wejść maksymalnie{" "}
-                            {item.frequency} raz(y) w tygodniu.
-                          </HoverCardContent>
-                        </HoverCard>
-                      ) : null}
-                    </span>
-                    <span className="font-semibold ">
-                      {item.price.includes("zł") ? item.price : `${item.price} zł`}
+                    <PricingFrequency item={item} compact />
+                    <span className="basis-full pt-2">
+                      <Price value={item.price} />
                     </span>
                   </div>
                 </div>
@@ -123,57 +98,14 @@ export default function PricingTable({
                 </div>
 
                 <div className="hidden text-sm  md:block  text-center">
-                  {formatFrequency(item.frequency)}
-                  {item.frequencyDescription ? (
-                    <HoverCard key="bottom" openDelay={20} closeDelay={20}>
-                      <HoverCardTrigger asChild>
-                        <button type="button" className="px-2">
-                          <Info className="w-4 text-muted-foreground" />
-                        </button>
-                      </HoverCardTrigger>
-
-                      <HoverCardContent className="text-sm md:hidden">
-                        {item.frequencyDescription}
-                      </HoverCardContent>
-
-                      <HoverCardContent
-                        className="hidden text-sm md:block"
-                        align="center"
-                      >
-                        {item.frequencyDescription}
-                      </HoverCardContent>
-                    </HoverCard>
-                  ) : /^\d+(?:[,.]\d+)?$/.test(item.frequency) ? (
-                    <HoverCard key="bottom" openDelay={20} closeDelay={20}>
-                      <HoverCardTrigger asChild>
-                        <button type="button" className="px-2">
-                          <Info className="w-4 text-muted-foreground" />
-                        </button>
-                      </HoverCardTrigger>
-
-                      <HoverCardContent className="text-sm md:hidden">
-                        Na wybrane zajęcia można wejść maksymalnie{" "}
-                        {item.frequency} raz(y) w tygodniu.
-                      </HoverCardContent>
-
-                      <HoverCardContent
-                        className="hidden text-sm md:block"
-                        align="center"
-                      >
-                        Na wybrane zajęcia można wejść maksymalnie{" "}
-                        {item.frequency} raz(y) w tygodniu.
-                      </HoverCardContent>
-                    </HoverCard>
-                  ) : null}
+                  <PricingFrequency item={item} />
                 </div>
 
-                <div className="hidden text-sm font-semibold  md:block  text-center">
-                  {item.price.includes("zł")
-                    ? `${item.price}`
-                    : `${item.price} zł`}
+                <div className="hidden md:block text-center">
+                  <Price value={item.price} />
                 </div>
 
-                <div className="flex justify-self-end">
+                <div className="flex justify-self-start md:justify-self-end">
                   <ButtonSecondary href={ctaHref}>Zapisz się</ButtonSecondary>
                 </div>
               </article>
