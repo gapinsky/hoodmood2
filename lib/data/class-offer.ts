@@ -23,7 +23,7 @@ export function getClassOffers(city: CitySlug): ClassOffer[] {
       id: item.id,
       name: item.name,
       image: item.image,
-      description: item.shortInfo || item.description,
+      description: item.description || item.shortInfo,
       minAge: item.minAge,
       maxAge: item.maxAge,
       level: item.level,
