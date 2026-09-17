@@ -15,8 +15,8 @@ type HeroProps = {
 };
 
 export default function Hero({
-  videoSrc = "/assets/videos/chairRotate.mp4",
-  mobileVideoSrc = videoSrc,
+  videoSrc = "/assets/optimized/hero/hero-desktop-wide.mp4",
+  mobileVideoSrc = "/assets/videos/chairRotate.mp4",
   posterSrc = "/assets/videos/chairRotate-poster.jpg",
   title = "Hoodmood",
   description = "Zajęcia dla dzieci, młodzieży i dorosłych, w tym hip-hop, balet, taniec współczesny, KPOP, akrobatyka i lekcje indywidualne.",
@@ -36,7 +36,7 @@ export default function Hero({
             <LocationBadge />
           </div>
 
-          <div className="hero-enter hero-enter-delay-1 mt-1 flex flex-col gap-3">
+          <div className="mt-1 flex flex-col gap-3">
             <h1 className="max-w-[7ch] font-anton text-[2.9rem] font-black uppercase leading-[0.94] tracking-tighter text-white drop-shadow-[0_18px_38px_rgba(0,0,0,0.32)] sm:text-[4.25rem] md:text-[5.5rem] xl:text-[7.2rem]">
               <span className="inline-block ">
                 {title}

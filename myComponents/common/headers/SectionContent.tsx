@@ -16,7 +16,7 @@ export default function SectionContent({
   styles,
   title,
   description,
-  align = "center",
+  align = "left",
 }: Props) {
   const { ref, mounted, revealed } = useRevealInView<HTMLDivElement>();
 
@@ -33,7 +33,7 @@ export default function SectionContent({
     >
       <h2
         className={cn(
-          "font-anton text-3xl uppercase leading-48 tracking-[0.08em] text-foreground sm:text-4xl md:text-4xl",
+          "font-anton text-3xl uppercase leading-tight tracking-[0.08em] text-foreground sm:text-4xl md:text-4xl",
           motion.title,
         )}
       >
@@ -43,7 +43,7 @@ export default function SectionContent({
         <p
           className={cn(
             "text-base leading-7 text-muted-foreground md:text-lg",
-            align === "left" ? "max-w-full text-left" : "max-w-full text-center md:max-w-[60%] lg:max-w-[40%]",
+            align === "left" ? "max-w-2xl text-left" : "max-w-full text-center md:max-w-[60%] lg:max-w-[40%]",
             motion.description,
           )}
         >

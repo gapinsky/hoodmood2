@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
+import { locations, locationList, mainContact } from "@/data/locations";
+import { createMetadata, SITE_URL } from "@/lib/seo";
+import { staticSeoPages } from "@/lib/seo-pages";
 import dynamic from "next/dynamic";
-import Script from "next/script";
 import Localizations from "@/myComponents/sections/localizations/Localizations";
 import Offer from "../myComponents/sections/offer/Offer";
 import Hero from "@/myComponents/sections/hero/Hero";
 import LifeAtHoodmood from "@/myComponents/sections/lifeAtHoodmood/LifeAtHoodmood";
 import CrewStory from "@/myComponents/sections/editorial/CrewStory";
 import MasterclassFeature from "@/myComponents/sections/editorial/MasterclassFeature";
-import Dream from "@/myComponents/sections/dream/Dream";
 
 const Player = dynamic(() => import("@/myComponents/sections/player/Player"));
 const Team = dynamic(() => import("@/myComponents/sections/team/Team"));
@@ -22,43 +22,21 @@ const Opinions = dynamic(
 );
 const Faq = dynamic(() => import("@/myComponents/sections/faq/Faq"));
 
-export const metadata: Metadata = {
-  title: "Szkoła tańca i akrobatyki | Koszalin, Polanów, Biały Bór",
-  description:
-    "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Prowadzimy zajęcia dla dzieci, młodzieży i dorosłych. Sprawdź ofertę, grafik i zapisz się online.",
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: "Hoodmood – szkoła tańca i akrobatyki",
-    description:
-      "Zajęcia dla dzieci, młodzieży i dorosłych w Koszalinie, Polanowie i Białym Borze.",
-    url: "/",
-    type: "website",
-    locale: "pl_PL",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Hoodmood – szkoła tańca i akrobatyki",
-    description:
-      "Zajęcia dla dzieci, młodzieży i dorosłych w Koszalinie, Polanowie i Białym Borze.",
-  },
-};
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "DanceSchool",
+  "@type": "Organization",
   name: "Hoodmood",
-  url: "https://hoodmood.vercel.app/",
+  url: SITE_URL,
   description:
     "Szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
-  telephone: "+48 577 198 599",
-  email: "hoodmood.recepcja@gmail.com",
+  telephone: mainContact.phone,
+  email: mainContact.email,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "ul. Zwycięstwa 115",
-    addressLocality: "Koszalin",
-    postalCode: "75-211",
+    streetAddress: `ul. ${locations.koszalin.address.street}`,
+    addressLocality: locations.koszalin.address.city,
+    postalCode: locations.koszalin.address.postalCode,
     addressCountry: "PL",
   },
   areaServed: [
@@ -81,6 +59,17 @@ const jsonLd = {
     "https://www.youtube.com/@hoodmooddancestudio9404",
     "https://www.tiktok.com/@hoodmood_dancestudio",
   ],
+  location: locationList.map((location) => ({
+    "@type": "Place",
+    name: location.name,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: `ul. ${location.address.street}`,
+      addressLocality: location.address.city,
+      postalCode: location.address.postalCode,
+      addressCountry: "PL",
+    },
+  })),
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Oferta zajęć Hoodmood",
@@ -169,17 +158,18 @@ const jsonLd = {
   },
 };
 
+export const metadata = createMetadata({ path: "/", ...staticSeoPages["/"] });
+
 export default function Home() {
   return (
     <>
-      <Script
+      <script
         id="hoodmood-dance-school-json-ld"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
       <main className="mb-36 space-y-[clamp(5rem,8vw,8rem)]">
         <Hero />
-        <Dream />
         <Offer />
         <LifeAtHoodmood />
         <Localizations />

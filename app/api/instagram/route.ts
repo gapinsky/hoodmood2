@@ -8,13 +8,14 @@ export async function GET(request: NextRequest) {
 
   if (!after || after.length > 500) {
     return NextResponse.json(
-      { posts: [], nextCursor: null },
+      { status: "error", posts: [], nextCursor: null },
       { status: 400 },
     );
   }
 
   const page = await getInstagramPostsPage(after);
   return NextResponse.json(page, {
+    status: page.status === "error" ? 503 : 200,
     headers: { "Cache-Control": "private, no-store" },
   });
 }

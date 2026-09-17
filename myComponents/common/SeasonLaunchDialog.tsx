@@ -10,19 +10,30 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
+const SEEN_STORAGE_KEY = "hoodmood-season-launch-seen";
+let seenInMemory = false;
+
 export default function SeasonLaunchDialog() {
   const [open, setOpen] = useState(false);
   const [viewport, setViewport] = useState({ width: 0, height: 0 });
   const [reduceMotion, setReduceMotion] = useState(false);
 
   useEffect(() => {
-    const dismissed =
-      typeof window !== "undefined" &&
-      window.sessionStorage.getItem("hoodmood-season-launch-dismissed") === "true";
+    if (seenInMemory) return;
 
-    if (!dismissed) {
-      setOpen(true);
+    try {
+      if (
+        window.sessionStorage.getItem(SEEN_STORAGE_KEY) === "true" ||
+        window.sessionStorage.getItem("hoodmood-season-launch-dismissed") === "true"
+      ) return;
+
+      window.sessionStorage.setItem(SEEN_STORAGE_KEY, "true");
+    } catch {
+      // Keep navigation working when browser storage is unavailable.
     }
+
+    seenInMemory = true;
+    setOpen(true);
   }, []);
 
   useEffect(() => {
@@ -49,7 +60,6 @@ export default function SeasonLaunchDialog() {
 
   const closeDialog = () => {
     setOpen(false);
-    window.sessionStorage.setItem("hoodmood-season-launch-dismissed", "true");
   };
 
   return (

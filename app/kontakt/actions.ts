@@ -1,5 +1,8 @@
 "use server";
 
+import { normalizePhoneNumber } from "@/lib/phone";
+import { mainContact } from "@/data/locations";
+
 import {
   ContactFormData,
   contactFormSchema,
@@ -15,12 +18,13 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function submitContactForm(data: ContactFormData) {
   try {
     // Validate on server
-    const validatedData = contactFormSchema.parse(data);
+    const parsed = contactFormSchema.parse(data);
+    const validatedData = { ...parsed, phone: normalizePhoneNumber(parsed.phone, parsed.phoneCountry)! };
 
     // Send email with Resend
     const result = await resend.emails.send({
       from: "formularz@kontakt.hoodmood.pl",
-      to: "hoodmood.recepcja@gmail.com",
+      to: mainContact.email,
       subject: `Nowa wiadomość od ${validatedData.fullName}`,
       html: `
         <h2>Nowa wiadomość z formularza kontaktowego</h2>
@@ -46,7 +50,7 @@ export async function submitContactForm(data: ContactFormData) {
       const confirmation = await resend.emails.send({
         from: "formularz@kontakt.hoodmood.pl",
         to: validatedData.email,
-        replyTo: "hoodmood.recepcja@gmail.com",
+        replyTo: mainContact.email,
         subject: "Dzięki za wiadomość! 💗",
         html: contactConfirmationEmail(validatedData),
       });

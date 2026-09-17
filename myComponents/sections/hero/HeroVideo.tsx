@@ -3,115 +3,96 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-type HeroVideoProps = {
-  videoSrc: string;
-  mobileVideoSrc: string;
-  posterSrc: string;
-};
+type Props = { videoSrc: string; mobileVideoSrc: string; posterSrc: string };
+type Connection = EventTarget & { saveData?: boolean };
 
-export default function HeroVideo({
-  videoSrc,
-  mobileVideoSrc,
-  posterSrc,
-}: HeroVideoProps) {
-  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
-  const [isVideoReady, setIsVideoReady] = useState(false);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
+export default function HeroVideo({ videoSrc, mobileVideoSrc, posterSrc }: Props) {
+  const [source, setSource] = useState<string | null>(null);
+  const [status, setStatus] = useState<"static" | "loading" | "playing" | "failed">("static");
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const idleCallback = window.requestIdleCallback?.(
-      () => setShouldLoadVideo(true),
-      { timeout: 2000 },
-    );
-
-    const timeoutId =
-      idleCallback === undefined
-        ? window.setTimeout(() => setShouldLoadVideo(true), 1200)
-        : undefined;
-
-    return () => {
-      if (idleCallback !== undefined) {
-        window.cancelIdleCallback?.(idleCallback);
-      }
-
-      if (timeoutId !== undefined) {
-        window.clearTimeout(timeoutId);
+    const motion = matchMedia("(prefers-reduced-motion: reduce)");
+    const mobile = matchMedia("(max-width: 768px)");
+    const connection = (navigator as Navigator & { connection?: Connection }).connection;
+    let timer: ReturnType<typeof setTimeout>;
+    const update = () => {
+      clearTimeout(timer);
+      setSource(null);
+      setStatus("static");
+      if (!motion.matches && !connection?.saveData) {
+        // Let critical text, fonts and poster render before decorative media.
+        timer = setTimeout(() => {
+          setStatus("loading");
+          setSource(mobile.matches ? mobileVideoSrc : videoSrc);
+        }, 1200);
       }
     };
-  }, []);
+    update();
+    motion.addEventListener("change", update);
+    mobile.addEventListener("change", update);
+    connection?.addEventListener("change", update);
+    return () => {
+      clearTimeout(timer);
+      motion.removeEventListener("change", update);
+      mobile.removeEventListener("change", update);
+      connection?.removeEventListener("change", update);
+    };
+  }, [videoSrc, mobileVideoSrc]);
 
   useEffect(() => {
-    if (!shouldLoadVideo) {
-      return;
-    }
-
     const video = videoRef.current;
-
-    if (!video) {
-      return;
-    }
-
-    video.muted = true;
-    video.defaultMuted = true;
-    video.playsInline = true;
-    video.controls = false;
-    video.disablePictureInPicture = true;
-    video.setAttribute("muted", "");
-    video.setAttribute("playsinline", "");
-    video.setAttribute("webkit-playsinline", "");
-    video.removeAttribute("controls");
-
-    const playPromise = video.play();
-
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-
-      });
-    }
-  }, [shouldLoadVideo]);
+    const container = containerRef.current;
+    if (!video || !container || !source) return;
+    let disposed = false;
+    let visible = false;
+    let failed = false;
+    let pending = false;
+    const synchronize = () => {
+      if (disposed || failed) return;
+      if (!visible || document.visibilityState !== "visible") { video.pause(); return; }
+      if (pending || !video.paused) return;
+      pending = true;
+      video.play().catch((error: DOMException) => {
+        if (disposed || error.name === "AbortError") return;
+        failed = true;
+        setStatus("failed");
+      }).finally(() => { pending = false; });
+    };
+    const playing = () => {
+      if (disposed) return;
+      if (!visible || document.visibilityState !== "visible") video.pause();
+      else setStatus("playing");
+    };
+    const error = () => { failed = true; setStatus("failed"); };
+    const observer = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      synchronize();
+    });
+    observer.observe(container);
+    document.addEventListener("visibilitychange", synchronize);
+    video.addEventListener("playing", playing);
+    video.addEventListener("error", error);
+    video.addEventListener("canplay", synchronize);
+    return () => {
+      disposed = true;
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", synchronize);
+      video.removeEventListener("playing", playing);
+      video.removeEventListener("error", error);
+      video.removeEventListener("canplay", synchronize);
+      video.pause();
+    };
+  }, [source]);
 
   return (
-    <>
-      <Image
-        src={posterSrc}
-        alt=""
-        fill
-        priority
-        fetchPriority="high"
-        sizes="100vw"
-        aria-hidden="true"
-        className={`absolute inset-0 -z-20 h-full w-full object-cover object-[center_10%] transition-opacity duration-700 motion-reduce:transition-none ${
-          isVideoReady ? "opacity-0" : "opacity-100"
-        }`}
-      />
-
-      {shouldLoadVideo ? (
-        <video
-          ref={videoRef}
-          className={`absolute inset-0 -z-20 h-full w-full object-cover object-[center_10%] transition-opacity duration-700 motion-reduce:transition-none ${
-            isVideoReady ? "opacity-100" : "opacity-0"
-          }`}
-          autoPlay
-          muted
-          loop
-          playsInline
-          webkit-playsinline=""
-          preload="metadata"
-          poster={posterSrc}
-          onCanPlay={() => setIsVideoReady(true)}
-          controls={false}
-          disablePictureInPicture
-          controlsList="nodownload nofullscreen noremoteplayback"
-          aria-hidden="true"
-        >
-          <source
-            media="(max-width: 768px)"
-            src={mobileVideoSrc}
-            type="video/mp4"
-          />
-          <source src={videoSrc} type="video/mp4" />
-        </video>
-      ) : null}
-    </>
+    <div ref={containerRef} data-hero-video-state={status} className="absolute inset-0 -z-20" aria-hidden="true">
+      <Image src={posterSrc} alt="" fill preload sizes="100vw"
+        className={`object-cover object-[center_10%] transition-opacity duration-700 motion-reduce:transition-none ${status === "playing" ? "opacity-0" : "opacity-100"}`} />
+      {source && <video key={source} ref={videoRef} src={source} muted loop playsInline preload="metadata"
+        disablePictureInPicture controls={false}
+        className={`absolute inset-0 h-full w-full object-cover object-[center_10%] transition-opacity duration-700 motion-reduce:transition-none motion-reduce:hidden ${status === "playing" ? "opacity-100" : "opacity-0"}`} />}
+    </div>
   );
 }

@@ -1,4 +1,10 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+/* Scan runtime sources, not audit reports, scripts or design notes. */
+@source "./";
+@source "../myComponents";
+@source "../components";
+@source "../lib";
+@source "../data";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
@@ -316,10 +322,6 @@ a {
     @apply scale-x-100;
   }
 
-  .ui-link-subtle-icon {
-    @apply motion-safe:transition-[transform,box-shadow,background-color,border-color,color,opacity,filter] motion-safe:duration-250 motion-safe:ease-out will-change-transform motion-safe:group-hover/link:translate-x-0.5 motion-safe:group-hover/link:text-foreground motion-safe:group-focus-visible/link:translate-x-0.5 dark:motion-safe:group-hover/link:text-white;
-  }
-
   .ui-nav-link {
     @apply relative inline-flex  overflow-hidden  py-2 text-[14px] font-semibold uppercase tracking-[0.14em] text-[#1c1c1c]/92 hover:text-[#1c1c1c] motion-safe:transition-[transform,box-shadow,background-color,border-color,color,opacity,filter] motion-safe:duration-250 motion-safe:ease-out will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1c1c1c]/20 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:text-white dark:hover:text-white dark:focus-visible:ring-white/80 dark:focus-visible:ring-offset-[#1c1c1c];
   }
@@ -515,4 +517,8 @@ html {
     filter: none;
     transform: none;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-location-slide { animation: none; }
 }

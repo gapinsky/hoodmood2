@@ -1,3 +1,5 @@
+import { createMetadata } from "@/lib/seo";
+import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import PageIntro from "@/myComponents/common/headers/PageIntro";
 import { data, camps } from "./data";
@@ -5,6 +7,8 @@ import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import NoEvents from "@/myComponents/pages/camps/NoEvents";
 import PreviousEvents from "@/myComponents/pages/camps/PreviousEvents";
 import MainWrapper from "@/myComponents/common/MainWrapper";
+
+export const metadata = createMetadata({ path: "/kolonie", ...staticSeoPages["/kolonie"] });
 
 export default function Camps() {
   return (

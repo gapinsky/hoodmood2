@@ -1,7 +1,8 @@
+import { createMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { instructors } from "../data";
+import { activeTrainers } from "@/data/trainers";
 
 import TrainerGallery from "@/myComponents/pages/team/TrainerGallery";
 import SectionContainer from "@/myComponents/common/SectionContainer";
@@ -16,9 +17,11 @@ type PageProps = {
   }>;
 };
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
-  return instructors.map((trainer) => ({
-    trainerSlug: trainer.id,
+  return activeTrainers.map((trainer) => ({
+    trainerSlug: trainer.slug,
   }));
 }
 
@@ -26,23 +29,20 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { trainerSlug } = await params;
-  const trainer = instructors.find((item) => item.id === trainerSlug);
+  const trainer = activeTrainers.find((item) => item.slug === trainerSlug);
 
-  if (!trainer) {
-    return {
-      title: "Trener nie został znaleziony",
-    };
-  }
+  if (!trainer) notFound();
 
-  return {
-    title: `${trainer.name} | ${trainer.role}`,
-    description: trainer.description,
-  };
+  return createMetadata({
+    path: `/kadra/${trainer.slug}`,
+    title: `${trainer.name} – ${trainer.role}`,
+    description: trainer.bio,
+  });
 }
 
 export default async function TrainerPage({ params }: PageProps) {
   const { trainerSlug } = await params;
-  const trainer = instructors.find((item) => item.id === trainerSlug);
+  const trainer = activeTrainers.find((item) => item.slug === trainerSlug);
 
   if (!trainer) {
     notFound();
@@ -111,7 +111,7 @@ export default async function TrainerPage({ params }: PageProps) {
               <section aria-labelledby="trainer-story" className="space-y-4">
                 <h2 id="trainer-story" className="font-anton text-2xl uppercase sm:text-3xl">Poznajmy się</h2>
                 <div className="space-y-4 text-base leading-8 text-muted-foreground">
-                  {trainer.description.split(/\n+/).filter((paragraph) => paragraph.trim()).map((paragraph, index) => (
+                  {trainer.bio.split(/\n+/).filter((paragraph) => paragraph.trim()).map((paragraph, index) => (
                     <p key={index}>{paragraph.trim()}</p>
                   ))}
                 </div>

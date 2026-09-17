@@ -1,10 +1,10 @@
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import { instructors } from "./data";
+import { activeTrainers } from "@/data/trainers";
 
 const groups = [
-  instructors.filter((trainer) => !trainer.specialGuest),
-  instructors.filter((trainer) => trainer.specialGuest),
+  activeTrainers.filter((trainer) => !trainer.specialGuest),
+  activeTrainers.filter((trainer) => trainer.specialGuest),
 ];
 
 export default function TeamLoading() {

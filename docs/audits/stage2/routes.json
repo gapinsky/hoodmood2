@@ -1,0 +1,72 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "h1": 1,
+    "pdfRoot": false,
+    "oldAddress": false
+  },
+  {
+    "path": "/oferta/koszalin",
+    "status": 200,
+    "h1": 1,
+    "pdfRoot": false,
+    "oldAddress": false
+  },
+  {
+    "path": "/oferta/polanow",
+    "status": 200,
+    "h1": 1,
+    "pdfRoot": false,
+    "oldAddress": false
+  },
+  {
+    "path": "/oferta/bialy-bor",
+    "status": 200,
+    "h1": 1,
+    "pdfRoot": false,
+    "oldAddress": false
+  },
+  {
+    "path": "/grafik/koszalin",
+    "status": 200,
+    "h1": 1,
+    "pdfRoot": false,
+    "oldAddress": false
+  },
+  {
+    "path": "/grafik/polanow",
+    "status": 200,
+    "h1": 1,
+    "pdfRoot": false,
+    "oldAddress": false
+  },
+  {
+    "path": "/grafik/bialy-bor",
+    "status": 200,
+    "h1": 1,
+    "pdfRoot": false,
+    "oldAddress": false
+  },
+  {
+    "path": "/kadra/talita-jarzecka",
+    "status": 200,
+    "h1": 1,
+    "pdfRoot": false,
+    "oldAddress": false
+  },
+  {
+    "path": "/kadra/nie-istnieje",
+    "status": 404,
+    "h1": 1,
+    "pdfRoot": false,
+    "oldAddress": false
+  },
+  {
+    "path": "/aktualnosci",
+    "status": 200,
+    "h1": 1,
+    "pdfRoot": false,
+    "oldAddress": false
+  }
+]

@@ -1,6 +1,6 @@
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import { Info } from "lucide-react";
-import type { PricingItem } from "@/data/pricingData";
+import type { PricingItem } from "./types";
 
 export default function PricingFrequency({ item, compact = false }: { item: PricingItem; compact?: boolean }) {
   const numeric = /^\d+(?:[,.]\d+)?$/.test(item.frequency);

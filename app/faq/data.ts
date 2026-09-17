@@ -1,6 +1,6 @@
 export const data = {
   badge: "F.A.Q",
-  title: "Najczęściej zadawane pytania o zajęcia taneczne i akrobatyczne",
+  title: "Najczęściej zadawane pytania",
   description:
     "Sprawdź odpowiedzi na najczęstsze pytania o zapisy, zajęcia próbne, grupy wiekowe, poziomy zaawansowania, płatności i organizację zajęć w Hoodmood.",
 };

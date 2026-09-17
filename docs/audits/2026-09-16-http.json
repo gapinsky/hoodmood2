@@ -1,0 +1,696 @@
+[
+  {
+    "route": "/kolonie",
+    "status": 200,
+    "listed": true,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 87740,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/kadra",
+    "status": 200,
+    "listed": true,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 131904,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/",
+    "status": 200,
+    "listed": true,
+    "title": "Szkoła tańca i akrobatyki | Koszalin, Polanów, Biały Bór",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Prowadzimy zajęcia dla dzieci, młodzieży i dorosłych. Sprawdź ofertę, grafik i zapisz się online.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 414111,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/aktualnosci",
+    "status": 200,
+    "listed": true,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 228987,
+    "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "location": null
+  },
+  {
+    "route": "/cennik",
+    "status": 404,
+    "listed": true,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "noindex",
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 71952,
+    "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "location": null
+  },
+  {
+    "route": "/kontakt",
+    "status": 200,
+    "listed": true,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 96495,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/zapisz-sie",
+    "status": 200,
+    "listed": true,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 87697,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/faq",
+    "status": 200,
+    "listed": true,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 103369,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/oferta/koszalin",
+    "status": 200,
+    "listed": true,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 202323,
+    "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "location": null
+  },
+  {
+    "route": "/regulamin-wejscia-probnego",
+    "status": 200,
+    "listed": true,
+    "title": "Regulamin wejścia próbnego za 40 zł | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Zasady skorzystania z jednorazowego wejścia próbnego na zajęcia Hoodmood w cenie 40 zł.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 66095,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/polityka-prywatnosci",
+    "status": 200,
+    "listed": true,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 94929,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/regulamin",
+    "status": 200,
+    "listed": true,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 112014,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/oferta/polanow",
+    "status": 200,
+    "listed": true,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 107694,
+    "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "location": null
+  },
+  {
+    "route": "/oferta/bialy-bor",
+    "status": 200,
+    "listed": true,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 96096,
+    "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "location": null
+  },
+  {
+    "route": "/grafik/polanow",
+    "status": 200,
+    "listed": true,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 2,
+    "bytes": 110996,
+    "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "location": null
+  },
+  {
+    "route": "/grafik/koszalin",
+    "status": 200,
+    "listed": true,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 2,
+    "bytes": 244814,
+    "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "location": null
+  },
+  {
+    "route": "/grafik/bialy-bor",
+    "status": 200,
+    "listed": true,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 2,
+    "bytes": 97005,
+    "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "location": null
+  },
+  {
+    "route": "/kadra/paulina-walikowska",
+    "status": 200,
+    "listed": true,
+    "title": "Paulina Walikowska | Balet | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Paulina Walikowska swoją przygodę z tańcem rozpoczęła w klasie baletowej, gdzie zdobyła solidne podstawy techniczne. 8 lat rozwijała się artystycznie w zespole Quality Crew, w którym doskonaliła się zarówno jako tancerka sceniczna, jak i instruktorka. Wraz z ekipą wielokrotnie sięgała po najwyższe miejsca na prestiżowych turniejach tanecznych w Polsce i za granicą.\n Do jej doświadczeń należą m.in.:\n• udział w wielu warsztatach z uznanymi trenerami z kraju takimi jak Zosia Kędziora, Darek Bujnowski, Marta Pasta, Ola Goździk, Łukasz Ludwiczak, Jessica Ali, Mania Rogowska i inni,\n• współtworzenie projektów filmowych, w tym produkcji prezentowanej w teatrze Rialto i nominowanej na International Cyprus Dance Film Festival,\n• występy w spektaklach „Halucynacje” (Akademia Muzyczna w Łodzi) oraz „Gen Z” (Teatr Muzyczny Adria).\nObecnie Paulina dzieli się swoją pasją i wiedzą, prowadząc w naszym studiu zajęcia baletu.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 102273,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/kadra/talita-jarzecka",
+    "status": 200,
+    "listed": true,
+    "title": "Talita Jarzęcka | CEO | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Talita to doświadczona choreografka, trenerka i artystka sceniczna, której fundamentem jest solidne wykształcenie muzyczno-taneczne. Ukończyła studia licencjackie na kierunku Taniec Nowoczesny na Wydziale Sztuk Scenicznych Akademii Muzycznej w Łodzi. Wcześniej kształciła się w Szkole Muzycznej im. Grażyny Bacewicz w Koszalinie na Wydziale Rytmiki. Brała udział w spektaklu „Projektowanie człowieka” (chor. Maciej Mołdoch / Sheva), stworzyła autorskie spektakle „Halucynacje” i „Gen Z”. Uczestniczyła w licznych warsztatach i programach artystycznych w Polsce i za granicą (m.in. Ateny, Mediolan, Paryż, Londyn). Przez 9 lat prowadziła grupę Quality CREW, przygotowując tancerzy do licznych zawodów i projektów artystycznych w Polsce i za granicą. Pod jej opieką zawodnicy reprezentowali studio na międzynarodowych scenach i turniejach, a grupa wzięła również udział w produkcji nominowanej na International Cyprus Dance Film Festival, której pokaz odbył się w teatrze Rialto. Talita przygotowywała również zawodniczki do startów w Mistrzostwach Świata WDA International Championships w Budapeszcie w kategorii Street Dance Solo, osiągając miejsca na podium oraz w ścisłej czołówce międzynarodowej rywalizacji. W 2026 roku wystąpiła w kampanii reklamowej Apple Music, zdobywając doświadczenie również na planie międzynarodowej produkcji komercyjnej.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 123380,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/kadra/wiktoria-butwicka",
+    "status": 200,
+    "listed": true,
+    "title": "Wiktoria Butwicka | Hip-hop | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Wiktoria Butwicka to tancerka i trenerka. Taniec towarzyszy jej od 2009 roku. Szkoliła się m.in. u instruktorów takich jak Klesia, Nikita czy Pumba. Brała udział w licznych turniejach w Polsce i za granicą (m.in. 2. miejsce w Wielkiej Brytanii i Top 8 na Tancbudzie). Korzystała też z prywatnych lekcji i warsztatów w różnych stylach. Jako trenerka uczy od trzech lat – prowadzi grupy hip-hopowe oraz warsztaty dla młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 110347,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/kadra/maria-kober",
+    "status": 200,
+    "listed": true,
+    "title": "Maria Kober | The Beat Hunters | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Maria Kober \n to nie tylko instruktorka to tancerka z ogromnym doświadczeniem scenicznym i warsztatowym.\nOd 8 lat trenuje w ekipie Quality Crew, z którą wielokrotnie stawała na podium prestiżowych zawodów w Polsce i za granicą.\n Na swoim tanecznym koncie ma m.in.:\nudział w warsztatach i zajęciach u takich instruktorów, jak Zosia Kędziora, Darek Bujnowski, Marta Pasta, Ola Goździk, Łukasz Ludwiczak, Jessica Ali , Mania Rogowska, Ida Kurowska i wiele więcej. \n-wyjazd do Londynu, gdzie trenowała w legendarnych studiach Playground i Base, biorąc lekcje m.in. u Kelly Sweeney (LA) i Tyresse Hare\n– udział w projektach wideo, w tym w produkcji nominowanej na International Cyprus Dance Film Festival, której pokaz odbył się w teatrze Rialto.\nMaria prowadzi treningi dla grupy THE BEAT HUNTERS.  \nCo Cię czeka na jej zajęciach? \nWszechstronny rozwój taneczny i świetna atmosfera, bo Marysia łączy wymagający trening z ogromną dawką fanu.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 102571,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/kadra/magdalena-sokolowska-japona",
+    "status": 200,
+    "listed": true,
+    "title": "Magdalena Sokołowska | Hip-hop/House | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Magdalena Sokołowska jest związana z tańcem od 14. roku życia. Jest dyplomowaną instruktorką tańca o specjalizacji hip-hop. Style, w których najlepiej się czuje, to hip-hop i house. Dla siebie tańczy również waacking i high heels. Na co dzień lubi pracę z młodzieżą.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 109373,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/kadra/alina-lemanska",
+    "status": 200,
+    "listed": true,
+    "title": "Alina Lemańska | KPOP | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Na stronie sekcja Aliny Lemańskiej opisuje start zajęć KPOP — dynamiczne choreografie, energetyczną muzykę i przyjazną atmosferę. Zajęcia są skierowane do osób w różnym wieku i na różnym poziomie zaawansowania, z naciskiem na naukę kroków i choreografii do hitów KPOP oraz dobrą zabawę.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 108536,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/kadra/nel-glowacka",
+    "status": 200,
+    "listed": true,
+    "title": "Nel Głowacka | Taniec współczesny | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Tańczy od 13 lat, nieustannie rozwijając się w różnych stylach i poszerzając swój warsztat. Swoją przygodę z tańcem rozpoczęła jako dziecko od baletu, który do dziś pozostaje ważną częścią jej tanecznego fundamentu. Przez wiele lat trenowała również taniec towarzyski, a obecnie skupia się przede wszystkim na tańcu współczesnym i jazzie.\nJednym z jej największych osiągnięć było zdobycie 3. miejsca na Mistrzostwach WADF, dzięki czemu została II Wicemistrzynią Polski. Na przestrzeni lat brała udział w licznych zawodach i turniejach tanecznych, a także miała okazję występować na deskach teatru.\nTaniec jest dla niej nie tylko techniką i ruchem, ale przede wszystkim sposobem wyrażania emocji. Dlatego rozwija się również w aktorstwie, które pomaga jej jeszcze lepiej budować sceniczne historie i przekazywać emocje poprzez ruch. Ma za sobą liczne występy i przedstawienia, a każde z tych doświadczeń pozwala jej spojrzeć na taniec z nowej perspektywy.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 102141,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/kadra/klara-walach",
+    "status": 200,
+    "listed": true,
+    "title": "Klara Walach | Taniec współczesny | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Klara swoją przygodę z tańcem rozpoczęła już w wieku 3 lat. Od 14 lat nieustannie rozwija swoje umiejętności, zdobywając doświadczenie w różnych stylach i poznając kolejne oblicza tańca. Najbliższe są jej jazz oraz modern, style, które pozwalają jej wyrażać siebie, rozwijać kreatywność i muzykalność, a jednocześnie pracować nad techniką oraz świadomością własnego ciała.\nW ubiegłym sezonie Klara brała udział w licznych zawodach organizowanych przez WDF i PFT, wielokrotnie stając na podium. Osiągnięcia te są dla niej nie tylko powodem do dumy, ale przede wszystkim motywacją do dalszego rozwoju.\nTaniec nauczył ją systematyczności, wytrwałości i odpowiedzialności, a także pracy pod presją oraz pokonywania własnych ograniczeń. Dziś chce dzielić się swoją pasją i doświadczeniem z innymi, pokazując, że taniec to nie tylko technika, ale również sposób na wyrażanie siebie i budowanie pewności siebie.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 102312,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/kadra/marianna-stanislawska",
+    "status": 200,
+    "listed": true,
+    "title": "Marianna Stanisławska | Taniec współczesny | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Marianna swoją taneczną przygodę rozpoczęła już w wieku 5 lat. Początkowo rozwijała się w hip-hopie, jednak z czasem pokochała również taniec współczesny. Przez lata zdobywała doświadczenie i liczne sukcesy zarówno w występach solowych, jak i grupowych.\nJest wykwalifikowaną instruktorką tańca i nieustannie rozwija swoje umiejętności, regularnie uczestnicząc w treningach, warsztatach oraz zawodach tanecznych. Dzięki temu stale poszerza swoją wiedzę, poznaje nowe techniki i czerpie inspirację od innych tancerzy i choreografów.\nMarianna ma również doświadczenie w pracy z dziećmi,była opiekunką na koloniach oraz prowadziła animacje. Na swoich zajęciach stawia przede wszystkim na dobrą atmosferę, wzajemny szacunek i radość z tańca. Zależy jej na tym, aby każde dziecko czuło się swobodnie, mogło rozwijać swoje umiejętności i przede wszystkim czerpało przyjemność z ruchu.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 105506,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/kadra/aleks-kultys",
+    "status": 200,
+    "listed": true,
+    "title": "Aleks Kultys | Akrobatyka | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Poznajcie naszego trenera,akrobatyka to jego pasja i ogromna część naszych treningów. Aleks ukończył dwuczęściowe szkolenie z zakresu metodyki nauczania oraz techniki wykonywania elementów w skokach na ścieżce. Szczególną uwagę poświęca również bezpieczeństwu, posiada wiedzę i umiejętności z zakresu prawidłowego asekurowania oraz podtrzymywania dzieci podczas nauki nowych elementów, dzięki czemu treningi są nie tylko efektywne, ale przede wszystkim bezpieczne i dostosowane do poziomu każdego uczestnika. Swoje doświadczenie zdobywał, pracując z dziećmi na półkoloniach, w playparku oraz prowadząc regularne zajęcia z akrobatyki dla dzieci i młodzieży.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 110287,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/kadra/paulina-kapuscinska",
+    "status": 200,
+    "listed": true,
+    "title": "Paulina Kapuścińska | Hip-hop | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Paulina Kapuścińska to tancerka i instruktorka, która swoją przygodę z tańcem rozpoczęła około 13 lat temu. Przez 9 lat była częścią formacji Quality Crew, z którą brała udział w licznych zawodach tanecznych, wielokrotnie stając na podium. To właśnie lata spędzone w Quality Crew dały jej ogromne doświadczenie zarówno w rywalizacji, jak i pracy zespołowej oraz występach na scenie.\nPrzez cały ten czas nieustannie rozwijała swoje umiejętności, biorąc udział w licznych warsztatach prowadzonych przez czołowych tancerzy z Polski i zagranicy. Ma również na swoim koncie udział w projektach wideo i teledyskach. Obecnie tańczy także w Teatrze Muzycznym Adria.\nPaulina ma doświadczenie również jako instruktorka. Przez rok prowadziła grupę dzieci w wieku 7–11 lat, pracując z nimi nad formacjami, duetami oraz solówkami. Jej podopieczne wielokrotnie zdobywały miejsca na podium.\nW tym sezonie Paulina dołącza do kadry HoodMood, gdzie poprowadzi grupę Hype Crew. Na jej zajęciach możecie spodziewać się dużej dawki energii, charakteru, muzykalności i przede wszystkim dobrej zajawki na taniec",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 104675,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/kadra/nikola-suchocka",
+    "status": 200,
+    "listed": true,
+    "title": "Nikola Suchocka | MASTER TRAINER | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Nikola Suchocka to jedna z czołowych tancerek polskiej sceny hip-hopowej. Tancerka, choreografka, instruktorka tańca i trenerka specjalizująca się w hip-hopie. Aktywnie działa również jako sędzia zawodów tanecznych, łącząc doświadczenie zdobywane na parkiecie z pracą artystyczną i rozwojem innych tancerzy.\nJest członkinią zespołu tanecznego SÓL, z którym regularnie rywalizuje na zawodach w całej Polsce, wielokrotnie stając na podium. Zespół SÓL miał również okazję otwierać finały Red Bull Dance Your Style w Teatrze Szekspirowskim w Gdańsku.\nNa swoim koncie ma liczne sukcesy na zawodach tanecznych. W tym sezonie zwyciężyła 🥇 Tancbuda Challenge oraz 🥇 Infinite Force w kategorii Hip-Hop 1 vs 1 18+.\nJej doświadczenie wykracza poza scenę zawodów,obejmuje projekty komercyjne, produkcje reklamowe, teledyski, choreografię, pracę zespołową oraz sędziowanie zawodów tanecznych. Dzięki temu swobodnie porusza się zarówno w świecie rywalizacji tanecznej, jak i profesjonalnych realizacji scenicznych, medialnych i komercyjnych.\nW tańcu łączy sportową determinację, wyjątkową muzykalność, mocny charakter i indywidualny styl. Jako trenerka i instruktorka przekazuje swoje doświadczenie kolejnym pokoleniom tancerzy, jednocześnie nieustannie rozwijając własny język ruchu i artystyczną tożsamość.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 105202,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/kadra/kamila-maik",
+    "status": 200,
+    "listed": true,
+    "title": "Kamila Maik | Master Trainer | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Instruktorka tańca współczesnego, choreografka i założycielka Takiego Studia Tańca\nZałożycielka i serce Takiego Studia.\nAbsolwentka Ogólnokształcącej Szkoły Baletowej w Gdańsku, gdzie zdobyła dyplom tancerki tańca współczesnego, baletu oraz tańca charakterystycznego. Od najmłodszych lat występowała na deskach Opery Bałtyckiej i Filharmonii Bałtyckiej, zdobywając sceniczne doświadczenie, które dziś przekazuje swoim podopiecznym.\nKamila od zawsze łączy taniec z ruchem w jego najpełniejszej formie – pasjonuje ją akrobatyka, movement, animal flow oraz taniec organiczny, które pomagają jej rozwijać świadomość ciała i poszukiwać nowych jakości w ruchu.\nW latach 2014–2021 była choreografem i trenerem grup kadrowych w Klubie Sportowym Kokartka, a w 2018 roku otrzymała prestiżową nagrodę „Sopocka Muza dla Młodego Twórcy”. Obecnie prowadzi grupy turniejowe Takiego Studia, z którymi zdobywa liczne tytuły i nagrody, m.in. Mistrzostwo Polski WADF, II Vice Mistrzostwo Polski PZTAN oraz wysokie miejsca w ligach tanecznych IDO i WADF.\nKamila nie ogranicza się jedynie do sali treningowej – współtworzy produkcje wideo jako tancerka i choreografka oraz aktywnie działa na trójmiejskiej scenie tanecznej. Od 2015-2020 roku była związana z Sopockim Teatrem Tańca, gdzie współtworzyła spektakle taneczne.\nJako instruktorka jest niezwykle charyzmatyczna, wymagająca i inspirująca. Na swoich zajęciach łączy dyscyplinę z empatią – stawia na rozwój techniczny, świadomość ruchu i wzajemne wsparcie w grupie. Pod jej skrzydłami dorasta kolejne pokolenie tancerzy i instruktorów.\nTaniec to dla niej wolność i ekspresja – jej motto brzmi:\n„Wolność, węże i floorwork!” 🐍\nW 2023 roku została wyróżniona tytułem Trener Roku przez Dziennik Bałtycki, co potwierdza jej ogromne zaangażowanie, pasję i nieustanne sukcesy w pracy z młodymi tancerzami.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 115244,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/dofinansowanie",
+    "status": 200,
+    "listed": false,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 73132,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/kadra/joanna-jedynak",
+    "status": 200,
+    "listed": true,
+    "title": "Joanna Jedynak | Master Trainer | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Joanna jest instruktorką tańca, trenerką i choreografką w Studio Tańca Joy Dance Szczecin, specjalizującą się w stylach jazz, modern &amp; contemporary, ballet oraz commercial. Jest finalistką, medalistką i stypendystką Global Dance Open oraz finalistką Dance World Cup. Wielokrotnie zdobywała medale i miejsca finałowe Mistrzostw Polski oraz Europy IDO, w tym tytuł Mistrzyni Polski w kategorii show duety oraz II Wicemistrzyni Polski w solo ballet repertoire. Nieustannie rozwija swoje umiejętności pod okiem czołowych choreografów z Polski i świata, a podczas zajęć stawia na technikę, świadomość ciała, muzykalność i rozwój artystyczny każdego tancerza.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 113117,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/cennik/koszalin",
+    "status": 307,
+    "listed": false,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 0,
+    "bytes": 31156,
+    "cache": "s-maxage=31536000",
+    "location": "/cennik/koszalin/zajecia"
+  },
+  {
+    "route": "/cennik/koszalin/pakiety-zajec",
+    "status": 200,
+    "listed": false,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 111427,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/cennik/koszalin/zajecia",
+    "status": 200,
+    "listed": false,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 142124,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/cennik/koszalin/zajecia-indywidualne",
+    "status": 200,
+    "listed": false,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 111179,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/nie-istnieje",
+    "status": 404,
+    "listed": false,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "noindex",
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 71952,
+    "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "location": null
+  },
+  {
+    "route": "/oferta/nie-istnieje",
+    "status": 404,
+    "listed": false,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "noindex",
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 0,
+    "bytes": 31555,
+    "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "location": null
+  },
+  {
+    "route": "/cennik/polanow",
+    "status": 200,
+    "listed": false,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 90331,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/cennik/bialy-bor",
+    "status": 200,
+    "listed": false,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 1,
+    "bytes": 82008,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/grafik/nie-istnieje",
+    "status": 404,
+    "listed": false,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "noindex",
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 0,
+    "bytes": 31195,
+    "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "location": null
+  },
+  {
+    "route": "/cennik/koszalin/nie-istnieje",
+    "status": 404,
+    "listed": false,
+    "title": "Hoodmood | Szkoła tańca i akrobatyki",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "noindex",
+      "index, follow"
+    ],
+    "ogImage": null,
+    "h1": 0,
+    "bytes": 32247,
+    "cache": "s-maxage=31536000",
+    "location": null
+  },
+  {
+    "route": "/kadra/nie-istnieje",
+    "status": 200,
+    "listed": false,
+    "title": "Trener nie został znaleziony | Hoodmood",
+    "canonical": "https://hoodmood.vercel.app",
+    "description": "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "robots": [
+      "index, follow",
+      "noindex"
+    ],
+    "ogImage": null,
+    "h1": 0,
+    "bytes": 75557,
+    "cache": "s-maxage=31536000",
+    "location": null
+  }
+]

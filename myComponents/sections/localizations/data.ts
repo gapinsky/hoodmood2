@@ -1,3 +1,5 @@
+import { locations, mapsUrl } from "@/data/locations";
+
 export const data = {
   badge: "lokalizacje",
   title: "Hoodmood jest bliżej, niż myślisz",
@@ -6,30 +8,27 @@ export const data = {
 };
 export const localizations = [
   {
-    title: "Polanów",
-    description: "ul. Gradowe Wzgórze 5",
+    title: locations.polanow.name,
+    description: `ul. ${locations.polanow.address.street}`,
     hoverImg: "/assets/images/localizations/polanowMain.png",
     img: "/assets/images/localizations/polanowMain.png",
-    slug: "polanow",
-    mapsUrl:
-      "https://www.google.com/maps/dir/?api=1&destination=Gradowe%20Wzg%C3%B3rze%205%2C%2076-010%20Polan%C3%B3w",
+    slug: locations.polanow.id,
+    mapsUrl: mapsUrl(locations.polanow),
   },
   {
-    title: "Koszalin",
-    description: "ul. Zwycięstwa 115",
+    title: locations.koszalin.name,
+    description: `ul. ${locations.koszalin.address.street}`,
     hoverImg: "/assets/images/localizations/koszalinMain.png",
     img: "/assets/images/localizations/koszalinOutside.png",
-    slug: "koszalin",
-    mapsUrl:
-      "https://www.google.com/maps/dir/?api=1&destination=Zwyci%C4%99stwa%20115%2C%2075-601%20Koszalin",
+    slug: locations.koszalin.id,
+    mapsUrl: mapsUrl(locations.koszalin),
   },
   {
-    title: "Biały Bór",
-    description: "ul. Tamka 3",
+    title: locations.bialyBor.name,
+    description: `ul. ${locations.bialyBor.address.street}`,
     hoverImg: "/assets/images/localizations/bialyBorMain.png",
     img: "/assets/images/localizations/bialyBorOutside.png",
-    slug: "bialy-bor",
-    mapsUrl:
-      "https://www.google.com/maps/dir/?api=1&destination=Tamka%203%2C%2078-425%20Bia%C5%82y%20B%C3%B3r",
+    slug: locations.bialyBor.id,
+    mapsUrl: mapsUrl(locations.bialyBor),
   },
 ];

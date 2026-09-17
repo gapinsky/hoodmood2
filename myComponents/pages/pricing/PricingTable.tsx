@@ -1,6 +1,5 @@
-import { Badge } from "@/components/ui/badge";
 import PricingFrequency from "./PricingFrequency";
-import type { PricingItem } from "@/data/pricingData";
+import type { PricingItem } from "./types";
 import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
 
 export type PricingTableProps = {
@@ -12,22 +11,16 @@ export type PricingTableProps = {
 const desktopGrid =
   "md:grid-cols-[minmax(0,1.6fr)_90px_120px_100px_120px] lg:grid-cols-[minmax(0,1.8fr)_140px_180px_140px_140px]";
 
-const masterCategories = new Set(["masterProgram", "masterclass", "masterPass"]);
-
-function Price({ value }: { value: string }) {
+function Price({ item }: { item: PricingItem }) {
   return (
     <span className="text-sm font-semibold leading-5 tabular-nums text-foreground">
-      {value.includes("zł") ? value : `${value} zł`}
+      {item.price.toLocaleString("pl-PL")} zł {item.priceUnit}
     </span>
   );
 }
 
 const formatAge = (item: PricingItem) => {
-  if (masterCategories.has(item.category)) {
-    return `${item.minAge}-${item.maxAge} lat`;
-  }
-  if (item.minAge === 5 && item.maxAge === 99) return "Bez limitu wieku";
-  if (item.maxAge === 99) return `${item.minAge}+ lat`;
+  if (item.maxAge === null) return `${item.minAge}+ lat`;
   return `${item.minAge}-${item.maxAge} lat`;
 };
 
@@ -64,22 +57,14 @@ export default function PricingTable({
                 Brak pasujących zajęć. Zmień nazwę lub wiek uczestnika, aby zobaczyć inne propozycje.
               </p>
             )}
-            {items.map((item, index) => (
+            {items.map((item) => (
               <article
-                key={`${item.name}-${item.minAge}-${index}`}
+                key={item.id}
                 className={`group grid gap-5 px-5 py-6 transition-colors ${desktopGrid} md:items-center md:gap-4 md:py-7 hover:bg-foreground/[0.035]`}
               >
                 <div className="min-w-0">
                   <div className="flex flex-wrap items-center gap-2">
                     <p className="text-base font-medium leading-6 text-foreground">{item.name}</p>
-                    {item.trending && (
-                      <Badge
-                        variant="secondary"
-                        className="rounded-full border-0 bg-pink-500/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-(--brand-700) dark:text-(--brand-300) hover:bg-pink-500/15"
-                      >
-                        Najczęściej wybierane
-                      </Badge>
-                    )}
                   </div>
 
                   <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-3 text-sm md:hidden text-muted-foreground">
@@ -88,7 +73,7 @@ export default function PricingTable({
                     </span>
                     <PricingFrequency item={item} compact />
                     <span className="basis-full pt-2">
-                      <Price value={item.price} />
+                      <Price item={item} />
                     </span>
                   </div>
                 </div>
@@ -102,11 +87,15 @@ export default function PricingTable({
                 </div>
 
                 <div className="hidden md:block text-center">
-                  <Price value={item.price} />
+                  <Price item={item} />
                 </div>
 
                 <div className="flex justify-self-start md:justify-self-end">
-                  <ButtonSecondary href={ctaHref}>Zapisz się</ButtonSecondary>
+                  {item.enrollmentEnabled ? (
+                    <ButtonSecondary href={ctaHref}>Zapisz się</ButtonSecondary>
+                  ) : (
+                    <span className="text-sm text-muted-foreground">Zapisy zamknięte</span>
+                  )}
                 </div>
               </article>
             ))}

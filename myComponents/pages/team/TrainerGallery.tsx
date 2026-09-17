@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Instagram, ArrowUpRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import type { Trainer } from "@/app/kadra/data";
+import type { Trainer } from "@/data/trainers";
 
 export default function TrainerGallery({ trainer }: { trainer: Pick<Trainer, "name" | "images" | "instagram"> }) {
   return (
@@ -20,8 +20,8 @@ export default function TrainerGallery({ trainer }: { trainer: Pick<Trainer, "na
                           src={image}
                           alt={`${trainer.name} — zdjęcie ${index + 1}`}
                           fill
-                          priority={index === 0}
-                          quality={100}
+                          preload={index === 0}
+                          quality={85}
                           sizes="(max-width: 1023px) calc(100vw - 2rem), (max-width: 1519px) 46vw, 660px"
                           className="object-cover"
                         />

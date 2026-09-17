@@ -1,0 +1,182 @@
+{
+  "before": {
+    "runs": [
+      {
+        "run": "before-1.json",
+        "score": 78,
+        "lcp_ms": 5565.027075000001,
+        "fcp_ms": 1960.01805,
+        "tbt_ms": 12.5,
+        "transfer_bytes": 5183407,
+        "unused_js_bytes": 45041,
+        "render_blocking": [
+          {
+            "url": "http://localhost:3100/_next/static/css/843c0a77f4132c00.css",
+            "totalBytes": 25474,
+            "wastedMs": 453
+          },
+          {
+            "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+            "totalBytes": 1255,
+            "wastedMs": 303
+          },
+          {
+            "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+            "totalBytes": 1087,
+            "wastedMs": 303
+          }
+        ]
+      },
+      {
+        "run": "before-2.json",
+        "score": 79,
+        "lcp_ms": 5258.4623999999985,
+        "fcp_ms": 1958.4624,
+        "tbt_ms": 6,
+        "transfer_bytes": 5095064,
+        "unused_js_bytes": 45033,
+        "render_blocking": [
+          {
+            "url": "http://localhost:3100/_next/static/css/843c0a77f4132c00.css",
+            "totalBytes": 25474,
+            "wastedMs": 453
+          },
+          {
+            "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+            "totalBytes": 1255,
+            "wastedMs": 303
+          },
+          {
+            "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+            "totalBytes": 1087,
+            "wastedMs": 303
+          }
+        ]
+      },
+      {
+        "run": "before-3.json",
+        "score": 79,
+        "lcp_ms": 5256.463049999999,
+        "fcp_ms": 1806.46305,
+        "tbt_ms": 5,
+        "transfer_bytes": 5095064,
+        "unused_js_bytes": 45033,
+        "render_blocking": [
+          {
+            "url": "http://localhost:3100/_next/static/css/843c0a77f4132c00.css",
+            "totalBytes": 25474,
+            "wastedMs": 452
+          },
+          {
+            "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+            "totalBytes": 1255,
+            "wastedMs": 302
+          },
+          {
+            "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+            "totalBytes": 1087,
+            "wastedMs": 302
+          }
+        ]
+      }
+    ],
+    "median": {
+      "score": 79,
+      "lcp_ms": 5258.4623999999985,
+      "fcp_ms": 1958.4624,
+      "tbt_ms": 6,
+      "transfer_bytes": 5095064,
+      "unused_js_bytes": 45033
+    }
+  },
+  "final": {
+    "runs": [
+      {
+        "run": "final-1.json",
+        "score": 79,
+        "lcp_ms": 5256.8472,
+        "fcp_ms": 1956.8472000000002,
+        "tbt_ms": 7,
+        "transfer_bytes": 3585851,
+        "unused_js_bytes": 47511,
+        "render_blocking": [
+          {
+            "url": "http://localhost:3100/_next/static/css/389a521624936e66.css",
+            "totalBytes": 25574,
+            "wastedMs": 452
+          },
+          {
+            "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+            "totalBytes": 1255,
+            "wastedMs": 302
+          },
+          {
+            "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+            "totalBytes": 1087,
+            "wastedMs": 302
+          }
+        ]
+      },
+      {
+        "run": "final-2.json",
+        "score": 80,
+        "lcp_ms": 5105.9319,
+        "fcp_ms": 1955.9319,
+        "tbt_ms": 5.999999999999545,
+        "transfer_bytes": 3585851,
+        "unused_js_bytes": 47511,
+        "render_blocking": [
+          {
+            "url": "http://localhost:3100/_next/static/css/389a521624936e66.css",
+            "totalBytes": 25574,
+            "wastedMs": 452
+          },
+          {
+            "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+            "totalBytes": 1255,
+            "wastedMs": 302
+          },
+          {
+            "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+            "totalBytes": 1087,
+            "wastedMs": 302
+          }
+        ]
+      },
+      {
+        "run": "final-3.json",
+        "score": 80,
+        "lcp_ms": 5105.58195,
+        "fcp_ms": 1955.5819499999998,
+        "tbt_ms": 16,
+        "transfer_bytes": 3589589,
+        "unused_js_bytes": 47511,
+        "render_blocking": [
+          {
+            "url": "http://localhost:3100/_next/static/css/389a521624936e66.css",
+            "totalBytes": 25574,
+            "wastedMs": 452
+          },
+          {
+            "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+            "totalBytes": 1255,
+            "wastedMs": 302
+          },
+          {
+            "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+            "totalBytes": 1087,
+            "wastedMs": 302
+          }
+        ]
+      }
+    ],
+    "median": {
+      "score": 80,
+      "lcp_ms": 5105.9319,
+      "fcp_ms": 1955.9319,
+      "tbt_ms": 7,
+      "transfer_bytes": 3585851,
+      "unused_js_bytes": 47511
+    }
+  }
+}

@@ -5,22 +5,18 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
 import { useState } from "react";
+import type { Trainer } from "@/data/trainers";
 
-type Props = {
-  name: string;
-  role?: string;
-  styles?: string[];
-  images: string[];
-  localizations?: string[];
-  id: string;
-  variant?: "grid" | "carousel";
-};
+type Props = Pick<Trainer, "slug" | "name" | "image"> &
+  Partial<Pick<Trainer, "role" | "styles" | "localizations">> & {
+    variant?: "grid" | "carousel";
+  };
 
 export default function TeamCard({
   name,
-  images,
+  image,
   localizations = [],
-  id,
+  slug,
   variant = "grid",
 }: Props) {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -29,7 +25,7 @@ export default function TeamCard({
   if (!isCarousel) {
     return (
       <Link
-        href={`/kadra/${id}`}
+        href={`/kadra/${slug}`}
         aria-label={`Zobacz profil trenera: ${name}`}
         className="ui-focus-ring group block min-w-0 rounded-md text-left"
       >
@@ -38,7 +34,7 @@ export default function TeamCard({
             <div aria-hidden="true" className="absolute inset-0 animate-pulse bg-foreground/5 motion-reduce:animate-none" />
           )}
           <Image
-            src={images[0]}
+            src={image}
             alt={name}
             fill
             sizes="(max-width: 639px) calc(100vw - 2rem), (max-width: 767px) 46vw, (max-width: 1519px) 30vw, 440px"
@@ -63,7 +59,7 @@ export default function TeamCard({
   return (
     <Link
       scroll
-      href={`/kadra/${id}`}
+      href={`/kadra/${slug}`}
       aria-label={`Zobacz profil trenera: ${name}`}
       className={`group relative block aspect-square w-full rounded-lg bg-[#151215] text-left transition duration-300 hover:cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--brand-500) focus-visible:ring-offset-2 isolate overflow-clip transform-gpu backface-hidden [clip-path:inset(0_round_0.5rem)] contain-[paint] ${cardLiftHoverStyles}`}
     >
@@ -81,7 +77,7 @@ export default function TeamCard({
           }`}
         />
         <Image
-          src={images[0]}
+          src={image}
           fill
           alt={name}
           sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1279px) 42vw, (max-width: 1535px) 32vw, 440px"
@@ -89,8 +85,8 @@ export default function TeamCard({
             imageLoaded ? "opacity-100" : "opacity-0"
           } group-hover:scale-[1.035] group-focus-visible:scale-[1.035]`}
           onLoad={() => setImageLoaded(true)}
-          quality={100}
-          priority={false}
+          quality={85}
+
         />
 
         <div className="absolute left-0 top-0 z-10 inline-flex h-14 w-28 -rotate-8 items-center justify-center opacity-35 transition-[transform,opacity] duration-700 group-hover:rotate-0 group-hover:opacity-100 group-focus-visible:rotate-0 group-focus-visible:opacity-100 sm:h-16 sm:w-32">

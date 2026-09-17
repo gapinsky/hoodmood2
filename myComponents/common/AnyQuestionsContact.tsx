@@ -1,3 +1,4 @@
+import { mainContact } from "@/data/locations";
 import Link from "next/link";
 import ButtonSecondary from "./ButtonSecondary";
 import { Mail, Phone } from "lucide-react";
@@ -19,7 +20,7 @@ export default function AnyQuestionsContact() {
           <Mail /> Napisz do nas
         </ButtonSecondary>
         <ButtonSecondary href="/kontakt">
-          <Phone /> 577 198 599
+          <Phone /> {mainContact.phone}
         </ButtonSecondary>
       </div>
     </div>

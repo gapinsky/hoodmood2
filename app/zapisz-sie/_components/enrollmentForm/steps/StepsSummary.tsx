@@ -1,3 +1,4 @@
+import { normalizePhoneNumber } from "@/lib/phone";
 import { useFormContext } from "react-hook-form";
 
 import type { EnrollmentFormData } from "@/lib/schemas/enrollmentSchema";
@@ -30,7 +31,7 @@ export default function StepSummary({
           Uczestnik
         </h3>
         <p className="mb-3 text-sm text-muted-foreground">
-          Uczestnik zajęć Hoodmood: {values.isHoodmoodMember ? "Tak" : "Nie"}
+          Aktywny kursant Hoodmood: {values.isHoodmoodMember ? "Tak" : "Nie"}
         </p>
         <div className="grid grid-cols-1 gap-3 text-sm leading-6 text-black/72 md:grid-cols-3 dark:text-white/75">
           <div className="flex flex-col">
@@ -49,9 +50,7 @@ export default function StepSummary({
             <span className="ui-muted-label text-xs dark:text-white/45">
               Wiek:
             </span>{" "}
-            {values.participantType === "adult"
-              ? "Dorosły"
-              : values.participantAge}
+            {values.participantAge}
           </div>
         </div>
       </section>
@@ -77,7 +76,7 @@ export default function StepSummary({
             <span className="ui-muted-label text-xs dark:text-white/45">
               Telefon:
             </span>{" "}
-            {values.phone}
+            {normalizePhoneNumber(values.phone, values.phoneCountry) ?? values.phone}
           </div>
         </div>
 
@@ -109,12 +108,15 @@ export default function StepSummary({
                 <div className="ui-muted-label text-xs leading-5 dark:text-white/55">
                   {item.locationName} {item.timeLabel}
                 </div>
+                <p className="text-xs leading-5 text-muted-foreground">{item.scheduleLabel}</p>
+                {item.instructorLabel && <p className="text-xs leading-5 text-muted-foreground">Prowadzący: {item.instructorLabel}</p>}
+                {item.specialInstructorLabel && <p className="text-xs leading-5 text-muted-foreground">Gościnnie: {item.specialInstructorLabel}</p>}
               </div>
 
               <div className="text-sm font-semibold text-foreground">
                 {item.price.toFixed(2).replace(".", ",")} zł
                 <span className="ml-1 text-xs font-normal">
-                  / {item.billingPeriod === "one-time" ? "jednorazowo" : "miesięcznie"}
+                  {item.priceUnit}
                 </span>
               </div>
             </div>

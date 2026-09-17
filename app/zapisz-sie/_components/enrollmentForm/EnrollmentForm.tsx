@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
+import { locationList } from "@/data/locations";
 
 import { submitEnrollmentForm } from "@/app/zapisz-sie/actions";
 import {
@@ -25,11 +26,12 @@ const defaultValues: EnrollmentFormData = {
   participantType: "youth",
   participantAge: "",
   isHoodmoodMember: true,
-  selectedLocationId: "koszalin",
+  selectedLocationId: locationList[0].id,
   selectedClasses: [],
   parentFullName: "",
   email: "",
   phone: "",
+  phoneCountry: "PL",
   notes: "",
   consentsAccepted: false,
 };
@@ -129,7 +131,7 @@ export default function EnrollmentForm() {
       case 1:
         return trigger(["selectedClasses"]);
       case 2:
-        return trigger(["parentFullName", "email", "phone", "notes"]);
+        return trigger(["parentFullName", "email", "phoneCountry", "phone", "notes"]);
       case 3:
         return trigger(["consentsAccepted"]);
       default:
@@ -150,7 +152,7 @@ export default function EnrollmentForm() {
 
   const onSubmit = async (data: EnrollmentFormData) => {
     try {
-      const result = await submitEnrollmentForm(data);
+      const result = await submitEnrollmentForm({ ...data, selectedClasses: data.selectedClasses.map((item) => ({ classId: item.classTypeId })) });
 
       if (!result.success) {
         toast.error(result.message);

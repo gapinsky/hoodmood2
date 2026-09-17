@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Original media retained locally, excluded from runtime/deployment
+/source-assets/

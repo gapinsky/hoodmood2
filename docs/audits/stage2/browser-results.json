@@ -1,0 +1,125 @@
+[
+  {
+    "city": "koszalin",
+    "pdf": "success",
+    "beforeScripts": [
+      "http://localhost:3100/_next/static/chunks/main-app-b68a160ae991d398.js",
+      "http://localhost:3100/_next/static/chunks/8500-01a63dafd809e317.js",
+      "http://localhost:3100/_next/static/chunks/8409-381d7a3aa3d11a3a.js",
+      "http://localhost:3100/_next/static/chunks/3794-a6cbe3f16d804637.js",
+      "http://localhost:3100/_next/static/chunks/8437-222aeeeded4c410c.js",
+      "http://localhost:3100/_next/static/chunks/4871-6d331f2c2fff609d.js",
+      "http://localhost:3100/_next/static/chunks/4bd1b696-8a4ab4fdf0ae305a.js",
+      "http://localhost:3100/_next/static/chunks/9366-a15e37439c65be79.js",
+      "http://localhost:3100/_next/static/chunks/2963-4371d78fdbc92727.js",
+      "http://localhost:3100/_next/static/chunks/9494-a9abf6ac35c2511b.js",
+      "http://localhost:3100/_next/static/chunks/webpack-0756ddaac48e23d1.js",
+      "http://localhost:3100/_next/static/chunks/5619-1107731e11ef9eda.js",
+      "http://localhost:3100/_next/static/chunks/app/layout-de1d3e05ed85a007.js",
+      "http://localhost:3100/_next/static/chunks/app/grafik/%5Bcity%5D/page-776d17e8e7bec1e0.js",
+      "http://localhost:3100/_next/static/chunks/2846-c7b22224551df9ae.js",
+      "http://localhost:3100/_next/static/chunks/9565-9c568edf20896cfb.js",
+      "http://localhost:3100/_next/static/chunks/app/page-c821b2123aa9d3c9.js",
+      "http://localhost:3100/_next/static/chunks/1397-8eb537fd0995be90.js"
+    ],
+    "exportScripts": [
+      "http://localhost:3100/_next/static/chunks/7921.6923715fa98b3039.js",
+      "http://localhost:3100/_next/static/chunks/2f0b94e8.c640c86c6c16f5bc.js",
+      "http://localhost:3100/_next/static/chunks/0a2f5824.235a4cd565a2920a.js",
+      "http://localhost:3100/_next/static/chunks/164f4fb6.d85a0253e6742c1b.js",
+      "http://localhost:3100/_next/static/chunks/4233.a96795afc5d96cd2.js"
+    ],
+    "canvas": [
+      {
+        "width": 2400,
+        "height": 1507
+      }
+    ]
+  },
+  {
+    "city": "polanow",
+    "pdf": "success",
+    "beforeScripts": [
+      "http://localhost:3100/_next/static/chunks/webpack-0756ddaac48e23d1.js",
+      "http://localhost:3100/_next/static/chunks/4bd1b696-8a4ab4fdf0ae305a.js",
+      "http://localhost:3100/_next/static/chunks/3794-a6cbe3f16d804637.js",
+      "http://localhost:3100/_next/static/chunks/main-app-b68a160ae991d398.js",
+      "http://localhost:3100/_next/static/chunks/8500-01a63dafd809e317.js",
+      "http://localhost:3100/_next/static/chunks/8409-381d7a3aa3d11a3a.js",
+      "http://localhost:3100/_next/static/chunks/4871-6d331f2c2fff609d.js",
+      "http://localhost:3100/_next/static/chunks/8437-222aeeeded4c410c.js",
+      "http://localhost:3100/_next/static/chunks/2963-4371d78fdbc92727.js",
+      "http://localhost:3100/_next/static/chunks/9494-a9abf6ac35c2511b.js",
+      "http://localhost:3100/_next/static/chunks/9366-a15e37439c65be79.js",
+      "http://localhost:3100/_next/static/chunks/5619-1107731e11ef9eda.js",
+      "http://localhost:3100/_next/static/chunks/1397-8eb537fd0995be90.js",
+      "http://localhost:3100/_next/static/chunks/app/layout-de1d3e05ed85a007.js",
+      "http://localhost:3100/_next/static/chunks/app/grafik/%5Bcity%5D/page-776d17e8e7bec1e0.js",
+      "http://localhost:3100/_next/static/chunks/2846-c7b22224551df9ae.js",
+      "http://localhost:3100/_next/static/chunks/9565-9c568edf20896cfb.js",
+      "http://localhost:3100/_next/static/chunks/app/page-c821b2123aa9d3c9.js"
+    ],
+    "exportScripts": [
+      "http://localhost:3100/_next/static/chunks/7921.6923715fa98b3039.js",
+      "http://localhost:3100/_next/static/chunks/0a2f5824.235a4cd565a2920a.js",
+      "http://localhost:3100/_next/static/chunks/2f0b94e8.c640c86c6c16f5bc.js",
+      "http://localhost:3100/_next/static/chunks/164f4fb6.d85a0253e6742c1b.js",
+      "http://localhost:3100/_next/static/chunks/4233.a96795afc5d96cd2.js"
+    ],
+    "canvas": [
+      {
+        "width": 2400,
+        "height": 1252
+      }
+    ]
+  },
+  {
+    "city": "bialy-bor",
+    "pdf": "success",
+    "beforeScripts": [
+      "http://localhost:3100/_next/static/chunks/webpack-0756ddaac48e23d1.js",
+      "http://localhost:3100/_next/static/chunks/4bd1b696-8a4ab4fdf0ae305a.js",
+      "http://localhost:3100/_next/static/chunks/3794-a6cbe3f16d804637.js",
+      "http://localhost:3100/_next/static/chunks/main-app-b68a160ae991d398.js",
+      "http://localhost:3100/_next/static/chunks/8500-01a63dafd809e317.js",
+      "http://localhost:3100/_next/static/chunks/8409-381d7a3aa3d11a3a.js",
+      "http://localhost:3100/_next/static/chunks/4871-6d331f2c2fff609d.js",
+      "http://localhost:3100/_next/static/chunks/8437-222aeeeded4c410c.js",
+      "http://localhost:3100/_next/static/chunks/2963-4371d78fdbc92727.js",
+      "http://localhost:3100/_next/static/chunks/9494-a9abf6ac35c2511b.js",
+      "http://localhost:3100/_next/static/chunks/9366-a15e37439c65be79.js",
+      "http://localhost:3100/_next/static/chunks/5619-1107731e11ef9eda.js",
+      "http://localhost:3100/_next/static/chunks/1397-8eb537fd0995be90.js",
+      "http://localhost:3100/_next/static/chunks/app/layout-de1d3e05ed85a007.js",
+      "http://localhost:3100/_next/static/chunks/app/grafik/%5Bcity%5D/page-776d17e8e7bec1e0.js",
+      "http://localhost:3100/_next/static/chunks/2846-c7b22224551df9ae.js",
+      "http://localhost:3100/_next/static/chunks/9565-9c568edf20896cfb.js",
+      "http://localhost:3100/_next/static/chunks/app/page-c821b2123aa9d3c9.js"
+    ],
+    "exportScripts": [
+      "http://localhost:3100/_next/static/chunks/7921.6923715fa98b3039.js",
+      "http://localhost:3100/_next/static/chunks/0a2f5824.235a4cd565a2920a.js",
+      "http://localhost:3100/_next/static/chunks/2f0b94e8.c640c86c6c16f5bc.js",
+      "http://localhost:3100/_next/static/chunks/164f4fb6.d85a0253e6742c1b.js",
+      "http://localhost:3100/_next/static/chunks/4233.a96795afc5d96cd2.js"
+    ],
+    "canvas": [
+      {
+        "width": 2400,
+        "height": 802
+      }
+    ]
+  },
+  {
+    "reducedMotion": "static without video request"
+  },
+  {
+    "video": "plays, pauses offscreen, resumes; simulated visibilitychange passes"
+  },
+  {
+    "autoplayFailure": "poster visible"
+  },
+  {
+    "saveData": "static without video"
+  }
+]

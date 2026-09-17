@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import type { PricingItem } from "@/data/pricingData";
+import type { PricingItem } from "@/myComponents/pages/pricing/types";
 import { filterAndSortPricingData } from "@/myComponents/pages/pricing/filterHelper";
 import PricingFilterBar from "@/myComponents/pages/pricing/PricingFilterBar";
 import { usePricingFilters } from "@/myComponents/pages/pricing/PricingFiltersProvider";

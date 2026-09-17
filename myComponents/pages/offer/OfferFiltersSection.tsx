@@ -1,31 +1,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ClassesOfferType } from "@/data/ofertaData";
+import type { ClassOffer, ExperienceFilterValue, OfferSortingValue } from "./types";
 import OfferCard from "@/myComponents/pages/offer/OfferCard";
-import OfferFilterBar, {
-  ExperienceFilterValue,
-  OfferSortingValue,
-} from "./OfferFilterBar";
+import OfferFilterBar from "./OfferFilterBar";
+import { filterAndSortOffers } from "./filterHelper";
 
 type Props = {
-  offerContent: ClassesOfferType[];
+  offerContent: ClassOffer[];
 };
-
-function matchesAge(minAge: number | null, maxAge: number | null, searchedAge: string) {
-  if (!searchedAge) return true;
-
-  const ageNumber = Number(searchedAge);
-  if (Number.isNaN(ageNumber)) return true;
-
-  if (minAge == null && maxAge == null) return false;
-  if (minAge != null && maxAge == null) return ageNumber >= minAge;
-  if (minAge == null && maxAge != null) return ageNumber <= maxAge;
-
-  return minAge !== null && maxAge !== null
-    ? ageNumber >= minAge && ageNumber <= maxAge
-    : false;
-}
 
 export default function OfferFiltersSection({ offerContent }: Props) {
   const [searchName, setSearchName] = useState("");
@@ -40,48 +23,10 @@ export default function OfferFiltersSection({ offerContent }: Props) {
     setExperience("all");
   };
 
-  const filteredOffers = useMemo(() => {
-    const normalizedSearch = searchName.trim().toLowerCase();
-
-    let result = offerContent.filter((item) => {
-      const matchesName =
-        normalizedSearch === "" ||
-        item.name.toLowerCase().includes(normalizedSearch);
-
-      const ageMatches = matchesAge(
-        item.minAge === "" ? null : Number(item.minAge),
-        item.maxAge === "" ? null : Number(item.maxAge),
-        searchAge,
-      );
-
-      const experienceMatches =
-        experience === "all" ||
-        item.experience === experience ||
-        (experience === "Średniozaawansowani" &&
-          item.experience === "grupa średniozaawansowana") ||
-        item.experience === "Dla każdego";
-
-      return matchesName && ageMatches && experienceMatches;
-    });
-
-    if (sorting === "alphabetical-asc") {
-      result = [...result].sort((a, b) => a.name.localeCompare(b.name, "pl"));
-    }
-
-    if (sorting === "alphabetical-desc") {
-      result = [...result].sort((a, b) => b.name.localeCompare(a.name, "pl"));
-    }
-
-    if (sorting === "age-asc") {
-      result = [...result].sort((a, b) => {
-        const ageA = a.minAge === "" ? Number.POSITIVE_INFINITY : Number(a.minAge);
-        const ageB = b.minAge === "" ? Number.POSITIVE_INFINITY : Number(b.minAge);
-        return ageA - ageB;
-      });
-    }
-
-    return result;
-  }, [offerContent, searchName, searchAge, sorting, experience]);
+  const filteredOffers = useMemo(
+    () => filterAndSortOffers(offerContent, searchName, searchAge, experience, sorting),
+    [offerContent, searchName, searchAge, sorting, experience],
+  );
 
   return (
     <section aria-labelledby="offer-title" className="space-y-8">
@@ -104,19 +49,8 @@ export default function OfferFiltersSection({ offerContent }: Props) {
 
         {filteredOffers.length > 0 ? (
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 xl:grid-cols-3 xl:gap-x-8">
-            {filteredOffers.map((item, id) => (
-              <OfferCard
-                key={`${item.name}-${id}`}
-                name={item.name}
-                instructors={item.instructors}
-                img={item.img}
-                minAge={item.minAge}
-                maxAge={item.maxAge}
-                description={item.description}
-                experience={item.experience}
-                scheduleSrc={item.scheduleSrc}
-                pricingSrc={item.pricingSrc}
-              />
+            {filteredOffers.map((item) => (
+              <OfferCard key={item.id} {...item} />
             ))}
           </div>
         ) : (

@@ -1,53 +1,13 @@
-export const scheduleTabs = [
-  {
-    label: "Koszalin",
-    href: "/grafik/koszalin",
-    segment: "/grafik/koszalin",
-  },
-  {
-    label: "Polanów",
-    href: "/grafik/polanow",
-    segment: "/grafik/polanow",
-  },
-  {
-    label: "Biały Bór",
-    href: "/grafik/bialy-bor",
-    segment: "/grafik/bialy-bor",
-  },
-];
+import { locationList } from "./locations";
 
-export const pricingTabs = [
-  {
-    label: "Koszalin",
-    href: "/cennik/koszalin/zajecia",
-    segment: "/cennik/koszalin",
-  },
-  {
-    label: "Polanów",
-    href: "/cennik/polanow",
-    segment: "/cennik/polanow",
-  },
-  {
-    label: "Biały Bór",
-    href: "/cennik/bialy-bor",
-    segment: "/cennik/bialy-bor",
-  },
-];
-
-export const offerTabs = [
-  {
-    label: "Koszalin",
-    href: "/oferta/koszalin",
-    segment: "/oferta/koszalin",
-  },
-  {
-    label: "Polanów",
-    href: "/oferta/polanow",
-    segment: "/oferta/polanow",
-  },
-  {
-    label: "Biały Bór",
-    href: "/oferta/bialy-bor",
-    segment: "/oferta/bialy-bor",
-  },
-];
+export const scheduleTabs = locationList.map(({ id, name }) => ({
+  label: name, href: `/grafik/${id}`, segment: `/grafik/${id}`,
+}));
+export const offerTabs = locationList.map(({ id, name }) => ({
+  label: name, href: `/oferta/${id}`, segment: `/oferta/${id}`,
+}));
+export const pricingTabs = locationList.map(({ id, name }) => ({
+  label: name,
+  href: id === "koszalin" ? "/cennik/koszalin/zajecia" : `/cennik/${id}`,
+  segment: `/cennik/${id}`,
+}));

@@ -1,9 +1,13 @@
+import { createMetadata } from "@/lib/seo";
+import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import PageContent from "@/myComponents/common/headers/PageContent";
 import { data, items } from "./data";
 import Image from "next/image";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import MainWrapper from "@/myComponents/common/MainWrapper";
+
+export const metadata = createMetadata({ path: "/dofinansowanie", ...staticSeoPages["/dofinansowanie"] });
 
 export default function Subsidy() {
   return (
@@ -47,7 +51,6 @@ export default function Subsidy() {
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 40vw"
-              priority
             />
           </div>
         </div>

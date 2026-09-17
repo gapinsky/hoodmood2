@@ -10,7 +10,7 @@ const profileUrl = "https://www.instagram.com/hoodmood_dancestudio/";
 export default async function LatestInstagramPosts() {
   await connection();
 
-  const { posts, nextCursor } = await getInstagramPostsPage();
+  const { posts, nextCursor, status } = await getInstagramPostsPage();
 
   return (
     <section id="wpisy" aria-labelledby="wpisy-title" className="scroll-mt-28 space-y-8 sm:space-y-10">
@@ -21,7 +21,7 @@ export default async function LatestInstagramPosts() {
         </div>
         <span className="flex items-center gap-2 text-sm text-muted-foreground"><Instagram className="size-4" aria-hidden="true" /> @hoodmood_dancestudio</span>
       </div>
-      <InstagramFeed posts={posts} initialCursor={nextCursor} />
+      <InstagramFeed posts={posts} initialCursor={nextCursor} initialStatus={status} />
       <div className="flex flex-col items-start justify-between gap-6 rounded-md border border-foreground/10 bg-foreground/2.5 p-6 sm:p-8 lg:flex-row lg:items-center">
         <div>
           <p className="mb-3 text-xs uppercase tracking-[0.16em] text-(--brand-700) dark:text-(--brand-400)">Bądź bliżej ekipy</p>

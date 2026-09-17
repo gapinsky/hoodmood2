@@ -3,39 +3,21 @@
 import { Clock, User } from "lucide-react";
 import type { RefObject } from "react";
 
-type ClassItem = {
-  name: string;
-  time: string;
-  instructor: string;
-  age: string;
-  info: string;
-};
-
-export type ClassesByDay = Record<string, ClassItem[]>;
+import { getScheduleDays, type ClassesByDay } from "./types";
 
 type Props = {
   pdfRef: RefObject<HTMLDivElement | null>;
   classesByDay: ClassesByDay;
-  title?: string;
   brandName?: string;
   brandUrl?: string;
 };
 
-const dayOrder = [
-  "poniedziałek",
-  "wtorek",
-  "środa",
-  "czwartek",
-  "piątek",
-] as const;
-
 export default function SchedulePdfTable({
   pdfRef,
   classesByDay,
-  title,
   brandUrl = "www.hoodmood.pl",
 }: Props) {
-  const days = dayOrder.filter((day) => day in classesByDay);
+  const days = getScheduleDays(classesByDay);
   const maxRows = Math.max(
     ...days.map((day) => classesByDay[day]?.length ?? 0),
     0,
@@ -49,9 +31,7 @@ export default function SchedulePdfTable({
     >
       <div className="mb-8 flex items-end justify-between">
         <div>
-          <h1 className="m-0 text-[30px] leading-[1.2]">{title}</h1>
-
-          <p className="mb-0 mt-2 text-sm text-zinc-600">{brandUrl}</p>
+          <p className="m-0 text-sm text-zinc-600">{brandUrl}</p>
         </div>
       </div>
 
@@ -100,6 +80,16 @@ export default function SchedulePdfTable({
                           <p className="mb-0 mt-2 text-[13px] leading-[1.4] text-zinc-600">
                             Instruktor: {item.instructor}
                           </p>
+                          {item.specialInstructors && (
+                            <p className="mb-0 mt-2 text-[13px] leading-[1.4] text-zinc-600">
+                              Gościnnie: {item.specialInstructors}
+                            </p>
+                          )}
+                          {item.frequencyDescription && (
+                            <p className="mb-0 mt-2 text-xs leading-[1.4] text-zinc-600">
+                              {item.frequencyDescription}
+                            </p>
+                          )}
                         </div>
                       ) : null}
                     </td>

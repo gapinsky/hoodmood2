@@ -1,3 +1,6 @@
+import { mainContact } from "@/data/locations";
+import { createMetadata } from "@/lib/seo";
+import { staticSeoPages } from "@/lib/seo-pages";
 import Link from "next/link";
 import { ArrowUpRight, Mail, Phone } from "lucide-react";
 import SectionContainer from "@/myComponents/common/SectionContainer";
@@ -9,9 +12,11 @@ import Form from "./_components/Form";
 import Toaster from "@/components/ui/sonner";
 
 const contactMethods = [
-  { label: "Zadzwoń", value: "+48 577 198 599", href: "tel:+48577198599", icon: Phone },
-  { label: "Napisz e-mail", value: "hoodmood.recepcja@gmail.com", href: "mailto:hoodmood.recepcja@gmail.com", icon: Mail },
+  { label: "Zadzwoń", value: mainContact.phone, href: mainContact.phoneHref, icon: Phone },
+  { label: "Napisz e-mail", value: mainContact.email, href: `mailto:${mainContact.email}`, icon: Mail },
 ];
+
+export const metadata = createMetadata({ path: "/kontakt", ...staticSeoPages["/kontakt"] });
 
 export default function ContactPage() {
   return (

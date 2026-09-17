@@ -50,11 +50,12 @@ export default function SelectedClassesPanel({
                   <p className="ui-muted-label text-xs leading-5 dark:text-white/45">
                     {item.locationName} • {item.timeLabel}
                   </p>
+                  <p className="text-xs leading-5 text-muted-foreground">{item.scheduleLabel}</p>
                 </div>
                 <div className="text-sm font-semibold text-foreground dark:text-white">
                   {item.price.toFixed(2).replace(".", ",")} zł
                   <span className="ui-muted-label ml-1 text-[11px] font-normal dark:text-white/45">
-                    / {item.billingPeriod === "one-time" ? "jednorazowo" : "miesięcznie"}
+                    {item.priceUnit}
                   </span>
                 </div>
               </div>

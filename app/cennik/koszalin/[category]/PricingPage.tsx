@@ -3,7 +3,7 @@ import SectionContainer from "@/myComponents/common/SectionContainer";
 import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
 import { pricingTabs } from "@/data/tabs";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
-import { type PricingPageContent } from "@/data/pricingData";
+import type { PricingPageContent } from "@/myComponents/pages/pricing/types";
 import Table from "./Table";
 
 export default function PricingPage({

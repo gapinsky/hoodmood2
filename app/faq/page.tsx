@@ -1,20 +1,23 @@
+import { createMetadata } from "@/lib/seo";
+import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import PageContent from "@/myComponents/common/headers/PageContent";
+import PageIntro from "@/myComponents/common/headers/PageIntro";
 import { data, faq } from "./data";
 import FaqFilter from "@/myComponents/pages/faq/faqFilter";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 
+export const metadata = createMetadata({ path: "/faq", ...staticSeoPages["/faq"] });
+
 export default function FAQ() {
   return (
-  <MainWrapper>
+    <MainWrapper>
       <SectionContainer>
-        <PageContent
+        <PageIntro
+          eyebrow="Warto wiedzieć / Hoodmood"
           title={data.title}
           description={data.description}
-        ></PageContent>
-        <div className="space-y-4">
-          <FaqFilter faq={faq} />
-        </div>
+        />
+        <FaqFilter faq={faq} />
       </SectionContainer>
     </MainWrapper>
   );

@@ -2,7 +2,7 @@ export const data = {
   badge: "oferta",
   title: "Zajęcia taneczne i akrobatyczne dla każdego!",
   description:
-    "Prowadzimy zajęcia taneczne i akrobatyczne w Koszalinie, Polanowie i Białym Borze. W naszej ofercie znajdziesz m.in. hip-hop, balet, taniec współczesny i akrobatykę dla dzieci, młodzieży i dorosłych.",
+    "Taniec i akrobatyka dla dzieci, młodzieży i dorosłych.",
 };
 
 export const offer = [
@@ -32,7 +32,7 @@ export const offer = [
   {
     title: "Obozy, kolonie, pokazy",
     description:
-      "Półkolonie, kolonie, pokazy oraz aktywny czas pełen tańca, sportu, integracji i dodatkowych atrakcji",
+      "Taniec, sport i wspólne wyjazdy.",
     img: "/assets/images/landingOffer/camp1.jpg",
     hoverImg: "/assets/images/landingOffer/camp2.jpg",
     href: "/kolonie",

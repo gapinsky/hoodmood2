@@ -1,5 +1,6 @@
+import { mainContact, locations, studioAddress } from "@/data/locations";
 import Image from "next/image";
-import logo from "../../public/assets/svg/mainLogo/logo.svg";
+import logo from "../../public/assets/optimized/branding/logo.webp";
 import Link from "next/link";
 import { a11y } from "@/public/styles";
 import { cn } from "@/lib/utils";
@@ -21,13 +22,13 @@ export default function Footer() {
               className="h-auto w-30"
             />
             <div className="space-y-1">
-              <p className="font-semibold">Adres siedziby:</p>
-              <p className="opacity-80">Zwycięstwa 115, 75-211 Koszalin</p>
+              <p className="font-semibold">Adres studia:</p>
+              <p className="opacity-80">{studioAddress(locations.koszalin)}</p>
             </div>
             <div className="space-y-1">
               <p className="font-semibold">Kontakt:</p>
-              <p className="opacity-80">+48 577 198 599</p>
-              <p className="opacity-80">hoodmood.recepcja@gmail.com</p>
+              <p className="opacity-80">{mainContact.phone}</p>
+              <p className="opacity-80">{mainContact.email}</p>
             </div>
             <SocialLinks className="pt-2" />
           </div>

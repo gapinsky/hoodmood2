@@ -1,4 +1,4 @@
-import { ClassesOfferType } from "@/data/ofertaData";
+import type { ClassOffer } from "@/myComponents/pages/offer/types";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import SectionContainer from "@/myComponents/common/SectionContainer";
@@ -8,7 +8,7 @@ import OfferFiltersSection from "@/myComponents/pages/offer/OfferFiltersSection"
 
 type LocationPageProps = {
   header: { title: string; description: string };
-  offerContent: ClassesOfferType[];
+  offerContent: ClassOffer[];
 };
 
 export function LocationPageTemplate({

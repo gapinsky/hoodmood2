@@ -1,16 +1,10 @@
-import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
-import { Phone } from "lucide-react";
-
 export default function NoQuestion() {
   return (
-    <div className=" mx-auto w-fit text-center space-y-2 mt-12">
-      <p className="text-md">Niestety nie znaleźliśmy pasujących wyników</p>
-      <div className="mt-4 space-x-4 inline-flex ">
-        <ButtonSecondary href="/kontakt">
-          <Phone /> 123 456 789
-        </ButtonSecondary>
-        <ButtonSecondary href="/kontakt">Napisz do nas</ButtonSecondary>
-      </div>
+    <div className="rounded-md border border-dashed border-foreground/15 p-6 sm:p-8">
+      <h2 className="text-2xl">Nie znaleźliśmy takiego pytania</h2>
+      <p className="mt-3 text-sm leading-6 text-muted-foreground">
+        Spróbuj krótszej frazy lub wyczyść wyszukiwanie. Możesz też napisać do nas przez stronę kontaktową.
+      </p>
     </div>
   );
 }

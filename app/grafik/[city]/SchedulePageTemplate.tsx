@@ -1,4 +1,4 @@
-import { scheduleContentData } from "@/data/scheduleData";
+import type { ClassesByDay } from "@/myComponents/pages/schedule/types";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
@@ -9,7 +9,7 @@ import MainWrapper from "@/myComponents/common/MainWrapper";
 
 type SchedulePageProps = {
   header: { title: string; description: string };
-  scheduleContent: (typeof scheduleContentData)["koszalin"];
+  scheduleContent: ClassesByDay;
 };
 
 export default function SchedulePageTemplate({
@@ -31,7 +31,6 @@ export default function SchedulePageTemplate({
           <div>
             <p className="mb-3 text-xs uppercase tracking-[0.16em] text-muted-foreground">03 / Zawsze pod ręką</p>
             <h2 id="download-schedule-title" className="font-anton text-2xl uppercase sm:text-3xl">Zabierz grafik ze sobą</h2>
-            <p className="mt-3 text-base leading-7 text-muted-foreground">Zapisz plan zajęć na telefonie lub wydrukuj go w domu.</p>
           </div>
           <DownloadSchedule title={header.title} scheduleContent={scheduleContent} />
         </section>

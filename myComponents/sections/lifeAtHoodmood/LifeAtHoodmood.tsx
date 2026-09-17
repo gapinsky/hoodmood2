@@ -3,6 +3,7 @@ import SectionContent from "@/myComponents/common/headers/SectionContent";
 import { imageSources } from "./imageSrcs";
 import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
 
+const revealDelays = [0, 200, 100, 200, 0, 100, 0];
 
 export default function LifeAtHoodmood() {
   return (
@@ -50,8 +51,8 @@ function ImageTile({ index, className }: { index: number; className: string }) {
     <ResponsiveImage
       src={image.src}
       alt={image.alt}
-      sizes={image.sizes}
-      priority={image.priority}
+      revealDelay={revealDelays[index % revealDelays.length]}
+      sizes={index === 0 || index === 6 ? "(min-width: 1520px) 696px, 50vw" : index < 3 ? "(min-width: 1520px) 340px, 25vw" : index < 6 ? "(min-width: 1520px) 220px, 17vw" : "(min-width: 1520px) 453px, 33vw"}
       className={`aspect-auto  ${className} ${cardLiftHoverStyles}`}
     />
   );

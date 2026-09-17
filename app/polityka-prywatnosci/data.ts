@@ -1,3 +1,6 @@
+import { mainContact, locations, studioAddress } from "@/data/locations";
+import { SITE_URL } from "@/lib/seo";
+
 export const data = {
   badge: "polityka prywatności",
   title: "Polityka prywatności ",
@@ -7,10 +10,10 @@ export const data = {
 
 export const personalData = {
   schoolName: "Hoodmood",
-  websiteUrl: "https://hoodmood.pl",
-  contactEmail: "hoodmood.recepcja@gmail.com",
-  contactPhone: "+48 577 198 599",
-  address: "Zwycięstwa 115, 75-211 Koszalin",
+  websiteUrl: SITE_URL,
+  contactEmail: mainContact.email,
+  contactPhone: mainContact.phone,
+  address: studioAddress(locations.koszalin),
   lastUpdated: "06.05.2025",
 };
 

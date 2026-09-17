@@ -1,0 +1,11 @@
+{
+  "bytes": 59374126,
+  "files": 137,
+  "over5MB": [
+    {
+      "path": "public/assets/optimized/hero/hero-desktop-wide.mp4",
+      "bytes": 5157752
+    }
+  ],
+  "duplicates": []
+}

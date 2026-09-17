@@ -1,4 +1,5 @@
-import { Mail, Phone, User } from "lucide-react";
+import FormPhoneField from "@/myComponents/forms/fields/FormPhoneField";
+import { Mail, User } from "lucide-react";
 import { useFormContext } from "react-hook-form";
 
 import type { EnrollmentFormData } from "@/lib/schemas/enrollmentSchema";
@@ -10,11 +11,10 @@ import { sanitizeNameInput } from "../utils";
 export default function StepContactDetails() {
   const {
     register,
-    setValue,
     watch,
     formState: { errors, isSubmitting },
   } = useFormContext<EnrollmentFormData>();
-  const phoneValue = watch("phone");
+
 
   return (
     <div className="grid grid-cols-1  ">
@@ -45,27 +45,14 @@ export default function StepContactDetails() {
         />
       </div>
 
-      <FormTextField
+      <FormPhoneField
         id="phone"
-        label="Numer telefonu"
-        type="tel"
-        placeholder="Wpisz numer telefonu"
-        icon={Phone}
-        registration={register("phone", {
-          onChange: (event) => {
-            const value = event.target.value.replace(/\D/g, "").slice(0, 9);
-            setValue("phone", value, {
-              shouldDirty: true,
-              shouldTouch: true,
-              shouldValidate: true,
-            });
-          },
-        })}
-        error={errors.phone}
+        country={watch("phoneCountry")}
+        countryRegistration={register("phoneCountry")}
+        phoneRegistration={register("phone")}
+        countryError={errors.phoneCountry}
+        phoneError={errors.phone}
         disabled={isSubmitting}
-        inputMode="numeric"
-        pattern="[0-9]*"
-        value={phoneValue}
       />
 
       <FormTextareaField

@@ -1,0 +1,78 @@
+{
+  "checkedRoutes": [
+    {
+      "route": "/",
+      "viewportWidth": 390,
+      "elements": 39,
+      "overflow": false
+    },
+    {
+      "route": "/kontakt",
+      "viewportWidth": 390,
+      "elements": 27,
+      "overflow": false
+    },
+    {
+      "route": "/zapisz-sie",
+      "viewportWidth": 390,
+      "elements": 24,
+      "overflow": false
+    },
+    {
+      "route": "/cennik/koszalin",
+      "viewportWidth": 390,
+      "elements": 56,
+      "overflow": false
+    },
+    {
+      "route": "/oferta/koszalin",
+      "viewportWidth": 390,
+      "elements": 22,
+      "overflow": false
+    },
+    {
+      "route": "/faq",
+      "viewportWidth": 390,
+      "elements": 32,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "viewportWidth": 1440,
+      "elements": 39,
+      "overflow": false
+    },
+    {
+      "route": "/kontakt",
+      "viewportWidth": 1440,
+      "elements": 27,
+      "overflow": false
+    },
+    {
+      "route": "/zapisz-sie",
+      "viewportWidth": 1440,
+      "elements": 24,
+      "overflow": false
+    },
+    {
+      "route": "/cennik/koszalin",
+      "viewportWidth": 1440,
+      "elements": 56,
+      "overflow": false
+    },
+    {
+      "route": "/oferta/koszalin",
+      "viewportWidth": 1440,
+      "elements": 22,
+      "overflow": false
+    },
+    {
+      "route": "/faq",
+      "viewportWidth": 1440,
+      "elements": 32,
+      "overflow": false
+    }
+  ],
+  "differences": [],
+  "browserExceptions": []
+}

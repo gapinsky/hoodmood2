@@ -1,9 +1,14 @@
+import { createMetadata } from "@/lib/seo";
+import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import PageIntro from "@/myComponents/common/headers/PageIntro";
-import { data, instructors } from "./data";
+import { data } from "./data";
+import { activeTrainers } from "@/data/trainers";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import TeamCard from "@/myComponents/pages/team/TeamCard";
+
+export const metadata = createMetadata({ path: "/kadra", ...staticSeoPages["/kadra"] });
 
 export default function Team() {
   const groups = [
@@ -11,13 +16,13 @@ export default function Team() {
       id: "core-crew",
       title: "Kadra",
       label: "Core crew",
-      trainers: instructors.filter((instructor) => !instructor.specialGuest),
+      trainers: activeTrainers.filter((trainer) => !trainer.specialGuest),
     },
     {
       id: "special-guests",
       title: "Goście specjalni",
       label: "Special guests",
-      trainers: instructors.filter((instructor) => instructor.specialGuest),
+      trainers: activeTrainers.filter((trainer) => trainer.specialGuest),
     },
   ];
 
@@ -49,9 +54,9 @@ export default function Team() {
                   key={instructor.id}
                   name={instructor.name}
                   role={instructor.role}
-                  images={instructor.images}
+                  image={instructor.image}
                   localizations={instructor.localizations}
-                  id={instructor.id}
+                  slug={instructor.slug}
                   styles={instructor.styles}
                 />
               ))}

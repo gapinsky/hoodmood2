@@ -23,7 +23,7 @@ import InstagramPostCard from "./InstagramPostCard";
 import InstagramMedia from "./InstagramMedia";
 import type { InstagramPost, InstagramPostsPage } from "./types";
 
-const studioAvatar = "/assets/svg/mainLogo/logo.svg";
+const studioAvatar = "/assets/optimized/branding/logo.webp";
 
 function formatCount(count?: number) {
   if (typeof count !== "number") {
@@ -248,9 +248,11 @@ function InstagramPostDialog({ post }: { post: InstagramPost }) {
 export default function InstagramFeed({
   posts: initialPosts,
   initialCursor,
+  initialStatus,
 }: {
   posts: InstagramPost[];
   initialCursor: string | null;
+  initialStatus: "success" | "error";
 }) {
   const [posts, setPosts] = useState(initialPosts);
   const [cursor, setCursor] = useState(initialCursor);
@@ -274,6 +276,7 @@ export default function InstagramFeed({
       if (!response.ok) throw new Error("Nie udało się pobrać postów");
 
       const page = (await response.json()) as InstagramPostsPage;
+      if (page.status === "error") throw new Error("Instagram unavailable");
       setPosts((currentPosts) => {
         const knownIds = new Set(currentPosts.map((post) => post.id));
         const newPosts = page.posts.filter((post) => !knownIds.has(post.id));
@@ -306,7 +309,7 @@ export default function InstagramFeed({
   if (posts.length === 0) {
     return (
       <p className="w-full rounded-md border border-black/6 bg-white/26 p-5 text-sm ui-muted-copy dark:border-white/8 dark:bg-white/5">
-        Nie ma teraz dostępnych wpisów. Zajrzyj bezpośrednio na nasz Instagram.
+        {initialStatus === "error" ? "Nie możemy teraz załadować aktualności. Spróbuj później lub zajrzyj na nasz Instagram." : "Nie ma teraz dostępnych wpisów. Zajrzyj bezpośrednio na nasz Instagram."}
       </p>
     );
   }

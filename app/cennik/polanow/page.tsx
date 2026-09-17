@@ -1,14 +1,16 @@
+import { createMetadata } from "@/lib/seo";
+import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
 import { pricingTabs } from "@/data/tabs";
-import {
-  polanowPricingPageContent,
-  polanowPricingTableData,
-} from "@/data/pricingData";
+import { getPricingPageContent } from "@/lib/data/class-pricing";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import PricingTable from "@/myComponents/pages/pricing/PricingTable";
 import MainWrapper from "@/myComponents/common/MainWrapper";
+export const metadata = createMetadata({ path: "/cennik/polanow", ...staticSeoPages["/cennik/polanow"] });
+
 export default function PricingPolanow() {
+  const content = getPricingPageContent("polanow");
   return (
     <MainWrapper>
       <SectionContainer>
@@ -16,10 +18,10 @@ export default function PricingPolanow() {
           tabs={pricingTabs}
           eyebrow="Twój ruch / Hoodmood"
           navigationLabel="Lokalizacja cennika"
-          title={polanowPricingPageContent.title}
-          description={polanowPricingPageContent.description}
+          title={content.title}
+          description={content.description}
         ></LocationPageHeader>
-        <PricingTable items={polanowPricingTableData} />
+        <PricingTable items={content.tableData} />
         <AnyQuestionsContact />
       </SectionContainer>
     </MainWrapper>

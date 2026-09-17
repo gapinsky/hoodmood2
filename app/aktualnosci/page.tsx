@@ -1,3 +1,6 @@
+import { Suspense } from "react";
+import { createMetadata } from "@/lib/seo";
+import { staticSeoPages } from "@/lib/seo-pages";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import PageIntro from "@/myComponents/common/headers/PageIntro";
@@ -5,6 +8,8 @@ import { data } from "./data";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import LatestInstagramPosts from "@/myComponents/pages/news/LatestInstagramPosts";
 import { ArrowUpRight } from "lucide-react";
+
+export const metadata = createMetadata({ path: "/aktualnosci", ...staticSeoPages["/aktualnosci"] });
 
 export default function News() {
   return (
@@ -19,7 +24,7 @@ export default function News() {
           </nav>
         </PageIntro>
 
-        <LatestInstagramPosts />
+        <Suspense fallback={<p role="status" className="py-8 text-muted-foreground">Ładowanie aktualności…</p>}><LatestInstagramPosts /></Suspense>
 
         <AnyQuestionsContact />
       </SectionContainer>

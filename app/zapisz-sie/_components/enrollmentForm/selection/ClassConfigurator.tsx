@@ -18,8 +18,11 @@ import {
   enrollmentClasses,
   getClassAgeLabel,
   getEnrollmentClassPrice,
-  isAdultClass,
+  matchesEnrollmentParticipant,
+  createSelectedClass,
+  getEnrollmentFrequencyLabel,
 } from "@/lib/data/enrollment-classes";
+import type { CitySlug } from "@/data/locations";
 import type { SelectedClassItem } from "@/lib/schemas/enrollmentSchema";
 import { inputStyles } from "@/myComponents/forms/filterStyles";
 
@@ -28,7 +31,7 @@ type ClassConfiguratorProps = {
   isHoodmoodMember: boolean;
   participantType: "youth" | "adult";
   participantAge: string;
-  selectedLocationId: "koszalin" | "polanow" | "bialy-bor";
+  selectedLocationId: CitySlug;
   onAdd: (item: SelectedClassItem) => void;
 };
 
@@ -47,9 +50,10 @@ export default function ClassConfigurator({
     "class",
   );
 
-  const numericAge = Number.parseInt(participantAge, 10);
   const normalizedSearch = normalizeText(searchValue.trim());
-  const packageModeAvailable = selectedLocationId === "koszalin";
+  const packageModeAvailable = enrollmentClasses.some((item) =>
+    item.locationId === selectedLocationId && item.type === "package",
+  );
 
   useEffect(() => {
     if (!packageModeAvailable && selectionMode === "package") {
@@ -67,33 +71,16 @@ export default function ClassConfigurator({
         if (!normalizedName.includes(normalizedSearch)) return false;
       }
 
-      if (participantType === "adult") {
-        return isAdultClass(item);
-      }
-
-      if (isAdultClass(item)) return false;
-      if (!Number.isFinite(numericAge)) return true;
-      if (item.minAge !== null && numericAge < item.minAge) return false;
-      if (item.maxAge !== null && numericAge > item.maxAge) return false;
-
-      return true;
+      return matchesEnrollmentParticipant(item, participantType, participantAge);
     });
   }, [
     selectedLocationId,
     selectionMode,
     normalizedSearch,
-    numericAge,
+    participantAge,
     participantType,
   ]);
 
-  const getFrequencyLabel = (frequency: string) =>
-    frequency === "-"
-      ? "Według grafiku"
-      : frequency.includes("wej")
-      ? frequency
-      : frequency.includes("x/tyg")
-        ? frequency
-        : `${frequency}x/tyg`;
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-4">
@@ -167,7 +154,7 @@ export default function ClassConfigurator({
             const isAdded = items.some(
               (selectedItem) =>
                 selectedItem.locationId === item.locationId &&
-                selectedItem.classTypeId === item.id,
+                selectedItem.scheduleId === item.classId,
             );
 
             return (
@@ -188,8 +175,8 @@ export default function ClassConfigurator({
                       </p>
                       <p className="inline-flex items-center gap-1.5">
                         <Calendar className="h-4 w-4 shrink-0" />
-                        <span>{getFrequencyLabel(item.frequency)}</span>
-                        {(item.frequencyDescription || item.frequency !== "-") && (
+                        <span>{getEnrollmentFrequencyLabel(item.frequency)}</span>
+                        {(item.frequencyDescription || /^\d+$/.test(item.frequency)) && (
                           <HoverCard openDelay={20} closeDelay={20}>
                             <HoverCardTrigger asChild>
                               <button type="button" aria-label="Szczegóły częstotliwości zajęć" className="ui-focus-ring px-1">
@@ -206,36 +193,26 @@ export default function ClassConfigurator({
                     </div>
                   </div>
 
+                  {(item.instructorLabel || item.specialInstructorLabel) && (
+                    <div className="space-y-1 text-xs leading-5 text-muted-foreground">
+                      {item.instructorLabel && <p>Prowadzący: {item.instructorLabel}</p>}
+                      {item.specialInstructorLabel && <p>Gościnnie: {item.specialInstructorLabel}</p>}
+                    </div>
+                  )}
+
                   <div className="flex justify-between gap-3 items-end">
                     <div className="space-y-0.5 md:flex md:items-center ">
                       <p className="text-sm font-semibold text-black dark:text-white">
                         {price.toFixed(2).replace(".", ",")} zł
                       </p>
-                      <span className="hidden md:block ml-1 mt-1 text-xs ui-muted-label text-black/50 dark:text-white/45">
-                        /
-                      </span>
-                      <p className="ui-muted-label text-xs text-black/50 dark:text-white/45 md:mt-1">
-                        {item.billingPeriod === "one-time"
-                          ? "jednorazowo"
-                          : "miesięcznie"}
+                      <p className="ui-muted-label text-xs text-black/50 dark:text-white/45 md:ml-1">
+                        {item.priceUnit}
                       </p>
                     </div>
                     <button
                       type="button"
                       onClick={() =>
-                        onAdd({
-                          clientId: crypto.randomUUID(),
-                          locationId: item.locationId,
-                          locationName: item.locationName,
-                          classTypeId: item.id,
-                          classTypeName: item.name,
-                          billingPeriod: item.billingPeriod,
-                          scheduleId: item.id,
-                          dayLabel: item.frequency,
-                          timeLabel: ageLabel,
-                          price,
-                          currency: "PLN",
-                        })
+                        onAdd(createSelectedClass(item, isHoodmoodMember, crypto.randomUUID()))
                       }
                       disabled={isAdded}
                       className={`ui-focus-ring inline-flex min-h-11 shrink-0 w-fit items-center justify-center rounded-md border border-foreground/20 px-4 py-2 text-sm font-semibold transition  ${

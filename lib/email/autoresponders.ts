@@ -1,14 +1,14 @@
 import "server-only";
+import { legalEntity } from "@/data/locations";
 
 import type { ContactFormData } from "@/lib/schemas/contactSchema";
 import type { EnrollmentFormData } from "@/lib/schemas/enrollmentSchema";
 
-const SITE_URL = "https://hoodmood.pl";
+import { SITE_URL } from "@/lib/seo";
 const LOGO_URL = `${SITE_URL}/assets/optimized/home/logo.png`;
 const PRIVACY_URL = `${SITE_URL}/polityka-prywatnosci`;
 const TERMS_URL = `${SITE_URL}/regulamin`;
-const DATA_CONTROLLER =
-  "Talita Jarzęcka Centrum Rozwoju Dzieci i Młodzieży";
+const DATA_CONTROLLER = legalEntity.name;
 
 export function escapeHtml(value: string): string {
   const entities: Record<string, string> = {
@@ -125,16 +125,22 @@ export function enrollmentConfirmationEmail(data: EnrollmentFormData): string {
   const classes = data.selectedClasses
     .map(
       (item) =>
-        `<li style="margin:0 0 12px;"><strong>${escapeHtml(item.classTypeName)}</strong><br><span style="color:#6b5c62;">${escapeHtml(item.locationName)} &bull; ${escapeHtml(item.timeLabel)}</span><br><span style="color:#6b5c62;">Częstotliwość: ${escapeHtml(frequencyLabel(item.dayLabel))}</span></li>`,
+        `<li style="margin:0 0 12px;">
+          <strong>${escapeHtml(item.classTypeName)}</strong><br>
+          <span style="color:#6b5c62;">${escapeHtml(item.locationName)} &bull; ${escapeHtml(item.timeLabel)}</span><br>
+          <span style="color:#6b5c62;">Częstotliwość: ${escapeHtml(frequencyLabel(item.dayLabel))}</span><br>
+          <span style="color:#6b5c62;">${escapeHtml(item.scheduleLabel)}</span><br>
+          ${item.instructorLabel ? `<span style="color:#6b5c62;">Prowadzący: ${escapeHtml(item.instructorLabel)}</span><br>` : ""}
+          ${item.specialInstructorLabel ? `<span style="color:#6b5c62;">Gościnnie: ${escapeHtml(item.specialInstructorLabel)}</span><br>` : ""}
+          <span style="color:#6b5c62;">${item.price.toFixed(2).replace(".", ",")} PLN ${escapeHtml(item.priceUnit)}</span>
+        </li>`,
     )
     .join("");
 
   const rows = [
     detailRow("Uczestnik", escapeHtml(data.participantFullName)),
     detailRow("Grupa wiekowa", participantType),
-    data.participantType === "youth"
-      ? detailRow("Wiek", `${escapeHtml(data.participantAge)} lat`)
-      : "",
+    detailRow("Wiek", `${escapeHtml(data.participantAge)} lat`),
     location ? detailRow("Lokalizacja", escapeHtml(location)) : "",
     detailRow("Osoba kontaktowa", escapeHtml(data.parentFullName)),
     detailRow(

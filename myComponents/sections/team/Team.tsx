@@ -2,7 +2,7 @@ import SectionContent from "@/myComponents/common/headers/SectionContent";
 import { data } from "./data";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import TeamCarousel from "./TeamCarousel";
-import { instructors } from "@/app/kadra/data";
+import { activeTrainers } from "@/data/trainers";
 
 export default function Team() {
   return (
@@ -11,7 +11,7 @@ export default function Team() {
         title={data.title}
         description={data.description}
       />
-      <TeamCarousel instructors={instructors} />
+      <TeamCarousel trainers={activeTrainers} />
     </SectionContainer>
   );
 }

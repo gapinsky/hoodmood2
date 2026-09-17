@@ -1,3 +1,4 @@
+import { legalEntity, locations, studioAddress, mainContact } from "@/data/locations";
 export const data = {
   badge: "Regulamin",
   title: "Regulamin korzystania z usług studia tańca Hoodmood",
@@ -6,6 +7,7 @@ export const data = {
 };
 
 type Section = {
+  id?: string;
   title: string;
   points: string[];
 };
@@ -14,18 +16,20 @@ export const regulations: Section[] = [
   {
     title: "§ 1 Podmiot świadczący usługi",
     points: [
-      "Zajęcia taneczne organizowane są przez Talitę Jarzęcką Centrum Rozwoju Dzieci i Młodzieży z siedzibą w Koszalinie przy ul. Wenedów 18F/5, 75-847 Koszalin, NIP: 6692557695, REGON: 38646988.",
+      `Zajęcia taneczne organizowane są przez ${legalEntity.name} z siedzibą w Koszalinie przy ${legalEntity.address}, NIP: ${legalEntity.nip}, REGON: ${legalEntity.regon}.`,
     ],
   },
   {
+    id: "definicje",
     title: "§ 2 Definicje",
     points: [
-      "Centrum – Talita Jarzęcka Centrum Rozwoju Dzieci i Młodzieży z siedzibą w Koszalinie, NIP: 6692557695, REGON: 38646988.",
-      "Studio Tańca – Hoodmood Dance Studio, ul. Zwierzyniecka 115, 75-601 Koszalin.",
+      `Centrum – ${legalEntity.name} z siedzibą w Koszalinie, NIP: ${legalEntity.nip}, REGON: ${legalEntity.regon}.`,
+      `Studio Tańca – Hoodmood Dance Studio, ${studioAddress(locations.koszalin)}.`,
       "Sezon – okres od dnia pierwszych zajęć tanecznych organizowanych przez centrum we wrześniu do dnia ostatnich zajęć tanecznych w czerwcu.",
       "Uczestnik – osoba wskazana w umowie zawartej z centrum lub potwierdzeniu uczestnictwa w zajęciach tanecznych prowadzonych przez centrum, która upoważniona jest do udziału w określonych zajęciach tanecznych.",
       "Przedsięwzięcia komercyjne – wszelkiego rodzaju odpłatne wystąpienia, w szczególności w reklamach, podczas wydarzeń kulturalnych, w teledyskach, filmach i tym podobne.",
       "Instruktor – osoba prowadząca zajęcia taneczne w Centrum.",
+      "Aktywny kursant Hoodmood – osoba aktualnie zapisana i uczęszczająca na regularne zajęcia Studia Tańca. Status ten uprawnia do korzystania z cen dla aktywnych kursantów wskazanych w cenniku Master Trainers, Masterclass i Master Pass.",
     ],
   },
   {
@@ -39,7 +43,7 @@ export const regulations: Section[] = [
   {
     title: "§ 4 Zasady uczestnictwa w zajęciach stacjonarnych",
     points: [
-      "Zajęcia taneczne odbywają się w Hoodmood Dance Studio, ul. Zwycięstwa 115, 75-601 Koszalin.",
+      `Zajęcia taneczne odbywają się w Hoodmood Dance Studio, ${studioAddress(locations.koszalin)}.`,
       "Przed rozpoczęciem zajęć uczestnik zobowiązany jest okazać dokument potwierdzający uiszczenie wpłaty za uczestnictwo w zajęciach, w tym potwierdzenie przelewu, paragon.",
       "Na salę taneczną można wejść tylko w zmienionym obuwiu sportowym lub tanecznym. Uczestnika, który nie ma zmienionego obuwia instruktor może wyprosić z zajęć. Opłata za zajęcia, w których uczestnik nie wziął udziału z uwagi na brak odpowiedniego obuwia nie jest zwracana.",
       "Uczestnicy zobowiązani są do punktualnego stawiania się na zajęcia, pod rygorem odmowy dopuszczenia do zajęć oraz uczestniczenia w nich w sposób, który nie zakłóca ich przebiegu.",
@@ -73,7 +77,7 @@ export const regulations: Section[] = [
   {
     title: "§ 7 Reklamacje",
     points: [
-      "Klient może złożyć reklamację pisemnie lub drogą mailową na adres hoodmood.recepcja@gmail.com, jeżeli usługi świadczone przez placówkę nie są realizowane bez uzasadnionej przyczyny lub są realizowane niezgodnie z regulaminem lub zawartą z centrum umową uczestnictwa w zajęciach tanecznych.",
+      `Klient może złożyć reklamację pisemnie lub drogą mailową na adres ${mainContact.email}, jeżeli usługi świadczone przez placówkę nie są realizowane bez uzasadnionej przyczyny lub są realizowane niezgodnie z regulaminem lub zawartą z centrum umową uczestnictwa w zajęciach tanecznych.`,
       "Centrum oświadcza, iż reklamacje dotyczące wykonywania świadczeń przez centrum mogą być skutecznie zgłaszane w ciągu 30 dni od dnia zakończenia usługi, której reklamacja dotyczy. Po upływie tego okresu klient traci uprawnienie do wniesienia reklamacji dotyczącej konkretnej usługi.",
       "Reklamacja powinna zawierać co najmniej: dane pozwalające na zidentyfikowanie reklamującego, okres, którego reklamacja dotyczy i okoliczności uzasadniające reklamację, a w przypadku reklamacji złożonej w formie pisemnej także podpis reklamującego.",
       "Reklamacja zgłoszona drogą mailową rozpatrywana jest tylko pod warunkiem przesłania jej z adresu e-mail wskazanego w umowie.",

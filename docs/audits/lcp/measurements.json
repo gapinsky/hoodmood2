@@ -1,0 +1,3560 @@
+{
+  "date": "2026-09-16",
+  "url": "http://localhost:3100/",
+  "note": "Cold browser cache; local production build, image optimizer already warm. Simulated and DevTools-throttled results must be compared separately.",
+  "groups": {
+    "baseline": {
+      "medianLcpMs": 5106.5899500000005,
+      "runs": [
+        {
+          "name": "baseline-1",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T18:49:20.601Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5483.24925,
+          "fcpMs": 1958.2492499999998,
+          "cls": 0.0002537343750015678,
+          "tbtMs": 34,
+          "metrics": {
+            "firstContentfulPaint": 1958,
+            "largestContentfulPaint": 5483,
+            "interactive": 5521,
+            "speedIndex": 1958,
+            "totalBlockingTime": 34,
+            "maxPotentialFID": 74,
+            "cumulativeLayoutShift": 0.0002537343750015678,
+            "cumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "timeToFirstByte": 453,
+            "observedTimeOrigin": 0,
+            "observedTimeOriginTs": 351167814022,
+            "observedNavigationStart": 0,
+            "observedNavigationStartTs": 351167814022,
+            "observedFirstPaint": 60,
+            "observedFirstPaintTs": 351167874186,
+            "observedFirstContentfulPaint": 130,
+            "observedFirstContentfulPaintTs": 351167944098,
+            "observedFirstContentfulPaintAllFrames": 130,
+            "observedFirstContentfulPaintAllFramesTs": 351167944098,
+            "observedLargestContentfulPaint": 130,
+            "observedLargestContentfulPaintTs": 351167944098,
+            "observedLargestContentfulPaintAllFrames": 130,
+            "observedLargestContentfulPaintAllFramesTs": 351167944098,
+            "observedTraceEnd": 2559,
+            "observedTraceEndTs": 351170373454,
+            "observedLoad": 214,
+            "observedLoadTs": 351168027718,
+            "observedDomContentLoaded": 131,
+            "observedDomContentLoadedTs": 351167944611,
+            "observedCumulativeLayoutShift": 0.0002537343750015678,
+            "observedCumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "observedFirstVisualChange": 133,
+            "observedFirstVisualChangeTs": 351167947022,
+            "observedLastVisualChange": 2544,
+            "observedLastVisualChangeTs": 351170358022,
+            "observedSpeedIndex": 414,
+            "observedSpeedIndexTs": 351168228046
+          },
+          "observedLcpBreakdown": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "label",
+                  "valueType": "text",
+                  "label": "Subpart"
+                },
+                {
+                  "key": "duration",
+                  "valueType": "ms",
+                  "label": "Duration"
+                }
+              ],
+              "items": [
+                {
+                  "subpart": "timeToFirstByte",
+                  "label": "Time to first byte",
+                  "duration": 17.907
+                },
+                {
+                  "subpart": "elementRenderDelay",
+                  "label": "Element render delay",
+                  "duration": 112.169
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-SPAN",
+              "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+              "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+              "boundingRect": {
+                "top": 320,
+                "bottom": 375,
+                "left": 16,
+                "right": 214,
+                "width": 198,
+                "height": 56
+              },
+              "snippet": "<span class=\"inline-block \">",
+              "nodeLabel": "HOODMOOD"
+            }
+          ],
+          "lcpTextLoadDelayMs": 0,
+          "lcpTextLoadDurationMs": 0,
+          "criticalRequests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.9000000357627869,
+              "networkEndTime": 18.98000007867813,
+              "transferSize": 46179,
+              "resourceSize": 417666,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/aa5f74293546f6d0-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 25.905000030994415,
+              "networkEndTime": 29.20899999141693,
+              "transferSize": 21596,
+              "resourceSize": 21296,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/eebd5672f205c2b9-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 26.07400006055832,
+              "networkEndTime": 29.855000019073486,
+              "transferSize": 29208,
+              "resourceSize": 28908,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fvideos%2FchairRotate-poster.jpg&w=750&q=75",
+              "resourceType": "Image",
+              "networkRequestTime": 28.213000059127808,
+              "networkEndTime": 84.47300004959106,
+              "transferSize": 46290,
+              "resourceSize": 45856,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/389a521624936e66.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 27.897000014781952,
+              "networkEndTime": 43.58200001716614,
+              "transferSize": 25574,
+              "resourceSize": 163186,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 28.037000060081482,
+              "networkEndTime": 41.35800004005432,
+              "transferSize": 1255,
+              "resourceSize": 5475,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 28.112000048160553,
+              "networkEndTime": 41.80000001192093,
+              "transferSize": 1087,
+              "resourceSize": 754,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/dc1a31dd116e0329-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 103.10000002384186,
+              "networkEndTime": 113.66000002622604,
+              "transferSize": 46380,
+              "resourceSize": 46080,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/62c97acc3aa63787-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 103.15800005197525,
+              "networkEndTime": 113.79200005531311,
+              "transferSize": 12304,
+              "resourceSize": 12004,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/assets/videos/chairRotate.mp4",
+              "resourceType": "Media",
+              "networkRequestTime": 1379.2420000433922,
+              "networkEndTime": 1394.388000011444,
+              "transferSize": 2360432,
+              "resourceSize": 2360074,
+              "priority": "Low"
+            }
+          ]
+        },
+        {
+          "name": "baseline-2",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T18:49:35.549Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5105.784750000001,
+          "fcpMs": 1955.78475,
+          "cls": 0,
+          "tbtMs": 6.5,
+          "metrics": {
+            "firstContentfulPaint": 1956,
+            "largestContentfulPaint": 5106,
+            "interactive": 5181,
+            "speedIndex": 1956,
+            "totalBlockingTime": 7,
+            "maxPotentialFID": 58,
+            "cumulativeLayoutShift": 0,
+            "cumulativeLayoutShiftMainFrame": 0,
+            "timeToFirstByte": 452,
+            "observedTimeOrigin": 0,
+            "observedTimeOriginTs": 351182726334,
+            "observedNavigationStart": 0,
+            "observedNavigationStartTs": 351182726334,
+            "observedFirstPaint": 45,
+            "observedFirstPaintTs": 351182771499,
+            "observedFirstContentfulPaint": 83,
+            "observedFirstContentfulPaintTs": 351182808882,
+            "observedFirstContentfulPaintAllFrames": 83,
+            "observedFirstContentfulPaintAllFramesTs": 351182808882,
+            "observedLargestContentfulPaint": 83,
+            "observedLargestContentfulPaintTs": 351182808882,
+            "observedLargestContentfulPaintAllFrames": 83,
+            "observedLargestContentfulPaintAllFramesTs": 351182808882,
+            "observedTraceEnd": 2468,
+            "observedTraceEndTs": 351185194177,
+            "observedLoad": 124,
+            "observedLoadTs": 351182850206,
+            "observedDomContentLoaded": 27,
+            "observedDomContentLoadedTs": 351182753573,
+            "observedCumulativeLayoutShift": 0,
+            "observedCumulativeLayoutShiftMainFrame": 0,
+            "observedFirstVisualChange": 47,
+            "observedFirstVisualChangeTs": 351182773334,
+            "observedLastVisualChange": 2453,
+            "observedLastVisualChangeTs": 351185179334,
+            "observedSpeedIndex": 342,
+            "observedSpeedIndexTs": 351183068082
+          },
+          "observedLcpBreakdown": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "label",
+                  "valueType": "text",
+                  "label": "Subpart"
+                },
+                {
+                  "key": "duration",
+                  "valueType": "ms",
+                  "label": "Duration"
+                }
+              ],
+              "items": [
+                {
+                  "subpart": "timeToFirstByte",
+                  "label": "Time to first byte",
+                  "duration": 5.363
+                },
+                {
+                  "subpart": "elementRenderDelay",
+                  "label": "Element render delay",
+                  "duration": 77.185
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-SPAN",
+              "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+              "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+              "boundingRect": {
+                "top": 320,
+                "bottom": 375,
+                "left": 16,
+                "right": 214,
+                "width": 198,
+                "height": 56
+              },
+              "snippet": "<span class=\"inline-block \">",
+              "nodeLabel": "HOODMOOD"
+            }
+          ],
+          "lcpTextLoadDelayMs": 0,
+          "lcpTextLoadDurationMs": 0,
+          "criticalRequests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.2919999957084656,
+              "networkEndTime": 6.849999964237213,
+              "transferSize": 46179,
+              "resourceSize": 417666,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/aa5f74293546f6d0-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 9.343999981880188,
+              "networkEndTime": 11.606000006198883,
+              "transferSize": 21596,
+              "resourceSize": 21296,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/eebd5672f205c2b9-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 9.418999969959259,
+              "networkEndTime": 11.424000024795532,
+              "transferSize": 29208,
+              "resourceSize": 28908,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fvideos%2FchairRotate-poster.jpg&w=750&q=75",
+              "resourceType": "Image",
+              "networkRequestTime": 11.349000036716461,
+              "networkEndTime": 13.939000010490417,
+              "transferSize": 46290,
+              "resourceSize": 45856,
+              "priority": "Low"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/389a521624936e66.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 10.854999959468842,
+              "networkEndTime": 16.876999974250793,
+              "transferSize": 25574,
+              "resourceSize": 163186,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 10.997999966144562,
+              "networkEndTime": 14.264999985694885,
+              "transferSize": 1255,
+              "resourceSize": 5475,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 11.165000021457672,
+              "networkEndTime": 13.273999989032745,
+              "transferSize": 1087,
+              "resourceSize": 754,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/dc1a31dd116e0329-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 34.66200000047684,
+              "networkEndTime": 36.2049999833107,
+              "transferSize": 46380,
+              "resourceSize": 46080,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/62c97acc3aa63787-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 34.719999969005585,
+              "networkEndTime": 36.04799997806549,
+              "transferSize": 12304,
+              "resourceSize": 12004,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/assets/videos/chairRotate.mp4",
+              "resourceType": "Media",
+              "networkRequestTime": 1304.2770000100136,
+              "networkEndTime": 1319.6330000162125,
+              "transferSize": 2360432,
+              "resourceSize": 2360074,
+              "priority": "Low"
+            }
+          ]
+        },
+        {
+          "name": "baseline-3",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T18:49:50.210Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5106.5899500000005,
+          "fcpMs": 1956.58995,
+          "cls": 0.0002537343750015678,
+          "tbtMs": 7,
+          "metrics": {
+            "firstContentfulPaint": 1957,
+            "largestContentfulPaint": 5107,
+            "interactive": 5182,
+            "speedIndex": 1957,
+            "totalBlockingTime": 7,
+            "maxPotentialFID": 58,
+            "cumulativeLayoutShift": 0.0002537343750015678,
+            "cumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "timeToFirstByte": 452,
+            "observedTimeOrigin": 0,
+            "observedTimeOriginTs": 351197401054,
+            "observedNavigationStart": 0,
+            "observedNavigationStartTs": 351197401054,
+            "observedFirstPaint": 65,
+            "observedFirstPaintTs": 351197466457,
+            "observedFirstContentfulPaint": 65,
+            "observedFirstContentfulPaintTs": 351197466457,
+            "observedFirstContentfulPaintAllFrames": 65,
+            "observedFirstContentfulPaintAllFramesTs": 351197466457,
+            "observedLargestContentfulPaint": 65,
+            "observedLargestContentfulPaintTs": 351197466457,
+            "observedLargestContentfulPaintAllFrames": 65,
+            "observedLargestContentfulPaintAllFramesTs": 351197466457,
+            "observedTraceEnd": 2469,
+            "observedTraceEndTs": 351199869825,
+            "observedLoad": 128,
+            "observedLoadTs": 351197529037,
+            "observedDomContentLoaded": 45,
+            "observedDomContentLoadedTs": 351197446449,
+            "observedCumulativeLayoutShift": 0.0002537343750015678,
+            "observedCumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "observedFirstVisualChange": 8,
+            "observedFirstVisualChangeTs": 351197409054,
+            "observedLastVisualChange": 2460,
+            "observedLastVisualChangeTs": 351199861054,
+            "observedSpeedIndex": 351,
+            "observedSpeedIndexTs": 351197752361
+          },
+          "observedLcpBreakdown": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "label",
+                  "valueType": "text",
+                  "label": "Subpart"
+                },
+                {
+                  "key": "duration",
+                  "valueType": "ms",
+                  "label": "Duration"
+                }
+              ],
+              "items": [
+                {
+                  "subpart": "timeToFirstByte",
+                  "label": "Time to first byte",
+                  "duration": 4.106
+                },
+                {
+                  "subpart": "elementRenderDelay",
+                  "label": "Element render delay",
+                  "duration": 61.297
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-SPAN",
+              "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+              "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+              "boundingRect": {
+                "top": 320,
+                "bottom": 375,
+                "left": 16,
+                "right": 214,
+                "width": 198,
+                "height": 56
+              },
+              "snippet": "<span class=\"inline-block \">",
+              "nodeLabel": "HOODMOOD"
+            }
+          ],
+          "lcpTextLoadDelayMs": 0,
+          "lcpTextLoadDurationMs": 0,
+          "criticalRequests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.29600000381469727,
+              "networkEndTime": 5.801999986171722,
+              "transferSize": 46179,
+              "resourceSize": 417666,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/aa5f74293546f6d0-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 8.26199996471405,
+              "networkEndTime": 10.47000002861023,
+              "transferSize": 21596,
+              "resourceSize": 21296,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/eebd5672f205c2b9-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 8.339999973773956,
+              "networkEndTime": 10.533999979496002,
+              "transferSize": 29208,
+              "resourceSize": 28908,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fvideos%2FchairRotate-poster.jpg&w=750&q=75",
+              "resourceType": "Image",
+              "networkRequestTime": 10.390999972820282,
+              "networkEndTime": 13.235000014305115,
+              "transferSize": 46290,
+              "resourceSize": 45856,
+              "priority": "Low"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/389a521624936e66.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 9.90499997138977,
+              "networkEndTime": 16.285000026226044,
+              "transferSize": 25574,
+              "resourceSize": 163186,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 10.037999987602234,
+              "networkEndTime": 12.71399998664856,
+              "transferSize": 1255,
+              "resourceSize": 5475,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 10.263000011444092,
+              "networkEndTime": 12.140999972820282,
+              "transferSize": 1087,
+              "resourceSize": 754,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/62c97acc3aa63787-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 45.041999995708466,
+              "networkEndTime": 58.078000009059906,
+              "transferSize": 12304,
+              "resourceSize": 12004,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/dc1a31dd116e0329-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 45.19499999284744,
+              "networkEndTime": 58.24899995326996,
+              "transferSize": 46380,
+              "resourceSize": 46080,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/assets/videos/chairRotate.mp4",
+              "resourceType": "Media",
+              "networkRequestTime": 1310.5639999508858,
+              "networkEndTime": 1325.82800000906,
+              "transferSize": 2360432,
+              "resourceSize": 2360074,
+              "priority": "Low"
+            }
+          ]
+        }
+      ]
+    },
+    "antonLatin": {
+      "medianLcpMs": 5105.78535,
+      "runs": [
+        {
+          "name": "font-h1-1",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T18:52:10.311Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5182.27395,
+          "fcpMs": 1957.2739500000002,
+          "cls": 0,
+          "tbtMs": 5,
+          "metrics": {
+            "firstContentfulPaint": 1957,
+            "largestContentfulPaint": 5182,
+            "interactive": 5250,
+            "speedIndex": 1957,
+            "totalBlockingTime": 5,
+            "maxPotentialFID": 57,
+            "cumulativeLayoutShift": 0,
+            "cumulativeLayoutShiftMainFrame": 0,
+            "timeToFirstByte": 452,
+            "observedTimeOrigin": 0,
+            "observedTimeOriginTs": 351337497528,
+            "observedNavigationStart": 0,
+            "observedNavigationStartTs": 351337497528,
+            "observedFirstPaint": 59,
+            "observedFirstPaintTs": 351337556191,
+            "observedFirstContentfulPaint": 100,
+            "observedFirstContentfulPaintTs": 351337597671,
+            "observedFirstContentfulPaintAllFrames": 100,
+            "observedFirstContentfulPaintAllFramesTs": 351337597671,
+            "observedLargestContentfulPaint": 100,
+            "observedLargestContentfulPaintTs": 351337597671,
+            "observedLargestContentfulPaintAllFrames": 100,
+            "observedLargestContentfulPaintAllFramesTs": 351337597671,
+            "observedTraceEnd": 2500,
+            "observedTraceEndTs": 351339997481,
+            "observedLoad": 145,
+            "observedLoadTs": 351337642829,
+            "observedDomContentLoaded": 43,
+            "observedDomContentLoadedTs": 351337540482,
+            "observedCumulativeLayoutShift": 0,
+            "observedCumulativeLayoutShiftMainFrame": 0,
+            "observedFirstVisualChange": 60,
+            "observedFirstVisualChangeTs": 351337557528,
+            "observedLastVisualChange": 2483,
+            "observedLastVisualChangeTs": 351339980528,
+            "observedSpeedIndex": 330,
+            "observedSpeedIndexTs": 351337827579
+          },
+          "observedLcpBreakdown": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "label",
+                  "valueType": "text",
+                  "label": "Subpart"
+                },
+                {
+                  "key": "duration",
+                  "valueType": "ms",
+                  "label": "Duration"
+                }
+              ],
+              "items": [
+                {
+                  "subpart": "timeToFirstByte",
+                  "label": "Time to first byte",
+                  "duration": 14.325
+                },
+                {
+                  "subpart": "elementRenderDelay",
+                  "label": "Element render delay",
+                  "duration": 85.818
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-SPAN",
+              "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+              "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+              "boundingRect": {
+                "top": 320,
+                "bottom": 375,
+                "left": 16,
+                "right": 214,
+                "width": 198,
+                "height": 56
+              },
+              "snippet": "<span class=\"inline-block \">",
+              "nodeLabel": "HOODMOOD"
+            }
+          ],
+          "lcpTextLoadDelayMs": 0,
+          "lcpTextLoadDurationMs": 0,
+          "criticalRequests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.30400002002716064,
+              "networkEndTime": 15.522000014781952,
+              "transferSize": 46184,
+              "resourceSize": 417666,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/62c97acc3aa63787-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 18.51399999856949,
+              "networkEndTime": 22.014999985694885,
+              "transferSize": 12304,
+              "resourceSize": 12004,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/eebd5672f205c2b9-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 18.614000022411346,
+              "networkEndTime": 22.1700000166893,
+              "transferSize": 29208,
+              "resourceSize": 28908,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fvideos%2FchairRotate-poster.jpg&w=750&q=75",
+              "resourceType": "Image",
+              "networkRequestTime": 20.293000042438507,
+              "networkEndTime": 71.28600001335144,
+              "transferSize": 46290,
+              "resourceSize": 45856,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/2e8eb289ad67d8a7.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 19.984000027179718,
+              "networkEndTime": 32.66700005531311,
+              "transferSize": 25597,
+              "resourceSize": 163232,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/c16d11cbe50460bf.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 20.12900000810623,
+              "networkEndTime": 29.9650000333786,
+              "transferSize": 1261,
+              "resourceSize": 5475,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 20.19599997997284,
+              "networkEndTime": 29.767000019550323,
+              "transferSize": 1087,
+              "resourceSize": 754,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/dc1a31dd116e0329-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 51.544000029563904,
+              "networkEndTime": 52.660000026226044,
+              "transferSize": 46380,
+              "resourceSize": 46080,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/aa5f74293546f6d0-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 67.7829999923706,
+              "networkEndTime": 73.26500004529953,
+              "transferSize": 21596,
+              "resourceSize": 21296,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/assets/videos/chairRotate.mp4",
+              "resourceType": "Media",
+              "networkRequestTime": 1326.966000020504,
+              "networkEndTime": 1339.6960000395775,
+              "transferSize": 2360432,
+              "resourceSize": 2360074,
+              "priority": "Low"
+            }
+          ]
+        },
+        {
+          "name": "font-h1-2",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T18:52:25.165Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5105.78535,
+          "fcpMs": 1955.78535,
+          "cls": 0,
+          "tbtMs": 6,
+          "metrics": {
+            "firstContentfulPaint": 1956,
+            "largestContentfulPaint": 5106,
+            "interactive": 5181,
+            "speedIndex": 1956,
+            "totalBlockingTime": 6,
+            "maxPotentialFID": 58,
+            "cumulativeLayoutShift": 0,
+            "cumulativeLayoutShiftMainFrame": 0,
+            "timeToFirstByte": 452,
+            "observedTimeOrigin": 0,
+            "observedTimeOriginTs": 351352355203,
+            "observedNavigationStart": 0,
+            "observedNavigationStartTs": 351352355203,
+            "observedFirstPaint": 24,
+            "observedFirstPaintTs": 351352379610,
+            "observedFirstContentfulPaint": 81,
+            "observedFirstContentfulPaintTs": 351352436555,
+            "observedFirstContentfulPaintAllFrames": 81,
+            "observedFirstContentfulPaintAllFramesTs": 351352436555,
+            "observedLargestContentfulPaint": 81,
+            "observedLargestContentfulPaintTs": 351352436555,
+            "observedLargestContentfulPaintAllFrames": 81,
+            "observedLargestContentfulPaintAllFramesTs": 351352436555,
+            "observedTraceEnd": 2477,
+            "observedTraceEndTs": 351354832109,
+            "observedLoad": 127,
+            "observedLoadTs": 351352482620,
+            "observedDomContentLoaded": 27,
+            "observedDomContentLoadedTs": 351352382641,
+            "observedCumulativeLayoutShift": 0,
+            "observedCumulativeLayoutShiftMainFrame": 0,
+            "observedFirstVisualChange": 27,
+            "observedFirstVisualChangeTs": 351352382203,
+            "observedLastVisualChange": 2473,
+            "observedLastVisualChangeTs": 351354828203,
+            "observedSpeedIndex": 360,
+            "observedSpeedIndexTs": 351352715473
+          },
+          "observedLcpBreakdown": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "label",
+                  "valueType": "text",
+                  "label": "Subpart"
+                },
+                {
+                  "key": "duration",
+                  "valueType": "ms",
+                  "label": "Duration"
+                }
+              ],
+              "items": [
+                {
+                  "subpart": "timeToFirstByte",
+                  "label": "Time to first byte",
+                  "duration": 5.506
+                },
+                {
+                  "subpart": "elementRenderDelay",
+                  "label": "Element render delay",
+                  "duration": 75.846
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-SPAN",
+              "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+              "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+              "boundingRect": {
+                "top": 320,
+                "bottom": 375,
+                "left": 16,
+                "right": 214,
+                "width": 198,
+                "height": 56
+              },
+              "snippet": "<span class=\"inline-block \">",
+              "nodeLabel": "HOODMOOD"
+            }
+          ],
+          "lcpTextLoadDelayMs": 0,
+          "lcpTextLoadDurationMs": 0,
+          "criticalRequests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.29100000858306885,
+              "networkEndTime": 6.652999997138977,
+              "transferSize": 46184,
+              "resourceSize": 417666,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/62c97acc3aa63787-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 9.884999990463257,
+              "networkEndTime": 11.967000007629395,
+              "transferSize": 12304,
+              "resourceSize": 12004,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/eebd5672f205c2b9-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 9.96100002527237,
+              "networkEndTime": 12.007000029087067,
+              "transferSize": 29208,
+              "resourceSize": 28908,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fvideos%2FchairRotate-poster.jpg&w=750&q=75",
+              "resourceType": "Image",
+              "networkRequestTime": 11.835999965667725,
+              "networkEndTime": 15.754000008106232,
+              "transferSize": 46290,
+              "resourceSize": 45856,
+              "priority": "Low"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/2e8eb289ad67d8a7.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 11.361999988555908,
+              "networkEndTime": 17.462999999523163,
+              "transferSize": 25597,
+              "resourceSize": 163232,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/c16d11cbe50460bf.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 11.491999983787537,
+              "networkEndTime": 14.721000015735626,
+              "transferSize": 1261,
+              "resourceSize": 5475,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 11.699000000953674,
+              "networkEndTime": 13.75900000333786,
+              "transferSize": 1087,
+              "resourceSize": 754,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/dc1a31dd116e0329-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 35.005999982357025,
+              "networkEndTime": 35.94099998474121,
+              "transferSize": 46380,
+              "resourceSize": 46080,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/aa5f74293546f6d0-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 50.544999957084656,
+              "networkEndTime": 54.030000030994415,
+              "transferSize": 21596,
+              "resourceSize": 21296,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/assets/videos/chairRotate.mp4",
+              "resourceType": "Media",
+              "networkRequestTime": 1307.0460000038147,
+              "networkEndTime": 1321.8999999761581,
+              "transferSize": 2360432,
+              "resourceSize": 2360074,
+              "priority": "Low"
+            }
+          ]
+        },
+        {
+          "name": "font-h1-3",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T18:52:40.053Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5105.7438,
+          "fcpMs": 1955.7438,
+          "cls": 0,
+          "tbtMs": 14.5,
+          "metrics": {
+            "firstContentfulPaint": 1956,
+            "largestContentfulPaint": 5106,
+            "interactive": 5181,
+            "speedIndex": 1956,
+            "totalBlockingTime": 15,
+            "maxPotentialFID": 70,
+            "cumulativeLayoutShift": 0,
+            "cumulativeLayoutShiftMainFrame": 0,
+            "timeToFirstByte": 452,
+            "observedTimeOrigin": 0,
+            "observedTimeOriginTs": 351367240706,
+            "observedNavigationStart": 0,
+            "observedNavigationStartTs": 351367240706,
+            "observedFirstPaint": 44,
+            "observedFirstPaintTs": 351367284739,
+            "observedFirstContentfulPaint": 86,
+            "observedFirstContentfulPaintTs": 351367326890,
+            "observedFirstContentfulPaintAllFrames": 86,
+            "observedFirstContentfulPaintAllFramesTs": 351367326890,
+            "observedLargestContentfulPaint": 86,
+            "observedLargestContentfulPaintTs": 351367326890,
+            "observedLargestContentfulPaintAllFrames": 86,
+            "observedLargestContentfulPaintAllFramesTs": 351367326890,
+            "observedTraceEnd": 2479,
+            "observedTraceEndTs": 351369719267,
+            "observedLoad": 127,
+            "observedLoadTs": 351367367846,
+            "observedDomContentLoaded": 27,
+            "observedDomContentLoadedTs": 351367267318,
+            "observedCumulativeLayoutShift": 0,
+            "observedCumulativeLayoutShiftMainFrame": 0,
+            "observedFirstVisualChange": 46,
+            "observedFirstVisualChangeTs": 351367286706,
+            "observedLastVisualChange": 2466,
+            "observedLastVisualChangeTs": 351369706706,
+            "observedSpeedIndex": 343,
+            "observedSpeedIndexTs": 351367583252
+          },
+          "observedLcpBreakdown": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "label",
+                  "valueType": "text",
+                  "label": "Subpart"
+                },
+                {
+                  "key": "duration",
+                  "valueType": "ms",
+                  "label": "Duration"
+                }
+              ],
+              "items": [
+                {
+                  "subpart": "timeToFirstByte",
+                  "label": "Time to first byte",
+                  "duration": 4.152999938964844
+                },
+                {
+                  "subpart": "elementRenderDelay",
+                  "label": "Element render delay",
+                  "duration": 82.03100006103516
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-SPAN",
+              "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+              "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+              "boundingRect": {
+                "top": 320,
+                "bottom": 375,
+                "left": 16,
+                "right": 214,
+                "width": 198,
+                "height": 56
+              },
+              "snippet": "<span class=\"inline-block \">",
+              "nodeLabel": "HOODMOOD"
+            }
+          ],
+          "lcpTextLoadDelayMs": 0,
+          "lcpTextLoadDurationMs": 0,
+          "criticalRequests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.28099995851516724,
+              "networkEndTime": 5.523000001907349,
+              "transferSize": 46184,
+              "resourceSize": 417666,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/62c97acc3aa63787-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 8.47299998998642,
+              "networkEndTime": 10.643999993801117,
+              "transferSize": 12304,
+              "resourceSize": 12004,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/eebd5672f205c2b9-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 8.549000024795532,
+              "networkEndTime": 10.76199996471405,
+              "transferSize": 29208,
+              "resourceSize": 28908,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fvideos%2FchairRotate-poster.jpg&w=750&q=75",
+              "resourceType": "Image",
+              "networkRequestTime": 10.542999982833862,
+              "networkEndTime": 12.72299998998642,
+              "transferSize": 46290,
+              "resourceSize": 45856,
+              "priority": "Low"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/2e8eb289ad67d8a7.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 10.000999987125397,
+              "networkEndTime": 16.312999963760376,
+              "transferSize": 25597,
+              "resourceSize": 163232,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/c16d11cbe50460bf.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 10.141999959945679,
+              "networkEndTime": 12.467999994754791,
+              "transferSize": 1261,
+              "resourceSize": 5475,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 10.421999990940094,
+              "networkEndTime": 12.06199997663498,
+              "transferSize": 1087,
+              "resourceSize": 754,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/dc1a31dd116e0329-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 34.72200000286102,
+              "networkEndTime": 35.79100000858307,
+              "transferSize": 46380,
+              "resourceSize": 46080,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/aa5f74293546f6d0-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 53.80799996852875,
+              "networkEndTime": 56.9099999666214,
+              "transferSize": 21596,
+              "resourceSize": 21296,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/assets/videos/chairRotate.mp4",
+              "resourceType": "Media",
+              "networkRequestTime": 1307.5270000100136,
+              "networkEndTime": 1318.6439999938011,
+              "transferSize": 2360432,
+              "resourceSize": 2360074,
+              "priority": "Low"
+            }
+          ]
+        }
+      ]
+    },
+    "inlineCss": {
+      "medianLcpMs": 4128.268,
+      "runs": [
+        {
+          "name": "inline-css-1",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T18:56:31.830Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 4128.268,
+          "fcpMs": 1654.1072,
+          "cls": 0.0002537343750015678,
+          "tbtMs": 16.5,
+          "metrics": {
+            "firstContentfulPaint": 1654,
+            "largestContentfulPaint": 4128,
+            "interactive": 4277,
+            "speedIndex": 1778,
+            "totalBlockingTime": 17,
+            "maxPotentialFID": 68,
+            "cumulativeLayoutShift": 0.0002537343750015678,
+            "cumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "timeToFirstByte": 452,
+            "observedTimeOrigin": 0,
+            "observedTimeOriginTs": 351599017841,
+            "observedNavigationStart": 0,
+            "observedNavigationStartTs": 351599017841,
+            "observedFirstPaint": 115,
+            "observedFirstPaintTs": 351599133099,
+            "observedFirstContentfulPaint": 115,
+            "observedFirstContentfulPaintTs": 351599133099,
+            "observedFirstContentfulPaintAllFrames": 115,
+            "observedFirstContentfulPaintAllFramesTs": 351599133099,
+            "observedLargestContentfulPaint": 115,
+            "observedLargestContentfulPaintTs": 351599133099,
+            "observedLargestContentfulPaintAllFrames": 115,
+            "observedLargestContentfulPaintAllFramesTs": 351599133099,
+            "observedTraceEnd": 2536,
+            "observedTraceEndTs": 351601553741,
+            "observedLoad": 174,
+            "observedLoadTs": 351599191785,
+            "observedDomContentLoaded": 49,
+            "observedDomContentLoadedTs": 351599067124,
+            "observedCumulativeLayoutShift": 0.0002537343750015678,
+            "observedCumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "observedFirstVisualChange": 9,
+            "observedFirstVisualChangeTs": 351599026841,
+            "observedLastVisualChange": 2534,
+            "observedLastVisualChangeTs": 351601551841,
+            "observedSpeedIndex": 371,
+            "observedSpeedIndexTs": 351599388508
+          },
+          "observedLcpBreakdown": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "label",
+                  "valueType": "text",
+                  "label": "Subpart"
+                },
+                {
+                  "key": "duration",
+                  "valueType": "ms",
+                  "label": "Duration"
+                }
+              ],
+              "items": [
+                {
+                  "subpart": "timeToFirstByte",
+                  "label": "Time to first byte",
+                  "duration": 17.194
+                },
+                {
+                  "subpart": "elementRenderDelay",
+                  "label": "Element render delay",
+                  "duration": 98.064
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-SPAN",
+              "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+              "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+              "boundingRect": {
+                "top": 320,
+                "bottom": 375,
+                "left": 16,
+                "right": 214,
+                "width": 198,
+                "height": 56
+              },
+              "snippet": "<span class=\"inline-block \">",
+              "nodeLabel": "HOODMOOD"
+            }
+          ],
+          "lcpTextLoadDelayMs": 0,
+          "lcpTextLoadDurationMs": 0,
+          "criticalRequests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.36399996280670166,
+              "networkEndTime": 21.218999981880188,
+              "transferSize": 99287,
+              "resourceSize": 760822,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/aa5f74293546f6d0-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 24.484000027179718,
+              "networkEndTime": 33.662999987602234,
+              "transferSize": 21596,
+              "resourceSize": 21296,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/eebd5672f205c2b9-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 24.60099995136261,
+              "networkEndTime": 34.36199992895126,
+              "transferSize": 29208,
+              "resourceSize": 28908,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fvideos%2FchairRotate-poster.jpg&w=750&q=75",
+              "resourceType": "Image",
+              "networkRequestTime": 25.13400000333786,
+              "networkEndTime": 75.51899993419647,
+              "transferSize": 46290,
+              "resourceSize": 45856,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/62c97acc3aa63787-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 63.035000026226044,
+              "networkEndTime": 64.2519999742508,
+              "transferSize": 12304,
+              "resourceSize": 12004,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/dc1a31dd116e0329-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 63.10599994659424,
+              "networkEndTime": 64.05199998617172,
+              "transferSize": 46380,
+              "resourceSize": 46080,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/assets/videos/chairRotate.mp4",
+              "resourceType": "Media",
+              "networkRequestTime": 1353.0419999957085,
+              "networkEndTime": 1366.79699999094,
+              "transferSize": 2360432,
+              "resourceSize": 2360074,
+              "priority": "Low"
+            }
+          ]
+        },
+        {
+          "name": "inline-css-2",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T18:56:46.626Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 3868.725499999999,
+          "fcpMs": 1653.878,
+          "cls": 0.0002537343750015678,
+          "tbtMs": 4,
+          "metrics": {
+            "firstContentfulPaint": 1654,
+            "largestContentfulPaint": 3869,
+            "interactive": 4099,
+            "speedIndex": 1921,
+            "totalBlockingTime": 4,
+            "maxPotentialFID": 58,
+            "cumulativeLayoutShift": 0.0002537343750015678,
+            "cumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "timeToFirstByte": 452,
+            "observedTimeOrigin": 0,
+            "observedTimeOriginTs": 351613806135,
+            "observedNavigationStart": 0,
+            "observedNavigationStartTs": 351613806135,
+            "observedFirstPaint": 82,
+            "observedFirstPaintTs": 351613887918,
+            "observedFirstContentfulPaint": 82,
+            "observedFirstContentfulPaintTs": 351613887918,
+            "observedFirstContentfulPaintAllFrames": 82,
+            "observedFirstContentfulPaintAllFramesTs": 351613887918,
+            "observedLargestContentfulPaint": 82,
+            "observedLargestContentfulPaintTs": 351613887918,
+            "observedLargestContentfulPaintAllFrames": 82,
+            "observedLargestContentfulPaintAllFramesTs": 351613887918,
+            "observedTraceEnd": 2476,
+            "observedTraceEndTs": 351616282253,
+            "observedLoad": 128,
+            "observedLoadTs": 351613934013,
+            "observedDomContentLoaded": 26,
+            "observedDomContentLoadedTs": 351613832078,
+            "observedCumulativeLayoutShift": 0.0002537343750015678,
+            "observedCumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "observedFirstVisualChange": 6,
+            "observedFirstVisualChangeTs": 351613812135,
+            "observedLastVisualChange": 2474,
+            "observedLastVisualChangeTs": 351616280135,
+            "observedSpeedIndex": 341,
+            "observedSpeedIndexTs": 351614146904
+          },
+          "observedLcpBreakdown": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "label",
+                  "valueType": "text",
+                  "label": "Subpart"
+                },
+                {
+                  "key": "duration",
+                  "valueType": "ms",
+                  "label": "Duration"
+                }
+              ],
+              "items": [
+                {
+                  "subpart": "timeToFirstByte",
+                  "label": "Time to first byte",
+                  "duration": 6.893999938964844
+                },
+                {
+                  "subpart": "elementRenderDelay",
+                  "label": "Element render delay",
+                  "duration": 74.88900006103516
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-SPAN",
+              "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+              "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+              "boundingRect": {
+                "top": 320,
+                "bottom": 375,
+                "left": 16,
+                "right": 214,
+                "width": 198,
+                "height": 56
+              },
+              "snippet": "<span class=\"inline-block \">",
+              "nodeLabel": "HOODMOOD"
+            }
+          ],
+          "lcpTextLoadDelayMs": 0,
+          "lcpTextLoadDurationMs": 0,
+          "criticalRequests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.3009999394416809,
+              "networkEndTime": 12.787999987602234,
+              "transferSize": 99287,
+              "resourceSize": 760822,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/aa5f74293546f6d0-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 10.05599993467331,
+              "networkEndTime": 12.616999983787537,
+              "transferSize": 21596,
+              "resourceSize": 21296,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/eebd5672f205c2b9-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 10.269999980926514,
+              "networkEndTime": 13.050000011920929,
+              "transferSize": 29208,
+              "resourceSize": 28908,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fvideos%2FchairRotate-poster.jpg&w=750&q=75",
+              "resourceType": "Image",
+              "networkRequestTime": 10.596999943256378,
+              "networkEndTime": 13.5799999833107,
+              "transferSize": 46290,
+              "resourceSize": 45856,
+              "priority": "Low"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/62c97acc3aa63787-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 33.54399996995926,
+              "networkEndTime": 34.701999962329865,
+              "transferSize": 12304,
+              "resourceSize": 12004,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/dc1a31dd116e0329-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 33.60099995136261,
+              "networkEndTime": 34.744000017642975,
+              "transferSize": 46380,
+              "resourceSize": 46080,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/assets/videos/chairRotate.mp4",
+              "resourceType": "Media",
+              "networkRequestTime": 1309.7119999527931,
+              "networkEndTime": 1323.3219999670982,
+              "transferSize": 2360432,
+              "resourceSize": 2360074,
+              "priority": "Low"
+            }
+          ]
+        },
+        {
+          "name": "inline-css-3",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T18:57:01.351Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 4806.8679999999995,
+          "fcpMs": 1656.868,
+          "cls": 0.0002537343750015678,
+          "tbtMs": 8.5,
+          "metrics": {
+            "firstContentfulPaint": 1657,
+            "largestContentfulPaint": 4807,
+            "interactive": 4852,
+            "speedIndex": 1819,
+            "totalBlockingTime": 9,
+            "maxPotentialFID": 63,
+            "cumulativeLayoutShift": 0.0002537343750015678,
+            "cumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "timeToFirstByte": 453,
+            "observedTimeOrigin": 0,
+            "observedTimeOriginTs": 351628534932,
+            "observedNavigationStart": 0,
+            "observedNavigationStartTs": 351628534932,
+            "observedFirstPaint": 102,
+            "observedFirstPaintTs": 351628636764,
+            "observedFirstContentfulPaint": 102,
+            "observedFirstContentfulPaintTs": 351628636764,
+            "observedFirstContentfulPaintAllFrames": 102,
+            "observedFirstContentfulPaintAllFramesTs": 351628636764,
+            "observedLargestContentfulPaint": 102,
+            "observedLargestContentfulPaintTs": 351628636764,
+            "observedLargestContentfulPaintAllFrames": 102,
+            "observedLargestContentfulPaintAllFramesTs": 351628636764,
+            "observedTraceEnd": 2512,
+            "observedTraceEndTs": 351631047341,
+            "observedLoad": 164,
+            "observedLoadTs": 351628699372,
+            "observedDomContentLoaded": 51,
+            "observedDomContentLoadedTs": 351628586243,
+            "observedCumulativeLayoutShift": 0.0002537343750015678,
+            "observedCumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "observedFirstVisualChange": 9,
+            "observedFirstVisualChangeTs": 351628543932,
+            "observedLastVisualChange": 2510,
+            "observedLastVisualChangeTs": 351631044932,
+            "observedSpeedIndex": 380,
+            "observedSpeedIndexTs": 351628914815
+          },
+          "observedLcpBreakdown": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "label",
+                  "valueType": "text",
+                  "label": "Subpart"
+                },
+                {
+                  "key": "duration",
+                  "valueType": "ms",
+                  "label": "Duration"
+                }
+              ],
+              "items": [
+                {
+                  "subpart": "timeToFirstByte",
+                  "label": "Time to first byte",
+                  "duration": 18.761
+                },
+                {
+                  "subpart": "elementRenderDelay",
+                  "label": "Element render delay",
+                  "duration": 83.071
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-SPAN",
+              "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+              "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+              "boundingRect": {
+                "top": 320,
+                "bottom": 375,
+                "left": 16,
+                "right": 214,
+                "width": 198,
+                "height": 56
+              },
+              "snippet": "<span class=\"inline-block \">",
+              "nodeLabel": "HOODMOOD"
+            }
+          ],
+          "lcpTextLoadDelayMs": 0,
+          "lcpTextLoadDurationMs": 0,
+          "criticalRequests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.5460000038146973,
+              "networkEndTime": 44.78600001335144,
+              "transferSize": 99287,
+              "resourceSize": 760822,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/aa5f74293546f6d0-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 24.853999972343445,
+              "networkEndTime": 39.0799999833107,
+              "transferSize": 21596,
+              "resourceSize": 21296,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/eebd5672f205c2b9-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 25.06300002336502,
+              "networkEndTime": 38.819000005722046,
+              "transferSize": 29208,
+              "resourceSize": 28908,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fvideos%2FchairRotate-poster.jpg&w=750&q=75",
+              "resourceType": "Image",
+              "networkRequestTime": 27.722000002861023,
+              "networkEndTime": 40.37900000810623,
+              "transferSize": 46290,
+              "resourceSize": 45856,
+              "priority": "Low"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/62c97acc3aa63787-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 59.56999999284744,
+              "networkEndTime": 66.31200003623962,
+              "transferSize": 12304,
+              "resourceSize": 12004,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/dc1a31dd116e0329-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 59.72000002861023,
+              "networkEndTime": 67.2969999909401,
+              "transferSize": 46380,
+              "resourceSize": 46080,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/assets/videos/chairRotate.mp4",
+              "resourceType": "Media",
+              "networkRequestTime": 1344.416000008583,
+              "networkEndTime": 1359.2039999961853,
+              "transferSize": 2360432,
+              "resourceSize": 2360074,
+              "priority": "Low"
+            }
+          ]
+        }
+      ]
+    },
+    "baselineApplied": {
+      "medianLcpMs": 1724.085,
+      "runs": [
+        {
+          "name": "baseline-applied-repeat-1",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T19:00:28.492Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 5250,
+            "pauseAfterLoadMs": 5250,
+            "networkQuietThresholdMs": 5250,
+            "cpuQuietThresholdMs": 5250,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "devtools",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 1757.737,
+          "fcpMs": 1757.737,
+          "cls": 0.0002537343750015678,
+          "tbtMs": 85.64900000000057,
+          "metrics": {
+            "firstContentfulPaint": 1758,
+            "firstContentfulPaintTs": 351837490564,
+            "firstContentfulPaintAllFrames": 1758,
+            "firstContentfulPaintAllFramesTs": 351837490564,
+            "largestContentfulPaint": 1758,
+            "largestContentfulPaintTs": 351837490564,
+            "largestContentfulPaintAllFrames": 1758,
+            "largestContentfulPaintAllFramesTs": 351837490564,
+            "interactive": 5349,
+            "interactiveTs": 351841081555,
+            "speedIndex": 4139,
+            "speedIndexTs": 351839871827,
+            "totalBlockingTime": 86,
+            "maxPotentialFID": 122,
+            "cumulativeLayoutShift": 0.0002537343750015678,
+            "cumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "lcpRenderDelay": 1742,
+            "timeToFirstByte": 16,
+            "timeToFirstByteTs": 351835748849,
+            "observedTimeOrigin": 0,
+            "observedTimeOriginTs": 351835732827,
+            "observedNavigationStart": 0,
+            "observedNavigationStartTs": 351835732827,
+            "observedFirstPaint": 1670,
+            "observedFirstPaintTs": 351837403297,
+            "observedFirstContentfulPaint": 1758,
+            "observedFirstContentfulPaintTs": 351837490564,
+            "observedFirstContentfulPaintAllFrames": 1758,
+            "observedFirstContentfulPaintAllFramesTs": 351837490564,
+            "observedLargestContentfulPaint": 1758,
+            "observedLargestContentfulPaintTs": 351837490564,
+            "observedLargestContentfulPaintAllFrames": 1758,
+            "observedLargestContentfulPaintAllFramesTs": 351837490564,
+            "observedTraceEnd": 21462,
+            "observedTraceEndTs": 351857195003,
+            "observedLoad": 10654,
+            "observedLoadTs": 351846386825,
+            "observedDomContentLoaded": 1849,
+            "observedDomContentLoadedTs": 351837582208,
+            "observedCumulativeLayoutShift": 0.0002537343750015678,
+            "observedCumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "observedFirstVisualChange": 414,
+            "observedFirstVisualChangeTs": 351836146827,
+            "observedLastVisualChange": 9115,
+            "observedLastVisualChangeTs": 351844847827,
+            "observedSpeedIndex": 4139,
+            "observedSpeedIndexTs": 351839871553
+          },
+          "observedLcpBreakdown": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "label",
+                  "valueType": "text",
+                  "label": "Subpart"
+                },
+                {
+                  "key": "duration",
+                  "valueType": "ms",
+                  "label": "Duration"
+                }
+              ],
+              "items": [
+                {
+                  "subpart": "timeToFirstByte",
+                  "label": "Time to first byte",
+                  "duration": 16.022
+                },
+                {
+                  "subpart": "elementRenderDelay",
+                  "label": "Element render delay",
+                  "duration": 1741.715
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-SPAN",
+              "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+              "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+              "boundingRect": {
+                "top": 320,
+                "bottom": 375,
+                "left": 16,
+                "right": 214,
+                "width": 198,
+                "height": 56
+              },
+              "snippet": "<span class=\"inline-block \">",
+              "nodeLabel": "HOODMOOD"
+            }
+          ],
+          "lcpTextLoadDelayMs": 0,
+          "lcpTextLoadDurationMs": 0,
+          "criticalRequests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.49900001287460327,
+              "networkEndTime": 813.0750000476837,
+              "transferSize": 46181,
+              "resourceSize": 417666,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/aa5f74293546f6d0-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 590.3920000195503,
+              "networkEndTime": 1552.1500000357628,
+              "transferSize": 21596,
+              "resourceSize": 21296,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/eebd5672f205c2b9-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 591.4130000472069,
+              "networkEndTime": 1679.1850000023842,
+              "transferSize": 29208,
+              "resourceSize": 28908,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fvideos%2FchairRotate-poster.jpg&w=750&q=75",
+              "resourceType": "Image",
+              "networkRequestTime": 599.4520000219345,
+              "networkEndTime": 1854.3289999961853,
+              "transferSize": 46290,
+              "resourceSize": 45856,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/2e8eb289ad67d8a7.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 593.2320000529289,
+              "networkEndTime": 1646.6440000534058,
+              "transferSize": 25597,
+              "resourceSize": 163232,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 593.313000023365,
+              "networkEndTime": 1186.4000000357628,
+              "transferSize": 1255,
+              "resourceSize": 5475,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 593.402999997139,
+              "networkEndTime": 1178.8790000081062,
+              "transferSize": 1087,
+              "resourceSize": 754,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/dc1a31dd116e0329-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 1737.1050000190735,
+              "networkEndTime": 2966.4480000138283,
+              "transferSize": 46380,
+              "resourceSize": 46080,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/62c97acc3aa63787-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 1737.1790000200272,
+              "networkEndTime": 2577.2270000576973,
+              "transferSize": 12304,
+              "resourceSize": 12004,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/assets/videos/chairRotate.mp4",
+              "resourceType": "Media",
+              "networkRequestTime": 8146.587999999523,
+              "networkEndTime": 8718.874000012875,
+              "transferSize": 2217510,
+              "resourceSize": 2218652,
+              "priority": "Low"
+            }
+          ]
+        },
+        {
+          "name": "baseline-applied-repeat-2",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T19:01:04.417Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 5250,
+            "pauseAfterLoadMs": 5250,
+            "networkQuietThresholdMs": 5250,
+            "cpuQuietThresholdMs": 5250,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "devtools",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 1724.085,
+          "fcpMs": 1724.085,
+          "cls": 0.0002537343750015678,
+          "tbtMs": 67.89600000000064,
+          "metrics": {
+            "firstContentfulPaint": 1724,
+            "firstContentfulPaintTs": 351873373810,
+            "firstContentfulPaintAllFrames": 1724,
+            "firstContentfulPaintAllFramesTs": 351873373810,
+            "largestContentfulPaint": 1724,
+            "largestContentfulPaintTs": 351873373810,
+            "largestContentfulPaintAllFrames": 1724,
+            "largestContentfulPaintAllFramesTs": 351873373810,
+            "interactive": 5326,
+            "interactiveTs": 351876975273,
+            "speedIndex": 4087,
+            "speedIndexTs": 351875736725,
+            "totalBlockingTime": 68,
+            "maxPotentialFID": 109,
+            "cumulativeLayoutShift": 0.0002537343750015678,
+            "cumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "lcpRenderDelay": 1719,
+            "timeToFirstByte": 5,
+            "timeToFirstByteTs": 351871655211,
+            "observedTimeOrigin": 0,
+            "observedTimeOriginTs": 351871649725,
+            "observedNavigationStart": 0,
+            "observedNavigationStartTs": 351871649725,
+            "observedFirstPaint": 1651,
+            "observedFirstPaintTs": 351873300549,
+            "observedFirstContentfulPaint": 1724,
+            "observedFirstContentfulPaintTs": 351873373810,
+            "observedFirstContentfulPaintAllFrames": 1724,
+            "observedFirstContentfulPaintAllFramesTs": 351873373810,
+            "observedLargestContentfulPaint": 1724,
+            "observedLargestContentfulPaintTs": 351873373810,
+            "observedLargestContentfulPaintAllFrames": 1724,
+            "observedLargestContentfulPaintAllFramesTs": 351873373810,
+            "observedTraceEnd": 21350,
+            "observedTraceEndTs": 351892999240,
+            "observedLoad": 6434,
+            "observedLoadTs": 351878083464,
+            "observedDomContentLoaded": 1791,
+            "observedDomContentLoadedTs": 351873441216,
+            "observedCumulativeLayoutShift": 0.0002537343750015678,
+            "observedCumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "observedFirstVisualChange": 412,
+            "observedFirstVisualChangeTs": 351872061725,
+            "observedLastVisualChange": 9045,
+            "observedLastVisualChangeTs": 351880694725,
+            "observedSpeedIndex": 4087,
+            "observedSpeedIndexTs": 351875736299
+          },
+          "observedLcpBreakdown": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "label",
+                  "valueType": "text",
+                  "label": "Subpart"
+                },
+                {
+                  "key": "duration",
+                  "valueType": "ms",
+                  "label": "Duration"
+                }
+              ],
+              "items": [
+                {
+                  "subpart": "timeToFirstByte",
+                  "label": "Time to first byte",
+                  "duration": 5.486000061035156
+                },
+                {
+                  "subpart": "elementRenderDelay",
+                  "label": "Element render delay",
+                  "duration": 1718.5989999389649
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-SPAN",
+              "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+              "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+              "boundingRect": {
+                "top": 320,
+                "bottom": 375,
+                "left": 16,
+                "right": 214,
+                "width": 198,
+                "height": 56
+              },
+              "snippet": "<span class=\"inline-block \">",
+              "nodeLabel": "HOODMOOD"
+            }
+          ],
+          "lcpTextLoadDelayMs": 0,
+          "lcpTextLoadDurationMs": 0,
+          "criticalRequests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.32600003480911255,
+              "networkEndTime": 811.2269999980927,
+              "transferSize": 46181,
+              "resourceSize": 417666,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/aa5f74293546f6d0-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 581.8980000019073,
+              "networkEndTime": 1542.5830000042915,
+              "transferSize": 21596,
+              "resourceSize": 21296,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/eebd5672f205c2b9-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 581.9860000610352,
+              "networkEndTime": 1660.8849999904633,
+              "transferSize": 29208,
+              "resourceSize": 28908,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fvideos%2FchairRotate-poster.jpg&w=750&q=75",
+              "resourceType": "Image",
+              "networkRequestTime": 587.9530000090599,
+              "networkEndTime": 1843.3930000066757,
+              "transferSize": 46290,
+              "resourceSize": 45856,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/2e8eb289ad67d8a7.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 583.6200000047684,
+              "networkEndTime": 1637.567999958992,
+              "transferSize": 25597,
+              "resourceSize": 163232,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 583.7020000219345,
+              "networkEndTime": 1169.7820000052452,
+              "transferSize": 1255,
+              "resourceSize": 5475,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 583.7820000052452,
+              "networkEndTime": 1185.2110000252724,
+              "transferSize": 1087,
+              "resourceSize": 754,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/dc1a31dd116e0329-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 1706.7860000133514,
+              "networkEndTime": 2965.207000017166,
+              "transferSize": 46380,
+              "resourceSize": 46080,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/62c97acc3aa63787-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 1706.8710000514984,
+              "networkEndTime": 2574.4480000138283,
+              "transferSize": 12304,
+              "resourceSize": 12004,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/assets/videos/chairRotate.mp4",
+              "resourceType": "Media",
+              "networkRequestTime": 8335.730000019073,
+              "networkEndTime": 8909.03299999237,
+              "transferSize": 2216010,
+              "resourceSize": 2217152,
+              "priority": "Low"
+            }
+          ]
+        },
+        {
+          "name": "baseline-applied-repeat-3",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T19:01:40.153Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 5250,
+            "pauseAfterLoadMs": 5250,
+            "networkQuietThresholdMs": 5250,
+            "cpuQuietThresholdMs": 5250,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "devtools",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 1720.101,
+          "fcpMs": 1720.101,
+          "cls": 0.0002537343750015678,
+          "tbtMs": 67.47800000000007,
+          "metrics": {
+            "firstContentfulPaint": 1720,
+            "firstContentfulPaintTs": 351909119000,
+            "firstContentfulPaintAllFrames": 1720,
+            "firstContentfulPaintAllFramesTs": 351909119000,
+            "largestContentfulPaint": 1720,
+            "largestContentfulPaintTs": 351909119000,
+            "largestContentfulPaintAllFrames": 1720,
+            "largestContentfulPaintAllFramesTs": 351909119000,
+            "interactive": 5332,
+            "interactiveTs": 351912731135,
+            "speedIndex": 4106,
+            "speedIndexTs": 351911504899,
+            "totalBlockingTime": 67,
+            "maxPotentialFID": 111,
+            "cumulativeLayoutShift": 0.0002537343750015678,
+            "cumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "lcpRenderDelay": 1716,
+            "timeToFirstByte": 4,
+            "timeToFirstByteTs": 351907403362,
+            "observedTimeOrigin": 0,
+            "observedTimeOriginTs": 351907398899,
+            "observedNavigationStart": 0,
+            "observedNavigationStartTs": 351907398899,
+            "observedFirstPaint": 1645,
+            "observedFirstPaintTs": 351909044276,
+            "observedFirstContentfulPaint": 1720,
+            "observedFirstContentfulPaintTs": 351909119000,
+            "observedFirstContentfulPaintAllFrames": 1720,
+            "observedFirstContentfulPaintAllFramesTs": 351909119000,
+            "observedLargestContentfulPaint": 1720,
+            "observedLargestContentfulPaintTs": 351909119000,
+            "observedLargestContentfulPaintAllFrames": 1720,
+            "observedLargestContentfulPaintAllFramesTs": 351909119000,
+            "observedTraceEnd": 22038,
+            "observedTraceEndTs": 351929437326,
+            "observedLoad": 5210,
+            "observedLoadTs": 351912608662,
+            "observedDomContentLoaded": 1786,
+            "observedDomContentLoadedTs": 351909184648,
+            "observedCumulativeLayoutShift": 0.0002537343750015678,
+            "observedCumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "observedFirstVisualChange": 405,
+            "observedFirstVisualChangeTs": 351907803899,
+            "observedLastVisualChange": 9071,
+            "observedLastVisualChangeTs": 351916469899,
+            "observedSpeedIndex": 4106,
+            "observedSpeedIndexTs": 351911504622
+          },
+          "observedLcpBreakdown": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "label",
+                  "valueType": "text",
+                  "label": "Subpart"
+                },
+                {
+                  "key": "duration",
+                  "valueType": "ms",
+                  "label": "Duration"
+                }
+              ],
+              "items": [
+                {
+                  "subpart": "timeToFirstByte",
+                  "label": "Time to first byte",
+                  "duration": 4.463000061035157
+                },
+                {
+                  "subpart": "elementRenderDelay",
+                  "label": "Element render delay",
+                  "duration": 1715.6379999389649
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-SPAN",
+              "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+              "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+              "boundingRect": {
+                "top": 320,
+                "bottom": 375,
+                "left": 16,
+                "right": 214,
+                "width": 198,
+                "height": 56
+              },
+              "snippet": "<span class=\"inline-block \">",
+              "nodeLabel": "HOODMOOD"
+            }
+          ],
+          "lcpTextLoadDelayMs": 0,
+          "lcpTextLoadDurationMs": 0,
+          "criticalRequests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.31800007820129395,
+              "networkEndTime": 806.4240000247955,
+              "transferSize": 46181,
+              "resourceSize": 417666,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/aa5f74293546f6d0-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 578.8300000429153,
+              "networkEndTime": 1538.5340000391006,
+              "transferSize": 21596,
+              "resourceSize": 21296,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/eebd5672f205c2b9-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 579.2060000300407,
+              "networkEndTime": 1656.7140000462532,
+              "transferSize": 29208,
+              "resourceSize": 28908,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fvideos%2FchairRotate-poster.jpg&w=750&q=75",
+              "resourceType": "Image",
+              "networkRequestTime": 584.086000084877,
+              "networkEndTime": 1839.7520000338554,
+              "transferSize": 46290,
+              "resourceSize": 45856,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/2e8eb289ad67d8a7.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 580.9860000610352,
+              "networkEndTime": 1632.7140000462532,
+              "transferSize": 25597,
+              "resourceSize": 163232,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 581.0900000333786,
+              "networkEndTime": 1172.0580000281334,
+              "transferSize": 1255,
+              "resourceSize": 5475,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 581.1730000376701,
+              "networkEndTime": 1164.041000008583,
+              "transferSize": 1087,
+              "resourceSize": 754,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/dc1a31dd116e0329-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 1703.3890000581741,
+              "networkEndTime": 2952.616000056267,
+              "transferSize": 46380,
+              "resourceSize": 46080,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/62c97acc3aa63787-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 1703.4640000462532,
+              "networkEndTime": 2563.9620000123978,
+              "transferSize": 12304,
+              "resourceSize": 12004,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/assets/videos/chairRotate.mp4",
+              "resourceType": "Media",
+              "networkRequestTime": 8826.716000080109,
+              "networkEndTime": 9397.290000081062,
+              "transferSize": 2316510,
+              "resourceSize": 2317652,
+              "priority": "Low"
+            }
+          ]
+        }
+      ]
+    },
+    "inlineCssApplied": {
+      "medianLcpMs": 893.647,
+      "runs": [
+        {
+          "name": "inline-css-applied-1",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T18:57:26.581Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 5250,
+            "pauseAfterLoadMs": 5250,
+            "networkQuietThresholdMs": 5250,
+            "cpuQuietThresholdMs": 5250,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "devtools",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 891.791,
+          "fcpMs": 891.791,
+          "cls": 0.0002537343750015678,
+          "tbtMs": 60.25799999999981,
+          "metrics": {
+            "firstContentfulPaint": 892,
+            "firstContentfulPaintTs": 351654700798,
+            "firstContentfulPaintAllFrames": 892,
+            "firstContentfulPaintAllFramesTs": 351654700798,
+            "largestContentfulPaint": 892,
+            "largestContentfulPaintTs": 351654700798,
+            "largestContentfulPaintAllFrames": 892,
+            "largestContentfulPaintAllFramesTs": 351654700798,
+            "interactive": 4986,
+            "interactiveTs": 351658794728,
+            "speedIndex": 3766,
+            "speedIndexTs": 351657575007,
+            "totalBlockingTime": 60,
+            "maxPotentialFID": 105,
+            "cumulativeLayoutShift": 0.0002537343750015678,
+            "cumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "lcpRenderDelay": 885,
+            "timeToFirstByte": 7,
+            "timeToFirstByteTs": 351653816275,
+            "observedTimeOrigin": 0,
+            "observedTimeOriginTs": 351653809007,
+            "observedNavigationStart": 0,
+            "observedNavigationStartTs": 351653809007,
+            "observedFirstPaint": 892,
+            "observedFirstPaintTs": 351654700798,
+            "observedFirstContentfulPaint": 892,
+            "observedFirstContentfulPaintTs": 351654700798,
+            "observedFirstContentfulPaintAllFrames": 892,
+            "observedFirstContentfulPaintAllFramesTs": 351654700798,
+            "observedLargestContentfulPaint": 892,
+            "observedLargestContentfulPaintTs": 351654700798,
+            "observedLargestContentfulPaintAllFrames": 892,
+            "observedLargestContentfulPaintAllFramesTs": 351654700798,
+            "observedTraceEnd": 21634,
+            "observedTraceEndTs": 351675442703,
+            "observedLoad": 4860,
+            "observedLoadTs": 351658668678,
+            "observedDomContentLoaded": 1103,
+            "observedDomContentLoadedTs": 351654912119,
+            "observedCumulativeLayoutShift": 0.0002537343750015678,
+            "observedCumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "observedFirstVisualChange": 422,
+            "observedFirstVisualChangeTs": 351654231007,
+            "observedLastVisualChange": 8171,
+            "observedLastVisualChangeTs": 351661980007,
+            "observedSpeedIndex": 3766,
+            "observedSpeedIndexTs": 351657574682
+          },
+          "observedLcpBreakdown": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "label",
+                  "valueType": "text",
+                  "label": "Subpart"
+                },
+                {
+                  "key": "duration",
+                  "valueType": "ms",
+                  "label": "Duration"
+                }
+              ],
+              "items": [
+                {
+                  "subpart": "timeToFirstByte",
+                  "label": "Time to first byte",
+                  "duration": 7.268
+                },
+                {
+                  "subpart": "elementRenderDelay",
+                  "label": "Element render delay",
+                  "duration": 884.523
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-SPAN",
+              "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+              "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+              "boundingRect": {
+                "top": 320,
+                "bottom": 375,
+                "left": 16,
+                "right": 214,
+                "width": 198,
+                "height": 56
+              },
+              "snippet": "<span class=\"inline-block \">",
+              "nodeLabel": "HOODMOOD"
+            }
+          ],
+          "lcpTextLoadDelayMs": 0,
+          "lcpTextLoadDurationMs": 0,
+          "criticalRequests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.2770000100135803,
+              "networkEndTime": 1095.063000023365,
+              "transferSize": 99287,
+              "resourceSize": 760822,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/aa5f74293546f6d0-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 580.9050000309944,
+              "networkEndTime": 1428.466000020504,
+              "transferSize": 21596,
+              "resourceSize": 21296,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/eebd5672f205c2b9-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 580.9919999837875,
+              "networkEndTime": 1522.8620000481606,
+              "transferSize": 29208,
+              "resourceSize": 28908,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fvideos%2FchairRotate-poster.jpg&w=750&q=75",
+              "resourceType": "Image",
+              "networkRequestTime": 721.5210000276566,
+              "networkEndTime": 1698.1489999890327,
+              "transferSize": 46290,
+              "resourceSize": 45856,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/62c97acc3aa63787-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 875.7810000181198,
+              "networkEndTime": 1753.8860000371933,
+              "transferSize": 12304,
+              "resourceSize": 12004,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/dc1a31dd116e0329-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 875.9240000844002,
+              "networkEndTime": 2445.294000029564,
+              "transferSize": 46380,
+              "resourceSize": 46080,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/assets/videos/chairRotate.mp4",
+              "resourceType": "Media",
+              "networkRequestTime": 8366.527000069618,
+              "networkEndTime": 8937.220000088215,
+              "transferSize": 2300010,
+              "resourceSize": 2301152,
+              "priority": "Low"
+            }
+          ]
+        },
+        {
+          "name": "inline-css-applied-2",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T18:58:02.378Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 5250,
+            "pauseAfterLoadMs": 5250,
+            "networkQuietThresholdMs": 5250,
+            "cpuQuietThresholdMs": 5250,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "devtools",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 894.19,
+          "fcpMs": 894.19,
+          "cls": 0.0002537343750015678,
+          "tbtMs": 66.25600000000077,
+          "metrics": {
+            "firstContentfulPaint": 894,
+            "firstContentfulPaintTs": 351690462385,
+            "firstContentfulPaintAllFrames": 894,
+            "firstContentfulPaintAllFramesTs": 351690462385,
+            "largestContentfulPaint": 894,
+            "largestContentfulPaintTs": 351690462385,
+            "largestContentfulPaintAllFrames": 894,
+            "largestContentfulPaintAllFramesTs": 351690462385,
+            "interactive": 4962,
+            "interactiveTs": 351694530451,
+            "speedIndex": 3754,
+            "speedIndexTs": 351693322195,
+            "totalBlockingTime": 66,
+            "maxPotentialFID": 111,
+            "cumulativeLayoutShift": 0.0002537343750015678,
+            "cumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "lcpRenderDelay": 888,
+            "timeToFirstByte": 6,
+            "timeToFirstByteTs": 351689574466,
+            "observedTimeOrigin": 0,
+            "observedTimeOriginTs": 351689568195,
+            "observedNavigationStart": 0,
+            "observedNavigationStartTs": 351689568195,
+            "observedFirstPaint": 894,
+            "observedFirstPaintTs": 351690462385,
+            "observedFirstContentfulPaint": 894,
+            "observedFirstContentfulPaintTs": 351690462385,
+            "observedFirstContentfulPaintAllFrames": 894,
+            "observedFirstContentfulPaintAllFramesTs": 351690462385,
+            "observedLargestContentfulPaint": 894,
+            "observedLargestContentfulPaintTs": 351690462385,
+            "observedLargestContentfulPaintAllFrames": 894,
+            "observedLargestContentfulPaintAllFramesTs": 351690462385,
+            "observedTraceEnd": 21632,
+            "observedTraceEndTs": 351711199778,
+            "observedLoad": 4838,
+            "observedLoadTs": 351694406661,
+            "observedDomContentLoaded": 1102,
+            "observedDomContentLoadedTs": 351690670598,
+            "observedCumulativeLayoutShift": 0.0002537343750015678,
+            "observedCumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "observedFirstVisualChange": 462,
+            "observedFirstVisualChangeTs": 351690030195,
+            "observedLastVisualChange": 8178,
+            "observedLastVisualChangeTs": 351697746195,
+            "observedSpeedIndex": 3754,
+            "observedSpeedIndexTs": 351693322124
+          },
+          "observedLcpBreakdown": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "label",
+                  "valueType": "text",
+                  "label": "Subpart"
+                },
+                {
+                  "key": "duration",
+                  "valueType": "ms",
+                  "label": "Duration"
+                }
+              ],
+              "items": [
+                {
+                  "subpart": "timeToFirstByte",
+                  "label": "Time to first byte",
+                  "duration": 6.271
+                },
+                {
+                  "subpart": "elementRenderDelay",
+                  "label": "Element render delay",
+                  "duration": 887.919
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-SPAN",
+              "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+              "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+              "boundingRect": {
+                "top": 320,
+                "bottom": 375,
+                "left": 16,
+                "right": 214,
+                "width": 198,
+                "height": 56
+              },
+              "snippet": "<span class=\"inline-block \">",
+              "nodeLabel": "HOODMOOD"
+            }
+          ],
+          "lcpTextLoadDelayMs": 0,
+          "lcpTextLoadDurationMs": 0,
+          "criticalRequests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.375,
+              "networkEndTime": 1094.5329999923706,
+              "transferSize": 99287,
+              "resourceSize": 760822,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/aa5f74293546f6d0-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 579.1539999246597,
+              "networkEndTime": 1427.8759999871254,
+              "transferSize": 21596,
+              "resourceSize": 21296,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/eebd5672f205c2b9-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 579.3899999856949,
+              "networkEndTime": 1522.5929999351501,
+              "transferSize": 29208,
+              "resourceSize": 28908,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fvideos%2FchairRotate-poster.jpg&w=750&q=75",
+              "resourceType": "Image",
+              "networkRequestTime": 721.7319999933243,
+              "networkEndTime": 1706.3709999322891,
+              "transferSize": 46290,
+              "resourceSize": 45856,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/62c97acc3aa63787-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 877.2229999899864,
+              "networkEndTime": 1752.6359999775887,
+              "transferSize": 12304,
+              "resourceSize": 12004,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/dc1a31dd116e0329-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 877.3849999904633,
+              "networkEndTime": 2469.255999982357,
+              "transferSize": 46380,
+              "resourceSize": 46080,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/assets/videos/chairRotate.mp4",
+              "resourceType": "Media",
+              "networkRequestTime": 8366.29899996519,
+              "networkEndTime": 8937.208999991417,
+              "transferSize": 2300010,
+              "resourceSize": 2301152,
+              "priority": "Low"
+            }
+          ]
+        },
+        {
+          "name": "inline-css-applied-3",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T18:58:38.137Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 5250,
+            "pauseAfterLoadMs": 5250,
+            "networkQuietThresholdMs": 5250,
+            "cpuQuietThresholdMs": 5250,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "devtools",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 893.647,
+          "fcpMs": 893.647,
+          "cls": 0.0002537343750015678,
+          "tbtMs": 70.08899999999949,
+          "metrics": {
+            "firstContentfulPaint": 894,
+            "firstContentfulPaintTs": 351726263916,
+            "firstContentfulPaintAllFrames": 894,
+            "firstContentfulPaintAllFramesTs": 351726263916,
+            "largestContentfulPaint": 894,
+            "largestContentfulPaintTs": 351726263916,
+            "largestContentfulPaintAllFrames": 894,
+            "largestContentfulPaintAllFramesTs": 351726263916,
+            "interactive": 4991,
+            "interactiveTs": 351730360893,
+            "speedIndex": 3747,
+            "speedIndexTs": 351729117269,
+            "totalBlockingTime": 70,
+            "maxPotentialFID": 113,
+            "cumulativeLayoutShift": 0.0002537343750015678,
+            "cumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "lcpRenderDelay": 888,
+            "timeToFirstByte": 6,
+            "timeToFirstByteTs": 351725376276,
+            "observedTimeOrigin": 0,
+            "observedTimeOriginTs": 351725370269,
+            "observedNavigationStart": 0,
+            "observedNavigationStartTs": 351725370269,
+            "observedFirstPaint": 894,
+            "observedFirstPaintTs": 351726263916,
+            "observedFirstContentfulPaint": 894,
+            "observedFirstContentfulPaintTs": 351726263916,
+            "observedFirstContentfulPaintAllFrames": 894,
+            "observedFirstContentfulPaintAllFramesTs": 351726263916,
+            "observedLargestContentfulPaint": 894,
+            "observedLargestContentfulPaintTs": 351726263916,
+            "observedLargestContentfulPaintAllFrames": 894,
+            "observedLargestContentfulPaintAllFramesTs": 351726263916,
+            "observedTraceEnd": 21647,
+            "observedTraceEndTs": 351747017531,
+            "observedLoad": 4864,
+            "observedLoadTs": 351730234378,
+            "observedDomContentLoaded": 1104,
+            "observedDomContentLoadedTs": 351726474362,
+            "observedCumulativeLayoutShift": 0.0002537343750015678,
+            "observedCumulativeLayoutShiftMainFrame": 0.0002537343750015678,
+            "observedFirstVisualChange": 404,
+            "observedFirstVisualChangeTs": 351725774269,
+            "observedLastVisualChange": 8193,
+            "observedLastVisualChangeTs": 351733563269,
+            "observedSpeedIndex": 3747,
+            "observedSpeedIndexTs": 351729117472
+          },
+          "observedLcpBreakdown": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "label",
+                  "valueType": "text",
+                  "label": "Subpart"
+                },
+                {
+                  "key": "duration",
+                  "valueType": "ms",
+                  "label": "Duration"
+                }
+              ],
+              "items": [
+                {
+                  "subpart": "timeToFirstByte",
+                  "label": "Time to first byte",
+                  "duration": 6.007
+                },
+                {
+                  "subpart": "elementRenderDelay",
+                  "label": "Element render delay",
+                  "duration": 887.64
+                }
+              ]
+            },
+            {
+              "type": "node",
+              "lhId": "page-0-SPAN",
+              "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+              "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+              "boundingRect": {
+                "top": 320,
+                "bottom": 375,
+                "left": 16,
+                "right": 214,
+                "width": 198,
+                "height": 56
+              },
+              "snippet": "<span class=\"inline-block \">",
+              "nodeLabel": "HOODMOOD"
+            }
+          ],
+          "lcpTextLoadDelayMs": 0,
+          "lcpTextLoadDurationMs": 0,
+          "criticalRequests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.31800001859664917,
+              "networkEndTime": 1096.3659999966621,
+              "transferSize": 99287,
+              "resourceSize": 760822,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/aa5f74293546f6d0-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 580.7760000228882,
+              "networkEndTime": 1430.2860000133514,
+              "transferSize": 21596,
+              "resourceSize": 21296,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/eebd5672f205c2b9-s.p.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 580.8450000286102,
+              "networkEndTime": 1525.4830000400543,
+              "transferSize": 29208,
+              "resourceSize": 28908,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/image?url=%2Fassets%2Fvideos%2FchairRotate-poster.jpg&w=750&q=75",
+              "resourceType": "Image",
+              "networkRequestTime": 722.5379999876022,
+              "networkEndTime": 1707.6330000162125,
+              "transferSize": 46290,
+              "resourceSize": 45856,
+              "priority": "High"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/62c97acc3aa63787-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 876.7540000081062,
+              "networkEndTime": 1755.2480000257492,
+              "transferSize": 12304,
+              "resourceSize": 12004,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/_next/static/media/dc1a31dd116e0329-s.woff2",
+              "resourceType": "Font",
+              "networkRequestTime": 876.8910000324249,
+              "networkEndTime": 2454.996999979019,
+              "transferSize": 46380,
+              "resourceSize": 46080,
+              "priority": "VeryHigh"
+            },
+            {
+              "url": "http://localhost:3100/assets/videos/chairRotate.mp4",
+              "resourceType": "Media",
+              "networkRequestTime": 8383.155000030994,
+              "networkEndTime": 8954.60900002718,
+              "transferSize": 2298510,
+              "resourceSize": 2299652,
+              "priority": "Low"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

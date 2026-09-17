@@ -1,16 +1,13 @@
-import type { Metadata } from "next";
+import { legalEntity } from "@/data/locations";
+import { createMetadata } from "@/lib/seo";
+import { staticSeoPages } from "@/lib/seo-pages";
 
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 
-export const metadata: Metadata = {
-  title: "Regulamin wejścia próbnego za 40 zł",
-  description:
-    "Zasady skorzystania z jednorazowego wejścia próbnego na zajęcia Hoodmood w cenie 40 zł.",
-};
 
 const rules = [
-  "Organizatorem promocji jest Talita Jarzęcka Centrum Rozwoju Dzieci i Młodzieży, prowadząca Hoodmood Dance Studio.",
+  `Organizatorem promocji jest ${legalEntity.name}, prowadząca Hoodmood Dance Studio.`,
   "W ramach promocji jedna osoba może jeden raz skorzystać z wejścia próbnego na wybrane przez siebie zajęcia w cenie 40 zł.",
   "Promocja obejmuje jedno wejście próbne na osobę, niezależnie od liczby dostępnych rodzajów zajęć i lokalizacji Hoodmood.",
   "Chęć skorzystania z wejścia próbnego należy zgłosić przez formularz zapisów. W polu „Uwagi” trzeba wpisać, że zgłoszenie dotyczy wejścia testowego za 40 zł.",
@@ -19,6 +16,8 @@ const rules = [
   "Uczestnik powinien spełniać wymagania wiekowe i organizacyjne właściwe dla wybranej grupy.",
   "Dane osobowe przekazane w formularzu są przetwarzane zgodnie z Polityką prywatności Hoodmood.",
 ];
+
+export const metadata = createMetadata({ path: "/regulamin-wejscia-probnego", ...staticSeoPages["/regulamin-wejscia-probnego"] });
 
 export default function TrialClassTermsPage() {
   return (

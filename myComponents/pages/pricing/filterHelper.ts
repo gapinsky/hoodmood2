@@ -1,12 +1,7 @@
-import type { PricingItem } from "@/data/pricingData";
+import type { PricingItem } from "./types";
 import { normalizeText as normalize } from "@/lib/normalizeText";
 
 type SortingValue = "ascending" | "descending" | "alphabetical";
-
-const parsePrice = (price: string) => {
-  const firstPrice = price.match(/\d+(?:[,.]\d+)?/)?.[0];
-  return firstPrice ? Number(firstPrice.replace(",", ".")) : 0;
-};
 
 export function filterAndSortPricingData(
   data: PricingItem[],
@@ -30,7 +25,7 @@ export function filterAndSortPricingData(
 
     const matchesAge =
       !hasValidAge ||
-      (age >= min && age <= max);
+      (age >= min && (max === null || age <= max));
 
     return matchesText && matchesAge;
   });
@@ -40,15 +35,15 @@ export function filterAndSortPricingData(
       return [...filtered].sort((a, b) => a.name.localeCompare(b.name, "pl"));
     case "ascending":
       return [...filtered].sort(
-        (a, b) => parsePrice(a.price) - parsePrice(b.price),
+        (a, b) => a.price - b.price,
       );
     case "descending":
       return [...filtered].sort(
-        (a, b) => parsePrice(b.price) - parsePrice(a.price),
+        (a, b) => b.price - a.price,
       );
     default:
       return [...filtered].sort(
-        (a, b) => parsePrice(a.price) - parsePrice(b.price),
+        (a, b) => a.price - b.price,
       );
   }
 }

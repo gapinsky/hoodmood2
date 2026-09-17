@@ -1,163 +1,109 @@
-import {
-  bialyBorPricingTableData,
-  koszalinPricingContent,
-  polanowPricingTableData,
-} from "@/data/pricingData";
+import { classList } from "@/data/classess";
+import { locationList, type CitySlug } from "@/data/locations";
+import { trainers } from "@/data/trainers";
+import { pricingCategories, type PricingItem } from "@/myComponents/pages/pricing/types";
+import { dayOrder } from "@/myComponents/pages/schedule/types";
+import type { EnrollmentRequest, SelectedClassItem } from "@/lib/schemas/enrollmentSchema";
+import { getClassPricing } from "./class-pricing";
 
-type EnrollmentLocationId = "koszalin" | "polanow" | "bialy-bor";
-
-export type EnrollmentClassItem = {
-  id: string;
-  locationId: EnrollmentLocationId;
+export type EnrollmentClassItem = PricingItem & {
+  locationId: CitySlug;
   locationName: string;
   type: "class" | "package";
   billingPeriod: "monthly" | "one-time";
-  name: string;
-  price: number;
-  memberPrice?: number;
-  nonMemberPrice?: number;
-  frequency: string;
-  frequencyDescription?: string;
-  minAge: number | null;
-  maxAge: number | null;
-  category: string;
+  scheduleLabel: string;
+  instructorLabel: string;
+  specialInstructorLabel: string;
 };
 
-type EnrollmentLocationOption = {
-  id: EnrollmentLocationId;
-  label: string;
-  locativeLabel: string;
-};
-
-export const enrollmentLocationOptions: EnrollmentLocationOption[] = [
-  { id: "koszalin", label: "Koszalin", locativeLabel: "Koszalin" },
-  { id: "polanow", label: "Polanów", locativeLabel: "Polanów" },
-  { id: "bialy-bor", label: "Biały Bór", locativeLabel: "Biały Bór" },
-];
-
-const parsePrice = (value: string) => {
-  const normalized = value.replace(",", ".").match(/\d+(?:\.\d+)?/)?.[0] ?? "";
-  const parsed = Number.parseFloat(normalized);
-  return Number.isFinite(parsed) ? parsed : 0;
-};
-
-const koszalinClasses = koszalinPricingContent.zajecia.tableData.map(
-  (item, index) => ({
-    id: `koszalin-${item.category}-${index}`,
-    locationId: "koszalin" as const,
-    locationName: "Koszalin",
-    type: "class" as const,
-    billingPeriod: "monthly" as const,
-    name: item.name,
-    price: parsePrice(item.price),
-    memberPrice: item.memberPrice ? parsePrice(item.memberPrice) : undefined,
-    nonMemberPrice: item.nonMemberPrice ? parsePrice(item.nonMemberPrice) : undefined,
-    frequency: item.frequency,
-    frequencyDescription: item.frequencyDescription,
-    minAge: item.minAge,
-    maxAge: item.maxAge,
-    category: item.category,
-  }),
-);
-
-const koszalinPackages = koszalinPricingContent["pakiety-zajec"].tableData.map(
-  (item, index) => ({
-    id: `koszalin-package-${item.category}-${index}`,
-    locationId: "koszalin" as const,
-    locationName: "Koszalin",
-    type: "package" as const,
-    billingPeriod: "monthly" as const,
-    name: item.name,
-    price: parsePrice(item.price),
-    memberPrice: item.memberPrice ? parsePrice(item.memberPrice) : undefined,
-    nonMemberPrice: item.nonMemberPrice ? parsePrice(item.nonMemberPrice) : undefined,
-    frequency: item.frequency,
-    frequencyDescription: item.frequencyDescription,
-    minAge: item.minAge,
-    maxAge: item.maxAge,
-    category: item.category,
-  }),
-);
-
-const polanowClasses = polanowPricingTableData.map((item, index) => ({
-  id: `polanow-${item.category}-${index}`,
-  locationId: "polanow" as const,
-  type: "class" as const,
-  billingPeriod: "monthly" as const,
-  locationName: "Polanów",
-  name: item.name,
-  price: parsePrice(item.price),
-    memberPrice: item.memberPrice ? parsePrice(item.memberPrice) : undefined,
-    nonMemberPrice: item.nonMemberPrice ? parsePrice(item.nonMemberPrice) : undefined,
-  frequency: item.frequency,
-  frequencyDescription: item.frequencyDescription,
-  minAge: item.minAge,
-  maxAge: item.maxAge,
-  category: item.category,
+export const enrollmentLocationOptions = locationList.map((location) => ({
+  id: location.id,
+  label: location.name,
 }));
 
-const bialyBorClasses = bialyBorPricingTableData.map((item, index) => ({
-  id: `bialy-bor-${item.category}-${index}`,
-  locationId: "bialy-bor" as const,
-  type: "class" as const,
-  billingPeriod: "monthly" as const,
-  locationName: "Biały Bór",
-  name: item.name,
-  price: parsePrice(item.price),
-    memberPrice: item.memberPrice ? parsePrice(item.memberPrice) : undefined,
-    nonMemberPrice: item.nonMemberPrice ? parsePrice(item.nonMemberPrice) : undefined,
-  frequency: item.frequency,
-  frequencyDescription: item.frequencyDescription,
-  minAge: item.minAge,
-  maxAge: item.maxAge,
-  category: item.category,
-}));
+export function getEnrollmentClasses(): EnrollmentClassItem[] {
+  return locationList.flatMap((location) =>
+    pricingCategories.flatMap((category) =>
+      getClassPricing(location.id, category)
+        .filter((row) => row.enrollmentEnabled)
+        .map((row) => {
+          const item = classList.find((item) => item.id === row.classId)!;
+          const isPackage = category === "pakiety-zajec";
+          const scheduleLabel = [...item.schedule]
+            .sort((a, b) => a.dayOfWeek - b.dayOfWeek || a.startTime.localeCompare(b.startTime))
+            .map((entry) => `${dayOrder[entry.dayOfWeek - 1]} ${entry.startTime}–${entry.endTime}`)
+            .join("; ");
+          return {
+            ...row,
+            locationId: location.id,
+            locationName: location.name,
+            type: isPackage ? "package" as const : "class" as const,
+            billingPeriod: item.pricing.billingUnit === "month" ? "monthly" as const : "one-time" as const,
+            scheduleLabel: scheduleLabel || (isPackage ? "Terminy zgodnie z wybranymi zajęciami" : "Termin do ustalenia"),
+            instructorLabel: item.trainerIds.map((id) => trainers[id].name).join(" / "),
+            specialInstructorLabel: item.specialTrainerIds.map((id) => trainers[id].name).join(" / "),
+          };
+        }),
+    ),
+  );
+}
 
-export const enrollmentClasses: EnrollmentClassItem[] = [
-  ...koszalinClasses,
-  ...koszalinPackages,
-  ...koszalinPricingContent["zajecia-indywidualne"].tableData.map(
-    (item, index) => ({
-      id: `koszalin-individual-${item.category}-${index}`,
-      locationId: "koszalin" as const,
-      locationName: "Koszalin",
-      type: "class" as const,
-      billingPeriod: "one-time" as const,
-      name: item.name,
-      price: parsePrice(item.price),
-    memberPrice: item.memberPrice ? parsePrice(item.memberPrice) : undefined,
-    nonMemberPrice: item.nonMemberPrice ? parsePrice(item.nonMemberPrice) : undefined,
-      frequency: item.frequency,
-      frequencyDescription: item.frequencyDescription,
-      minAge: item.minAge,
-      maxAge: item.maxAge,
-      category: item.category,
-    }),
-  ),
-  ...polanowClasses,
-  ...bialyBorClasses,
-];
+export const enrollmentClasses = getEnrollmentClasses();
 
-export const getClassAgeLabel = (item: EnrollmentClassItem) => {
-  if (item.minAge === null && item.maxAge === null) {
-    return "Bez ograniczenia wieku";
-  }
+export const getClassAgeLabel = (item: EnrollmentClassItem) =>
+  item.maxAge === null ? `${item.minAge}+ lat` : `${item.minAge}-${item.maxAge} lat`;
 
-  if (item.minAge !== null && item.maxAge !== null) {
-    return `${item.minAge}-${item.maxAge} lat`;
-  }
-
-  if (item.minAge !== null) {
-    return `${item.minAge}+ lat`;
-  }
-
-  return `Do ${item.maxAge} lat`;
-};
-
-export const isAdultClass = (item: EnrollmentClassItem) =>
-  item.category === "adults" ||
-  item.name.toLowerCase().includes("doros") ||
-  (item.minAge !== null && item.minAge >= 18);
+export function matchesEnrollmentParticipant(
+  item: EnrollmentClassItem,
+  participantType: "youth" | "adult",
+  participantAge: string,
+): boolean {
+  const age = Number(participantAge);
+  if (!participantAge.trim() || !Number.isSafeInteger(age) || age <= 0) return false;
+  if (participantType === "adult" ? age < 18 : age > 18) return false;
+  return age >= item.minAge && (item.maxAge === null || age <= item.maxAge);
+}
 
 export const getEnrollmentClassPrice = (item: EnrollmentClassItem, isHoodmoodMember: boolean) =>
   (isHoodmoodMember ? item.memberPrice : item.nonMemberPrice) ?? item.price;
+
+export const getEnrollmentFrequencyLabel = (frequency: string) =>
+  /^\d+(?:[,.]\d+)?$/.test(frequency) ? `${frequency}x/tyg` : frequency;
+
+export function createSelectedClass(
+  item: EnrollmentClassItem,
+  isHoodmoodMember: boolean,
+  clientId: string,
+): SelectedClassItem {
+  return {
+    clientId,
+    locationId: item.locationId,
+    locationName: item.locationName,
+    classTypeId: item.id,
+    classTypeName: item.name,
+    billingPeriod: item.billingPeriod,
+    scheduleId: item.classId,
+    dayLabel: getEnrollmentFrequencyLabel(item.frequency),
+    timeLabel: getClassAgeLabel(item),
+    price: getEnrollmentClassPrice(item, isHoodmoodMember),
+    priceUnit: item.priceUnit,
+    scheduleLabel: item.scheduleLabel,
+    instructorLabel: item.instructorLabel,
+    specialInstructorLabel: item.specialInstructorLabel,
+    currency: "PLN",
+  };
+}
+
+export function resolveEnrollmentSelection(data: EnrollmentRequest): SelectedClassItem[] | null {
+  const available = new Map(getEnrollmentClasses().map((item) => [item.id, item]));
+  const seen = new Set<string>();
+  const selected: SelectedClassItem[] = [];
+  for (const entry of data.selectedClasses) {
+    const item = available.get(entry.classId);
+    if (!item || seen.has(item.classId) || item.locationId !== data.selectedLocationId ||
+      !matchesEnrollmentParticipant(item, data.participantType, data.participantAge)) return null;
+    seen.add(item.classId);
+    selected.push(createSelectedClass(item, data.isHoodmoodMember, item.id));
+  }
+  return selected.length ? selected : null;
+}

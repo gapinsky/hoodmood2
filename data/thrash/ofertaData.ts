@@ -1,20 +1,20 @@
-import { CitySlug } from "./citySlug";
+import type { CitySlug } from "../locations";
 
 export const offerHeaderData = {
   "bialy-bor": {
     title: "Oferta - Biały Bór",
     description:
-      "Wybierz zajęcia dopasowane do wieku, poziomu i charakteru Twojego dziecka – albo Twojego własnego. W Hoodmood znajdziesz grupy dla maluchów, dzieci, młodzieży i dorosłych, zajęcia hip-hop, taniec współczesny, akrobatykę, K-POP oraz grupy turniejowe. Sprawdź, co najlepiej pasuje do Ciebie!",
+      "Wybierz zajęcia dla siebie lub swojego dziecka.",
   },
   koszalin: {
     title: "Oferta - Koszalin",
     description:
-      "Wybierz zajęcia dopasowane do wieku, poziomu i charakteru Twojego dziecka – albo Twojego własnego. W Hoodmood znajdziesz grupy dla maluchów, dzieci, młodzieży i dorosłych, zajęcia hip-hop, taniec współczesny, akrobatykę, K-POP oraz grupy turniejowe. Sprawdź, co najlepiej pasuje do Ciebie!",
+      "Wybierz zajęcia dla siebie lub swojego dziecka.",
   },
   polanow: {
     title: "Oferta - Polanów",
     description:
-      "Wybierz zajęcia dopasowane do wieku, poziomu i charakteru Twojego dziecka – albo Twojego własnego. W Hoodmood znajdziesz grupy dla maluchów, dzieci, młodzieży i dorosłych, zajęcia hip-hop, taniec współczesny, akrobatykę, K-POP oraz grupy turniejowe. Sprawdź, co najlepiej pasuje do Ciebie!",
+      "Wybierz zajęcia dla siebie lub swojego dziecka.",
   },
 } as const;
 
@@ -39,8 +39,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
   koszalin: [
     {
       name: "Balet | 7-9 lat",
-      description:
-        "Na zajęciach baletu dzieci uczą się podstawowych pozycji, pracy rąk i nóg oraz poruszania się w rytmie muzyki. Ćwiczymy koordynację, równowagę i poprawną postawę ciała. Zajęcia rozwijają wrażliwość muzyczną, koncentrację i estetykę ruchu. Pracujemy w spokojnej atmosferze, dopasowanej do wieku uczestników. Zajęcia są przeznaczone dla dzieci.",
+      description: "Podstawy baletu, rytmika i prawidłowa postawa.",
       minAge: "7",
       maxAge: "9",
       instructors: [
@@ -53,8 +52,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "KPOP Kids | 10-12 lat",
-      description:
-        "Na zajęciach KPOP dzieci uczą się choreografii inspirowanych popularnymi utworami i teledyskami. Pracujemy nad rytmiką, pamięcią ruchową i dynamiką tańca. Ćwiczymy elementy sceniczne, pewność siebie oraz pracę w grupie. Zajęcia są energiczne i prowadzone w sposób angażujący młodszych uczestników. Zajęcia są przeznaczone dla dzieci.",
+      description: "Choreografie z teledysków K-POP, rytm i sceniczna energia.",
       minAge: "10",
       maxAge: "12",
       instructors: [{ name: "Alina Lemańska", slug: "/kadra/alina-lemanska" }],
@@ -65,8 +63,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "KPOP Teens | 13+",
-      description:
-        "Na zajęciach KPOP dzieci uczą się choreografii inspirowanych popularnymi utworami i teledyskami. Pracujemy nad rytmiką, pamięcią ruchową i dynamiką tańca. Ćwiczymy elementy sceniczne, pewność siebie oraz pracę w grupie. Zajęcia są energiczne i prowadzone w sposób angażujący młodszych uczestników. Zajęcia są przeznaczone dla dzieci.",
+      description: "Choreografie z teledysków K-POP, rytm i sceniczna energia.",
       minAge: "13",
       maxAge: "",
       instructors: [{ name: "Alina Lemańska", slug: "/kadra/alina-lemanska" }],
@@ -77,8 +74,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "KPOP dla dorosłych | 30+",
-      description:
-        "Na zajęciach KPOP uczestnicy uczą się choreografii inspirowanych popularnymi utworami i teledyskami. Pracujemy nad rytmiką, pamięcią ruchową, dynamiką tańca, elementami scenicznymi i pewnością siebie.",
+      description: "Choreografie z teledysków K-POP, rytm i sceniczna energia.",
       minAge: "30",
       maxAge: "",
       instructors: [{ name: "Alina Lemańska", slug: "/kadra/alina-lemanska" }],
@@ -89,8 +85,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "Taniec dla 4-6 latków",
-      description:
-        "To zajęcia ruchowo-taneczne dla najmłodszych, które wprowadzają dzieci w świat tańca przez zabawę. Ćwiczymy podstawowe kroki, rytm i prostą koordynację ruchową. Wykorzystujemy muzykę, gry ruchowe i krótkie układy taneczne. Zajęcia wspierają rozwój motoryczny, samodzielność i oswajanie pracy w grupie. Zajęcia są przeznaczone dla dzieci w wieku 4–6 lat.",
+      description: "Pierwsze kroki taneczne, rytm i ruch przez zabawę.",
       minAge: "4",
       maxAge: "6",
       instructors: [
@@ -103,8 +98,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "Akrobatyka | 4-6 lat",
-      description:
-        "Na zajęciach dzieci poznają podstawy akrobatyki w bezpiecznej i zabawowej formie. Ćwiczymy skoczność, równowagę, gibkość oraz wzmacnianie całego ciała. Wprowadzamy proste elementy, takie jak przewroty i ćwiczenia na materacach. Duży nacisk kładziemy na prawidłowe nawyki ruchowe i bezpieczeństwo. Zajęcia są przeznaczone dla dzieci w wieku 4–6 lat.",
+      description: "Podstawy akrobatyki, równowaga i gibkość przez zabawę.",
       minAge: "4",
       maxAge: "6",
       instructors: [{ name: "Aleks Kultys", slug: "/kadra/aleks-kultys" }],
@@ -115,8 +109,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "Young Generation | 7-9 lat",
-      description:
-        "To zajęcia hip-hop dla dzieci, które chcą rozwijać swój ruch i poczucie rytmu. Uczymy podstawowych kroków, groove’u i prostych choreografii dopasowanych do wieku. Ćwiczymy koordynację, energię ruchu oraz pracę zespołową. Zajęcia pomagają budować pewność siebie i swobodę na parkiecie. Zajęcia są przeznaczone dla dzieci w wieku 7–9 lat.",
+      description: "Podstawy hip-hopu, groove i pierwsze choreografie.",
       minAge: "7",
       maxAge: "9",
       instructors: [
@@ -133,8 +126,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "Akrobatyka | 7-9 lat",
-      description:
-        "Na zajęciach rozwijamy siłę, gibkość i koordynację poprzez ćwiczenia akrobatyczne dostosowane do wieku uczestników. Uczymy techniki podstawowych elementów i bezpiecznego wykonywania ćwiczeń. Pracujemy nad stabilizacją, mobilnością i świadomością ciała. Zajęcia mają formę aktywną i motywującą, ale z zachowaniem zasad bezpieczeństwa. Zajęcia są przeznaczone dla dzieci w wieku 7–9 lat.",
+      description: "Technika akrobatyczna, siła, gibkość i kontrola ciała.",
       minAge: "7",
       maxAge: "9",
       instructors: [{ name: "Aleks Kultys", slug: "/kadra/aleks-kultys" }],
@@ -145,8 +137,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "The Beat Hunters | 10-12 lat",
-      description:
-        "To grupa hip-hop dla dzieci starszych, w której rozwijamy technikę, rytmikę i pamięć choreograficzną. Uczestnicy uczą się bardziej złożonych kombinacji i pracy z muzyką. Ćwiczymy dynamikę, izolacje oraz elementy freestyle’u na poziomie podstawowym. Zajęcia wzmacniają pewność siebie i umiejętność współpracy w grupie. Zajęcia są przeznaczone dla dzieci w wieku 10–12 lat.",
+      description: "Hip-hop, choreografie i podstawy freestyle’u.",
       minAge: "10",
       maxAge: "12",
       instructors: [
@@ -163,8 +154,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "Akrobatyka | 10-13 lat",
-      description:
-        "Na zajęciach uczestnicy rozwijają sprawność ogólną, siłę i elastyczność potrzebną w akrobatyce. Ćwiczymy technikę elementów akrobatycznych na materacach oraz kontrolę ciała w ruchu. Wprowadzamy stopniowo trudniejsze ćwiczenia, dostosowując poziom do możliwości grupy. Ważna jest dla nas poprawność wykonania i bezpieczeństwo. Zajęcia są przeznaczone dla dzieci i młodzieży w wieku 10–13 lat.",
+      description: "Technika akrobatyczna, siła, gibkość i kontrola ciała.",
       minAge: "10",
       maxAge: "13",
       instructors: [{ name: "Aleks Kultys", slug: "/kadra/aleks-kultys" }],
@@ -175,8 +165,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "Taniec współczesny | 6-9 lat",
-      description:
-        "Na zajęciach tańca współczesnego dzieci poznają podstawy pracy z ruchem, przestrzenią i muzyką. Ćwiczymy płynność, koordynację oraz ekspresję poprzez krótkie kombinacje i choreografie. Zajęcia rozwijają świadomość ciała, kreatywność i wrażliwość artystyczną. Wprowadzamy elementy techniki i improwizacji w przyjaznej atmosferze. Zajęcia są przeznaczone dla dzieci w wieku 6–9 lat.",
+      description: "Technika tańca współczesnego, improwizacja i ekspresja.",
       minAge: "6",
       maxAge: "9",
       instructors: [
@@ -190,8 +179,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "Taniec współczesny | 10-12 lat",
-      description:
-        "Na zajęciach tańca współczesnego dzieci poznają podstawy pracy z ruchem, przestrzenią i muzyką. Ćwiczymy płynność, koordynację oraz ekspresję poprzez krótkie kombinacje i choreografie. Zajęcia rozwijają świadomość ciała, kreatywność i wrażliwość artystyczną. Wprowadzamy elementy techniki i improwizacji w przyjaznej atmosferze. Zajęcia są przeznaczone dla dzieci w wieku 10–12 lat.",
+      description: "Technika tańca współczesnego, improwizacja i ekspresja.",
       minAge: "10",
       maxAge: "12",
       instructors: [
@@ -208,8 +196,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "Taniec współczesny | 13-18 lat",
-      description:
-        "To zajęcia dla młodzieży, które rozwijają technikę tańca współczesnego oraz świadomą pracę z ciałem. Ćwiczymy sekwencje ruchowe, dynamikę, jakość ruchu i ekspresję sceniczną. Pojawiają się także elementy improwizacji i interpretacji muzyki. Zajęcia pomagają budować własny styl i pewność w tańcu. Zajęcia są przeznaczone dla młodzieży w wieku 13–18 lat.",
+      description: "Technika tańca współczesnego, improwizacja i ekspresja.",
       minAge: "13",
       maxAge: "18",
       instructors: [
@@ -222,8 +209,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "HYPE CREW",
-      description:
-        "To średniozaawansowana grupa dla osób, które mają doświadczenie w hip-hopie i chcą rozwijać się intensywniej. Pracujemy nad techniką, choreografią, dokładnością wykonania i jakością ruchu. Ćwiczymy także musicality, pracę formacji oraz przygotowanie do pokazów. Zajęcia są dynamiczne i wymagają regularności oraz zaangażowania. Grupa jest przeznaczona głównie dla dzieci i młodzieży z doświadczeniem.",
+      description: "Hip-hop dla średniozaawansowanych: choreografie i przygotowanie do pokazów.",
       minAge: "12",
       maxAge: "99",
       instructors: [
@@ -244,8 +230,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "Lekcje Indywidualne | Bez ograniczeń wiekowych",
-      description:
-        "To zajęcia 1:1 dopasowane do potrzeb uczestnika i jego poziomu zaawansowania. Możemy pracować nad techniką taneczną, akrobatyką, przygotowaniem choreografii lub rozwojem konkretnych umiejętności. Plan zajęć ustalamy indywidualnie w zależności od celu i wieku uczestnika. Zajęcia pozwalają na szybszy progres dzięki pełnej uwadze instruktora. Lekcje są przeznaczone dla dzieci, młodzieży i dorosłych.",
+      description: "Trening 1:1 dopasowany do Twojego poziomu i celu.",
       minAge: "5",
       maxAge: "99",
       instructors: [{ name: "Dobierany na podstawie zajęć", slug: "/kadra" }],
@@ -256,8 +241,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "Feminine Flow | 18+ lat",
-      description:
-        "To zajęcia taneczne dla dorosłych, skupione na płynności ruchu, świadomości ciała i kobiecej ekspresji. Pracujemy nad choreografiami, pewnością siebie oraz estetyką ruchu. Ćwiczymy koordynację, muzykalność i pracę z emocją w tańcu. Zajęcia odbywają się w komfortowej atmosferze, sprzyjającej rozwojowi i swobodzie. Zajęcia są przeznaczone dla osób 18+.",
+      description: "Płynność ruchu, kobieca ekspresja i pewność siebie.",
       minAge: "18",
       maxAge: "99",
       instructors: [
@@ -270,8 +254,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "Formacja dla dorosłych (Hip-Hop) | 30+",
-      description:
-        "Na zajęciach uczestnicy uczą się choreografii grupowych i pracy w zespole. Ćwiczymy synchronizację, ustawienia sceniczne oraz dokładność wykonania ruchu. Zajęcia rozwijają kondycję, koordynację i pamięć ruchową. To dobra opcja dla osób, które lubią regularny trening i wspólne przygotowanie układów. Zajęcia są przeznaczone dla dorosłych.",
+      description: "Hip-hop w grupie: choreografie, synchronizacja i kondycja.",
       minAge: "30",
       maxAge: "",
       instructors: [
@@ -284,8 +267,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "MASTER TRAINERS",
-      description:
-        "3 godziny | regularnie, 1x w miesiącu. To stała współpraca z wybranym trenerem, który regularnie pojawia się w naszym grafiku. Dzięki temu możesz trenować z nim przez cały sezon i rozwijać się pod jego okiem.",
+      description: "3-godzinny trening z wybranym trenerem raz w miesiącu.",
       minAge: "7",
       maxAge: "99",
       instructors: [
@@ -313,8 +295,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "MASTERCLASS",
-      description:
-        "1,5 godziny | specjalne wydarzenia. Jednorazowe warsztaty z zaproszonymi choreografami, tancerzami i instruktorami. Różne nazwiska, różne style, różne doświadczenia.",
+      description: "1,5-godzinne warsztaty z zaproszonym gościem.",
       minAge: "7",
       maxAge: "99",
       instructors: [{ name: "Gość specjalny", slug: "/kadra" }],
@@ -325,8 +306,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "HOODMOOD MASTER PASS",
-      description:
-        "Pakiet obejmuje 3-godzinny MASTER TRAINER oraz 1,5-godzinny MASTERCLASS.",
+      description: "Pakiet: 3 godziny MASTER TRAINER + 1,5 godziny MASTERCLASS.",
       minAge: "7",
       maxAge: "99",
       instructors: [{ name: "Gość specjalny", slug: "/kadra" }],
@@ -339,8 +319,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
   "bialy-bor": [
     {
       name: "Zajęcia taneczne | 4-7 lat",
-      description:
-        "Zajęcia ruchowo-taneczne dla dzieci w wieku 4–7 lat, prowadzone w formie zabawy. Dzieci uczą się podstaw rytmiki i koordynacji, prostych kroków oraz krótkich układów tanecznych dopasowanych do wieku. Pracujemy nad ogólną sprawnością, poczuciem rytmu, orientacją w przestrzeni i pewnością siebie. Zajęcia wspierają rozwój motoryczny i uczą pracy w grupie. Koszt: 80 zł/miesiąc.",
+      description: "Rytm, proste choreografie i nauka tańca przez zabawę.",
       minAge: "4",
       maxAge: "7",
       instructors: [
@@ -353,8 +332,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "Hip-hop | 8-13 lat",
-      description:
-        "Zajęcia hip-hop dla dzieci i młodzieży w wieku 8–13 lat. Uczestnicy poznają podstawy techniki, groove’u i pracy z muzyką oraz uczą się choreografii dopasowanych do poziomu grupy. Ćwiczymy koordynację, dynamikę, musicality i pamięć ruchową, a także elementy sceniczne i współpracę w zespole. Zajęcia pomagają budować swobodę ruchu i pewność siebie. Koszt: 80 zł/miesiąc.",
+      description: "Technika hip-hopu, groove i choreografie grupowe.",
       minAge: "8",
       maxAge: "13",
       instructors: [
@@ -369,8 +347,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
   polanow: [
     {
       name: "Taniec dla 4-6 latków",
-      description:
-        "To zajęcia ruchowo-taneczne dla najmłodszych, które wprowadzają dzieci w świat tańca przez zabawę. Ćwiczymy podstawowe kroki, rytm i prostą koordynację ruchową. Wykorzystujemy muzykę, gry ruchowe i krótkie układy taneczne. Zajęcia wspierają rozwój motoryczny, samodzielność i oswajanie pracy w grupie. Koszt: 140 zł/miesiąc.",
+      description: "Pierwsze kroki taneczne, rytm i ruch przez zabawę.",
       minAge: "4",
       maxAge: "6",
       instructors: [
@@ -383,8 +360,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "Hip-hop | 7-9 lat",
-      description:
-        "Zajęcia dla dzieci, które chcą rozwijać taneczną pasję i poznawać coraz bardziej złożone elementy hip-hopu. Uczestnicy pracują nad techniką, dynamiką, pamięcią ruchową i interpretacją muzyki, ucząc się krótkich choreografii dopasowanych do wieku i poziomu grupy.",
+      description: "Podstawy hip-hopu, dynamika i krótkie choreografie.",
       minAge: "7",
       maxAge: "9",
       instructors: [
@@ -397,8 +373,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "Hip-hop | 10-14 lat",
-      description:
-        "Treningi skierowane do starszych dzieci i młodzieży, nastawione na rozwój stylu, świadomości ciała i scenicznej ekspresji. Uczestnicy doskonalą technikę, groove, musicality oraz pracę zespołową, a także uczą się bardziej rozbudowanych choreografii i świadomego poruszania się w rytmie muzyki.",
+      description: "Technika hip-hopu, groove i choreografie grupowe.",
       minAge: "10",
       maxAge: "14",
       instructors: [
@@ -411,8 +386,7 @@ export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
     },
     {
       name: "Taniec współczesny | 7-11 lat",
-      description:
-        "Na zajęciach tańca współczesnego dzieci poznają podstawy pracy z ruchem, przestrzenią i muzyką. Ćwiczymy płynność, koordynację oraz ekspresję poprzez krótkie kombinacje i choreografie. Zajęcia rozwijają świadomość ciała, kreatywność i wrażliwość artystyczną. Wprowadzamy elementy techniki i improwizacji w przyjaznej atmosferze.",
+      description: "Technika tańca współczesnego, improwizacja i ekspresja.",
       minAge: "7",
       maxAge: "11",
       instructors: [

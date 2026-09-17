@@ -16,7 +16,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
-import { enrollmentClasses, getEnrollmentClassPrice, enrollmentLocationOptions } from "@/lib/data/enrollment-classes";
+import { enrollmentClasses, createSelectedClass, enrollmentLocationOptions } from "@/lib/data/enrollment-classes";
 import type { EnrollmentFormData } from "@/lib/schemas/enrollmentSchema";
 import FormTextField from "@/myComponents/forms/fields/FormTextField";
 import {
@@ -51,7 +51,6 @@ export default function StepParticipant() {
   const participantType = watch("participantType");
   const participantAge = watch("participantAge");
   const selectedLocationId = watch("selectedLocationId");
-  const isYouthParticipant = participantType === "youth";
   const ageErrorId = errors.participantAge
     ? "participant-age-error"
     : undefined;
@@ -104,13 +103,7 @@ export default function StepParticipant() {
                   });
                   handleClassesReset();
 
-                  if (option.value === "adult") {
-                    setValue("participantAge", "", {
-                      shouldDirty: true,
-                      shouldTouch: true,
-                      shouldValidate: true,
-                    });
-                  }
+
                 }}
                 disabled={isSubmitting}
                 aria-pressed={isActive}
@@ -144,9 +137,7 @@ export default function StepParticipant() {
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 ">
         <Field
-          className={`flex flex-col gap-2.5 transition ${
-            !isYouthParticipant ? "opacity-55" : ""
-          }`}
+          className="flex flex-col gap-2.5"
         >
           <FieldLabel
             htmlFor="participant-age"
@@ -161,10 +152,8 @@ export default function StepParticipant() {
               type="text"
               inputMode="numeric"
               pattern="[0-9]*"
-              placeholder={
-                isYouthParticipant ? "Np. 8" : "Tylko dla dzieci i młodzieży"
-              }
-              disabled={isSubmitting || !isYouthParticipant}
+              placeholder="Wiek w latach"
+              disabled={isSubmitting}
               aria-invalid={!!errors.participantAge}
               aria-describedby={ageErrorId}
               value={participantAge}
@@ -172,7 +161,7 @@ export default function StepParticipant() {
                 onChange: (event) => {
                   const value = event.target.value
                     .replace(/\D/g, "")
-                    .slice(0, 2);
+                    .slice(0, 3);
                   setValue("participantAge", value, {
                     shouldDirty: true,
                     shouldTouch: true,
@@ -260,21 +249,17 @@ export default function StepParticipant() {
             id="enrollment-hoodmood-member"
             checked={isHoodmoodMember}
             disabled={isSubmitting}
-            aria-describedby="enrollment-member-description"
             onCheckedChange={(checked) => {
               const isMember = checked === true;
               setValue("isHoodmoodMember", isMember, { shouldDirty: true });
               setValue("selectedClasses", watch("selectedClasses").map((selected) => {
                 const item = enrollmentClasses.find((entry) => entry.id === selected.classTypeId);
-                return item ? { ...selected, price: getEnrollmentClassPrice(item, isMember) } : selected;
+                return item ? createSelectedClass(item, isMember, selected.clientId) : selected;
               }), { shouldDirty: true });
             }}
           />
-          Uczestnik zajęć Hoodmood
+          <span>Aktywny kursant Hoodmood</span>
         </label>
-        <p id="enrollment-member-description" className="text-sm text-muted-foreground">
-          Zaznacz, jeśli już uczęszczasz na nasze zajęcia. Pokażemy ceny Master Programu i Master Passów dla uczestników Hoodmood.
-        </p>
       </div>
     </div>
   );

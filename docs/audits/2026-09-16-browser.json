@@ -1,0 +1,516 @@
+[
+  {
+    "width": 320,
+    "route": "/",
+    "overflow": false,
+    "h1": 1,
+    "brokenImages": [],
+    "video": [
+      {
+        "src": "http://localhost:3100/assets/videos/chairRotate.mp4",
+        "paused": false
+      },
+      {
+        "src": "http://localhost:3100/assets/videos/masterclass.mp4",
+        "paused": true
+      }
+    ],
+    "unnamedButtons": 0,
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".text-5xl"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 36.0pt (48px), font weight: normal). Expected contrast ratio of 3:1"
+          },
+          {
+            "target": [
+              ".mt-7"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.58 (foreground color: #cecdcd, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".mt-8"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"spotify\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"youtube\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/faq",
+    "overflow": false,
+    "h1": 1,
+    "brokenImages": [],
+    "video": [],
+    "unnamedButtons": 0
+  },
+  {
+    "width": 320,
+    "route": "/kontakt",
+    "overflow": false,
+    "h1": 1,
+    "brokenImages": [],
+    "video": [],
+    "unnamedButtons": 1,
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".mt-2.leading-6.text-muted-foreground"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.58 (foreground color: #cecdcd, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".sm\\:p-8 > .mb-3.tracking-\\[0\\.16em\\].text-muted-foreground"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.58 (foreground color: #cecdcd, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#contact-form-title"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 22.5pt (30px), font weight: normal). Expected contrast ratio of 3:1"
+          },
+          {
+            "target": [
+              "label[for=\"input-field-fullname\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.32 (foreground color: #e0e0e0, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "label[for=\"input-field-email\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.32 (foreground color: #e0e0e0, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/zapisz-sie",
+    "overflow": false,
+    "h1": 1,
+    "brokenImages": [],
+    "video": [],
+    "unnamedButtons": 1,
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".grid-cols-1.gap-3.grid > .gap-2\\.5.flex-col.flex:nth-child(2) > .tracking-\\[0\\.16em\\].ui-muted-label.pl-1"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.32 (foreground color: #e0e0e0, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".border-\\[\\#ac4967\\] > .font-medium"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.22 (foreground color: #ffffff, background color: #f3e5ea, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "label[for=\"participant-age\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.32 (foreground color: #e0e0e0, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "label[for=\"participant-location\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.32 (foreground color: #e0e0e0, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".cursor-pointer > span"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/oferta/koszalin",
+    "overflow": false,
+    "h1": 1,
+    "brokenImages": [],
+    "video": [],
+    "unnamedButtons": 0
+  },
+  {
+    "width": 320,
+    "route": "/grafik/koszalin",
+    "overflow": false,
+    "h1": 2,
+    "brokenImages": [],
+    "video": [],
+    "unnamedButtons": 0,
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              "#day-poniedziałek-heading"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#day-poniedziałek > header > span"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.58 (foreground color: #cecdcd, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#day-poniedziałek > .space-y-3 > li:nth-child(1) > article > .dark\\:text-\\(--brand-400\\).mb-3.text-\\(--brand-700\\)"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #eb94b1, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#day-poniedziałek > .space-y-3 > li:nth-child(1) > article > .text-base.leading-6.font-medium"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#day-poniedziałek > .space-y-3 > li:nth-child(1) > article > .mt-2.gap-2.text-muted-foreground"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.58 (foreground color: #cecdcd, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "route": "/cennik/koszalin/zajecia",
+    "overflow": false,
+    "h1": 1,
+    "brokenImages": [],
+    "video": [],
+    "unnamedButtons": 1
+  },
+  {
+    "width": 320,
+    "route": "/polityka-prywatnosci",
+    "overflow": false,
+    "h1": 1,
+    "brokenImages": [],
+    "video": [],
+    "unnamedButtons": 0
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "overflow": false,
+    "h1": 1,
+    "brokenImages": [],
+    "video": [
+      {
+        "src": "http://localhost:3100/assets/optimized/hero/hero-desktop.mp4",
+        "paused": false
+      },
+      {
+        "src": "http://localhost:3100/assets/videos/masterclass.mp4",
+        "paused": true
+      }
+    ],
+    "unnamedButtons": 0,
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".text-5xl"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 54.0pt (72px), font weight: normal). Expected contrast ratio of 3:1"
+          },
+          {
+            "target": [
+              ".mt-7"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.58 (foreground color: #cecdcd, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".mt-8"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"spotify\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "a[href$=\"youtube\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/faq",
+    "overflow": false,
+    "h1": 1,
+    "brokenImages": [],
+    "video": [],
+    "unnamedButtons": 0
+  },
+  {
+    "width": 1440,
+    "route": "/kontakt",
+    "overflow": false,
+    "h1": 1,
+    "brokenImages": [],
+    "video": [],
+    "unnamedButtons": 1,
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              ".justify-between.gap-3"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".mt-2.leading-6.text-muted-foreground"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.58 (foreground color: #cecdcd, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".leading-snug > p"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".underline[href$=\"regulamin\"][rel=\"noopener\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".underline[href$=\"polityka-prywatnosci\"][rel=\"noopener\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/zapisz-sie",
+    "overflow": false,
+    "h1": 1,
+    "brokenImages": [],
+    "video": [],
+    "unnamedButtons": 1,
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              "label[for=\"participant-age\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.32 (foreground color: #e0e0e0, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "label[for=\"participant-location\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.32 (foreground color: #e0e0e0, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".cursor-pointer > span"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".col-span-2"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.32 (foreground color: #e0e0e0, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "h4"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 18.0pt (24px), font weight: normal). Expected contrast ratio of 3:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/oferta/koszalin",
+    "overflow": false,
+    "h1": 1,
+    "brokenImages": [],
+    "video": [],
+    "unnamedButtons": 0
+  },
+  {
+    "width": 1440,
+    "route": "/grafik/koszalin",
+    "overflow": false,
+    "h1": 2,
+    "brokenImages": [],
+    "video": [],
+    "unnamedButtons": 0,
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": [
+          {
+            "target": [
+              "#day-poniedziałek > .space-y-3 > li:nth-child(1) > article > .border-t.pt-3.mt-4 > .text-\\[11px\\].tracking-\\[0\\.12em\\].uppercase"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.58 (foreground color: #cecdcd, background color: #ffffff, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#day-poniedziałek > .space-y-3 > li:nth-child(1) > article > .border-t.pt-3.mt-4 > .mt-1.leading-5.text-foreground"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#day-poniedziałek > .space-y-3 > li:nth-child(1) > article > details > summary"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.58 (foreground color: #cecdcd, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#day-poniedziałek > .space-y-3 > li:nth-child(2) > article > .dark\\:text-\\(--brand-400\\).mb-3.text-\\(--brand-700\\)"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #eb94b1, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#day-poniedziałek > .space-y-3 > li:nth-child(2) > article > .text-base.leading-6.font-medium"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.04 (foreground color: #fafafa, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "route": "/cennik/koszalin/zajecia",
+    "overflow": false,
+    "h1": 1,
+    "brokenImages": [],
+    "video": [],
+    "unnamedButtons": 1
+  },
+  {
+    "width": 1440,
+    "route": "/polityka-prywatnosci",
+    "overflow": false,
+    "h1": 1,
+    "brokenImages": [],
+    "video": [],
+    "unnamedButtons": 0
+  },
+  {
+    "test": "mobile-navigation-expanded",
+    "client": 533,
+    "scroll": 623,
+    "overflow": "hidden",
+    "box": {
+      "x": 0,
+      "y": 72,
+      "width": 390,
+      "height": 533.59375,
+      "top": 72,
+      "right": 390,
+      "bottom": 605.59375,
+      "left": 0
+    },
+    "lastLink": {
+      "x": 268.34375,
+      "y": 615.8125,
+      "width": 105.65625,
+      "height": 44,
+      "top": 615.8125,
+      "right": 374,
+      "bottom": 659.8125,
+      "left": 268.34375
+    }
+  },
+  {
+    "test": "reduced-motion",
+    "reduce": true,
+    "video": [
+      {
+        "src": "http://localhost:3100/assets/videos/chairRotate.mp4",
+        "paused": false
+      },
+      {
+        "src": "http://localhost:3100/assets/videos/masterclass.mp4",
+        "paused": true
+      }
+    ]
+  }
+]

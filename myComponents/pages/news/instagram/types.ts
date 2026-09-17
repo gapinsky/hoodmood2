@@ -43,6 +43,7 @@ export type InstagramApiResponse = {
 };
 
 export type InstagramPostsPage = {
+  status: "success" | "error";
   posts: InstagramPost[];
   nextCursor: string | null;
 };

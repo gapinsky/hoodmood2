@@ -5,7 +5,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: true,
     alt: "Dzieci Hoodmood podczas wspólnego wyjazdu w centrum Helios",
   },
   {
@@ -14,7 +13,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Uczestnicy Hoodmood tworzą prace plastyczne podczas warsztatów",
   },
   {
@@ -23,7 +21,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Tancerki Hoodmood występują na plenerowej scenie przed publicznością",
   },
   {
@@ -32,7 +29,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Dzieci w strojach ochronnych podczas zabawy terenowej",
   },
   {
@@ -41,7 +37,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Uczestniczki Hoodmood płyną kajakiem podczas wspólnego wyjazdu",
   },
   {
@@ -50,7 +45,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Dzieci poznają zioła i naturalne materiały podczas warsztatów",
   },
   {
@@ -59,7 +53,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Dzieci i instruktorka Hoodmood uczestniczą w zajęciach kreatywnych",
   },
   {
@@ -68,7 +61,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Grupa Hoodmood po występie trzyma medale i pamiątkowe dyplomy",
   },
   {
@@ -77,7 +69,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Dzieci Hoodmood prezentują prace wykonane podczas zajęć",
   },
   {
@@ -86,7 +77,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Dziecko maluje napis na folii podczas plenerowych warsztatów",
   },
   {
@@ -95,7 +85,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Grupa Hoodmood świętuje przy wspólnym stole",
   },
   {
@@ -104,7 +93,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Uczestniczka Hoodmood gra w bilard podczas wyjazdu grupowego",
   },
   {
@@ -113,7 +101,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Dzieci pokazują kolorowe kolaże podczas zajęć w sali",
   },
   {
@@ -122,7 +109,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Uczestnicy spotkania Hoodmood podczas świątecznej imprezy",
   },
   {
@@ -131,7 +117,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Trójka uczestników Hoodmood w kaskach przed trasą parku linowego",
   },
   {
@@ -140,7 +125,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Grupa Hoodmood pozuje w lustrzanej kuli przed londyńskim Westminsterem",
   },
   {
@@ -149,7 +133,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Duże wydarzenie plenerowe z publicznością, sceną i występem",
   },
   {
@@ -158,7 +141,6 @@ export const imageSources = [
     height: 600,
     media: "(max-width: 640px)",
     sizes: "(max-width: 640px) calc(100vw - 2rem), 33vw",
-    priority: false,
     alt: "Grupa Hoodmood na karuzeli w parku rozrywki",
   },
 ];

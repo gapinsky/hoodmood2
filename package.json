@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test:enrollment-phone": "node scripts/check-enrollment-phone.cjs",
     "typecheck": "tsc --noEmit --noUnusedLocals --noUnusedParameters"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
     "embla-carousel-react": "^8.6.0",
     "html2canvas-pro": "^2.0.2",
     "jspdf": "^4.2.0",
+    "libphonenumber-js": "^1.13.13",
     "lucide-react": "^0.568.0",
     "next": "^16.2.6",
     "next-themes": "^0.4.6",

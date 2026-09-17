@@ -3,9 +3,9 @@
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Mail, MessageSquareText, Phone, User } from "lucide-react";
+import { Mail, MessageSquareText, User } from "lucide-react";
 import { toast } from "sonner";
-import type { FieldError } from "react-hook-form";
+import FormPhoneField from "@/myComponents/forms/fields/FormPhoneField";
 
 import { buttonPrimaryStyles } from "@/myComponents/common/ButtonPrimary";
 import { contactFormSchema } from "@/lib/schemas/contactSchema";
@@ -19,6 +19,7 @@ const defaultValues: ContactFormInput = {
   fullName: "",
   email: "",
   phone: "",
+  phoneCountry: "PL",
   message: "",
   termsAccepted: false,
 };
@@ -26,6 +27,7 @@ const defaultValues: ContactFormInput = {
 export default function ContactForm() {
   const {
     register,
+    watch,
     control,
     handleSubmit,
     reset,
@@ -34,12 +36,6 @@ export default function ContactForm() {
     resolver: zodResolver(contactFormSchema),
     defaultValues,
     mode: "onSubmit",
-  });
-
-  const phoneRegistration = register("phone", {
-    onChange: (event) => {
-      event.target.value = event.target.value.replace(/\D/g, "").slice(0, 9);
-    },
   });
 
   const onSubmit = async (data: ContactFormInput) => {
@@ -84,34 +80,27 @@ export default function ContactForm() {
         registration={register("fullName")}
       />
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <FormTextField
-          id="input-field-email"
-          label="Adres e-mail"
-          type="email"
-          placeholder="Wpisz swój adres e-mail"
-          icon={Mail}
-          disabled={isSubmitting}
-          error={errors.email}
-          wrapperClassName="flex min-w-0 flex-col gap-2.5"
-          registration={register("email")}
-        />
+      <FormTextField
+        id="input-field-email"
+        label="Adres e-mail"
+        type="email"
+        placeholder="Wpisz swój adres e-mail"
+        icon={Mail}
+        disabled={isSubmitting}
+        error={errors.email}
+        wrapperClassName="flex min-w-0 flex-col gap-2.5"
+        registration={register("email")}
+      />
 
-        <FormTextField
-          id="input-field-phone"
-          label="Numer telefonu"
-          type="text"
-          placeholder="Wpisz numer telefonu"
-          icon={Phone}
-          disabled={isSubmitting}
-          error={errors.phone as FieldError | undefined}
-          wrapperClassName="flex min-w-0 flex-col gap-2.5"
-          registration={phoneRegistration}
-          inputMode="numeric"
-          maxLength={9}
-          autoComplete="tel-national"
-        />
-      </div>
+      <FormPhoneField
+        id="input-field-phone"
+        country={watch("phoneCountry")}
+        countryRegistration={register("phoneCountry")}
+        phoneRegistration={register("phone")}
+        countryError={errors.phoneCountry}
+        phoneError={errors.phone}
+        disabled={isSubmitting}
+      />
 
       <FormTextareaField
         id="input-field-textarea"

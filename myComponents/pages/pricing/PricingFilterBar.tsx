@@ -184,10 +184,12 @@ export default function PricingFilterBar() {
             onCheckedChange={(checked) => setIsHoodmoodMember(checked === true)}
             aria-describedby="hoodmood-member-description"
           />
-          Członek Hoodmood
+          <span>Aktywny kursant Hoodmood</span>
         </label>
         <p id="hoodmood-member-description" className="text-sm text-muted-foreground">
-          Ceny Master Trainers, Masterclass i Master Pass dla {isHoodmoodMember ? "aktywnych kursantów Hoodmood" : "osób spoza Hoodmood"}.
+          Ceny Master Trainers, Masterclass i Master Pass dla {isHoodmoodMember ? (<>
+            <a href="/regulamin#aktywny-kursant" target="_blank" rel="noopener noreferrer" className="ui-focus-ring underline underline-offset-4 hover:text-foreground">aktywnych kursantów</a>{" "}Hoodmood
+          </>) : "osób spoza Hoodmood"}.
         </p>
       </div>
     </div>

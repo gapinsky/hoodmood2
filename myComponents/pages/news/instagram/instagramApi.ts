@@ -1,3 +1,5 @@
+import "server-only";
+import { unstable_cache } from "next/cache";
 import type {
   InstagramApiPost,
   InstagramApiResponse,
@@ -70,10 +72,12 @@ async function fetchInstagramMedia(
   accessToken: string,
   after?: string,
 ): Promise<Response> {
+  const signal = AbortSignal.timeout(6000);
   const response = await fetch(
     getFeedUrl(userId, accessToken, fieldsWithCounts, after),
     {
       cache: "no-store",
+      signal,
     },
   );
 
@@ -83,17 +87,18 @@ async function fetchInstagramMedia(
 
   return fetch(getFeedUrl(userId, accessToken, baseFields, after), {
     cache: "no-store",
+    signal,
   });
 }
 
-export async function getInstagramPostsPage(
+async function fetchPostsPage(
   after?: string,
 ): Promise<InstagramPostsPage> {
   const userId = process.env.INSTAGRAM_USER_ID;
   const accessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
 
   if (!userId || !accessToken) {
-    return { posts: [], nextCursor: null };
+    throw new Error("Instagram unavailable");
   }
 
   try {
@@ -101,10 +106,11 @@ export async function getInstagramPostsPage(
 
     if (!response.ok) {
       console.error(`Instagram posts fetch failed: ${response.status}`);
-      return { posts: [], nextCursor: null };
+      throw new Error("Instagram unavailable");
     }
 
     const result = (await response.json()) as InstagramApiResponse;
+    if (!Array.isArray(result.data)) throw new Error("Invalid Instagram response");
 
     const posts = (result.data ?? [])
       .map((post) => {
@@ -125,6 +131,7 @@ export async function getInstagramPostsPage(
       .filter((post) => post.media.length > 0);
 
     return {
+      status: "success",
       posts,
       nextCursor: result.paging?.next
         ? (result.paging.cursors?.after ?? null)
@@ -132,7 +139,18 @@ export async function getInstagramPostsPage(
     };
   } catch {
     console.error("Instagram posts fetch failed");
-    return { posts: [], nextCursor: null };
+    throw new Error("Instagram unavailable");
+  }
+}
+
+// Cache only successful, validated public results; throwing on refresh preserves stale data.
+const cachedPostsPage = unstable_cache(fetchPostsPage, ["instagram-public-feed-v2"], { revalidate: 600 });
+
+export async function getInstagramPostsPage(after?: string): Promise<InstagramPostsPage> {
+  try {
+    return await cachedPostsPage(after);
+  } catch {
+    return { status: "error", posts: [], nextCursor: null };
   }
 }
 

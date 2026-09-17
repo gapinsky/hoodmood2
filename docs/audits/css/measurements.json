@@ -1,0 +1,2977 @@
+{
+  "date": "2026-09-16",
+  "url": "http://localhost:3100/",
+  "method": "production Webpack build, three fresh Chrome runs per simulated mobile variant; diagnostic DevTools-throttled runs kept separate",
+  "experiments": {
+    "baseline-standard": {
+      "medianLcpMs": 5107.2765,
+      "runs": [
+        {
+          "name": "baseline-standard-1",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T19:57:19.101Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5483.672699999999,
+          "fcpMs": 1958.6727,
+          "cls": 0.0002537343750015678,
+          "observedBreakdown": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "label",
+                    "valueType": "text",
+                    "label": "Subpart"
+                  },
+                  {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "label": "Duration"
+                  }
+                ],
+                "items": [
+                  {
+                    "subpart": "timeToFirstByte",
+                    "label": "Time to first byte",
+                    "duration": 15.361
+                  },
+                  {
+                    "subpart": "elementRenderDelay",
+                    "label": "Element render delay",
+                    "duration": 90.494
+                  }
+                ]
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-SPAN",
+                "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+                "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+                "boundingRect": {
+                  "top": 320,
+                  "bottom": 375,
+                  "left": 16,
+                  "right": 214,
+                  "width": 198,
+                  "height": 56
+                },
+                "snippet": "<span class=\"inline-block \">",
+                "nodeLabel": "HOODMOOD"
+              }
+            ]
+          },
+          "renderBlocking": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://localhost:3100/_next/static/css/01933b92a7251704.css",
+                "totalBytes": 25603,
+                "wastedMs": 453
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+                "totalBytes": 1255,
+                "wastedMs": 303
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+                "totalBytes": 1087,
+                "wastedMs": 303
+              }
+            ]
+          },
+          "requests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.3529999852180481,
+              "networkEndTime": 16.59799998998642,
+              "transferSize": 46181,
+              "resourceSize": 417666
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/01933b92a7251704.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 23.644999980926514,
+              "networkEndTime": 36.553999960422516,
+              "transferSize": 25603,
+              "resourceSize": 163255
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 23.762000024318695,
+              "networkEndTime": 34.13899999856949,
+              "transferSize": 1255,
+              "resourceSize": 5475
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 23.83299994468689,
+              "networkEndTime": 33.90600001811981,
+              "transferSize": 1087,
+              "resourceSize": 754
+            }
+          ]
+        },
+        {
+          "name": "baseline-standard-2",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T19:57:34.022Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5107.2765,
+          "fcpMs": 1957.2765000000002,
+          "cls": 0.0002537343750015678,
+          "observedBreakdown": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "label",
+                    "valueType": "text",
+                    "label": "Subpart"
+                  },
+                  {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "label": "Duration"
+                  }
+                ],
+                "items": [
+                  {
+                    "subpart": "timeToFirstByte",
+                    "label": "Time to first byte",
+                    "duration": 5.72
+                  },
+                  {
+                    "subpart": "elementRenderDelay",
+                    "label": "Element render delay",
+                    "duration": 79.32
+                  }
+                ]
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-SPAN",
+                "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+                "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+                "boundingRect": {
+                  "top": 320,
+                  "bottom": 375,
+                  "left": 16,
+                  "right": 214,
+                  "width": 198,
+                  "height": 56
+                },
+                "snippet": "<span class=\"inline-block \">",
+                "nodeLabel": "HOODMOOD"
+              }
+            ]
+          },
+          "renderBlocking": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://localhost:3100/_next/static/css/01933b92a7251704.css",
+                "totalBytes": 25603,
+                "wastedMs": 452
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+                "totalBytes": 1255,
+                "wastedMs": 302
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+                "totalBytes": 1087,
+                "wastedMs": 302
+              }
+            ]
+          },
+          "requests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.31000006198883057,
+              "networkEndTime": 7.462000012397766,
+              "transferSize": 46181,
+              "resourceSize": 417666
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/01933b92a7251704.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 12.23199999332428,
+              "networkEndTime": 18.351000010967255,
+              "transferSize": 25603,
+              "resourceSize": 163255
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 12.412000060081482,
+              "networkEndTime": 15.216000020503998,
+              "transferSize": 1255,
+              "resourceSize": 5475
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 12.719000041484833,
+              "networkEndTime": 14.650000035762787,
+              "transferSize": 1087,
+              "resourceSize": 754
+            }
+          ]
+        },
+        {
+          "name": "baseline-standard-3",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T19:57:48.952Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5105.4627,
+          "fcpMs": 1955.4627,
+          "cls": 0,
+          "observedBreakdown": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "label",
+                    "valueType": "text",
+                    "label": "Subpart"
+                  },
+                  {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "label": "Duration"
+                  }
+                ],
+                "items": [
+                  {
+                    "subpart": "timeToFirstByte",
+                    "label": "Time to first byte",
+                    "duration": 4.059
+                  },
+                  {
+                    "subpart": "elementRenderDelay",
+                    "label": "Element render delay",
+                    "duration": 93.86
+                  }
+                ]
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-SPAN",
+                "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+                "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+                "boundingRect": {
+                  "top": 320,
+                  "bottom": 375,
+                  "left": 16,
+                  "right": 214,
+                  "width": 198,
+                  "height": 56
+                },
+                "snippet": "<span class=\"inline-block \">",
+                "nodeLabel": "HOODMOOD"
+              }
+            ]
+          },
+          "renderBlocking": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://localhost:3100/_next/static/css/01933b92a7251704.css",
+                "totalBytes": 25603,
+                "wastedMs": 452
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+                "totalBytes": 1255,
+                "wastedMs": 302
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+                "totalBytes": 1087,
+                "wastedMs": 302
+              }
+            ]
+          },
+          "requests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.3050000071525574,
+              "networkEndTime": 5.601000010967255,
+              "transferSize": 46181,
+              "resourceSize": 417666
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/01933b92a7251704.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 9.68699997663498,
+              "networkEndTime": 16.760999977588654,
+              "transferSize": 25603,
+              "resourceSize": 163255
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 9.82099997997284,
+              "networkEndTime": 12.583999991416931,
+              "transferSize": 1255,
+              "resourceSize": 5475
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 10.04799997806549,
+              "networkEndTime": 12.15499997138977,
+              "transferSize": 1087,
+              "resourceSize": 754
+            }
+          ]
+        }
+      ]
+    },
+    "controls-standard": {
+      "medianLcpMs": 5106.7302,
+      "runs": [
+        {
+          "name": "controls-standard-1",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T20:03:03.582Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5482.78335,
+          "fcpMs": 1957.7833500000002,
+          "cls": 0.0002537343750015678,
+          "observedBreakdown": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "label",
+                    "valueType": "text",
+                    "label": "Subpart"
+                  },
+                  {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "label": "Duration"
+                  }
+                ],
+                "items": [
+                  {
+                    "subpart": "timeToFirstByte",
+                    "label": "Time to first byte",
+                    "duration": 15.41
+                  },
+                  {
+                    "subpart": "elementRenderDelay",
+                    "label": "Element render delay",
+                    "duration": 99.671
+                  }
+                ]
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-SPAN",
+                "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+                "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+                "boundingRect": {
+                  "top": 320,
+                  "bottom": 375,
+                  "left": 16,
+                  "right": 214,
+                  "width": 198,
+                  "height": 56
+                },
+                "snippet": "<span class=\"inline-block \">",
+                "nodeLabel": "HOODMOOD"
+              }
+            ]
+          },
+          "renderBlocking": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://localhost:3100/_next/static/css/c766f586f09b7437.css",
+                "totalBytes": 22646,
+                "wastedMs": 453
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+                "totalBytes": 1087,
+                "wastedMs": 303
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+                "totalBytes": 1255,
+                "wastedMs": 303
+              }
+            ]
+          },
+          "requests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.5649999976158142,
+              "networkEndTime": 16.598999977111816,
+              "transferSize": 46185,
+              "resourceSize": 417666
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/c766f586f09b7437.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 24.265999972820282,
+              "networkEndTime": 39.155000030994415,
+              "transferSize": 22646,
+              "resourceSize": 144730
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 24.39300000667572,
+              "networkEndTime": 36.06599998474121,
+              "transferSize": 1255,
+              "resourceSize": 5475
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 24.462999999523163,
+              "networkEndTime": 35.86800003051758,
+              "transferSize": 1087,
+              "resourceSize": 754
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/88246ea7bb0b625c.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 225.9060000181198,
+              "networkEndTime": 229.3499999642372,
+              "transferSize": 5220,
+              "resourceSize": 27566
+            }
+          ]
+        },
+        {
+          "name": "controls-standard-2",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T20:03:18.132Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5106.36495,
+          "fcpMs": 1956.3649500000001,
+          "cls": 0.0002537343750015678,
+          "observedBreakdown": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "label",
+                    "valueType": "text",
+                    "label": "Subpart"
+                  },
+                  {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "label": "Duration"
+                  }
+                ],
+                "items": [
+                  {
+                    "subpart": "timeToFirstByte",
+                    "label": "Time to first byte",
+                    "duration": 5.241
+                  },
+                  {
+                    "subpart": "elementRenderDelay",
+                    "label": "Element render delay",
+                    "duration": 64.013
+                  }
+                ]
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-SPAN",
+                "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+                "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+                "boundingRect": {
+                  "top": 320,
+                  "bottom": 375,
+                  "left": 16,
+                  "right": 214,
+                  "width": 198,
+                  "height": 56
+                },
+                "snippet": "<span class=\"inline-block \">",
+                "nodeLabel": "HOODMOOD"
+              }
+            ]
+          },
+          "renderBlocking": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://localhost:3100/_next/static/css/c766f586f09b7437.css",
+                "totalBytes": 22646,
+                "wastedMs": 452
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+                "totalBytes": 1255,
+                "wastedMs": 302
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+                "totalBytes": 1087,
+                "wastedMs": 302
+              }
+            ]
+          },
+          "requests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.2909999489784241,
+              "networkEndTime": 6.597000002861023,
+              "transferSize": 46185,
+              "resourceSize": 417666
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/c766f586f09b7437.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 11.064999997615814,
+              "networkEndTime": 16.407999992370605,
+              "transferSize": 22646,
+              "resourceSize": 144730
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 11.21399998664856,
+              "networkEndTime": 13.451999962329865,
+              "transferSize": 1255,
+              "resourceSize": 5475
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 11.458000004291534,
+              "networkEndTime": 12.873999953269958,
+              "transferSize": 1087,
+              "resourceSize": 754
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/88246ea7bb0b625c.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 149.1710000038147,
+              "networkEndTime": 154.25900000333786,
+              "transferSize": 5220,
+              "resourceSize": 27566
+            }
+          ]
+        },
+        {
+          "name": "controls-standard-3",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T20:03:32.590Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5106.7302,
+          "fcpMs": 1956.7302,
+          "cls": 0.0002537343750015678,
+          "observedBreakdown": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "label",
+                    "valueType": "text",
+                    "label": "Subpart"
+                  },
+                  {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "label": "Duration"
+                  }
+                ],
+                "items": [
+                  {
+                    "subpart": "timeToFirstByte",
+                    "label": "Time to first byte",
+                    "duration": 4.197999938964844
+                  },
+                  {
+                    "subpart": "elementRenderDelay",
+                    "label": "Element render delay",
+                    "duration": 77.71800006103516
+                  }
+                ]
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-SPAN",
+                "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+                "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+                "boundingRect": {
+                  "top": 320,
+                  "bottom": 375,
+                  "left": 16,
+                  "right": 214,
+                  "width": 198,
+                  "height": 56
+                },
+                "snippet": "<span class=\"inline-block \">",
+                "nodeLabel": "HOODMOOD"
+              }
+            ]
+          },
+          "renderBlocking": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://localhost:3100/_next/static/css/c766f586f09b7437.css",
+                "totalBytes": 22646,
+                "wastedMs": 452
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+                "totalBytes": 1255,
+                "wastedMs": 302
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+                "totalBytes": 1087,
+                "wastedMs": 302
+              }
+            ]
+          },
+          "requests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.28999996185302734,
+              "networkEndTime": 5.620000004768372,
+              "transferSize": 46185,
+              "resourceSize": 417666
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/c766f586f09b7437.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 9.99700003862381,
+              "networkEndTime": 15.220999956130981,
+              "transferSize": 22646,
+              "resourceSize": 144730
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 10.142000019550323,
+              "networkEndTime": 12.406000018119812,
+              "transferSize": 1255,
+              "resourceSize": 5475
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 10.41399997472763,
+              "networkEndTime": 11.808000028133392,
+              "transferSize": 1087,
+              "resourceSize": 754
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/88246ea7bb0b625c.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 145.66500002145767,
+              "networkEndTime": 151.13699996471405,
+              "transferSize": 5220,
+              "resourceSize": 27566
+            }
+          ]
+        }
+      ]
+    },
+    "merged-standard": {
+      "medianLcpMs": 5106.905699999999,
+      "runs": [
+        {
+          "name": "merged-standard-1",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T20:05:21.359Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5183.6823,
+          "fcpMs": 1658.6823,
+          "cls": 0.0002537343750015678,
+          "observedBreakdown": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "label",
+                    "valueType": "text",
+                    "label": "Subpart"
+                  },
+                  {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "label": "Duration"
+                  }
+                ],
+                "items": [
+                  {
+                    "subpart": "timeToFirstByte",
+                    "label": "Time to first byte",
+                    "duration": 15.141
+                  },
+                  {
+                    "subpart": "elementRenderDelay",
+                    "label": "Element render delay",
+                    "duration": 100.722
+                  }
+                ]
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-SPAN",
+                "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+                "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+                "boundingRect": {
+                  "top": 320,
+                  "bottom": 375,
+                  "left": 16,
+                  "right": 214,
+                  "width": 198,
+                  "height": 56
+                },
+                "snippet": "<span class=\"inline-block \">",
+                "nodeLabel": "HOODMOOD"
+              }
+            ]
+          },
+          "renderBlocking": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://localhost:3100/_next/static/css/c379a5b2f381adba.css",
+                "totalBytes": 22721,
+                "wastedMs": 303
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+                "totalBytes": 1255,
+                "wastedMs": 303
+              }
+            ]
+          },
+          "requests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.3699999451637268,
+              "networkEndTime": 16.392999947071075,
+              "transferSize": 45919,
+              "resourceSize": 416683
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/c379a5b2f381adba.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 23.463999927043915,
+              "networkEndTime": 36.1139999628067,
+              "transferSize": 22721,
+              "resourceSize": 145382
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 23.594999969005585,
+              "networkEndTime": 34.071999967098236,
+              "transferSize": 1255,
+              "resourceSize": 5475
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/88246ea7bb0b625c.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 212.8159999847412,
+              "networkEndTime": 217.9399999976158,
+              "transferSize": 5220,
+              "resourceSize": 27566
+            }
+          ]
+        },
+        {
+          "name": "merged-standard-2",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T20:05:35.848Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5106.905699999999,
+          "fcpMs": 1656.9057,
+          "cls": 0.0002537343750015678,
+          "observedBreakdown": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "label",
+                    "valueType": "text",
+                    "label": "Subpart"
+                  },
+                  {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "label": "Duration"
+                  }
+                ],
+                "items": [
+                  {
+                    "subpart": "timeToFirstByte",
+                    "label": "Time to first byte",
+                    "duration": 5.381
+                  },
+                  {
+                    "subpart": "elementRenderDelay",
+                    "label": "Element render delay",
+                    "duration": 73.778
+                  }
+                ]
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-SPAN",
+                "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+                "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+                "boundingRect": {
+                  "top": 320,
+                  "bottom": 375,
+                  "left": 16,
+                  "right": 214,
+                  "width": 198,
+                  "height": 56
+                },
+                "snippet": "<span class=\"inline-block \">",
+                "nodeLabel": "HOODMOOD"
+              }
+            ]
+          },
+          "renderBlocking": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://localhost:3100/_next/static/css/c379a5b2f381adba.css",
+                "totalBytes": 22721,
+                "wastedMs": 302
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+                "totalBytes": 1255,
+                "wastedMs": 302
+              }
+            ]
+          },
+          "requests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.2850000262260437,
+              "networkEndTime": 6.6420000195503235,
+              "transferSize": 45919,
+              "resourceSize": 416683
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/c379a5b2f381adba.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 11.085000038146973,
+              "networkEndTime": 16.289000034332275,
+              "transferSize": 22721,
+              "resourceSize": 145382
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 11.215000033378601,
+              "networkEndTime": 14.712000012397766,
+              "transferSize": 1255,
+              "resourceSize": 5475
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/88246ea7bb0b625c.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 146.06400001049042,
+              "networkEndTime": 151.4539999961853,
+              "transferSize": 5220,
+              "resourceSize": 27566
+            }
+          ]
+        },
+        {
+          "name": "merged-standard-3",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T20:05:50.306Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5031.541499999999,
+          "fcpMs": 1656.5415,
+          "cls": 0.0002537343750015678,
+          "observedBreakdown": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "label",
+                    "valueType": "text",
+                    "label": "Subpart"
+                  },
+                  {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "label": "Duration"
+                  }
+                ],
+                "items": [
+                  {
+                    "subpart": "timeToFirstByte",
+                    "label": "Time to first byte",
+                    "duration": 4.578
+                  },
+                  {
+                    "subpart": "elementRenderDelay",
+                    "label": "Element render delay",
+                    "duration": 70.587
+                  }
+                ]
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-SPAN",
+                "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+                "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+                "boundingRect": {
+                  "top": 320,
+                  "bottom": 375,
+                  "left": 16,
+                  "right": 214,
+                  "width": 198,
+                  "height": 56
+                },
+                "snippet": "<span class=\"inline-block \">",
+                "nodeLabel": "HOODMOOD"
+              }
+            ]
+          },
+          "renderBlocking": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://localhost:3100/_next/static/css/c379a5b2f381adba.css",
+                "totalBytes": 22721,
+                "wastedMs": 302
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+                "totalBytes": 1255,
+                "wastedMs": 302
+              }
+            ]
+          },
+          "requests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.2890000343322754,
+              "networkEndTime": 6.362999975681305,
+              "transferSize": 45919,
+              "resourceSize": 416683
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/c379a5b2f381adba.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 11.120000004768372,
+              "networkEndTime": 17.515999972820282,
+              "transferSize": 22721,
+              "resourceSize": 145382
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 11.300999999046326,
+              "networkEndTime": 14.541999995708466,
+              "transferSize": 1255,
+              "resourceSize": 5475
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/88246ea7bb0b625c.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 149.23100000619888,
+              "networkEndTime": 152.88400000333786,
+              "transferSize": 5220,
+              "resourceSize": 27566
+            }
+          ]
+        }
+      ]
+    },
+    "pruned-standard": {
+      "medianLcpMs": 5182.020600000002,
+      "runs": [
+        {
+          "name": "pruned-standard-1",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T20:10:29.493Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5484.7251,
+          "fcpMs": 1959.7251,
+          "cls": 0.0002537343750015678,
+          "observedBreakdown": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "label",
+                    "valueType": "text",
+                    "label": "Subpart"
+                  },
+                  {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "label": "Duration"
+                  }
+                ],
+                "items": [
+                  {
+                    "subpart": "timeToFirstByte",
+                    "label": "Time to first byte",
+                    "duration": 15.826
+                  },
+                  {
+                    "subpart": "elementRenderDelay",
+                    "label": "Element render delay",
+                    "duration": 113.493
+                  }
+                ]
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-SPAN",
+                "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+                "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+                "boundingRect": {
+                  "top": 320,
+                  "bottom": 375,
+                  "left": 16,
+                  "right": 214,
+                  "width": 198,
+                  "height": 56
+                },
+                "snippet": "<span class=\"inline-block \">",
+                "nodeLabel": "HOODMOOD"
+              }
+            ]
+          },
+          "renderBlocking": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://localhost:3100/_next/static/css/28e6a22803c0de67.css",
+                "totalBytes": 25123,
+                "wastedMs": 453
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+                "totalBytes": 1087,
+                "wastedMs": 303
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+                "totalBytes": 1255,
+                "wastedMs": 303
+              }
+            ]
+          },
+          "requests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.3669999837875366,
+              "networkEndTime": 17.096999943256378,
+              "transferSize": 46182,
+              "resourceSize": 417666
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/28e6a22803c0de67.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 24.033999979496002,
+              "networkEndTime": 48.39099997282028,
+              "transferSize": 25123,
+              "resourceSize": 159356
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 24.167999923229218,
+              "networkEndTime": 36.158999979496,
+              "transferSize": 1255,
+              "resourceSize": 5475
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 24.305000007152557,
+              "networkEndTime": 35.90499997138977,
+              "transferSize": 1087,
+              "resourceSize": 754
+            }
+          ]
+        },
+        {
+          "name": "pruned-standard-2",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T20:10:44.484Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5182.020600000002,
+          "fcpMs": 1957.0205999999998,
+          "cls": 0.0002537343750015678,
+          "observedBreakdown": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "label",
+                    "valueType": "text",
+                    "label": "Subpart"
+                  },
+                  {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "label": "Duration"
+                  }
+                ],
+                "items": [
+                  {
+                    "subpart": "timeToFirstByte",
+                    "label": "Time to first byte",
+                    "duration": 5.530000061035156
+                  },
+                  {
+                    "subpart": "elementRenderDelay",
+                    "label": "Element render delay",
+                    "duration": 77.85599993896484
+                  }
+                ]
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-SPAN",
+                "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+                "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+                "boundingRect": {
+                  "top": 320,
+                  "bottom": 375,
+                  "left": 16,
+                  "right": 214,
+                  "width": 198,
+                  "height": 56
+                },
+                "snippet": "<span class=\"inline-block \">",
+                "nodeLabel": "HOODMOOD"
+              }
+            ]
+          },
+          "renderBlocking": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://localhost:3100/_next/static/css/28e6a22803c0de67.css",
+                "totalBytes": 25123,
+                "wastedMs": 452
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+                "totalBytes": 1255,
+                "wastedMs": 302
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+                "totalBytes": 1087,
+                "wastedMs": 302
+              }
+            ]
+          },
+          "requests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.2950000762939453,
+              "networkEndTime": 7.135000050067902,
+              "transferSize": 46182,
+              "resourceSize": 417666
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/28e6a22803c0de67.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 11.432000041007996,
+              "networkEndTime": 18.073000013828278,
+              "transferSize": 25123,
+              "resourceSize": 159356
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 11.668000042438507,
+              "networkEndTime": 15.680000007152557,
+              "transferSize": 1255,
+              "resourceSize": 5475
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 11.915000081062317,
+              "networkEndTime": 14.843999981880188,
+              "transferSize": 1087,
+              "resourceSize": 754
+            }
+          ]
+        },
+        {
+          "name": "pruned-standard-3",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T20:10:59.471Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 5106.320249999999,
+          "fcpMs": 1806.3202500000002,
+          "cls": 0.0002537343750015678,
+          "observedBreakdown": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "label",
+                    "valueType": "text",
+                    "label": "Subpart"
+                  },
+                  {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "label": "Duration"
+                  }
+                ],
+                "items": [
+                  {
+                    "subpart": "timeToFirstByte",
+                    "label": "Time to first byte",
+                    "duration": 4.315
+                  },
+                  {
+                    "subpart": "elementRenderDelay",
+                    "label": "Element render delay",
+                    "duration": 75.833
+                  }
+                ]
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-SPAN",
+                "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+                "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+                "boundingRect": {
+                  "top": 320,
+                  "bottom": 375,
+                  "left": 16,
+                  "right": 214,
+                  "width": 198,
+                  "height": 56
+                },
+                "snippet": "<span class=\"inline-block \">",
+                "nodeLabel": "HOODMOOD"
+              }
+            ]
+          },
+          "renderBlocking": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "url": "http://localhost:3100/_next/static/css/28e6a22803c0de67.css",
+                "totalBytes": 25123,
+                "wastedMs": 452
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+                "totalBytes": 1255,
+                "wastedMs": 302
+              },
+              {
+                "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+                "totalBytes": 1087,
+                "wastedMs": 302
+              }
+            ]
+          },
+          "requests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.2919999957084656,
+              "networkEndTime": 5.8140000104904175,
+              "transferSize": 46182,
+              "resourceSize": 417666
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/28e6a22803c0de67.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 10.125999987125397,
+              "networkEndTime": 16.971999943256378,
+              "transferSize": 25123,
+              "resourceSize": 159356
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 10.259999990463257,
+              "networkEndTime": 12.7950000166893,
+              "transferSize": 1255,
+              "resourceSize": 5475
+            },
+            {
+              "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+              "resourceType": "Stylesheet",
+              "networkRequestTime": 10.541999995708466,
+              "networkEndTime": 12.657000005245209,
+              "transferSize": 1087,
+              "resourceSize": 754
+            }
+          ]
+        }
+      ]
+    },
+    "pruned-inline": {
+      "medianLcpMs": 4200.996999999999,
+      "runs": [
+        {
+          "name": "pruned-inline-1",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T20:13:33.864Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 4200.996999999999,
+          "fcpMs": 1654.3988,
+          "cls": 0.0002537343750015678,
+          "observedBreakdown": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "label",
+                    "valueType": "text",
+                    "label": "Subpart"
+                  },
+                  {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "label": "Duration"
+                  }
+                ],
+                "items": [
+                  {
+                    "subpart": "timeToFirstByte",
+                    "label": "Time to first byte",
+                    "duration": 17.035
+                  },
+                  {
+                    "subpart": "elementRenderDelay",
+                    "label": "Element render delay",
+                    "duration": 95.723
+                  }
+                ]
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-SPAN",
+                "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+                "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+                "boundingRect": {
+                  "top": 320,
+                  "bottom": 375,
+                  "left": 16,
+                  "right": 214,
+                  "width": 198,
+                  "height": 56
+                },
+                "snippet": "<span class=\"inline-block \">",
+                "nodeLabel": "HOODMOOD"
+              }
+            ]
+          },
+          "renderBlocking": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": []
+          },
+          "requests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.362000048160553,
+              "networkEndTime": 21.165000021457672,
+              "transferSize": 98383,
+              "resourceSize": 753017
+            }
+          ]
+        },
+        {
+          "name": "pruned-inline-2",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T20:13:48.604Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 4804.908,
+          "fcpMs": 1654.908,
+          "cls": 0.0002537343750015678,
+          "observedBreakdown": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "label",
+                    "valueType": "text",
+                    "label": "Subpart"
+                  },
+                  {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "label": "Duration"
+                  }
+                ],
+                "items": [
+                  {
+                    "subpart": "timeToFirstByte",
+                    "label": "Time to first byte",
+                    "duration": 6.798
+                  },
+                  {
+                    "subpart": "elementRenderDelay",
+                    "label": "Element render delay",
+                    "duration": 59.365
+                  }
+                ]
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-SPAN",
+                "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+                "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+                "boundingRect": {
+                  "top": 320,
+                  "bottom": 375,
+                  "left": 16,
+                  "right": 214,
+                  "width": 198,
+                  "height": 56
+                },
+                "snippet": "<span class=\"inline-block \">",
+                "nodeLabel": "HOODMOOD"
+              }
+            ]
+          },
+          "renderBlocking": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": []
+          },
+          "requests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.28199994564056396,
+              "networkEndTime": 11.842000007629395,
+              "transferSize": 98383,
+              "resourceSize": 753017
+            }
+          ]
+        },
+        {
+          "name": "pruned-inline-3",
+          "lighthouseVersion": "13.4.1",
+          "fetchTime": "2026-09-16T20:14:03.266Z",
+          "settings": {
+            "output": [
+              "json"
+            ],
+            "maxWaitForFcp": 30000,
+            "maxWaitForLoad": 45000,
+            "pauseAfterFcpMs": 1000,
+            "pauseAfterLoadMs": 1000,
+            "networkQuietThresholdMs": 1000,
+            "cpuQuietThresholdMs": 1000,
+            "formFactor": "mobile",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "throttlingMethod": "simulate",
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "auditMode": false,
+            "gatherMode": false,
+            "clearStorageTypes": [
+              "file_systems",
+              "shader_cache",
+              "service_workers",
+              "cache_storage"
+            ],
+            "disableStorageReset": false,
+            "debugNavigation": false,
+            "channel": "cli",
+            "usePassiveGathering": false,
+            "disableFullPageScreenshot": false,
+            "skipAboutBlank": false,
+            "blankPage": "about:blank",
+            "ignoreStatusCode": false,
+            "locale": "en-US",
+            "blockedUrlPatterns": null,
+            "additionalTraceCategories": null,
+            "extraHeaders": null,
+            "precomputedLanternData": null,
+            "onlyAudits": null,
+            "onlyCategories": [
+              "performance"
+            ],
+            "skipAudits": null
+          },
+          "lcpMs": 4046.9545,
+          "fcpMs": 1656.2020000000002,
+          "cls": 0.0002537343750015678,
+          "observedBreakdown": {
+            "type": "list",
+            "items": [
+              {
+                "type": "table",
+                "headings": [
+                  {
+                    "key": "label",
+                    "valueType": "text",
+                    "label": "Subpart"
+                  },
+                  {
+                    "key": "duration",
+                    "valueType": "ms",
+                    "label": "Duration"
+                  }
+                ],
+                "items": [
+                  {
+                    "subpart": "timeToFirstByte",
+                    "label": "Time to first byte",
+                    "duration": 5.598
+                  },
+                  {
+                    "subpart": "elementRenderDelay",
+                    "label": "Element render delay",
+                    "duration": 83.208
+                  }
+                ]
+              },
+              {
+                "type": "node",
+                "lhId": "page-0-SPAN",
+                "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+                "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+                "boundingRect": {
+                  "top": 320,
+                  "bottom": 375,
+                  "left": 16,
+                  "right": 214,
+                  "width": 198,
+                  "height": 56
+                },
+                "snippet": "<span class=\"inline-block \">",
+                "nodeLabel": "HOODMOOD"
+              }
+            ]
+          },
+          "renderBlocking": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "url",
+                "valueType": "url",
+                "label": "URL"
+              },
+              {
+                "key": "totalBytes",
+                "valueType": "bytes",
+                "label": "Transfer Size"
+              },
+              {
+                "key": "wastedMs",
+                "valueType": "timespanMs",
+                "label": "Duration"
+              }
+            ],
+            "items": []
+          },
+          "requests": [
+            {
+              "url": "http://localhost:3100/",
+              "resourceType": "Document",
+              "networkRequestTime": 0.2940000295639038,
+              "networkEndTime": 11.504000008106232,
+              "transferSize": 98383,
+              "resourceSize": 753017
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "diagnostics": {
+    "pruned-standard": {
+      "name": "pruned-standard-applied",
+      "lighthouseVersion": "13.4.1",
+      "fetchTime": "2026-09-16T20:11:14.339Z",
+      "settings": {
+        "output": [
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 5250,
+        "pauseAfterLoadMs": 5250,
+        "networkQuietThresholdMs": 5250,
+        "cpuQuietThresholdMs": 5250,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "devtools",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance"
+        ],
+        "skipAudits": null
+      },
+      "lcpMs": 1699.343,
+      "fcpMs": 1699.343,
+      "cls": 0.0002537343750015678,
+      "observedBreakdown": {
+        "type": "list",
+        "items": [
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "label",
+                "valueType": "text",
+                "label": "Subpart"
+              },
+              {
+                "key": "duration",
+                "valueType": "ms",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "subpart": "timeToFirstByte",
+                "label": "Time to first byte",
+                "duration": 5.274999938964844
+              },
+              {
+                "subpart": "elementRenderDelay",
+                "label": "Element render delay",
+                "duration": 1694.0680000610353
+              }
+            ]
+          },
+          {
+            "type": "node",
+            "lhId": "page-0-SPAN",
+            "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+            "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+            "boundingRect": {
+              "top": 320,
+              "bottom": 375,
+              "left": 16,
+              "right": 214,
+              "width": 198,
+              "height": 56
+            },
+            "snippet": "<span class=\"inline-block \">",
+            "nodeLabel": "HOODMOOD"
+          }
+        ]
+      },
+      "renderBlocking": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "label": "URL"
+          },
+          {
+            "key": "totalBytes",
+            "valueType": "bytes",
+            "label": "Transfer Size"
+          },
+          {
+            "key": "wastedMs",
+            "valueType": "timespanMs",
+            "label": "Duration"
+          }
+        ],
+        "items": [
+          {
+            "url": "http://localhost:3100/_next/static/css/28e6a22803c0de67.css",
+            "totalBytes": 25123,
+            "wastedMs": 1030
+          },
+          {
+            "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+            "totalBytes": 1255,
+            "wastedMs": 880
+          },
+          {
+            "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+            "totalBytes": 1087,
+            "wastedMs": 880
+          }
+        ]
+      },
+      "requests": [
+        {
+          "url": "http://localhost:3100/",
+          "resourceType": "Document",
+          "networkRequestTime": 0.27699995040893555,
+          "networkEndTime": 809.0749999880791,
+          "transferSize": 46182,
+          "resourceSize": 417666
+        },
+        {
+          "url": "http://localhost:3100/_next/static/css/28e6a22803c0de67.css",
+          "resourceType": "Stylesheet",
+          "networkRequestTime": 585.7509999871254,
+          "networkEndTime": 1611.7879999876022,
+          "transferSize": 25123,
+          "resourceSize": 159356
+        },
+        {
+          "url": "http://localhost:3100/_next/static/css/7e2cf4c758f2a718.css",
+          "resourceType": "Stylesheet",
+          "networkRequestTime": 585.8820000290871,
+          "networkEndTime": 1167.0139999985695,
+          "transferSize": 1255,
+          "resourceSize": 5475
+        },
+        {
+          "url": "http://localhost:3100/_next/static/css/b2469b9507bbb18e.css",
+          "resourceType": "Stylesheet",
+          "networkRequestTime": 586.0320000052452,
+          "networkEndTime": 1157.7829999923706,
+          "transferSize": 1087,
+          "resourceSize": 754
+        }
+      ]
+    },
+    "pruned-inline": {
+      "name": "pruned-inline-applied",
+      "lighthouseVersion": "13.4.1",
+      "fetchTime": "2026-09-16T20:14:17.914Z",
+      "settings": {
+        "output": [
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 5250,
+        "pauseAfterLoadMs": 5250,
+        "networkQuietThresholdMs": 5250,
+        "cpuQuietThresholdMs": 5250,
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "devtools",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance"
+        ],
+        "skipAudits": null
+      },
+      "lcpMs": 913.537,
+      "fcpMs": 913.537,
+      "cls": 0.0002537343750015678,
+      "observedBreakdown": {
+        "type": "list",
+        "items": [
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "label",
+                "valueType": "text",
+                "label": "Subpart"
+              },
+              {
+                "key": "duration",
+                "valueType": "ms",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "subpart": "timeToFirstByte",
+                "label": "Time to first byte",
+                "duration": 6.638
+              },
+              {
+                "subpart": "elementRenderDelay",
+                "label": "Element render delay",
+                "duration": 906.899
+              }
+            ]
+          },
+          {
+            "type": "node",
+            "lhId": "page-0-SPAN",
+            "path": "1,HTML,1,BODY,9,MAIN,0,DIV,2,DIV,0,DIV,1,DIV,0,H1,0,SPAN",
+            "selector": "div.hero-stage > div.mt-1 > h1.max-w-[7ch] > span.inline-block",
+            "boundingRect": {
+              "top": 320,
+              "bottom": 375,
+              "left": 16,
+              "right": 214,
+              "width": 198,
+              "height": 56
+            },
+            "snippet": "<span class=\"inline-block \">",
+            "nodeLabel": "HOODMOOD"
+          }
+        ]
+      },
+      "renderBlocking": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "label": "URL"
+          },
+          {
+            "key": "totalBytes",
+            "valueType": "bytes",
+            "label": "Transfer Size"
+          },
+          {
+            "key": "wastedMs",
+            "valueType": "timespanMs",
+            "label": "Duration"
+          }
+        ],
+        "items": []
+      },
+      "requests": [
+        {
+          "url": "http://localhost:3100/",
+          "resourceType": "Document",
+          "networkRequestTime": 0.3400000333786011,
+          "networkEndTime": 1090.238000035286,
+          "transferSize": 98383,
+          "resourceSize": 753017
+        }
+      ]
+    }
+  }
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import { CircleX, RotateCcw, SearchIcon, User } from "lucide-react";
+import type { ExperienceFilterValue, OfferSortingValue } from "./types";
 import { Field, FieldLabel } from "@/components/ui/field";
 import {
   InputGroup,
@@ -22,18 +23,6 @@ import {
   selectItemStyles,
   selectTriggerStyles,
 } from "@/myComponents/forms/filterStyles";
-
-export type OfferSortingValue =
-  | "default"
-  | "alphabetical-asc"
-  | "alphabetical-desc"
-  | "age-asc";
-
-export type ExperienceFilterValue =
-  | "all"
-  | "Początkujący"
-  | "Średniozaawansowani"
-  | "Zaawansowani";
 
 type Props = {
   searchName: string;
@@ -163,16 +152,16 @@ export default function OfferFilterBar({
               <SelectItem className={selectItemStyles} value="all">
                 Wszystkie poziomy
               </SelectItem>
-              <SelectItem className={selectItemStyles} value="Początkujący">
+              <SelectItem className={selectItemStyles} value="beginner">
                 Początkujący
               </SelectItem>
               <SelectItem
                 className={selectItemStyles}
-                value="Średniozaawansowani"
+                value="intermediate"
               >
                 Średniozaawansowani
               </SelectItem>
-              <SelectItem className={selectItemStyles} value="Zaawansowani">
+              <SelectItem className={selectItemStyles} value="advanced">
                 Zaawansowani
               </SelectItem>
             </SelectGroup>

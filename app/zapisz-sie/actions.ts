@@ -1,10 +1,14 @@
 "use server";
 
+import { normalizePhoneNumber } from "@/lib/phone";
+import { mainContact } from "@/data/locations";
+import { resolveEnrollmentSelection } from "@/lib/data/enrollment-classes";
+
 import { Resend } from "resend";
 
 import {
-  enrollmentSchema,
-  type EnrollmentFormData,
+  enrollmentRequestSchema,
+  type EnrollmentRequest,
 } from "@/lib/schemas/enrollmentSchema";
 import {
   enrollmentConfirmationEmail,
@@ -13,9 +17,17 @@ import {
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function submitEnrollmentForm(data: EnrollmentFormData) {
+export async function submitEnrollmentForm(data: EnrollmentRequest) {
   try {
-    const validatedData = enrollmentSchema.parse(data);
+    const request = enrollmentRequestSchema.parse(data);
+    const selectedClasses = resolveEnrollmentSelection(request);
+    if (!selectedClasses) {
+      return {
+        success: false,
+        message: "Wybrane zajęcia nie są już dostępne lub nie pasują do uczestnika i lokalizacji. Wróć do wyboru zajęć i sprawdź zgłoszenie.",
+      };
+    }
+    const validatedData = { ...request, selectedClasses, phone: normalizePhoneNumber(request.phone, request.phoneCountry)! };
     const monthlyTotal = validatedData.selectedClasses
       .filter((item) => item.billingPeriod === "monthly")
       .reduce((sum, item) => sum + item.price, 0);
@@ -29,7 +41,10 @@ export async function submitEnrollmentForm(data: EnrollmentFormData) {
           <li style="margin-bottom: 12px;">
             <strong>${escapeHtml(item.classTypeName)}</strong><br />
             ${escapeHtml(item.locationName)} | ${escapeHtml(item.timeLabel)}<br />
-            ${item.price.toFixed(2).replace(".", ",")} ${escapeHtml(item.currency)} / ${item.billingPeriod === "one-time" ? "jednorazowo" : "miesięcznie"}
+            ${escapeHtml(item.scheduleLabel)}<br />
+            ${item.instructorLabel ? `Prowadzący: ${escapeHtml(item.instructorLabel)}<br />` : ""}
+            ${item.specialInstructorLabel ? `Gościnnie: ${escapeHtml(item.specialInstructorLabel)}<br />` : ""}
+            ${item.price.toFixed(2).replace(".", ",")} ${escapeHtml(item.currency)} ${escapeHtml(item.priceUnit)}
           </li>
         `,
       )
@@ -38,7 +53,7 @@ export async function submitEnrollmentForm(data: EnrollmentFormData) {
     const result = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL || "zapisy@kontakt.hoodmood.pl",
       to:
-        process.env.RESEND_ENROLLMENT_TO_EMAIL || "hoodmood.recepcja@gmail.com",
+        process.env.RESEND_ENROLLMENT_TO_EMAIL || mainContact.email,
       subject: `Nowe zgłoszenie: ${validatedData.participantFullName}`,
       replyTo: validatedData.email,
       html: `
@@ -47,10 +62,10 @@ export async function submitEnrollmentForm(data: EnrollmentFormData) {
         <h3>Uczestnik</h3>
         <p><strong>Imię i nazwisko:</strong> ${escapeHtml(validatedData.participantFullName)}</p>
         <p><strong>Grupa wiekowa:</strong> ${validatedData.participantType === "adult" ? "Dorosły" : "Dziecko / młodzież"}</p>
-        <p><strong>Wiek:</strong> ${validatedData.participantType === "adult" ? "Dorosły" : escapeHtml(validatedData.participantAge)}</p>
-        <p><strong>Lokalizacja:</strong> ${escapeHtml(validatedData.selectedLocationId)}</p>
+        <p><strong>Wiek:</strong> ${escapeHtml(validatedData.participantAge)}</p>
+        <p><strong>Lokalizacja:</strong> ${escapeHtml(selectedClasses[0].locationName)}</p>
 
-        <p><strong>Uczestnik zajęć Hoodmood:</strong> ${validatedData.isHoodmoodMember ? "Tak" : "Nie"}</p>
+        <p><strong>Aktywny kursant Hoodmood:</strong> ${validatedData.isHoodmoodMember ? "Tak" : "Nie"}</p>
 
         <h3>Dane kontaktowe</h3>
         <p><strong>Osoba kontaktowa:</strong> ${escapeHtml(validatedData.parentFullName)}</p>
@@ -83,7 +98,7 @@ export async function submitEnrollmentForm(data: EnrollmentFormData) {
       const confirmation = await resend.emails.send({
         from: process.env.RESEND_FROM_EMAIL || "zapisy@kontakt.hoodmood.pl",
         to: validatedData.email,
-        replyTo: "hoodmood.recepcja@gmail.com",
+        replyTo: mainContact.email,
         subject: "Dzięki za zapis! 💗",
         html: enrollmentConfirmationEmail(validatedData),
       });

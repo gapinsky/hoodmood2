@@ -1,17 +1,13 @@
 import TrainerCard from "@/myComponents/pages/team/TeamCard";
+import type { Trainer } from "@/data/trainers";
 
-type Props = {
-  id: string;
-  name: string;
-  styles: string[];
-  images: string[];
-};
+type Props = Pick<Trainer, "slug" | "name" | "styles" | "image">;
 
-export default function TeamCard({ id, name, styles, images }: Props) {
+export default function TeamCard({ slug, name, styles, image }: Props) {
   return (
     <TrainerCard
-      id={id}
-      images={images}
+      slug={slug}
+      image={image}
       name={name}
       styles={styles}
       variant="carousel"
