@@ -11,6 +11,7 @@ export type ClassOffer = Pick<DanceClass,
   "id" | "name" | "image" | "minAge" | "maxAge" | "level" | "sortOrder" | "enrollmentEnabled"
 > & {
   description: string;
+  logo?: { src: string; alt: string };
   instructors: OfferInstructor[];
   specialInstructors: OfferInstructor[];
   scheduleSrc?: string;

@@ -20,7 +20,7 @@ function InstructorList({ instructors }: { instructors: OfferInstructor[] }) {
 }
 
 export default function OfferCard({
-  name, image, description, instructors, specialInstructors, level, minAge, maxAge,
+  name, image, logo, description, instructors, specialInstructors, level, minAge, maxAge,
   scheduleSrc, pricingSrc, enrollmentEnabled, ageLabel, priceLabel, enrollmentLabel,
 }: ClassOffer) {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -34,10 +34,21 @@ export default function OfferCard({
           src={image}
           fill
           alt={name}
-          className={`${image === "/assets/optimized/branding/sapik-transparent.webp" ? "object-contain p-8" : "object-cover"} transition-[transform,opacity] duration-700 ease-out motion-reduce:transition-none motion-safe:group-hover/card:scale-[1.035] ${imageLoaded ? "opacity-100" : "opacity-0"}`}
+          className={`object-cover transition-[transform,opacity] duration-700 ease-out motion-reduce:transition-none motion-safe:group-hover/card:scale-[1.035] ${imageLoaded ? "opacity-100" : "opacity-0"}`}
           onLoad={() => setImageLoaded(true)}
           sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1279px) 46vw, 440px"
         />
+        {logo && (
+          <div className="absolute left-0 top-0 inline-flex h-14 w-28 -rotate-8 items-center justify-center opacity-35 transition-[transform,opacity] duration-700 group-hover/card:rotate-0 group-hover/card:opacity-100 motion-reduce:transition-none sm:h-16 sm:w-32">
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              fill
+              sizes="(max-width: 639px) 112px, 128px"
+              className="object-contain"
+            />
+          </div>
+        )}
       </div>
       <div className="flex flex-1 flex-col p-5 sm:p-6">
         <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground">

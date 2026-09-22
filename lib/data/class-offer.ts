@@ -23,6 +23,10 @@ export function getClassOffers(city: CitySlug): ClassOffer[] {
       id: item.id,
       name: item.name,
       image: item.image,
+      logo: city === "szczecinek" ? {
+        src: "/assets/optimized/branding/sapik-transparent.webp",
+        alt: "Logo SAPIK Szczecinek",
+      } : undefined,
       description: item.description || item.shortInfo,
       minAge: item.minAge,
       maxAge: item.maxAge,
