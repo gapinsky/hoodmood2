@@ -1,3 +1,4 @@
+import DownloadLink from "@/myComponents/common/DownloadLink";
 import { mainContact, locations, studioAddress } from "@/data/locations";
 import Image from "next/image";
 import logo from "../../public/assets/optimized/branding/logo.webp";
@@ -93,40 +94,36 @@ export default function Footer() {
                 <p className="font-semibold mb-2">Dokumenty do pobrania:</p>
                 <ul className="space-y-2">
                   <li>
-                    <a
+                    <DownloadLink
                       href="/assets/pdf/standardy-ochrony-dzieci-przed-krzywdzeniem.pdf"
-                      download={true}
                       className={cn(a11y, "ui-link-subtle opacity-80")}
                     >
                       Standardy ochrony dzieci przed krzywdzeniem
-                    </a>
+                    </DownloadLink>
                   </li>
                   <li>
-                    <a
-                      href="/assets/pdf/potwierdzenie-uczestnictwa-w-zajeciach.pdf"
+                    <DownloadLink
+                      href="/assets/pdf/potwierdzenie-uczestnictwa-koszalin.pdf"
                       className={cn(a11y, "ui-link-subtle opacity-80")}
-                      download={true}
                     >
                       Potwierdzenie uczestnictwa w zajęciach
-                    </a>
+                    </DownloadLink>
                   </li>
                   <li>
-                    <a
-                      href="/assets/pdf/umowa-uczestnictwa.pdf"
+                    <DownloadLink
+                      href="/assets/pdf/umowa-uczestnictwa-26-27.pdf"
                       className={cn(a11y, "ui-link-subtle opacity-80")}
-                      download={true}
                     >
                       Umowa uczestnictwa
-                    </a>
+                    </DownloadLink>
                   </li>
                   <li>
-                    <a
+                    <DownloadLink
                       href="/assets/pdf/regulamin-studia-tanca-hoodmood.pdf"
                       className={cn(a11y, "ui-link-subtle opacity-80")}
-                      download={true}
                     >
                       Regulamin studia tańca Hoodmood
-                    </a>
+                    </DownloadLink>
                   </li>
                 </ul>
               </div>

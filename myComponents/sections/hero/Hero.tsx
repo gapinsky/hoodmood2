@@ -16,7 +16,7 @@ type HeroProps = {
 
 export default function Hero({
   videoSrc = "/assets/optimized/hero/hero-desktop-wide.mp4",
-  mobileVideoSrc = "/assets/videos/chairRotate.mp4",
+  mobileVideoSrc = "/assets/videos/chairRotate%20copy.mp4",
   posterSrc = "/assets/videos/chairRotate-poster.jpg",
   title = "Hoodmood",
   description = "Zajęcia dla dzieci, młodzieży i dorosłych, w tym hip-hop, balet, taniec współczesny, KPOP, akrobatyka i lekcje indywidualne.",

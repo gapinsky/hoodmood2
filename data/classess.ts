@@ -91,7 +91,7 @@ export const classes = {
     "frequency": {
       "durationMinutes": 60
     },
-    "image": "/assets/images/offer/indywidualne.jpg",
+    "image": "/assets/images/offer/szczecinekIndywidualne.jpeg",
     "active": true,
     "enrollmentEnabled": true,
     "sortOrder": 350
@@ -138,7 +138,7 @@ export const classes = {
       "sessionsPerWeek": 2,
       "durationMinutes": 45
     },
-    "image": "/assets/images/offer/taniec4-6.jpg",
+    "image": "/assets/images/offer/szczecinek4-6.jpeg",
     "active": true,
     "enrollmentEnabled": true,
     "sortOrder": 300
@@ -185,7 +185,7 @@ export const classes = {
       "sessionsPerWeek": 2,
       "durationMinutes": 45
     },
-    "image": "/assets/images/offer/balet.jpg",
+    "image": "/assets/images/offer/szczecinek7-9.jpeg",
     "active": true,
     "enrollmentEnabled": true,
     "sortOrder": 310
@@ -232,7 +232,7 @@ export const classes = {
       "sessionsPerWeek": 2,
       "durationMinutes": 60
     },
-    "image": "/assets/images/offer/taniecWspolczesny8-12.jpg",
+    "image": "/assets/images/offer/szczecinek10-12.jpeg",
     "active": true,
     "enrollmentEnabled": true,
     "sortOrder": 320
@@ -279,7 +279,7 @@ export const classes = {
       "sessionsPerWeek": 2,
       "durationMinutes": 60
     },
-    "image": "/assets/images/offer/taniecWspolczesny13-18.jpg",
+    "image": "/assets/images/offer/szczecinek13-14.jpeg",
     "active": true,
     "enrollmentEnabled": true,
     "sortOrder": 330
@@ -326,7 +326,7 @@ export const classes = {
       "sessionsPerWeek": 2,
       "durationMinutes": 90
     },
-    "image": "/assets/images/offer/taniecWspolczesny12-18.png",
+    "image": "/assets/images/offer/szczecinek15.jpeg",
     "active": true,
     "enrollmentEnabled": true,
     "sortOrder": 340
