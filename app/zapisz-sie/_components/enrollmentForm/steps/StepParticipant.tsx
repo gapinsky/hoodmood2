@@ -233,6 +233,7 @@ export default function StepParticipant() {
             </SelectContent>
           </Select>
 
+
           <span
             id={locationErrorId}
             className={`min-h-5 pl-1 text-xs text-red-600 dark:text-red-400 ${

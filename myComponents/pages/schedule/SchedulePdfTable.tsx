@@ -3,7 +3,7 @@
 import { Clock, User } from "lucide-react";
 import type { RefObject } from "react";
 
-import { getScheduleDays, type ClassesByDay } from "./types";
+import { getDayVenues, getScheduleDays, type ClassesByDay } from "./types";
 
 type Props = {
   pdfRef: RefObject<HTMLDivElement | null>;
@@ -45,6 +45,9 @@ export default function SchedulePdfTable({
                   className="border-b border-r border-zinc-300 bg-zinc-100 p-4 text-base font-bold last:border-r-0"
                 >
                   {day.charAt(0).toUpperCase() + day.slice(1)}
+                  {getDayVenues(classesByDay[day]).map((venue) => (
+                    <p key={venue} className="mb-0 mt-2 text-sm font-normal leading-5 text-zinc-700">{venue}</p>
+                  ))}
                 </th>
               ))}
             </tr>

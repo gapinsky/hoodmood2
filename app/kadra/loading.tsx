@@ -3,8 +3,9 @@ import SectionContainer from "@/myComponents/common/SectionContainer";
 import { activeTrainers } from "@/data/trainers";
 
 const groups = [
-  activeTrainers.filter((trainer) => !trainer.specialGuest),
+  activeTrainers.filter((trainer) => !trainer.specialGuest && trainer.id !== "julia-kaczmarzyk"),
   activeTrainers.filter((trainer) => trainer.specialGuest),
+  activeTrainers.filter((trainer) => trainer.id === "julia-kaczmarzyk"),
 ];
 
 export default function TeamLoading() {
@@ -16,8 +17,9 @@ export default function TeamLoading() {
             <div className="h-4 w-48 rounded bg-foreground/10" />
             <div className="h-28 w-full max-w-3xl rounded-md bg-foreground/10" />
             <div className="h-20 w-full max-w-2xl rounded-md bg-foreground/5" />
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               <div className="h-12 w-32 rounded-full bg-foreground/5" />
+              <div className="h-12 w-44 rounded-full bg-foreground/5" />
               <div className="h-12 w-44 rounded-full bg-foreground/5" />
             </div>
           </div>

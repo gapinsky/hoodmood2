@@ -1,5 +1,6 @@
 "use client";
 
+import TrainerPhotoPlaceholder from "./TrainerPhotoPlaceholder";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
@@ -30,17 +31,17 @@ export default function TeamCard({
         className="ui-focus-ring group block min-w-0 rounded-md text-left"
       >
         <div className="relative aspect-square overflow-hidden rounded-md bg-muted">
-          {!imageLoaded && (
+          {image && !imageLoaded && (
             <div aria-hidden="true" className="absolute inset-0 animate-pulse bg-foreground/5 motion-reduce:animate-none" />
           )}
-          <Image
+          {image ? <Image
             src={image}
             alt={name}
             fill
             sizes="(max-width: 639px) calc(100vw - 2rem), (max-width: 767px) 46vw, (max-width: 1519px) 30vw, 440px"
             onLoad={() => setImageLoaded(true)}
             className={`object-cover transition-[opacity,transform] duration-700 ease-out motion-reduce:transition-none motion-safe:group-hover:scale-[1.035] motion-safe:group-focus-visible:scale-[1.035] ${imageLoaded ? "opacity-100" : "opacity-0"}`}
-          />
+          /> : <TrainerPhotoPlaceholder />}
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/35 via-transparent to-transparent" />
           <span className="absolute bottom-4 right-4 flex size-10 items-center justify-center rounded-full border border-white/25 bg-black/15 text-white backdrop-blur-md transition-colors group-hover:bg-white group-hover:text-black group-focus-visible:bg-white group-focus-visible:text-black">
             <ArrowUpRight className="size-5" aria-hidden="true" />
@@ -76,7 +77,7 @@ export default function TeamCard({
               : "animate-pulse opacity-100"
           }`}
         />
-        <Image
+        {image ? <Image
           src={image}
           fill
           alt={name}
@@ -87,7 +88,7 @@ export default function TeamCard({
           onLoad={() => setImageLoaded(true)}
           quality={85}
 
-        />
+        /> : <TrainerPhotoPlaceholder />}
 
         <div className="absolute left-0 top-0 z-10 inline-flex h-14 w-28 -rotate-8 items-center justify-center opacity-35 transition-[transform,opacity] duration-700 group-hover:rotate-0 group-hover:opacity-100 group-focus-visible:rotate-0 group-focus-visible:opacity-100 sm:h-16 sm:w-32">
           <Image

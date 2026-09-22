@@ -20,7 +20,7 @@ const desktopNavTriggerStyles =
 const desktopNavLinkStyles = "ui-nav-link text-[#1c1c1c]/98 dark:text-white";
 
 const desktopDropdownContentStyles =
-  "min-w-55 rounded-xs  border border-black/8 bg-white/92 p-2 dark:bg-[#1c1c1c]/98  shadow-[0_18px_48px_rgba(0,0,0,0.16)] backdrop-blur-xl dark:border-white/10  dark:shadow-[0_18px_48px_rgba(0,0,0,0.32)]";
+  "rounded-xs  border border-black/8 bg-white/92 p-2 dark:bg-[#1c1c1c]/98  shadow-[0_18px_48px_rgba(0,0,0,0.16)] backdrop-blur-xl dark:border-white/10  dark:shadow-[0_18px_48px_rgba(0,0,0,0.32)]";
 
 export default function NavMenuDesktop() {
   const pathname = usePathname();
@@ -37,7 +37,7 @@ export default function NavMenuDesktop() {
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent
-                  className={`${desktopDropdownContentStyles} left-0 w-full min-w-0 font-semibold `}
+                  className={`${desktopDropdownContentStyles} left-0 w-max min-w-full font-semibold `}
                 >
                   <div className="flex w-full flex-col gap-1">
                     {item.items.map((link) => (

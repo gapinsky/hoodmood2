@@ -13,8 +13,11 @@ export type ClassOffer = Pick<DanceClass,
   description: string;
   instructors: OfferInstructor[];
   specialInstructors: OfferInstructor[];
-  scheduleSrc: string;
+  scheduleSrc?: string;
   pricingSrc: string;
+  ageLabel?: string;
+  priceLabel?: string;
+  enrollmentLabel?: string;
 };
 
 export const classLevelLabels: Record<ClassLevel, string> = {

@@ -20,7 +20,7 @@ const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(([, url]) => decode(url
 assert.equal(new Set(urls).size, urls.length, 'Duplicate sitemap entries');
 assert(urls.length > 30, 'Missing sitemap routes');
 const paths = urls.map((url) => new URL(url).pathname);
-for (const path of ['/', '/kontakt', '/dofinansowanie', '/zapisz-sie', '/oferta/koszalin', '/oferta/polanow', '/oferta/bialy-bor', '/grafik/koszalin', '/cennik/koszalin/zajecia', '/cennik/koszalin/pakiety-zajec', '/cennik/koszalin/zajecia-indywidualne', '/cennik/bialy-bor', '/cennik/polanow']) {
+for (const path of ['/oferta/szczecinek', '/grafik/szczecinek', '/cennik/szczecinek', '/kadra/julia-kaczmarzyk', '/', '/kontakt', '/dofinansowanie', '/zapisz-sie', '/oferta/koszalin', '/oferta/polanow', '/oferta/bialy-bor', '/grafik/koszalin', '/cennik/koszalin/zajecia', '/cennik/koszalin/pakiety-zajec', '/cennik/koszalin/zajecia-indywidualne', '/cennik/bialy-bor', '/cennik/polanow']) {
   assert(paths.includes(path), `Missing ${path}`);
 }
 assert(!paths.includes('/cennik') && !paths.includes('/cennik/koszalin'));
@@ -55,6 +55,21 @@ for (const url of urls) {
     assert.equal(JSON.parse(jsonLd).url, expectedOrigin);
   }
   assert(!metas(html, 'robots').some((v) => v.includes('noindex')), `${path} noindex`);
+  if (['/oferta/szczecinek', '/grafik/szczecinek', '/cennik/szczecinek', '/kadra/julia-kaczmarzyk'].includes(path)) {
+    const scripts = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)];
+    const nodes = scripts.flatMap(([, json]) => JSON.parse(json)['@graph'] || []);
+    const page = nodes.find((node) => node['@id'] === `${url}#webpage`);
+    assert.equal(page?.url, url, `${path} structured page URL`);
+    const breadcrumbs = nodes.find((node) => node['@type'] === 'BreadcrumbList');
+    assert.equal(breadcrumbs?.itemListElement.at(-1).item, url, `${path} breadcrumb destination`);
+    assert.equal(metas(html, 'og:image')[0], `${expectedOrigin}/assets/optimized/localizations/szczecinek-dworcowa.webp`);
+    if (path === '/kadra/julia-kaczmarzyk') {
+      assert.equal(page['@type'], 'ProfilePage');
+      assert.equal(page.mainEntity['@type'], 'Person');
+      assert.equal(page.mainEntity.name, 'Julia Kaczmarzyk');
+      assert(!page.mainEntity.image, 'Do not present a placeholder as Julia’s portrait');
+    }
+  }
   results.push({ path, canonical: url, title, description });
 }
 assert.equal(new Set(results.map((r) => r.title)).size, results.length, 'Duplicate titles');

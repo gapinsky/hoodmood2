@@ -1,4 +1,4 @@
-export type CitySlug = "bialy-bor" | "koszalin" | "polanow";
+export type CitySlug = "bialy-bor" | "koszalin" | "polanow" | "szczecinek";
 
 interface Location {
   id: CitySlug;
@@ -25,7 +25,7 @@ export const legalEntity = {
 
 
 export function studioAddress(location: Location): string {
-  return `ul. ${location.address.street}, ${[location.address.postalCode, location.address.city].filter(Boolean).join(" ")}`;
+  return [location.address.street ? `ul. ${location.address.street}` : "", [location.address.postalCode, location.address.city].filter(Boolean).join(" ")].filter(Boolean).join(", ");
 }
 export function mapsUrl(location: Location): string {
   return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(studioAddress(location))}`;
@@ -59,6 +59,15 @@ export const locations = {
       street: "Tamka 3",
       postalCode: "78-425",
       city: "Biały Bór",
+    },
+  },
+  szczecinek: {
+    id: "szczecinek",
+    name: "Szczecinek",
+    address: {
+      street: "",
+      postalCode: "",
+      city: "Szczecinek",
     },
   },
 } as const satisfies Record<string, Location>;

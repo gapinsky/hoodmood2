@@ -1,0 +1,249 @@
+{
+  "checkedPages": 40,
+  "socialImages": [
+    "/assets/images/realLife/teamFreaky.jpg",
+    "/assets/optimized/localizations/szczecinek-dworcowa.webp"
+  ],
+  "results": [
+    {
+      "path": "/",
+      "canonical": "https://hoodmood.pl",
+      "title": "Szkoła tańca i akrobatyki — Koszalin, Polanów, Biały Bór, Szczecinek | Hoodmood",
+      "description": "Zajęcia tańca i akrobatyki dla dzieci, młodzieży i dorosłych w Koszalinie, Polanowie, Białym Borze i Szczecinku. Poznaj Hoodmood, sprawdź grafik i zapisz się…"
+    },
+    {
+      "path": "/kontakt",
+      "canonical": "https://hoodmood.pl/kontakt",
+      "title": "Kontakt ze szkołą tańca | Hoodmood",
+      "description": "Skontaktuj się z recepcją Hoodmood. Sprawdź dane kontaktowe i lokalizacje studia, zapytaj o zajęcia taneczne, akrobatykę lub zapisy."
+    },
+    {
+      "path": "/zapisz-sie",
+      "canonical": "https://hoodmood.pl/zapisz-sie",
+      "title": "Zapisy na zajęcia tańca i akrobatyki | Hoodmood",
+      "description": "Zapisz siebie lub dziecko na zajęcia Hoodmood. Wybierz lokalizację i zajęcia, podaj dane kontaktowe i prześlij zgłoszenie do recepcji."
+    },
+    {
+      "path": "/kadra",
+      "canonical": "https://hoodmood.pl/kadra",
+      "title": "Kadra i goście specjalni | Hoodmood",
+      "description": "Poznaj trenerów i gości specjalnych Hoodmood. Sprawdź ich doświadczenie oraz prowadzone zajęcia tańca i akrobatyki w naszych lokalizacjach."
+    },
+    {
+      "path": "/kolonie",
+      "canonical": "https://hoodmood.pl/kolonie",
+      "title": "Kolonie i obozy taneczne | Hoodmood",
+      "description": "Sprawdź kolonie, obozy i wydarzenia taneczne Hoodmood. Poznaj planowane wyjazdy oraz zobacz, jak wyglądały nasze poprzednie edycje."
+    },
+    {
+      "path": "/aktualnosci",
+      "canonical": "https://hoodmood.pl/aktualnosci",
+      "title": "Aktualności ze studia tańca | Hoodmood",
+      "description": "Zobacz aktualności Hoodmood: relacje z treningów, wydarzenia i życie naszej tanecznej ekipy. Śledź najnowsze wpisy ze studia."
+    },
+    {
+      "path": "/faq",
+      "canonical": "https://hoodmood.pl/faq",
+      "title": "FAQ — pytania o zajęcia i zapisy | Hoodmood",
+      "description": "Odpowiedzi na pytania o zajęcia Hoodmood, zapisy, płatności i przygotowanie do treningu. Sprawdź najważniejsze informacje przed pierwszą wizytą."
+    },
+    {
+      "path": "/dofinansowanie",
+      "canonical": "https://hoodmood.pl/dofinansowanie",
+      "title": "Dofinansowanie — Program KLUB 2025 | Hoodmood",
+      "description": "Informacje o dofinansowaniu Klubu Sportowego Hoodmood Dance Studio w Programie KLUB 2025: cel zadania, źródło wsparcia i wartość dotacji."
+    },
+    {
+      "path": "/regulamin",
+      "canonical": "https://hoodmood.pl/regulamin",
+      "title": "Regulamin studia tańca | Hoodmood",
+      "description": "Poznaj regulamin Hoodmood: zasady uczestnictwa w zajęciach, płatności i organizacji treningów oraz definicję aktywnego kursanta."
+    },
+    {
+      "path": "/regulamin-wejscia-probnego",
+      "canonical": "https://hoodmood.pl/regulamin-wejscia-probnego",
+      "title": "Regulamin wejścia próbnego za 40 zł | Hoodmood",
+      "description": "Zasady skorzystania z jednorazowego wejścia próbnego na zajęcia Hoodmood w cenie 40 zł. Sprawdź warunki promocji i sposób zgłoszenia."
+    },
+    {
+      "path": "/polityka-prywatnosci",
+      "canonical": "https://hoodmood.pl/polityka-prywatnosci",
+      "title": "Polityka prywatności | Hoodmood",
+      "description": "Sprawdź politykę prywatności Hoodmood: informacje o administratorze, przetwarzaniu danych osobowych, prawach użytkowników i plikach cookies."
+    },
+    {
+      "path": "/cennik/bialy-bor",
+      "canonical": "https://hoodmood.pl/cennik/bialy-bor",
+      "title": "Cennik zajęć — Biały Bór | Hoodmood",
+      "description": "Sprawdź ceny zajęć Hoodmood w Białym Borze. Poznaj dostępne treningi, ich częstotliwość i koszty uczestnictwa przed zapisaniem się na zajęcia."
+    },
+    {
+      "path": "/cennik/szczecinek",
+      "canonical": "https://hoodmood.pl/cennik/szczecinek",
+      "title": "Cennik tańca Szczecinek — REBELIA, SAPIK | Hoodmood",
+      "description": "Cennik REBELII w Szczecinku: grupy 4–9 lat — 120 zł/mies., 10–14 lat — 130 zł/mies., 15+ — 140 zł/mies. Lekcje indywidualne: 120 zł/60 min."
+    },
+    {
+      "path": "/cennik/polanow",
+      "canonical": "https://hoodmood.pl/cennik/polanow",
+      "title": "Cennik zajęć — Polanów | Hoodmood",
+      "description": "Sprawdź ceny zajęć Hoodmood w Polanowie. Porównaj dostępne treningi i koszty uczestnictwa, a następnie wybierz zajęcia dla siebie lub dziecka."
+    },
+    {
+      "path": "/oferta/koszalin",
+      "canonical": "https://hoodmood.pl/oferta/koszalin",
+      "title": "Oferta zajęć tanecznych — Koszalin | Hoodmood",
+      "description": "Poznaj ofertę zajęć Hoodmood — Koszalin. Zobacz dostępne treningi i wybierz zajęcia tańca lub akrobatyki dla siebie lub swojego dziecka."
+    },
+    {
+      "path": "/oferta/polanow",
+      "canonical": "https://hoodmood.pl/oferta/polanow",
+      "title": "Oferta zajęć tanecznych — Polanów | Hoodmood",
+      "description": "Poznaj ofertę zajęć Hoodmood — Polanów. Zobacz dostępne treningi i wybierz zajęcia tańca lub akrobatyki dla siebie lub swojego dziecka."
+    },
+    {
+      "path": "/oferta/bialy-bor",
+      "canonical": "https://hoodmood.pl/oferta/bialy-bor",
+      "title": "Oferta zajęć tanecznych — Biały Bór | Hoodmood",
+      "description": "Poznaj ofertę zajęć Hoodmood — Biały Bór. Zobacz dostępne treningi i wybierz zajęcia tańca lub akrobatyki dla siebie lub swojego dziecka."
+    },
+    {
+      "path": "/oferta/szczecinek",
+      "canonical": "https://hoodmood.pl/oferta/szczecinek",
+      "title": "Taniec Szczecinek — oferta REBELIA, SAPIK | Hoodmood",
+      "description": "Poznaj grupy REBELIA w SAPIK Szczecinek: Mikrusy, Minimki, Rebelia 3, Rebelia Junior i Rebelia 15+. Sprawdź ofertę i zapisz się na taniec."
+    },
+    {
+      "path": "/grafik/koszalin",
+      "canonical": "https://hoodmood.pl/grafik/koszalin",
+      "title": "Grafik zajęć tanecznych — Koszalin | Hoodmood",
+      "description": "Sprawdź aktualny grafik zajęć Hoodmood — Koszalin. Zobacz dni i godziny treningów tańca i akrobatyki oraz zaplanuj swój udział w zajęciach."
+    },
+    {
+      "path": "/grafik/polanow",
+      "canonical": "https://hoodmood.pl/grafik/polanow",
+      "title": "Grafik zajęć tanecznych — Polanów | Hoodmood",
+      "description": "Sprawdź aktualny grafik zajęć Hoodmood — Polanów. Zobacz dni i godziny treningów tańca i akrobatyki oraz zaplanuj swój udział w zajęciach."
+    },
+    {
+      "path": "/grafik/bialy-bor",
+      "canonical": "https://hoodmood.pl/grafik/bialy-bor",
+      "title": "Grafik zajęć tanecznych — Biały Bór | Hoodmood",
+      "description": "Sprawdź aktualny grafik zajęć Hoodmood — Biały Bór. Zobacz dni i godziny treningów tańca i akrobatyki oraz zaplanuj swój udział w zajęciach."
+    },
+    {
+      "path": "/grafik/szczecinek",
+      "canonical": "https://hoodmood.pl/grafik/szczecinek",
+      "title": "Grafik tańca Szczecinek — REBELIA, SAPIK | Hoodmood",
+      "description": "Grafik REBELII w Szczecinku: zajęcia od środy do piątku. Sprawdź godziny, grupy wiekowe i sale przy Dworcowej 1 oraz w SP 1 przy Placu Wazów 1."
+    },
+    {
+      "path": "/cennik/koszalin/zajecia",
+      "canonical": "https://hoodmood.pl/cennik/koszalin/zajecia",
+      "title": "Koszalin - cennik | Hoodmood",
+      "description": "Cennik Hoodmood w Koszalinie. Sprawdź ceny zajęć tanecznych i akrobatycznych. Wybierz zajęcia dopasowane do wieku, poziomu i zainteresowań uczestnika."
+    },
+    {
+      "path": "/cennik/koszalin/pakiety-zajec",
+      "canonical": "https://hoodmood.pl/cennik/koszalin/pakiety-zajec",
+      "title": "Koszalin - cennik pakietów zajęć | Hoodmood",
+      "description": "Cennik Hoodmood w Koszalinie. Sprawdź pakiety łączące kilka treningów w korzystniejszej cenie. Ceny pakietów rozliczane są miesięcznie."
+    },
+    {
+      "path": "/cennik/koszalin/zajecia-indywidualne",
+      "canonical": "https://hoodmood.pl/cennik/koszalin/zajecia-indywidualne",
+      "title": "Koszalin - cennik zajęć indywidualnych | Hoodmood",
+      "description": "Cennik Hoodmood w Koszalinie. Wybierz trening solo, w duecie lub małej grupie. Ceny podane są za godzinę; przy duetach i trio obowiązuje opłata od osoby."
+    },
+    {
+      "path": "/kadra/julia-kaczmarzyk",
+      "canonical": "https://hoodmood.pl/kadra/julia-kaczmarzyk",
+      "title": "Julia Kaczmarzyk — REBELIA, SAPIK Szczecinek | Hoodmood",
+      "description": "Julia Kaczmarzyk prowadzi zespół REBELIA w SAPIK Szczecinek. Poznaj jej grupy taneczne dla dzieci i młodzieży. Pełny profil i zdjęcie już wkrótce."
+    },
+    {
+      "path": "/kadra/talita-jarzecka",
+      "canonical": "https://hoodmood.pl/kadra/talita-jarzecka",
+      "title": "Talita Jarzęcka – CEO | Hoodmood",
+      "description": "Talita to doświadczona choreografka, trenerka i artystka sceniczna, której fundamentem jest solidne wykształcenie muzyczno-taneczne. Ukończyła studia…"
+    },
+    {
+      "path": "/kadra/wiktoria-butwicka",
+      "canonical": "https://hoodmood.pl/kadra/wiktoria-butwicka",
+      "title": "Wiktoria Butwicka – Hip-hop | Hoodmood",
+      "description": "Wiktoria Butwicka to tancerka i trenerka. Taniec towarzyszy jej od 2009 roku. Szkoliła się m.in. u instruktorów takich jak Klesia, Nikita czy Pumba. Brała…"
+    },
+    {
+      "path": "/kadra/paulina-walikowska",
+      "canonical": "https://hoodmood.pl/kadra/paulina-walikowska",
+      "title": "Paulina Walikowska – Balet | Hoodmood",
+      "description": "Paulina Walikowska swoją przygodę z tańcem rozpoczęła w klasie baletowej, gdzie zdobyła solidne podstawy techniczne. 8 lat rozwijała się artystycznie w…"
+    },
+    {
+      "path": "/kadra/alina-lemanska",
+      "canonical": "https://hoodmood.pl/kadra/alina-lemanska",
+      "title": "Alina Lemańska – KPOP | Hoodmood",
+      "description": "Na stronie sekcja Aliny Lemańskiej opisuje start zajęć KPOP — dynamiczne choreografie, energetyczną muzykę i przyjazną atmosferę. Zajęcia są skierowane do…"
+    },
+    {
+      "path": "/kadra/magdalena-sokolowska-japona",
+      "canonical": "https://hoodmood.pl/kadra/magdalena-sokolowska-japona",
+      "title": "Magdalena Sokołowska – Hip-hop/House | Hoodmood",
+      "description": "Magdalena Sokołowska jest związana z tańcem od 14. roku życia. Jest dyplomowaną instruktorką tańca o specjalizacji hip-hop. Style, w których najlepiej się…"
+    },
+    {
+      "path": "/kadra/maria-kober",
+      "canonical": "https://hoodmood.pl/kadra/maria-kober",
+      "title": "Maria Kober – The Beat Hunters | Hoodmood",
+      "description": "Maria Kober to nie tylko instruktorka to tancerka z ogromnym doświadczeniem scenicznym i warsztatowym. Od 8 lat trenuje w ekipie Quality Crew, z którą…"
+    },
+    {
+      "path": "/kadra/nel-glowacka",
+      "canonical": "https://hoodmood.pl/kadra/nel-glowacka",
+      "title": "Nel Głowacka – Taniec współczesny | Hoodmood",
+      "description": "Tańczy od 13 lat, nieustannie rozwijając się w różnych stylach i poszerzając swój warsztat. Swoją przygodę z tańcem rozpoczęła jako dziecko od baletu, który…"
+    },
+    {
+      "path": "/kadra/klara-walach",
+      "canonical": "https://hoodmood.pl/kadra/klara-walach",
+      "title": "Klara Walach – Taniec współczesny | Hoodmood",
+      "description": "Klara swoją przygodę z tańcem rozpoczęła już w wieku 3 lat. Od 14 lat nieustannie rozwija swoje umiejętności, zdobywając doświadczenie w różnych stylach i…"
+    },
+    {
+      "path": "/kadra/marianna-stanislawska",
+      "canonical": "https://hoodmood.pl/kadra/marianna-stanislawska",
+      "title": "Marianna Stanisławska – Taniec współczesny | Hoodmood",
+      "description": "Marianna swoją taneczną przygodę rozpoczęła już w wieku 5 lat. Początkowo rozwijała się w hip-hopie, jednak z czasem pokochała również taniec współczesny…"
+    },
+    {
+      "path": "/kadra/paulina-kapuscinska",
+      "canonical": "https://hoodmood.pl/kadra/paulina-kapuscinska",
+      "title": "Paulina Kapuścińska – Hip-hop | Hoodmood",
+      "description": "Paulina Kapuścińska to tancerka i instruktorka, która swoją przygodę z tańcem rozpoczęła około 13 lat temu. Przez 9 lat była częścią formacji Quality Crew, z…"
+    },
+    {
+      "path": "/kadra/aleks-kultys",
+      "canonical": "https://hoodmood.pl/kadra/aleks-kultys",
+      "title": "Aleks Kultys – Akrobatyka | Hoodmood",
+      "description": "Poznajcie naszego trenera,akrobatyka to jego pasja i ogromna część naszych treningów. Aleks ukończył dwuczęściowe szkolenie z zakresu metodyki nauczania oraz…"
+    },
+    {
+      "path": "/kadra/kamila-maik",
+      "canonical": "https://hoodmood.pl/kadra/kamila-maik",
+      "title": "Kamila Maik – Master Trainer | Hoodmood",
+      "description": "Instruktorka tańca współczesnego, choreografka i założycielka Takiego Studia Tańca Założycielka i serce Takiego Studia. Absolwentka Ogólnokształcącej Szkoły…"
+    },
+    {
+      "path": "/kadra/joanna-jedynak",
+      "canonical": "https://hoodmood.pl/kadra/joanna-jedynak",
+      "title": "Joanna Jedynak – Master Trainer | Hoodmood",
+      "description": "Joanna jest instruktorką tańca, trenerką i choreografką w Studio Tańca Joy Dance Szczecin, specjalizującą się w stylach jazz, modern & contemporary, ballet…"
+    },
+    {
+      "path": "/kadra/nikola-suchocka",
+      "canonical": "https://hoodmood.pl/kadra/nikola-suchocka",
+      "title": "Nikola Suchocka – MASTER TRAINER | Hoodmood",
+      "description": "Nikola Suchocka to jedna z czołowych tancerek polskiej sceny hip-hopowej. Tancerka, choreografka, instruktorka tańca i trenerka specjalizująca się w…"
+    }
+  ]
+}

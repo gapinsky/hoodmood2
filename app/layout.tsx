@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s | Hoodmood",
   },
   description:
-    "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "Hoodmood to szkoła tańca i akrobatyki w Koszalinie, Polanowie, Białym Borze i Szczecinku. Zajęcia dla dzieci, młodzieży i dorosłych.",
   openGraph: {
     type: "website",
     images: [defaultSocialImage],
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
     siteName: "Hoodmood",
     title: "Hoodmood | Szkoła tańca i akrobatyki",
     description:
-      "Szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze.",
+      "Szkoła tańca i akrobatyki w Koszalinie, Polanowie, Białym Borze i Szczecinku.",
   },
   twitter: {
     card: "summary_large_image",
     images: [defaultSocialImage],
     title: "Hoodmood | Szkoła tańca i akrobatyki",
     description:
-      "Szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze.",
+      "Szkoła tańca i akrobatyki w Koszalinie, Polanowie, Białym Borze i Szczecinku.",
   },
   robots: {
     index: true,

@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+import LocationComingSoon from "@/myComponents/common/LocationComingSoon";
 import type { ClassOffer } from "@/myComponents/pages/offer/types";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import MainWrapper from "@/myComponents/common/MainWrapper";
@@ -9,11 +11,13 @@ import OfferFiltersSection from "@/myComponents/pages/offer/OfferFiltersSection"
 type LocationPageProps = {
   header: { title: string; description: string };
   offerContent: ClassOffer[];
+  children?: ReactNode;
 };
 
 export function LocationPageTemplate({
   header,
   offerContent,
+  children,
 }: LocationPageProps) {
   return (
     <MainWrapper>
@@ -25,7 +29,8 @@ export function LocationPageTemplate({
           title={header.title}
           description={header.description}
         />
-        <OfferFiltersSection offerContent={offerContent} />
+        {offerContent.length ? <OfferFiltersSection offerContent={offerContent} /> : <LocationComingSoon />}
+        {children}
         <AnyQuestionsContact />
       </SectionContainer>
     </MainWrapper>

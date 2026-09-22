@@ -1,0 +1,4 @@
+Tool: built-in image_gen (imagegen skill)
+Source: public/assets/svg/sapik-Szczecinek.jpeg
+Prompt: Use case: background-extraction. Edit the provided SAPIK Szczecinek logo only: remove the outer white page background to actual transparent alpha. Preserve the exact black speech bubble rectangle with pointed lower right tail, exact white stylized SAP!K lettering including triangular A, and the black spaced SZCZECINEK text below. White letters inside the black bubble must remain white and opaque, not transparent. Do not redesign, change typography, colors, geometry or add effects. Output a tightly cropped transparent PNG with a small margin around the complete logo including bottom city text and tail.
+Post-processing: trim transparent margins, resize to 840px wide, encode lossless WebP preserving alpha.

@@ -31,7 +31,7 @@ export function getEnrollmentClasses(): EnrollmentClassItem[] {
           const isPackage = category === "pakiety-zajec";
           const scheduleLabel = [...item.schedule]
             .sort((a, b) => a.dayOfWeek - b.dayOfWeek || a.startTime.localeCompare(b.startTime))
-            .map((entry) => `${dayOrder[entry.dayOfWeek - 1]} ${entry.startTime}–${entry.endTime}`)
+            .map((entry) => `${dayOrder[entry.dayOfWeek - 1]} ${entry.startTime}–${entry.endTime}${entry.venue ? ` · ${entry.venue}` : ""}`)
             .join("; ");
           return {
             ...row,
@@ -51,7 +51,8 @@ export function getEnrollmentClasses(): EnrollmentClassItem[] {
 export const enrollmentClasses = getEnrollmentClasses();
 
 export const getClassAgeLabel = (item: EnrollmentClassItem) =>
-  item.maxAge === null ? `${item.minAge}+ lat` : `${item.minAge}-${item.maxAge} lat`;
+  item.minAge === 0 && item.maxAge === null ? "Wiek do ustalenia"
+    : item.maxAge === null ? `${item.minAge}+ lat` : `${item.minAge}-${item.maxAge} lat`;
 
 export function matchesEnrollmentParticipant(
   item: EnrollmentClassItem,

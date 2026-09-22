@@ -30,6 +30,7 @@ export function getClassSchedule(city: CitySlug): ClassesByDay {
     schedule[dayOrder[entry.dayOfWeek - 1]].push({
       id: `${item.id}-${entry.dayOfWeek}-${entry.startTime}`,
       name: item.name,
+      venue: entry.venue,
       time: `${entry.startTime}–${entry.endTime}`,
       instructor: trainerNames(entry.trainerIds ?? item.trainerIds) || "Prowadzący do ustalenia",
       specialInstructors: trainerNames(item.specialTrainerIds),

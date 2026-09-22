@@ -45,7 +45,8 @@ export default function Hero({
           </div>
 
           <h2 className="hero-enter hero-enter-soft hero-enter-delay-2 mt-2  max-w-xl text-base font-bold leading-[1.7] tracking-[0.02em] text-white/85 sm:text-lg md:text-xl">
-            Szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze
+            <span className="block">Szkoła tańca i akrobatyki</span>
+            <span className="block">Koszalin · Polanów · Biały Bór · Szczecinek</span>
           </h2>
           <p className="hero-enter hero-enter-soft hero-enter-delay-3 mt-2  max-w-xl text-sm leading-[1.7] text-white/70 sm:text-[0.95rem] sm:leading-7">
             {description}

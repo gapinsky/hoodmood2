@@ -14,6 +14,19 @@ export type Trainer = {
 };
 
 export const trainers = {
+  "julia-kaczmarzyk": {
+    id: "julia-kaczmarzyk",
+    slug: "julia-kaczmarzyk",
+    active: true,
+    specialGuest: false,
+    name: "Julia Kaczmarzyk",
+    role: "Taniec współczesny — REBELIA",
+    styles: ["Mikrusy (4–6 lat)", "Minimki (7–9 lat)", "Rebelia 3 (10–12 lat)", "Rebelia Junior (13–14 lat)", "Rebelia (15+ lat)"],
+    bio: "Julia Kaczmarzyk prowadzi Zespół Tańca Współczesnego REBELIA w Szczecinku. Pracuje z grupami Mikrusy, Minimki, Rebelia 3, Rebelia Junior i Rebelia.\nProfil w przygotowaniu. Zdjęcie, pełną biografię i więcej informacji o doświadczeniu Julii dodamy wkrótce. Już teraz możesz sprawdzić prowadzone przez nią grupy i grafik zajęć w Szczecinku.",
+    image: "",
+    images: [],
+    localizations: ["Szczecinek"],
+  },
   "talita-jarzecka": {
     id: "talita-jarzecka",
     slug: "talita-jarzecka",

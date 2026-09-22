@@ -1,3 +1,5 @@
+import SzczecinekSeo from "@/myComponents/common/SzczecinekSeo";
+import { szczecinekSeo, szczecinekSocialImage } from "@/lib/seo-szczecinek";
 import { createMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -33,6 +35,7 @@ export async function generateMetadata({
 
   if (!trainer) notFound();
 
+  if (trainer.id === "julia-kaczmarzyk") return createMetadata({ ...szczecinekSeo.trainer, socialImage: szczecinekSocialImage });
   return createMetadata({
     path: `/kadra/${trainer.slug}`,
     title: `${trainer.name} – ${trainer.role}`,
@@ -50,6 +53,7 @@ export default async function TrainerPage({ params }: PageProps) {
 
   return (
     <MainWrapper>
+      {trainer.id === "julia-kaczmarzyk" && <SzczecinekSeo page="trainer" />}
       <SectionContainer className="overflow-visible">
         <div className="space-y-8 sm:space-y-12">
           <div className="flex items-center justify-between gap-4 border-b border-foreground/10 pb-5">
@@ -61,7 +65,7 @@ export default async function TrainerPage({ params }: PageProps) {
               Powrót
             </Link>
             <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">
-              {trainer.specialGuest ? "Special guest" : "Core crew"}
+              {trainer.id === "julia-kaczmarzyk" ? "SAPIK Szczecinek" : trainer.specialGuest ? "Special guest" : "Core crew"}
               <span className="mx-3 text-foreground/20" aria-hidden="true">/</span>
               Hoodmood
             </p>
@@ -74,7 +78,7 @@ export default async function TrainerPage({ params }: PageProps) {
               <header>
                 <p className="mb-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-700) dark:text-(--brand-400)">
                   <span className="h-px w-8 bg-current" aria-hidden="true" />
-                  {trainer.specialGuest ? "Gość specjalny" : "Kadra Hoodmood"}
+                  {trainer.id === "julia-kaczmarzyk" ? "SAPIK Szczecinek" : trainer.specialGuest ? "Gość specjalny" : "Kadra Hoodmood"}
                 </p>
                 <h1 className="font-anton text-5xl uppercase leading-[1.05] tracking-tight sm:text-6xl xl:text-7xl">
                   {trainer.name}

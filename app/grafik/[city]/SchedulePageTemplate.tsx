@@ -1,3 +1,4 @@
+import LocationComingSoon from "@/myComponents/common/LocationComingSoon";
 import type { ClassesByDay } from "@/myComponents/pages/schedule/types";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import SectionContainer from "@/myComponents/common/SectionContainer";
@@ -26,6 +27,7 @@ export default function SchedulePageTemplate({
           title={header.title}
           description={header.description}
         />
+        {Object.values(scheduleContent).some((entries) => entries.length > 0) ? <>
         <ScheduleGrid classesByDay={scheduleContent} />
         <section aria-labelledby="download-schedule-title" className="flex flex-col items-start justify-between gap-6 rounded-md border border-foreground/10 bg-foreground/2.5 p-6 sm:p-8 lg:flex-row lg:items-center">
           <div>
@@ -34,6 +36,7 @@ export default function SchedulePageTemplate({
           </div>
           <DownloadSchedule title={header.title} scheduleContent={scheduleContent} />
         </section>
+        </> : <LocationComingSoon />}
         <AnyQuestionsContact />
       </SectionContainer>
     </MainWrapper>

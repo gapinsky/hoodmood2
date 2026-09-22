@@ -23,6 +23,7 @@ export const NAV: NavItem[] = [
       { label: "Koszalin", href: "/oferta/koszalin" },
       { label: "Polanów", href: "/oferta/polanow" },
       { label: "Biały Bór", href: "/oferta/bialy-bor" },
+      { label: "Szczecinek", href: "/oferta/szczecinek" },
     ],
   },
   {
@@ -32,6 +33,7 @@ export const NAV: NavItem[] = [
       { label: "Koszalin", href: "/grafik/koszalin" },
       { label: "Polanów", href: "/grafik/polanow" },
       { label: "Biały Bór", href: "/grafik/bialy-bor" },
+      { label: "Szczecinek", href: "/grafik/szczecinek" },
     ],
   },
   {
@@ -41,6 +43,7 @@ export const NAV: NavItem[] = [
       { label: "Koszalin", href: "/cennik/koszalin/zajecia" },
       { label: "Polanów", href: "/cennik/polanow" },
       { label: "Biały Bór", href: "/cennik/bialy-bor" },
+      { label: "Szczecinek", href: "/cennik/szczecinek" },
     ],
   },
   { dropdown: false, label: "Kadra", href: "/kadra" },

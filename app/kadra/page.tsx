@@ -16,13 +16,19 @@ export default function Team() {
       id: "core-crew",
       title: "Kadra",
       label: "Core crew",
-      trainers: activeTrainers.filter((trainer) => !trainer.specialGuest),
+      trainers: activeTrainers.filter((trainer) => !trainer.specialGuest && trainer.id !== "julia-kaczmarzyk"),
     },
     {
       id: "special-guests",
       title: "Goście specjalni",
       label: "Special guests",
       trainers: activeTrainers.filter((trainer) => trainer.specialGuest),
+    },
+    {
+      id: "sapik-szczecinek",
+      title: "SAPIK Szczecinek",
+      label: "SAPIK Szczecinek",
+      trainers: activeTrainers.filter((trainer) => trainer.id === "julia-kaczmarzyk"),
     },
   ];
 

@@ -26,10 +26,11 @@ export function truncateDescription(value: string, maxLength = 160): string {
   return `${(boundary > 0 ? candidate.slice(0, boundary) : candidate).replace(/[ ,;:.!?–-]+$/, "")}…`;
 }
 
-export function createMetadata({ path, title, description }: {
+export function createMetadata({ path, title, description, socialImage = defaultSocialImage }: {
   path: string;
   title: string;
   description: string;
+  socialImage?: typeof defaultSocialImage;
 }): Metadata {
   const fullTitle = `${title} | Hoodmood`;
   const summary = truncateDescription(description);
@@ -44,13 +45,13 @@ export function createMetadata({ path, title, description }: {
       siteName: "Hoodmood",
       type: "website",
       locale: "pl_PL",
-      images: [defaultSocialImage],
+      images: [socialImage],
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description: summary,
-      images: [defaultSocialImage],
+      images: [socialImage],
     },
   };
 }

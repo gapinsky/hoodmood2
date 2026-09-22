@@ -1,3 +1,5 @@
+import SzczecinekSeo from "@/myComponents/common/SzczecinekSeo";
+import { szczecinekSeo, szczecinekSocialImage } from "@/lib/seo-szczecinek";
 import { createMetadata } from "@/lib/seo";
 import { locationList, isCitySlug } from "@/data/locations";
 import { notFound } from "next/navigation";
@@ -20,6 +22,7 @@ export async function generateMetadata({ params }: Props) {
   if (!isCitySlug(city)) notFound();
   const location = locationList.find((location) => location.id === city);
   if (!location) notFound();
+  if (city === "szczecinek") return createMetadata({ ...szczecinekSeo.schedule, socialImage: szczecinekSocialImage });
   return createMetadata({
     path: `/grafik/${city}`,
     title: `Grafik zajęć tanecznych — ${location.name}`,
@@ -38,13 +41,16 @@ export default async function Schedule({ params }: Props) {
   }
   const headerContent = {
     title: `Grafik - ${location.name}`,
-    description: "Sprawdź aktualny grafik zajęć i wybierz termin, który Ci pasuje. Rozwiń szczegóły, żeby dowiedzieć się więcej o zajęciach.",
+    description: city === "szczecinek" ? "Zajęcia zespołu REBELIA odbywają się od środy do piątku. W środy i piątki tańczymy przy ul. Dworcowej 1, a w czwartki w SP 1 przy Placu Wazów 1. Adres znajdziesz również przy każdym dniu grafiku." : "Sprawdź aktualny grafik zajęć i wybierz termin, który Ci pasuje. Rozwiń szczegóły, żeby dowiedzieć się więcej o zajęciach.",
   };
   const scheduleContent = getClassSchedule(city);
   return (
+    <>
+      {city === "szczecinek" && <SzczecinekSeo page="schedule" />}
     <SchedulePageTemplate
       header={headerContent}
       scheduleContent={scheduleContent}
     />
+    </>
   );
 }

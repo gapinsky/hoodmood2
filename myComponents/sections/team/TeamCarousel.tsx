@@ -20,8 +20,13 @@ export default function TeamCarousel({ trainers }: Props) {
       speed: 1,
       startDelay: 0,
       stopOnInteraction: false,
-      stopOnMouseEnter: true,
+      stopOnMouseEnter: false,
       stopOnFocusIn: false,
+      breakpoints: {
+        "(min-width: 64rem)": {
+          stopOnMouseEnter: true,
+        },
+      },
     }),
   );
   return (

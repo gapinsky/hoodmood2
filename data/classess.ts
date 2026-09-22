@@ -22,6 +22,7 @@ export type ClassScheduleEntry = {
   startTime: string;
   endTime: string;
   trainerIds?: TrainerId[];
+  venue?: string;
 };
 
 export type DanceClass = {
@@ -64,6 +65,272 @@ export type DanceClass = {
 // Duety/trio: billingUnit "hour", kwota od osoby wskazana w label.
 
 export const classes = {
+  "szczecinek-lekcje-indywidualne": {
+    "id": "szczecinek-lekcje-indywidualne",
+    "slug": "szczecinek-lekcje-indywidualne",
+    "name": "Lekcje indywidualne",
+    "shortInfo": "Indywidualna praca nad tańcem. Termin do ustalenia.",
+    "description": "Indywidualna praca nad tańcem. Wypełnij formularz zapisów, a ustalimy szczegóły i termin lekcji w Szczecinku.",
+    "locationId": "szczecinek",
+    "minAge": 0,
+    "maxAge": null,
+    "level": "all",
+    "trainerIds": [],
+    "specialTrainerIds": [],
+    "schedule": [],
+    "pricing": {
+      "currency": "PLN",
+      "billingUnit": "hour",
+      "variants": [
+        {
+          "id": "standard",
+          "amount": 120
+        }
+      ]
+    },
+    "frequency": {
+      "durationMinutes": 60
+    },
+    "image": "/assets/optimized/branding/sapik-transparent.webp",
+    "active": true,
+    "enrollmentEnabled": true,
+    "sortOrder": 350
+  },
+  "szczecinek-mikrusy": {
+    "id": "szczecinek-mikrusy",
+    "slug": "szczecinek-mikrusy",
+    "name": "Mikrusy",
+    "shortInfo": "Pierwsze kroki w tańcu, gimnastyka i podstawy tańca klasycznego.",
+    "description": "Zajęcia dla dzieci w wieku 4–6 lat. Najmłodsi poznają ruch przez ćwiczenia gimnastyczne i podstawy tańca klasycznego. Rozwijają świadomość ciała, skupienie i pewność siebie.",
+    "locationId": "szczecinek",
+    "minAge": 4,
+    "maxAge": 6,
+    "level": "all",
+    "trainerIds": [
+      "julia-kaczmarzyk"
+    ],
+    "specialTrainerIds": [],
+    "schedule": [
+      {
+        "dayOfWeek": 3,
+        "startTime": "16:00",
+        "endTime": "16:45",
+        "venue": "ul. Dworcowa 1"
+      },
+      {
+        "dayOfWeek": 4,
+        "startTime": "16:00",
+        "endTime": "16:45",
+        "venue": "SP 1 — Plac Wazów 1"
+      }
+    ],
+    "pricing": {
+      "currency": "PLN",
+      "billingUnit": "month",
+      "variants": [
+        {
+          "id": "standard",
+          "amount": 120
+        }
+      ]
+    },
+    "frequency": {
+      "sessionsPerWeek": 2,
+      "durationMinutes": 45
+    },
+    "image": "/assets/optimized/branding/sapik-transparent.webp",
+    "active": true,
+    "enrollmentEnabled": true,
+    "sortOrder": 300
+  },
+  "szczecinek-minimki": {
+    "id": "szczecinek-minimki",
+    "slug": "szczecinek-minimki",
+    "name": "Minimki",
+    "shortInfo": "Rozwój taneczny, świadomość ciała i praca w grupie.",
+    "description": "Zajęcia dla dzieci w wieku 7–9 lat w zespole REBELIA. Nauka tańca łączy ćwiczenia rozwijające świadomość ciała i skupienie z poznawaniem różnych stylów. To przestrzeń do budowania pewności siebie i wspólnego rozwoju.",
+    "locationId": "szczecinek",
+    "minAge": 7,
+    "maxAge": 9,
+    "level": "all",
+    "trainerIds": [
+      "julia-kaczmarzyk"
+    ],
+    "specialTrainerIds": [],
+    "schedule": [
+      {
+        "dayOfWeek": 3,
+        "startTime": "16:45",
+        "endTime": "17:30",
+        "venue": "ul. Dworcowa 1"
+      },
+      {
+        "dayOfWeek": 5,
+        "startTime": "16:00",
+        "endTime": "16:45",
+        "venue": "ul. Dworcowa 1"
+      }
+    ],
+    "pricing": {
+      "currency": "PLN",
+      "billingUnit": "month",
+      "variants": [
+        {
+          "id": "standard",
+          "amount": 120
+        }
+      ]
+    },
+    "frequency": {
+      "sessionsPerWeek": 2,
+      "durationMinutes": 45
+    },
+    "image": "/assets/optimized/branding/sapik-transparent.webp",
+    "active": true,
+    "enrollmentEnabled": true,
+    "sortOrder": 310
+  },
+  "szczecinek-rebelia-3": {
+    "id": "szczecinek-rebelia-3",
+    "slug": "szczecinek-rebelia-3",
+    "name": "Rebelia 3",
+    "shortInfo": "Różnorodne style i wszechstronny rozwój taneczny.",
+    "description": "Grupa zespołu REBELIA dla dzieci w wieku 10–12 lat. Uczestnicy poznają różnorodne style tańca, rozwijają świadomość ciała i umiejętność pracy w zespole. Regularne treningi pomagają nabierać swobody i pewności w ruchu.",
+    "locationId": "szczecinek",
+    "minAge": 10,
+    "maxAge": 12,
+    "level": "all",
+    "trainerIds": [
+      "julia-kaczmarzyk"
+    ],
+    "specialTrainerIds": [],
+    "schedule": [
+      {
+        "dayOfWeek": 4,
+        "startTime": "16:45",
+        "endTime": "17:45",
+        "venue": "SP 1 — Plac Wazów 1"
+      },
+      {
+        "dayOfWeek": 5,
+        "startTime": "16:45",
+        "endTime": "17:45",
+        "venue": "ul. Dworcowa 1"
+      }
+    ],
+    "pricing": {
+      "currency": "PLN",
+      "billingUnit": "month",
+      "variants": [
+        {
+          "id": "standard",
+          "amount": 130
+        }
+      ]
+    },
+    "frequency": {
+      "sessionsPerWeek": 2,
+      "durationMinutes": 60
+    },
+    "image": "/assets/optimized/branding/sapik-transparent.webp",
+    "active": true,
+    "enrollmentEnabled": true,
+    "sortOrder": 320
+  },
+  "szczecinek-rebelia-junior": {
+    "id": "szczecinek-rebelia-junior",
+    "slug": "szczecinek-rebelia-junior",
+    "name": "Rebelia Junior",
+    "shortInfo": "Taniec współczesny i rozwijanie własnej ekspresji.",
+    "description": "Zajęcia zespołu REBELIA dla młodzieży w wieku 13–14 lat. Poznawanie różnych stylów rozwija wszechstronność, świadomość ciała i ekspresję. Wspólna praca na sali jest częścią życia zespołu, który uczestniczy w występach i konkursach.",
+    "locationId": "szczecinek",
+    "minAge": 13,
+    "maxAge": 14,
+    "level": "all",
+    "trainerIds": [
+      "julia-kaczmarzyk"
+    ],
+    "specialTrainerIds": [],
+    "schedule": [
+      {
+        "dayOfWeek": 3,
+        "startTime": "17:30",
+        "endTime": "18:30",
+        "venue": "ul. Dworcowa 1"
+      },
+      {
+        "dayOfWeek": 5,
+        "startTime": "17:45",
+        "endTime": "18:45",
+        "venue": "ul. Dworcowa 1"
+      }
+    ],
+    "pricing": {
+      "currency": "PLN",
+      "billingUnit": "month",
+      "variants": [
+        {
+          "id": "standard",
+          "amount": 130
+        }
+      ]
+    },
+    "frequency": {
+      "sessionsPerWeek": 2,
+      "durationMinutes": 60
+    },
+    "image": "/assets/optimized/branding/sapik-transparent.webp",
+    "active": true,
+    "enrollmentEnabled": true,
+    "sortOrder": 330
+  },
+  "szczecinek-rebelia": {
+    "id": "szczecinek-rebelia",
+    "slug": "szczecinek-rebelia",
+    "name": "Rebelia",
+    "shortInfo": "Taniec współczesny, praca zespołowa i ekspresja sceniczna.",
+    "description": "Grupa zespołu REBELIA dla osób od 15. roku życia. Półtoragodzinne treningi dają przestrzeń do rozwijania techniki, wszechstronności i własnej ekspresji. Zespół ma wieloletnią tradycję występów, konkursów i corocznych koncertów w Kinie Wolność.",
+    "locationId": "szczecinek",
+    "minAge": 15,
+    "maxAge": null,
+    "level": "all",
+    "trainerIds": [
+      "julia-kaczmarzyk"
+    ],
+    "specialTrainerIds": [],
+    "schedule": [
+      {
+        "dayOfWeek": 3,
+        "startTime": "18:30",
+        "endTime": "20:00",
+        "venue": "ul. Dworcowa 1"
+      },
+      {
+        "dayOfWeek": 4,
+        "startTime": "17:45",
+        "endTime": "19:15",
+        "venue": "SP 1 — Plac Wazów 1"
+      }
+    ],
+    "pricing": {
+      "currency": "PLN",
+      "billingUnit": "month",
+      "variants": [
+        {
+          "id": "standard",
+          "amount": 140
+        }
+      ]
+    },
+    "frequency": {
+      "sessionsPerWeek": 2,
+      "durationMinutes": 90
+    },
+    "image": "/assets/optimized/branding/sapik-transparent.webp",
+    "active": true,
+    "enrollmentEnabled": true,
+    "sortOrder": 340
+  },
   "koszalin-balet-7-9": {
     id: "koszalin-balet-7-9",
     slug: "koszalin-balet-7-9",
@@ -320,20 +587,18 @@ export const classes = {
     minAge: 7,
     maxAge: 9,
     level: "all",
-    trainerIds: ["wiktoria-butwicka", "magdalena-sokolowska-japona"],
+    trainerIds: ["magdalena-sokolowska-japona", "wiktoria-butwicka"],
     specialTrainerIds: [],
     schedule: [
       {
         dayOfWeek: 1,
         startTime: "17:00",
-        endTime: "18:00",
-        trainerIds: ["wiktoria-butwicka"]
+        endTime: "18:00"
       },
       {
         dayOfWeek: 2,
         startTime: "17:00",
-        endTime: "18:00",
-        trainerIds: ["magdalena-sokolowska-japona"]
+        endTime: "18:00"
       }
     ],
     pricing: {
@@ -410,20 +675,18 @@ export const classes = {
     minAge: 10,
     maxAge: 12,
     level: "all",
-    trainerIds: ["maria-kober", "magdalena-sokolowska-japona"],
+    trainerIds: ["magdalena-sokolowska-japona", "maria-kober"],
     specialTrainerIds: [],
     schedule: [
       {
         dayOfWeek: 2,
         startTime: "18:00",
-        endTime: "19:00",
-        trainerIds: ["magdalena-sokolowska-japona"]
+        endTime: "19:00"
       },
       {
         dayOfWeek: 4,
         startTime: "16:30",
-        endTime: "17:30",
-        trainerIds: ["maria-kober"]
+        endTime: "17:30"
       }
     ],
     pricing: {

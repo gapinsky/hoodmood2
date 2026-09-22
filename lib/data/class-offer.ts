@@ -16,7 +16,7 @@ function getInstructors(ids: TrainerId[]): OfferInstructor[] {
 }
 
 export function getClassOffers(city: CitySlug): ClassOffer[] {
-  return classList
+  const offers: ClassOffer[] = classList
     .filter((item) => item.active && item.locationId === city && getPricingCategory(item) !== "pakiety-zajec")
     .sort((a, b) => a.sortOrder - b.sortOrder)
     .map((item) => ({
@@ -32,6 +32,14 @@ export function getClassOffers(city: CitySlug): ClassOffer[] {
       instructors: getInstructors(item.trainerIds),
       specialInstructors: getInstructors(item.specialTrainerIds),
       scheduleSrc: `/grafik/${city}`,
+      ...(item.id === "szczecinek-lekcje-indywidualne" ? {
+        scheduleSrc: undefined,
+        ageLabel: "Wiek do ustalenia",
+        priceLabel: "120 zł / 60 min",
+        enrollmentLabel: "Umów lekcję",
+      } : {}),
       pricingSrc: city === "koszalin" ? `/cennik/${city}/${getPricingCategory(item)}` : `/cennik/${city}`,
     }));
+
+  return offers;
 }

@@ -19,7 +19,7 @@ export const steps: Step[] = [
     imageAlt: "Sala taneczna Hoodmood",
     title: "Wybierz lokalizację",
     description:
-      "Sprawdź, czy chcesz zapisać się na zajęcia w Koszalinie, Polanowie czy Białym Borze.",
+      "Sprawdź, czy chcesz zapisać się na zajęcia w Koszalinie, Polanowie, Białym Borze czy Szczecinku.",
   },
   {
     id: 2,

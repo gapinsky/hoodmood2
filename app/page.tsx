@@ -6,7 +6,7 @@ import Localizations from "@/myComponents/sections/localizations/Localizations";
 import Offer from "../myComponents/sections/offer/Offer";
 import Hero from "@/myComponents/sections/hero/Hero";
 import LifeAtHoodmood from "@/myComponents/sections/lifeAtHoodmood/LifeAtHoodmood";
-import CrewStory from "@/myComponents/sections/editorial/CrewStory";
+// import CrewStory from "@/myComponents/sections/editorial/CrewStory";
 import MasterclassFeature from "@/myComponents/sections/editorial/MasterclassFeature";
 
 const Player = dynamic(() => import("@/myComponents/sections/player/Player"));
@@ -29,7 +29,7 @@ const jsonLd = {
   name: "Hoodmood",
   url: SITE_URL,
   description:
-    "Szkoła tańca i akrobatyki w Koszalinie, Polanowie i Białym Borze. Zajęcia dla dzieci, młodzieży i dorosłych.",
+    "Szkoła tańca i akrobatyki w Koszalinie, Polanowie, Białym Borze i Szczecinku. Zajęcia dla dzieci, młodzieży i dorosłych.",
   telephone: mainContact.phone,
   email: mainContact.email,
   address: {
@@ -40,6 +40,7 @@ const jsonLd = {
     addressCountry: "PL",
   },
   areaServed: [
+    { "@type": "City", name: "Szczecinek" },
     {
       "@type": "City",
       name: "Koszalin",
@@ -64,9 +65,9 @@ const jsonLd = {
     name: location.name,
     address: {
       "@type": "PostalAddress",
-      streetAddress: `ul. ${location.address.street}`,
+      streetAddress: location.address.street ? `ul. ${location.address.street}` : undefined,
       addressLocality: location.address.city,
-      postalCode: location.address.postalCode,
+      postalCode: location.address.postalCode || undefined,
       addressCountry: "PL",
     },
   })),
@@ -175,7 +176,7 @@ export default function Home() {
         <Localizations />
         <MasterclassFeature />
         <Player />
-        <CrewStory />
+        {/* <CrewStory /> */}
         <Team />
         <ProofBento />
         <HowToJoin />

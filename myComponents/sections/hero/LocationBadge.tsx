@@ -17,6 +17,9 @@ export default function LocationBadge() {
             Biały Bór
           </div>
           <div className="h-5 text-[13px] font-bold uppercase leading-5 tracking-[0.16em]">
+            Szczecinek
+          </div>
+          <div className="h-5 text-[13px] font-bold uppercase leading-5 tracking-[0.16em]">
             Koszalin
           </div>
         </div>

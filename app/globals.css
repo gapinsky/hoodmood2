@@ -452,25 +452,15 @@ html {
 }
 
 @keyframes location-slide {
-  0%,
-  25% {
-    transform: translateY(0);
-  }
-  33.33%,
-  58.33% {
-    transform: translateY(-20px);
-  }
-  66.66%,
-  91.66% {
-    transform: translateY(-40px);
-  }
-  100% {
-    transform: translateY(-60px);
-  }
+  0%, 18.75% { transform: translateY(0); }
+  25%, 43.75% { transform: translateY(-20px); }
+  50%, 68.75% { transform: translateY(-40px); }
+  75%, 93.75% { transform: translateY(-60px); }
+  100% { transform: translateY(-80px); }
 }
 
 .animate-location-slide {
-  animation: location-slide 9s infinite ease-in-out;
+  animation: location-slide 12s infinite ease-in-out;
 }
 @media (prefers-reduced-motion: no-preference) {
   .hero-stage[data-reveal="hidden"] .hero-enter {

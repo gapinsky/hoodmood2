@@ -1,6 +1,6 @@
-import { Clock, User, ChevronDown } from "lucide-react";
+import { Clock, User, ChevronDown, MapPin } from "lucide-react";
 
-import { getScheduleDays, type ClassesByDay } from "./types";
+import { getDayVenues, getScheduleDays, type ClassesByDay } from "./types";
 
 type Props = {
   classesByDay: ClassesByDay;
@@ -32,6 +32,12 @@ export default function ScheduleGrid({ classesByDay }: Props) {
                 <h3 id={headingId} className="font-anton text-xl uppercase">{dayKey}</h3>
                 <span aria-hidden="true" className="text-xs tabular-nums text-muted-foreground">0{index + 1}</span>
               </header>
+              {getDayVenues(items).map((venue) => (
+                <p key={venue} className="flex items-start gap-2 rounded-md border border-foreground/10 bg-foreground/5 p-3 text-sm leading-5">
+                  <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                  <span>{venue}</span>
+                </p>
+              ))}
               {items.length === 0 && (
                 <p className="rounded-md border border-dashed border-foreground/10 px-4 py-6 text-sm text-muted-foreground">Brak zajęć w tym dniu.</p>
               )}

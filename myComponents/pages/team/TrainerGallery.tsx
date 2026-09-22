@@ -1,3 +1,4 @@
+import TrainerPhotoPlaceholder from "./TrainerPhotoPlaceholder";
 import Image from "next/image";
 import Link from "next/link";
 import { Instagram, ArrowUpRight } from "lucide-react";
@@ -7,7 +8,9 @@ import type { Trainer } from "@/data/trainers";
 export default function TrainerGallery({ trainer }: { trainer: Pick<Trainer, "name" | "images" | "instagram"> }) {
   return (
 <div className="min-w-0 lg:sticky lg:top-28">
-              <Carousel
+              {trainer.images.length === 0 ? (
+                <div className="relative aspect-square overflow-hidden rounded-md"><TrainerPhotoPlaceholder /></div>
+              ) : <Carousel
                 className="w-full"
                 aria-label={`Zdjęcia: ${trainer.name}`}
                 opts={{ align: "start", loop: trainer.images.length > 1 }}
@@ -42,7 +45,7 @@ export default function TrainerGallery({ trainer }: { trainer: Pick<Trainer, "na
                     <CarouselNext aria-label="Następne zdjęcie" className="right-4 cursor-pointer [&_svg]:text-current" />
                   </>
                 )}
-              </Carousel>
+              </Carousel>}
               {trainer.instagram && trainer.instagram !== "TBA" && (
                 <Link
                   href={trainer.instagram}

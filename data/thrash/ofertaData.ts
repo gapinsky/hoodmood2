@@ -36,6 +36,7 @@ export type ClassesOfferType = {
 };
 
 export const classesOffer: Record<CitySlug, ClassesOfferType[]> = {
+  szczecinek: [],
   koszalin: [
     {
       name: "Balet | 7-9 lat",

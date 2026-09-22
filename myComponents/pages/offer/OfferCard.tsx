@@ -21,10 +21,10 @@ function InstructorList({ instructors }: { instructors: OfferInstructor[] }) {
 
 export default function OfferCard({
   name, image, description, instructors, specialInstructors, level, minAge, maxAge,
-  scheduleSrc, pricingSrc, enrollmentEnabled,
+  scheduleSrc, pricingSrc, enrollmentEnabled, ageLabel, priceLabel, enrollmentLabel,
 }: ClassOffer) {
   const [imageLoaded, setImageLoaded] = useState(false);
-  const age = maxAge === null ? `${minAge}+ lat` : `${minAge}-${maxAge} lat`;
+  const age = ageLabel ?? (maxAge === null ? `${minAge}+ lat` : `${minAge}-${maxAge} lat`);
 
   return (
     <Card className="group/card h-full justify-start rounded-md border border-foreground/10 bg-foreground/2.5 shadow-none before:hidden">
@@ -34,7 +34,7 @@ export default function OfferCard({
           src={image}
           fill
           alt={name}
-          className={`object-cover transition-[transform,opacity] duration-700 ease-out motion-reduce:transition-none motion-safe:group-hover/card:scale-[1.035] ${imageLoaded ? "opacity-100" : "opacity-0"}`}
+          className={`${image === "/assets/optimized/branding/sapik-transparent.webp" ? "object-contain p-8" : "object-cover"} transition-[transform,opacity] duration-700 ease-out motion-reduce:transition-none motion-safe:group-hover/card:scale-[1.035] ${imageLoaded ? "opacity-100" : "opacity-0"}`}
           onLoad={() => setImageLoaded(true)}
           sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1279px) 46vw, 440px"
         />
@@ -46,6 +46,7 @@ export default function OfferCard({
         </div>
         <h3 className="font-anton text-2xl uppercase leading-tight sm:text-3xl">{name}</h3>
         <p className="mt-4 text-sm leading-7 text-muted-foreground">{description}</p>
+        {priceLabel && <p className="mt-3 text-base font-semibold">{priceLabel}</p>}
         <div className="mt-auto pt-6">
           <div className="border-t border-foreground/10 py-4">
             <p className="mb-2 text-[11px] uppercase tracking-[0.14em] text-muted-foreground">{name === "MASTER TRAINERS" ? "Master trenerzy" : "Prowadzący"}</p>
@@ -61,11 +62,11 @@ export default function OfferCard({
           </div>
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-foreground/10 pt-4">
             <div className="flex flex-wrap gap-4">
-              <Link href={scheduleSrc} className="ui-focus-ring inline-flex items-center gap-1.5 rounded-sm py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"><CalendarDays className="size-4" aria-hidden="true" />Grafik</Link>
+              {scheduleSrc && <Link href={scheduleSrc} className="ui-focus-ring inline-flex items-center gap-1.5 rounded-sm py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"><CalendarDays className="size-4" aria-hidden="true" />Grafik</Link>}
               <Link href={pricingSrc} className="ui-focus-ring inline-flex items-center gap-1.5 rounded-sm py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"><Wallet className="size-4" aria-hidden="true" />Cennik</Link>
             </div>
             {enrollmentEnabled ? (
-              <ButtonSecondary href="/zapisz-sie">Zapisz się</ButtonSecondary>
+              <ButtonSecondary href="/zapisz-sie">{enrollmentLabel ?? "Zapisz się"}</ButtonSecondary>
             ) : (
               <span className="text-sm text-muted-foreground">Zapisy zamknięte</span>
             )}
