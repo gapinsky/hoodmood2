@@ -7,18 +7,15 @@ import { useRef, useState } from "react";
 
 export default function MasterclassFeature() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [hasStarted, setHasStarted] = useState(false);
-  const [posterLoaded, setPosterLoaded] = useState(false);
-  const [posterFailed, setPosterFailed] = useState(false);
-  const [videoReady, setVideoReady] = useState(false);
+  const [posterStatus, setPosterStatus] = useState<"loading" | "loaded" | "error">("loading");
+  const [videoStatus, setVideoStatus] = useState<"idle" | "starting" | "started">("idle");
 
   function startVideo() {
     const video = videoRef.current;
     if (!video) return;
 
-    setHasStarted(true);
-    video.controls = true;
-    void video.play().catch(() => setHasStarted(false));
+    setVideoStatus("starting");
+    void video.play().catch(() => setVideoStatus("idle"));
   }
 
   return (
@@ -42,37 +39,35 @@ export default function MasterclassFeature() {
           </ButtonSecondary>
         </div>
 
-        <div className="relative mx-auto aspect-4/5 w-full max-w-120 overflow-hidden rounded-md bg-black lg:max-w-none">
+        <div className="relative mx-auto aspect-4/5 w-full max-w-120 overflow-hidden rounded-xl bg-black lg:max-w-none">
           <video
             ref={videoRef}
             className="h-full w-full object-cover"
             playsInline
             preload="metadata"
-            onPlaying={() => setVideoReady(true)}
+            controls={videoStatus !== "idle"}
+            onPlaying={() => setVideoStatus("started")}
           >
             <source src="/assets/videos/masterclass.mp4" type="video/mp4" />
           </video>
-          {!posterLoaded && !videoReady && (
+          {posterStatus !== "loaded" && videoStatus !== "started" && (
             <div
               aria-hidden="true"
               className="pointer-events-none absolute inset-0 animate-pulse bg-muted motion-reduce:animate-none"
             />
           )}
-          {!videoReady && !posterFailed && (
+          {videoStatus !== "started" && posterStatus !== "error" && (
             <Image
               src="/assets/videos/masterclass-poster.jpg"
               alt=""
               fill
               sizes="(max-width: 1023px) 480px, (max-width: 1519px) 59vw, 820px"
-              onLoad={() => setPosterLoaded(true)}
-              onError={() => {
-                setPosterFailed(true);
-                setPosterLoaded(false);
-              }}
-              className={`pointer-events-none object-cover transition-opacity duration-300 motion-reduce:transition-none ${posterLoaded ? "opacity-100" : "opacity-0"}`}
+              onLoad={() => setPosterStatus("loaded")}
+              onError={() => setPosterStatus("error")}
+              className={`pointer-events-none object-cover transition-opacity duration-300 motion-reduce:transition-none ${posterStatus === "loaded" ? "opacity-100" : "opacity-0"}`}
             />
           )}
-          {!hasStarted ? (
+          {videoStatus === "idle" ? (
             <button
               type="button"
               onClick={startVideo}

@@ -1,10 +1,18 @@
+import { socialLinks } from "@/data/socials";
 import Image from "next/image";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import SectionContent from "@/myComponents/common/headers/SectionContent";
-import { data } from "./data";
 import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
 import { Youtube } from "lucide-react";
 import PlayerEmbed from "./PlayerEmbed";
+
+const data = {
+  badge: "podcast",
+  title: "najbardziej roztańczony content w internecie!",
+  description:
+    "Podcast dla tancerzy i ludzi z zajawką na ruch. Historie z sali, backstage z pokazów, patenty na trening i gadka o tym, jak pogodzić taniec z normalnym życiem.",
+};
+
 
 export default function Player() {
   return (
@@ -17,7 +25,7 @@ export default function Player() {
             description={data.description}
           />
           <div className="flex gap-8">
-            <ButtonSecondary href="/spotify">
+            <ButtonSecondary href={socialLinks.spotify.href} blank={true}>
               <Image
                 src="/icons/spotify.svg"
                 alt=""
@@ -28,7 +36,7 @@ export default function Player() {
               />
               Spotify
             </ButtonSecondary>
-            <ButtonSecondary href="/youtube">
+            <ButtonSecondary href={socialLinks.youtube.href} blank={true}>
               <Youtube /> Youtube
             </ButtonSecondary>
           </div>

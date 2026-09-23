@@ -1,3 +1,4 @@
+import { socialLinks } from "@/data/socials";
 import { locations, locationList, mainContact } from "@/data/locations";
 import { createMetadata, SITE_URL } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
@@ -6,7 +7,7 @@ import Localizations from "@/myComponents/pages/main/localizations/Localizations
 import Offer from "../myComponents/pages/main/offer/Offer";
 import Hero from "@/myComponents/pages/main/hero/Hero";
 import LifeAtHoodmood from "@/myComponents/pages/main/lifeAtHoodmood/LifeAtHoodmood";
-import MasterclassFeature from "@/myComponents/pages/main/editorial/MasterclassFeature";
+import MasterclassFeature from "@/myComponents/pages/main/masterClassFeature/MasterclassFeature";
 
 const Player = dynamic(() => import("@/myComponents/pages/main/player/Player"));
 const Team = dynamic(() => import("@/myComponents/pages/main/team/Team"));
@@ -54,10 +55,10 @@ const jsonLd = {
     },
   ],
   sameAs: [
-    "https://www.facebook.com/profile.php?id=100070445546249",
-    "https://www.instagram.com/hoodmood_dancestudio/",
-    "https://www.youtube.com/@hoodmooddancestudio9404",
-    "https://www.tiktok.com/@hoodmood_dancestudio",
+    socialLinks.facebook.href,
+    socialLinks.instagram.href,
+    socialLinks.youtube.href,
+    socialLinks.tiktok.href,
   ],
   location: locationList.map((location) => ({
     "@type": "Place",

@@ -16,7 +16,7 @@ export default function LocationCard({ location, venue }: Props) {
 
   return (
     <article
-      className={`group relative isolate aspect-square overflow-clip rounded-2xl bg-[#151215] transform-gpu backface-hidden [clip-path:inset(0_round_1rem)] contain-[paint] ${cardLiftHoverStyles}`}
+      className={`group relative isolate aspect-square overflow-clip rounded-md bg-[#151215] transform-gpu backface-hidden [clip-path:inset(0_round_1rem)] contain-[paint] ${cardLiftHoverStyles}`}
     >
       {venue.img && venue.hoverImg ? (
         <>
@@ -59,7 +59,7 @@ export default function LocationCard({ location, venue }: Props) {
         </p>
         <div className="flex items-start justify-between gap-4">
           <div>
-            <h3 className="font-anton text-2xl uppercase leading-[1.08] tracking-[0.02em] text-white sm:text-3xl ">
+            <h3 className="text-xl uppercase leading-[1.08] tracking-[0.02em] text-white sm:text-2xl ">
               {location.name}
             </h3>
           </div>

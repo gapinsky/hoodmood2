@@ -1,11 +1,10 @@
+import { socialLinks } from "@/data/socials";
 import { connection } from "next/server";
 import { Instagram } from "lucide-react";
 
 import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
 import InstagramFeed from "./instagram/InstagramFeed";
 import { getInstagramPostsPage } from "./instagram/instagramApi";
-
-const profileUrl = "https://www.instagram.com/hoodmood_dancestudio/";
 
 export default async function LatestInstagramPosts() {
   await connection();
@@ -29,7 +28,7 @@ export default async function LatestInstagramPosts() {
           <p className="mt-3 max-w-xl text-base leading-7 text-muted-foreground">Obserwuj nasze treningi, wydarzenia i codzienne życie studia na Instagramie.</p>
         </div>
         <ButtonSecondary
-          href={profileUrl}
+          href={socialLinks.instagram.href}
           blank
           className="text-(--brand-700) dark:text-(--brand-300)"
         >

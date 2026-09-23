@@ -1,3 +1,4 @@
+import { socialLinks } from "@/data/socials";
 import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { Suspense } from "react";
 import { createMetadata } from "@/lib/seo";
@@ -20,7 +21,7 @@ export default function News() {
         <PageIntro title={data.title} description={data.description} eyebrow="Z życia studia / Hoodmood" titleWidth="wide">
           <nav aria-label="Aktualności Hoodmood" className="flex flex-wrap gap-3 border-b border-foreground/10 pb-8">
             <a href="#wpisy" className="ui-focus-ring rounded-full border border-foreground/10 bg-foreground/2.5 px-5 py-3 text-sm transition-colors hover:bg-foreground/[0.07]">Najnowsze wpisy</a>
-            <a href="https://www.instagram.com/hoodmood_dancestudio/" target="_blank" rel="noreferrer" className="ui-focus-ring inline-flex items-center gap-3 rounded-full border border-foreground/10 px-5 py-3 text-sm transition-colors hover:bg-foreground/[0.07]">
+            <a href={socialLinks.instagram.href} target="_blank" rel="noreferrer" className="ui-focus-ring inline-flex items-center gap-3 rounded-full border border-foreground/10 px-5 py-3 text-sm transition-colors hover:bg-foreground/[0.07]">
               Obserwuj nas <ArrowUpRight className="size-4" aria-hidden="true" />
             </a>
           </nav>

@@ -1,40 +1,14 @@
+import { socialLinks } from "@/data/socials";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import { a11y } from "@/public/styles";
 
-const socialLinks = [
-  {
-    name: "facebook",
-    label: "Facebook",
-    href: "https://www.facebook.com/profile.php?id=100070445546249",
-  },
-  {
-    name: "spotify",
-    label: "Spotify",
-    href: "https://open.spotify.com/show/4N6jAzHxOv5S8bAmo9v2dE",
-  },
-  {
-    name: "instagram",
-    label: "Instagram",
-    href: "https://www.instagram.com/hoodmood_dancestudio/",
-  },
-  {
-    name: "tiktok",
-    label: "TikTok",
-    href: "https://www.tiktok.com/@hoodmood_dancestudio",
-  },
-  {
-    name: "youtube",
-    label: "YouTube",
-    href: "https://www.youtube.com/@hoodmooddancestudio9404",
-  },
-] as const;
 
 export default function SocialLinks({ className }: { className?: string }) {
   return (
     <div className={cn("flex flex-wrap gap-4", className)}>
-      {socialLinks.map((social) => (
+      {Object.values(socialLinks).map((social) => (
         <Link
           href={social.href}
           key={social.name}
