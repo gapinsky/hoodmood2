@@ -6,7 +6,6 @@ import Localizations from "@/myComponents/sections/localizations/Localizations";
 import Offer from "../myComponents/sections/offer/Offer";
 import Hero from "@/myComponents/sections/hero/Hero";
 import LifeAtHoodmood from "@/myComponents/sections/lifeAtHoodmood/LifeAtHoodmood";
-// import CrewStory from "@/myComponents/sections/editorial/CrewStory";
 import MasterclassFeature from "@/myComponents/sections/editorial/MasterclassFeature";
 
 const Player = dynamic(() => import("@/myComponents/sections/player/Player"));
@@ -176,7 +175,6 @@ export default function Home() {
         <Localizations />
         <MasterclassFeature />
         <Player />
-        {/* <CrewStory /> */}
         <Team />
         <ProofBento />
         <HowToJoin />

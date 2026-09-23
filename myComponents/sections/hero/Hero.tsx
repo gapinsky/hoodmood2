@@ -5,29 +5,15 @@ import HeroVideo from "./HeroVideo";
 import SmoothScrollLink from "./SmoothScrollLink";
 import HeroContent from "./HeroContent";
 
-type HeroProps = {
-  videoSrc?: string;
-  mobileVideoSrc?: string;
-  posterSrc?: string;
-  location?: string;
-  title?: string;
-  description?: string;
-};
 
-export default function Hero({
-  videoSrc = "/assets/optimized/hero/hero-desktop-wide.mp4",
-  mobileVideoSrc = "/assets/videos/chairRotate%20copy.mp4",
-  posterSrc = "/assets/videos/chairRotate-poster.jpg",
-  title = "Hoodmood",
-  description = "Zajęcia dla dzieci, młodzieży i dorosłych, w tym hip-hop, balet, taniec współczesny, KPOP, akrobatyka i lekcje indywidualne.",
-}: HeroProps) {
+export default function Hero() {
   return (
     <div className="relative h-svh isolate overflow-hidden text-white">
       <div className="absolute inset-0 -z-10 bg-black/10" />
       <HeroVideo
-        videoSrc={videoSrc}
-        mobileVideoSrc={mobileVideoSrc}
-        posterSrc={posterSrc}
+        videoSrc={'/assets/optimized/hero/hero-desktop-wide.mp4'}
+        mobileVideoSrc={'/assets/optimized/hero/hero-mobile.mp4'}
+        posterSrc={'/assets/videos/chairRotate-poster.jpg'}
       />
 
       <div className="mx-auto flex h-full max-w-380 items-center">
@@ -39,7 +25,7 @@ export default function Hero({
           <div className="mt-1 flex flex-col gap-3">
             <h1 className="max-w-[7ch] font-anton text-[2.9rem] font-black uppercase leading-[0.94] tracking-tighter text-white drop-shadow-[0_18px_38px_rgba(0,0,0,0.32)] sm:text-[4.25rem] md:text-[5.5rem] xl:text-[7.2rem]">
               <span className="inline-block ">
-                {title}
+                Hoodmood
               </span>
             </h1>
           </div>
@@ -48,7 +34,7 @@ export default function Hero({
             <span className="block">Szkoła tańca i akrobatyki</span>
           </h2>
           <p className="hero-enter hero-enter-soft hero-enter-delay-3 mt-2  max-w-xl text-sm leading-[1.7] text-white/90 sm:text-[0.95rem] sm:leading-7">
-            {description}
+            Zajęcia dla dzieci, młodzieży i dorosłych, w tym hip-hop, balet, taniec współczesny, KPOP, akrobatyka i lekcje indywidualne.
           </p>
 
           <div className="hero-enter hero-enter-soft hero-enter-delay-4 mt-6  flex flex-wrap gap-3">

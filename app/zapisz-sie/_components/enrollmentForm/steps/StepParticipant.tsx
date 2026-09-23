@@ -16,7 +16,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
-import { enrollmentClasses, createSelectedClass, enrollmentLocationOptions } from "@/lib/data/enrollment-classes";
+import { enrollmentClasses, createSelectedClass, enrollmentLocationOptions } from "@/lib/data-adapters/enrollment-classes";
 import type { EnrollmentFormData } from "@/lib/schemas/enrollmentSchema";
 import FormTextField from "@/myComponents/forms/fields/FormTextField";
 import {

@@ -21,7 +21,7 @@ import {
   matchesEnrollmentParticipant,
   createSelectedClass,
   getEnrollmentFrequencyLabel,
-} from "@/lib/data/enrollment-classes";
+} from "@/lib/data-adapters/enrollment-classes";
 import type { CitySlug } from "@/data/locations";
 import type { SelectedClassItem } from "@/lib/schemas/enrollmentSchema";
 import { inputStyles } from "@/myComponents/forms/filterStyles";

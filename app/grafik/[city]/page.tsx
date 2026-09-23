@@ -4,7 +4,7 @@ import { createMetadata } from "@/lib/seo";
 import { locationList, isCitySlug } from "@/data/locations";
 import { notFound } from "next/navigation";
 import SchedulePageTemplate from "./SchedulePageTemplate";
-import { getClassSchedule } from "@/lib/data/class-schedule";
+import { getClassSchedule } from "@/lib/data-adapters/class-schedule";
 
 type Props = {
   params: Promise<{

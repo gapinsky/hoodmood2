@@ -4,7 +4,7 @@ import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
 import { pricingTabs } from "@/data/tabs";
-import { getPricingPageContent } from "@/lib/data/class-pricing";
+import { getPricingPageContent } from "@/lib/data-adapters/class-pricing";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import PricingTable from "@/myComponents/pages/pricing/PricingTable";
 import MainWrapper from "@/myComponents/common/MainWrapper";

@@ -7,6 +7,8 @@ import { a11y } from "@/public/styles";
 import { cn } from "@/lib/utils";
 import SocialLinks from "@/myComponents/common/SocialLinks";
 
+import { footerLinks, footerDownloads } from "./footerData";
+
 export default function Footer() {
   const date = new Date();
   return (
@@ -40,117 +42,54 @@ export default function Footer() {
               <div className="">
                 <p className="font-semibold mb-2">Nawigacja:</p>
                 <ul className="space-y-2">
-                  <li>
-                    <Link
-                      href="/oferta/koszalin"
-                      className={cn(a11y, "ui-link-subtle opacity-80")}
-                    >
-                      Oferta
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/grafik/koszalin"
-                      className={cn(a11y, "ui-link-subtle opacity-80")}
-                    >
-                      Grafik
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/cennik/koszalin/zajecia"
-                      className={cn(a11y, "ui-link-subtle opacity-80")}
-                    >
-                      Cennik
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/kadra"
-                      className={cn(a11y, "ui-link-subtle opacity-80")}
-                    >
-                      Kadra
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/kolonie"
-                      className={cn(a11y, "ui-link-subtle opacity-80")}
-                    >
-                      Kolonie
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/aktualnosci"
-                      className={cn(a11y, "ui-link-subtle opacity-80")}
-                    >
-                      Aktualności
-                    </Link>
-                  </li>
+                  {footerLinks.navigation.map(({ label, href }) => (
+                    <li key={href}>
+                      <Link
+                        href={href}
+                        className={cn(a11y, "ui-link-subtle opacity-80")}
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className="">
                 <p className="font-semibold mb-2">Dokumenty do pobrania:</p>
                 <ul className="space-y-2">
-                  <li>
-                    <DownloadLink
-                      href="/assets/pdf/standardy-ochrony-dzieci-przed-krzywdzeniem.pdf"
-                      className={cn(a11y, "ui-link-subtle opacity-80")}
-                    >
-                      Standardy ochrony dzieci przed krzywdzeniem
-                    </DownloadLink>
-                  </li>
-                  <li>
-                    <DownloadLink
-                      href="/assets/pdf/potwierdzenie-uczestnictwa-koszalin.pdf"
-                      className={cn(a11y, "ui-link-subtle opacity-80")}
-                    >
-                      Potwierdzenie uczestnictwa w zajęciach
-                    </DownloadLink>
-                  </li>
-                  <li>
-                    <DownloadLink
-                      href="/assets/pdf/umowa-uczestnictwa-26-27.pdf"
-                      className={cn(a11y, "ui-link-subtle opacity-80")}
-                    >
-                      Umowa uczestnictwa
-                    </DownloadLink>
-                  </li>
-                  <li>
-                    <DownloadLink
-                      href="/assets/pdf/regulamin-studia-tanca-hoodmood.pdf"
-                      className={cn(a11y, "ui-link-subtle opacity-80")}
-                    >
-                      Regulamin studia tańca Hoodmood
-                    </DownloadLink>
-                  </li>
+                  {footerDownloads.map(({ label, href }) => (
+                    <li key={href}>
+                      <DownloadLink
+                        href={href}
+                        className={cn(a11y, "ui-link-subtle opacity-80")}
+                      >
+                        {label}
+                      </DownloadLink>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
             <Link
-              href={"/dofinansowanie"}
+              href={footerLinks.funding.href}
               className={cn(a11y, "ui-link-subtle text-xs")}
             >
-              Dofinansowano ze środków Funduszu rozwoju Kultury fizycznej
+              {footerLinks.funding.label}
             </Link>
           </div>
         </div>
         <div className="flex  justify-between  md:justify-between lg:items-center py-4 lg:py-8 text-xs">
           <p>Hoodmood&copy; {date.getFullYear()}</p>
           <div className="flex  md:flex-row gap-4 xl:flex-row xl:gap-8">
-            <Link href={"/faq"} className={cn(a11y, "ui-link-subtle")}>
-              F.A.Q.
-            </Link>
-            <Link href={"/regulamin"} className={cn(a11y, "ui-link-subtle")}>
-              Regulamin
-            </Link>
-            <Link
-              href="/polityka-prywatnosci"
-              className={cn(a11y, "ui-link-subtle")}
-            >
-              Polityka prywatności
-            </Link>
+            {footerLinks.legal.map(({ label, href }) => (
+              <Link
+                key={href}
+                href={href}
+                className={cn(a11y, "ui-link-subtle")}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

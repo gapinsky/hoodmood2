@@ -2,7 +2,7 @@ import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { szczecinekSeo, szczecinekSocialImage } from "@/lib/seo-szczecinek";
 import { createMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
-import { getClassOffers } from "@/lib/data/class-offer";
+import { getClassOffers } from "@/lib/data-adapters/class-offer";
 import { LocationPageTemplate } from "./LocationPageTemplate";
 import { locationList, isCitySlug } from "@/data/locations";
 

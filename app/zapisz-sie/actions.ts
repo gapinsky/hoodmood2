@@ -2,7 +2,7 @@
 
 import { normalizePhoneNumber } from "@/lib/phone";
 import { mainContact } from "@/data/locations";
-import { resolveEnrollmentSelection } from "@/lib/data/enrollment-classes";
+import { resolveEnrollmentSelection } from "@/lib/data-adapters/enrollment-classes";
 
 import { Resend } from "resend";
 
