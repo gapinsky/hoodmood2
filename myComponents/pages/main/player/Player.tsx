@@ -12,7 +12,6 @@ export default function Player() {
       <div className="flex flex-col md:flex-row w-full items-center gap-8">
         <div className=" flex flex-col gap-8 xl:w-full">
           <SectionContent
-            align="left"
             styles="max-w-full md:max-w-md"
             title={data.title}
             description={data.description}

@@ -9,14 +9,12 @@ type Props = {
   styles?: string;
   title: string;
   description?: ReactNode;
-  align?: "center" | "left";
 };
 
 export default function SectionContent({
   styles,
   title,
   description,
-  align = "left",
 }: Props) {
   const { ref, mounted, revealed } = useRevealInView<HTMLDivElement>();
 
@@ -25,8 +23,7 @@ export default function SectionContent({
       ref={ref}
       data-reveal={mounted ? (revealed ? "visible" : "hidden") : undefined}
       className={cn(
-        "flex flex-col gap-3",
-        align === "left" ? "items-start text-left" : "items-center text-center",
+        "flex flex-col items-start gap-3 text-left",
         motion.root,
         styles,
       )}
@@ -42,8 +39,7 @@ export default function SectionContent({
       {description && (
         <p
           className={cn(
-            "text-base leading-7 text-muted-foreground md:text-lg",
-            align === "left" ? "max-w-2xl text-left" : "max-w-full text-center md:max-w-[60%] lg:max-w-[40%]",
+            "max-w-2xl text-left text-base leading-7 text-muted-foreground md:text-lg",
             motion.description,
           )}
         >

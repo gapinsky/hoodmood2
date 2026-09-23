@@ -2,24 +2,24 @@ import { locations, locationList, mainContact } from "@/data/locations";
 import { createMetadata, SITE_URL } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
 import dynamic from "next/dynamic";
-import Localizations from "@/myComponents/sections/localizations/Localizations";
-import Offer from "../myComponents/sections/offer/Offer";
-import Hero from "@/myComponents/sections/hero/Hero";
-import LifeAtHoodmood from "@/myComponents/sections/lifeAtHoodmood/LifeAtHoodmood";
-import MasterclassFeature from "@/myComponents/sections/editorial/MasterclassFeature";
+import Localizations from "@/myComponents/pages/main/localizations/Localizations";
+import Offer from "../myComponents/pages/main/offer/Offer";
+import Hero from "@/myComponents/pages/main/hero/Hero";
+import LifeAtHoodmood from "@/myComponents/pages/main/lifeAtHoodmood/LifeAtHoodmood";
+import MasterclassFeature from "@/myComponents/pages/main/editorial/MasterclassFeature";
 
-const Player = dynamic(() => import("@/myComponents/sections/player/Player"));
-const Team = dynamic(() => import("@/myComponents/sections/team/Team"));
+const Player = dynamic(() => import("@/myComponents/pages/main/player/Player"));
+const Team = dynamic(() => import("@/myComponents/pages/main/team/Team"));
 const ProofBento = dynamic(
-  () => import("@/myComponents/sections/proofBento/ProofBento"),
+  () => import("@/myComponents/pages/main/proofBento/ProofBento"),
 );
 const HowToJoin = dynamic(
-  () => import("@/myComponents/sections/howToJoin/HowToJoin"),
+  () => import("@/myComponents/pages/main/howToJoin/HowToJoin"),
 );
 const Opinions = dynamic(
-  () => import("@/myComponents/sections/opinions/Opinions"),
+  () => import("@/myComponents/pages/main/opinions/Opinions"),
 );
-const Faq = dynamic(() => import("@/myComponents/sections/faq/Faq"));
+const Faq = dynamic(() => import("@/myComponents/pages/main/faq/Faq"));
 
 
 const jsonLd = {

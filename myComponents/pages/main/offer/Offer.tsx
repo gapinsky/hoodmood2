@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-
 import SectionContent from "@/myComponents/common/headers/SectionContent";
 import { data, offer } from "./data";
 import SectionContainer from "@/myComponents/common/SectionContainer";
@@ -41,7 +40,7 @@ export default function Offer() {
               />
               <Image
                 src={item.hoverImg}
-                alt=""
+                alt={item.title}
                 fill
                 quality={75}
                 sizes="(max-width: 767px) calc(100vw - 6rem), (max-width: 1023px) calc(50vw - 4rem), 50vw"
@@ -62,9 +61,9 @@ export default function Offer() {
 
               <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
                 <div className="flex items-end justify-between gap-4">
-                  <h4 className=" mb-4 font-anton text-4xl uppercase leading-[1.08] tracking-wide text-white sm:text-4xl">
+                  <h3 className=" mb-4 font-anton text-4xl uppercase leading-[1.08] tracking-wide text-white sm:text-4xl">
                     {item.title}
-                  </h4>
+                  </h3>
                   <ArrowUpRight className="mb-1 size-7 shrink-0 text-white/65 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white" />
                 </div>
                 <p className=" max-w-2xl  text-sm  text-white/80">
