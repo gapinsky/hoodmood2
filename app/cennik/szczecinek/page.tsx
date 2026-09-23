@@ -1,6 +1,6 @@
+import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { createMetadata } from "@/lib/seo";
 import { szczecinekSeo, szczecinekSocialImage } from "@/lib/seo-szczecinek";
-import SzczecinekSeo from "@/myComponents/common/SzczecinekSeo";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
 import { pricingTabs } from "@/data/tabs";
@@ -15,7 +15,7 @@ export default function PricingSzczecinek() {
   const content = getPricingPageContent("szczecinek");
   return (
     <MainWrapper>
-      <SzczecinekSeo page="pricing" />
+      <PageStructuredData metadata={metadata} />
       <SectionContainer>
         <LocationPageHeader
           tabs={pricingTabs}

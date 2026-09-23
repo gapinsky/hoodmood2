@@ -55,6 +55,29 @@ for (const url of urls) {
     assert.equal(JSON.parse(jsonLd).url, expectedOrigin);
   }
   assert(!metas(html, 'robots').some((v) => v.includes('noindex')), `${path} noindex`);
+  if (path !== '/') {
+    const scripts = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)];
+    assert.equal(scripts.length, 1, `${path} one JSON-LD script`);
+    const data = JSON.parse(scripts[0][1]);
+    assert.equal(data['@context'], 'https://schema.org');
+    const nodes = data['@graph'];
+    const page = nodes.find((node) => node['@id'] === `${url}#webpage`);
+    assert.equal(page?.url, url, `${path} structured page URL`);
+    assert.equal(page.name, title, `${path} structured title matches metadata`);
+    assert.equal(page.description, description, `${path} structured description matches metadata`);
+    const breadcrumbs = nodes.find((node) => node['@type'] === 'BreadcrumbList');
+    assert.equal(breadcrumbs?.itemListElement.at(-1).item, url);
+    assert.equal(page.breadcrumb['@id'], breadcrumbs['@id']);
+    breadcrumbs.itemListElement.forEach((item, index) => assert.equal(item.position, index + 1));
+    if (path.startsWith('/kadra/')) {
+      assert.equal(page['@type'], 'ProfilePage');
+      assert.equal(page.mainEntity['@type'], 'Person');
+      assert(page.mainEntity.name && page.mainEntity.description);
+      assert.equal(page.mainEntity.url, url);
+    }
+    if (path === '/kontakt') assert.equal(page['@type'], 'ContactPage');
+    if (['/kadra', '/aktualnosci'].includes(path)) assert.equal(page['@type'], 'CollectionPage');
+  }
   if (['/oferta/szczecinek', '/grafik/szczecinek', '/cennik/szczecinek', '/kadra/julia-kaczmarzyk'].includes(path)) {
     const scripts = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)];
     const nodes = scripts.flatMap(([, json]) => JSON.parse(json)['@graph'] || []);

@@ -1,3 +1,4 @@
+import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { createMetadata } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
@@ -12,6 +13,7 @@ export const metadata = createMetadata({ path: "/dofinansowanie", ...staticSeoPa
 export default function Subsidy() {
   return (
    <MainWrapper>
+      <PageStructuredData metadata={metadata} />
       <SectionContainer>
         <PageContent
           title={data.title}

@@ -1,3 +1,4 @@
+import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { mainContact } from "@/data/locations";
 import { createMetadata } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
@@ -21,6 +22,7 @@ export const metadata = createMetadata({ path: "/kontakt", ...staticSeoPages["/k
 export default function ContactPage() {
   return (
     <MainWrapper>
+      <PageStructuredData metadata={metadata} pageType="ContactPage" />
       <SectionContainer>
         <PageIntro eyebrow="Porozmawiajmy / Hoodmood" title={data.title} description={data.description} />
         <div className="grid items-start gap-10 border-t border-foreground/10 pt-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 xl:gap-20">

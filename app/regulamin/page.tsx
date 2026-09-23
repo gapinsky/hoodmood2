@@ -1,3 +1,4 @@
+import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { createMetadata } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
@@ -11,6 +12,7 @@ export const metadata = createMetadata({ path: "/regulamin", ...staticSeoPages["
 export default function TermsAndConditions() {
   return (
   <MainWrapper>
+      <PageStructuredData metadata={metadata} />
       <SectionContainer>
         <PageContent
           title={data.title}

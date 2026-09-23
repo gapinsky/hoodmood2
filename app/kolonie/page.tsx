@@ -1,3 +1,4 @@
+import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { createMetadata } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
@@ -13,6 +14,7 @@ export const metadata = createMetadata({ path: "/kolonie", ...staticSeoPages["/k
 export default function Camps() {
   return (
     <MainWrapper>
+      <PageStructuredData metadata={metadata} />
       <SectionContainer>
         <PageIntro title={data.title} description={data.description} eyebrow="Poza salą / Hoodmood" titleWidth="wide">
           <nav aria-label="Sekcje wydarzeń" className="flex flex-wrap gap-3 border-b border-foreground/10 pb-8">

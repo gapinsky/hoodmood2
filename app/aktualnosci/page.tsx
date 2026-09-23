@@ -1,3 +1,4 @@
+import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { Suspense } from "react";
 import { createMetadata } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
@@ -14,6 +15,7 @@ export const metadata = createMetadata({ path: "/aktualnosci", ...staticSeoPages
 export default function News() {
   return (
     <MainWrapper>
+      <PageStructuredData metadata={metadata} pageType="CollectionPage" />
       <SectionContainer>
         <PageIntro title={data.title} description={data.description} eyebrow="Z życia studia / Hoodmood" titleWidth="wide">
           <nav aria-label="Aktualności Hoodmood" className="flex flex-wrap gap-3 border-b border-foreground/10 pb-8">

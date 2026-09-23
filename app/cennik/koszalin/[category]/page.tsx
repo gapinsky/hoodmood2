@@ -1,3 +1,4 @@
+import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { createMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { getPricingPageContent } from "@/lib/data/class-pricing";
@@ -40,5 +41,10 @@ export default async function Page({ params }: Props) {
     notFound();
   }
 
-  return <PricingPage {...content} />;
+  return (
+    <>
+      <PageStructuredData metadata={await generateMetadata({ params })} />
+      <PricingPage {...content} />
+    </>
+  );
 }

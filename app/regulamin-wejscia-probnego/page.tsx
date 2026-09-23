@@ -1,3 +1,4 @@
+import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { legalEntity } from "@/data/locations";
 import { createMetadata } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
@@ -22,6 +23,7 @@ export const metadata = createMetadata({ path: "/regulamin-wejscia-probnego", ..
 export default function TrialClassTermsPage() {
   return (
     <MainWrapper>
+      <PageStructuredData metadata={metadata} />
       <SectionContainer className="gap-10">
         <header className="mx-auto w-full max-w-3xl">
           <h1 className="font-anton text-4xl uppercase leading-tight sm:text-5xl">

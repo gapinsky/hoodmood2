@@ -1,4 +1,4 @@
-import SzczecinekSeo from "@/myComponents/common/SzczecinekSeo";
+import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { szczecinekSeo, szczecinekSocialImage } from "@/lib/seo-szczecinek";
 import { createMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
@@ -46,7 +46,7 @@ export default async function Offer({ params }: Props) {
   const offerContent = getClassOffers(city);
   return (
     <>
-      {city === "szczecinek" && <SzczecinekSeo page="offer" />}
+      <PageStructuredData metadata={await generateMetadata({ params })} />
     <LocationPageTemplate header={headerContent} offerContent={offerContent} />
     </>
   );

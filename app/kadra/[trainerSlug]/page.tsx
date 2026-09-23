@@ -1,4 +1,4 @@
-import SzczecinekSeo from "@/myComponents/common/SzczecinekSeo";
+import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { szczecinekSeo, szczecinekSocialImage } from "@/lib/seo-szczecinek";
 import { createMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
@@ -53,7 +53,7 @@ export default async function TrainerPage({ params }: PageProps) {
 
   return (
     <MainWrapper>
-      {trainer.id === "julia-kaczmarzyk" && <SzczecinekSeo page="trainer" />}
+      <PageStructuredData metadata={await generateMetadata({ params })} trainer={trainer} />
       <SectionContainer className="overflow-visible">
         <div className="space-y-8 sm:space-y-12">
           <div className="flex items-center justify-between gap-4 border-b border-foreground/10 pb-5">

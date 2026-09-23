@@ -1,3 +1,4 @@
+import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { createMetadata } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
@@ -12,6 +13,7 @@ export const metadata = createMetadata({ path: "/polityka-prywatnosci", ...stati
 export default function Privacy() {
   return (
     <MainWrapper>
+      <PageStructuredData metadata={metadata} />
       <SectionContainer>
         <PageIntro
           eyebrow="Twoje dane / Hoodmood"

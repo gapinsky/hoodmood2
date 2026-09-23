@@ -1,3 +1,4 @@
+import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { createMetadata } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
@@ -34,6 +35,7 @@ export default function Team() {
 
   return (
     <MainWrapper>
+      <PageStructuredData metadata={metadata} pageType="CollectionPage" />
       <SectionContainer>
         <PageIntro title={data.title} description={data.description} eyebrow="Meet the crew / Hoodmood" titleWidth="normal">
           <nav aria-label="Grupy trenerów" className="flex flex-wrap gap-3 border-b border-foreground/10 pb-8">

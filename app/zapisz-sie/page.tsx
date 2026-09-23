@@ -1,3 +1,4 @@
+import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { createMetadata } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
@@ -13,6 +14,7 @@ export const metadata = createMetadata({ path: "/zapisz-sie", ...staticSeoPages[
 export default function EnrollmentPage() {
   return (
     <MainWrapper>
+      <PageStructuredData metadata={metadata} />
       <SectionContainer>
         <PageIntro
           eyebrow="Dołącz do Hoodmood"

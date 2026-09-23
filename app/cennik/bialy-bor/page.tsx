@@ -1,3 +1,4 @@
+import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { createMetadata } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
@@ -13,6 +14,7 @@ export default function PricingBialyBor() {
   const content = getPricingPageContent("bialy-bor");
   return (
     <MainWrapper>
+      <PageStructuredData metadata={metadata} />
       <SectionContainer>
         <LocationPageHeader
           tabs={pricingTabs}
