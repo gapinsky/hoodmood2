@@ -22,10 +22,11 @@ export const trainers = {
     name: "Julia Kaczmarzyk",
     role: "Taniec współczesny — REBELIA",
     styles: ["Mikrusy (4–6 lat)", "Minimki (7–9 lat)", "Rebelia 3 (10–12 lat)", "Rebelia Junior (13–14 lat)", "Rebelia (15+ lat)"],
-    bio: "Julia Kaczmarzyk prowadzi Zespół Tańca Współczesnego REBELIA w Szczecinku. Pracuje z grupami Mikrusy, Minimki, Rebelia 3, Rebelia Junior i Rebelia.\nProfil w przygotowaniu. Zdjęcie, pełną biografię i więcej informacji o doświadczeniu Julii dodamy wkrótce. Już teraz możesz sprawdzić prowadzone przez nią grupy i grafik zajęć w Szczecinku.",
+    bio: "Julia Kaczmarzyk to dyplomowana tancerka i choreografka, absolwentka Akademii Humanistyczno-Ekonomicznej w Łodzi, kierunku Taniec, ze specjalnością Tancerz–Choreograf.\nJej przygoda z tańcem rozpoczęła się już w wieku 3 lat. Przez 7 lat była związana z Częstochowskim Teatrem Tańca, gdzie zdobywała doświadczenie sceniczne i rozwijała swój warsztat jako tancerka.\nPodczas studiów rozwijała się w zakresie różnych technik i form tańca, obejmujących m.in. taniec klasyczny, współczesny, jazz oraz commercial. Duża liczba godzin praktycznych pozwoliła jej zbudować wszechstronny warsztat ruchowy, rozwijać świadomość ciała, technikę, muzykalność oraz jakość wykonywanego ruchu.\nRównolegle rozwijała warsztat choreograficzny, realizując liczne choreografie i projekty artystyczne, a także przygotowując autorską pracę dyplomową.\nW swoich choreografiach Julia szczególną uwagę zwraca na to, aby ruch był nośnikiem emocji i historii. Interesuje ją tworzenie choreografii, które nie są jedynie układem kroków, ale pozwalają tancerzom wyrażać, interpretować i budować własną opowieść poprzez ruch.",
     image: "",
     images: [],
-    localizations: ["Szczecinek"],
+    localizations: ["Szczecinek", "Koszalin"],
+    instagram: "https://www.instagram.com/kaczmarz.yk/",
   },
   "talita-jarzecka": {
     id: "talita-jarzecka",

@@ -13,7 +13,7 @@ export default function Localizations() {
 
       <SectionContent title={data.title} description={data.description} />
 
-      <div className="grid grid-cols-1 gap-6 pb-3 md:grid-cols-2 xl:grid-cols-3 md:gap-8">
+      <div className="grid grid-cols-1 gap-6 pb-3 md:grid-cols-2 xl:grid-cols-5 md:gap-8">
         {localizations.map((item) => (
           <article
           key={item.slug}
