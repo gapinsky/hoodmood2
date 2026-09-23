@@ -8,13 +8,10 @@ import AutoScroll from "embla-carousel-auto-scroll";
 import React from "react";
 
 import TeamCard from "./TeamCard";
-import type { Trainer } from "@/data/trainers";
+import { activeTrainers} from "@/data/trainers";
 
-type Props = {
-  trainers: Trainer[];
-};
 
-export default function TeamCarousel({ trainers }: Props) {
+export default function TeamCarousel({trainers = activeTrainers}) {
   const autoplay = React.useRef(
     AutoScroll({
       speed: 1,

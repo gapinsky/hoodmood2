@@ -1,8 +1,12 @@
 import SectionContent from "@/myComponents/common/headers/SectionContent";
-import { data } from "./data";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import TeamCarousel from "./TeamCarousel";
-import { activeTrainers } from "@/data/trainers";
+
+const data = {
+  title: "Poznaj ekipę hoodmood!",
+  description:
+    "Za zajęciami stoją ludzie, którzy naprawdę żyją tańcem – i ogarniają pracę z dzieciakami, młodzieżą i dorosłymi. Łączy ich jedno: zajawka, którą czuć od pierwszych zajęć.",
+};
 
 export default function Team() {
   return (
@@ -11,7 +15,7 @@ export default function Team() {
         title={data.title}
         description={data.description}
       />
-      <TeamCarousel trainers={activeTrainers} />
+      <TeamCarousel/>
     </SectionContainer>
   );
 }
