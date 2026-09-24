@@ -20,7 +20,6 @@ export default function SmoothScrollLink({
 
     event.preventDefault();
     target.scrollIntoView({ behavior: "smooth", block: "start" });
-    window.history.replaceState(null, "", href);
   }
 
   return (

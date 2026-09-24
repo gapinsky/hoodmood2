@@ -3,7 +3,6 @@ import type { ClassesByDay } from "@/myComponents/pages/schedule/types";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
-import { scheduleTabs } from "@/data/tabs";
 import ScheduleGrid from "@/myComponents/pages/schedule/ScheduleGrid";
 import DownloadSchedule from "./DownloadSchedule";
 import MainWrapper from "@/myComponents/common/MainWrapper";
@@ -21,7 +20,6 @@ export default function SchedulePageTemplate({
     <MainWrapper>
       <SectionContainer>
         <LocationPageHeader
-          tabs={scheduleTabs}
           eyebrow="Twój tydzień / Hoodmood"
           navigationLabel="Lokalizacja grafiku"
           title={header.title}

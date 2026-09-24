@@ -1,6 +1,5 @@
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import SectionContent from "@/myComponents/common/headers/SectionContent";
-import { data } from "./data";
 import {
   Accordion,
   AccordionContent,
@@ -9,6 +8,13 @@ import {
 } from "@/components/ui/accordion";
 import { faq } from "@/app/faq/data";
 import Link from "next/link";
+
+ const data = {
+  title: "Najczęściej zadawane pytania",
+  description:
+    "Wiemy, że przed pierwszymi zajęciami w głowie pojawia się milion pytań. Zebraliśmy te najczęstsze - zanim do nas napiszesz sprawdź, czy nie ma tu odpowiedzi.",
+};
+
 
 export default function Faq() {
   return (

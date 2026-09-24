@@ -5,7 +5,6 @@ import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
-import { offerTabs } from "@/data/tabs";
 import OfferFiltersSection from "@/myComponents/pages/offer/OfferFiltersSection";
 
 type LocationPageProps = {
@@ -23,7 +22,6 @@ export function LocationPageTemplate({
     <MainWrapper>
       <SectionContainer>
         <LocationPageHeader
-          tabs={offerTabs}
           eyebrow="Znajdź swój styl / Hoodmood"
           navigationLabel="Lokalizacja oferty"
           title={header.title}

@@ -36,7 +36,6 @@ export type DanceClass = {
   maxAge: number | null;
   level: ClassLevel;
   trainerIds: TrainerId[];
-  /** Gościnni prowadzący poza standardową obsadą zajęć. */
   specialTrainerIds: TrainerId[];
   schedule: ClassScheduleEntry[];
   pricing: ClassPricing;
@@ -51,18 +50,7 @@ export type DanceClass = {
   sortOrder: number;
 };
 
-// Katalog zebrany z ofertaData.ts, pricingData.ts i scheduleData.ts.
-// Wartość maxAge: null zastępuje pusty limit lub umowne 99 lat.
-// Pusty schedule oznacza brak stałego terminu albo wybór terminów w pakiecie.
-// trainerIds: [] oznacza prowadzącego dobieranego indywidualnie, gościa
-// albo prowadzących zależnych od wybranych zajęć składowych pakietu.
-// Pakiety mają prefiks koszalin-pakiet-; schemat nie zawiera relacji składowych.
-// The Beat Hunters: wiek 10–12 z oferty i grafiku; cennik podaje 5–99.
-// Goście przy tańcu współczesnym 13–18 pojawiają się 1x/miesiąc,
-// więc nie są przypisani jako cotygodniowi prowadzący.
-// MASTERCLASS: piątkowy termin z grafiku, wydarzenia nieregularne.
-// MASTER TRAINERS rozliczane za trening, MASTER PASS miesięcznie.
-// Duety/trio: billingUnit "hour", kwota od osoby wskazana w label.
+
 
 export const classes = {
   "szczecinek-lekcje-indywidualne": {

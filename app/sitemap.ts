@@ -1,15 +1,15 @@
 import type { MetadataRoute } from "next";
 import { activeTrainers } from "@/data/trainers";
 import { pricingCategories } from "@/myComponents/pages/pricing/types";
-import { offerTabs, scheduleTabs } from "@/data/tabs";
+import { getLocationLinks } from "@/lib/navigation/locationLinks";
 import { absoluteUrl } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     ...Object.keys(staticSeoPages),
-    ...offerTabs.map((tab) => tab.href),
-    ...scheduleTabs.map((tab) => tab.href),
+    ...getLocationLinks("oferta").map((link) => link.href),
+    ...getLocationLinks("grafik").map((link) => link.href),
     ...pricingCategories.map((category) => `/cennik/koszalin/${category}`),
     ...activeTrainers.map((trainer) => `/kadra/${trainer.slug}`),
   ];

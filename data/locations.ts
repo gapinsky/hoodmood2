@@ -4,7 +4,6 @@ export interface LocationVenue {
   id: string;
   img: string;
   hoverImg: string;
-  // Brak osobnego adresu oznacza użycie głównego adresu lokalizacji.
   address?: string;
   name?: string;
 }

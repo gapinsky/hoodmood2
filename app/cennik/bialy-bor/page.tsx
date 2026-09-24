@@ -3,7 +3,6 @@ import { createMetadata } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
-import { pricingTabs } from "@/data/tabs";
 import { getPricingPageContent } from "@/lib/data-adapters/class-pricing";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import PricingTable from "@/myComponents/pages/pricing/PricingTable";
@@ -17,7 +16,6 @@ export default function PricingBialyBor() {
       <PageStructuredData metadata={metadata} />
       <SectionContainer>
         <LocationPageHeader
-          tabs={pricingTabs}
           eyebrow="Twój ruch / Hoodmood"
           navigationLabel="Lokalizacja cennika"
           title={content.title}

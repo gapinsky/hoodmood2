@@ -4,7 +4,7 @@ import { Anton, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/myComponents/themeProvider/ThemeProvider";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Navbar from "@/myComponents/navbar/Navbar";
+import Navbar from "@/myComponents/common/navigation/Navbar";
 import Footer from "@/myComponents/footer/Footer";
 import NextTopLoader from "nextjs-toploader";
 import AwayTabTitle from "@/myComponents/common/AwayTabTitle";

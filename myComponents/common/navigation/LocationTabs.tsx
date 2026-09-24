@@ -3,18 +3,23 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MapPin } from "lucide-react";
+import { getLocationLinks } from "@/lib/navigation/locationLinks";
 
 type Props = {
-  tabs: { label: string; href: string; segment: string }[];
   label: string;
 };
 
-export default function LocationTabs({ tabs, label }: Props) {
+export default function LocationTabs({ label }: Props) {
   const pathname = usePathname();
+  const section = pathname.split("/")[1];
+  const tabs = section === "oferta" || section === "grafik" || section === "cennik"
+    ? getLocationLinks(section)
+    : [];
+
   return (
         <nav aria-label={label} className="flex flex-wrap gap-3">
           {tabs.map((tab) => {
-            const active = pathname.startsWith(tab.segment);
+            const active = (pathname === tab.segment || pathname.startsWith(`${tab.segment}/`));
             return (
               <Link
                 key={tab.href}
