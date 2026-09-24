@@ -16,14 +16,14 @@ import {
 import AutoScroll from "embla-carousel-auto-scroll";
 import { Star } from "lucide-react";
 import React from "react";
-import { Testimonial } from "./data";
+import { testimonials} from "./data";
 import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
 
-type Props = {
-  testimonials: Testimonial[];
-};
 
-export default function OpinionsCarousel({ testimonials }: Props) {
+
+
+
+export default function OpinionsCarousel() {
   const autoplay = React.useRef(
     AutoScroll({
       speed: 1,
