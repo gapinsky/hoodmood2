@@ -4,7 +4,7 @@ import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import PageIntro from "@/myComponents/headers/PageIntro";
 import { data, faq } from "./data";
-import FaqFilter from "@/myComponents/pages/faq/faqFilter";
+import FaqFilter from "@/myComponents/faq/faqFilter";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 
 export const metadata = createMetadata({ path: "/faq", ...staticSeoPages["/faq"] });

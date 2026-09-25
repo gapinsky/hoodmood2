@@ -1,4 +1,4 @@
-import TrainerCard from "@/myComponents/pages/team/TeamCard";
+import TrainerCard from "@/myComponents/team/TeamCard";
 import type { Trainer } from "@/data/trainers";
 
 type Props = Pick<Trainer, "slug" | "name" | "styles" | "image">;

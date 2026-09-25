@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getInstagramPostsPage } from "@/myComponents/pages/news/instagram/instagramApi";
+import { getInstagramPostsPage } from "@/myComponents/news/instagram/instagramApi";
 
 export const dynamic = "force-dynamic";
 

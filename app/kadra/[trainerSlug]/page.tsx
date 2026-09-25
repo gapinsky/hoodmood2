@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { activeTrainers } from "@/data/trainers";
 
-import TrainerGallery from "@/myComponents/pages/team/TrainerGallery";
+import TrainerGallery from "@/myComponents/team/TrainerGallery";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import MainWrapper from "@/myComponents/common/MainWrapper";

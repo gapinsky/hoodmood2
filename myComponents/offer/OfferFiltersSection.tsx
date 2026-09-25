@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { ClassOffer, ExperienceFilterValue, OfferSortingValue } from "./types";
-import OfferCard from "@/myComponents/pages/offer/OfferCard";
+import OfferCard from "@/myComponents/offer/OfferCard";
 import OfferFilterBar from "./OfferFilterBar";
 import { filterAndSortOffers } from "./filterHelper";
 

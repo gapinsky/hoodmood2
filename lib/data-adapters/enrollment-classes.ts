@@ -1,8 +1,8 @@
 import { classList } from "@/data/classess";
 import { locationList, type CitySlug } from "@/data/locations";
 import { trainers } from "@/data/trainers";
-import { pricingCategories, type PricingItem } from "@/myComponents/pages/pricing/types";
-import { dayOrder } from "@/myComponents/pages/schedule/types";
+import { pricingCategories, type PricingItem } from "@/myComponents/pricing/types";
+import { dayOrder } from "@/myComponents/schedule/types";
 import type { EnrollmentRequest, SelectedClassItem } from "@/lib/schemas/enrollmentSchema";
 import { getClassPricing } from "./class-pricing";
 

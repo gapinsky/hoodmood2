@@ -1,7 +1,7 @@
 "use client";
 
 import { useRevealInView } from "@/lib/hooks/useRevealInView";
-import motion from "@/myComponents/common/motion/TextReveal.module.css";
+import motion from "@/myComponents/motion/TextReveal.module.css";
 
 type Props = {
   title: string;

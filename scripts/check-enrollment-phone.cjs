@@ -42,7 +42,7 @@ const { enrollmentRequestSchema } = load('lib/schemas/enrollmentSchema');
 const { contactFormSchema } = load('lib/schemas/contactSchema');
 const { getEnrollmentClasses, resolveEnrollmentSelection, matchesEnrollmentParticipant } = load('lib/data-adapters/enrollment-classes');
 const { classList } = load('data/classess');
-const { isPricingCategory } = load('myComponents/pages/pricing/types');
+const { isPricingCategory } = load('myComponents/pricing/types');
 for (const value of ['__proto__', 'constructor', 'toString', '', 'ZAJECIA', 'invalid']) assert.equal(isPricingCategory(value), false);
 for (const value of ['zajecia', 'pakiety-zajec', 'zajecia-indywidualne']) assert.equal(isPricingCategory(value), true);
 

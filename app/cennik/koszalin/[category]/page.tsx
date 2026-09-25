@@ -2,7 +2,7 @@ import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { createMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { getPricingPageContent } from "@/lib/data-adapters/class-pricing";
-import { isPricingCategory, pricingCategories } from "@/myComponents/pages/pricing/types";
+import { isPricingCategory, pricingCategories } from "@/myComponents/pricing/types";
 import PricingPage from "./PricingPage";
 
 type Props = {

@@ -1,6 +1,6 @@
 import { classList, type BillingUnit, type DanceClass, type PriceVariant } from "@/data/classess";
 import { locationList, type CitySlug } from "@/data/locations";
-import type { PricingCategory, PricingItem, PricingPageContent } from "@/myComponents/pages/pricing/types";
+import type { PricingCategory, PricingItem, PricingPageContent } from "@/myComponents/pricing/types";
 
 const categoryContent: Record<PricingCategory, { title: string; description: string }> = {
   zajecia: {

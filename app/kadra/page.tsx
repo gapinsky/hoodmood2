@@ -7,7 +7,7 @@ import { data } from "./data";
 import { activeTrainers } from "@/data/trainers";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import MainWrapper from "@/myComponents/common/MainWrapper";
-import TeamCard from "@/myComponents/pages/team/TeamCard";
+import TeamCard from "@/myComponents/team/TeamCard";
 
 export const metadata = createMetadata({ path: "/kadra", ...staticSeoPages["/kadra"] });
 

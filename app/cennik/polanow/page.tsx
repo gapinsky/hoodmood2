@@ -5,7 +5,7 @@ import SectionContainer from "@/myComponents/common/SectionContainer";
 import LocationPageHeader from "@/myComponents/headers/LocationPageHeader";
 import { getPricingPageContent } from "@/lib/data-adapters/class-pricing";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
-import PricingTable from "@/myComponents/pages/pricing/PricingTable";
+import PricingTable from "@/myComponents/pricing/PricingTable";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 export const metadata = createMetadata({ path: "/cennik/polanow", ...staticSeoPages["/cennik/polanow"] });
 

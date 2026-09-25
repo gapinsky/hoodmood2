@@ -5,7 +5,7 @@ import SectionContainer from "@/myComponents/common/SectionContainer";
 import PageIntro from "@/myComponents/headers/PageIntro";
 import { data, sections, personalData } from "./data";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
-import InfoRow from "@/myComponents/pages/privacy/InfoRow";
+import InfoRow from "@/myComponents/privacy/InfoRow";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 
 export const metadata = createMetadata({ path: "/polityka-prywatnosci", ...staticSeoPages["/polityka-prywatnosci"] });

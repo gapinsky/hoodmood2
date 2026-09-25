@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import ButtonSecondary from "@/myComponents/buttons/ButtonSecondary";
-import type { ClassesByDay } from "@/myComponents/pages/schedule/types";
+import type { ClassesByDay } from "@/myComponents/schedule/types";
 
 type Props = { title: string; scheduleContent: ClassesByDay };
 
@@ -17,7 +17,7 @@ export default function DownloadSchedule({ title, scheduleContent }: Props) {
     request.current = controller;
     setStatus("generating");
     try {
-      const { default: exportSchedule } = await import("@/myComponents/pages/schedule/DownloadSchedulePdf");
+      const { default: exportSchedule } = await import("@/myComponents/schedule/DownloadSchedulePdf");
       await exportSchedule(scheduleContent, title, controller.signal);
       if (!controller.signal.aborted) setStatus("idle");
     } catch (error) {

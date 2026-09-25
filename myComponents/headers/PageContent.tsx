@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { useRevealInView } from "@/lib/hooks/useRevealInView";
-import motion from "@/myComponents/common/motion/TextReveal.module.css";
+import motion from "@/myComponents/motion/TextReveal.module.css";
 
 type Props = {
   styles?: string;

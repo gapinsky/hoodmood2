@@ -1,11 +1,11 @@
 import type { ReactNode } from "react";
 import LocationComingSoon from "@/myComponents/common/LocationComingSoon";
-import type { ClassOffer } from "@/myComponents/pages/offer/types";
+import type { ClassOffer } from "@/myComponents/offer/types";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import LocationPageHeader from "@/myComponents/headers/LocationPageHeader";
-import OfferFiltersSection from "@/myComponents/pages/offer/OfferFiltersSection";
+import OfferFiltersSection from "@/myComponents/offer/OfferFiltersSection";
 
 type LocationPageProps = {
   header: { title: string; description: string };

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { useRevealInView } from "@/lib/hooks/useRevealInView";
-import motion from "@/myComponents/common/motion/TextReveal.module.css";
+import motion from "@/myComponents/motion/TextReveal.module.css";
 import type { Step } from "./data";
 
 export default function TimelineStep({ step, textOnLeft, reached, markerRef }: {

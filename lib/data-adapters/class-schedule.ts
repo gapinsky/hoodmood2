@@ -1,7 +1,7 @@
 import { classList } from "@/data/classess";
 import type { CitySlug } from "@/data/locations";
 import { trainers, type TrainerId } from "@/data/trainers";
-import { dayOrder, type ClassesByDay } from "@/myComponents/pages/schedule/types";
+import { dayOrder, type ClassesByDay } from "@/myComponents/schedule/types";
 
 function trainerNames(ids: TrainerId[]) {
   return ids.map((id) => trainers[id].name).join(" / ");

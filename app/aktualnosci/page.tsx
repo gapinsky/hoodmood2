@@ -8,7 +8,7 @@ import SectionContainer from "@/myComponents/common/SectionContainer";
 import PageIntro from "@/myComponents/headers/PageIntro";
 import { data } from "./data";
 import MainWrapper from "@/myComponents/common/MainWrapper";
-import LatestInstagramPosts from "@/myComponents/pages/news/LatestInstagramPosts";
+import LatestInstagramPosts from "@/myComponents/news/LatestInstagramPosts";
 import { ArrowUpRight } from "lucide-react";
 
 export const metadata = createMetadata({ path: "/aktualnosci", ...staticSeoPages["/aktualnosci"] });

@@ -1,7 +1,7 @@
 import { classList } from "@/data/classess";
 import type { CitySlug } from "@/data/locations";
 import { trainers, type TrainerId } from "@/data/trainers";
-import type { ClassOffer, OfferInstructor } from "@/myComponents/pages/offer/types";
+import type { ClassOffer, OfferInstructor } from "@/myComponents/offer/types";
 import { getClassPricing, getPricingCategory } from "./class-pricing";
 
 function getInstructors(ids: TrainerId[]): OfferInstructor[] {

@@ -1,4 +1,4 @@
-import { PricingFiltersProvider } from "@/myComponents/pages/pricing/PricingFiltersProvider";
+import { PricingFiltersProvider } from "@/myComponents/pricing/PricingFiltersProvider";
 
 export default function PricingCategoryLayout({
   children,

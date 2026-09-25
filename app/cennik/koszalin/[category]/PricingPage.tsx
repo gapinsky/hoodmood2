@@ -2,7 +2,7 @@ import MainWrapper from "@/myComponents/common/MainWrapper";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import LocationPageHeader from "@/myComponents/headers/LocationPageHeader";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
-import type { PricingPageContent } from "@/myComponents/pages/pricing/types";
+import type { PricingPageContent } from "@/myComponents/pricing/types";
 import Table from "./Table";
 
 export default function PricingPage({
