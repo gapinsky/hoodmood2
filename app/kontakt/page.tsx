@@ -5,7 +5,7 @@ import { staticSeoPages } from "@/lib/seo-pages";
 import Link from "next/link";
 import { ArrowUpRight, Mail, Phone } from "lucide-react";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import PageIntro from "@/myComponents/common/headers/PageIntro";
+import PageIntro from "@/myComponents/headers/PageIntro";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import SocialLinks from "@/myComponents/common/SocialLinks";
 import { data } from "./data";

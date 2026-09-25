@@ -2,7 +2,7 @@ import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { createMetadata } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
+import LocationPageHeader from "@/myComponents/headers/LocationPageHeader";
 import { getPricingPageContent } from "@/lib/data-adapters/class-pricing";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import PricingTable from "@/myComponents/pages/pricing/PricingTable";

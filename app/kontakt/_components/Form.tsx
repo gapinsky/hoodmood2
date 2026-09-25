@@ -7,7 +7,7 @@ import { Mail, MessageSquareText, User } from "lucide-react";
 import { toast } from "sonner";
 import FormPhoneField from "@/myComponents/forms/fields/FormPhoneField";
 
-import ButtonPrimary from "@/myComponents/common/buttons/ButtonPrimary";
+import ButtonPrimary from "@/myComponents/buttons/ButtonPrimary";
 import { contactFormSchema } from "@/lib/schemas/contactSchema";
 import type { ContactFormInput } from "@/lib/schemas/contactSchema";
 import { submitContactForm } from "../actions";

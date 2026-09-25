@@ -2,7 +2,7 @@ import LocationComingSoon from "@/myComponents/common/LocationComingSoon";
 import type { ClassesByDay } from "@/myComponents/pages/schedule/types";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
+import LocationPageHeader from "@/myComponents/headers/LocationPageHeader";
 import ScheduleGrid from "@/myComponents/pages/schedule/ScheduleGrid";
 import DownloadSchedule from "./DownloadSchedule";
 import MainWrapper from "@/myComponents/common/MainWrapper";

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, ArrowLeft } from "lucide-react";
-import ButtonPrimary from "@/myComponents/common/buttons/ButtonPrimary";
-import ButtonSecondary from "@/myComponents/common/buttons/ButtonSecondary";
+import ButtonPrimary from "@/myComponents/buttons/ButtonPrimary";
+import ButtonSecondary from "@/myComponents/buttons/ButtonSecondary";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 

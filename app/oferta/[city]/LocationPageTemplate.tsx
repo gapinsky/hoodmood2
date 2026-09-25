@@ -4,7 +4,7 @@ import type { ClassOffer } from "@/myComponents/pages/offer/types";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
+import LocationPageHeader from "@/myComponents/headers/LocationPageHeader";
 import OfferFiltersSection from "@/myComponents/pages/offer/OfferFiltersSection";
 
 type LocationPageProps = {

@@ -1,6 +1,6 @@
 import { mainContact } from "@/data/locations";
 import Link from "next/link";
-import ButtonSecondary from "./buttons/ButtonSecondary";
+import ButtonSecondary from "../buttons/ButtonSecondary";
 import { Mail, Phone } from "lucide-react";
 
 export default function AnyQuestionsContact() {

@@ -3,7 +3,7 @@ import { createMetadata } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import PageIntro from "@/myComponents/common/headers/PageIntro";
+import PageIntro from "@/myComponents/headers/PageIntro";
 import { data } from "./data";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import EnrollmentForm from "./_components/enrollmentForm/EnrollmentForm";

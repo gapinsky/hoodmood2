@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import ButtonSecondary from "@/myComponents/common/buttons/ButtonSecondary";
+import ButtonSecondary from "@/myComponents/buttons/ButtonSecondary";
 import type { ClassesByDay } from "@/myComponents/pages/schedule/types";
 
 type Props = { title: string; scheduleContent: ClassesByDay };

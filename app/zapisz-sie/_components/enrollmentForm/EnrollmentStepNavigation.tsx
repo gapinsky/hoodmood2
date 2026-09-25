@@ -1,5 +1,5 @@
-import ButtonPrimary from "@/myComponents/common/buttons/ButtonPrimary";
-import ButtonSecondary from "@/myComponents/common/buttons/ButtonSecondary";
+import ButtonPrimary from "@/myComponents/buttons/ButtonPrimary";
+import ButtonSecondary from "@/myComponents/buttons/ButtonSecondary";
 
 type EnrollmentStepNavigationProps = {
   currentStep: number;

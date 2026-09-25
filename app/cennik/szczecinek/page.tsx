@@ -2,7 +2,7 @@ import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { createMetadata } from "@/lib/seo";
 import { szczecinekSeo, szczecinekSocialImage } from "@/lib/seo-szczecinek";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
+import LocationPageHeader from "@/myComponents/headers/LocationPageHeader";
 import { getClassPricing, getPricingPageContent } from "@/lib/data-adapters/class-pricing";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import PricingTable from "@/myComponents/pages/pricing/PricingTable";

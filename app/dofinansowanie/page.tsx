@@ -2,7 +2,7 @@ import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { createMetadata } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import PageContent from "@/myComponents/common/headers/PageContent";
+import PageContent from "@/myComponents/headers/PageContent";
 import { data, items } from "./data";
 import Image from "next/image";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";

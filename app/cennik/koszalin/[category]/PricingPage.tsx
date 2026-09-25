@@ -1,6 +1,6 @@
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import LocationPageHeader from "@/myComponents/common/headers/LocationPageHeader";
+import LocationPageHeader from "@/myComponents/headers/LocationPageHeader";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import type { PricingPageContent } from "@/myComponents/pages/pricing/types";
 import Table from "./Table";

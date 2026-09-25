@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { activeTrainers } from "@/data/trainers";
 import { pricingCategories } from "@/myComponents/pages/pricing/types";
-import { getLocationLinks } from "@/lib/navigation/locationLinks";
+import { getLocationLinks } from "@/myComponents/navigation/locationLinks";
 import { absoluteUrl } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
 

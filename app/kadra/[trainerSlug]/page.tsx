@@ -11,7 +11,7 @@ import SectionContainer from "@/myComponents/common/SectionContainer";
 import AnyQuestionsContact from "@/myComponents/common/AnyQuestionsContact";
 import MainWrapper from "@/myComponents/common/MainWrapper";
 import { ArrowLeft, ArrowUpRight, MapPin } from "lucide-react";
-import ButtonPrimary from "@/myComponents/common/buttons/ButtonPrimary";
+import ButtonPrimary from "@/myComponents/buttons/ButtonPrimary";
 
 type PageProps = {
   params: Promise<{

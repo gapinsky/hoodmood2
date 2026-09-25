@@ -2,7 +2,7 @@ import PageStructuredData from "@/myComponents/common/PageStructuredData";
 import { createMetadata } from "@/lib/seo";
 import { staticSeoPages } from "@/lib/seo-pages";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import PageIntro from "@/myComponents/common/headers/PageIntro";
+import PageIntro from "@/myComponents/headers/PageIntro";
 import { data, faq } from "./data";
 import FaqFilter from "@/myComponents/pages/faq/faqFilter";
 import MainWrapper from "@/myComponents/common/MainWrapper";

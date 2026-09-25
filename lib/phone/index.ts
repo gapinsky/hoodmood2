@@ -7,7 +7,6 @@ export const phoneFields = { phoneCountry: phoneCountrySchema, phone: z.string()
 export function normalizePhoneNumber(phone: string, country: CountryCode): string | null {
   if (!phoneCountrySchema.safeParse(country).success) return null;
   const parsed = parsePhoneNumberFromString(phone, { defaultCountry: country, extract: false });
-  // Wklejony pełny numer musi odpowiadać krajowi wybranemu przez użytkownika.
   if (!parsed?.isValid() || parsed.country !== country || parsed.ext) return null;
   return parsed.number;
 }
