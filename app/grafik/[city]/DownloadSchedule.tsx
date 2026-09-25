@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { buttonSecondaryStyles } from "@/myComponents/common/ButtonSecondary";
+import ButtonSecondary from "@/myComponents/common/buttons/ButtonSecondary";
 import type { ClassesByDay } from "@/myComponents/pages/schedule/types";
 
 type Props = { title: string; scheduleContent: ClassesByDay };
@@ -32,10 +32,10 @@ export default function DownloadSchedule({ title, scheduleContent }: Props) {
 
   return (
     <div>
-      <button type="button" onClick={download} disabled={status === "generating"}
-        aria-busy={status === "generating"} className={buttonSecondaryStyles}>
+      <ButtonSecondary type="button" onClick={download} disabled={status === "generating"}
+        aria-busy={status === "generating"}>
         {status === "generating" ? "Generowanie PDF…" : "Pobierz grafik w PDF"}
-      </button>
+      </ButtonSecondary>
       <p role="status" className="mt-2 text-sm text-muted-foreground">
         {status === "error" ? "Nie udało się wygenerować PDF. Spróbuj ponownie." : ""}
       </p>

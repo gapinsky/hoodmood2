@@ -7,7 +7,7 @@ import { Mail, MessageSquareText, User } from "lucide-react";
 import { toast } from "sonner";
 import FormPhoneField from "@/myComponents/forms/fields/FormPhoneField";
 
-import { buttonPrimaryStyles } from "@/myComponents/common/ButtonPrimary";
+import ButtonPrimary from "@/myComponents/common/buttons/ButtonPrimary";
 import { contactFormSchema } from "@/lib/schemas/contactSchema";
 import type { ContactFormInput } from "@/lib/schemas/contactSchema";
 import { submitContactForm } from "../actions";
@@ -142,13 +142,13 @@ export default function ContactForm() {
         }
       />
 
-      <button
+      <ButtonPrimary
         type="submit"
         disabled={isSubmitting}
-        className={`${buttonPrimaryStyles} transition-opacity hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-50`}
+        className="transition-opacity hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-50"
       >
         {isSubmitting ? "Wysyłanie..." : "Wyślij wiadomość"}
-      </button>
+      </ButtonPrimary>
     </form>
   );
 }

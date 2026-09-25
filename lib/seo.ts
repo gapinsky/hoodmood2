@@ -12,9 +12,9 @@ export function absoluteUrl(path: string = "/"): string {
 }
 
 export const defaultSocialImage = {
-  url: absoluteUrl("/assets/images/realLife/teamFreaky.jpg"),
-  width: 2048,
-  height: 1366,
+  url: absoluteUrl("/assets/images/team/teamNormal.jpg"),
+  width: 2816,
+  height: 1884,
   alt: "Ekipa Hoodmood — szkoła tańca i akrobatyki",
 };
 

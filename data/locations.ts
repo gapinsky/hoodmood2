@@ -49,7 +49,7 @@ export const locations = {
   koszalin: {
     id: "koszalin",
     name: "Koszalin",
-    logo: "/assets/optimized/home/hoodmood-logo-transparent.webp",
+    logo: "/assets/images/branding/hoodmood-logo-transparent.webp",
     logoAlt: "Logo Hoodmood",
     venues: [{
       id: "koszalin",
@@ -66,7 +66,7 @@ export const locations = {
   polanow: {
     id: "polanow",
     name: "Polanów",
-    logo: "/assets/optimized/home/hoodmood-logo-transparent.webp",
+    logo: "/assets/images/branding/hoodmood-logo-transparent.webp",
     logoAlt: "Logo Hoodmood",
     venues: [{
       id: "polanow",
@@ -83,7 +83,7 @@ export const locations = {
   bialyBor: {
     id: "bialy-bor",
     name: "Biały Bór",
-    logo: "/assets/optimized/home/hoodmood-logo-transparent.webp",
+    logo: "/assets/images/branding/hoodmood-logo-transparent.webp",
     logoAlt: "Logo Hoodmood",
     venues: [{
       id: "bialy-bor",
@@ -99,21 +99,21 @@ export const locations = {
   szczecinek: {
     id: "szczecinek",
     name: "Szczecinek",
-    logo: "/assets/optimized/branding/sapik-transparent.webp",
+    logo: "/assets/images/branding/sapik-transparent.webp",
     logoAlt: "Logo SAPIK Szczecinek",
     venues: [
       {
         id: "szczecinek-dworcowa",
         address: "ul. Dworcowa 1",
-        img: "/assets/optimized/localizations/szczecinek-dworcowa.webp",
-        hoverImg: "/assets/optimized/localizations/szczecinek-dworcowa.webp",
+        img: "/assets/images/localizations/dworcowaSzcecinek.jpeg",
+        hoverImg: "/assets/images/localizations/dworcowaSzcecinek.jpeg",
       },
       {
         id: "szczecinek-wazow",
         name: "SP 1",
         address: "Plac Wazów 1",
-        img: "/assets/optimized/localizations/szczecinek-wazow.webp",
-        hoverImg: "/assets/optimized/localizations/szczecinek-wazow.webp",
+        img: "/assets/images/localizations/wazowSzczecinek.jpeg",
+        hoverImg: "/assets/images/localizations/wazowSzczecinek.jpeg",
       },
     ],
     address: {

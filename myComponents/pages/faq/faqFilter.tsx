@@ -11,7 +11,7 @@ import {
 import type { FaqItem } from "@/app/faq/data";
 import { normalizeText as normalize } from "@/lib/normalizeText";
 import { inputStyles } from "@/myComponents/forms/filterStyles";
-import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
+import ButtonSecondary from "@/myComponents/common/buttons/ButtonSecondary";
 import NoQuestion from "./noQuestion";
 
 export default function FaqFilter({ faq }: { faq: FaqItem[] }) {

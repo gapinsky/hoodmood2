@@ -1,9 +1,9 @@
 import DownloadLink from "@/myComponents/common/DownloadLink";
 import { mainContact, locations, studioAddress } from "@/data/locations";
 import Image from "next/image";
-import logo from "../../public/assets/optimized/branding/logo.webp";
+import logo from "../../public/assets/images/branding/logo.png";
 import Link from "next/link";
-import { a11y } from "@/public/styles";
+import { a11y } from "@/myComponents/common/interactionStyles";
 import { cn } from "@/lib/utils";
 import SocialLinks from "@/myComponents/common/SocialLinks";
 

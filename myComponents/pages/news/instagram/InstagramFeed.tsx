@@ -23,7 +23,7 @@ import InstagramPostCard from "./InstagramPostCard";
 import InstagramMedia from "./InstagramMedia";
 import type { InstagramPost, InstagramPostsPage } from "./types";
 
-const studioAvatar = "/assets/optimized/branding/logo.webp";
+const studioAvatar = "/assets/images/branding/logo.png";
 
 function formatCount(count?: number) {
   if (typeof count !== "number") {

@@ -1,6 +1,6 @@
 "use client";
 
-import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
+import ButtonSecondary from "@/myComponents/common/buttons/ButtonSecondary";
 import Image from "next/image";
 import { ArrowUpRight, Play } from "lucide-react";
 import { useRef, useState } from "react";

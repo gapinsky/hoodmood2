@@ -1,7 +1,7 @@
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import SectionContent from "@/myComponents/common/headers/SectionContent";
 import { data } from "./data";
-import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
+import ButtonPrimary from "@/myComponents/common/buttons/ButtonPrimary";
 import Timeline from "./Timeline";
 
 export default function HowToJoin() {

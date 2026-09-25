@@ -9,7 +9,7 @@ export function useHeroVideoSource(videoSrc: string, mobileVideoSrc: string) {
 
   useEffect(() => {
     const motion = matchMedia("(prefers-reduced-motion: reduce)");
-    const mobile = matchMedia("(max-width: 768px)");
+    const mobile = matchMedia("(width < 768px)");
     const connection = (navigator as Navigator & { connection?: Connection }).connection;
     const update = () => {
       if (motion.matches || connection?.saveData) {

@@ -1,6 +1,6 @@
 import PricingFrequency from "./PricingFrequency";
 import type { PricingItem } from "./types";
-import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
+import ButtonSecondary from "@/myComponents/common/buttons/ButtonSecondary";
 
 export type PricingTableProps = {
   title?: string;

@@ -2,7 +2,7 @@ import { socialLinks } from "@/data/socials";
 import { connection } from "next/server";
 import { Instagram } from "lucide-react";
 
-import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
+import ButtonSecondary from "@/myComponents/common/buttons/ButtonSecondary";
 import InstagramFeed from "./instagram/InstagramFeed";
 import { getInstagramPostsPage } from "./instagram/instagramApi";
 

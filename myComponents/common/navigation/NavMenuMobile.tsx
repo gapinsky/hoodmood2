@@ -9,8 +9,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
-import ButtonPrimary from "@/myComponents/common/ButtonPrimary";
+import ButtonSecondary from "@/myComponents/common/buttons/ButtonSecondary";
+import ButtonPrimary from "@/myComponents/common/buttons/ButtonPrimary";
 import { NAV as navLinks } from "./navigationData";
 import Container from "@/myComponents/common/Container";
 

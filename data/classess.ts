@@ -60,7 +60,7 @@ export const classes = {
     "shortInfo": "Indywidualna praca nad tańcem. Termin do ustalenia.",
     "description": "Indywidualna praca nad tańcem. Wypełnij formularz zapisów, a ustalimy szczegóły i termin lekcji w Szczecinku.",
     "locationId": "szczecinek",
-    "minAge": 0,
+    "minAge": 5,
     "maxAge": null,
     "level": "all",
     "trainerIds": [],

@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import InstagramMedia from "./InstagramMedia";
 import type { InstagramPost } from "./types";
 
-const studioAvatar = "/assets/optimized/branding/logo.webp";
+const studioAvatar = "/assets/images/branding/logo.png";
 
 export const cardBaseStyles =
   "group flex h-fit w-full flex-col overflow-hidden bg-white/26 lg:grid lg:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.9fr)] dark:bg-white/5";

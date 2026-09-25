@@ -15,7 +15,7 @@ export type Step = {
 export const steps: Step[] = [
   {
     id: 1,
-    image: "/assets/images/realLife/studio.jpeg",
+    image: "/assets/images/timeline/studioWide.jpeg",
     imageAlt: "Sala taneczna Hoodmood",
     title: "Wybierz lokalizację",
     description:
@@ -23,7 +23,7 @@ export const steps: Step[] = [
   },
   {
     id: 2,
-    image: "/assets/images/landingOffer/teens1.jpg",
+    image: "/assets/images/timeline/teens1.jpg",
     imageAlt: "Tancerze Hoodmood podczas występu",
     title: "Wybierz zajęcia",
     description:
@@ -31,8 +31,8 @@ export const steps: Step[] = [
   },
   {
     id: 3,
-    image: "/assets/images/bento/niekorpo2.jpg",
-    imageAlt: "Uczestnicy wspólnego wydarzenia Hoodmood",
+    image: "/assets/images/timeline/cabins.jpeg",
+    imageAlt: "Kolorowe szafki w szatni studia Hoodmood",
     title: "Wypełnij formularz",
     description:
       "Podaj podstawowe dane i zaznacz wybrane zajęcia, a my sprawdzimy dostępność miejsc.",

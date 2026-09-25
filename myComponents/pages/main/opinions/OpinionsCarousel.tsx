@@ -17,7 +17,7 @@ import AutoScroll from "embla-carousel-auto-scroll";
 import { Star } from "lucide-react";
 import React from "react";
 import { testimonials} from "./data";
-import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
+import { cardLiftHoverStyles } from "@/myComponents/common/motion/cardMotion";
 
 
 

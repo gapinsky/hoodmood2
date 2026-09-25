@@ -1,7 +1,7 @@
 import { absoluteUrl } from "./seo";
 
 export const szczecinekSocialImage = {
-  url: absoluteUrl("/assets/optimized/localizations/szczecinek-dworcowa.webp"),
+  url: absoluteUrl("/assets/images/localizations/dworcowaSzcecinek.jpeg"),
   width: 1192,
   height: 751,
   alt: "Sala zajęć w Szczecinku przy ul. Dworcowej 1",

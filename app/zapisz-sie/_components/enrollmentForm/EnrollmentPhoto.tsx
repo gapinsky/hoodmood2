@@ -4,7 +4,7 @@ export default function EnrollmentPhoto() {
   return (
     <div className="relative hidden min-h-0 overflow-hidden rounded-md lg:block">
       <Image
-        src="/assets/images/realLife/teamNormal.jpg"
+        src="/assets/images/team/teamNormal.jpg"
         alt="Ekipa Hoodmood na wspólnym zdjęciu"
         fill
         sizes="(min-width: 1280px) 550px, 45vw"

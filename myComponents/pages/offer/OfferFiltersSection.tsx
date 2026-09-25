@@ -49,8 +49,8 @@ export default function OfferFiltersSection({ offerContent }: Props) {
 
         {filteredOffers.length > 0 ? (
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 xl:grid-cols-3 xl:gap-x-8">
-            {filteredOffers.map((item) => (
-              <OfferCard key={item.id} {...item} />
+            {filteredOffers.map((item, index) => (
+              <OfferCard key={item.id} {...item} eager={index === 0} />
             ))}
           </div>
         ) : (

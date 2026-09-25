@@ -27,7 +27,7 @@ export function getClassOffers(city: CitySlug): ClassOffer[] {
         name: item.name,
         image: item.image,
         logo: city === "szczecinek" ? {
-          src: "/assets/optimized/branding/sapik-transparent.webp",
+          src: "/assets/images/branding/sapik-transparent.webp",
           alt: "Logo SAPIK Szczecinek",
         } : undefined,
         description: item.description || item.shortInfo,
@@ -41,7 +41,6 @@ export function getClassOffers(city: CitySlug): ClassOffer[] {
         scheduleSrc: `/grafik/${city}`,
         ...(item.id === "szczecinek-lekcje-indywidualne" ? {
           scheduleSrc: undefined,
-          ageLabel: "Wiek do ustalenia",
           priceLabel: price
             ? `${price.price.toLocaleString("pl-PL")} zł ${price.priceUnit}`
             : undefined,

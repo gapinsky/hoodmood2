@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, type CSSProperties } from "react";
 
 import { cn } from "@/lib/utils";
-import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
+import { cardLiftHoverStyles } from "@/myComponents/common/motion/cardMotion";
 import { useRevealInView } from "@/lib/hooks/useRevealInView";
 
 type Props = {

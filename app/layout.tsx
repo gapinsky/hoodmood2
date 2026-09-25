@@ -68,7 +68,7 @@ export default function RootLayout({
         <AwayTabTitle />
         <SeasonLaunchDialog />
         <div className="fixed inset-0 -z-40 min-h-dvh overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/assets/optimized/home/static-bg.webp')] dark:bg-[url('/assets/optimized/home/static-bg-dark.webp')] bg-cover bg-center bg-no-repeat " />
+          <div className="absolute inset-0 bg-[url('/assets/images/background/static-bg.webp')] dark:bg-[url('/assets/images/background/static-bg-dark.webp')] bg-cover bg-center bg-no-repeat " />
 
           <div className="absolute inset-0 bg-white/50 dark:bg-black/80" />
         </div>

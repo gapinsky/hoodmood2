@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
+import { cardLiftHoverStyles } from "@/myComponents/common/motion/cardMotion";
 export default function ProofBento() {
   return (
     <SectionContainer>

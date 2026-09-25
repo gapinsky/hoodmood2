@@ -33,7 +33,7 @@ export default function NavbarLogo() {
       aria-label="Przejdź do strony głównej"
     >
       <Image
-        src="/assets/optimized/home/logo.png"
+        src="/assets/images/branding/logo.png"
         alt="Hoodmood"
         width={320}
         height={259}

@@ -85,7 +85,7 @@ for (const url of urls) {
     assert.equal(page?.url, url, `${path} structured page URL`);
     const breadcrumbs = nodes.find((node) => node['@type'] === 'BreadcrumbList');
     assert.equal(breadcrumbs?.itemListElement.at(-1).item, url, `${path} breadcrumb destination`);
-    assert.equal(metas(html, 'og:image')[0], `${expectedOrigin}/assets/optimized/localizations/szczecinek-dworcowa.webp`);
+    assert.equal(metas(html, 'og:image')[0], `${expectedOrigin}/assets/images/localizations/dworcowaSzcecinek.jpeg`);
     if (path === '/kadra/julia-kaczmarzyk') {
       assert.equal(page['@type'], 'ProfilePage');
       assert.equal(page.mainEntity['@type'], 'Person');

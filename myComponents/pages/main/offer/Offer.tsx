@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import SectionContent from "@/myComponents/common/headers/SectionContent";
 import { data, offer } from "./data";
 import SectionContainer from "@/myComponents/common/SectionContainer";
-import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
+import { cardLiftHoverStyles } from "@/myComponents/common/motion/cardMotion";
 
 const desktopSpans = [
   "lg:col-span-5",
@@ -51,7 +51,7 @@ export default function Offer() {
 
               <div className="absolute left-0 top-0 inline-flex h-14 w-28 -rotate-8 items-center justify-center rounded-lg opacity-35 transition-[transform,opacity] duration-700 group-hover:rotate-0 group-hover:opacity-100 sm:h-16 sm:w-32">
                 <Image
-                  src={"/assets/optimized/home/hoodmood-logo-transparent.webp"}
+                  src={"/assets/images/branding/hoodmood-logo-transparent.webp"}
                   alt="logo hoodmood"
                   fill
                   sizes="(max-width: 639px) 112px, 128px"

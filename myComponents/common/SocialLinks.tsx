@@ -2,7 +2,7 @@ import { socialLinks } from "@/data/socials";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import { a11y } from "@/public/styles";
+import { a11y } from "@/myComponents/common/interactionStyles";
 
 
 export default function SocialLinks({ className }: { className?: string }) {
@@ -22,7 +22,7 @@ export default function SocialLinks({ className }: { className?: string }) {
             height={24}
             alt=""
             aria-hidden="true"
-            src={`/icons/${social.name}.svg`}
+            src={`/assets/images/svg/${social.name}.svg`}
             className={cn(
               "transition-transform duration-300 ease-out group-hover:scale-105 dark:invert",
               a11y,

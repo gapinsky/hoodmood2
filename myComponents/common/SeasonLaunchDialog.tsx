@@ -29,7 +29,6 @@ export default function SeasonLaunchDialog() {
 
       window.sessionStorage.setItem(SEEN_STORAGE_KEY, "true");
     } catch {
-      // Keep navigation working when browser storage is unavailable.
     }
 
     seenInMemory = true;

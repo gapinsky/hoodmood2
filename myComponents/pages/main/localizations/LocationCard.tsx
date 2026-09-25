@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { mapsUrl, type Location, type LocationVenue } from "@/data/locations";
-import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
+import { cardLiftHoverStyles } from "@/myComponents/common/motion/cardMotion";
 
 type Props = {
   location: Location;

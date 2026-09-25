@@ -2,7 +2,7 @@ import { socialLinks } from "@/data/socials";
 import Image from "next/image";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import SectionContent from "@/myComponents/common/headers/SectionContent";
-import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
+import ButtonSecondary from "@/myComponents/common/buttons/ButtonSecondary";
 import { Youtube } from "lucide-react";
 import PlayerEmbed from "./PlayerEmbed";
 
@@ -27,7 +27,7 @@ export default function Player() {
           <div className="flex gap-8">
             <ButtonSecondary href={socialLinks.spotify.href} blank={true}>
               <Image
-                src="/icons/spotify.svg"
+                src="/assets/images/svg/spotify.svg"
                 alt=""
                 aria-hidden="true"
                 width={16}

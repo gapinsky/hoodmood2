@@ -5,7 +5,7 @@ import type { ContactFormData } from "@/lib/schemas/contactSchema";
 import type { EnrollmentFormData } from "@/lib/schemas/enrollmentSchema";
 
 import { SITE_URL } from "@/lib/seo";
-const LOGO_URL = `${SITE_URL}/assets/optimized/home/logo.png`;
+const LOGO_URL = `${SITE_URL}/assets/images/branding/logo.png`;
 const PRIVACY_URL = `${SITE_URL}/polityka-prywatnosci`;
 const TERMS_URL = `${SITE_URL}/regulamin`;
 const DATA_CONTROLLER = legalEntity.name;

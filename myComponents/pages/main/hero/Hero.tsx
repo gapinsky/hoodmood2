@@ -1,5 +1,5 @@
 import { ChevronsDown } from "lucide-react";
-import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
+import ButtonSecondary from "@/myComponents/common/buttons/ButtonSecondary";
 import LocationBadge from "./LocationBadge";
 import HeroVideo from "./HeroVideo";
 import SmoothScrollLink from "./SmoothScrollLink";
@@ -11,9 +11,10 @@ export default function Hero() {
     <div className="relative h-svh isolate overflow-hidden text-white">
       <div className="absolute inset-0 -z-10 bg-black/10" />
       <HeroVideo
-        videoSrc={'/assets/optimized/hero/hero-desktop-wide.mp4'}
-        mobileVideoSrc={'/assets/optimized/hero/hero-mobile.mp4'}
-        posterSrc={'/assets/videos/chairRotate-poster.jpg'}
+        videoSrc={'/assets/videos/hero-desktop-wide.mp4'}
+        mobileVideoSrc={'/assets/videos/hero-mobile-narrow.mp4'}
+        posterSrc={'/assets/videos/hero-desktop-wide-poster.jpg'}
+        mobilePosterSrc={'/assets/videos/hero-mobile-narrow-poster.jpg'}
       />
 
       <div className="mx-auto flex h-full max-w-380 items-center">

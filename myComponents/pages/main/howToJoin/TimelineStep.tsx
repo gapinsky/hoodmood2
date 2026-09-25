@@ -21,7 +21,7 @@ export default function TimelineStep({ step, textOnLeft, reached, markerRef }: {
       data-reveal={mounted ? (revealed ? "visible" : "hidden") : undefined}
       className={cn(
         motion.root,
-        "relative grid items-center gap-6 pl-16 md:grid-cols-[1fr_5rem_1fr] md:gap-0 md:pl-0 lg:grid-cols-[1fr_8rem_1fr]",
+        "relative grid items-center gap-6 pl-16 md:grid-cols-[minmax(0,1fr)_5rem_minmax(0,1fr)] md:gap-0 md:pl-0 lg:grid-cols-[minmax(0,1fr)_8rem_minmax(0,1fr)]",
       )}
     >
       <span
@@ -40,13 +40,13 @@ export default function TimelineStep({ step, textOnLeft, reached, markerRef }: {
         <h3 className="font-anton text-3xl uppercase leading-tight lg:text-4xl">{step.title}</h3>
         <p className={cn("mt-4 max-w-md text-base leading-7 text-muted-foreground", textOnLeft && "md:ml-auto")}>{step.description}</p>
       </div>
-      <div className={cn(motion.description, "relative aspect-3/2 overflow-hidden rounded-md bg-muted md:row-start-1", textOnLeft ? "md:col-start-3" : "md:col-start-1")}>
+      <div className={cn(motion.description, "relative aspect-3/2 w-full min-w-0 overflow-hidden rounded-md bg-muted md:row-start-1", textOnLeft ? "md:col-start-3" : "md:col-start-1")}>
         <Image
           src={step.image}
           alt={step.imageAlt}
           fill
           sizes="(max-width: 767px) calc(100vw - 6rem), (max-width: 1519px) 42vw, 632px"
-          className="object-cover"
+          className={cn("object-cover", step.id === 3 && "object-top")}
         />
       </div>
     </li>

@@ -19,7 +19,7 @@ Serwer deweloperski: `http://localhost:3000`. Konfigurację lokalną trzymaj w `
 - `myComponents/common/motion/` — współdzielone style animacji tekstu.
 - `myComponents/common/` — pozostałe współdzielone elementy układu i przyciski.
 - `myComponents/pages/` — komponenty konkretnych podstron, pogrupowane według funkcji: oferta, cennik, grafik, kadra, aktualności, kolonie.
-- `myComponents/sections/` — sekcje strony głównej i ich lokalne dane.
+- `myComponents/pages/main/` — sekcje strony głównej i ich lokalne dane.
 - `myComponents/forms/` — wspólne pola formularzy i style filtrów.
 - `components/ui/` — bazowe elementy interfejsu. Bez logiki konkretnej podstrony.
 - `lib/hooks/` — współdzielone hooki, w tym `useRevealInView`.
@@ -31,7 +31,7 @@ Serwer deweloperski: `http://localhost:3000`. Konfigurację lokalną trzymaj w `
 
 Komponent zostaje przy swojej funkcji, dopóki nie jest potrzebny w kilku miejscach. Wtedy przenosimy go do `common`, a czystą funkcję do `lib`. Nie importujemy stylów ani helperów z komponentów obcej podstrony. Nie tworzymy osobnego komponentu dla każdej pojedynczej etykiety.
 
-Nagłówki lokalizacji korzystają z `LocationPageHeader` i tablic z `data/tabs.ts`. Style filtrów są w `myComponents/forms/filterStyles.ts`. Kwoty i stawki członkowskie są w `data/pricingData.ts`; ich wybór następuje przed sortowaniem cennika.
+Nagłówki lokalizacji korzystają z `LocationPageHeader` i linków z `lib/navigation/locationLinks.ts`. Style filtrów są w `myComponents/forms/filterStyles.ts`. Zajęcia, ceny i terminy są w `data/classess.ts`; adaptery w `lib/data-adapters/` przygotowują je dla oferty, cennika, grafiku i zapisów. Wybór stawek członkowskich następuje przed sortowaniem cennika.
 
 ## Sprawdzenie zmian
 
@@ -90,8 +90,7 @@ Oferty i grafiki korzystają ze statycznej listy lokalizacji; nowa lokalizacja l
 trener wymaga ponownego buildu (`dynamicParams = false`).
 
 Desktopowe hero to panoramiczny `hero-desktop-wide.mp4` (1600×900, H.264, CRF 25,
-bez audio, faststart). Oryginały zachowano lokalnie w ignorowanym `source-assets/`,
-poza `public/`; do dalszej obróbki trzeba zachować ich kopię poza deploymentem.
+bez audio, faststart), dostępne w `public/assets/optimized/hero/`.
 Reduced motion oraz Save Data pozostawiają poster bez pobierania filmu.
 
 Feed Instagram korzysta z Next Data Cache (`unstable_cache`, 600 s) przy wyłączonym

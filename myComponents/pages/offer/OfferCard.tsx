@@ -5,7 +5,7 @@ import Link from "next/link";
 import { CalendarDays, User, Wallet } from "lucide-react";
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
-import ButtonSecondary from "@/myComponents/common/ButtonSecondary";
+import ButtonSecondary from "@/myComponents/common/buttons/ButtonSecondary";
 import { classLevelLabels, type ClassOffer, type OfferInstructor } from "./types";
 
 function InstructorList({ instructors }: { instructors: OfferInstructor[] }) {
@@ -21,8 +21,8 @@ function InstructorList({ instructors }: { instructors: OfferInstructor[] }) {
 
 export default function OfferCard({
   name, image, logo, description, instructors, specialInstructors, level, minAge, maxAge,
-  scheduleSrc, pricingSrc, enrollmentEnabled, ageLabel, priceLabel, enrollmentLabel,
-}: ClassOffer) {
+  scheduleSrc, pricingSrc, enrollmentEnabled, ageLabel, priceLabel, enrollmentLabel, eager = false,
+}: ClassOffer & { eager?: boolean }) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const age = ageLabel ?? (maxAge === null ? `${minAge}+ lat` : `${minAge}-${maxAge} lat`);
 
@@ -34,6 +34,7 @@ export default function OfferCard({
           src={image}
           fill
           alt={name}
+          loading={eager ? "eager" : "lazy"}
           className={`object-cover transition-[transform,opacity] duration-700 ease-out motion-reduce:transition-none motion-safe:group-hover/card:scale-[1.035] ${imageLoaded ? "opacity-100" : "opacity-0"}`}
           onLoad={() => setImageLoaded(true)}
           sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1279px) 46vw, 440px"

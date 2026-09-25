@@ -4,7 +4,7 @@ import TrainerPhotoPlaceholder from "./TrainerPhotoPlaceholder";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { cardLiftHoverStyles } from "@/myComponents/common/cardMotion";
+import { cardLiftHoverStyles } from "@/myComponents/common/motion/cardMotion";
 import { useState } from "react";
 import type { Trainer } from "@/data/trainers";
 
@@ -92,7 +92,7 @@ export default function TeamCard({
 
         <div className="absolute left-0 top-0 z-10 inline-flex h-14 w-28 -rotate-8 items-center justify-center opacity-35 transition-[transform,opacity] duration-700 group-hover:rotate-0 group-hover:opacity-100 group-focus-visible:rotate-0 group-focus-visible:opacity-100 sm:h-16 sm:w-32">
           <Image
-            src="/assets/optimized/home/hoodmood-logo-transparent.webp"
+            src="/assets/images/branding/hoodmood-logo-transparent.webp"
             alt="Logo Hoodmood"
             fill
             sizes="(max-width: 639px) 112px, 128px"
