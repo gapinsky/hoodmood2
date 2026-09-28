@@ -1,222 +1,71 @@
 "use client";
 
-import { CircleX, RotateCcw, SearchIcon, User } from "lucide-react";
-import type { ExperienceFilterValue, OfferSortingValue } from "./types";
-import { Field, FieldLabel } from "@/components/ui/field";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/components/ui/input-group";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
-  clearButtonStyles,
-  inputStyles,
-  selectContentStyles,
-  selectItemStyles,
-  selectTriggerStyles,
-} from "@/myComponents/forms/filterStyles";
+import { RotateCcw, SearchIcon, User } from "lucide-react";
+import type { ExperienceFilterValue, OfferFilters, OfferSortingValue } from "./types";
+import { clearButtonStyles } from "@/myComponents/forms/filterStyles";
+import OfferTextFilter from "./filters/OfferTextFilter";
+import OfferSelectFilter from "./filters/OfferSelectFilter";
 
 type Props = {
-  searchName: string;
-  setSearchName: (value: string) => void;
-  searchAge: string;
-  setSearchAge: (value: string) => void;
-  sorting: OfferSortingValue;
-  setSorting: (value: OfferSortingValue) => void;
-  experience: ExperienceFilterValue;
-  setExperience: (value: ExperienceFilterValue) => void;
+  filters: OfferFilters;
+  onChange: (changes: Partial<OfferFilters>) => void;
   onClearFilters: () => void;
 };
 
-const fieldLabelStyles =
-  "pl-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55";
-
-const inputAddonStyles = "text-black/35 dark:text-white/35";
-
-const toolbarWrapperStyles =
-  "grid grid-cols-1 gap-5 rounded-md border border-foreground/10 bg-foreground/2.5 p-5 sm:p-6 md:grid-cols-2 xl:grid-cols-[2fr_1fr_1.4fr_1.4fr_auto]";
-
-export default function OfferFilterBar({
-  searchName,
-  setSearchName,
-  searchAge,
-  setSearchAge,
-  sorting,
-  setSorting,
-  experience,
-  setExperience,
-  onClearFilters,
-}: Props) {
-  const hasActiveFilters =
-    searchName !== "" ||
-    searchAge !== "" ||
-    sorting !== "default" ||
-    experience !== "all";
+export default function OfferFilterBar({ filters, onChange, onClearFilters }: Props) {
+  const { searchName, searchAge, sorting, experience } = filters;
+  const hasActiveFilters = searchName !== "" || searchAge !== "" || sorting !== "default" || experience !== "all";
 
   return (
-    <div className={toolbarWrapperStyles}>
-      <Field className="flex flex-col gap-2.5">
-        <FieldLabel htmlFor="searchName" className={fieldLabelStyles}>
-          Wyszukaj zajęcia
-        </FieldLabel>
-
-        <InputGroup className={inputStyles}>
-          <InputGroupInput
-            id="searchName"
-            placeholder="Wpisz nazwę zajęć"
-            value={searchName}
-            onChange={(e) => setSearchName(e.currentTarget.value)}
-          />
-
-          <InputGroupAddon className={inputAddonStyles}>
-            <SearchIcon className="size-4" />
-          </InputGroupAddon>
-
-          {searchName !== "" && (
-            <InputGroupAddon align="inline-end">
-              <button
-                type="button"
-                onClick={() => setSearchName("")}
-                className="ui-focus-ring ui-interactive inline-flex items-center gap-1 rounded-full px-2 text-xs text-black/45 hover:cursor-pointer motion-safe:hover:text-black/75 focus-visible:ring-2 focus-visible:ring-ring/35 dark:text-white/45 dark:motion-safe:hover:text-white/70"
-                aria-label="Wyczyść wyszukiwanie zajęć"
-              >
-                <CircleX className="size-4" />
-              </button>
-            </InputGroupAddon>
-          )}
-        </InputGroup>
-      </Field>
-
-      <Field className="flex flex-col gap-2.5">
-        <FieldLabel htmlFor="searchAge" className={fieldLabelStyles}>
-          Wiek uczestnika
-        </FieldLabel>
-
-        <InputGroup className={inputStyles}>
-          <InputGroupInput
-            id="searchAge"
-            placeholder="Np. 7"
-            type="text"
-            inputMode="numeric"
-            value={searchAge}
-            onChange={(e) => {
-              const value = e.target.value.replace(/\D/g, "").slice(0, 2);
-              setSearchAge(value);
-            }}
-          />
-
-          <InputGroupAddon className={inputAddonStyles}>
-            <User className="size-4" />
-          </InputGroupAddon>
-
-          {searchAge !== "" && (
-            <InputGroupAddon align="inline-end">
-              <button
-                type="button"
-                onClick={() => setSearchAge("")}
-                className="ui-focus-ring ui-interactive inline-flex items-center gap-1 rounded-full px-2 text-xs text-black/45 hover:cursor-pointer motion-safe:hover:text-black/75 focus-visible:ring-2 focus-visible:ring-ring/35 dark:text-white/45 dark:motion-safe:hover:text-white/70"
-                aria-label="Wyczyść wiek uczestnika"
-              >
-                <CircleX className="size-4" />
-              </button>
-            </InputGroupAddon>
-          )}
-        </InputGroup>
-      </Field>
-
-      <Field className="flex flex-col gap-2.5">
-        <FieldLabel className={fieldLabelStyles}>
-          Poziom zaawansowania
-        </FieldLabel>
-
-        <Select
-          value={experience}
-          onValueChange={(value) =>
-            setExperience(value as ExperienceFilterValue)
-          }
-        >
-          <SelectTrigger className={selectTriggerStyles}>
-            <SelectValue />
-          </SelectTrigger>
-
-          <SelectContent className={selectContentStyles}>
-            <SelectGroup>
-              <SelectItem className={selectItemStyles} value="all">
-                Wszystkie poziomy
-              </SelectItem>
-              <SelectItem className={selectItemStyles} value="beginner">
-                Początkujący
-              </SelectItem>
-              <SelectItem
-                className={selectItemStyles}
-                value="intermediate"
-              >
-                Średniozaawansowani
-              </SelectItem>
-              <SelectItem className={selectItemStyles} value="advanced">
-                Zaawansowani
-              </SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
-      </Field>
-
-      <Field className="flex flex-col gap-2.5">
-        <FieldLabel className={fieldLabelStyles}>Sortowanie</FieldLabel>
-
-        <Select
-          value={sorting}
-          onValueChange={(value) => setSorting(value as OfferSortingValue)}
-        >
-          <SelectTrigger className={selectTriggerStyles}>
-            <SelectValue />
-          </SelectTrigger>
-
-          <SelectContent className={selectContentStyles}>
-            <SelectGroup>
-              <SelectItem className={selectItemStyles} value="default">
-                Domyślne
-              </SelectItem>
-              <SelectItem className={selectItemStyles} value="alphabetical-asc">
-                Nazwa: A–Z
-              </SelectItem>
-              <SelectItem
-                className={selectItemStyles}
-                value="alphabetical-desc"
-              >
-                Nazwa: Z–A
-              </SelectItem>
-              <SelectItem className={selectItemStyles} value="age-asc">
-                Wiek: rosnąco
-              </SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
-      </Field>
-
-      <Field className="flex flex-col gap-2.5">
-        <FieldLabel className={`opacity-0  ${fieldLabelStyles}`}>
+    <div className="grid grid-cols-1 gap-5 rounded-md border border-foreground/10 bg-foreground/2.5 p-5 sm:p-6 md:grid-cols-2 xl:grid-cols-[2fr_1fr_1.4fr_1.4fr_auto]">
+      <OfferTextFilter
+        label="Wyszukaj zajęcia"
+        placeholder="Wpisz nazwę zajęć"
+        clearLabel="Wyczyść wyszukiwanie zajęć"
+        value={searchName}
+        onChange={(value) => onChange({ searchName: value })}
+        icon={SearchIcon}
+      />
+      <OfferTextFilter
+        label="Wiek uczestnika"
+        placeholder="Np. 7"
+        clearLabel="Wyczyść wiek uczestnika"
+        value={searchAge}
+        onChange={(value) => onChange({ searchAge: value })}
+        icon={User}
+        numeric
+      />
+      <OfferSelectFilter<ExperienceFilterValue>
+        label="Poziom zaawansowania"
+        value={experience}
+        onChange={(value) => onChange({ experience: value })}
+        options={[
+          { value: "all", label: "Wszystkie poziomy" },
+          { value: "beginner", label: "Początkujący" },
+          { value: "intermediate", label: "Średniozaawansowani" },
+          { value: "advanced", label: "Zaawansowani" },
+        ]}
+      />
+      <OfferSelectFilter<OfferSortingValue>
+        label="Sortowanie"
+        value={sorting}
+        onChange={(value) => onChange({ sorting: value })}
+        options={[
+          { value: "default", label: "Domyślne" },
+          { value: "alphabetical-asc", label: "Nazwa: A–Z" },
+          { value: "alphabetical-desc", label: "Nazwa: Z–A" },
+          { value: "age-asc", label: "Wiek: rosnąco" },
+        ]}
+      />
+      <div className="flex flex-col gap-2.5">
+        <span aria-hidden="true" className="opacity-0 pl-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-black/55 dark:text-white/55">
           Wyczyść
-        </FieldLabel>
-
-        <button
-          type="button"
-          onClick={onClearFilters}
-          disabled={!hasActiveFilters}
-          className={clearButtonStyles}
-        >
-          <RotateCcw className="size-4" />
+        </span>
+        <button type="button" onClick={onClearFilters} disabled={!hasActiveFilters} className={clearButtonStyles}>
+          <RotateCcw className="size-4" aria-hidden="true" />
           Wyczyść
         </button>
-      </Field>
+      </div>
     </div>
   );
 }

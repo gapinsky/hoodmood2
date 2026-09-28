@@ -34,7 +34,7 @@ const enrollmentBaseSchema = z
         namePattern,
         "Imię i nazwisko uczestnika może zawierać tylko litery.",
       )
-      .min(2, "Imię i nazwisko uczestnika musi mieć co najmniej 2 znaki."),
+      .min(5, "Imię i nazwisko uczestnika musi mieć co najmniej 5 znaków."),
     participantType: z.enum(["youth", "adult"], {
       message: "Wybierz grupę wiekową uczestnika.",
     }),
@@ -47,7 +47,7 @@ const enrollmentBaseSchema = z
         namePattern,
         "Imię i nazwisko opiekuna może zawierać tylko litery.",
       )
-      .min(2, "Imię i nazwisko opiekuna musi mieć co najmniej 2 znaki."),
+      .min(5, "Imię i nazwisko opiekuna musi mieć co najmniej 5 znaków."),
     email: z.string().email("Podaj poprawny adres e-mail."),
     ...phoneFields,
     notes: z.string().optional(),
@@ -75,7 +75,6 @@ export const enrollmentSchema = enrollmentBaseSchema.safeExtend({
   selectedClasses: z.array(selectedClassSchema).min(1, "Wybierz co najmniej jedne zajęcia."),
 });
 
-// ID wiersza katalogu uwzględnia wariant cenowy; szczegóły odtwarza serwer.
 export const enrollmentRequestSchema = enrollmentBaseSchema.safeExtend({
   selectedClasses: z.array(z.object({ classId: z.string().min(1) })).min(1),
 });

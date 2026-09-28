@@ -17,7 +17,7 @@ export default function TermsAndConditions() {
         <PageContent
           title={data.title}
           description={data.description}
-        ></PageContent>
+        />
 
         <Regulations />
         <AnyQuestionsContact />

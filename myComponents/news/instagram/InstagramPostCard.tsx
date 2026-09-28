@@ -74,7 +74,6 @@ export default function InstagramPostCard({ post }: { post: InstagramPost }) {
             </p>
           </div>
 
-          {/* <Instagram className="ml-auto size-4 text-[var(--brand-700)] dark:text-[var(--brand-300)]" /> */}
         </div>
 
         <p className="order-3 min-h-18 overflow-hidden px-5 pb-5 pt-3 text-sm leading-6 text-foreground/88 lg:order-2 lg:min-h-0 lg:max-h-72 lg:p-0 dark:text-white/86">

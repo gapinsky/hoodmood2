@@ -1,18 +1,12 @@
 import { absoluteUrl } from "./seo";
+import { locations } from "@/data/locations";
 
 export const szczecinekSocialImage = {
-  url: absoluteUrl("/assets/images/localizations/dworcowaSzcecinek.jpeg"),
-  width: 1192,
-  height: 751,
-  alt: "Sala zajęć w Szczecinku przy ul. Dworcowej 1",
+  ...locations.szczecinek.offer.socialImage,
+  url: absoluteUrl(locations.szczecinek.offer.socialImage.url),
 };
 
 export const szczecinekSeo = {
-  offer: {
-    path: "/oferta/szczecinek",
-    title: "Oferta zajęć tanecznych — Szczecinek",
-    description: "Poznaj grupy REBELIA w SAPIK Szczecinek: Mikrusy, Minimki, Rebelia 3, Rebelia Junior i Rebelia 15+. Sprawdź ofertę i zapisz się na taniec.",
-  },
   schedule: {
     path: "/grafik/szczecinek",
     title: "Grafik zajęć tanecznych — Szczecinek",

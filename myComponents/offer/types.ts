@@ -30,3 +30,10 @@ export const classLevelLabels: Record<ClassLevel, string> = {
 
 export type ExperienceFilterValue = ClassLevel;
 export type OfferSortingValue = "default" | "alphabetical-asc" | "alphabetical-desc" | "age-asc";
+
+export type OfferFilters = {
+  searchName: string;
+  searchAge: string;
+  sorting: OfferSortingValue;
+  experience: ExperienceFilterValue;
+};

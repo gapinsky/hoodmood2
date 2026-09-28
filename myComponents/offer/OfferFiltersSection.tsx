@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { ClassOffer, ExperienceFilterValue, OfferSortingValue } from "./types";
+import type { ClassOffer, OfferFilters } from "./types";
 import OfferCard from "@/myComponents/offer/OfferCard";
 import OfferFilterBar from "./OfferFilterBar";
 import { filterAndSortOffers } from "./filterHelper";
@@ -10,17 +10,19 @@ type Props = {
   offerContent: ClassOffer[];
 };
 
+const initialFilters: OfferFilters = {
+  searchName: "",
+  searchAge: "",
+  sorting: "default",
+  experience: "all",
+};
+
 export default function OfferFiltersSection({ offerContent }: Props) {
-  const [searchName, setSearchName] = useState("");
-  const [searchAge, setSearchAge] = useState("");
-  const [sorting, setSorting] = useState<OfferSortingValue>("default");
-  const [experience, setExperience] = useState<ExperienceFilterValue>("all");
+  const [filters, setFilters] = useState(initialFilters);
+  const { searchName, searchAge, sorting, experience } = filters;
 
   const handleClearFilters = () => {
-    setSearchName("");
-    setSearchAge("");
-    setSorting("default");
-    setExperience("all");
+    setFilters(initialFilters);
   };
 
   const filteredOffers = useMemo(
@@ -35,14 +37,8 @@ export default function OfferFiltersSection({ offerContent }: Props) {
         <h2 id="offer-title" className="font-anton text-3xl uppercase sm:text-4xl">Wybierz swój kierunek</h2>
       </div>
       <OfferFilterBar
-        searchName={searchName}
-        setSearchName={setSearchName}
-        searchAge={searchAge}
-        setSearchAge={setSearchAge}
-        sorting={sorting}
-        setSorting={setSorting}
-        experience={experience}
-        setExperience={setExperience}
+        filters={filters}
+        onChange={(changes) => setFilters((current) => ({ ...current, ...changes }))}
         onClearFilters={handleClearFilters}
       />
       <div className="space-y-4">

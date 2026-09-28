@@ -26,7 +26,6 @@ const billingLabels: Record<BillingUnit, string> = {
 };
 
 export function getPricingCategory(item: DanceClass): PricingCategory {
-  // Katalog rozpoznaje pakiety po prefiksie ID, lekcje indywidualne po rozliczeniu godzinowym.
   if (item.id.startsWith(`${item.locationId}-pakiet-`)) return "pakiety-zajec";
   if (item.pricing.billingUnit === "hour") return "zajecia-indywidualne";
   return "zajecia";
@@ -52,7 +51,6 @@ function toPricingItem(item: DanceClass, variant: PriceVariant): PricingItem {
     classId: item.id,
     name,
     price: variant.amount,
-    // W obecnym schemacie informacja „od osoby” znajduje się w etykiecie wariantu.
     priceUnit: `${billingLabels[item.pricing.billingUnit]}${variant.label?.includes("od osoby") && item.pricing.billingUnit !== "person" ? " od osoby" : ""}`,
     frequency: getFrequency(item),
     frequencyDescription: item.frequency.description,

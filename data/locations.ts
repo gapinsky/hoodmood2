@@ -13,6 +13,11 @@ export interface Location {
   name: string;
   logo: string;
   logoAlt: string;
+  offer?: {
+    description: string;
+    seoDescription: string;
+    socialImage: { url: string; width: number; height: number; alt: string };
+  };
   venues: readonly LocationVenue[];
   address: {
     street: string;
@@ -101,6 +106,16 @@ export const locations = {
     name: "Szczecinek",
     logo: "/assets/images/branding/sapik-transparent.webp",
     logoAlt: "Logo SAPIK Szczecinek",
+    offer: {
+      description: "Zespół Tańca Współczesnego REBELIA od blisko 40 lat rozwija talenty dzieci i młodzieży. Założony przez Yarmilę Górę, dziś działa pod opieką Julii Kaczmarzyk. Wybierz grupę dopasowaną do wieku.",
+      seoDescription: "Poznaj grupy REBELIA w SAPIK Szczecinek: Mikrusy, Minimki, Rebelia 3, Rebelia Junior i Rebelia 15+. Sprawdź ofertę i zapisz się na taniec.",
+      socialImage: {
+        url: "/assets/images/localizations/dworcowaSzcecinek.jpeg",
+        width: 1192,
+        height: 751,
+        alt: "Sala zajęć w Szczecinku przy ul. Dworcowej 1",
+      },
+    },
     venues: [
       {
         id: "szczecinek-dworcowa",
@@ -124,7 +139,7 @@ export const locations = {
   },
 } as const satisfies Record<string, Location>;
 
-export const locationList = Object.values(locations);
+export const locationList: Location[] = Object.values(locations);
 
 export function isCitySlug(value: string): value is CitySlug {
   return locationList.some((location) => location.id === value);

@@ -17,11 +17,9 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function submitContactForm(data: ContactFormData) {
   try {
-    // Validate on server
     const parsed = contactFormSchema.parse(data);
     const validatedData = { ...parsed, phone: normalizePhoneNumber(parsed.phone, parsed.phoneCountry)! };
 
-    // Send email with Resend
     const result = await resend.emails.send({
       from: "formularz@kontakt.hoodmood.pl",
       to: mainContact.email,

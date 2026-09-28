@@ -4,7 +4,6 @@ import type {
   InstagramApiPost,
   InstagramApiResponse,
   InstagramMediaItem,
-  InstagramPost,
   InstagramPostsPage,
 } from "./types";
 
@@ -143,7 +142,6 @@ async function fetchPostsPage(
   }
 }
 
-// Cache only successful, validated public results; throwing on refresh preserves stale data.
 const cachedPostsPage = unstable_cache(fetchPostsPage, ["instagram-public-feed-v2"], { revalidate: 600 });
 
 export async function getInstagramPostsPage(after?: string): Promise<InstagramPostsPage> {
@@ -152,8 +150,4 @@ export async function getInstagramPostsPage(after?: string): Promise<InstagramPo
   } catch {
     return { status: "error", posts: [], nextCursor: null };
   }
-}
-
-export async function getLatestInstagramPosts(): Promise<InstagramPost[]> {
-  return (await getInstagramPostsPage()).posts;
 }
