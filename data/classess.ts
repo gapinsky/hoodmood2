@@ -247,10 +247,10 @@ export const classes = {
         "venue": "ul. Dworcowa 1"
       },
       {
-        "dayOfWeek": 5,
+        "dayOfWeek": 4,
         "startTime": "17:45",
         "endTime": "18:45",
-        "venue": "ul. Dworcowa 1"
+        "venue": "SP 1 — Plac Wazów 1"
       }
     ],
     "pricing": {
@@ -294,10 +294,10 @@ export const classes = {
         "venue": "ul. Dworcowa 1"
       },
       {
-        "dayOfWeek": 4,
+        "dayOfWeek": 5,
         "startTime": "17:45",
         "endTime": "19:15",
-        "venue": "SP 1 — Plac Wazów 1"
+        "venue": "ul. Dworcowa 1"
       }
     ],
     "pricing": {
