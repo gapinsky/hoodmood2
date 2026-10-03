@@ -1,3 +1,5 @@
+import wazowSzczecinek from "@/public/assets/images/localizations/wazowSzczecinek.jpeg";
+
 export type CitySlug = "bialy-bor" | "koszalin" | "polanow" | "szczecinek";
 
 export interface LocationVenue {
@@ -127,8 +129,8 @@ export const locations = {
         id: "szczecinek-wazow",
         name: "SP 1",
         address: "Plac Wazów 1",
-        img: "/assets/images/localizations/wazowSzczecinek.jpeg",
-        hoverImg: "/assets/images/localizations/wazowSzczecinek.jpeg",
+        img: wazowSzczecinek.src,
+        hoverImg: wazowSzczecinek.src,
       },
     ],
     address: {

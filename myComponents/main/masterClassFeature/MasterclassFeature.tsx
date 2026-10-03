@@ -20,9 +20,9 @@ export default function MasterclassFeature() {
 
   return (
     <section className="mx-auto max-w-380 px-4 sm:px-6 lg:px-12 xl:px-16">
-      <div className="grid items-center gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-20">
+      <div className="grid items-center gap-10 md:grid-cols-[0.82fr_1.18fr] lg:gap-20">
         <div className="max-w-md">
-          <h2 className="font-anton text-5xl uppercase leading-[0.9] tracking-[0.02em] sm:text-7xl">
+          <h2 className="font-anton text-5xl uppercase leading-[0.9] tracking-[0.02em] lg:text-7xl">
             Master Program
             <br />
             <span className="text-(--brand-700)">co to w ogóle jest?</span>
