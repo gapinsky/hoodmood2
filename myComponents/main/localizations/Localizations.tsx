@@ -3,7 +3,6 @@ import SectionContent from "@/myComponents/headers/SectionContent";
 import SectionContainer from "@/myComponents/common/SectionContainer";
 import LocationCard from "./LocationCard";
 
-// Kolejność miast w sekcji na stronie głównej.
 const displayedLocations = [
   locations.polanow,
   locations.koszalin,
