@@ -26,7 +26,7 @@ export const featureCards = [
       id: "instruktorzy",
       title: "Doświadczeni instruktorzy",
       description:
-        "U nas uczą ludzie, którzy naprawdę żyją tańcem – mają doświadczenie sceniczne, ale przede wszystkim ogarniają pracę z dzieciakami, młodzieżą i dorosłymi.",
+        "U nas uczą ludzie, którzy naprawdę żyją tańcem - mają doświadczenie sceniczne, ale przede wszystkim ogarniają pracę z dzieciakami, młodzieżą i dorosłymi.",
       img: null,
       imgClass: "",
     },
@@ -36,7 +36,7 @@ export const featureCards = [
       id: "wystepy",
       title: "Występy i eventy",
       description:
-        "Regularnie bierzemy udział w pokazach i zawodach tanecznych — od lokalnych eventów w Koszalinie po większe sceny w regionie. Wracamy z dobrymi miejscami, ale najważniejsze: nasi kursanci zbierają realne doświadczenie i pewność siebie na parkiecie.",
+        "Regularnie bierzemy udział w pokazach i zawodach tanecznych - od lokalnych eventów w Koszalinie po większe sceny w regionie. Wracamy z dobrymi miejscami, ale najważniejsze: nasi kursanci zbierają realne doświadczenie i pewność siebie na parkiecie.",
       img: null,
       imgClass: "",
     },
@@ -45,7 +45,7 @@ export const featureCards = [
       id: "postepy",
       title: "Postępy, które widać",
       description:
-        "Od pierwszych kroków po zaawansowane choreografie – uczymy tak, żebyś widział/widziała swój progres z tygodnia na tydzień. Pokazy, nagrywki, zawody – jest gdzie się sprawdzać.",
+        "Od pierwszych kroków po zaawansowane choreografie - uczymy tak, żebyś widział/widziała swój progres z tygodnia na tydzień. Pokazy, nagrywki, zawody - jest gdzie się sprawdzać.",
       img: "/assets/images/bento/progress.jpg",
       imgClass: "aspect-3/2",
     },
@@ -55,7 +55,7 @@ export const featureCards = [
       id: "obozy",
       title: "Obozy i wyjazdy z ekipą",
       description:
-        "Organizujemy półkolonie, kolonie i wyjazdy taneczne — zależnie od pory roku i kalendarza eventów. Treningi, integracja i masa dobrej zabawy: wracasz z progresem i wspomnieniami, nie tylko z fotkami.",
+        "Organizujemy półkolonie, kolonie i wyjazdy taneczne - zależnie od pory roku i kalendarza eventów. Treningi, integracja i masa dobrej zabawy: wracasz z progresem i wspomnieniami, nie tylko z fotkami.",
       img: "/assets/images/bento/obozy2.jpg",
       imgClass: "aspect-video",
     },

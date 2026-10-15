@@ -60,7 +60,7 @@ export const testimonials: Testimonial[] = [
     id: "hoodmood-007",
     author: "Filip",
     relativeDate: "10 miesięcy temu",
-    text: "Gorąco polecam tę szkołę tańca! Profesjonalna kadra na najwyższym poziomie – instruktorzy mają ogromną wiedzę, doświadczenie i świetne podejście do uczniów. Każdy znajdzie tutaj coś dla siebie, niezależnie od poziomu zaawansowania.",
+    text: "Gorąco polecam tę szkołę tańca! Profesjonalna kadra na najwyższym poziomie - instruktorzy mają ogromną wiedzę, doświadczenie i świetne podejście do uczniów. Każdy znajdzie tutaj coś dla siebie, niezależnie od poziomu zaawansowania.",
     avatarThumb: null,
   },
   {

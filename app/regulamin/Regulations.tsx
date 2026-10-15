@@ -15,7 +15,7 @@ export default function Regulations() {
             {section.points.map((point, index) => (
               <li
                 key={index}
-                id={point.startsWith("Aktywny kursant Hoodmood –") ? "aktywny-kursant" : undefined}
+                id={point.startsWith("Aktywny kursant Hoodmood -") ? "aktywny-kursant" : undefined}
                 className="scroll-mt-28 flex gap-3 text-sm leading-7 md:text-base"
               >
                 <span className="min-w-6 font-semibold text-neutral-500 dark:text-neutral-400">

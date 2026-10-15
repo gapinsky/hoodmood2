@@ -36,7 +36,7 @@ export default function Offer() {
                 fill
                 quality={75}
                 sizes="(max-width: 767px) calc(100vw - 6rem), (max-width: 1023px) calc(50vw - 4rem), 50vw"
-                className="object-cover transition-[opacity,transform,filter] duration-700 ease-out group-hover:scale-[1.035] group-hover:opacity-0 group-hover:grayscale-0 motion-reduce:transition-none"
+                className="object-cover transition-opacity duration-700 ease-out group-hover:opacity-0 motion-reduce:transition-none"
               />
               <Image
                 src={item.hoverImg}
@@ -44,7 +44,7 @@ export default function Offer() {
                 fill
                 quality={75}
                 sizes="(max-width: 767px) calc(100vw - 6rem), (max-width: 1023px) calc(50vw - 4rem), 50vw"
-                className="scale-[1.035] object-cover opacity-0 transition-[opacity,transform] duration-700 ease-out group-hover:scale-100 group-hover:opacity-100 motion-reduce:transition-none"
+                className="object-cover opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100 motion-reduce:transition-none"
               />
 
               <div className="pointer-events-none absolute -inset-5 bg-[linear-gradient(180deg,rgba(10,8,10,0.04)_20%,rgba(10,8,10,0.22)_52%,rgba(10,8,10,0.94)_100%)]" />

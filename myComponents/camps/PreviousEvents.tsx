@@ -31,8 +31,7 @@ export default function PreviousEvents({ title, description, video, number }: Pr
         className={motion.root}
       >
         <div className={motion.title}>
-          <p className="mb-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-(--brand-700) dark:text-(--brand-400)">
-            <span aria-hidden="true" className="h-px w-8 bg-current" />
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-(--brand-700) dark:text-(--brand-400)">
             {String(number).padStart(2, "0")} / Zakończone wydarzenie
           </p>
           <h3 className="mb-5 font-anton text-3xl uppercase leading-tight sm:text-4xl">{title}</h3>

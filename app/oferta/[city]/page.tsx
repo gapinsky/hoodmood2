@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: Props) {
   const socialImage = location.offer?.socialImage ?? defaultSocialImage;
   return createMetadata({
     path: `/oferta/${city}`,
-    title: `Oferta zajęć tanecznych — ${location.name}`,
-    description: location.offer?.seoDescription ?? `Poznaj ofertę zajęć Hoodmood — ${location.name}. Zobacz dostępne treningi i wybierz zajęcia tańca lub akrobatyki dla siebie lub swojego dziecka.`,
+    title: `Oferta zajęć tanecznych - ${location.name}`,
+    description: location.offer?.seoDescription ?? `Poznaj ofertę zajęć Hoodmood - ${location.name}. Zobacz dostępne treningi i wybierz zajęcia tańca lub akrobatyki dla siebie lub swojego dziecka.`,
     socialImage: { ...socialImage, url: absoluteUrl(socialImage.url) },
   });
 }

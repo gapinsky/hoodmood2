@@ -15,7 +15,7 @@ export default function NoEvents() {
         <div className="space-y-5">
           <p className="max-w-xl text-base leading-7 text-muted-foreground">
             Aktualnie nie mamy aktywnych obozów, kolonii ani wydarzeń specjalnych.
-            Takie akcje pojawiają się u nas regularnie — obserwuj nas, żeby być na bieżąco.
+            Takie akcje pojawiają się u nas regularnie - obserwuj nas, żeby być na bieżąco.
           </p>
           <SocialLinks className="justify-start" />
         </div>

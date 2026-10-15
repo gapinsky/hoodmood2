@@ -52,8 +52,8 @@ export default function OfferFilterBar({ filters, onChange, onClearFilters }: Pr
         onChange={(value) => onChange({ sorting: value })}
         options={[
           { value: "default", label: "Domyślne" },
-          { value: "alphabetical-asc", label: "Nazwa: A–Z" },
-          { value: "alphabetical-desc", label: "Nazwa: Z–A" },
+          { value: "alphabetical-asc", label: "Nazwa: A-Z" },
+          { value: "alphabetical-desc", label: "Nazwa: Z-A" },
           { value: "age-asc", label: "Wiek: rosnąco" },
         ]}
       />

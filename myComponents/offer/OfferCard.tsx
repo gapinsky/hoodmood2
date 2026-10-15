@@ -6,6 +6,7 @@ import { CalendarDays, User, Wallet } from "lucide-react";
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import ButtonSecondary from "@/myComponents/buttons/ButtonSecondary";
+import { cardLiftHoverStyles } from "@/myComponents/motion/cardMotion";
 import { classLevelLabels, type ClassOffer, type OfferInstructor } from "./types";
 
 function InstructorList({ instructors }: { instructors: OfferInstructor[] }) {
@@ -27,7 +28,7 @@ export default function OfferCard({
   const age = ageLabel ?? (maxAge === null ? `${minAge}+ lat` : `${minAge}-${maxAge} lat`);
 
   return (
-    <Card className="group/card h-full justify-start rounded-md border border-foreground/10 bg-foreground/2.5 shadow-none before:hidden">
+    <Card className={`group/card h-full justify-start rounded-md border border-foreground/10 bg-foreground/2.5 shadow-none before:hidden ${cardLiftHoverStyles}`}>
       <div className="relative aspect-video overflow-hidden bg-muted">
         {!imageLoaded && <div aria-hidden="true" className="absolute inset-0 animate-pulse bg-foreground/5 motion-reduce:animate-none" />}
         <Image
@@ -35,7 +36,7 @@ export default function OfferCard({
           fill
           alt={name}
           loading={eager ? "eager" : "lazy"}
-          className={`object-cover transition-[transform,opacity] duration-700 ease-out motion-reduce:transition-none motion-safe:group-hover/card:scale-[1.035] ${imageLoaded ? "opacity-100" : "opacity-0"}`}
+          className={`object-cover transition-opacity duration-500 ease-out motion-reduce:transition-none ${imageLoaded ? "opacity-100" : "opacity-0"}`}
           onLoad={() => setImageLoaded(true)}
           sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1279px) 46vw, 440px"
         />

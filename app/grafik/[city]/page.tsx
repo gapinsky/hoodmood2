@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: Props) {
   if (city === "szczecinek") return createMetadata({ ...szczecinekSeo.schedule, socialImage: szczecinekSocialImage });
   return createMetadata({
     path: `/grafik/${city}`,
-    title: `Grafik zajęć tanecznych — ${location.name}`,
-    description: `Sprawdź aktualny grafik zajęć Hoodmood — ${location.name}. Zobacz dni i godziny treningów tańca i akrobatyki oraz zaplanuj swój udział w zajęciach.`,
+    title: `Grafik zajęć tanecznych - ${location.name}`,
+    description: `Sprawdź aktualny grafik zajęć Hoodmood - ${location.name}. Zobacz dni i godziny treningów tańca i akrobatyki oraz zaplanuj swój udział w zajęciach.`,
   });
 }
 

@@ -21,7 +21,7 @@ export default function TrainerGallery({ trainer }: { trainer: Pick<Trainer, "na
                       <div className="relative aspect-square overflow-hidden rounded-md bg-muted ring-1 ring-inset ring-foreground/10">
                         <Image
                           src={image}
-                          alt={`${trainer.name} — zdjęcie ${index + 1}`}
+                          alt={`${trainer.name} - zdjęcie ${index + 1}`}
                           fill
                           preload={index === 0}
                           quality={85}

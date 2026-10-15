@@ -39,7 +39,7 @@ export const faq: FaqItem[] = [
   {
     question: "Co jeśli opuścimy zajęcia z powodu choroby lub wyjazdu?",
     answer:
-      "Rozumiemy sytuacje losowe. Napisz do nas — w miarę możliwości zaproponujemy odrobienie w innej grupie lub inne rozwiązanie zgodne z organizacją zajęć i dostępnością miejsc.",
+      "Rozumiemy sytuacje losowe. Napisz do nas - w miarę możliwości zaproponujemy odrobienie w innej grupie lub inne rozwiązanie zgodne z organizacją zajęć i dostępnością miejsc.",
   },
   {
     question: "Czy można dołączyć w trakcie miesiąca?",
@@ -49,7 +49,7 @@ export const faq: FaqItem[] = [
   {
     question: "Jakie rzeczy zabrać na pierwsze zajęcia?",
     answer:
-      "Wygodny strój sportowy, buty na zmianę (czyste, na salę), wodę oraz związane włosy (jeśli długie). W niektórych stylach rekomendujemy konkretne obuwie — podpowiemy przed zajęciami.",
+      "Wygodny strój sportowy, buty na zmianę (czyste, na salę), wodę oraz związane włosy (jeśli długie). W niektórych stylach rekomendujemy konkretne obuwie - podpowiemy przed zajęciami.",
   },
   {
     question: "Czy zajęcia odbywają się w butach czy na boso?",
@@ -64,7 +64,7 @@ export const faq: FaqItem[] = [
   {
     question: "Czy są pokazy, turnieje lub występy?",
     answer:
-      "Tak, w ciągu roku organizujemy pokazy i wydarzenia, na których grupy mogą zaprezentować swoje choreografie. Udział zależy od grupy i gotowości uczestników — informujemy o planach z wyprzedzeniem.",
+      "Tak, w ciągu roku organizujemy pokazy i wydarzenia, na których grupy mogą zaprezentować swoje choreografie. Udział zależy od grupy i gotowości uczestników - informujemy o planach z wyprzedzeniem.",
   },
   {
     question: "Czy prowadzicie zajęcia dla dorosłych?",
@@ -100,12 +100,12 @@ export const faq: FaqItem[] = [
   {
     question: "Czy muszę przychodzić dokładnie na godzinę?",
     answer:
-      "Warto być 5–10 minut wcześniej, żeby spokojnie się przebrać i przygotować. Spóźnienia utrudniają wejście w rozgrzewkę, ale jeśli się zdarzą — prosimy o ciche dołączenie.",
+      "Warto być 5-10 minut wcześniej, żeby spokojnie się przebrać i przygotować. Spóźnienia utrudniają wejście w rozgrzewkę, ale jeśli się zdarzą - prosimy o ciche dołączenie.",
   },
   {
     question: "Czy oferujecie zniżki lub pakiety na więcej niż jedne zajęcia?",
     answer:
-      "Tak, mamy rozwiązania łączone (np. zajęcia + dodatkowy styl) zgodnie z cennikiem. Jeśli planujesz więcej niż jedne zajęcia w tygodniu, napisz — podpowiemy najbardziej opłacalną opcję.",
+      "Tak, mamy rozwiązania łączone (np. zajęcia + dodatkowy styl) zgodnie z cennikiem. Jeśli planujesz więcej niż jedne zajęcia w tygodniu, napisz - podpowiemy najbardziej opłacalną opcję.",
   },
   {
     question: "Jak mogę się z Wami skontaktować, jeśli mam pytania?",

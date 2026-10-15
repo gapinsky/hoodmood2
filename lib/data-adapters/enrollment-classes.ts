@@ -31,7 +31,7 @@ export function getEnrollmentClasses(): EnrollmentClassItem[] {
           const isPackage = category === "pakiety-zajec";
           const scheduleLabel = [...item.schedule]
             .sort((a, b) => a.dayOfWeek - b.dayOfWeek || a.startTime.localeCompare(b.startTime))
-            .map((entry) => `${dayOrder[entry.dayOfWeek - 1]} ${entry.startTime}–${entry.endTime}${entry.venue ? ` · ${entry.venue}` : ""}`)
+            .map((entry) => `${dayOrder[entry.dayOfWeek - 1]} ${entry.startTime}-${entry.endTime}${entry.venue ? ` · ${entry.venue}` : ""}`)
             .join("; ");
           return {
             ...row,

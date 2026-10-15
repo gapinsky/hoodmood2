@@ -14,7 +14,7 @@ export default function Timeline() {
           <div ref={fillRef} style={{ transform: "scaleY(0)" }} className="h-full w-full origin-top bg-(--brand-600) dark:bg-(--brand-400)" />
         </div>
       </div>
-      <ol aria-label="Jak zapisać się na zajęcia — krok po kroku" className="relative z-10 space-y-14 md:space-y-20 lg:space-y-28">
+      <ol aria-label="Jak zapisać się na zajęcia - krok po kroku" className="relative z-10 space-y-14 md:space-y-20 lg:space-y-28">
         {steps.map((step, index) => (
           <TimelineStep
             key={step.id}

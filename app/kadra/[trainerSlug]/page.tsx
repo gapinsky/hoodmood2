@@ -38,7 +38,7 @@ export async function generateMetadata({
   if (trainer.id === "julia-kaczmarzyk") return createMetadata({ ...szczecinekSeo.trainer, socialImage: szczecinekSocialImage });
   return createMetadata({
     path: `/kadra/${trainer.slug}`,
-    title: `${trainer.name} – ${trainer.role}`,
+    title: `${trainer.name} - ${trainer.role}`,
     description: trainer.bio,
   });
 }
@@ -77,7 +77,6 @@ export default async function TrainerPage({ params }: PageProps) {
             <div className="min-w-0 space-y-8 sm:space-y-10">
               <header>
                 <p className="mb-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-700) dark:text-(--brand-400)">
-                  <span className="h-px w-8 bg-current" aria-hidden="true" />
                   {trainer.id === "julia-kaczmarzyk" ? "SAPIK Szczecinek" : trainer.specialGuest ? "Gość specjalny" : "Kadra Hoodmood"}
                 </p>
                 <h1 className="font-anton text-5xl uppercase leading-[1.05] tracking-tight sm:text-6xl xl:text-7xl">

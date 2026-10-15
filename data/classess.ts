@@ -89,7 +89,7 @@ export const classes = {
     "slug": "szczecinek-mikrusy",
     "name": "Mikrusy",
     "shortInfo": "Pierwsze kroki w tańcu, gimnastyka i podstawy tańca klasycznego.",
-    "description": "Zajęcia dla dzieci w wieku 4–6 lat. Najmłodsi poznają ruch przez ćwiczenia gimnastyczne i podstawy tańca klasycznego. Rozwijają świadomość ciała, skupienie i pewność siebie.",
+    "description": "Zajęcia dla dzieci w wieku 4-6 lat. Najmłodsi poznają ruch przez ćwiczenia gimnastyczne i podstawy tańca klasycznego. Rozwijają świadomość ciała, skupienie i pewność siebie.",
     "locationId": "szczecinek",
     "minAge": 4,
     "maxAge": 6,
@@ -109,7 +109,7 @@ export const classes = {
         "dayOfWeek": 4,
         "startTime": "16:00",
         "endTime": "16:45",
-        "venue": "SP 1 — Plac Wazów 1"
+        "venue": "SP 1 - Plac Wazów 1"
       }
     ],
     "pricing": {
@@ -136,7 +136,7 @@ export const classes = {
     "slug": "szczecinek-minimki",
     "name": "Minimki",
     "shortInfo": "Rozwój taneczny, świadomość ciała i praca w grupie.",
-    "description": "Zajęcia dla dzieci w wieku 7–9 lat w zespole REBELIA. Nauka tańca łączy ćwiczenia rozwijające świadomość ciała i skupienie z poznawaniem różnych stylów. To przestrzeń do budowania pewności siebie i wspólnego rozwoju.",
+    "description": "Zajęcia dla dzieci w wieku 7-9 lat w zespole REBELIA. Nauka tańca łączy ćwiczenia rozwijające świadomość ciała i skupienie z poznawaniem różnych stylów. To przestrzeń do budowania pewności siebie i wspólnego rozwoju.",
     "locationId": "szczecinek",
     "minAge": 7,
     "maxAge": 9,
@@ -183,7 +183,7 @@ export const classes = {
     "slug": "szczecinek-rebelia-3",
     "name": "Rebelia 3",
     "shortInfo": "Różnorodne style i wszechstronny rozwój taneczny.",
-    "description": "Grupa zespołu REBELIA dla dzieci w wieku 10–12 lat. Uczestnicy poznają różnorodne style tańca, rozwijają świadomość ciała i umiejętność pracy w zespole. Regularne treningi pomagają nabierać swobody i pewności w ruchu.",
+    "description": "Grupa zespołu REBELIA dla dzieci w wieku 10-12 lat. Uczestnicy poznają różnorodne style tańca, rozwijają świadomość ciała i umiejętność pracy w zespole. Regularne treningi pomagają nabierać swobody i pewności w ruchu.",
     "locationId": "szczecinek",
     "minAge": 10,
     "maxAge": 12,
@@ -197,7 +197,7 @@ export const classes = {
         "dayOfWeek": 4,
         "startTime": "16:45",
         "endTime": "17:45",
-        "venue": "SP 1 — Plac Wazów 1"
+        "venue": "SP 1 - Plac Wazów 1"
       },
       {
         "dayOfWeek": 5,
@@ -230,7 +230,7 @@ export const classes = {
     "slug": "szczecinek-rebelia-junior",
     "name": "Rebelia Junior",
     "shortInfo": "Taniec współczesny i rozwijanie własnej ekspresji.",
-    "description": "Zajęcia zespołu REBELIA dla młodzieży w wieku 13–14 lat. Poznawanie różnych stylów rozwija wszechstronność, świadomość ciała i ekspresję. Wspólna praca na sali jest częścią życia zespołu, który uczestniczy w występach i konkursach.",
+    "description": "Zajęcia zespołu REBELIA dla młodzieży w wieku 13-14 lat. Poznawanie różnych stylów rozwija wszechstronność, świadomość ciała i ekspresję. Wspólna praca na sali jest częścią życia zespołu, który uczestniczy w występach i konkursach.",
     "locationId": "szczecinek",
     "minAge": 13,
     "maxAge": 14,
@@ -250,7 +250,7 @@ export const classes = {
         "dayOfWeek": 4,
         "startTime": "17:45",
         "endTime": "18:45",
-        "venue": "SP 1 — Plac Wazów 1"
+        "venue": "SP 1 - Plac Wazów 1"
       }
     ],
     "pricing": {
@@ -492,7 +492,7 @@ export const classes = {
     slug: "koszalin-taniec-4-6",
     name: "Taniec dla 4-6 latków",
     shortInfo: "Pierwsze kroki taneczne, rytm i ruch przez zabawę.",
-    description: "To zajęcia ruchowo-taneczne dla najmłodszych, które wprowadzają dzieci w świat tańca przez zabawę. Ćwiczymy podstawowe kroki, rytm i prostą koordynację ruchową. Wykorzystujemy muzykę, gry ruchowe i krótkie układy taneczne. Zajęcia wspierają rozwój motoryczny, samodzielność i oswajanie pracy w grupie. Zajęcia są przeznaczone dla dzieci w wieku 4–6 lat.",
+    description: "To zajęcia ruchowo-taneczne dla najmłodszych, które wprowadzają dzieci w świat tańca przez zabawę. Ćwiczymy podstawowe kroki, rytm i prostą koordynację ruchową. Wykorzystujemy muzykę, gry ruchowe i krótkie układy taneczne. Zajęcia wspierają rozwój motoryczny, samodzielność i oswajanie pracy w grupie. Zajęcia są przeznaczone dla dzieci w wieku 4-6 lat.",
     locationId: "koszalin",
     minAge: 4,
     maxAge: 6,
@@ -531,7 +531,7 @@ export const classes = {
     slug: "koszalin-akrobatyka-4-6",
     name: "Akrobatyka",
     shortInfo: "Podstawy akrobatyki, równowaga i gibkość przez zabawę.",
-    description: "Na zajęciach dzieci poznają podstawy akrobatyki w bezpiecznej i zabawowej formie. Ćwiczymy skoczność, równowagę, gibkość oraz wzmacnianie całego ciała. Wprowadzamy proste elementy, takie jak przewroty i ćwiczenia na materacach. Duży nacisk kładziemy na prawidłowe nawyki ruchowe i bezpieczeństwo. Zajęcia są przeznaczone dla dzieci w wieku 4–6 lat.",
+    description: "Na zajęciach dzieci poznają podstawy akrobatyki w bezpiecznej i zabawowej formie. Ćwiczymy skoczność, równowagę, gibkość oraz wzmacnianie całego ciała. Wprowadzamy proste elementy, takie jak przewroty i ćwiczenia na materacach. Duży nacisk kładziemy na prawidłowe nawyki ruchowe i bezpieczeństwo. Zajęcia są przeznaczone dla dzieci w wieku 4-6 lat.",
     locationId: "koszalin",
     minAge: 4,
     maxAge: 6,
@@ -570,7 +570,7 @@ export const classes = {
     slug: "koszalin-young-generation-7-9",
     name: "Young Generation",
     shortInfo: "Podstawy hip-hopu, groove i pierwsze choreografie.",
-    description: "To zajęcia hip-hop dla dzieci, które chcą rozwijać swój ruch i poczucie rytmu. Uczymy podstawowych kroków, groove’u i prostych choreografii dopasowanych do wieku. Ćwiczymy koordynację, energię ruchu oraz pracę zespołową. Zajęcia pomagają budować pewność siebie i swobodę na parkiecie. Zajęcia są przeznaczone dla dzieci w wieku 7–9 lat.",
+    description: "To zajęcia hip-hop dla dzieci, które chcą rozwijać swój ruch i poczucie rytmu. Uczymy podstawowych kroków, groove’u i prostych choreografii dopasowanych do wieku. Ćwiczymy koordynację, energię ruchu oraz pracę zespołową. Zajęcia pomagają budować pewność siebie i swobodę na parkiecie. Zajęcia są przeznaczone dla dzieci w wieku 7-9 lat.",
     locationId: "koszalin",
     minAge: 7,
     maxAge: 9,
@@ -613,7 +613,7 @@ export const classes = {
     slug: "koszalin-akrobatyka-7-9",
     name: "Akrobatyka",
     shortInfo: "Technika akrobatyczna, siła, gibkość i kontrola ciała.",
-    description: "Na zajęciach rozwijamy siłę, gibkość i koordynację poprzez ćwiczenia akrobatyczne dostosowane do wieku uczestników. Uczymy techniki podstawowych elementów i bezpiecznego wykonywania ćwiczeń. Pracujemy nad stabilizacją, mobilnością i świadomością ciała. Zajęcia mają formę aktywną i motywującą, ale z zachowaniem zasad bezpieczeństwa. Zajęcia są przeznaczone dla dzieci w wieku 7–9 lat.",
+    description: "Na zajęciach rozwijamy siłę, gibkość i koordynację poprzez ćwiczenia akrobatyczne dostosowane do wieku uczestników. Uczymy techniki podstawowych elementów i bezpiecznego wykonywania ćwiczeń. Pracujemy nad stabilizacją, mobilnością i świadomością ciała. Zajęcia mają formę aktywną i motywującą, ale z zachowaniem zasad bezpieczeństwa. Zajęcia są przeznaczone dla dzieci w wieku 7-9 lat.",
     locationId: "koszalin",
     minAge: 7,
     maxAge: 9,
@@ -658,7 +658,7 @@ export const classes = {
     slug: "koszalin-the-beat-hunters-10-12",
     name: "The Beat Hunters",
     shortInfo: "Hip-hop, choreografie i podstawy freestyle’u.",
-    description: "To grupa hip-hop dla dzieci starszych, w której rozwijamy technikę, rytmikę i pamięć choreograficzną. Uczestnicy uczą się bardziej złożonych kombinacji i pracy z muzyką. Ćwiczymy dynamikę, izolacje oraz elementy freestyle’u na poziomie podstawowym. Zajęcia wzmacniają pewność siebie i umiejętność współpracy w grupie. Zajęcia są przeznaczone dla dzieci w wieku 10–12 lat.",
+    description: "To grupa hip-hop dla dzieci starszych, w której rozwijamy technikę, rytmikę i pamięć choreograficzną. Uczestnicy uczą się bardziej złożonych kombinacji i pracy z muzyką. Ćwiczymy dynamikę, izolacje oraz elementy freestyle’u na poziomie podstawowym. Zajęcia wzmacniają pewność siebie i umiejętność współpracy w grupie. Zajęcia są przeznaczone dla dzieci w wieku 10-12 lat.",
     locationId: "koszalin",
     minAge: 10,
     maxAge: 12,
@@ -701,7 +701,7 @@ export const classes = {
     slug: "koszalin-akrobatyka-10-13",
     name: "Akrobatyka",
     shortInfo: "Technika akrobatyczna, siła, gibkość i kontrola ciała.",
-    description: "Na zajęciach uczestnicy rozwijają sprawność ogólną, siłę i elastyczność potrzebną w akrobatyce. Ćwiczymy technikę elementów akrobatycznych na materacach oraz kontrolę ciała w ruchu. Wprowadzamy stopniowo trudniejsze ćwiczenia, dostosowując poziom do możliwości grupy. Ważna jest dla nas poprawność wykonania i bezpieczeństwo. Zajęcia są przeznaczone dla dzieci i młodzieży w wieku 10–13 lat.",
+    description: "Na zajęciach uczestnicy rozwijają sprawność ogólną, siłę i elastyczność potrzebną w akrobatyce. Ćwiczymy technikę elementów akrobatycznych na materacach oraz kontrolę ciała w ruchu. Wprowadzamy stopniowo trudniejsze ćwiczenia, dostosowując poziom do możliwości grupy. Ważna jest dla nas poprawność wykonania i bezpieczeństwo. Zajęcia są przeznaczone dla dzieci i młodzieży w wieku 10-13 lat.",
     locationId: "koszalin",
     minAge: 10,
     maxAge: 13,
@@ -746,7 +746,7 @@ export const classes = {
     slug: "koszalin-taniec-wspolczesny-6-9",
     name: "Taniec współczesny",
     shortInfo: "Technika tańca współczesnego, improwizacja i ekspresja.",
-    description: "Na zajęciach tańca współczesnego dzieci poznają podstawy pracy z ruchem, przestrzenią i muzyką. Ćwiczymy płynność, koordynację oraz ekspresję poprzez krótkie kombinacje i choreografie. Zajęcia rozwijają świadomość ciała, kreatywność i wrażliwość artystyczną. Wprowadzamy elementy techniki i improwizacji w przyjaznej atmosferze. Zajęcia są przeznaczone dla dzieci w wieku 6–9 lat.",
+    description: "Na zajęciach tańca współczesnego dzieci poznają podstawy pracy z ruchem, przestrzenią i muzyką. Ćwiczymy płynność, koordynację oraz ekspresję poprzez krótkie kombinacje i choreografie. Zajęcia rozwijają świadomość ciała, kreatywność i wrażliwość artystyczną. Wprowadzamy elementy techniki i improwizacji w przyjaznej atmosferze. Zajęcia są przeznaczone dla dzieci w wieku 6-9 lat.",
     locationId: "koszalin",
     minAge: 6,
     maxAge: 9,
@@ -785,7 +785,7 @@ export const classes = {
     slug: "koszalin-taniec-wspolczesny-10-12",
     name: "Taniec współczesny",
     shortInfo: "Technika tańca współczesnego, improwizacja i ekspresja.",
-    description: "Na zajęciach tańca współczesnego dzieci poznają podstawy pracy z ruchem, przestrzenią i muzyką. Ćwiczymy płynność, koordynację oraz ekspresję poprzez krótkie kombinacje i choreografie. Zajęcia rozwijają świadomość ciała, kreatywność i wrażliwość artystyczną. Wprowadzamy elementy techniki i improwizacji w przyjaznej atmosferze. Zajęcia są przeznaczone dla dzieci w wieku 10–12 lat.",
+    description: "Na zajęciach tańca współczesnego dzieci poznają podstawy pracy z ruchem, przestrzenią i muzyką. Ćwiczymy płynność, koordynację oraz ekspresję poprzez krótkie kombinacje i choreografie. Zajęcia rozwijają świadomość ciała, kreatywność i wrażliwość artystyczną. Wprowadzamy elementy techniki i improwizacji w przyjaznej atmosferze. Zajęcia są przeznaczone dla dzieci w wieku 10-12 lat.",
     locationId: "koszalin",
     minAge: 10,
     maxAge: 12,
@@ -824,7 +824,7 @@ export const classes = {
     slug: "koszalin-taniec-wspolczesny-13-18",
     name: "Taniec współczesny",
     shortInfo: "Technika tańca współczesnego, improwizacja i ekspresja.",
-    description: "To zajęcia dla młodzieży, które rozwijają technikę tańca współczesnego oraz świadomą pracę z ciałem. Ćwiczymy sekwencje ruchowe, dynamikę, jakość ruchu i ekspresję sceniczną. Pojawiają się także elementy improwizacji i interpretacji muzyki. Zajęcia pomagają budować własny styl i pewność w tańcu. Zajęcia są przeznaczone dla młodzieży w wieku 13–18 lat.",
+    description: "To zajęcia dla młodzieży, które rozwijają technikę tańca współczesnego oraz świadomą pracę z ciałem. Ćwiczymy sekwencje ruchowe, dynamikę, jakość ruchu i ekspresję sceniczną. Pojawiają się także elementy improwizacji i interpretacji muzyki. Zajęcia pomagają budować własny styl i pewność w tańcu. Zajęcia są przeznaczone dla młodzieży w wieku 13-18 lat.",
     locationId: "koszalin",
     minAge: 13,
     maxAge: 18,
@@ -858,7 +858,7 @@ export const classes = {
     frequency: {
       sessionsPerWeek: 2,
       durationMinutes: 60,
-      description: "Kamila Maik / Joanna Jedynak — gościnnie 1x w miesiącu; regularne zajęcia prowadzi Talita Jarzęcka."
+      description: "Kamila Maik / Joanna Jedynak - gościnnie 1x w miesiącu; regularne zajęcia prowadzi Talita Jarzęcka."
     },
     image: "/assets/images/offer/taniecWspolczesny12-18.png",
     active: true,
@@ -929,42 +929,42 @@ export const classes = {
       variants: [
         {
           id: "taniec-wspolczesny-solo",
-          label: "Taniec współczesny solo — za godzinę",
+          label: "Taniec współczesny solo - za godzinę",
           amount: 170
         },
         {
           id: "taniec-wspolczesny-duet",
-          label: "Taniec współczesny duet — za godzinę od osoby",
+          label: "Taniec współczesny duet - za godzinę od osoby",
           amount: 110
         },
         {
           id: "hip-hop-solo",
-          label: "Hip-hop solo — za godzinę",
+          label: "Hip-hop solo - za godzinę",
           amount: 150
         },
         {
           id: "hip-hop-duet",
-          label: "Hip-hop duet — za godzinę od osoby",
+          label: "Hip-hop duet - za godzinę od osoby",
           amount: 100
         },
         {
           id: "hip-hop-trio",
-          label: "Hip-hop trio — za godzinę od osoby",
+          label: "Hip-hop trio - za godzinę od osoby",
           amount: 90
         },
         {
           id: "kpop-solo",
-          label: "K-pop solo — za godzinę",
+          label: "K-pop solo - za godzinę",
           amount: 140
         },
         {
           id: "akrobatyka",
-          label: "Akrobatyka — za godzinę",
+          label: "Akrobatyka - za godzinę",
           amount: 170
         },
         {
           id: "pierwszy-taniec",
-          label: "Pierwszy taniec — za godzinę",
+          label: "Pierwszy taniec - za godzinę",
           amount: 160
         }
       ]
@@ -1181,7 +1181,7 @@ export const classes = {
     slug: "bialy-bor-taniec-4-7",
     name: "Zajęcia taneczne",
     shortInfo: "Rytm, proste choreografie i nauka tańca przez zabawę.",
-    description: "Zajęcia ruchowo-taneczne dla dzieci w wieku 4–7 lat, prowadzone w formie zabawy. Dzieci uczą się podstaw rytmiki i koordynacji, prostych kroków oraz krótkich układów tanecznych dopasowanych do wieku. Pracujemy nad ogólną sprawnością, poczuciem rytmu, orientacją w przestrzeni i pewnością siebie. Zajęcia wspierają rozwój motoryczny i uczą pracy w grupie.",
+    description: "Zajęcia ruchowo-taneczne dla dzieci w wieku 4-7 lat, prowadzone w formie zabawy. Dzieci uczą się podstaw rytmiki i koordynacji, prostych kroków oraz krótkich układów tanecznych dopasowanych do wieku. Pracujemy nad ogólną sprawnością, poczuciem rytmu, orientacją w przestrzeni i pewnością siebie. Zajęcia wspierają rozwój motoryczny i uczą pracy w grupie.",
     locationId: "bialy-bor",
     minAge: 4,
     maxAge: 7,
@@ -1220,7 +1220,7 @@ export const classes = {
     slug: "bialy-bor-hip-hop-8-13",
     name: "Hip-hop",
     shortInfo: "Technika hip-hopu, groove i choreografie grupowe.",
-    description: "Zajęcia hip-hop dla dzieci i młodzieży w wieku 8–13 lat. Uczestnicy poznają podstawy techniki, groove’u i pracy z muzyką oraz uczą się choreografii dopasowanych do poziomu grupy. Ćwiczymy koordynację, dynamikę, musicality i pamięć ruchową, a także elementy sceniczne i współpracę w zespole. Zajęcia pomagają budować swobodę ruchu i pewność siebie.",
+    description: "Zajęcia hip-hop dla dzieci i młodzieży w wieku 8-13 lat. Uczestnicy poznają podstawy techniki, groove’u i pracy z muzyką oraz uczą się choreografii dopasowanych do poziomu grupy. Ćwiczymy koordynację, dynamikę, musicality i pamięć ruchową, a także elementy sceniczne i współpracę w zespole. Zajęcia pomagają budować swobodę ruchu i pewność siebie.",
     locationId: "bialy-bor",
     minAge: 8,
     maxAge: 13,

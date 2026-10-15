@@ -34,7 +34,7 @@ export default function LocationCard({ location, venue }: Props) {
         <>
           <Image
             src={venue.img}
-            alt={`${location.name} — ${description}`}
+            alt={`${location.name} - ${description}`}
             fill
             quality={75}
             sizes="(max-width: 767px) calc(100vw - 4rem), (max-width: 1279px) calc(50vw - 3rem), 440px"

@@ -40,7 +40,7 @@ export const sections = [
     id: "zakres-i-cel",
     title: "3. Jakie dane zbieramy i w jakim celu",
     content: [
-      "Za pośrednictwem formularza kontaktowego możemy przetwarzać takie dane jak: imię, adres e-mail, numer telefonu oraz treść wiadomości — wyłącznie w zakresie, w jakim użytkownik sam je poda.",
+      "Za pośrednictwem formularza kontaktowego możemy przetwarzać takie dane jak: imię, adres e-mail, numer telefonu oraz treść wiadomości - wyłącznie w zakresie, w jakim użytkownik sam je poda.",
       "Dane przetwarzamy w celu udzielenia odpowiedzi na wiadomość, prowadzenia korespondencji oraz obsługi zgłoszenia przesłanego przez formularz kontaktowy.",
       "Podanie danych jest dobrowolne, ale może być niezbędne do otrzymania odpowiedzi.",
     ],
@@ -72,7 +72,7 @@ export const sections = [
     id: "prawa",
     title: "7. Twoje prawa",
     content: [
-      "Masz prawo do: dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, wniesienia sprzeciwu oraz przenoszenia danych — w zakresie przewidzianym przez przepisy RODO.",
+      "Masz prawo do: dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, wniesienia sprzeciwu oraz przenoszenia danych - w zakresie przewidzianym przez przepisy RODO.",
       "Masz również prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych, jeżeli uznasz, że Twoje dane są przetwarzane niezgodnie z prawem.",
     ],
   },

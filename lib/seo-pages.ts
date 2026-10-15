@@ -3,7 +3,7 @@ import { szczecinekSeo } from "./seo-szczecinek";
 // Metadata for static public pages; sitemap uses the same route registry.
 export const staticSeoPages = {
   "/": {
-    "title": "Szkoła tańca i akrobatyki — Koszalin, Polanów, Biały Bór, Szczecinek",
+    "title": "Szkoła tańca i akrobatyki - Koszalin, Polanów, Biały Bór, Szczecinek",
     "description": "Zajęcia tańca i akrobatyki dla dzieci, młodzieży i dorosłych w Koszalinie, Polanowie, Białym Borze i Szczecinku. Poznaj Hoodmood, sprawdź grafik i zapisz się online."
   },
   "/kontakt": {
@@ -27,11 +27,11 @@ export const staticSeoPages = {
     "description": "Zobacz aktualności Hoodmood: relacje z treningów, wydarzenia i życie naszej tanecznej ekipy. Śledź najnowsze wpisy ze studia."
   },
   "/faq": {
-    "title": "FAQ — pytania o zajęcia i zapisy",
+    "title": "FAQ - pytania o zajęcia i zapisy",
     "description": "Odpowiedzi na pytania o zajęcia Hoodmood, zapisy, płatności i przygotowanie do treningu. Sprawdź najważniejsze informacje przed pierwszą wizytą."
   },
   "/dofinansowanie": {
-    "title": "Dofinansowanie — Program KLUB 2025",
+    "title": "Dofinansowanie - Program KLUB 2025",
     "description": "Informacje o dofinansowaniu Klubu Sportowego Hoodmood Dance Studio w Programie KLUB 2025: cel zadania, źródło wsparcia i wartość dotacji."
   },
   "/regulamin": {
@@ -47,12 +47,12 @@ export const staticSeoPages = {
     "description": "Sprawdź politykę prywatności Hoodmood: informacje o administratorze, przetwarzaniu danych osobowych, prawach użytkowników i plikach cookies."
   },
   "/cennik/bialy-bor": {
-    "title": "Cennik zajęć — Biały Bór",
+    "title": "Cennik zajęć - Biały Bór",
     "description": "Sprawdź ceny zajęć Hoodmood w Białym Borze. Poznaj dostępne treningi, ich częstotliwość i koszty uczestnictwa przed zapisaniem się na zajęcia."
   },
   "/cennik/szczecinek": szczecinekSeo.pricing,
   "/cennik/polanow": {
-    "title": "Cennik zajęć — Polanów",
+    "title": "Cennik zajęć - Polanów",
     "description": "Sprawdź ceny zajęć Hoodmood w Polanowie. Porównaj dostępne treningi i koszty uczestnictwa, a następnie wybierz zajęcia dla siebie lub dziecka."
   }
 } as const;

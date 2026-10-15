@@ -72,7 +72,7 @@ export default function TrialClassMessage() {
           isOpen
             ? "Zamknij wiadomość o promocji"
             : hasUnreadMessage
-              ? "Otwórz wiadomość o promocji — 1 nieprzeczytana wiadomość"
+              ? "Otwórz wiadomość o promocji - 1 nieprzeczytana wiadomość"
               : "Otwórz wiadomość o promocji"
         }
         className="ui-focus-ring ui-pressable pointer-events-auto relative inline-flex size-11 items-center justify-center rounded-full border border-white/15 bg-(--brand-600) text-white shadow-[0_14px_34px_rgba(87,35,52,0.35)] sm:size-12"

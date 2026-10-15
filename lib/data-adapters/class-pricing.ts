@@ -42,9 +42,9 @@ function getFrequency(item: DanceClass): string {
 
 function toPricingItem(item: DanceClass, variant: PriceVariant): PricingItem {
   const individual = getPricingCategory(item) === "zajecia-indywidualne";
-  const label = variant.label?.split(" — ")[0];
+  const label = variant.label?.split(" - ")[0];
   const name = individual && label ? label
-    : variant.id !== "standard" && label ? `${item.name} — ${label}` : item.name;
+    : variant.id !== "standard" && label ? `${item.name} - ${label}` : item.name;
 
   return {
     id: `${item.id}:${variant.id}`,

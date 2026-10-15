@@ -20,8 +20,8 @@ export default function NotFound() {
             4<span className="text-(--brand-700) dark:text-(--brand-400)">0</span>4
           </div>
           <div className="min-w-0">
-            <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-(--brand-700) dark:text-(--brand-400)">
-              <span className="h-px w-8 bg-current" aria-hidden="true" />404 / Nie znaleziono strony
+            <p className="mb-5 text-xs uppercase tracking-[0.18em] text-(--brand-700) dark:text-(--brand-400)">
+              404 / Nie znaleziono strony
             </p>
             <h1 className="font-anton text-4xl uppercase leading-[1.05] tracking-tight sm:text-6xl xl:text-7xl">Ta scena jest pusta</h1>
             <p className="mt-5 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">Strona, której szukasz, nie istnieje lub zmieniła adres. Wróć na stronę główną i złap z nami właściwy rytm.</p>

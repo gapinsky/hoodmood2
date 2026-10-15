@@ -20,12 +20,12 @@ export const trainers = {
     active: true,
     specialGuest: false,
     name: "Julia Kaczmarzyk",
-    role: "Taniec współczesny — REBELIA",
-    styles: ["Mikrusy (4–6 lat)", "Minimki (7–9 lat)", "Rebelia 3 (10–12 lat)", "Rebelia Junior (13–14 lat)", "Rebelia (15+ lat)"],
-    bio: "Julia Kaczmarzyk to dyplomowana tancerka i choreografka, absolwentka Akademii Humanistyczno-Ekonomicznej w Łodzi, kierunku Taniec, ze specjalnością Tancerz–Choreograf.\nJej przygoda z tańcem rozpoczęła się już w wieku 3 lat. Przez 7 lat była związana z Częstochowskim Teatrem Tańca, gdzie zdobywała doświadczenie sceniczne i rozwijała swój warsztat jako tancerka.\nPodczas studiów rozwijała się w zakresie różnych technik i form tańca, obejmujących m.in. taniec klasyczny, współczesny, jazz oraz commercial. Duża liczba godzin praktycznych pozwoliła jej zbudować wszechstronny warsztat ruchowy, rozwijać świadomość ciała, technikę, muzykalność oraz jakość wykonywanego ruchu.\nRównolegle rozwijała warsztat choreograficzny, realizując liczne choreografie i projekty artystyczne, a także przygotowując autorską pracę dyplomową.\nW swoich choreografiach Julia szczególną uwagę zwraca na to, aby ruch był nośnikiem emocji i historii. Interesuje ją tworzenie choreografii, które nie są jedynie układem kroków, ale pozwalają tancerzom wyrażać, interpretować i budować własną opowieść poprzez ruch.",
-    image: "",
-    images: [],
-    localizations: ["Szczecinek", "Koszalin"],
+    role: "Taniec współczesny - REBELIA",
+    styles: ["Mikrusy (4-6 lat)", "Minimki (7-9 lat)", "Rebelia 3 (10-12 lat)", "Rebelia Junior (13-14 lat)", "Rebelia (15+ lat)"],
+    bio: "Julia Kaczmarzyk to dyplomowana tancerka i choreografka, absolwentka Akademii Humanistyczno-Ekonomicznej w Łodzi, kierunku Taniec, ze specjalnością Tancerz-Choreograf.\nJej przygoda z tańcem rozpoczęła się już w wieku 3 lat. Przez 7 lat była związana z Częstochowskim Teatrem Tańca, gdzie zdobywała doświadczenie sceniczne i rozwijała swój warsztat jako tancerka.\nPodczas studiów rozwijała się w zakresie różnych technik i form tańca, obejmujących m.in. taniec klasyczny, współczesny, jazz oraz commercial. Duża liczba godzin praktycznych pozwoliła jej zbudować wszechstronny warsztat ruchowy, rozwijać świadomość ciała, technikę, muzykalność oraz jakość wykonywanego ruchu.\nRównolegle rozwijała warsztat choreograficzny, realizując liczne choreografie i projekty artystyczne, a także przygotowując autorską pracę dyplomową.\nW swoich choreografiach Julia szczególną uwagę zwraca na to, aby ruch był nośnikiem emocji i historii. Interesuje ją tworzenie choreografii, które nie są jedynie układem kroków, ale pozwalają tancerzom wyrażać, interpretować i budować własną opowieść poprzez ruch.",
+    image: "/assets/images/team/juliaKaczmarzyk/juliaKaczmarzyk.jpeg",
+    images: ['/assets/images/team/juliaKaczmarzyk/juliaKaczmarzyk.jpeg'],
+    localizations: ["Szczecinek"],
     instagram: "https://www.instagram.com/kaczmarz.yk/",
   },
   "talita-jarzecka": {
@@ -38,9 +38,9 @@ export const trainers = {
     styles: [
       "CEO",
       "HYPE CREW (grupa średniozaawansowana hip-hop)",
-      "Taniec dla 4–6 latków",
+      "Taniec dla 4-6 latków",
       "Hip-hop ",
-      "Zajęcia taneczne 4–7 lat",
+      "Zajęcia taneczne 4-7 lat",
       "Taniec współczesny - starsza grupa",
     ],
     bio:
@@ -63,13 +63,13 @@ export const trainers = {
     name: "Wiktoria Butwicka",
     role: "Hip-hop",
     styles: [
-      "Taniec dla 4–6 latków",
+      "Taniec dla 4-6 latków",
       "HIP-HOP 30+",
       "Feminine flow",
       "Young Generation (hip-hop)",
     ],
     bio:
-      "Wiktoria Butwicka to tancerka i trenerka. Taniec towarzyszy jej od 2009 roku. Szkoliła się m.in. u instruktorów takich jak Klesia, Nikita czy Pumba. Brała udział w licznych turniejach w Polsce i za granicą (m.in. 2. miejsce w Wielkiej Brytanii i Top 8 na Tancbudzie). Korzystała też z prywatnych lekcji i warsztatów w różnych stylach. Jako trenerka uczy od trzech lat – prowadzi grupy hip-hopowe oraz warsztaty dla młodzieży i dorosłych.",
+      "Wiktoria Butwicka to tancerka i trenerka. Taniec towarzyszy jej od 2009 roku. Szkoliła się m.in. u instruktorów takich jak Klesia, Nikita czy Pumba. Brała udział w licznych turniejach w Polsce i za granicą (m.in. 2. miejsce w Wielkiej Brytanii i Top 8 na Tancbudzie). Korzystała też z prywatnych lekcji i warsztatów w różnych stylach. Jako trenerka uczy od trzech lat - prowadzi grupy hip-hopowe oraz warsztaty dla młodzieży i dorosłych.",
     image: "/assets/images/team/wiktoriaButwicka/wiktoriaButwickaProfile.jpg",
     images: [
       "/assets/images/team/wiktoriaButwicka/wiktoriaButwickaProfile.jpg",
@@ -109,7 +109,7 @@ Obecnie Paulina dzieli się swoją pasją i wiedzą, prowadząc w naszym studiu 
     styles: ["KPOP"],
 
     bio:
-      "Na stronie sekcja Aliny Lemańskiej opisuje start zajęć KPOP — dynamiczne choreografie, energetyczną muzykę i przyjazną atmosferę. Zajęcia są skierowane do osób w różnym wieku i na różnym poziomie zaawansowania, z naciskiem na naukę kroków i choreografii do hitów KPOP oraz dobrą zabawę.",
+      "Na stronie sekcja Aliny Lemańskiej opisuje start zajęć KPOP - dynamiczne choreografie, energetyczną muzykę i przyjazną atmosferę. Zajęcia są skierowane do osób w różnym wieku i na różnym poziomie zaawansowania, z naciskiem na naukę kroków i choreografii do hitów KPOP oraz dobrą zabawę.",
     image: "/assets/images/team/alinaLemanska/alinaLemanskaProfile.jpg",
     images: [
       "/assets/images/team/alinaLemanska/alinaLemanskaProfile.jpg",
@@ -153,7 +153,7 @@ Od 8 lat trenuje w ekipie Quality Crew, z którą wielokrotnie stawała na podiu
  Na swoim tanecznym koncie ma m.in.:
 udział w warsztatach i zajęciach u takich instruktorów, jak Zosia Kędziora, Darek Bujnowski, Marta Pasta, Ola Goździk, Łukasz Ludwiczak, Jessica Ali , Mania Rogowska, Ida Kurowska i wiele więcej. 
 -wyjazd do Londynu, gdzie trenowała w legendarnych studiach Playground i Base, biorąc lekcje m.in. u Kelly Sweeney (LA) i Tyresse Hare
-– udział w projektach wideo, w tym w produkcji nominowanej na International Cyprus Dance Film Festival, której pokaz odbył się w teatrze Rialto.
+- udział w projektach wideo, w tym w produkcji nominowanej na International Cyprus Dance Film Festival, której pokaz odbył się w teatrze Rialto.
 Maria prowadzi treningi dla grupy THE BEAT HUNTERS.  
 Co Cię czeka na jej zajęciach? 
 Wszechstronny rozwój taneczny i świetna atmosfera, bo Marysia łączy wymagający trening z ogromną dawką fanu.`,
@@ -169,7 +169,7 @@ Wszechstronny rozwój taneczny i świetna atmosfera, bo Marysia łączy wymagaj�
     specialGuest: false,
     name: "Nel Głowacka",
     role: "Taniec współczesny",
-    styles: ["Taniec współczesny (6–9 lat)"],
+    styles: ["Taniec współczesny (6-9 lat)"],
     bio: `Tańczy od 13 lat, nieustannie rozwijając się w różnych stylach i poszerzając swój warsztat. Swoją przygodę z tańcem rozpoczęła jako dziecko od baletu, który do dziś pozostaje ważną częścią jej tanecznego fundamentu. Przez wiele lat trenowała również taniec towarzyski, a obecnie skupia się przede wszystkim na tańcu współczesnym i jazzie.
 Jednym z jej największych osiągnięć było zdobycie 3. miejsca na Mistrzostwach WADF, dzięki czemu została II Wicemistrzynią Polski. Na przestrzeni lat brała udział w licznych zawodach i turniejach tanecznych, a także miała okazję występować na deskach teatru.
 Taniec jest dla niej nie tylko techniką i ruchem, ale przede wszystkim sposobem wyrażania emocji. Dlatego rozwija się również w aktorstwie, które pomaga jej jeszcze lepiej budować sceniczne historie i przekazywać emocje poprzez ruch. Ma za sobą liczne występy i przedstawienia, a każde z tych doświadczeń pozwala jej spojrzeć na taniec z nowej perspektywy.`,
@@ -185,7 +185,7 @@ Taniec jest dla niej nie tylko techniką i ruchem, ale przede wszystkim sposobem
     specialGuest: false,
     name: "Klara Walach",
     role: "Taniec współczesny",
-    styles: ["Taniec współczesny (6–9 lat)", "Taniec współczesny (10–12 lat)"],
+    styles: ["Taniec współczesny (6-9 lat)", "Taniec współczesny (10-12 lat)"],
     bio: `Klara swoją przygodę z tańcem rozpoczęła już w wieku 3 lat. Od 14 lat nieustannie rozwija swoje umiejętności, zdobywając doświadczenie w różnych stylach i poznając kolejne oblicza tańca. Najbliższe są jej jazz oraz modern, style, które pozwalają jej wyrażać siebie, rozwijać kreatywność i muzykalność, a jednocześnie pracować nad techniką oraz świadomością własnego ciała.
 W ubiegłym sezonie Klara brała udział w licznych zawodach organizowanych przez WDF i PFT, wielokrotnie stając na podium. Osiągnięcia te są dla niej nie tylko powodem do dumy, ale przede wszystkim motywacją do dalszego rozwoju.
 Taniec nauczył ją systematyczności, wytrwałości i odpowiedzialności, a także pracy pod presją oraz pokonywania własnych ograniczeń. Dziś chce dzielić się swoją pasją i doświadczeniem z innymi, pokazując, że taniec to nie tylko technika, ale również sposób na wyrażanie siebie i budowanie pewności siebie.`,
@@ -202,8 +202,8 @@ Taniec nauczył ją systematyczności, wytrwałości i odpowiedzialności, a tak
     name: "Marianna Stanisławska",
     role: "Taniec współczesny",
     styles: [
-      "Taniec współczesny (10–12 lat)",
-      "Taniec współczesny (7–11 lat) – Polanów",
+      "Taniec współczesny (10-12 lat)",
+      "Taniec współczesny (7-11 lat) - Polanów",
     ],
     bio: `Marianna swoją taneczną przygodę rozpoczęła już w wieku 5 lat. Początkowo rozwijała się w hip-hopie, jednak z czasem pokochała również taniec współczesny. Przez lata zdobywała doświadczenie i liczne sukcesy zarówno w występach solowych, jak i grupowych.
 Jest wykwalifikowaną instruktorką tańca i nieustannie rozwija swoje umiejętności, regularnie uczestnicząc w treningach, warsztatach oraz zawodach tanecznych. Dzięki temu stale poszerza swoją wiedzę, poznaje nowe techniki i czerpie inspirację od innych tancerzy i choreografów.
@@ -225,7 +225,7 @@ Marianna ma również doświadczenie w pracy z dziećmi,była opiekunką na kolo
     styles: ["HYPE CREW (grupa średniozaawansowana hip-hop)"],
     bio: `Paulina Kapuścińska to tancerka i instruktorka, która swoją przygodę z tańcem rozpoczęła około 13 lat temu. Przez 9 lat była częścią formacji Quality Crew, z którą brała udział w licznych zawodach tanecznych, wielokrotnie stając na podium. To właśnie lata spędzone w Quality Crew dały jej ogromne doświadczenie zarówno w rywalizacji, jak i pracy zespołowej oraz występach na scenie.
 Przez cały ten czas nieustannie rozwijała swoje umiejętności, biorąc udział w licznych warsztatach prowadzonych przez czołowych tancerzy z Polski i zagranicy. Ma również na swoim koncie udział w projektach wideo i teledyskach. Obecnie tańczy także w Teatrze Muzycznym Adria.
-Paulina ma doświadczenie również jako instruktorka. Przez rok prowadziła grupę dzieci w wieku 7–11 lat, pracując z nimi nad formacjami, duetami oraz solówkami. Jej podopieczne wielokrotnie zdobywały miejsca na podium.
+Paulina ma doświadczenie również jako instruktorka. Przez rok prowadziła grupę dzieci w wieku 7-11 lat, pracując z nimi nad formacjami, duetami oraz solówkami. Jej podopieczne wielokrotnie zdobywały miejsca na podium.
 W tym sezonie Paulina dołącza do kadry HoodMood, gdzie poprowadzi grupę Hype Crew. Na jej zajęciach możecie spodziewać się dużej dawki energii, charakteru, muzykalności i przede wszystkim dobrej zajawki na taniec`,
     image: "/assets/images/team/paulinaKapuscinska/paulinaKapuscinskaProfile.jpg",
     images: [
@@ -241,7 +241,7 @@ W tym sezonie Paulina dołącza do kadry HoodMood, gdzie poprowadzi grupę Hype 
     specialGuest: false,
     name: "Aleks Kultys",
     role: "Akrobatyka",
-    styles: ["Akrobatyka 4–6 latki", "Akrobatyka"],
+    styles: ["Akrobatyka 4-6 latki", "Akrobatyka"],
     bio:
       "Poznajcie naszego trenera,akrobatyka to jego pasja i ogromna część naszych treningów. Aleks ukończył dwuczęściowe szkolenie z zakresu metodyki nauczania oraz techniki wykonywania elementów w skokach na ścieżce. Szczególną uwagę poświęca również bezpieczeństwu, posiada wiedzę i umiejętności z zakresu prawidłowego asekurowania oraz podtrzymywania dzieci podczas nauki nowych elementów, dzięki czemu treningi są nie tylko efektywne, ale przede wszystkim bezpieczne i dostosowane do poziomu każdego uczestnika. Swoje doświadczenie zdobywał, pracując z dziećmi na półkoloniach, w playparku oraz prowadząc regularne zajęcia z akrobatyki dla dzieci i młodzieży.",
     image: "/assets/images/team/aleksKultys/aleksKultysProfile.jpg",
@@ -263,11 +263,11 @@ W tym sezonie Paulina dołącza do kadry HoodMood, gdzie poprowadzi grupę Hype 
     bio: `Instruktorka tańca współczesnego, choreografka i założycielka Takiego Studia Tańca
 Założycielka i serce Takiego Studia.
 Absolwentka Ogólnokształcącej Szkoły Baletowej w Gdańsku, gdzie zdobyła dyplom tancerki tańca współczesnego, baletu oraz tańca charakterystycznego. Od najmłodszych lat występowała na deskach Opery Bałtyckiej i Filharmonii Bałtyckiej, zdobywając sceniczne doświadczenie, które dziś przekazuje swoim podopiecznym.
-Kamila od zawsze łączy taniec z ruchem w jego najpełniejszej formie – pasjonuje ją akrobatyka, movement, animal flow oraz taniec organiczny, które pomagają jej rozwijać świadomość ciała i poszukiwać nowych jakości w ruchu.
-W latach 2014–2021 była choreografem i trenerem grup kadrowych w Klubie Sportowym Kokartka, a w 2018 roku otrzymała prestiżową nagrodę „Sopocka Muza dla Młodego Twórcy”. Obecnie prowadzi grupy turniejowe Takiego Studia, z którymi zdobywa liczne tytuły i nagrody, m.in. Mistrzostwo Polski WADF, II Vice Mistrzostwo Polski PZTAN oraz wysokie miejsca w ligach tanecznych IDO i WADF.
-Kamila nie ogranicza się jedynie do sali treningowej – współtworzy produkcje wideo jako tancerka i choreografka oraz aktywnie działa na trójmiejskiej scenie tanecznej. Od 2015-2020 roku była związana z Sopockim Teatrem Tańca, gdzie współtworzyła spektakle taneczne.
-Jako instruktorka jest niezwykle charyzmatyczna, wymagająca i inspirująca. Na swoich zajęciach łączy dyscyplinę z empatią – stawia na rozwój techniczny, świadomość ruchu i wzajemne wsparcie w grupie. Pod jej skrzydłami dorasta kolejne pokolenie tancerzy i instruktorów.
-Taniec to dla niej wolność i ekspresja – jej motto brzmi:
+Kamila od zawsze łączy taniec z ruchem w jego najpełniejszej formie - pasjonuje ją akrobatyka, movement, animal flow oraz taniec organiczny, które pomagają jej rozwijać świadomość ciała i poszukiwać nowych jakości w ruchu.
+W latach 2014-2021 była choreografem i trenerem grup kadrowych w Klubie Sportowym Kokartka, a w 2018 roku otrzymała prestiżową nagrodę „Sopocka Muza dla Młodego Twórcy”. Obecnie prowadzi grupy turniejowe Takiego Studia, z którymi zdobywa liczne tytuły i nagrody, m.in. Mistrzostwo Polski WADF, II Vice Mistrzostwo Polski PZTAN oraz wysokie miejsca w ligach tanecznych IDO i WADF.
+Kamila nie ogranicza się jedynie do sali treningowej - współtworzy produkcje wideo jako tancerka i choreografka oraz aktywnie działa na trójmiejskiej scenie tanecznej. Od 2015-2020 roku była związana z Sopockim Teatrem Tańca, gdzie współtworzyła spektakle taneczne.
+Jako instruktorka jest niezwykle charyzmatyczna, wymagająca i inspirująca. Na swoich zajęciach łączy dyscyplinę z empatią - stawia na rozwój techniczny, świadomość ruchu i wzajemne wsparcie w grupie. Pod jej skrzydłami dorasta kolejne pokolenie tancerzy i instruktorów.
+Taniec to dla niej wolność i ekspresja - jej motto brzmi:
 „Wolność, węże i floorwork!” 🐍
 W 2023 roku została wyróżniona tytułem Trener Roku przez Dziennik Bałtycki, co potwierdza jej ogromne zaangażowanie, pasję i nieustanne sukcesy w pracy z młodymi tancerzami.`,
     image: "/assets/images/team/kamilaMaik/kamilaMaik.jpg",

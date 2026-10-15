@@ -31,12 +31,12 @@ export function getClassSchedule(city: CitySlug): ClassesByDay {
       id: `${item.id}-${entry.dayOfWeek}-${entry.startTime}`,
       name: item.name,
       venue: entry.venue,
-      time: `${entry.startTime}–${entry.endTime}`,
+      time: `${entry.startTime}-${entry.endTime}`,
       instructor: trainerNames(entry.trainerIds ?? item.trainerIds) || "Prowadzący do ustalenia",
       specialInstructors: trainerNames(item.specialTrainerIds),
       frequencyDescription: item.frequency.description,
       info: item.description || item.shortInfo,
-      age: item.maxAge === null ? `${item.minAge}+` : `${item.minAge}–${item.maxAge}`,
+      age: item.maxAge === null ? `${item.minAge}+` : `${item.minAge}-${item.maxAge}`,
     });
   }
 

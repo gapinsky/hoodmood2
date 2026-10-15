@@ -12,8 +12,7 @@ type Props = {
 export default function PageIntro({ eyebrow, title, description, children, titleWidth = "wide" }: Props) {
   return (
     <div className="space-y-8">
-      <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-700) dark:text-(--brand-400)">
-        <span aria-hidden="true" className="h-px w-8 bg-current" />
+      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-700) dark:text-(--brand-400)">
         {eyebrow}
       </p>
       <PageContent

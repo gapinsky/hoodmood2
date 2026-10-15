@@ -15,7 +15,7 @@ export const defaultSocialImage = {
   url: absoluteUrl("/assets/images/team/teamNormal.jpg"),
   width: 2816,
   height: 1884,
-  alt: "Ekipa Hoodmood — szkoła tańca i akrobatyki",
+  alt: "Ekipa Hoodmood - szkoła tańca i akrobatyki",
 };
 
 export function truncateDescription(value: string, maxLength = 160): string {
