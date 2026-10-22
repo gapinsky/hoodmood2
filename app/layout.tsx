@@ -10,6 +10,7 @@ import NextTopLoader from "nextjs-toploader";
 import AwayTabTitle from "@/myComponents/common/AwayTabTitle";
 import SeasonLaunchDialog from "@/myComponents/common/SeasonLaunchDialog";
 import TrialClassMessage from "@/myComponents/common/TrialClassMessage";
+import { Analytics } from "@vercel/analytics/next"
 
 const fontAnton = Anton({
   variable: "--anton",
@@ -95,6 +96,7 @@ export default function RootLayout({
             <Footer />
           </TooltipProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

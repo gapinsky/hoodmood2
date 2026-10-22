@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 
-// NEXT_PUBLIC_SITE_URL must contain the public production origin, even in previews.
 const siteUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://hoodmood.pl");
 if (!["https:", "http:"].includes(siteUrl.protocol) || siteUrl.username || siteUrl.password) {
   throw new Error("NEXT_PUBLIC_SITE_URL must be an HTTP(S) origin without credentials");
