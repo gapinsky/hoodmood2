@@ -9,6 +9,7 @@ import type {
 
 const accountName = "Hood Mood Studio";
 const handle = "@hoodmood_dancestudio";
+const apiVersion = process.env.INSTAGRAM_API_VERSION ?? "v25.0";
 const baseFields =
   "id,caption,media_type,media_url,thumbnail_url,timestamp,permalink,children{id,media_type,media_url,thumbnail_url}";
 const fieldsWithCounts = `${baseFields},like_count,comments_count`;
@@ -57,7 +58,7 @@ function getFeedUrl(
   fields: string,
   after?: string,
 ) {
-  const url = new URL(`https://graph.instagram.com/${userId}/media`);
+  const url = new URL(`https://graph.instagram.com/${apiVersion}/${userId}/media`);
   url.searchParams.set("fields", fields);
   url.searchParams.set("limit", "9");
   url.searchParams.set("access_token", accessToken);
@@ -104,7 +105,13 @@ async function fetchPostsPage(
     const response = await fetchInstagramMedia(userId, accessToken, after);
 
     if (!response.ok) {
-      console.error(`Instagram posts fetch failed: ${response.status}`);
+      const body = (await response.json().catch(() => null)) as
+        | { error?: { message?: string; type?: string; code?: number; error_subcode?: number } }
+        | null;
+      console.error("Instagram posts fetch failed", {
+        status: response.status,
+        error: body?.error,
+      });
       throw new Error("Instagram unavailable");
     }
 
@@ -136,8 +143,10 @@ async function fetchPostsPage(
         ? (result.paging.cursors?.after ?? null)
         : null,
     };
-  } catch {
-    console.error("Instagram posts fetch failed");
+  } catch (error) {
+    if (error instanceof Error && error.message !== "Instagram unavailable") {
+      console.error("Instagram posts request error", error.name);
+    }
     throw new Error("Instagram unavailable");
   }
 }

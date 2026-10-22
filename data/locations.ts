@@ -77,7 +77,7 @@ export const locations = {
     logoAlt: "Logo Hoodmood",
     venues: [{
       id: "polanow",
-      img: "/assets/images/localizations/polanowMain.png",
+      img: "/assets/images/localizations/polanowOutside.jpeg",
       hoverImg: "/assets/images/localizations/polanowMain.png",
     }],
     address: {
