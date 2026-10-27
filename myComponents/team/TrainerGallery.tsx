@@ -28,13 +28,8 @@ export default function TrainerGallery({ trainer }: { trainer: Pick<Trainer, "na
                           sizes="(max-width: 1023px) calc(100vw - 2rem), (max-width: 1519px) 46vw, 660px"
                           className="object-cover"
                         />
-                        <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/45 via-transparent to-transparent" />
-                        <div className="absolute inset-x-0 bottom-0 flex items-center justify-between px-5 py-5 text-white sm:px-7">
-                          <span className="text-xs uppercase tracking-[0.18em]">Meet the crew</span>
-                          <span className="text-xs tabular-nums tracking-[0.16em]">
-                            {String(index + 1).padStart(2, "0")} / {String(trainer.images.length).padStart(2, "0")}
-                          </span>
-                        </div>
+                        {/* <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/45 via-transparent to-transparent" /> */}
+                       
                       </div>
                     </CarouselItem>
                   ))}

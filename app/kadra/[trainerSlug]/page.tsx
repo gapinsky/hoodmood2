@@ -64,11 +64,11 @@ export default async function TrainerPage({ params }: PageProps) {
               <ArrowLeft className="size-4 transition-transform motion-safe:group-hover:-translate-x-1" aria-hidden="true" />
               Powrót
             </Link>
-            <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">
+            {/* <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">
               {trainer.id === "julia-kaczmarzyk" ? "SAPIK Szczecinek" : trainer.specialGuest ? "Special guest" : "Core crew"}
               <span className="mx-3 text-foreground/20" aria-hidden="true">/</span>
               Hoodmood
-            </p>
+            </p> */}
           </div>
 
           <div className="grid items-start gap-10 lg:grid-cols-[1fr_1fr] lg:gap-14 xl:gap-20">

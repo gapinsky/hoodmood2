@@ -35,7 +35,9 @@ export function getClassSchedule(city: CitySlug): ClassesByDay {
       instructor: trainerNames(entry.trainerIds ?? item.trainerIds) || "Prowadzący do ustalenia",
       specialInstructors: trainerNames(item.specialTrainerIds),
       frequencyDescription: item.frequency.description,
-      info: item.description || item.shortInfo,
+      info: item.id === "koszalin-dancehall-18-plus"
+        ? item.shortInfo
+        : item.description || item.shortInfo,
       age: item.maxAge === null ? `${item.minAge}+` : `${item.minAge}-${item.maxAge}`,
     });
   }

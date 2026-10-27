@@ -101,8 +101,8 @@ export const classes = {
     "schedule": [
       {
         "dayOfWeek": 3,
-        "startTime": "16:00",
-        "endTime": "16:45",
+        "startTime": "15:55",
+        "endTime": "16:40",
         "venue": "ul. Dworcowa 1"
       },
       {
@@ -201,8 +201,8 @@ export const classes = {
       },
       {
         "dayOfWeek": 5,
-        "startTime": "16:45",
-        "endTime": "17:45",
+        "startTime": "16:55",
+        "endTime": "17:55",
         "venue": "ul. Dworcowa 1"
       }
     ],
@@ -242,8 +242,8 @@ export const classes = {
     "schedule": [
       {
         "dayOfWeek": 3,
-        "startTime": "17:30",
-        "endTime": "18:30",
+        "startTime": "17:35",
+        "endTime": "18:35",
         "venue": "ul. Dworcowa 1"
       },
       {
@@ -289,14 +289,14 @@ export const classes = {
     "schedule": [
       {
         "dayOfWeek": 3,
-        "startTime": "18:30",
-        "endTime": "20:00",
+        "startTime": "18:40",
+        "endTime": "20:10",
         "venue": "ul. Dworcowa 1"
       },
       {
         "dayOfWeek": 5,
-        "startTime": "17:45",
-        "endTime": "19:15",
+        "startTime": "18:05",
+        "endTime": "19:35",
         "venue": "ul. Dworcowa 1"
       }
     ],
@@ -448,24 +448,28 @@ export const classes = {
     enrollmentEnabled: true,
     sortOrder: 30
   },
-  "koszalin-kpop-dorosli-30-plus": {
-    id: "koszalin-kpop-dorosli-30-plus",
-    slug: "koszalin-kpop-dorosli-30-plus",
-    name: "KPOP dla dorosłych",
-    shortInfo: "Choreografie z teledysków K-POP, rytm i sceniczna energia.",
-    description: "Na zajęciach KPOP uczestnicy uczą się choreografii inspirowanych popularnymi utworami i teledyskami. Pracujemy nad rytmiką, pamięcią ruchową, dynamiką tańca, elementami scenicznymi i pewnością siebie.",
+  "koszalin-dancehall-18-plus": {
+    id: "koszalin-dancehall-18-plus",
+    slug: "koszalin-dancehall-18-plus",
+    name: "Dancehall",
+    shortInfo: "Dancehall, rytm, energia i swoboda ruchu.",
+    description: `DANCEHALL – energia, kobiecość i masa spalonych kalorii
+Dancehall to dynamiczny, pełen energii styl taneczny wywodzący się z Jamajki. Łączy wyraziste ruchy, mocny groove, zmysłowość i charakterystyczne jamajskie rytmy. To taniec, który pozwala poczuć muzykę, wyrazić siebie i odkryć zupełnie nową swobodę ruchu.
+Na zajęciach w HOODMOOD będziemy poznawać charakterystyczne kroki i technikę dancehallu, pracować nad koordynacją, izolacjami, muzykalnością i świadomością ciała. Nie zabraknie energetycznych choreografii, pracy nad własnym stylem i przede wszystkim dobrej zabawy przy rytmach, które same porywają do ruchu.
+Nie musisz mieć wcześniejszego doświadczenia! Zajęcia są dla osób dorosłych, które chcą spróbować czegoś nowego, nabrać pewności siebie, poczuć swoją energię i czerpać radość z tańca.
+Dużo energii, kobiecy vibe i zero nudy. Wpadasz?`,
     locationId: "koszalin",
-    minAge: 30,
+    minAge: 18,
     maxAge: null,
     level: "all",
-    trainerIds: ["alina-lemanska"],
+    trainerIds: ["natalia-wojcik"],
     specialTrainerIds: [],
     schedule: [
       {
         dayOfWeek: 4,
         startTime: "20:30",
         endTime: "21:30",
-        trainerIds: ["alina-lemanska"]
+        trainerIds: ["natalia-wojcik"]
       }
     ],
     pricing: {
@@ -482,7 +486,7 @@ export const classes = {
       sessionsPerWeek: 1,
       durationMinutes: 60
     },
-    image: "/assets/images/offer/kpop.jpg",
+    image: "/assets/images/offer/dancehall18Koszalin.jpeg",
     active: true,
     enrollmentEnabled: true,
     sortOrder: 40
@@ -783,7 +787,7 @@ export const classes = {
   "koszalin-taniec-wspolczesny-10-12": {
     id: "koszalin-taniec-wspolczesny-10-12",
     slug: "koszalin-taniec-wspolczesny-10-12",
-    name: "Taniec współczesny",
+    name: "Taniec współczesny (trwa nabór)",
     shortInfo: "Technika tańca współczesnego, improwizacja i ekspresja.",
     description: "Na zajęciach tańca współczesnego dzieci poznają podstawy pracy z ruchem, przestrzenią i muzyką. Ćwiczymy płynność, koordynację oraz ekspresję poprzez krótkie kombinacje i choreografie. Zajęcia rozwijają świadomość ciała, kreatywność i wrażliwość artystyczną. Wprowadzamy elementy techniki i improwizacji w przyjaznej atmosferze. Zajęcia są przeznaczone dla dzieci w wieku 10-12 lat.",
     locationId: "koszalin",
@@ -795,8 +799,8 @@ export const classes = {
     schedule: [
       {
         dayOfWeek: 2,
-        startTime: "19:00",
-        endTime: "20:00",
+        startTime: "20:00",
+        endTime: "21:00",
         trainerIds: ["klara-walach", "marianna-stanislawska"]
       }
     ],
@@ -829,20 +833,20 @@ export const classes = {
     minAge: 13,
     maxAge: 18,
     level: "all",
-    trainerIds: ["talita-jarzecka"],
+    trainerIds: ["julia-kaczmarzyk"],
     specialTrainerIds: ["kamila-maik", "joanna-jedynak"],
     schedule: [
       {
         dayOfWeek: 1,
         startTime: "19:30",
         endTime: "20:30",
-        trainerIds: ["talita-jarzecka"]
+        trainerIds: ["julia-kaczmarzyk"]
       },
       {
         dayOfWeek: 2,
-        startTime: "20:00",
-        endTime: "21:00",
-        trainerIds: ["talita-jarzecka"]
+        startTime: "19:00",
+        endTime: "20:00",
+        trainerIds: ["julia-kaczmarzyk"]
       }
     ],
     pricing: {
@@ -858,7 +862,7 @@ export const classes = {
     frequency: {
       sessionsPerWeek: 2,
       durationMinutes: 60,
-      description: "Kamila Maik / Joanna Jedynak - gościnnie 1x w miesiącu; regularne zajęcia prowadzi Talita Jarzęcka."
+      description: "Kamila Maik / Joanna Jedynak - gościnnie 1x w miesiącu; regularne zajęcia prowadzi Julia Kaczmarzyk."
     },
     image: "/assets/images/offer/taniecWspolczesny12-18.png",
     active: true,
@@ -994,7 +998,7 @@ export const classes = {
       {
         dayOfWeek: 1,
         startTime: "20:30",
-        endTime: "21:30",
+        endTime: "22:00",
         trainerIds: ["wiktoria-butwicka"]
       }
     ],
@@ -1004,13 +1008,13 @@ export const classes = {
       variants: [
         {
           id: "standard",
-          amount: 190
+          amount: 210
         }
       ]
     },
     frequency: {
       sessionsPerWeek: 1,
-      durationMinutes: 60
+      durationMinutes: 90
     },
     image: "/assets/images/offer/feminine.jpg",
     active: true,
@@ -1253,6 +1257,44 @@ export const classes = {
     active: true,
     enrollmentEnabled: true,
     sortOrder: 20
+  },
+  "bialy-bor-taniec-wspolczesny-7-11": {
+    id: "bialy-bor-taniec-wspolczesny-7-11",
+    slug: "bialy-bor-taniec-wspolczesny-7-11",
+    name: "Taniec współczesny",
+    shortInfo: "Technika tańca współczesnego, improwizacja i ekspresja.",
+    description: "Zajęcia tańca współczesnego dla dzieci w wieku 7-11 lat. Poznajemy podstawy pracy z ruchem, przestrzenią i muzyką. Ćwiczymy płynność, koordynację oraz ekspresję poprzez krótkie kombinacje i choreografie. Zajęcia rozwijają świadomość ciała, kreatywność i wrażliwość artystyczną. Wprowadzamy elementy techniki i improwizacji w przyjaznej atmosferze.",
+    locationId: "bialy-bor",
+    minAge: 7,
+    maxAge: 11,
+    level: "all",
+    trainerIds: ["talita-jarzecka"],
+    specialTrainerIds: [],
+    schedule: [
+      {
+        dayOfWeek: 4,
+        startTime: "18:00",
+        endTime: "19:00"
+      }
+    ],
+    pricing: {
+      currency: "PLN",
+      billingUnit: "month",
+      variants: [
+        {
+          id: "standard",
+          amount: 80
+        }
+      ]
+    },
+    frequency: {
+      sessionsPerWeek: 1,
+      durationMinutes: 60
+    },
+    image: "/assets/images/offer/taniecWspolczesny7-11BialyBor.jpeg",
+    active: true,
+    enrollmentEnabled: true,
+    sortOrder: 30
   },
   "polanow-taniec-4-6": {
     id: "polanow-taniec-4-6",

@@ -30,7 +30,7 @@ export default function ScheduleGrid({ classesByDay }: Props) {
             <section key={dayKey} id={`day-${dayKey}`} aria-labelledby={headingId} className="min-w-0 scroll-mt-28 space-y-4">
               <header className="flex items-center justify-between gap-2 border-b border-foreground/10 pb-4">
                 <h3 id={headingId} className="font-anton text-xl uppercase">{dayKey}</h3>
-                <span aria-hidden="true" className="text-xs tabular-nums text-muted-foreground">0{index + 1}</span>
+                {/* <span aria-hidden="true" className="text-xs tabular-nums text-muted-foreground">0{index + 1}</span> */}
               </header>
               {getDayVenues(items).map((venue) => (
                 <p key={venue} className="flex items-start gap-2 rounded-md border border-foreground/10 bg-foreground/5 p-3 text-sm leading-5">

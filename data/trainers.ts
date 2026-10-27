@@ -314,6 +314,23 @@ W tańcu łączy sportową determinację, wyjątkową muzykalność, mocny chara
     localizations: ["Koszalin"],
     instagram: "https://www.instagram.com/nikolasuchocka",
   },
+  "natalia-wojcik": {
+    id: "natalia-wojcik",
+    slug: "natalia-wojcik",
+    active: true,
+    specialGuest: false,
+    name: "Natalia Wójcik",
+    role: "Dancehall",
+    styles: ["Dancehall"],
+    bio: `Taniec towarzyszy jej od lat! Przez 10 lat była tancerką zespołu estradowego, występując jako solistka i członkini grupy. W tym czasie rozwijała swoje umiejętności w wielu stylach tanecznych, od baletu i tańca ludowego, przez taniec nowoczesny, aż po tańce karaibskie. Brała udział w ogólnopolskich festiwalach i zawodach tanecznych, zdobywając bogate doświadczenie sceniczne.
+Jej artystyczna droga to również muzyka, występy na festiwalach i imprezach masowych oraz tworzenie choreografii i kostiumów scenicznych. Różnorodne doświadczenia pozwoliły jej rozwinąć kreatywność, muzykalność i swobodę wyrażania siebie poprzez ruch.
+Na zajęciach Dancehall stawia na energię, rytm, ekspresję i dobrą zabawę. Chce pokazać, że taniec to nie tylko kroki i choreografia, ale także pewność siebie, własny styl i radość płynąca z ruchu.
+W HOODMOOD zaprasza do świata dancehallu, w którym można uwolnić energię, przełamać własne bariery i po prostu poczuć muzykę!`,
+    image: "/assets/images/team/nataliaWojcik/nataliaWojcik.png",
+    images: ["/assets/images/team/nataliaWojcik/nataliaWojcik.png"],
+    localizations: ["Koszalin"],
+    instagram: "https://www.instagram.com/naledii_official/",
+  },
 } satisfies Record<string, Trainer>;
 
 export type TrainerId = keyof typeof trainers;

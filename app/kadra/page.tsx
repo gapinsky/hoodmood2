@@ -51,7 +51,7 @@ export default function Team() {
           <section key={group.id} id={group.id} aria-labelledby={`${group.id}-title`} className="scroll-mt-28 space-y-8">
             <div className="flex items-end justify-between gap-4 border-b border-foreground/10 pb-5">
               <div>
-                <p className="mb-3 text-xs uppercase tracking-[0.16em] text-muted-foreground">0{index + 1} / {group.label}</p>
+                {/* <p className="mb-3 text-xs uppercase tracking-[0.16em] text-muted-foreground">0{index + 1} / {group.label}</p> */}
                 <h2 id={`${group.id}-title`} className="font-anton text-3xl uppercase sm:text-4xl">{group.title}</h2>
               </div>
               <span aria-label={`Liczba osób: ${group.trainers.length}`} className="font-anton text-4xl tabular-nums text-foreground/20 sm:text-5xl">{String(group.trainers.length).padStart(2, "0")}</span>
