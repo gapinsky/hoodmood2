@@ -195,8 +195,8 @@ export const classes = {
     "schedule": [
       {
         "dayOfWeek": 4,
-        "startTime": "16:45",
-        "endTime": "17:45",
+        "startTime": "16:55",
+        "endTime": "17:55",
         "venue": "SP 1 - Plac Wazów 1"
       },
       {
@@ -248,8 +248,8 @@ export const classes = {
       },
       {
         "dayOfWeek": 4,
-        "startTime": "17:45",
-        "endTime": "18:45",
+        "startTime": "18:05",
+        "endTime": "19:05",
         "venue": "SP 1 - Plac Wazów 1"
       }
     ],
@@ -1206,7 +1206,7 @@ Dużo energii, kobiecy vibe i zero nudy. Wpadasz?`,
       variants: [
         {
           id: "standard",
-          amount: 90
+          amount: 80
         }
       ]
     },
@@ -1245,7 +1245,7 @@ Dużo energii, kobiecy vibe i zero nudy. Wpadasz?`,
       variants: [
         {
           id: "standard",
-          amount: 90
+          amount: 80
         }
       ]
     },
