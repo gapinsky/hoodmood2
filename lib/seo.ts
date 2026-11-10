@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 
-const siteUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://hoodmood.pl");
-if (!["https:", "http:"].includes(siteUrl.protocol) || siteUrl.username || siteUrl.password) {
-  throw new Error("NEXT_PUBLIC_SITE_URL must be an HTTP(S) origin without credentials");
-}
-export const SITE_URL = siteUrl.origin;
+export const SITE_URL = "https://hoodmood.pl";
 
 export function absoluteUrl(path: string = "/"): string {
   return path === "/" ? SITE_URL : new URL(path, `${SITE_URL}/`).toString();

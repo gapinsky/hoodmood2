@@ -62,9 +62,9 @@ Weryfikacja refaktoru: `npm run build -- --webpack` przechodzi. Domyślny Turbop
 
 ### SEO i domena produkcyjna
 
-Ustaw `NEXT_PUBLIC_SITE_URL=https://hoodmood.pl` w środowisku builda i hostingu.
-To publiczna domena SEO, nie adres lokalnego serwera ani automatyczny adres preview.
-Domyślna wartość to `https://hoodmood.pl`. Po zmianie zmiennej wykonaj nowy build.
+Domena SEO jest ustawiona na stałe na `https://hoodmood.pl` w `lib/seo.ts`,
+również dla lokalnego serwera i buildów preview. Zmienna `NEXT_PUBLIC_SITE_URL`
+nie nadpisuje tej wartości. Po zmianie domeny w kodzie wykonaj nowy build.
 
 `lib/seo.ts` buduje canonical, Open Graph i Twitter; `lib/seo-pages.ts` zawiera
 metadane statycznych tras współdzielone z sitemapą. Trasy dynamiczne korzystają
